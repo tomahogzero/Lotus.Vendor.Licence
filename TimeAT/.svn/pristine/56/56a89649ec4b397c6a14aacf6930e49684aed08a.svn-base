@@ -1,0 +1,476 @@
+Imports System.Data
+Imports System.Data.SqlClient
+
+Public Class frmEmpCalOTDeducRate_CancelByDate
+
+    Private Sub frmEmpCalOTDeducRate_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        Call LoadDepartment()
+        Call LoadCompany()
+        If ComId <> "" Then
+            cboCompany.Enabled = False
+            cboCompany_cal.Enabled = False
+
+            cboCompany.SelectedItem = ComName
+            cboCompany_cal.SelectedItem = ComName
+        End If
+
+        Call LoadDivision()
+        Call LoadDepartment()
+        Call LoadPosition()
+        Call LoadEmpGroup()
+    End Sub
+
+    Private Sub LoadCompany()
+        Dim Da As New SqlDataAdapter
+        Dim Ds As New DataSet
+        Dim strSQL As String
+        strSQL = "Select CompanyName From Company_Sub "
+        Da = New SqlDataAdapter(strSQL, Conn)
+        Da.Fill(Ds, "Data")
+        With Ds.Tables("Data")
+            cboCompany.Items.Clear()
+            cboCompany.Items.Add("ทั้งหมด")
+
+            cboCompany_cal.Items.Clear()
+            cboCompany_cal.Items.Add("ทั้งหมด")
+            Dim I As Integer
+            For I = 0 To .Rows.Count - 1
+                cboCompany.Items.Add(.Rows(I).Item("CompanyName"))
+
+                cboCompany_cal.Items.Add(.Rows(I).Item("CompanyName"))
+            Next
+            Ds.Clear()
+            cboCompany.SelectedIndex = 0
+        End With
+    End Sub
+
+    Private Sub LoadDepartment()
+        Dim Da As SqlDataAdapter
+        Dim Ds As New DataSet
+        Dim strSQL As String = ""
+        strSQL = "select Department " & _
+                " From Department " & _
+                " Order By Department"
+
+        Da = New SqlDataAdapter(strSQL, Conn)
+        Da.Fill(Ds, "data")
+        With Ds.Tables("data")
+            cboDepartment.Items.Clear()
+            cboDepartment.Items.Add("(ทุกแผนก)")
+
+            cboDepartment_Cal.Items.Clear()
+            cboDepartment_Cal.Items.Add("(ทุกแผนก)")
+            For Each dr As DataRow In .Rows
+                cboDepartment.Items.Add(dr("Department"))
+                cboDepartment_Cal.Items.Add(dr("Department"))
+            Next
+            cboDepartment.SelectedIndex = 0
+            cboDepartment_Cal.SelectedIndex = 0
+        End With
+    End Sub
+
+    Private Sub LoadDivision()
+        Dim Da As SqlDataAdapter
+        Dim Ds As New DataSet
+        Dim strSQL As String = ""
+        strSQL = "select Division " & _
+                " From Division " & _
+                " Order By Division"
+
+        Da = New SqlDataAdapter(strSQL, Conn)
+        Da.Fill(Ds, "data")
+        With Ds.Tables("data")
+            cboDivision.Items.Clear()
+            cboDivision.Items.Add("(ทุกฝ่าย)")
+
+            cboDivision_Cal.Items.Clear()
+            cboDivision_Cal.Items.Add("(ทุกฝ่าย)")
+            For Each dr As DataRow In .Rows
+                cboDivision.Items.Add(dr("Division"))
+                cboDivision_Cal.Items.Add(dr("Division"))
+            Next
+            cboDivision.SelectedIndex = 0
+            cboDivision_Cal.SelectedIndex = 0
+        End With
+    End Sub
+
+    Private Sub LoadPosition()
+        Dim Da As SqlDataAdapter
+        Dim Ds As New DataSet
+        Dim strSQL As String = ""
+        strSQL = "select Position " & _
+                " From Emp " & _
+                " Group By Position " & _
+                " Order By Position"
+
+        Da = New SqlDataAdapter(strSQL, Conn)
+        Da.Fill(Ds, "data")
+        With Ds.Tables("data")
+            cboPosition.Items.Clear()
+            cboPosition.Items.Add("(ทุกตำแหน่ง)")
+
+            cboPosition_Cal.Items.Clear()
+            cboPosition_Cal.Items.Add("(ทุกตำแหน่ง)")
+            For Each dr As DataRow In .Rows
+                cboPosition.Items.Add(dr("Position"))
+                cboPosition_Cal.Items.Add(dr("Position"))
+            Next
+            cboPosition.SelectedIndex = 0
+            cboPosition_Cal.SelectedIndex = 0
+        End With
+    End Sub
+
+    Private Sub LoadEmpGroup()
+        Dim Da As SqlDataAdapter
+        Dim Ds As New DataSet
+        Dim strSQL As String = ""
+        strSQL = "select GroupName " & _
+                " From EmpGroup " & _
+                " Order By GroupName"
+
+        Da = New SqlDataAdapter(strSQL, Conn)
+        Da.Fill(Ds, "data")
+        With Ds.Tables("data")
+            cboEmpGroup.Items.Clear()
+            cboEmpGroup.Items.Add("(ทุกกลุ่ม)")
+
+            cboEmpGroup_Cal.Items.Clear()
+            cboEmpGroup_Cal.Items.Add("(ทุกกลุ่ม)")
+            For Each dr As DataRow In .Rows
+                cboEmpGroup.Items.Add(dr("GroupName"))
+                cboEmpGroup_Cal.Items.Add(dr("GroupName"))
+            Next
+            cboEmpGroup.SelectedIndex = 0
+            cboEmpGroup_Cal.SelectedIndex = 0
+        End With
+    End Sub
+
+    Private Sub LoadEmp()
+        Dim Da As SqlDataAdapter
+        Dim Ds As New DataSet
+        Dim strSQL As String = ""
+        Dim arrData() As String
+        Dim List As ListViewItem
+
+        strSQL = "select Code,Fname,Lname, " & _
+                        " Department = Isnull(Department.Department,'') " & _
+                " From Emp Left Join Department " & _
+                        " On Emp.DeptId = Department.DeptId " & _
+                             " Left Join Company_sub cs" & _
+                        " on Emp.CompanyID = cs.CompanyID " & _
+                " Where WorkStatus = 'W' "
+
+        If cboCompany.SelectedIndex > 0 Then
+            strSQL &= " and isnull(Emp.CompanyId,'') = '" & GetData.GetCompanyId(cboCompany.Text.Trim) & "'"
+        End If
+
+        If cboDivision.SelectedIndex > 0 Then
+            strSQL &= " and Isnull(Emp.DivId,'') = '" & GetData.GetDivisionId(cboDivision.Text.Trim) & "'"
+        End If
+
+        If cboDepartment.SelectedIndex > 0 Then
+            strSQL &= " and Isnull(Emp.DeptId,'') = '" & GetData.GetDepartmentId(cboDepartment.Text.Trim) & "'"
+        End If
+
+        If cboPosition.SelectedIndex > 0 Then
+            strSQL &= " and Isnull(Emp.Position,'') = '" & cboPosition.Text.Trim & "'"
+        End If
+
+        If cboEmpGroup.SelectedIndex > 0 Then
+            strSQL &= " and Isnull(Emp.GroupId,'') = '" & GetData.GetEmpGroupId(cboEmpGroup.Text.Trim) & "'"
+        End If
+
+        If rdMonth.Checked = True Then
+            strSQL &= " and Emp.WageType = 'M'"
+        End If
+
+        If rdDay.Checked = True Then
+            strSQL &= " and Emp.WageType = 'D' and Contractor = 0"
+        End If
+
+        If rdContractor.Checked = True Then
+            strSQL &= " and Emp.WageType = 'D' and Contractor = 1"
+        End If
+
+        If txtNameSearch.Text.Trim <> "" Then
+            strSQL &= " and (Fname + LName) Like '%" & Replace(txtNameSearch.Text.Trim, " ", "") & "%'"
+        End If
+
+        If rdByCode.Checked = True Then
+            strSQL &= " Order By Code"
+        End If
+
+        If rdByName.Checked = True Then
+            strSQL &= " Order By Fname,Lname"
+        End If
+
+        If rdByDeptCode.Checked = True Then
+            strSQL &= " Order By Department.Department,Code"
+        End If
+
+        If rdByDeptName.Checked = True Then
+            strSQL &= " Order By Department.Department,Fname,Lname"
+        End If
+
+        Da = New SqlDataAdapter(strSQL, Conn)
+        Da.Fill(Ds, "data")
+        With Ds.Tables("data")
+            'lstEmp.BeginUpdate()
+            If .Rows.Count = 0 Then
+                lstEmp.Items.Clear()
+            Else
+                lstEmp.Items.Clear()
+
+                Dim I As Integer = 0
+
+                ProgressBar1.Value = 0
+                ProgressBar1.Maximum = .Rows.Count
+
+                For Each dr As DataRow In .Rows
+                    I += 1
+                    ProgressBar1.Value = I
+
+                    arrData = New String() {lstEmp.Items.Count + 1, _
+                                            dr("Code"), _
+                                            dr("Fname"), _
+                                            dr("LName"), _
+                                            dr("Department")}
+                    List = New ListViewItem(arrData)
+                    lstEmp.Items.Add(List)
+                Next
+            End If
+            'lstEmp.EndUpdate()
+        End With
+    End Sub
+
+    Private Sub LoadEmpKaDate()
+        Dim Da As SqlDataAdapter
+        Dim Ds As New DataSet
+        Dim strSQL As String = ""
+        Dim arrData() As String
+        Dim List As ListViewItem
+
+        strSQL = "select Emp.Code,Fname,Lname, " & _
+                        " Division = Isnull(Div.Division,''), " & _
+                        " Department = Isnull(Department.Department,''), " & _
+                        " Position = Isnull(Emp.Position,'')," & _
+                        " GroupName = Isnull(EG.GroupName,'') " & _
+                " From OTDeduc_Cancel OTC " & _
+                        " Left Join Emp " & _
+                            " On OTC.EmpCode = Emp.Code " & _
+                        " Left Join Department " & _
+                            " On Emp.DeptId = Department.DeptId " & _
+                        " Left Join Division Div " & _
+                            " On Emp.DivId = Div.DivId " & _
+                        " Left Join Company_sub cs" & _
+                            " On Emp.CompanyID = cs.CompanyID " & _
+                        " Left Join EmpConfigOT EOT " & _
+                            " On Emp.Code = EOT.EmpCode " & _
+                        " Left Join EmpGroup EG " & _
+                            " On Emp.GroupId = EG.GroupId " & _
+                " Where WorkStatus = 'W' and " & _
+                        " Convert(nVarchar(10),OTC.CanDate,111) = '" & Format(txtDate.Value, "yyyy/MM/dd") & "'"
+
+        If cboCompany_Cal.SelectedIndex > 0 Then
+            strSQL &= " and isnull(Emp.CompanyId,'') = '" & GetData.GetCompanyId(cboCompany_Cal.Text.Trim) & "'"
+        End If
+
+        If cboDivision_Cal.SelectedIndex > 0 Then
+            strSQL &= " and Isnull(Emp.DivId,'') = '" & GetData.GetDivisionId(cboDivision_Cal.Text.Trim) & "'"
+        End If
+
+        If cboDepartment_Cal.SelectedIndex > 0 Then
+            strSQL &= " and Isnull(Emp.DeptId,'') = '" & GetData.GetDepartmentId(cboDepartment_Cal.Text.Trim) & "'"
+        End If
+
+        If cboPosition_Cal.SelectedIndex > 0 Then
+            strSQL &= " and Isnull(Emp.Position,'') = '" & cboPosition_Cal.Text.Trim & "'"
+        End If
+
+        If cboEmpGroup.SelectedIndex > 0 Then
+            strSQL &= " and Isnull(Emp.GroupId,'') = '" & GetData.GetEmpGroupId(cboEmpGroup_Cal.Text.Trim) & "'"
+        End If
+
+        If rdMonth_Cal.Checked = True Then
+            strSQL &= " and Emp.WageType = 'M'"
+        End If
+
+        If rdDay_Cal.Checked = True Then
+            strSQL &= " and Emp.WageType = 'D' and Contractor = 0"
+        End If
+
+        If rdContractor_Cal.Checked = True Then
+            strSQL &= " and Emp.WageType = 'D' and Contractor = 1"
+        End If
+
+        If txtNameSearch_Cal.Text.Trim <> "" Then
+            strSQL &= " and (Fname + LName) Like '%" & Replace(txtNameSearch_Cal.Text.Trim, " ", "") & "%'"
+        End If
+
+
+        If rdByCode_Date.Checked = True Then
+            strSQL &= " Order By Emp.Code"
+        End If
+
+        If rdByName_Date.Checked = True Then
+            strSQL &= " Order By Fname,Lname"
+        End If
+
+        If rdByDeptCode_Date.Checked = True Then
+            strSQL &= " Order By Div.Division,Department.Department,Emp.Position,Emp.Code"
+        End If
+
+        If rdByDeptName_Date.Checked = True Then
+            strSQL &= " Order By Div.Division,Department.Department,Emp.Position,Fname,Lname"
+        End If
+
+
+        Da = New SqlDataAdapter(strSQL, Conn)
+        Da.Fill(Ds, "data")
+        With Ds.Tables("data")
+            'lstEmp.BeginUpdate()
+            If .Rows.Count = 0 Then
+                lstEmp_Cal.Items.Clear()
+            Else
+                lstEmp_Cal.Items.Clear()
+                Dim I As Integer = 0
+
+                ProgressBar2.Value = 0
+                ProgressBar2.Maximum = .Rows.Count
+
+                For Each dr As DataRow In .Rows
+                    I += 1
+                    ProgressBar2.Value = I
+
+                    arrData = New String() {lstEmp_Cal.Items.Count + 1, _
+                                            dr("Code"), _
+                                            dr("Fname"), _
+                                            dr("LName"), _
+                                            dr("Department")}
+                    List = New ListViewItem(arrData)
+                    lstEmp_Cal.Items.Add(List)
+                Next
+            End If
+            'lstEmp.EndUpdate()
+        End With
+    End Sub
+
+    Private Sub btnRefresh_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnRefresh.Click
+        btnRefresh.Enabled = False
+        Call LoadEmp()
+        btnRefresh.Enabled = True
+    End Sub
+
+    Private Sub btnRefresh_Date_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnRefresh_Date.Click
+        btnRefresh_Date.Enabled = False
+        Call LoadEmpKaDate()
+        btnRefresh_Date.Enabled = True
+    End Sub
+
+    Private Sub btnSelectAll_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSelectAll.Click
+        With lstEmp
+            For i As Integer = 0 To .Items.Count - 1
+                .Items(i).Checked = True
+            Next
+        End With
+    End Sub
+
+    Private Sub btnNoneSelectAll_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnNoneSelectAll.Click
+        With lstEmp
+            For i As Integer = 0 To .Items.Count - 1
+                .Items(i).Checked = False
+            Next
+        End With
+    End Sub
+
+    Private Sub btnNoneSelectAll_Date_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnNoneSelectAll_Date.Click
+        With lstEmp_Cal
+            For i As Integer = 0 To .Items.Count - 1
+                .Items(i).Checked = False
+            Next
+        End With
+    End Sub
+
+    Private Sub btnSelectAll_Date_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSelectAll_Date.Click
+        With lstEmp_Cal
+            For i As Integer = 0 To .Items.Count - 1
+                .Items(i).Checked = True
+            Next
+        End With
+    End Sub
+
+    Private Sub btnAdd_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAdd.Click
+        If lstEmp.CheckedItems.Count = 0 Then Exit Sub
+
+        If txtDate.Value = Nothing Then
+            MsgBox("กรุณาป้อนวันที่ด้วย", MsgBoxStyle.Information, Me.Text)
+            Exit Sub
+        End If
+
+        Dim dCmd As New SqlCommand
+        Dim strSQL As String
+        Dim Tn As SqlTransaction
+
+        Tn = Conn.BeginTransaction
+        dCmd.Transaction = Tn
+        Try
+            For i As Integer = 0 To lstEmp.CheckedItems.Count - 1
+                strSQL = "Delete From OTDeduc_Cancel " & _
+                        " Where Convert(nVarchar(10),CanDate,111) = '" & Format(txtDate.Value, "yyyy/MM/dd") & "' and " & _
+                                " EmpCode = '" & lstEmp.CheckedItems(i).SubItems(1).Text.Trim & "'"
+                dCmd.Connection = Conn
+                dCmd.CommandText = strSQL
+                dCmd.ExecuteNonQuery()
+
+                strSQL = "Insert Into OTDeduc_Cancel(CanDate,EmpCode) " & _
+                        " Values('" & Format(txtDate.Value, "yyyy/MM/dd") & "'," & _
+                                " '" & lstEmp.CheckedItems(i).SubItems(1).Text.Trim & "')"
+                dCmd.Connection = Conn
+                dCmd.CommandText = strSQL
+                dCmd.ExecuteNonQuery()
+            Next
+            Tn.Commit()
+        Catch ex As Exception
+            Tn.Rollback()
+            MsgBox(ex.Message, MsgBoxStyle.Information, Me.Text)
+            Exit Sub
+        End Try
+        Call btnRefresh_Click(Me, System.EventArgs.Empty)
+        Call btnRefresh_Date_Click(Me, System.EventArgs.Empty)
+    End Sub
+
+    Private Sub btnRemove_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnRemove.Click
+        If lstEmp_Cal.CheckedItems.Count = 0 Then Exit Sub
+        Dim dCmd As New SqlCommand
+        Dim strSQL As String
+        Dim Tn As SqlTransaction
+
+        Tn = Conn.BeginTransaction
+        dCmd.Transaction = Tn
+        Try
+            For i As Integer = 0 To lstEmp_Cal.CheckedItems.Count - 1
+                strSQL = "Delete From OTDeduc_Cancel " & _
+                                       " Where Convert(nVarchar(10),CanDate,111) = '" & Format(txtDate.Value, "yyyy/MM/dd") & "' and " & _
+                                               " EmpCode = '" & lstEmp_Cal.CheckedItems(i).SubItems(1).Text.Trim & "'"
+                dCmd.Connection = Conn
+                dCmd.CommandText = strSQL
+                dCmd.ExecuteNonQuery()
+            Next
+            Tn.Commit()
+        Catch ex As Exception
+            Tn.Rollback()
+            MsgBox(ex.Message, MsgBoxStyle.Information, Me.Text)
+            Exit Sub
+        End Try
+        Call btnRefresh_Click(Me, System.EventArgs.Empty)
+        Call btnRefresh_Date_Click(Me, System.EventArgs.Empty)
+    End Sub
+
+    Private Sub btnExit_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnExit.Click
+        Me.Close()
+    End Sub
+
+    Private Sub lstEmp_Date_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
+
+    End Sub
+End Class

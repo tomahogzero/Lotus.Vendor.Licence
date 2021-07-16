@@ -1,0 +1,3399 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="LabelControl2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 52</value>
+  </data>
+  <data name="LabelControl2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 13</value>
+  </data>
+  <data name="LabelControl2.Text" xml:space="preserve">
+    <value>Department :</value>
+  </data>
+  <data name="LabelControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>38, 30</value>
+  </data>
+  <data name="LabelControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>42, 13</value>
+  </data>
+  <data name="LabelControl1.Text" xml:space="preserve">
+    <value>Section :</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="GcEmp.EmbeddedNavigator.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="GcEmp.EmbeddedNavigator.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <assembly alias="DevExpress.Data.v17.1" name="DevExpress.Data.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <data name="GcEmp.EmbeddedNavigator.AllowHtmlTextInToolTip" type="DevExpress.Utils.DefaultBoolean, DevExpress.Data.v17.1">
+    <value>Default</value>
+  </data>
+  <data name="GcEmp.EmbeddedNavigator.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left</value>
+  </data>
+  <data name="GcEmp.EmbeddedNavigator.BackgroundImage" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="GcEmp.EmbeddedNavigator.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Tile</value>
+  </data>
+  <data name="GcEmp.EmbeddedNavigator.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>Inherit</value>
+  </data>
+  <data name="GcEmp.EmbeddedNavigator.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <assembly alias="DevExpress.XtraEditors.v17.1" name="DevExpress.XtraEditors.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <data name="GcEmp.EmbeddedNavigator.TextLocation" type="DevExpress.XtraEditors.NavigatorButtonsTextLocation, DevExpress.XtraEditors.v17.1">
+    <value>Center</value>
+  </data>
+  <data name="GcEmp.EmbeddedNavigator.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <assembly alias="DevExpress.Utils.v17.1" name="DevExpress.Utils.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <data name="GcEmp.EmbeddedNavigator.ToolTipIconType" type="DevExpress.Utils.ToolTipIconType, DevExpress.Utils.v17.1">
+    <value>None</value>
+  </data>
+  <data name="GcEmp.EmbeddedNavigator.ToolTipTitle" xml:space="preserve">
+    <value />
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="GvEmp.Appearance.HeaderPanel.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="GvEmp.Appearance.HeaderPanel.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="GvEmp.Appearance.HeaderPanel.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="GvEmp.Appearance.HeaderPanel.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="GvEmp.Appearance.Row.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="GvEmp.Appearance.Row.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="GvEmp.Appearance.Row.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="GvEmp.Appearance.Row.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="colrow.AppearanceCell.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="colrow.AppearanceCell.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="colrow.AppearanceCell.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="colrow.AppearanceCell.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="colrow.AppearanceHeader.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="colrow.AppearanceHeader.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="colrow.AppearanceHeader.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="colrow.AppearanceHeader.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="colrow.Caption" xml:space="preserve">
+    <value>No.</value>
+  </data>
+  <data name="GridColumn15.AppearanceCell.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="GridColumn15.AppearanceCell.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="GridColumn15.AppearanceCell.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="GridColumn15.AppearanceCell.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="GridColumn15.Caption" xml:space="preserve">
+    <value>Permission Group Name</value>
+  </data>
+  <data name="GridColumn15.Width" type="System.Int32, mscorlib">
+    <value>148</value>
+  </data>
+  <data name="GridColumn7.AppearanceCell.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="GridColumn7.AppearanceCell.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="GridColumn7.AppearanceCell.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="GridColumn7.AppearanceCell.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="GridColumn7.Caption" xml:space="preserve">
+    <value>User Name</value>
+  </data>
+  <data name="GridColumn7.Width" type="System.Int32, mscorlib">
+    <value>88</value>
+  </data>
+  <data name="colcode_lar.Caption" xml:space="preserve">
+    <value>Employee ID</value>
+  </data>
+  <data name="colcode_lar.Width" type="System.Int32, mscorlib">
+    <value>82</value>
+  </data>
+  <data name="GridColumn1.Caption" xml:space="preserve">
+    <value>First Name </value>
+  </data>
+  <data name="GridColumn2.Caption" xml:space="preserve">
+    <value>Last Name</value>
+  </data>
+  <data name="GridColumn11.Caption" xml:space="preserve">
+    <value>Section</value>
+  </data>
+  <data name="GridColumn12.Caption" xml:space="preserve">
+    <value>Department</value>
+  </data>
+  <data name="GridColumn13.Caption" xml:space="preserve">
+    <value>Position</value>
+  </data>
+  <data name="BtnDel.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v17.1">
+    <value>Default</value>
+  </data>
+  <data name="BtnDel.Mask.BeepOnError" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="BtnDel.Mask.EditMask" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BtnDel.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="BtnDel.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v17.1">
+    <value>None</value>
+  </data>
+  <data name="BtnDel.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
+    <value>_</value>
+  </data>
+  <data name="BtnDel.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="BtnDel.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="BtnDel.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="btnShowData.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnShowData.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="btnShowData.Appearance.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="btnShowData.Appearance.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="btnShowData.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAACd0RVh0VGl0
+        bGUAUmVmcmVzaDtSZXBlYXQ7QmFycztSaWJib247UmVsb2FkzU326QAAAwFJREFUOE+lk3sslWEcxx/k
+        uOcPl1CNoR1JbrOWUB2iCzKEJOTkMsKZ5hJHNffrZiqc6OScwznVUtks5JJbck2RLHZoLmVtNavjcjj0
+        63nkjy7a2vptn73Pvu/3+33f/fa+CAD+i7+NFEb6N4j25zD5fYhZ2UeOxCC1fY+NjFvyfXoir7cd68uE
+        RG53Rzy7PeYEPUmReIifWdm/nkWxnJ71cFC6YGdsefdYUPpdQ1pE2bHg/Pq1KZEYZkTL0DXxGbhtQrjI
+        fj7kf4Wjj/3Ss+JvKI5kGTe7SIFsZHF704vJOTidWtOubWCqYk0vLbQNrwAHhgCibjyFwY/z8KB3GiKL
+        O0bMaF5byUOjf2TRlnM5dQm8tnEYXVoD1uNhcIzmXNXZZaFsYM/QNaBFUs28CzIPRVSudMyI4FrtW/DP
+        qL5EcmHXnyHkElNqlVDeKxEuSKBftApj8ysQlFUrsfBIoREThixQwfRUXmZAXgPcGZiFM1l1ZGkKAfkt
+        CNkEc17bnOeBT0YjtMwuQkBeC+ync2Bf4C0hNlE2CpS2GTuZ2YZw4eHEPPikN6xgTQtDlorkMequyXUr
+        zR8WwDutCTSojuZYU8bIYOSck2reuF6uB8+URuCOfgVydk2uB+fEmglEdSvCHqRoz6h6xeqchjh2Hxy5
+        UJ7/UwHF9GSig19Oq6TpvRj478TQMLMEtNCKVU3zQBdkF/WIFMhZ+RenhpT0QMXQJ/BKa5LQwli51IP+
+        5kaHA6lyKhralr4F2aHsASgTLoJPZgNoWEYX4pwKsgqtIgXSylq7tS3plcJw7iDwR75A9O0B8M5sBffU
+        ZtjrWyTAHn3zAHYf88kUqFnGvZSmqGpjTQaZBt5D1VNiUiKrZeFjZeJXPu6Z2wnJNUJgDc0Ba3AOHOJr
+        Qc8hga5m5GRtcpY3SdG0O4D9FGXjeISovnyMYP1KRHk1wx26R9PzDN1LhrAOWAdDD9aw3vFspgxFSRV7
+        yEckJ2/AQITNhixOCaOGIa+pg1Hf0Mi9X2ezX/TfAfQdAvawuvfdXuIAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="btnShowData.Text" xml:space="preserve">
+    <value>Refresh</value>
+  </data>
+  <data name="cmbDivistionId.Properties.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="cmbDivistionId.Properties.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="cmbDivistionId.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="cmbDivistionId.Properties.NullValuePrompt" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmbDivistionId.Properties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="btnAdd.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnAdd.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="btnAdd.Appearance.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="btnAdd.Appearance.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="btnAdd.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAAsdEVYdFRpdGxlAE5leHQ7RG91YmxlO0Fycm93O0Zh
+        c3Q7UmV3aW5kO0luY3JlYXNlyXdAHwAAAH9JREFUOE+1kMENgDAMA7tg12EAlmAE/rzYLjQWQiVcIR8e
+        50qWbUUtZlbqvFd/e8gjJC1ssUAeITnDtwJ5hKQLXwXyCEkIq9DYohfLzmhAhcZjZFqX9IDzecnXgPM6
+        8usFqY8cDaTKDg0oSB4hoSB5hISCmbIjoWCm7KCZx8oBe7GtjhwJHysAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="cmbDepartMent.Properties.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="cmbDepartMent.Properties.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="cmbDepartMent.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="cmbDepartMent.Properties.NullValuePrompt" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmbDepartMent.Properties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="grpLeft.Text" xml:space="preserve">
+    <value>Employee List :</value>
+  </data>
+  <data name="cboPerGroupName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>150, 13</value>
+  </data>
+  <data name="cboPerGroupName.Properties.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="cboPerGroupName.Properties.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="cboPerGroupName.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="cboPerGroupName.Properties.NullValuePrompt" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cboPerGroupName.Properties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lblPerGroupName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 15</value>
+  </data>
+  <data name="lblPerGroupName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>133, 16</value>
+  </data>
+  <data name="lblPerGroupName.Text" xml:space="preserve">
+    <value>Select Group Permission :</value>
+  </data>
+  <data name="btnRemove.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnRemove.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="btnRemove.Appearance.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="btnRemove.Appearance.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="btnRemove.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAAsdEVYdFRpdGxlAFByZXY7RG91YmxlO0Fycm93O1Ns
+        b3c7UmV3aW5kO0RlY3JlYXNlelPeUQAAAIVJREFUOE+djMENgDAMA1mw6zAASzACf15sV+xHqiZpQ8rj
+        pMjxeau1hpTjKVGmHhYWAc551h4WKfblUaYkoS9KeZSRTxncgwxVM7BfZ1ombgBhWiZqAMGSTNTAnxE3
+        QPBIj4ijBgieqRHpuwFihVlGnCz0QpQpySJClLXHDApRph7r1O0FzGetjqM4JB4AAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="XtraTabControl1.AppearancePage.HeaderActive.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="XtraTabControl1.AppearancePage.HeaderActive.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="XtraTabControl1.AppearancePage.HeaderActive.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="XtraTabControl1.AppearancePage.HeaderActive.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="Gcmenu_use.EmbeddedNavigator.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="Gcmenu_use.EmbeddedNavigator.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="Gcmenu_use.EmbeddedNavigator.AllowHtmlTextInToolTip" type="DevExpress.Utils.DefaultBoolean, DevExpress.Data.v17.1">
+    <value>Default</value>
+  </data>
+  <data name="Gcmenu_use.EmbeddedNavigator.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left</value>
+  </data>
+  <data name="Gcmenu_use.EmbeddedNavigator.BackgroundImage" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="Gcmenu_use.EmbeddedNavigator.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Tile</value>
+  </data>
+  <data name="Gcmenu_use.EmbeddedNavigator.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>Inherit</value>
+  </data>
+  <data name="Gcmenu_use.EmbeddedNavigator.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="Gcmenu_use.EmbeddedNavigator.TextLocation" type="DevExpress.XtraEditors.NavigatorButtonsTextLocation, DevExpress.XtraEditors.v17.1">
+    <value>Center</value>
+  </data>
+  <data name="Gcmenu_use.EmbeddedNavigator.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Gcmenu_use.EmbeddedNavigator.ToolTipIconType" type="DevExpress.Utils.ToolTipIconType, DevExpress.Utils.v17.1">
+    <value>None</value>
+  </data>
+  <data name="Gcmenu_use.EmbeddedNavigator.ToolTipTitle" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Gvmenu_use.Appearance.HeaderPanel.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Gvmenu_use.Appearance.HeaderPanel.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="Gvmenu_use.Appearance.HeaderPanel.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="Gvmenu_use.Appearance.HeaderPanel.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="Gvmenu_use.Appearance.Row.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Gvmenu_use.Appearance.Row.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="Gvmenu_use.Appearance.Row.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="Gvmenu_use.Appearance.Row.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="GridColumn3.AppearanceCell.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="GridColumn3.AppearanceCell.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="GridColumn3.AppearanceCell.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="GridColumn3.AppearanceCell.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="GridColumn3.AppearanceHeader.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="GridColumn3.AppearanceHeader.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="GridColumn3.AppearanceHeader.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="GridColumn3.AppearanceHeader.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="GridColumn3.Caption" xml:space="preserve">
+    <value>No.</value>
+  </data>
+  <data name="GridColumn14.AppearanceCell.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="GridColumn14.AppearanceCell.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="GridColumn14.AppearanceCell.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="GridColumn14.AppearanceCell.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="GridColumn14.Caption" xml:space="preserve">
+    <value>User</value>
+  </data>
+  <data name="GridColumn4.Caption" xml:space="preserve">
+    <value>User ID</value>
+  </data>
+  <data name="GridColumn5.Caption" xml:space="preserve">
+    <value>First Name </value>
+  </data>
+  <data name="GridColumn6.Caption" xml:space="preserve">
+    <value>Last Name</value>
+  </data>
+  <data name="GridColumn8.Caption" xml:space="preserve">
+    <value>Section</value>
+  </data>
+  <data name="GridColumn8.Width" type="System.Int32, mscorlib">
+    <value>103</value>
+  </data>
+  <data name="GridColumn9.Caption" xml:space="preserve">
+    <value>Department</value>
+  </data>
+  <data name="GridColumn9.Width" type="System.Int32, mscorlib">
+    <value>157</value>
+  </data>
+  <data name="GridColumn10.Caption" xml:space="preserve">
+    <value>Position</value>
+  </data>
+  <data name="RepositoryItemButtonEdit1.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v17.1">
+    <value>Default</value>
+  </data>
+  <data name="RepositoryItemButtonEdit1.Mask.BeepOnError" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="RepositoryItemButtonEdit1.Mask.EditMask" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RepositoryItemButtonEdit1.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="RepositoryItemButtonEdit1.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v17.1">
+    <value>None</value>
+  </data>
+  <data name="RepositoryItemButtonEdit1.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
+    <value>_</value>
+  </data>
+  <data name="RepositoryItemButtonEdit1.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="RepositoryItemButtonEdit1.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="RepositoryItemButtonEdit1.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="XtraTabPage1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAEd0RVh0VGl0
+        bGUAQ3VzdG9tZXI7RW1wbG95ZWU7Rml4O1B1YmxpYztTZXR0aW5ncztPcHRpb25zO0N1c3RvbWl6O0dy
+        b3VwO1RlYW1pCxOIAAADPklEQVQ4T22Te0hTURzHr5tlmoUVRjRLhwtr5nxMy7BZkq42nTlNyscS85Wv
+        fI0tc2ptbaYOLWxoRPbSICtdkX9kD3Q9DCmichWZoIFSWH9UZKnot3OsLMEffOAezvl+zrm/cy8DYE7E
+        YjHrfLIguTXT95U52/fHpTSvNyfjPIukUinb0dFxZt2s0P/IwmV2pxP432+ow6aemZLwUB+B2mgecqTC
+        lQaDYWbdv4ffZUNgEdjBQcFO1XKP8cfNWlw9JMGZ9EBowlwm5DtCl895Aho2Z3tKOtW+lvuHhMN3lD7j
+        F/d5fes4nomv3dV4UBMPjZRvkclkS6ig+JSIUZk2zRKwr6SuG37emDPVZUzEy2YV7uljoBO7YqRdiTbl
+        Nigj/A8QgQMV5NcGMNlVfrME800x3NHrmp1o08hxLGo9GhR+UIs4OB4fgPIUv9HNogCBu7u7HRHYpB1e
+        zyRp1jKM7kLINKTmlYWu7jQfTsTohx58fHQSJsVGlKcF4tp9NZru5SK9XPA6OpOXQQSLCKyYPFeGKT4X
+        wBwkkGLxVi51NWtix74P3MWIpRr1CiEqm2SobZeg5no4alrkyND7IDyD00UEC2loRnBLn0SHy4z7RX1P
+        m0rRVb0HJfFrUVS3EcVnApFvjEWp0YwsfTRC9zpP2tvbLyfrbf7uTq+PLd3nxs3S+b6tLAzCkUwh4gp4
+        Y4kFcWOpKhWU+kt4P/QZRbrmqeSC8kHxLtVRFou1YDqcavB0O2ASnFWf9v953pIA481tqGgLRkVLGLI0
+        FVPdT/rQP/CR9Broed6Pru5X2CJTviDZRVRgm1vnZW24HYuWpymo7QiBrlWIkss+UJ31Rm5lFAwn2vDh
+        0xds362F9d0Q4tMrwRNszyFZRyqYn1LlAW1LENQXvVHU6InCRj6yGtYgQbsKirwSdD6yovfNezyzDqD3
+        9SBq6lshCFRYSdaJCmyjC13KIvM5N6U5K16EZTj3haQuhUjhBH/54v7gKMmnrZGJn+P2GydvdPSAv0Ex
+        wfOOtHD5kjqSnX4F2kBbgh3BgUCvh05Q6A6029w1XhFa/6254HCDjpAx58+87cyXOBf/Ff3BaGAFYTGB
+        TSDFML8ACaHK5m87ahMAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="XtraTabPage1.Text" xml:space="preserve">
+    <value>Employee list</value>
+  </data>
+  <data name="txtNameedit.Properties.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtNameedit.Properties.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtNameedit.Properties.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtNameedit.Properties.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="txtNameedit.Properties.Appearance.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="txtNameedit.Properties.Appearance.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtNameedit.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="txtNameedit.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v17.1">
+    <value>Default</value>
+  </data>
+  <data name="txtNameedit.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="txtNameedit.Properties.Mask.EditMask" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtNameedit.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="txtNameedit.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v17.1">
+    <value>None</value>
+  </data>
+  <data name="txtNameedit.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
+    <value>_</value>
+  </data>
+  <data name="txtNameedit.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="txtNameedit.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="txtNameedit.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="txtNameedit.Properties.NullValuePrompt" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtNameedit.Properties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="txtCodeEdit.Properties.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtCodeEdit.Properties.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtCodeEdit.Properties.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtCodeEdit.Properties.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="txtCodeEdit.Properties.Appearance.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="txtCodeEdit.Properties.Appearance.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtCodeEdit.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="txtCodeEdit.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v17.1">
+    <value>Default</value>
+  </data>
+  <data name="txtCodeEdit.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="txtCodeEdit.Properties.Mask.EditMask" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtCodeEdit.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="txtCodeEdit.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v17.1">
+    <value>None</value>
+  </data>
+  <data name="txtCodeEdit.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
+    <value>_</value>
+  </data>
+  <data name="txtCodeEdit.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="txtCodeEdit.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="txtCodeEdit.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="txtCodeEdit.Properties.NullValuePrompt" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtCodeEdit.Properties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="tabMenu.AppearancePage.HeaderActive.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="tabMenu.AppearancePage.HeaderActive.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="tabMenu.AppearancePage.HeaderActive.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="tabMenu.AppearancePage.HeaderActive.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="XtraTabPage3.Appearance.Header.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="XtraTabPage3.Appearance.Header.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="XtraTabPage3.Appearance.Header.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="XtraTabPage3.Appearance.Header.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="XtraTabPage3.Appearance.HeaderActive.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="XtraTabPage3.Appearance.HeaderActive.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="XtraTabPage3.Appearance.HeaderActive.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="XtraTabPage3.Appearance.HeaderActive.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="XtraScrollableControl1.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="XtraScrollableControl1.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="XtraScrollableControl1.Appearance.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="XtraScrollableControl1.Appearance.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnuDailyUpdate.Properties.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnuDailyUpdate.Properties.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnuDailyUpdate.Properties.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="mnuDailyUpdate.Properties.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="mnuDailyUpdate.Properties.Appearance.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="mnuDailyUpdate.Properties.Appearance.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnuDailyUpdate.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="mnuDailyUpdate.Properties.DisplayValueChecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnuDailyUpdate.Properties.DisplayValueGrayed" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnuDailyUpdate.Properties.DisplayValueUnchecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnuInputLeaveData.Properties.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnuInputLeaveData.Properties.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnuInputLeaveData.Properties.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="mnuInputLeaveData.Properties.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="mnuInputLeaveData.Properties.Appearance.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="mnuInputLeaveData.Properties.Appearance.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnuInputLeaveData.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="mnuInputLeaveData.Properties.DisplayValueChecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnuInputLeaveData.Properties.DisplayValueGrayed" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnuInputLeaveData.Properties.DisplayValueUnchecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnuInputLeaveData.Properties.PictureChecked" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAAbdEVYdFRpdGxlAFN3aXRjaFJvd0NvbHVtbjtHcmlk
+        O1FF2ocAAAL7SURBVDhPbZJZTFNBFIYvlUVF9AF88FWNwRejaIxP8mDUxAWJxhCRmqCSsJTUaN2iYMQl
+        RCUQF1D2pRRFSikCTdW0oBQlhdYYEYuEYozKYm2pbe9tQX/n3GKfOMmXOTNz/n8yM4eTV5gWptzEsQhn
+        OWSlRuUO6bkVbC6hPQoAImLxuB/cFwaNLMIYEkY4I5oMOocmcbrKZEvNr904vx4WMsgpe82NCRBhIUnY
+        lRpz4k6nIvOewZRT+irA9mH+DfRPeJHXOOBLv6XNJpOQwcm73dwoHxTvzS1Ze6L4xYfirmE8+zgFq8OP
+        zzzw0gUYXX/xbmYOGXe7qTgqZHDstoHEYeu27VshLdQPV/bYYfjmg7y8D8mXtThVY4bOAShtM0jOaxMS
+        Uu7IWf1iOpB0XMp1PRmEJ51vunBD/R6aERf2nn2KB0/6MDQyDraPgo5PSFaoYBmyw+vl0fNmFAbTSDfT
+        LeKS8jrIYPG+C2pzdf93HC8x4v7jXvh8Png8HiTldSL3pho/Jn9ixs3W+Fm4PQFcKeqiq0SIYkbc7rOa
+        QLOdR2KmEh9tY6I4EAiwE73geR68EECL7j0cLgFubwAXC9vJIJLbntM8ul2mRiKj0ubDztNa0Fx6TYcf
+        U040tb8TUbVbodIG8+e9n6EoaBUfk4vfc2nX4av6WZNjDnVf/6JnehY7MuvRax6GwE5t1Frx08WLJze2
+        US5g5rcf8vzmoAGLpeuTi26nP7KgdOwPDl7To7CsS3yDX24BSo0V005BpEFjwTQZsDfIuqgiA7o+J4mM
+        WRUbf+ihWaH7ithNZ/qdTif7gQnUt1qCqAdRx6hXB/Muow0nFQ1ksIRbc6CCTCJWbkjbvHp/mT0qbuuW
+        7xNOuNx+TP/iUdcyiCk2ErUtA2wU4GR76adqyGApiSmo/+lLaGF5m84qFk0yUc1TEvGhnEYiTVYVNPjf
+        kqHWZF/zRPvWIM2thlRWLRYezSEqRVKzK3EkqwIpGaXUwlELGVCL0utGz7NsAWid1XCSf8+gTyTiQhaO
+        AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="mnuManageTime.Properties.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnuManageTime.Properties.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnuManageTime.Properties.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="mnuManageTime.Properties.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="mnuManageTime.Properties.Appearance.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="mnuManageTime.Properties.Appearance.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnuManageTime.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="mnuManageTime.Properties.DisplayValueChecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnuManageTime.Properties.DisplayValueGrayed" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnuManageTime.Properties.DisplayValueUnchecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnuManageTime.Properties.PictureChecked" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAAbdEVYdFRpdGxlAFN3aXRjaFJvd0NvbHVtbjtHcmlk
+        O1FF2ocAAAL7SURBVDhPbZJZTFNBFIYvlUVF9AF88FWNwRejaIxP8mDUxAWJxhCRmqCSsJTUaN2iYMQl
+        RCUQF1D2pRRFSikCTdW0oBQlhdYYEYuEYozKYm2pbe9tQX/n3GKfOMmXOTNz/n8yM4eTV5gWptzEsQhn
+        OWSlRuUO6bkVbC6hPQoAImLxuB/cFwaNLMIYEkY4I5oMOocmcbrKZEvNr904vx4WMsgpe82NCRBhIUnY
+        lRpz4k6nIvOewZRT+irA9mH+DfRPeJHXOOBLv6XNJpOQwcm73dwoHxTvzS1Ze6L4xYfirmE8+zgFq8OP
+        zzzw0gUYXX/xbmYOGXe7qTgqZHDstoHEYeu27VshLdQPV/bYYfjmg7y8D8mXtThVY4bOAShtM0jOaxMS
+        Uu7IWf1iOpB0XMp1PRmEJ51vunBD/R6aERf2nn2KB0/6MDQyDraPgo5PSFaoYBmyw+vl0fNmFAbTSDfT
+        LeKS8jrIYPG+C2pzdf93HC8x4v7jXvh8Png8HiTldSL3pho/Jn9ixs3W+Fm4PQFcKeqiq0SIYkbc7rOa
+        QLOdR2KmEh9tY6I4EAiwE73geR68EECL7j0cLgFubwAXC9vJIJLbntM8ul2mRiKj0ubDztNa0Fx6TYcf
+        U040tb8TUbVbodIG8+e9n6EoaBUfk4vfc2nX4av6WZNjDnVf/6JnehY7MuvRax6GwE5t1Frx08WLJze2
+        US5g5rcf8vzmoAGLpeuTi26nP7KgdOwPDl7To7CsS3yDX24BSo0V005BpEFjwTQZsDfIuqgiA7o+J4mM
+        WRUbf+ihWaH7ithNZ/qdTif7gQnUt1qCqAdRx6hXB/Muow0nFQ1ksIRbc6CCTCJWbkjbvHp/mT0qbuuW
+        7xNOuNx+TP/iUdcyiCk2ErUtA2wU4GR76adqyGApiSmo/+lLaGF5m84qFk0yUc1TEvGhnEYiTVYVNPjf
+        kqHWZF/zRPvWIM2thlRWLRYezSEqRVKzK3EkqwIpGaXUwlELGVCL0utGz7NsAWid1XCSf8+gTyTiQhaO
+        AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="mnuPermissionTimeAtt.Properties.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnuPermissionTimeAtt.Properties.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnuPermissionTimeAtt.Properties.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="mnuPermissionTimeAtt.Properties.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="mnuPermissionTimeAtt.Properties.Appearance.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="mnuPermissionTimeAtt.Properties.Appearance.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnuPermissionTimeAtt.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="mnuPermissionTimeAtt.Properties.DisplayValueChecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnuPermissionTimeAtt.Properties.DisplayValueGrayed" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnuPermissionTimeAtt.Properties.DisplayValueUnchecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnuPermissionTimeAtt.Properties.PictureChecked" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAAbdEVYdFRpdGxlAFN3aXRjaFJvd0NvbHVtbjtHcmlk
+        O1FF2ocAAAL7SURBVDhPbZJZTFNBFIYvlUVF9AF88FWNwRejaIxP8mDUxAWJxhCRmqCSsJTUaN2iYMQl
+        RCUQF1D2pRRFSikCTdW0oBQlhdYYEYuEYozKYm2pbe9tQX/n3GKfOMmXOTNz/n8yM4eTV5gWptzEsQhn
+        OWSlRuUO6bkVbC6hPQoAImLxuB/cFwaNLMIYEkY4I5oMOocmcbrKZEvNr904vx4WMsgpe82NCRBhIUnY
+        lRpz4k6nIvOewZRT+irA9mH+DfRPeJHXOOBLv6XNJpOQwcm73dwoHxTvzS1Ze6L4xYfirmE8+zgFq8OP
+        zzzw0gUYXX/xbmYOGXe7qTgqZHDstoHEYeu27VshLdQPV/bYYfjmg7y8D8mXtThVY4bOAShtM0jOaxMS
+        Uu7IWf1iOpB0XMp1PRmEJ51vunBD/R6aERf2nn2KB0/6MDQyDraPgo5PSFaoYBmyw+vl0fNmFAbTSDfT
+        LeKS8jrIYPG+C2pzdf93HC8x4v7jXvh8Png8HiTldSL3pho/Jn9ixs3W+Fm4PQFcKeqiq0SIYkbc7rOa
+        QLOdR2KmEh9tY6I4EAiwE73geR68EECL7j0cLgFubwAXC9vJIJLbntM8ul2mRiKj0ubDztNa0Fx6TYcf
+        U040tb8TUbVbodIG8+e9n6EoaBUfk4vfc2nX4av6WZNjDnVf/6JnehY7MuvRax6GwE5t1Frx08WLJze2
+        US5g5rcf8vzmoAGLpeuTi26nP7KgdOwPDl7To7CsS3yDX24BSo0V005BpEFjwTQZsDfIuqgiA7o+J4mM
+        WRUbf+ihWaH7ithNZ/qdTif7gQnUt1qCqAdRx6hXB/Muow0nFQ1ksIRbc6CCTCJWbkjbvHp/mT0qbuuW
+        7xNOuNx+TP/iUdcyiCk2ErUtA2wU4GR76adqyGApiSmo/+lLaGF5m84qFk0yUc1TEvGhnEYiTVYVNPjf
+        kqHWZF/zRPvWIM2thlRWLRYezSEqRVKzK3EkqwIpGaXUwlELGVCL0utGz7NsAWid1XCSf8+gTyTiQhaO
+        AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="mnuabsenceTime.Properties.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnuabsenceTime.Properties.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnuabsenceTime.Properties.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="mnuabsenceTime.Properties.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="mnuabsenceTime.Properties.Appearance.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="mnuabsenceTime.Properties.Appearance.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnuabsenceTime.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="mnuabsenceTime.Properties.DisplayValueChecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnuabsenceTime.Properties.DisplayValueGrayed" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnuabsenceTime.Properties.DisplayValueUnchecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnuabsenceTime.Properties.PictureChecked" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAAbdEVYdFRpdGxlAFN3aXRjaFJvd0NvbHVtbjtHcmlk
+        O1FF2ocAAAL7SURBVDhPbZJZTFNBFIYvlUVF9AF88FWNwRejaIxP8mDUxAWJxhCRmqCSsJTUaN2iYMQl
+        RCUQF1D2pRRFSikCTdW0oBQlhdYYEYuEYozKYm2pbe9tQX/n3GKfOMmXOTNz/n8yM4eTV5gWptzEsQhn
+        OWSlRuUO6bkVbC6hPQoAImLxuB/cFwaNLMIYEkY4I5oMOocmcbrKZEvNr904vx4WMsgpe82NCRBhIUnY
+        lRpz4k6nIvOewZRT+irA9mH+DfRPeJHXOOBLv6XNJpOQwcm73dwoHxTvzS1Ze6L4xYfirmE8+zgFq8OP
+        zzzw0gUYXX/xbmYOGXe7qTgqZHDstoHEYeu27VshLdQPV/bYYfjmg7y8D8mXtThVY4bOAShtM0jOaxMS
+        Uu7IWf1iOpB0XMp1PRmEJ51vunBD/R6aERf2nn2KB0/6MDQyDraPgo5PSFaoYBmyw+vl0fNmFAbTSDfT
+        LeKS8jrIYPG+C2pzdf93HC8x4v7jXvh8Png8HiTldSL3pho/Jn9ixs3W+Fm4PQFcKeqiq0SIYkbc7rOa
+        QLOdR2KmEh9tY6I4EAiwE73geR68EECL7j0cLgFubwAXC9vJIJLbntM8ul2mRiKj0ubDztNa0Fx6TYcf
+        U040tb8TUbVbodIG8+e9n6EoaBUfk4vfc2nX4av6WZNjDnVf/6JnehY7MuvRax6GwE5t1Frx08WLJze2
+        US5g5rcf8vzmoAGLpeuTi26nP7KgdOwPDl7To7CsS3yDX24BSo0V005BpEFjwTQZsDfIuqgiA7o+J4mM
+        WRUbf+ihWaH7ithNZ/qdTif7gQnUt1qCqAdRx6hXB/Muow0nFQ1ksIRbc6CCTCJWbkjbvHp/mT0qbuuW
+        7xNOuNx+TP/iUdcyiCk2ErUtA2wU4GR76adqyGApiSmo/+lLaGF5m84qFk0yUc1TEvGhnEYiTVYVNPjf
+        kqHWZF/zRPvWIM2thlRWLRYezSEqRVKzK3EkqwIpGaXUwlELGVCL0utGz7NsAWid1XCSf8+gTyTiQhaO
+        AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="mnuOvertime.Properties.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnuOvertime.Properties.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnuOvertime.Properties.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="mnuOvertime.Properties.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="mnuOvertime.Properties.Appearance.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="mnuOvertime.Properties.Appearance.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnuOvertime.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="mnuOvertime.Properties.DisplayValueChecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnuOvertime.Properties.DisplayValueGrayed" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnuOvertime.Properties.DisplayValueUnchecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnuOvertime.Properties.PictureChecked" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAAbdEVYdFRpdGxlAFN3aXRjaFJvd0NvbHVtbjtHcmlk
+        O1FF2ocAAAL7SURBVDhPbZJZTFNBFIYvlUVF9AF88FWNwRejaIxP8mDUxAWJxhCRmqCSsJTUaN2iYMQl
+        RCUQF1D2pRRFSikCTdW0oBQlhdYYEYuEYozKYm2pbe9tQX/n3GKfOMmXOTNz/n8yM4eTV5gWptzEsQhn
+        OWSlRuUO6bkVbC6hPQoAImLxuB/cFwaNLMIYEkY4I5oMOocmcbrKZEvNr904vx4WMsgpe82NCRBhIUnY
+        lRpz4k6nIvOewZRT+irA9mH+DfRPeJHXOOBLv6XNJpOQwcm73dwoHxTvzS1Ze6L4xYfirmE8+zgFq8OP
+        zzzw0gUYXX/xbmYOGXe7qTgqZHDstoHEYeu27VshLdQPV/bYYfjmg7y8D8mXtThVY4bOAShtM0jOaxMS
+        Uu7IWf1iOpB0XMp1PRmEJ51vunBD/R6aERf2nn2KB0/6MDQyDraPgo5PSFaoYBmyw+vl0fNmFAbTSDfT
+        LeKS8jrIYPG+C2pzdf93HC8x4v7jXvh8Png8HiTldSL3pho/Jn9ixs3W+Fm4PQFcKeqiq0SIYkbc7rOa
+        QLOdR2KmEh9tY6I4EAiwE73geR68EECL7j0cLgFubwAXC9vJIJLbntM8ul2mRiKj0ubDztNa0Fx6TYcf
+        U040tb8TUbVbodIG8+e9n6EoaBUfk4vfc2nX4av6WZNjDnVf/6JnehY7MuvRax6GwE5t1Frx08WLJze2
+        US5g5rcf8vzmoAGLpeuTi26nP7KgdOwPDl7To7CsS3yDX24BSo0V005BpEFjwTQZsDfIuqgiA7o+J4mM
+        WRUbf+ihWaH7ithNZ/qdTif7gQnUt1qCqAdRx6hXB/Muow0nFQ1ksIRbc6CCTCJWbkjbvHp/mT0qbuuW
+        7xNOuNx+TP/iUdcyiCk2ErUtA2wU4GR76adqyGApiSmo/+lLaGF5m84qFk0yUc1TEvGhnEYiTVYVNPjf
+        kqHWZF/zRPvWIM2thlRWLRYezSEqRVKzK3EkqwIpGaXUwlELGVCL0utGz7NsAWid1XCSf8+gTyTiQhaO
+        AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="mnuLateTime.Properties.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnuLateTime.Properties.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnuLateTime.Properties.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="mnuLateTime.Properties.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="mnuLateTime.Properties.Appearance.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="mnuLateTime.Properties.Appearance.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnuLateTime.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="mnuLateTime.Properties.DisplayValueChecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnuLateTime.Properties.DisplayValueGrayed" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnuLateTime.Properties.DisplayValueUnchecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnuLateTime.Properties.PictureChecked" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAAbdEVYdFRpdGxlAFN3aXRjaFJvd0NvbHVtbjtHcmlk
+        O1FF2ocAAAL7SURBVDhPbZJZTFNBFIYvlUVF9AF88FWNwRejaIxP8mDUxAWJxhCRmqCSsJTUaN2iYMQl
+        RCUQF1D2pRRFSikCTdW0oBQlhdYYEYuEYozKYm2pbe9tQX/n3GKfOMmXOTNz/n8yM4eTV5gWptzEsQhn
+        OWSlRuUO6bkVbC6hPQoAImLxuB/cFwaNLMIYEkY4I5oMOocmcbrKZEvNr904vx4WMsgpe82NCRBhIUnY
+        lRpz4k6nIvOewZRT+irA9mH+DfRPeJHXOOBLv6XNJpOQwcm73dwoHxTvzS1Ze6L4xYfirmE8+zgFq8OP
+        zzzw0gUYXX/xbmYOGXe7qTgqZHDstoHEYeu27VshLdQPV/bYYfjmg7y8D8mXtThVY4bOAShtM0jOaxMS
+        Uu7IWf1iOpB0XMp1PRmEJ51vunBD/R6aERf2nn2KB0/6MDQyDraPgo5PSFaoYBmyw+vl0fNmFAbTSDfT
+        LeKS8jrIYPG+C2pzdf93HC8x4v7jXvh8Png8HiTldSL3pho/Jn9ixs3W+Fm4PQFcKeqiq0SIYkbc7rOa
+        QLOdR2KmEh9tY6I4EAiwE73geR68EECL7j0cLgFubwAXC9vJIJLbntM8ul2mRiKj0ubDztNa0Fx6TYcf
+        U040tb8TUbVbodIG8+e9n6EoaBUfk4vfc2nX4av6WZNjDnVf/6JnehY7MuvRax6GwE5t1Frx08WLJze2
+        US5g5rcf8vzmoAGLpeuTi26nP7KgdOwPDl7To7CsS3yDX24BSo0V005BpEFjwTQZsDfIuqgiA7o+J4mM
+        WRUbf+ihWaH7ithNZ/qdTif7gQnUt1qCqAdRx6hXB/Muow0nFQ1ksIRbc6CCTCJWbkjbvHp/mT0qbuuW
+        7xNOuNx+TP/iUdcyiCk2ErUtA2wU4GR76adqyGApiSmo/+lLaGF5m84qFk0yUc1TEvGhnEYiTVYVNPjf
+        kqHWZF/zRPvWIM2thlRWLRYezSEqRVKzK3EkqwIpGaXUwlELGVCL0utGz7NsAWid1XCSf8+gTyTiQhaO
+        AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="XtraTabPage4.Appearance.Header.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="XtraTabPage4.Appearance.Header.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="XtraTabPage4.Appearance.Header.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="XtraTabPage4.Appearance.Header.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="XtraTabPage4.Appearance.HeaderActive.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="XtraTabPage4.Appearance.HeaderActive.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="XtraTabPage4.Appearance.HeaderActive.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="XtraTabPage4.Appearance.HeaderActive.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="XtraScrollableControl2.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="XtraScrollableControl2.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="XtraScrollableControl2.Appearance.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="XtraScrollableControl2.Appearance.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnuEmp.Properties.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnuEmp.Properties.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnuEmp.Properties.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="mnuEmp.Properties.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="mnuEmp.Properties.Appearance.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="mnuEmp.Properties.Appearance.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnuEmp.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="mnuEmp.Properties.DisplayValueChecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnuEmp.Properties.DisplayValueGrayed" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnuEmp.Properties.DisplayValueUnchecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnuEmp.Properties.PictureChecked" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAAbdEVYdFRpdGxlAFN3aXRjaFJvd0NvbHVtbjtHcmlk
+        O1FF2ocAAAL7SURBVDhPbZJZTFNBFIYvlUVF9AF88FWNwRejaIxP8mDUxAWJxhCRmqCSsJTUaN2iYMQl
+        RCUQF1D2pRRFSikCTdW0oBQlhdYYEYuEYozKYm2pbe9tQX/n3GKfOMmXOTNz/n8yM4eTV5gWptzEsQhn
+        OWSlRuUO6bkVbC6hPQoAImLxuB/cFwaNLMIYEkY4I5oMOocmcbrKZEvNr904vx4WMsgpe82NCRBhIUnY
+        lRpz4k6nIvOewZRT+irA9mH+DfRPeJHXOOBLv6XNJpOQwcm73dwoHxTvzS1Ze6L4xYfirmE8+zgFq8OP
+        zzzw0gUYXX/xbmYOGXe7qTgqZHDstoHEYeu27VshLdQPV/bYYfjmg7y8D8mXtThVY4bOAShtM0jOaxMS
+        Uu7IWf1iOpB0XMp1PRmEJ51vunBD/R6aERf2nn2KB0/6MDQyDraPgo5PSFaoYBmyw+vl0fNmFAbTSDfT
+        LeKS8jrIYPG+C2pzdf93HC8x4v7jXvh8Png8HiTldSL3pho/Jn9ixs3W+Fm4PQFcKeqiq0SIYkbc7rOa
+        QLOdR2KmEh9tY6I4EAiwE73geR68EECL7j0cLgFubwAXC9vJIJLbntM8ul2mRiKj0ubDztNa0Fx6TYcf
+        U040tb8TUbVbodIG8+e9n6EoaBUfk4vfc2nX4av6WZNjDnVf/6JnehY7MuvRax6GwE5t1Frx08WLJze2
+        US5g5rcf8vzmoAGLpeuTi26nP7KgdOwPDl7To7CsS3yDX24BSo0V005BpEFjwTQZsDfIuqgiA7o+J4mM
+        WRUbf+ihWaH7ithNZ/qdTif7gQnUt1qCqAdRx6hXB/Muow0nFQ1ksIRbc6CCTCJWbkjbvHp/mT0qbuuW
+        7xNOuNx+TP/iUdcyiCk2ErUtA2wU4GR76adqyGApiSmo/+lLaGF5m84qFk0yUc1TEvGhnEYiTVYVNPjf
+        kqHWZF/zRPvWIM2thlRWLRYezSEqRVKzK3EkqwIpGaXUwlELGVCL0utGz7NsAWid1XCSf8+gTyTiQhaO
+        AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="mnuDepartment.Properties.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnuDepartment.Properties.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnuDepartment.Properties.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="mnuDepartment.Properties.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="mnuDepartment.Properties.Appearance.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="mnuDepartment.Properties.Appearance.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnuDepartment.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="mnuDepartment.Properties.DisplayValueChecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnuDepartment.Properties.DisplayValueGrayed" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnuDepartment.Properties.DisplayValueUnchecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnuDepartment.Properties.PictureChecked" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAAbdEVYdFRpdGxlAFN3aXRjaFJvd0NvbHVtbjtHcmlk
+        O1FF2ocAAAL7SURBVDhPbZJZTFNBFIYvlUVF9AF88FWNwRejaIxP8mDUxAWJxhCRmqCSsJTUaN2iYMQl
+        RCUQF1D2pRRFSikCTdW0oBQlhdYYEYuEYozKYm2pbe9tQX/n3GKfOMmXOTNz/n8yM4eTV5gWptzEsQhn
+        OWSlRuUO6bkVbC6hPQoAImLxuB/cFwaNLMIYEkY4I5oMOocmcbrKZEvNr904vx4WMsgpe82NCRBhIUnY
+        lRpz4k6nIvOewZRT+irA9mH+DfRPeJHXOOBLv6XNJpOQwcm73dwoHxTvzS1Ze6L4xYfirmE8+zgFq8OP
+        zzzw0gUYXX/xbmYOGXe7qTgqZHDstoHEYeu27VshLdQPV/bYYfjmg7y8D8mXtThVY4bOAShtM0jOaxMS
+        Uu7IWf1iOpB0XMp1PRmEJ51vunBD/R6aERf2nn2KB0/6MDQyDraPgo5PSFaoYBmyw+vl0fNmFAbTSDfT
+        LeKS8jrIYPG+C2pzdf93HC8x4v7jXvh8Png8HiTldSL3pho/Jn9ixs3W+Fm4PQFcKeqiq0SIYkbc7rOa
+        QLOdR2KmEh9tY6I4EAiwE73geR68EECL7j0cLgFubwAXC9vJIJLbntM8ul2mRiKj0ubDztNa0Fx6TYcf
+        U040tb8TUbVbodIG8+e9n6EoaBUfk4vfc2nX4av6WZNjDnVf/6JnehY7MuvRax6GwE5t1Frx08WLJze2
+        US5g5rcf8vzmoAGLpeuTi26nP7KgdOwPDl7To7CsS3yDX24BSo0V005BpEFjwTQZsDfIuqgiA7o+J4mM
+        WRUbf+ihWaH7ithNZ/qdTif7gQnUt1qCqAdRx6hXB/Muow0nFQ1ksIRbc6CCTCJWbkjbvHp/mT0qbuuW
+        7xNOuNx+TP/iUdcyiCk2ErUtA2wU4GR76adqyGApiSmo/+lLaGF5m84qFk0yUc1TEvGhnEYiTVYVNPjf
+        kqHWZF/zRPvWIM2thlRWLRYezSEqRVKzK3EkqwIpGaXUwlELGVCL0utGz7NsAWid1XCSf8+gTyTiQhaO
+        AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="mnuDivision.Properties.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnuDivision.Properties.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnuDivision.Properties.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="mnuDivision.Properties.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="mnuDivision.Properties.Appearance.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="mnuDivision.Properties.Appearance.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnuDivision.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="mnuDivision.Properties.DisplayValueChecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnuDivision.Properties.DisplayValueGrayed" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnuDivision.Properties.DisplayValueUnchecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnuDivision.Properties.PictureChecked" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAAbdEVYdFRpdGxlAFN3aXRjaFJvd0NvbHVtbjtHcmlk
+        O1FF2ocAAAL7SURBVDhPbZJZTFNBFIYvlUVF9AF88FWNwRejaIxP8mDUxAWJxhCRmqCSsJTUaN2iYMQl
+        RCUQF1D2pRRFSikCTdW0oBQlhdYYEYuEYozKYm2pbe9tQX/n3GKfOMmXOTNz/n8yM4eTV5gWptzEsQhn
+        OWSlRuUO6bkVbC6hPQoAImLxuB/cFwaNLMIYEkY4I5oMOocmcbrKZEvNr904vx4WMsgpe82NCRBhIUnY
+        lRpz4k6nIvOewZRT+irA9mH+DfRPeJHXOOBLv6XNJpOQwcm73dwoHxTvzS1Ze6L4xYfirmE8+zgFq8OP
+        zzzw0gUYXX/xbmYOGXe7qTgqZHDstoHEYeu27VshLdQPV/bYYfjmg7y8D8mXtThVY4bOAShtM0jOaxMS
+        Uu7IWf1iOpB0XMp1PRmEJ51vunBD/R6aERf2nn2KB0/6MDQyDraPgo5PSFaoYBmyw+vl0fNmFAbTSDfT
+        LeKS8jrIYPG+C2pzdf93HC8x4v7jXvh8Png8HiTldSL3pho/Jn9ixs3W+Fm4PQFcKeqiq0SIYkbc7rOa
+        QLOdR2KmEh9tY6I4EAiwE73geR68EECL7j0cLgFubwAXC9vJIJLbntM8ul2mRiKj0ubDztNa0Fx6TYcf
+        U040tb8TUbVbodIG8+e9n6EoaBUfk4vfc2nX4av6WZNjDnVf/6JnehY7MuvRax6GwE5t1Frx08WLJze2
+        US5g5rcf8vzmoAGLpeuTi26nP7KgdOwPDl7To7CsS3yDX24BSo0V005BpEFjwTQZsDfIuqgiA7o+J4mM
+        WRUbf+ihWaH7ithNZ/qdTif7gQnUt1qCqAdRx6hXB/Muow0nFQ1ksIRbc6CCTCJWbkjbvHp/mT0qbuuW
+        7xNOuNx+TP/iUdcyiCk2ErUtA2wU4GR76adqyGApiSmo/+lLaGF5m84qFk0yUc1TEvGhnEYiTVYVNPjf
+        kqHWZF/zRPvWIM2thlRWLRYezSEqRVKzK3EkqwIpGaXUwlELGVCL0utGz7NsAWid1XCSf8+gTyTiQhaO
+        AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="MenuWorkHolidaySpacial.Properties.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="MenuWorkHolidaySpacial.Properties.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="MenuWorkHolidaySpacial.Properties.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="MenuWorkHolidaySpacial.Properties.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="MenuWorkHolidaySpacial.Properties.Appearance.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="MenuWorkHolidaySpacial.Properties.Appearance.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="MenuWorkHolidaySpacial.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="MenuWorkHolidaySpacial.Properties.DisplayValueChecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="MenuWorkHolidaySpacial.Properties.DisplayValueGrayed" xml:space="preserve">
+    <value />
+  </data>
+  <data name="MenuWorkHolidaySpacial.Properties.DisplayValueUnchecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="MenuWorkHolidaySpacial.Properties.PictureChecked" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAAbdEVYdFRpdGxlAFN3aXRjaFJvd0NvbHVtbjtHcmlk
+        O1FF2ocAAAL7SURBVDhPbZJZTFNBFIYvlUVF9AF88FWNwRejaIxP8mDUxAWJxhCRmqCSsJTUaN2iYMQl
+        RCUQF1D2pRRFSikCTdW0oBQlhdYYEYuEYozKYm2pbe9tQX/n3GKfOMmXOTNz/n8yM4eTV5gWptzEsQhn
+        OWSlRuUO6bkVbC6hPQoAImLxuB/cFwaNLMIYEkY4I5oMOocmcbrKZEvNr904vx4WMsgpe82NCRBhIUnY
+        lRpz4k6nIvOewZRT+irA9mH+DfRPeJHXOOBLv6XNJpOQwcm73dwoHxTvzS1Ze6L4xYfirmE8+zgFq8OP
+        zzzw0gUYXX/xbmYOGXe7qTgqZHDstoHEYeu27VshLdQPV/bYYfjmg7y8D8mXtThVY4bOAShtM0jOaxMS
+        Uu7IWf1iOpB0XMp1PRmEJ51vunBD/R6aERf2nn2KB0/6MDQyDraPgo5PSFaoYBmyw+vl0fNmFAbTSDfT
+        LeKS8jrIYPG+C2pzdf93HC8x4v7jXvh8Png8HiTldSL3pho/Jn9ixs3W+Fm4PQFcKeqiq0SIYkbc7rOa
+        QLOdR2KmEh9tY6I4EAiwE73geR68EECL7j0cLgFubwAXC9vJIJLbntM8ul2mRiKj0ubDztNa0Fx6TYcf
+        U040tb8TUbVbodIG8+e9n6EoaBUfk4vfc2nX4av6WZNjDnVf/6JnehY7MuvRax6GwE5t1Frx08WLJze2
+        US5g5rcf8vzmoAGLpeuTi26nP7KgdOwPDl7To7CsS3yDX24BSo0V005BpEFjwTQZsDfIuqgiA7o+J4mM
+        WRUbf+ihWaH7ithNZ/qdTif7gQnUt1qCqAdRx6hXB/Muow0nFQ1ksIRbc6CCTCJWbkjbvHp/mT0qbuuW
+        7xNOuNx+TP/iUdcyiCk2ErUtA2wU4GR76adqyGApiSmo/+lLaGF5m84qFk0yUc1TEvGhnEYiTVYVNPjf
+        kqHWZF/zRPvWIM2thlRWLRYezSEqRVKzK3EkqwIpGaXUwlELGVCL0utGz7NsAWid1XCSf8+gTyTiQhaO
+        AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="mnuConfiguration.Properties.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnuConfiguration.Properties.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnuConfiguration.Properties.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="mnuConfiguration.Properties.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="mnuConfiguration.Properties.Appearance.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="mnuConfiguration.Properties.Appearance.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnuConfiguration.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="mnuConfiguration.Properties.DisplayValueChecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnuConfiguration.Properties.DisplayValueGrayed" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnuConfiguration.Properties.DisplayValueUnchecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnuSetholiday.Properties.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnuSetholiday.Properties.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnuSetholiday.Properties.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="mnuSetholiday.Properties.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="mnuSetholiday.Properties.Appearance.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="mnuSetholiday.Properties.Appearance.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnuSetholiday.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="mnuSetholiday.Properties.DisplayValueChecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnuSetholiday.Properties.DisplayValueGrayed" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnuSetholiday.Properties.DisplayValueUnchecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnuSetholiday.Properties.PictureChecked" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAAbdEVYdFRpdGxlAFN3aXRjaFJvd0NvbHVtbjtHcmlk
+        O1FF2ocAAAL7SURBVDhPbZJZTFNBFIYvlUVF9AF88FWNwRejaIxP8mDUxAWJxhCRmqCSsJTUaN2iYMQl
+        RCUQF1D2pRRFSikCTdW0oBQlhdYYEYuEYozKYm2pbe9tQX/n3GKfOMmXOTNz/n8yM4eTV5gWptzEsQhn
+        OWSlRuUO6bkVbC6hPQoAImLxuB/cFwaNLMIYEkY4I5oMOocmcbrKZEvNr904vx4WMsgpe82NCRBhIUnY
+        lRpz4k6nIvOewZRT+irA9mH+DfRPeJHXOOBLv6XNJpOQwcm73dwoHxTvzS1Ze6L4xYfirmE8+zgFq8OP
+        zzzw0gUYXX/xbmYOGXe7qTgqZHDstoHEYeu27VshLdQPV/bYYfjmg7y8D8mXtThVY4bOAShtM0jOaxMS
+        Uu7IWf1iOpB0XMp1PRmEJ51vunBD/R6aERf2nn2KB0/6MDQyDraPgo5PSFaoYBmyw+vl0fNmFAbTSDfT
+        LeKS8jrIYPG+C2pzdf93HC8x4v7jXvh8Png8HiTldSL3pho/Jn9ixs3W+Fm4PQFcKeqiq0SIYkbc7rOa
+        QLOdR2KmEh9tY6I4EAiwE73geR68EECL7j0cLgFubwAXC9vJIJLbntM8ul2mRiKj0ubDztNa0Fx6TYcf
+        U040tb8TUbVbodIG8+e9n6EoaBUfk4vfc2nX4av6WZNjDnVf/6JnehY7MuvRax6GwE5t1Frx08WLJze2
+        US5g5rcf8vzmoAGLpeuTi26nP7KgdOwPDl7To7CsS3yDX24BSo0V005BpEFjwTQZsDfIuqgiA7o+J4mM
+        WRUbf+ihWaH7ithNZ/qdTif7gQnUt1qCqAdRx6hXB/Muow0nFQ1ksIRbc6CCTCJWbkjbvHp/mT0qbuuW
+        7xNOuNx+TP/iUdcyiCk2ErUtA2wU4GR76adqyGApiSmo/+lLaGF5m84qFk0yUc1TEvGhnEYiTVYVNPjf
+        kqHWZF/zRPvWIM2thlRWLRYezSEqRVKzK3EkqwIpGaXUwlELGVCL0utGz7NsAWid1XCSf8+gTyTiQhaO
+        AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="mnuMConfig.Properties.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnuMConfig.Properties.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnuMConfig.Properties.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="mnuMConfig.Properties.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="mnuMConfig.Properties.Appearance.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="mnuMConfig.Properties.Appearance.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnuMConfig.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="mnuMConfig.Properties.DisplayValueChecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnuMConfig.Properties.DisplayValueGrayed" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnuMConfig.Properties.DisplayValueUnchecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnuMConfig.Properties.PictureChecked" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAAbdEVYdFRpdGxlAFN3aXRjaFJvd0NvbHVtbjtHcmlk
+        O1FF2ocAAAL7SURBVDhPbZJZTFNBFIYvlUVF9AF88FWNwRejaIxP8mDUxAWJxhCRmqCSsJTUaN2iYMQl
+        RCUQF1D2pRRFSikCTdW0oBQlhdYYEYuEYozKYm2pbe9tQX/n3GKfOMmXOTNz/n8yM4eTV5gWptzEsQhn
+        OWSlRuUO6bkVbC6hPQoAImLxuB/cFwaNLMIYEkY4I5oMOocmcbrKZEvNr904vx4WMsgpe82NCRBhIUnY
+        lRpz4k6nIvOewZRT+irA9mH+DfRPeJHXOOBLv6XNJpOQwcm73dwoHxTvzS1Ze6L4xYfirmE8+zgFq8OP
+        zzzw0gUYXX/xbmYOGXe7qTgqZHDstoHEYeu27VshLdQPV/bYYfjmg7y8D8mXtThVY4bOAShtM0jOaxMS
+        Uu7IWf1iOpB0XMp1PRmEJ51vunBD/R6aERf2nn2KB0/6MDQyDraPgo5PSFaoYBmyw+vl0fNmFAbTSDfT
+        LeKS8jrIYPG+C2pzdf93HC8x4v7jXvh8Png8HiTldSL3pho/Jn9ixs3W+Fm4PQFcKeqiq0SIYkbc7rOa
+        QLOdR2KmEh9tY6I4EAiwE73geR68EECL7j0cLgFubwAXC9vJIJLbntM8ul2mRiKj0ubDztNa0Fx6TYcf
+        U040tb8TUbVbodIG8+e9n6EoaBUfk4vfc2nX4av6WZNjDnVf/6JnehY7MuvRax6GwE5t1Frx08WLJze2
+        US5g5rcf8vzmoAGLpeuTi26nP7KgdOwPDl7To7CsS3yDX24BSo0V005BpEFjwTQZsDfIuqgiA7o+J4mM
+        WRUbf+ihWaH7ithNZ/qdTif7gQnUt1qCqAdRx6hXB/Muow0nFQ1ksIRbc6CCTCJWbkjbvHp/mT0qbuuW
+        7xNOuNx+TP/iUdcyiCk2ErUtA2wU4GR76adqyGApiSmo/+lLaGF5m84qFk0yUc1TEvGhnEYiTVYVNPjf
+        kqHWZF/zRPvWIM2thlRWLRYezSEqRVKzK3EkqwIpGaXUwlELGVCL0utGz7NsAWid1XCSf8+gTyTiQhaO
+        AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="mnucalculationAbs.Properties.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnucalculationAbs.Properties.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnucalculationAbs.Properties.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="mnucalculationAbs.Properties.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="mnucalculationAbs.Properties.Appearance.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="mnucalculationAbs.Properties.Appearance.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnucalculationAbs.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="mnucalculationAbs.Properties.DisplayValueChecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnucalculationAbs.Properties.DisplayValueGrayed" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnucalculationAbs.Properties.DisplayValueUnchecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnucalculationAbs.Properties.PictureChecked" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAAbdEVYdFRpdGxlAFN3aXRjaFJvd0NvbHVtbjtHcmlk
+        O1FF2ocAAAL7SURBVDhPbZJZTFNBFIYvlUVF9AF88FWNwRejaIxP8mDUxAWJxhCRmqCSsJTUaN2iYMQl
+        RCUQF1D2pRRFSikCTdW0oBQlhdYYEYuEYozKYm2pbe9tQX/n3GKfOMmXOTNz/n8yM4eTV5gWptzEsQhn
+        OWSlRuUO6bkVbC6hPQoAImLxuB/cFwaNLMIYEkY4I5oMOocmcbrKZEvNr904vx4WMsgpe82NCRBhIUnY
+        lRpz4k6nIvOewZRT+irA9mH+DfRPeJHXOOBLv6XNJpOQwcm73dwoHxTvzS1Ze6L4xYfirmE8+zgFq8OP
+        zzzw0gUYXX/xbmYOGXe7qTgqZHDstoHEYeu27VshLdQPV/bYYfjmg7y8D8mXtThVY4bOAShtM0jOaxMS
+        Uu7IWf1iOpB0XMp1PRmEJ51vunBD/R6aERf2nn2KB0/6MDQyDraPgo5PSFaoYBmyw+vl0fNmFAbTSDfT
+        LeKS8jrIYPG+C2pzdf93HC8x4v7jXvh8Png8HiTldSL3pho/Jn9ixs3W+Fm4PQFcKeqiq0SIYkbc7rOa
+        QLOdR2KmEh9tY6I4EAiwE73geR68EECL7j0cLgFubwAXC9vJIJLbntM8ul2mRiKj0ubDztNa0Fx6TYcf
+        U040tb8TUbVbodIG8+e9n6EoaBUfk4vfc2nX4av6WZNjDnVf/6JnehY7MuvRax6GwE5t1Frx08WLJze2
+        US5g5rcf8vzmoAGLpeuTi26nP7KgdOwPDl7To7CsS3yDX24BSo0V005BpEFjwTQZsDfIuqgiA7o+J4mM
+        WRUbf+ihWaH7ithNZ/qdTif7gQnUt1qCqAdRx6hXB/Muow0nFQ1ksIRbc6CCTCJWbkjbvHp/mT0qbuuW
+        7xNOuNx+TP/iUdcyiCk2ErUtA2wU4GR76adqyGApiSmo/+lLaGF5m84qFk0yUc1TEvGhnEYiTVYVNPjf
+        kqHWZF/zRPvWIM2thlRWLRYezSEqRVKzK3EkqwIpGaXUwlELGVCL0utGz7NsAWid1XCSf8+gTyTiQhaO
+        AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="mnuCompanyCenter.Properties.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnuCompanyCenter.Properties.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnuCompanyCenter.Properties.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="mnuCompanyCenter.Properties.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="mnuCompanyCenter.Properties.Appearance.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="mnuCompanyCenter.Properties.Appearance.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnuCompanyCenter.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="mnuCompanyCenter.Properties.DisplayValueChecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnuCompanyCenter.Properties.DisplayValueGrayed" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnuCompanyCenter.Properties.DisplayValueUnchecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnuCompanyCenter.Properties.PictureChecked" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAAbdEVYdFRpdGxlAFN3aXRjaFJvd0NvbHVtbjtHcmlk
+        O1FF2ocAAAL7SURBVDhPbZJZTFNBFIYvlUVF9AF88FWNwRejaIxP8mDUxAWJxhCRmqCSsJTUaN2iYMQl
+        RCUQF1D2pRRFSikCTdW0oBQlhdYYEYuEYozKYm2pbe9tQX/n3GKfOMmXOTNz/n8yM4eTV5gWptzEsQhn
+        OWSlRuUO6bkVbC6hPQoAImLxuB/cFwaNLMIYEkY4I5oMOocmcbrKZEvNr904vx4WMsgpe82NCRBhIUnY
+        lRpz4k6nIvOewZRT+irA9mH+DfRPeJHXOOBLv6XNJpOQwcm73dwoHxTvzS1Ze6L4xYfirmE8+zgFq8OP
+        zzzw0gUYXX/xbmYOGXe7qTgqZHDstoHEYeu27VshLdQPV/bYYfjmg7y8D8mXtThVY4bOAShtM0jOaxMS
+        Uu7IWf1iOpB0XMp1PRmEJ51vunBD/R6aERf2nn2KB0/6MDQyDraPgo5PSFaoYBmyw+vl0fNmFAbTSDfT
+        LeKS8jrIYPG+C2pzdf93HC8x4v7jXvh8Png8HiTldSL3pho/Jn9ixs3W+Fm4PQFcKeqiq0SIYkbc7rOa
+        QLOdR2KmEh9tY6I4EAiwE73geR68EECL7j0cLgFubwAXC9vJIJLbntM8ul2mRiKj0ubDztNa0Fx6TYcf
+        U040tb8TUbVbodIG8+e9n6EoaBUfk4vfc2nX4av6WZNjDnVf/6JnehY7MuvRax6GwE5t1Frx08WLJze2
+        US5g5rcf8vzmoAGLpeuTi26nP7KgdOwPDl7To7CsS3yDX24BSo0V005BpEFjwTQZsDfIuqgiA7o+J4mM
+        WRUbf+ihWaH7ithNZ/qdTif7gQnUt1qCqAdRx6hXB/Muow0nFQ1ksIRbc6CCTCJWbkjbvHp/mT0qbuuW
+        7xNOuNx+TP/iUdcyiCk2ErUtA2wU4GR76adqyGApiSmo/+lLaGF5m84qFk0yUc1TEvGhnEYiTVYVNPjf
+        kqHWZF/zRPvWIM2thlRWLRYezSEqRVKzK3EkqwIpGaXUwlELGVCL0utGz7NsAWid1XCSf8+gTyTiQhaO
+        AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="mnuSetCancelDelayOTByDay.Properties.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnuSetCancelDelayOTByDay.Properties.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnuSetCancelDelayOTByDay.Properties.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="mnuSetCancelDelayOTByDay.Properties.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="mnuSetCancelDelayOTByDay.Properties.Appearance.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="mnuSetCancelDelayOTByDay.Properties.Appearance.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnuSetCancelDelayOTByDay.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="mnuSetCancelDelayOTByDay.Properties.DisplayValueChecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnuSetCancelDelayOTByDay.Properties.DisplayValueGrayed" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnuSetCancelDelayOTByDay.Properties.DisplayValueUnchecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnuSetCancelDelayOTByDay.Properties.PictureChecked" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAAbdEVYdFRpdGxlAFN3aXRjaFJvd0NvbHVtbjtHcmlk
+        O1FF2ocAAAL7SURBVDhPbZJZTFNBFIYvlUVF9AF88FWNwRejaIxP8mDUxAWJxhCRmqCSsJTUaN2iYMQl
+        RCUQF1D2pRRFSikCTdW0oBQlhdYYEYuEYozKYm2pbe9tQX/n3GKfOMmXOTNz/n8yM4eTV5gWptzEsQhn
+        OWSlRuUO6bkVbC6hPQoAImLxuB/cFwaNLMIYEkY4I5oMOocmcbrKZEvNr904vx4WMsgpe82NCRBhIUnY
+        lRpz4k6nIvOewZRT+irA9mH+DfRPeJHXOOBLv6XNJpOQwcm73dwoHxTvzS1Ze6L4xYfirmE8+zgFq8OP
+        zzzw0gUYXX/xbmYOGXe7qTgqZHDstoHEYeu27VshLdQPV/bYYfjmg7y8D8mXtThVY4bOAShtM0jOaxMS
+        Uu7IWf1iOpB0XMp1PRmEJ51vunBD/R6aERf2nn2KB0/6MDQyDraPgo5PSFaoYBmyw+vl0fNmFAbTSDfT
+        LeKS8jrIYPG+C2pzdf93HC8x4v7jXvh8Png8HiTldSL3pho/Jn9ixs3W+Fm4PQFcKeqiq0SIYkbc7rOa
+        QLOdR2KmEh9tY6I4EAiwE73geR68EECL7j0cLgFubwAXC9vJIJLbntM8ul2mRiKj0ubDztNa0Fx6TYcf
+        U040tb8TUbVbodIG8+e9n6EoaBUfk4vfc2nX4av6WZNjDnVf/6JnehY7MuvRax6GwE5t1Frx08WLJze2
+        US5g5rcf8vzmoAGLpeuTi26nP7KgdOwPDl7To7CsS3yDX24BSo0V005BpEFjwTQZsDfIuqgiA7o+J4mM
+        WRUbf+ihWaH7ithNZ/qdTif7gQnUt1qCqAdRx6hXB/Muow0nFQ1ksIRbc6CCTCJWbkjbvHp/mT0qbuuW
+        7xNOuNx+TP/iUdcyiCk2ErUtA2wU4GR76adqyGApiSmo/+lLaGF5m84qFk0yUc1TEvGhnEYiTVYVNPjf
+        kqHWZF/zRPvWIM2thlRWLRYezSEqRVKzK3EkqwIpGaXUwlELGVCL0utGz7NsAWid1XCSf8+gTyTiQhaO
+        AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="mnumodelcalculations.Properties.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnumodelcalculations.Properties.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnumodelcalculations.Properties.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="mnumodelcalculations.Properties.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="mnumodelcalculations.Properties.Appearance.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="mnumodelcalculations.Properties.Appearance.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnumodelcalculations.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="mnumodelcalculations.Properties.DisplayValueChecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnumodelcalculations.Properties.DisplayValueGrayed" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnumodelcalculations.Properties.DisplayValueUnchecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnumodelcalculations.Properties.PictureChecked" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAAbdEVYdFRpdGxlAFN3aXRjaFJvd0NvbHVtbjtHcmlk
+        O1FF2ocAAAL7SURBVDhPbZJZTFNBFIYvlUVF9AF88FWNwRejaIxP8mDUxAWJxhCRmqCSsJTUaN2iYMQl
+        RCUQF1D2pRRFSikCTdW0oBQlhdYYEYuEYozKYm2pbe9tQX/n3GKfOMmXOTNz/n8yM4eTV5gWptzEsQhn
+        OWSlRuUO6bkVbC6hPQoAImLxuB/cFwaNLMIYEkY4I5oMOocmcbrKZEvNr904vx4WMsgpe82NCRBhIUnY
+        lRpz4k6nIvOewZRT+irA9mH+DfRPeJHXOOBLv6XNJpOQwcm73dwoHxTvzS1Ze6L4xYfirmE8+zgFq8OP
+        zzzw0gUYXX/xbmYOGXe7qTgqZHDstoHEYeu27VshLdQPV/bYYfjmg7y8D8mXtThVY4bOAShtM0jOaxMS
+        Uu7IWf1iOpB0XMp1PRmEJ51vunBD/R6aERf2nn2KB0/6MDQyDraPgo5PSFaoYBmyw+vl0fNmFAbTSDfT
+        LeKS8jrIYPG+C2pzdf93HC8x4v7jXvh8Png8HiTldSL3pho/Jn9ixs3W+Fm4PQFcKeqiq0SIYkbc7rOa
+        QLOdR2KmEh9tY6I4EAiwE73geR68EECL7j0cLgFubwAXC9vJIJLbntM8ul2mRiKj0ubDztNa0Fx6TYcf
+        U040tb8TUbVbodIG8+e9n6EoaBUfk4vfc2nX4av6WZNjDnVf/6JnehY7MuvRax6GwE5t1Frx08WLJze2
+        US5g5rcf8vzmoAGLpeuTi26nP7KgdOwPDl7To7CsS3yDX24BSo0V005BpEFjwTQZsDfIuqgiA7o+J4mM
+        WRUbf+ihWaH7ithNZ/qdTif7gQnUt1qCqAdRx6hXB/Muow0nFQ1ksIRbc6CCTCJWbkjbvHp/mT0qbuuW
+        7xNOuNx+TP/iUdcyiCk2ErUtA2wU4GR76adqyGApiSmo/+lLaGF5m84qFk0yUc1TEvGhnEYiTVYVNPjf
+        kqHWZF/zRPvWIM2thlRWLRYezSEqRVKzK3EkqwIpGaXUwlELGVCL0utGz7NsAWid1XCSf8+gTyTiQhaO
+        AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="mnusetdelayOT.Properties.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnusetdelayOT.Properties.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnusetdelayOT.Properties.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="mnusetdelayOT.Properties.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="mnusetdelayOT.Properties.Appearance.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="mnusetdelayOT.Properties.Appearance.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnusetdelayOT.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="mnusetdelayOT.Properties.DisplayValueChecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnusetdelayOT.Properties.DisplayValueGrayed" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnusetdelayOT.Properties.DisplayValueUnchecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnusetdelayOT.Properties.PictureChecked" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAAbdEVYdFRpdGxlAFN3aXRjaFJvd0NvbHVtbjtHcmlk
+        O1FF2ocAAAL7SURBVDhPbZJZTFNBFIYvlUVF9AF88FWNwRejaIxP8mDUxAWJxhCRmqCSsJTUaN2iYMQl
+        RCUQF1D2pRRFSikCTdW0oBQlhdYYEYuEYozKYm2pbe9tQX/n3GKfOMmXOTNz/n8yM4eTV5gWptzEsQhn
+        OWSlRuUO6bkVbC6hPQoAImLxuB/cFwaNLMIYEkY4I5oMOocmcbrKZEvNr904vx4WMsgpe82NCRBhIUnY
+        lRpz4k6nIvOewZRT+irA9mH+DfRPeJHXOOBLv6XNJpOQwcm73dwoHxTvzS1Ze6L4xYfirmE8+zgFq8OP
+        zzzw0gUYXX/xbmYOGXe7qTgqZHDstoHEYeu27VshLdQPV/bYYfjmg7y8D8mXtThVY4bOAShtM0jOaxMS
+        Uu7IWf1iOpB0XMp1PRmEJ51vunBD/R6aERf2nn2KB0/6MDQyDraPgo5PSFaoYBmyw+vl0fNmFAbTSDfT
+        LeKS8jrIYPG+C2pzdf93HC8x4v7jXvh8Png8HiTldSL3pho/Jn9ixs3W+Fm4PQFcKeqiq0SIYkbc7rOa
+        QLOdR2KmEh9tY6I4EAiwE73geR68EECL7j0cLgFubwAXC9vJIJLbntM8ul2mRiKj0ubDztNa0Fx6TYcf
+        U040tb8TUbVbodIG8+e9n6EoaBUfk4vfc2nX4av6WZNjDnVf/6JnehY7MuvRax6GwE5t1Frx08WLJze2
+        US5g5rcf8vzmoAGLpeuTi26nP7KgdOwPDl7To7CsS3yDX24BSo0V005BpEFjwTQZsDfIuqgiA7o+J4mM
+        WRUbf+ihWaH7ithNZ/qdTif7gQnUt1qCqAdRx6hXB/Muow0nFQ1ksIRbc6CCTCJWbkjbvHp/mT0qbuuW
+        7xNOuNx+TP/iUdcyiCk2ErUtA2wU4GR76adqyGApiSmo/+lLaGF5m84qFk0yUc1TEvGhnEYiTVYVNPjf
+        kqHWZF/zRPvWIM2thlRWLRYezSEqRVKzK3EkqwIpGaXUwlELGVCL0utGz7NsAWid1XCSf8+gTyTiQhaO
+        AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="mnuMWorkTime.Properties.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnuMWorkTime.Properties.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnuMWorkTime.Properties.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="mnuMWorkTime.Properties.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="mnuMWorkTime.Properties.Appearance.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="mnuMWorkTime.Properties.Appearance.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnuMWorkTime.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="mnuMWorkTime.Properties.DisplayValueChecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnuMWorkTime.Properties.DisplayValueGrayed" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnuMWorkTime.Properties.DisplayValueUnchecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnuMWorkTime.Properties.PictureChecked" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAAbdEVYdFRpdGxlAFN3aXRjaFJvd0NvbHVtbjtHcmlk
+        O1FF2ocAAAL7SURBVDhPbZJZTFNBFIYvlUVF9AF88FWNwRejaIxP8mDUxAWJxhCRmqCSsJTUaN2iYMQl
+        RCUQF1D2pRRFSikCTdW0oBQlhdYYEYuEYozKYm2pbe9tQX/n3GKfOMmXOTNz/n8yM4eTV5gWptzEsQhn
+        OWSlRuUO6bkVbC6hPQoAImLxuB/cFwaNLMIYEkY4I5oMOocmcbrKZEvNr904vx4WMsgpe82NCRBhIUnY
+        lRpz4k6nIvOewZRT+irA9mH+DfRPeJHXOOBLv6XNJpOQwcm73dwoHxTvzS1Ze6L4xYfirmE8+zgFq8OP
+        zzzw0gUYXX/xbmYOGXe7qTgqZHDstoHEYeu27VshLdQPV/bYYfjmg7y8D8mXtThVY4bOAShtM0jOaxMS
+        Uu7IWf1iOpB0XMp1PRmEJ51vunBD/R6aERf2nn2KB0/6MDQyDraPgo5PSFaoYBmyw+vl0fNmFAbTSDfT
+        LeKS8jrIYPG+C2pzdf93HC8x4v7jXvh8Png8HiTldSL3pho/Jn9ixs3W+Fm4PQFcKeqiq0SIYkbc7rOa
+        QLOdR2KmEh9tY6I4EAiwE73geR68EECL7j0cLgFubwAXC9vJIJLbntM8ul2mRiKj0ubDztNa0Fx6TYcf
+        U040tb8TUbVbodIG8+e9n6EoaBUfk4vfc2nX4av6WZNjDnVf/6JnehY7MuvRax6GwE5t1Frx08WLJze2
+        US5g5rcf8vzmoAGLpeuTi26nP7KgdOwPDl7To7CsS3yDX24BSo0V005BpEFjwTQZsDfIuqgiA7o+J4mM
+        WRUbf+ihWaH7ithNZ/qdTif7gQnUt1qCqAdRx6hXB/Muow0nFQ1ksIRbc6CCTCJWbkjbvHp/mT0qbuuW
+        7xNOuNx+TP/iUdcyiCk2ErUtA2wU4GR76adqyGApiSmo/+lLaGF5m84qFk0yUc1TEvGhnEYiTVYVNPjf
+        kqHWZF/zRPvWIM2thlRWLRYezSEqRVKzK3EkqwIpGaXUwlELGVCL0utGz7NsAWid1XCSf8+gTyTiQhaO
+        AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="mnusetdelaytime1.Properties.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnusetdelaytime1.Properties.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnusetdelaytime1.Properties.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="mnusetdelaytime1.Properties.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="mnusetdelaytime1.Properties.Appearance.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="mnusetdelaytime1.Properties.Appearance.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnusetdelaytime1.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="mnusetdelaytime1.Properties.DisplayValueChecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnusetdelaytime1.Properties.DisplayValueGrayed" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnusetdelaytime1.Properties.DisplayValueUnchecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnusetdelaytime1.Properties.PictureChecked" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAAbdEVYdFRpdGxlAFN3aXRjaFJvd0NvbHVtbjtHcmlk
+        O1FF2ocAAAL7SURBVDhPbZJZTFNBFIYvlUVF9AF88FWNwRejaIxP8mDUxAWJxhCRmqCSsJTUaN2iYMQl
+        RCUQF1D2pRRFSikCTdW0oBQlhdYYEYuEYozKYm2pbe9tQX/n3GKfOMmXOTNz/n8yM4eTV5gWptzEsQhn
+        OWSlRuUO6bkVbC6hPQoAImLxuB/cFwaNLMIYEkY4I5oMOocmcbrKZEvNr904vx4WMsgpe82NCRBhIUnY
+        lRpz4k6nIvOewZRT+irA9mH+DfRPeJHXOOBLv6XNJpOQwcm73dwoHxTvzS1Ze6L4xYfirmE8+zgFq8OP
+        zzzw0gUYXX/xbmYOGXe7qTgqZHDstoHEYeu27VshLdQPV/bYYfjmg7y8D8mXtThVY4bOAShtM0jOaxMS
+        Uu7IWf1iOpB0XMp1PRmEJ51vunBD/R6aERf2nn2KB0/6MDQyDraPgo5PSFaoYBmyw+vl0fNmFAbTSDfT
+        LeKS8jrIYPG+C2pzdf93HC8x4v7jXvh8Png8HiTldSL3pho/Jn9ixs3W+Fm4PQFcKeqiq0SIYkbc7rOa
+        QLOdR2KmEh9tY6I4EAiwE73geR68EECL7j0cLgFubwAXC9vJIJLbntM8ul2mRiKj0ubDztNa0Fx6TYcf
+        U040tb8TUbVbodIG8+e9n6EoaBUfk4vfc2nX4av6WZNjDnVf/6JnehY7MuvRax6GwE5t1Frx08WLJze2
+        US5g5rcf8vzmoAGLpeuTi26nP7KgdOwPDl7To7CsS3yDX24BSo0V005BpEFjwTQZsDfIuqgiA7o+J4mM
+        WRUbf+ihWaH7ithNZ/qdTif7gQnUt1qCqAdRx6hXB/Muow0nFQ1ksIRbc6CCTCJWbkjbvHp/mT0qbuuW
+        7xNOuNx+TP/iUdcyiCk2ErUtA2wU4GR76adqyGApiSmo/+lLaGF5m84qFk0yUc1TEvGhnEYiTVYVNPjf
+        kqHWZF/zRPvWIM2thlRWLRYezSEqRVKzK3EkqwIpGaXUwlELGVCL0utGz7NsAWid1XCSf8+gTyTiQhaO
+        AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="mnuMOpenCalculate.Properties.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnuMOpenCalculate.Properties.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnuMOpenCalculate.Properties.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="mnuMOpenCalculate.Properties.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="mnuMOpenCalculate.Properties.Appearance.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="mnuMOpenCalculate.Properties.Appearance.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnuMOpenCalculate.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="mnuMOpenCalculate.Properties.DisplayValueChecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnuMOpenCalculate.Properties.DisplayValueGrayed" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnuMOpenCalculate.Properties.DisplayValueUnchecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnuMOpenCalculate.Properties.PictureChecked" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAAbdEVYdFRpdGxlAFN3aXRjaFJvd0NvbHVtbjtHcmlk
+        O1FF2ocAAAL7SURBVDhPbZJZTFNBFIYvlUVF9AF88FWNwRejaIxP8mDUxAWJxhCRmqCSsJTUaN2iYMQl
+        RCUQF1D2pRRFSikCTdW0oBQlhdYYEYuEYozKYm2pbe9tQX/n3GKfOMmXOTNz/n8yM4eTV5gWptzEsQhn
+        OWSlRuUO6bkVbC6hPQoAImLxuB/cFwaNLMIYEkY4I5oMOocmcbrKZEvNr904vx4WMsgpe82NCRBhIUnY
+        lRpz4k6nIvOewZRT+irA9mH+DfRPeJHXOOBLv6XNJpOQwcm73dwoHxTvzS1Ze6L4xYfirmE8+zgFq8OP
+        zzzw0gUYXX/xbmYOGXe7qTgqZHDstoHEYeu27VshLdQPV/bYYfjmg7y8D8mXtThVY4bOAShtM0jOaxMS
+        Uu7IWf1iOpB0XMp1PRmEJ51vunBD/R6aERf2nn2KB0/6MDQyDraPgo5PSFaoYBmyw+vl0fNmFAbTSDfT
+        LeKS8jrIYPG+C2pzdf93HC8x4v7jXvh8Png8HiTldSL3pho/Jn9ixs3W+Fm4PQFcKeqiq0SIYkbc7rOa
+        QLOdR2KmEh9tY6I4EAiwE73geR68EECL7j0cLgFubwAXC9vJIJLbntM8ul2mRiKj0ubDztNa0Fx6TYcf
+        U040tb8TUbVbodIG8+e9n6EoaBUfk4vfc2nX4av6WZNjDnVf/6JnehY7MuvRax6GwE5t1Frx08WLJze2
+        US5g5rcf8vzmoAGLpeuTi26nP7KgdOwPDl7To7CsS3yDX24BSo0V005BpEFjwTQZsDfIuqgiA7o+J4mM
+        WRUbf+ihWaH7ithNZ/qdTif7gQnUt1qCqAdRx6hXB/Muow0nFQ1ksIRbc6CCTCJWbkjbvHp/mT0qbuuW
+        7xNOuNx+TP/iUdcyiCk2ErUtA2wU4GR76adqyGApiSmo/+lLaGF5m84qFk0yUc1TEvGhnEYiTVYVNPjf
+        kqHWZF/zRPvWIM2thlRWLRYezSEqRVKzK3EkqwIpGaXUwlELGVCL0utGz7NsAWid1XCSf8+gTyTiQhaO
+        AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="mnuOTbyDay.Properties.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnuOTbyDay.Properties.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnuOTbyDay.Properties.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="mnuOTbyDay.Properties.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="mnuOTbyDay.Properties.Appearance.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="mnuOTbyDay.Properties.Appearance.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnuOTbyDay.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="mnuOTbyDay.Properties.DisplayValueChecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnuOTbyDay.Properties.DisplayValueGrayed" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnuOTbyDay.Properties.DisplayValueUnchecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnuOTbyDay.Properties.PictureChecked" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAAbdEVYdFRpdGxlAFN3aXRjaFJvd0NvbHVtbjtHcmlk
+        O1FF2ocAAAL7SURBVDhPbZJZTFNBFIYvlUVF9AF88FWNwRejaIxP8mDUxAWJxhCRmqCSsJTUaN2iYMQl
+        RCUQF1D2pRRFSikCTdW0oBQlhdYYEYuEYozKYm2pbe9tQX/n3GKfOMmXOTNz/n8yM4eTV5gWptzEsQhn
+        OWSlRuUO6bkVbC6hPQoAImLxuB/cFwaNLMIYEkY4I5oMOocmcbrKZEvNr904vx4WMsgpe82NCRBhIUnY
+        lRpz4k6nIvOewZRT+irA9mH+DfRPeJHXOOBLv6XNJpOQwcm73dwoHxTvzS1Ze6L4xYfirmE8+zgFq8OP
+        zzzw0gUYXX/xbmYOGXe7qTgqZHDstoHEYeu27VshLdQPV/bYYfjmg7y8D8mXtThVY4bOAShtM0jOaxMS
+        Uu7IWf1iOpB0XMp1PRmEJ51vunBD/R6aERf2nn2KB0/6MDQyDraPgo5PSFaoYBmyw+vl0fNmFAbTSDfT
+        LeKS8jrIYPG+C2pzdf93HC8x4v7jXvh8Png8HiTldSL3pho/Jn9ixs3W+Fm4PQFcKeqiq0SIYkbc7rOa
+        QLOdR2KmEh9tY6I4EAiwE73geR68EECL7j0cLgFubwAXC9vJIJLbntM8ul2mRiKj0ubDztNa0Fx6TYcf
+        U040tb8TUbVbodIG8+e9n6EoaBUfk4vfc2nX4av6WZNjDnVf/6JnehY7MuvRax6GwE5t1Frx08WLJze2
+        US5g5rcf8vzmoAGLpeuTi26nP7KgdOwPDl7To7CsS3yDX24BSo0V005BpEFjwTQZsDfIuqgiA7o+J4mM
+        WRUbf+ihWaH7ithNZ/qdTif7gQnUt1qCqAdRx6hXB/Muow0nFQ1ksIRbc6CCTCJWbkjbvHp/mT0qbuuW
+        7xNOuNx+TP/iUdcyiCk2ErUtA2wU4GR76adqyGApiSmo/+lLaGF5m84qFk0yUc1TEvGhnEYiTVYVNPjf
+        kqHWZF/zRPvWIM2thlRWLRYezSEqRVKzK3EkqwIpGaXUwlELGVCL0utGz7NsAWid1XCSf8+gTyTiQhaO
+        AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="mnuMVacationHolYear.Properties.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnuMVacationHolYear.Properties.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnuMVacationHolYear.Properties.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="mnuMVacationHolYear.Properties.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="mnuMVacationHolYear.Properties.Appearance.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="mnuMVacationHolYear.Properties.Appearance.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnuMVacationHolYear.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="mnuMVacationHolYear.Properties.DisplayValueChecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnuMVacationHolYear.Properties.DisplayValueGrayed" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnuMVacationHolYear.Properties.DisplayValueUnchecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnuMVacationHolYear.Properties.PictureChecked" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAAbdEVYdFRpdGxlAFN3aXRjaFJvd0NvbHVtbjtHcmlk
+        O1FF2ocAAAL7SURBVDhPbZJZTFNBFIYvlUVF9AF88FWNwRejaIxP8mDUxAWJxhCRmqCSsJTUaN2iYMQl
+        RCUQF1D2pRRFSikCTdW0oBQlhdYYEYuEYozKYm2pbe9tQX/n3GKfOMmXOTNz/n8yM4eTV5gWptzEsQhn
+        OWSlRuUO6bkVbC6hPQoAImLxuB/cFwaNLMIYEkY4I5oMOocmcbrKZEvNr904vx4WMsgpe82NCRBhIUnY
+        lRpz4k6nIvOewZRT+irA9mH+DfRPeJHXOOBLv6XNJpOQwcm73dwoHxTvzS1Ze6L4xYfirmE8+zgFq8OP
+        zzzw0gUYXX/xbmYOGXe7qTgqZHDstoHEYeu27VshLdQPV/bYYfjmg7y8D8mXtThVY4bOAShtM0jOaxMS
+        Uu7IWf1iOpB0XMp1PRmEJ51vunBD/R6aERf2nn2KB0/6MDQyDraPgo5PSFaoYBmyw+vl0fNmFAbTSDfT
+        LeKS8jrIYPG+C2pzdf93HC8x4v7jXvh8Png8HiTldSL3pho/Jn9ixs3W+Fm4PQFcKeqiq0SIYkbc7rOa
+        QLOdR2KmEh9tY6I4EAiwE73geR68EECL7j0cLgFubwAXC9vJIJLbntM8ul2mRiKj0ubDztNa0Fx6TYcf
+        U040tb8TUbVbodIG8+e9n6EoaBUfk4vfc2nX4av6WZNjDnVf/6JnehY7MuvRax6GwE5t1Frx08WLJze2
+        US5g5rcf8vzmoAGLpeuTi26nP7KgdOwPDl7To7CsS3yDX24BSo0V005BpEFjwTQZsDfIuqgiA7o+J4mM
+        WRUbf+ihWaH7ithNZ/qdTif7gQnUt1qCqAdRx6hXB/Muow0nFQ1ksIRbc6CCTCJWbkjbvHp/mT0qbuuW
+        7xNOuNx+TP/iUdcyiCk2ErUtA2wU4GR76adqyGApiSmo/+lLaGF5m84qFk0yUc1TEvGhnEYiTVYVNPjf
+        kqHWZF/zRPvWIM2thlRWLRYezSEqRVKzK3EkqwIpGaXUwlELGVCL0utGz7NsAWid1XCSf8+gTyTiQhaO
+        AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="mnusetOT.Properties.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnusetOT.Properties.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnusetOT.Properties.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="mnusetOT.Properties.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="mnusetOT.Properties.Appearance.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="mnusetOT.Properties.Appearance.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnusetOT.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="mnusetOT.Properties.DisplayValueChecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnusetOT.Properties.DisplayValueGrayed" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnusetOT.Properties.DisplayValueUnchecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnusetOT.Properties.PictureChecked" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAAbdEVYdFRpdGxlAFN3aXRjaFJvd0NvbHVtbjtHcmlk
+        O1FF2ocAAAL7SURBVDhPbZJZTFNBFIYvlUVF9AF88FWNwRejaIxP8mDUxAWJxhCRmqCSsJTUaN2iYMQl
+        RCUQF1D2pRRFSikCTdW0oBQlhdYYEYuEYozKYm2pbe9tQX/n3GKfOMmXOTNz/n8yM4eTV5gWptzEsQhn
+        OWSlRuUO6bkVbC6hPQoAImLxuB/cFwaNLMIYEkY4I5oMOocmcbrKZEvNr904vx4WMsgpe82NCRBhIUnY
+        lRpz4k6nIvOewZRT+irA9mH+DfRPeJHXOOBLv6XNJpOQwcm73dwoHxTvzS1Ze6L4xYfirmE8+zgFq8OP
+        zzzw0gUYXX/xbmYOGXe7qTgqZHDstoHEYeu27VshLdQPV/bYYfjmg7y8D8mXtThVY4bOAShtM0jOaxMS
+        Uu7IWf1iOpB0XMp1PRmEJ51vunBD/R6aERf2nn2KB0/6MDQyDraPgo5PSFaoYBmyw+vl0fNmFAbTSDfT
+        LeKS8jrIYPG+C2pzdf93HC8x4v7jXvh8Png8HiTldSL3pho/Jn9ixs3W+Fm4PQFcKeqiq0SIYkbc7rOa
+        QLOdR2KmEh9tY6I4EAiwE73geR68EECL7j0cLgFubwAXC9vJIJLbntM8ul2mRiKj0ubDztNa0Fx6TYcf
+        U040tb8TUbVbodIG8+e9n6EoaBUfk4vfc2nX4av6WZNjDnVf/6JnehY7MuvRax6GwE5t1Frx08WLJze2
+        US5g5rcf8vzmoAGLpeuTi26nP7KgdOwPDl7To7CsS3yDX24BSo0V005BpEFjwTQZsDfIuqgiA7o+J4mM
+        WRUbf+ihWaH7ithNZ/qdTif7gQnUt1qCqAdRx6hXB/Muow0nFQ1ksIRbc6CCTCJWbkjbvHp/mT0qbuuW
+        7xNOuNx+TP/iUdcyiCk2ErUtA2wU4GR76adqyGApiSmo/+lLaGF5m84qFk0yUc1TEvGhnEYiTVYVNPjf
+        kqHWZF/zRPvWIM2thlRWLRYezSEqRVKzK3EkqwIpGaXUwlELGVCL0utGz7NsAWid1XCSf8+gTyTiQhaO
+        AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="mnuMOtherCondition.Properties.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnuMOtherCondition.Properties.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnuMOtherCondition.Properties.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="mnuMOtherCondition.Properties.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="mnuMOtherCondition.Properties.Appearance.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="mnuMOtherCondition.Properties.Appearance.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnuMOtherCondition.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="mnuMOtherCondition.Properties.DisplayValueChecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnuMOtherCondition.Properties.DisplayValueGrayed" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnuMOtherCondition.Properties.DisplayValueUnchecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnuMOtherCondition.Properties.PictureChecked" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAAbdEVYdFRpdGxlAFN3aXRjaFJvd0NvbHVtbjtHcmlk
+        O1FF2ocAAAL7SURBVDhPbZJZTFNBFIYvlUVF9AF88FWNwRejaIxP8mDUxAWJxhCRmqCSsJTUaN2iYMQl
+        RCUQF1D2pRRFSikCTdW0oBQlhdYYEYuEYozKYm2pbe9tQX/n3GKfOMmXOTNz/n8yM4eTV5gWptzEsQhn
+        OWSlRuUO6bkVbC6hPQoAImLxuB/cFwaNLMIYEkY4I5oMOocmcbrKZEvNr904vx4WMsgpe82NCRBhIUnY
+        lRpz4k6nIvOewZRT+irA9mH+DfRPeJHXOOBLv6XNJpOQwcm73dwoHxTvzS1Ze6L4xYfirmE8+zgFq8OP
+        zzzw0gUYXX/xbmYOGXe7qTgqZHDstoHEYeu27VshLdQPV/bYYfjmg7y8D8mXtThVY4bOAShtM0jOaxMS
+        Uu7IWf1iOpB0XMp1PRmEJ51vunBD/R6aERf2nn2KB0/6MDQyDraPgo5PSFaoYBmyw+vl0fNmFAbTSDfT
+        LeKS8jrIYPG+C2pzdf93HC8x4v7jXvh8Png8HiTldSL3pho/Jn9ixs3W+Fm4PQFcKeqiq0SIYkbc7rOa
+        QLOdR2KmEh9tY6I4EAiwE73geR68EECL7j0cLgFubwAXC9vJIJLbntM8ul2mRiKj0ubDztNa0Fx6TYcf
+        U040tb8TUbVbodIG8+e9n6EoaBUfk4vfc2nX4av6WZNjDnVf/6JnehY7MuvRax6GwE5t1Frx08WLJze2
+        US5g5rcf8vzmoAGLpeuTi26nP7KgdOwPDl7To7CsS3yDX24BSo0V005BpEFjwTQZsDfIuqgiA7o+J4mM
+        WRUbf+ihWaH7ithNZ/qdTif7gQnUt1qCqAdRx6hXB/Muow0nFQ1ksIRbc6CCTCJWbkjbvHp/mT0qbuuW
+        7xNOuNx+TP/iUdcyiCk2ErUtA2wU4GR76adqyGApiSmo/+lLaGF5m84qFk0yUc1TEvGhnEYiTVYVNPjf
+        kqHWZF/zRPvWIM2thlRWLRYezSEqRVKzK3EkqwIpGaXUwlELGVCL0utGz7NsAWid1XCSf8+gTyTiQhaO
+        AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="mnuOTBasic.Properties.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnuOTBasic.Properties.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnuOTBasic.Properties.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="mnuOTBasic.Properties.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="mnuOTBasic.Properties.Appearance.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="mnuOTBasic.Properties.Appearance.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnuOTBasic.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="mnuOTBasic.Properties.DisplayValueChecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnuOTBasic.Properties.DisplayValueGrayed" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnuOTBasic.Properties.DisplayValueUnchecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnuOTBasic.Properties.PictureChecked" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAAbdEVYdFRpdGxlAFN3aXRjaFJvd0NvbHVtbjtHcmlk
+        O1FF2ocAAAL7SURBVDhPbZJZTFNBFIYvlUVF9AF88FWNwRejaIxP8mDUxAWJxhCRmqCSsJTUaN2iYMQl
+        RCUQF1D2pRRFSikCTdW0oBQlhdYYEYuEYozKYm2pbe9tQX/n3GKfOMmXOTNz/n8yM4eTV5gWptzEsQhn
+        OWSlRuUO6bkVbC6hPQoAImLxuB/cFwaNLMIYEkY4I5oMOocmcbrKZEvNr904vx4WMsgpe82NCRBhIUnY
+        lRpz4k6nIvOewZRT+irA9mH+DfRPeJHXOOBLv6XNJpOQwcm73dwoHxTvzS1Ze6L4xYfirmE8+zgFq8OP
+        zzzw0gUYXX/xbmYOGXe7qTgqZHDstoHEYeu27VshLdQPV/bYYfjmg7y8D8mXtThVY4bOAShtM0jOaxMS
+        Uu7IWf1iOpB0XMp1PRmEJ51vunBD/R6aERf2nn2KB0/6MDQyDraPgo5PSFaoYBmyw+vl0fNmFAbTSDfT
+        LeKS8jrIYPG+C2pzdf93HC8x4v7jXvh8Png8HiTldSL3pho/Jn9ixs3W+Fm4PQFcKeqiq0SIYkbc7rOa
+        QLOdR2KmEh9tY6I4EAiwE73geR68EECL7j0cLgFubwAXC9vJIJLbntM8ul2mRiKj0ubDztNa0Fx6TYcf
+        U040tb8TUbVbodIG8+e9n6EoaBUfk4vfc2nX4av6WZNjDnVf/6JnehY7MuvRax6GwE5t1Frx08WLJze2
+        US5g5rcf8vzmoAGLpeuTi26nP7KgdOwPDl7To7CsS3yDX24BSo0V005BpEFjwTQZsDfIuqgiA7o+J4mM
+        WRUbf+ihWaH7ithNZ/qdTif7gQnUt1qCqAdRx6hXB/Muow0nFQ1ksIRbc6CCTCJWbkjbvHp/mT0qbuuW
+        7xNOuNx+TP/iUdcyiCk2ErUtA2wU4GR76adqyGApiSmo/+lLaGF5m84qFk0yUc1TEvGhnEYiTVYVNPjf
+        kqHWZF/zRPvWIM2thlRWLRYezSEqRVKzK3EkqwIpGaXUwlELGVCL0utGz7NsAWid1XCSf8+gTyTiQhaO
+        AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="mnuworkinggroup.Properties.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnuworkinggroup.Properties.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnuworkinggroup.Properties.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="mnuworkinggroup.Properties.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="mnuworkinggroup.Properties.Appearance.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="mnuworkinggroup.Properties.Appearance.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnuworkinggroup.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="mnuworkinggroup.Properties.DisplayValueChecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnuworkinggroup.Properties.DisplayValueGrayed" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnuworkinggroup.Properties.DisplayValueUnchecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnuworkinggroup.Properties.PictureChecked" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAAbdEVYdFRpdGxlAFN3aXRjaFJvd0NvbHVtbjtHcmlk
+        O1FF2ocAAAL7SURBVDhPbZJZTFNBFIYvlUVF9AF88FWNwRejaIxP8mDUxAWJxhCRmqCSsJTUaN2iYMQl
+        RCUQF1D2pRRFSikCTdW0oBQlhdYYEYuEYozKYm2pbe9tQX/n3GKfOMmXOTNz/n8yM4eTV5gWptzEsQhn
+        OWSlRuUO6bkVbC6hPQoAImLxuB/cFwaNLMIYEkY4I5oMOocmcbrKZEvNr904vx4WMsgpe82NCRBhIUnY
+        lRpz4k6nIvOewZRT+irA9mH+DfRPeJHXOOBLv6XNJpOQwcm73dwoHxTvzS1Ze6L4xYfirmE8+zgFq8OP
+        zzzw0gUYXX/xbmYOGXe7qTgqZHDstoHEYeu27VshLdQPV/bYYfjmg7y8D8mXtThVY4bOAShtM0jOaxMS
+        Uu7IWf1iOpB0XMp1PRmEJ51vunBD/R6aERf2nn2KB0/6MDQyDraPgo5PSFaoYBmyw+vl0fNmFAbTSDfT
+        LeKS8jrIYPG+C2pzdf93HC8x4v7jXvh8Png8HiTldSL3pho/Jn9ixs3W+Fm4PQFcKeqiq0SIYkbc7rOa
+        QLOdR2KmEh9tY6I4EAiwE73geR68EECL7j0cLgFubwAXC9vJIJLbntM8ul2mRiKj0ubDztNa0Fx6TYcf
+        U040tb8TUbVbodIG8+e9n6EoaBUfk4vfc2nX4av6WZNjDnVf/6JnehY7MuvRax6GwE5t1Frx08WLJze2
+        US5g5rcf8vzmoAGLpeuTi26nP7KgdOwPDl7To7CsS3yDX24BSo0V005BpEFjwTQZsDfIuqgiA7o+J4mM
+        WRUbf+ihWaH7ithNZ/qdTif7gQnUt1qCqAdRx6hXB/Muow0nFQ1ksIRbc6CCTCJWbkjbvHp/mT0qbuuW
+        7xNOuNx+TP/iUdcyiCk2ErUtA2wU4GR76adqyGApiSmo/+lLaGF5m84qFk0yUc1TEvGhnEYiTVYVNPjf
+        kqHWZF/zRPvWIM2thlRWLRYezSEqRVKzK3EkqwIpGaXUwlELGVCL0utGz7NsAWid1XCSf8+gTyTiQhaO
+        AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="mnulimitOT.Properties.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnulimitOT.Properties.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnulimitOT.Properties.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="mnulimitOT.Properties.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="mnulimitOT.Properties.Appearance.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="mnulimitOT.Properties.Appearance.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnulimitOT.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="mnulimitOT.Properties.DisplayValueChecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnulimitOT.Properties.DisplayValueGrayed" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnulimitOT.Properties.DisplayValueUnchecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnulimitOT.Properties.PictureChecked" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAAbdEVYdFRpdGxlAFN3aXRjaFJvd0NvbHVtbjtHcmlk
+        O1FF2ocAAAL7SURBVDhPbZJZTFNBFIYvlUVF9AF88FWNwRejaIxP8mDUxAWJxhCRmqCSsJTUaN2iYMQl
+        RCUQF1D2pRRFSikCTdW0oBQlhdYYEYuEYozKYm2pbe9tQX/n3GKfOMmXOTNz/n8yM4eTV5gWptzEsQhn
+        OWSlRuUO6bkVbC6hPQoAImLxuB/cFwaNLMIYEkY4I5oMOocmcbrKZEvNr904vx4WMsgpe82NCRBhIUnY
+        lRpz4k6nIvOewZRT+irA9mH+DfRPeJHXOOBLv6XNJpOQwcm73dwoHxTvzS1Ze6L4xYfirmE8+zgFq8OP
+        zzzw0gUYXX/xbmYOGXe7qTgqZHDstoHEYeu27VshLdQPV/bYYfjmg7y8D8mXtThVY4bOAShtM0jOaxMS
+        Uu7IWf1iOpB0XMp1PRmEJ51vunBD/R6aERf2nn2KB0/6MDQyDraPgo5PSFaoYBmyw+vl0fNmFAbTSDfT
+        LeKS8jrIYPG+C2pzdf93HC8x4v7jXvh8Png8HiTldSL3pho/Jn9ixs3W+Fm4PQFcKeqiq0SIYkbc7rOa
+        QLOdR2KmEh9tY6I4EAiwE73geR68EECL7j0cLgFubwAXC9vJIJLbntM8ul2mRiKj0ubDztNa0Fx6TYcf
+        U040tb8TUbVbodIG8+e9n6EoaBUfk4vfc2nX4av6WZNjDnVf/6JnehY7MuvRax6GwE5t1Frx08WLJze2
+        US5g5rcf8vzmoAGLpeuTi26nP7KgdOwPDl7To7CsS3yDX24BSo0V005BpEFjwTQZsDfIuqgiA7o+J4mM
+        WRUbf+ihWaH7ithNZ/qdTif7gQnUt1qCqAdRx6hXB/Muow0nFQ1ksIRbc6CCTCJWbkjbvHp/mT0qbuuW
+        7xNOuNx+TP/iUdcyiCk2ErUtA2wU4GR76adqyGApiSmo/+lLaGF5m84qFk0yUc1TEvGhnEYiTVYVNPjf
+        kqHWZF/zRPvWIM2thlRWLRYezSEqRVKzK3EkqwIpGaXUwlELGVCL0utGz7NsAWid1XCSf8+gTyTiQhaO
+        AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="mnuSpacialKa.Properties.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnuSpacialKa.Properties.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnuSpacialKa.Properties.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="mnuSpacialKa.Properties.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="mnuSpacialKa.Properties.Appearance.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="mnuSpacialKa.Properties.Appearance.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnuSpacialKa.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="mnuSpacialKa.Properties.DisplayValueChecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnuSpacialKa.Properties.DisplayValueGrayed" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnuSpacialKa.Properties.DisplayValueUnchecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnuSpacialKa.Properties.PictureChecked" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAAbdEVYdFRpdGxlAFN3aXRjaFJvd0NvbHVtbjtHcmlk
+        O1FF2ocAAAL7SURBVDhPbZJZTFNBFIYvlUVF9AF88FWNwRejaIxP8mDUxAWJxhCRmqCSsJTUaN2iYMQl
+        RCUQF1D2pRRFSikCTdW0oBQlhdYYEYuEYozKYm2pbe9tQX/n3GKfOMmXOTNz/n8yM4eTV5gWptzEsQhn
+        OWSlRuUO6bkVbC6hPQoAImLxuB/cFwaNLMIYEkY4I5oMOocmcbrKZEvNr904vx4WMsgpe82NCRBhIUnY
+        lRpz4k6nIvOewZRT+irA9mH+DfRPeJHXOOBLv6XNJpOQwcm73dwoHxTvzS1Ze6L4xYfirmE8+zgFq8OP
+        zzzw0gUYXX/xbmYOGXe7qTgqZHDstoHEYeu27VshLdQPV/bYYfjmg7y8D8mXtThVY4bOAShtM0jOaxMS
+        Uu7IWf1iOpB0XMp1PRmEJ51vunBD/R6aERf2nn2KB0/6MDQyDraPgo5PSFaoYBmyw+vl0fNmFAbTSDfT
+        LeKS8jrIYPG+C2pzdf93HC8x4v7jXvh8Png8HiTldSL3pho/Jn9ixs3W+Fm4PQFcKeqiq0SIYkbc7rOa
+        QLOdR2KmEh9tY6I4EAiwE73geR68EECL7j0cLgFubwAXC9vJIJLbntM8ul2mRiKj0ubDztNa0Fx6TYcf
+        U040tb8TUbVbodIG8+e9n6EoaBUfk4vfc2nX4av6WZNjDnVf/6JnehY7MuvRax6GwE5t1Frx08WLJze2
+        US5g5rcf8vzmoAGLpeuTi26nP7KgdOwPDl7To7CsS3yDX24BSo0V005BpEFjwTQZsDfIuqgiA7o+J4mM
+        WRUbf+ihWaH7ithNZ/qdTif7gQnUt1qCqAdRx6hXB/Muow0nFQ1ksIRbc6CCTCJWbkjbvHp/mT0qbuuW
+        7xNOuNx+TP/iUdcyiCk2ErUtA2wU4GR76adqyGApiSmo/+lLaGF5m84qFk0yUc1TEvGhnEYiTVYVNPjf
+        kqHWZF/zRPvWIM2thlRWLRYezSEqRVKzK3EkqwIpGaXUwlELGVCL0utGz7NsAWid1XCSf8+gTyTiQhaO
+        AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="mnuSetabsenceTimeByYear.Properties.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnuSetabsenceTimeByYear.Properties.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnuSetabsenceTimeByYear.Properties.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="mnuSetabsenceTimeByYear.Properties.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="mnuSetabsenceTimeByYear.Properties.Appearance.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="mnuSetabsenceTimeByYear.Properties.Appearance.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnuSetabsenceTimeByYear.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="mnuSetabsenceTimeByYear.Properties.DisplayValueChecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnuSetabsenceTimeByYear.Properties.DisplayValueGrayed" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnuSetabsenceTimeByYear.Properties.DisplayValueUnchecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnuSetabsenceTimeByYear.Properties.PictureChecked" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAAbdEVYdFRpdGxlAFN3aXRjaFJvd0NvbHVtbjtHcmlk
+        O1FF2ocAAAL7SURBVDhPbZJZTFNBFIYvlUVF9AF88FWNwRejaIxP8mDUxAWJxhCRmqCSsJTUaN2iYMQl
+        RCUQF1D2pRRFSikCTdW0oBQlhdYYEYuEYozKYm2pbe9tQX/n3GKfOMmXOTNz/n8yM4eTV5gWptzEsQhn
+        OWSlRuUO6bkVbC6hPQoAImLxuB/cFwaNLMIYEkY4I5oMOocmcbrKZEvNr904vx4WMsgpe82NCRBhIUnY
+        lRpz4k6nIvOewZRT+irA9mH+DfRPeJHXOOBLv6XNJpOQwcm73dwoHxTvzS1Ze6L4xYfirmE8+zgFq8OP
+        zzzw0gUYXX/xbmYOGXe7qTgqZHDstoHEYeu27VshLdQPV/bYYfjmg7y8D8mXtThVY4bOAShtM0jOaxMS
+        Uu7IWf1iOpB0XMp1PRmEJ51vunBD/R6aERf2nn2KB0/6MDQyDraPgo5PSFaoYBmyw+vl0fNmFAbTSDfT
+        LeKS8jrIYPG+C2pzdf93HC8x4v7jXvh8Png8HiTldSL3pho/Jn9ixs3W+Fm4PQFcKeqiq0SIYkbc7rOa
+        QLOdR2KmEh9tY6I4EAiwE73geR68EECL7j0cLgFubwAXC9vJIJLbntM8ul2mRiKj0ubDztNa0Fx6TYcf
+        U040tb8TUbVbodIG8+e9n6EoaBUfk4vfc2nX4av6WZNjDnVf/6JnehY7MuvRax6GwE5t1Frx08WLJze2
+        US5g5rcf8vzmoAGLpeuTi26nP7KgdOwPDl7To7CsS3yDX24BSo0V005BpEFjwTQZsDfIuqgiA7o+J4mM
+        WRUbf+ihWaH7ithNZ/qdTif7gQnUt1qCqAdRx6hXB/Muow0nFQ1ksIRbc6CCTCJWbkjbvHp/mT0qbuuW
+        7xNOuNx+TP/iUdcyiCk2ErUtA2wU4GR76adqyGApiSmo/+lLaGF5m84qFk0yUc1TEvGhnEYiTVYVNPjf
+        kqHWZF/zRPvWIM2thlRWLRYezSEqRVKzK3EkqwIpGaXUwlELGVCL0utGz7NsAWid1XCSf8+gTyTiQhaO
+        AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="mnuDeterminedTime.Properties.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnuDeterminedTime.Properties.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnuDeterminedTime.Properties.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="mnuDeterminedTime.Properties.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="mnuDeterminedTime.Properties.Appearance.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="mnuDeterminedTime.Properties.Appearance.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnuDeterminedTime.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="mnuDeterminedTime.Properties.DisplayValueChecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnuDeterminedTime.Properties.DisplayValueGrayed" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnuDeterminedTime.Properties.DisplayValueUnchecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnuDeterminedTime.Properties.PictureChecked" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAAbdEVYdFRpdGxlAFN3aXRjaFJvd0NvbHVtbjtHcmlk
+        O1FF2ocAAAL7SURBVDhPbZJZTFNBFIYvlUVF9AF88FWNwRejaIxP8mDUxAWJxhCRmqCSsJTUaN2iYMQl
+        RCUQF1D2pRRFSikCTdW0oBQlhdYYEYuEYozKYm2pbe9tQX/n3GKfOMmXOTNz/n8yM4eTV5gWptzEsQhn
+        OWSlRuUO6bkVbC6hPQoAImLxuB/cFwaNLMIYEkY4I5oMOocmcbrKZEvNr904vx4WMsgpe82NCRBhIUnY
+        lRpz4k6nIvOewZRT+irA9mH+DfRPeJHXOOBLv6XNJpOQwcm73dwoHxTvzS1Ze6L4xYfirmE8+zgFq8OP
+        zzzw0gUYXX/xbmYOGXe7qTgqZHDstoHEYeu27VshLdQPV/bYYfjmg7y8D8mXtThVY4bOAShtM0jOaxMS
+        Uu7IWf1iOpB0XMp1PRmEJ51vunBD/R6aERf2nn2KB0/6MDQyDraPgo5PSFaoYBmyw+vl0fNmFAbTSDfT
+        LeKS8jrIYPG+C2pzdf93HC8x4v7jXvh8Png8HiTldSL3pho/Jn9ixs3W+Fm4PQFcKeqiq0SIYkbc7rOa
+        QLOdR2KmEh9tY6I4EAiwE73geR68EECL7j0cLgFubwAXC9vJIJLbntM8ul2mRiKj0ubDztNa0Fx6TYcf
+        U040tb8TUbVbodIG8+e9n6EoaBUfk4vfc2nX4av6WZNjDnVf/6JnehY7MuvRax6GwE5t1Frx08WLJze2
+        US5g5rcf8vzmoAGLpeuTi26nP7KgdOwPDl7To7CsS3yDX24BSo0V005BpEFjwTQZsDfIuqgiA7o+J4mM
+        WRUbf+ihWaH7ithNZ/qdTif7gQnUt1qCqAdRx6hXB/Muow0nFQ1ksIRbc6CCTCJWbkjbvHp/mT0qbuuW
+        7xNOuNx+TP/iUdcyiCk2ErUtA2wU4GR76adqyGApiSmo/+lLaGF5m84qFk0yUc1TEvGhnEYiTVYVNPjf
+        kqHWZF/zRPvWIM2thlRWLRYezSEqRVKzK3EkqwIpGaXUwlELGVCL0utGz7NsAWid1XCSf8+gTyTiQhaO
+        AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="mnuOT.Properties.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnuOT.Properties.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnuOT.Properties.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="mnuOT.Properties.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="mnuOT.Properties.Appearance.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="mnuOT.Properties.Appearance.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnuOT.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="mnuOT.Properties.DisplayValueChecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnuOT.Properties.DisplayValueGrayed" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnuOT.Properties.DisplayValueUnchecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnuOT.Properties.PictureChecked" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAAbdEVYdFRpdGxlAFN3aXRjaFJvd0NvbHVtbjtHcmlk
+        O1FF2ocAAAL7SURBVDhPbZJZTFNBFIYvlUVF9AF88FWNwRejaIxP8mDUxAWJxhCRmqCSsJTUaN2iYMQl
+        RCUQF1D2pRRFSikCTdW0oBQlhdYYEYuEYozKYm2pbe9tQX/n3GKfOMmXOTNz/n8yM4eTV5gWptzEsQhn
+        OWSlRuUO6bkVbC6hPQoAImLxuB/cFwaNLMIYEkY4I5oMOocmcbrKZEvNr904vx4WMsgpe82NCRBhIUnY
+        lRpz4k6nIvOewZRT+irA9mH+DfRPeJHXOOBLv6XNJpOQwcm73dwoHxTvzS1Ze6L4xYfirmE8+zgFq8OP
+        zzzw0gUYXX/xbmYOGXe7qTgqZHDstoHEYeu27VshLdQPV/bYYfjmg7y8D8mXtThVY4bOAShtM0jOaxMS
+        Uu7IWf1iOpB0XMp1PRmEJ51vunBD/R6aERf2nn2KB0/6MDQyDraPgo5PSFaoYBmyw+vl0fNmFAbTSDfT
+        LeKS8jrIYPG+C2pzdf93HC8x4v7jXvh8Png8HiTldSL3pho/Jn9ixs3W+Fm4PQFcKeqiq0SIYkbc7rOa
+        QLOdR2KmEh9tY6I4EAiwE73geR68EECL7j0cLgFubwAXC9vJIJLbntM8ul2mRiKj0ubDztNa0Fx6TYcf
+        U040tb8TUbVbodIG8+e9n6EoaBUfk4vfc2nX4av6WZNjDnVf/6JnehY7MuvRax6GwE5t1Frx08WLJze2
+        US5g5rcf8vzmoAGLpeuTi26nP7KgdOwPDl7To7CsS3yDX24BSo0V005BpEFjwTQZsDfIuqgiA7o+J4mM
+        WRUbf+ihWaH7ithNZ/qdTif7gQnUt1qCqAdRx6hXB/Muow0nFQ1ksIRbc6CCTCJWbkjbvHp/mT0qbuuW
+        7xNOuNx+TP/iUdcyiCk2ErUtA2wU4GR76adqyGApiSmo/+lLaGF5m84qFk0yUc1TEvGhnEYiTVYVNPjf
+        kqHWZF/zRPvWIM2thlRWLRYezSEqRVKzK3EkqwIpGaXUwlELGVCL0utGz7NsAWid1XCSf8+gTyTiQhaO
+        AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="mnuDeterminedTimeEmp.Properties.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnuDeterminedTimeEmp.Properties.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnuDeterminedTimeEmp.Properties.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="mnuDeterminedTimeEmp.Properties.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="mnuDeterminedTimeEmp.Properties.Appearance.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="mnuDeterminedTimeEmp.Properties.Appearance.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnuDeterminedTimeEmp.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="mnuDeterminedTimeEmp.Properties.DisplayValueChecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnuDeterminedTimeEmp.Properties.DisplayValueGrayed" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnuDeterminedTimeEmp.Properties.DisplayValueUnchecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnuDeterminedTimeEmp.Properties.PictureChecked" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAAbdEVYdFRpdGxlAFN3aXRjaFJvd0NvbHVtbjtHcmlk
+        O1FF2ocAAAL7SURBVDhPbZJZTFNBFIYvlUVF9AF88FWNwRejaIxP8mDUxAWJxhCRmqCSsJTUaN2iYMQl
+        RCUQF1D2pRRFSikCTdW0oBQlhdYYEYuEYozKYm2pbe9tQX/n3GKfOMmXOTNz/n8yM4eTV5gWptzEsQhn
+        OWSlRuUO6bkVbC6hPQoAImLxuB/cFwaNLMIYEkY4I5oMOocmcbrKZEvNr904vx4WMsgpe82NCRBhIUnY
+        lRpz4k6nIvOewZRT+irA9mH+DfRPeJHXOOBLv6XNJpOQwcm73dwoHxTvzS1Ze6L4xYfirmE8+zgFq8OP
+        zzzw0gUYXX/xbmYOGXe7qTgqZHDstoHEYeu27VshLdQPV/bYYfjmg7y8D8mXtThVY4bOAShtM0jOaxMS
+        Uu7IWf1iOpB0XMp1PRmEJ51vunBD/R6aERf2nn2KB0/6MDQyDraPgo5PSFaoYBmyw+vl0fNmFAbTSDfT
+        LeKS8jrIYPG+C2pzdf93HC8x4v7jXvh8Png8HiTldSL3pho/Jn9ixs3W+Fm4PQFcKeqiq0SIYkbc7rOa
+        QLOdR2KmEh9tY6I4EAiwE73geR68EECL7j0cLgFubwAXC9vJIJLbntM8ul2mRiKj0ubDztNa0Fx6TYcf
+        U040tb8TUbVbodIG8+e9n6EoaBUfk4vfc2nX4av6WZNjDnVf/6JnehY7MuvRax6GwE5t1Frx08WLJze2
+        US5g5rcf8vzmoAGLpeuTi26nP7KgdOwPDl7To7CsS3yDX24BSo0V005BpEFjwTQZsDfIuqgiA7o+J4mM
+        WRUbf+ihWaH7ithNZ/qdTif7gQnUt1qCqAdRx6hXB/Muow0nFQ1ksIRbc6CCTCJWbkjbvHp/mT0qbuuW
+        7xNOuNx+TP/iUdcyiCk2ErUtA2wU4GR76adqyGApiSmo/+lLaGF5m84qFk0yUc1TEvGhnEYiTVYVNPjf
+        kqHWZF/zRPvWIM2thlRWLRYezSEqRVKzK3EkqwIpGaXUwlELGVCL0utGz7NsAWid1XCSf8+gTyTiQhaO
+        AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="mnucalculationLate.Properties.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnucalculationLate.Properties.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnucalculationLate.Properties.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="mnucalculationLate.Properties.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="mnucalculationLate.Properties.Appearance.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="mnucalculationLate.Properties.Appearance.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnucalculationLate.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="mnucalculationLate.Properties.DisplayValueChecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnucalculationLate.Properties.DisplayValueGrayed" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnucalculationLate.Properties.DisplayValueUnchecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnucalculationLate.Properties.PictureChecked" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAAbdEVYdFRpdGxlAFN3aXRjaFJvd0NvbHVtbjtHcmlk
+        O1FF2ocAAAL7SURBVDhPbZJZTFNBFIYvlUVF9AF88FWNwRejaIxP8mDUxAWJxhCRmqCSsJTUaN2iYMQl
+        RCUQF1D2pRRFSikCTdW0oBQlhdYYEYuEYozKYm2pbe9tQX/n3GKfOMmXOTNz/n8yM4eTV5gWptzEsQhn
+        OWSlRuUO6bkVbC6hPQoAImLxuB/cFwaNLMIYEkY4I5oMOocmcbrKZEvNr904vx4WMsgpe82NCRBhIUnY
+        lRpz4k6nIvOewZRT+irA9mH+DfRPeJHXOOBLv6XNJpOQwcm73dwoHxTvzS1Ze6L4xYfirmE8+zgFq8OP
+        zzzw0gUYXX/xbmYOGXe7qTgqZHDstoHEYeu27VshLdQPV/bYYfjmg7y8D8mXtThVY4bOAShtM0jOaxMS
+        Uu7IWf1iOpB0XMp1PRmEJ51vunBD/R6aERf2nn2KB0/6MDQyDraPgo5PSFaoYBmyw+vl0fNmFAbTSDfT
+        LeKS8jrIYPG+C2pzdf93HC8x4v7jXvh8Png8HiTldSL3pho/Jn9ixs3W+Fm4PQFcKeqiq0SIYkbc7rOa
+        QLOdR2KmEh9tY6I4EAiwE73geR68EECL7j0cLgFubwAXC9vJIJLbntM8ul2mRiKj0ubDztNa0Fx6TYcf
+        U040tb8TUbVbodIG8+e9n6EoaBUfk4vfc2nX4av6WZNjDnVf/6JnehY7MuvRax6GwE5t1Frx08WLJze2
+        US5g5rcf8vzmoAGLpeuTi26nP7KgdOwPDl7To7CsS3yDX24BSo0V005BpEFjwTQZsDfIuqgiA7o+J4mM
+        WRUbf+ihWaH7ithNZ/qdTif7gQnUt1qCqAdRx6hXB/Muow0nFQ1ksIRbc6CCTCJWbkjbvHp/mT0qbuuW
+        7xNOuNx+TP/iUdcyiCk2ErUtA2wU4GR76adqyGApiSmo/+lLaGF5m84qFk0yUc1TEvGhnEYiTVYVNPjf
+        kqHWZF/zRPvWIM2thlRWLRYezSEqRVKzK3EkqwIpGaXUwlELGVCL0utGz7NsAWid1XCSf8+gTyTiQhaO
+        AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="mnuDeterminedTimeEmpByOne.Properties.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnuDeterminedTimeEmpByOne.Properties.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnuDeterminedTimeEmpByOne.Properties.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="mnuDeterminedTimeEmpByOne.Properties.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="mnuDeterminedTimeEmpByOne.Properties.Appearance.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="mnuDeterminedTimeEmpByOne.Properties.Appearance.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnuDeterminedTimeEmpByOne.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="mnuDeterminedTimeEmpByOne.Properties.DisplayValueChecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnuDeterminedTimeEmpByOne.Properties.DisplayValueGrayed" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnuDeterminedTimeEmpByOne.Properties.DisplayValueUnchecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnuDeterminedTimeEmpByOne.Properties.PictureChecked" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAAbdEVYdFRpdGxlAFN3aXRjaFJvd0NvbHVtbjtHcmlk
+        O1FF2ocAAAL7SURBVDhPbZJZTFNBFIYvlUVF9AF88FWNwRejaIxP8mDUxAWJxhCRmqCSsJTUaN2iYMQl
+        RCUQF1D2pRRFSikCTdW0oBQlhdYYEYuEYozKYm2pbe9tQX/n3GKfOMmXOTNz/n8yM4eTV5gWptzEsQhn
+        OWSlRuUO6bkVbC6hPQoAImLxuB/cFwaNLMIYEkY4I5oMOocmcbrKZEvNr904vx4WMsgpe82NCRBhIUnY
+        lRpz4k6nIvOewZRT+irA9mH+DfRPeJHXOOBLv6XNJpOQwcm73dwoHxTvzS1Ze6L4xYfirmE8+zgFq8OP
+        zzzw0gUYXX/xbmYOGXe7qTgqZHDstoHEYeu27VshLdQPV/bYYfjmg7y8D8mXtThVY4bOAShtM0jOaxMS
+        Uu7IWf1iOpB0XMp1PRmEJ51vunBD/R6aERf2nn2KB0/6MDQyDraPgo5PSFaoYBmyw+vl0fNmFAbTSDfT
+        LeKS8jrIYPG+C2pzdf93HC8x4v7jXvh8Png8HiTldSL3pho/Jn9ixs3W+Fm4PQFcKeqiq0SIYkbc7rOa
+        QLOdR2KmEh9tY6I4EAiwE73geR68EECL7j0cLgFubwAXC9vJIJLbntM8ul2mRiKj0ubDztNa0Fx6TYcf
+        U040tb8TUbVbodIG8+e9n6EoaBUfk4vfc2nX4av6WZNjDnVf/6JnehY7MuvRax6GwE5t1Frx08WLJze2
+        US5g5rcf8vzmoAGLpeuTi26nP7KgdOwPDl7To7CsS3yDX24BSo0V005BpEFjwTQZsDfIuqgiA7o+J4mM
+        WRUbf+ihWaH7ithNZ/qdTif7gQnUt1qCqAdRx6hXB/Muow0nFQ1ksIRbc6CCTCJWbkjbvHp/mT0qbuuW
+        7xNOuNx+TP/iUdcyiCk2ErUtA2wU4GR76adqyGApiSmo/+lLaGF5m84qFk0yUc1TEvGhnEYiTVYVNPjf
+        kqHWZF/zRPvWIM2thlRWLRYezSEqRVKzK3EkqwIpGaXUwlELGVCL0utGz7NsAWid1XCSf8+gTyTiQhaO
+        AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="mnuSetLeave.Properties.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnuSetLeave.Properties.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnuSetLeave.Properties.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="mnuSetLeave.Properties.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="mnuSetLeave.Properties.Appearance.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="mnuSetLeave.Properties.Appearance.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnuSetLeave.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="mnuSetLeave.Properties.DisplayValueChecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnuSetLeave.Properties.DisplayValueGrayed" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnuSetLeave.Properties.DisplayValueUnchecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnuSetLeave.Properties.PictureChecked" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAAbdEVYdFRpdGxlAFN3aXRjaFJvd0NvbHVtbjtHcmlk
+        O1FF2ocAAAL7SURBVDhPbZJZTFNBFIYvlUVF9AF88FWNwRejaIxP8mDUxAWJxhCRmqCSsJTUaN2iYMQl
+        RCUQF1D2pRRFSikCTdW0oBQlhdYYEYuEYozKYm2pbe9tQX/n3GKfOMmXOTNz/n8yM4eTV5gWptzEsQhn
+        OWSlRuUO6bkVbC6hPQoAImLxuB/cFwaNLMIYEkY4I5oMOocmcbrKZEvNr904vx4WMsgpe82NCRBhIUnY
+        lRpz4k6nIvOewZRT+irA9mH+DfRPeJHXOOBLv6XNJpOQwcm73dwoHxTvzS1Ze6L4xYfirmE8+zgFq8OP
+        zzzw0gUYXX/xbmYOGXe7qTgqZHDstoHEYeu27VshLdQPV/bYYfjmg7y8D8mXtThVY4bOAShtM0jOaxMS
+        Uu7IWf1iOpB0XMp1PRmEJ51vunBD/R6aERf2nn2KB0/6MDQyDraPgo5PSFaoYBmyw+vl0fNmFAbTSDfT
+        LeKS8jrIYPG+C2pzdf93HC8x4v7jXvh8Png8HiTldSL3pho/Jn9ixs3W+Fm4PQFcKeqiq0SIYkbc7rOa
+        QLOdR2KmEh9tY6I4EAiwE73geR68EECL7j0cLgFubwAXC9vJIJLbntM8ul2mRiKj0ubDztNa0Fx6TYcf
+        U040tb8TUbVbodIG8+e9n6EoaBUfk4vfc2nX4av6WZNjDnVf/6JnehY7MuvRax6GwE5t1Frx08WLJze2
+        US5g5rcf8vzmoAGLpeuTi26nP7KgdOwPDl7To7CsS3yDX24BSo0V005BpEFjwTQZsDfIuqgiA7o+J4mM
+        WRUbf+ihWaH7ithNZ/qdTif7gQnUt1qCqAdRx6hXB/Muow0nFQ1ksIRbc6CCTCJWbkjbvHp/mT0qbuuW
+        7xNOuNx+TP/iUdcyiCk2ErUtA2wU4GR76adqyGApiSmo/+lLaGF5m84qFk0yUc1TEvGhnEYiTVYVNPjf
+        kqHWZF/zRPvWIM2thlRWLRYezSEqRVKzK3EkqwIpGaXUwlELGVCL0utGz7NsAWid1XCSf8+gTyTiQhaO
+        AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="mnuDeterminedTimeEmpByDate.Properties.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnuDeterminedTimeEmpByDate.Properties.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnuDeterminedTimeEmpByDate.Properties.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="mnuDeterminedTimeEmpByDate.Properties.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="mnuDeterminedTimeEmpByDate.Properties.Appearance.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="mnuDeterminedTimeEmpByDate.Properties.Appearance.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnuDeterminedTimeEmpByDate.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="mnuDeterminedTimeEmpByDate.Properties.DisplayValueChecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnuDeterminedTimeEmpByDate.Properties.DisplayValueGrayed" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnuDeterminedTimeEmpByDate.Properties.DisplayValueUnchecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnuDeterminedTimeEmpByDate.Properties.PictureChecked" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAAbdEVYdFRpdGxlAFN3aXRjaFJvd0NvbHVtbjtHcmlk
+        O1FF2ocAAAL7SURBVDhPbZJZTFNBFIYvlUVF9AF88FWNwRejaIxP8mDUxAWJxhCRmqCSsJTUaN2iYMQl
+        RCUQF1D2pRRFSikCTdW0oBQlhdYYEYuEYozKYm2pbe9tQX/n3GKfOMmXOTNz/n8yM4eTV5gWptzEsQhn
+        OWSlRuUO6bkVbC6hPQoAImLxuB/cFwaNLMIYEkY4I5oMOocmcbrKZEvNr904vx4WMsgpe82NCRBhIUnY
+        lRpz4k6nIvOewZRT+irA9mH+DfRPeJHXOOBLv6XNJpOQwcm73dwoHxTvzS1Ze6L4xYfirmE8+zgFq8OP
+        zzzw0gUYXX/xbmYOGXe7qTgqZHDstoHEYeu27VshLdQPV/bYYfjmg7y8D8mXtThVY4bOAShtM0jOaxMS
+        Uu7IWf1iOpB0XMp1PRmEJ51vunBD/R6aERf2nn2KB0/6MDQyDraPgo5PSFaoYBmyw+vl0fNmFAbTSDfT
+        LeKS8jrIYPG+C2pzdf93HC8x4v7jXvh8Png8HiTldSL3pho/Jn9ixs3W+Fm4PQFcKeqiq0SIYkbc7rOa
+        QLOdR2KmEh9tY6I4EAiwE73geR68EECL7j0cLgFubwAXC9vJIJLbntM8ul2mRiKj0ubDztNa0Fx6TYcf
+        U040tb8TUbVbodIG8+e9n6EoaBUfk4vfc2nX4av6WZNjDnVf/6JnehY7MuvRax6GwE5t1Frx08WLJze2
+        US5g5rcf8vzmoAGLpeuTi26nP7KgdOwPDl7To7CsS3yDX24BSo0V005BpEFjwTQZsDfIuqgiA7o+J4mM
+        WRUbf+ihWaH7ithNZ/qdTif7gQnUt1qCqAdRx6hXB/Muow0nFQ1ksIRbc6CCTCJWbkjbvHp/mT0qbuuW
+        7xNOuNx+TP/iUdcyiCk2ErUtA2wU4GR76adqyGApiSmo/+lLaGF5m84qFk0yUc1TEvGhnEYiTVYVNPjf
+        kqHWZF/zRPvWIM2thlRWLRYezSEqRVKzK3EkqwIpGaXUwlELGVCL0utGz7NsAWid1XCSf8+gTyTiQhaO
+        AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="mnuProcessOT.Properties.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnuProcessOT.Properties.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnuProcessOT.Properties.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="mnuProcessOT.Properties.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="mnuProcessOT.Properties.Appearance.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="mnuProcessOT.Properties.Appearance.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnuProcessOT.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="mnuProcessOT.Properties.DisplayValueChecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnuProcessOT.Properties.DisplayValueGrayed" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnuProcessOT.Properties.DisplayValueUnchecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnuProcessOT.Properties.PictureChecked" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAAbdEVYdFRpdGxlAFN3aXRjaFJvd0NvbHVtbjtHcmlk
+        O1FF2ocAAAL7SURBVDhPbZJZTFNBFIYvlUVF9AF88FWNwRejaIxP8mDUxAWJxhCRmqCSsJTUaN2iYMQl
+        RCUQF1D2pRRFSikCTdW0oBQlhdYYEYuEYozKYm2pbe9tQX/n3GKfOMmXOTNz/n8yM4eTV5gWptzEsQhn
+        OWSlRuUO6bkVbC6hPQoAImLxuB/cFwaNLMIYEkY4I5oMOocmcbrKZEvNr904vx4WMsgpe82NCRBhIUnY
+        lRpz4k6nIvOewZRT+irA9mH+DfRPeJHXOOBLv6XNJpOQwcm73dwoHxTvzS1Ze6L4xYfirmE8+zgFq8OP
+        zzzw0gUYXX/xbmYOGXe7qTgqZHDstoHEYeu27VshLdQPV/bYYfjmg7y8D8mXtThVY4bOAShtM0jOaxMS
+        Uu7IWf1iOpB0XMp1PRmEJ51vunBD/R6aERf2nn2KB0/6MDQyDraPgo5PSFaoYBmyw+vl0fNmFAbTSDfT
+        LeKS8jrIYPG+C2pzdf93HC8x4v7jXvh8Png8HiTldSL3pho/Jn9ixs3W+Fm4PQFcKeqiq0SIYkbc7rOa
+        QLOdR2KmEh9tY6I4EAiwE73geR68EECL7j0cLgFubwAXC9vJIJLbntM8ul2mRiKj0ubDztNa0Fx6TYcf
+        U040tb8TUbVbodIG8+e9n6EoaBUfk4vfc2nX4av6WZNjDnVf/6JnehY7MuvRax6GwE5t1Frx08WLJze2
+        US5g5rcf8vzmoAGLpeuTi26nP7KgdOwPDl7To7CsS3yDX24BSo0V005BpEFjwTQZsDfIuqgiA7o+J4mM
+        WRUbf+ihWaH7ithNZ/qdTif7gQnUt1qCqAdRx6hXB/Muow0nFQ1ksIRbc6CCTCJWbkjbvHp/mT0qbuuW
+        7xNOuNx+TP/iUdcyiCk2ErUtA2wU4GR76adqyGApiSmo/+lLaGF5m84qFk0yUc1TEvGhnEYiTVYVNPjf
+        kqHWZF/zRPvWIM2thlRWLRYezSEqRVKzK3EkqwIpGaXUwlELGVCL0utGz7NsAWid1XCSf8+gTyTiQhaO
+        AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="XtraTabPage5.Appearance.Header.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="XtraTabPage5.Appearance.Header.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="XtraTabPage5.Appearance.Header.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="XtraTabPage5.Appearance.Header.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="XtraTabPage5.Appearance.HeaderActive.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="XtraTabPage5.Appearance.HeaderActive.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="XtraTabPage5.Appearance.HeaderActive.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="XtraTabPage5.Appearance.HeaderActive.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="XtraScrollableControl3.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="XtraScrollableControl3.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="XtraScrollableControl3.Appearance.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="XtraScrollableControl3.Appearance.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnurptScheduleWorkAllEmp2.Properties.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnurptScheduleWorkAllEmp2.Properties.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnurptScheduleWorkAllEmp2.Properties.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="mnurptScheduleWorkAllEmp2.Properties.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="mnurptScheduleWorkAllEmp2.Properties.Appearance.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="mnurptScheduleWorkAllEmp2.Properties.Appearance.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnurptScheduleWorkAllEmp2.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="mnurptScheduleWorkAllEmp2.Properties.DisplayValueChecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnurptScheduleWorkAllEmp2.Properties.DisplayValueGrayed" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnurptScheduleWorkAllEmp2.Properties.DisplayValueUnchecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnurptScheduleWorkAllEmp2.Properties.PictureChecked" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAAbdEVYdFRpdGxlAFN3aXRjaFJvd0NvbHVtbjtHcmlk
+        O1FF2ocAAAL7SURBVDhPbZJZTFNBFIYvlUVF9AF88FWNwRejaIxP8mDUxAWJxhCRmqCSsJTUaN2iYMQl
+        RCUQF1D2pRRFSikCTdW0oBQlhdYYEYuEYozKYm2pbe9tQX/n3GKfOMmXOTNz/n8yM4eTV5gWptzEsQhn
+        OWSlRuUO6bkVbC6hPQoAImLxuB/cFwaNLMIYEkY4I5oMOocmcbrKZEvNr904vx4WMsgpe82NCRBhIUnY
+        lRpz4k6nIvOewZRT+irA9mH+DfRPeJHXOOBLv6XNJpOQwcm73dwoHxTvzS1Ze6L4xYfirmE8+zgFq8OP
+        zzzw0gUYXX/xbmYOGXe7qTgqZHDstoHEYeu27VshLdQPV/bYYfjmg7y8D8mXtThVY4bOAShtM0jOaxMS
+        Uu7IWf1iOpB0XMp1PRmEJ51vunBD/R6aERf2nn2KB0/6MDQyDraPgo5PSFaoYBmyw+vl0fNmFAbTSDfT
+        LeKS8jrIYPG+C2pzdf93HC8x4v7jXvh8Png8HiTldSL3pho/Jn9ixs3W+Fm4PQFcKeqiq0SIYkbc7rOa
+        QLOdR2KmEh9tY6I4EAiwE73geR68EECL7j0cLgFubwAXC9vJIJLbntM8ul2mRiKj0ubDztNa0Fx6TYcf
+        U040tb8TUbVbodIG8+e9n6EoaBUfk4vfc2nX4av6WZNjDnVf/6JnehY7MuvRax6GwE5t1Frx08WLJze2
+        US5g5rcf8vzmoAGLpeuTi26nP7KgdOwPDl7To7CsS3yDX24BSo0V005BpEFjwTQZsDfIuqgiA7o+J4mM
+        WRUbf+ihWaH7ithNZ/qdTif7gQnUt1qCqAdRx6hXB/Muow0nFQ1ksIRbc6CCTCJWbkjbvHp/mT0qbuuW
+        7xNOuNx+TP/iUdcyiCk2ErUtA2wU4GR76adqyGApiSmo/+lLaGF5m84qFk0yUc1TEvGhnEYiTVYVNPjf
+        kqHWZF/zRPvWIM2thlRWLRYezSEqRVKzK3EkqwIpGaXUwlELGVCL0utGz7NsAWid1XCSf8+gTyTiQhaO
+        AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="mnuReport.Properties.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnuReport.Properties.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnuReport.Properties.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="mnuReport.Properties.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="mnuReport.Properties.Appearance.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="mnuReport.Properties.Appearance.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnuReport.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="mnuReport.Properties.DisplayValueChecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnuReport.Properties.DisplayValueGrayed" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnuReport.Properties.DisplayValueUnchecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="munOvertimeLeage.Properties.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="munOvertimeLeage.Properties.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="munOvertimeLeage.Properties.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="munOvertimeLeage.Properties.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="munOvertimeLeage.Properties.Appearance.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="munOvertimeLeage.Properties.Appearance.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="munOvertimeLeage.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="munOvertimeLeage.Properties.DisplayValueChecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="munOvertimeLeage.Properties.DisplayValueGrayed" xml:space="preserve">
+    <value />
+  </data>
+  <data name="munOvertimeLeage.Properties.DisplayValueUnchecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="munOvertimeLeage.Properties.PictureChecked" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAAbdEVYdFRpdGxlAFN3aXRjaFJvd0NvbHVtbjtHcmlk
+        O1FF2ocAAAL7SURBVDhPbZJZTFNBFIYvlUVF9AF88FWNwRejaIxP8mDUxAWJxhCRmqCSsJTUaN2iYMQl
+        RCUQF1D2pRRFSikCTdW0oBQlhdYYEYuEYozKYm2pbe9tQX/n3GKfOMmXOTNz/n8yM4eTV5gWptzEsQhn
+        OWSlRuUO6bkVbC6hPQoAImLxuB/cFwaNLMIYEkY4I5oMOocmcbrKZEvNr904vx4WMsgpe82NCRBhIUnY
+        lRpz4k6nIvOewZRT+irA9mH+DfRPeJHXOOBLv6XNJpOQwcm73dwoHxTvzS1Ze6L4xYfirmE8+zgFq8OP
+        zzzw0gUYXX/xbmYOGXe7qTgqZHDstoHEYeu27VshLdQPV/bYYfjmg7y8D8mXtThVY4bOAShtM0jOaxMS
+        Uu7IWf1iOpB0XMp1PRmEJ51vunBD/R6aERf2nn2KB0/6MDQyDraPgo5PSFaoYBmyw+vl0fNmFAbTSDfT
+        LeKS8jrIYPG+C2pzdf93HC8x4v7jXvh8Png8HiTldSL3pho/Jn9ixs3W+Fm4PQFcKeqiq0SIYkbc7rOa
+        QLOdR2KmEh9tY6I4EAiwE73geR68EECL7j0cLgFubwAXC9vJIJLbntM8ul2mRiKj0ubDztNa0Fx6TYcf
+        U040tb8TUbVbodIG8+e9n6EoaBUfk4vfc2nX4av6WZNjDnVf/6JnehY7MuvRax6GwE5t1Frx08WLJze2
+        US5g5rcf8vzmoAGLpeuTi26nP7KgdOwPDl7To7CsS3yDX24BSo0V005BpEFjwTQZsDfIuqgiA7o+J4mM
+        WRUbf+ihWaH7ithNZ/qdTif7gQnUt1qCqAdRx6hXB/Muow0nFQ1ksIRbc6CCTCJWbkjbvHp/mT0qbuuW
+        7xNOuNx+TP/iUdcyiCk2ErUtA2wU4GR76adqyGApiSmo/+lLaGF5m84qFk0yUc1TEvGhnEYiTVYVNPjf
+        kqHWZF/zRPvWIM2thlRWLRYezSEqRVKzK3EkqwIpGaXUwlELGVCL0utGz7NsAWid1XCSf8+gTyTiQhaO
+        AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="mnurptTimeWork.Properties.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnurptTimeWork.Properties.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnurptTimeWork.Properties.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="mnurptTimeWork.Properties.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="mnurptTimeWork.Properties.Appearance.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="mnurptTimeWork.Properties.Appearance.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnurptTimeWork.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="mnurptTimeWork.Properties.DisplayValueChecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnurptTimeWork.Properties.DisplayValueGrayed" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnurptTimeWork.Properties.DisplayValueUnchecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnurptTimeWork.Properties.PictureChecked" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAAbdEVYdFRpdGxlAFN3aXRjaFJvd0NvbHVtbjtHcmlk
+        O1FF2ocAAAL7SURBVDhPbZJZTFNBFIYvlUVF9AF88FWNwRejaIxP8mDUxAWJxhCRmqCSsJTUaN2iYMQl
+        RCUQF1D2pRRFSikCTdW0oBQlhdYYEYuEYozKYm2pbe9tQX/n3GKfOMmXOTNz/n8yM4eTV5gWptzEsQhn
+        OWSlRuUO6bkVbC6hPQoAImLxuB/cFwaNLMIYEkY4I5oMOocmcbrKZEvNr904vx4WMsgpe82NCRBhIUnY
+        lRpz4k6nIvOewZRT+irA9mH+DfRPeJHXOOBLv6XNJpOQwcm73dwoHxTvzS1Ze6L4xYfirmE8+zgFq8OP
+        zzzw0gUYXX/xbmYOGXe7qTgqZHDstoHEYeu27VshLdQPV/bYYfjmg7y8D8mXtThVY4bOAShtM0jOaxMS
+        Uu7IWf1iOpB0XMp1PRmEJ51vunBD/R6aERf2nn2KB0/6MDQyDraPgo5PSFaoYBmyw+vl0fNmFAbTSDfT
+        LeKS8jrIYPG+C2pzdf93HC8x4v7jXvh8Png8HiTldSL3pho/Jn9ixs3W+Fm4PQFcKeqiq0SIYkbc7rOa
+        QLOdR2KmEh9tY6I4EAiwE73geR68EECL7j0cLgFubwAXC9vJIJLbntM8ul2mRiKj0ubDztNa0Fx6TYcf
+        U040tb8TUbVbodIG8+e9n6EoaBUfk4vfc2nX4av6WZNjDnVf/6JnehY7MuvRax6GwE5t1Frx08WLJze2
+        US5g5rcf8vzmoAGLpeuTi26nP7KgdOwPDl7To7CsS3yDX24BSo0V005BpEFjwTQZsDfIuqgiA7o+J4mM
+        WRUbf+ihWaH7ithNZ/qdTif7gQnUt1qCqAdRx6hXB/Muow0nFQ1ksIRbc6CCTCJWbkjbvHp/mT0qbuuW
+        7xNOuNx+TP/iUdcyiCk2ErUtA2wU4GR76adqyGApiSmo/+lLaGF5m84qFk0yUc1TEvGhnEYiTVYVNPjf
+        kqHWZF/zRPvWIM2thlRWLRYezSEqRVKzK3EkqwIpGaXUwlELGVCL0utGz7NsAWid1XCSf8+gTyTiQhaO
+        AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="mnurptAllemployeework2.Properties.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnurptAllemployeework2.Properties.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnurptAllemployeework2.Properties.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="mnurptAllemployeework2.Properties.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="mnurptAllemployeework2.Properties.Appearance.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="mnurptAllemployeework2.Properties.Appearance.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnurptAllemployeework2.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="mnurptAllemployeework2.Properties.DisplayValueChecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnurptAllemployeework2.Properties.DisplayValueGrayed" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnurptAllemployeework2.Properties.DisplayValueUnchecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnurptAllemployeework2.Properties.PictureChecked" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAAbdEVYdFRpdGxlAFN3aXRjaFJvd0NvbHVtbjtHcmlk
+        O1FF2ocAAAL7SURBVDhPbZJZTFNBFIYvlUVF9AF88FWNwRejaIxP8mDUxAWJxhCRmqCSsJTUaN2iYMQl
+        RCUQF1D2pRRFSikCTdW0oBQlhdYYEYuEYozKYm2pbe9tQX/n3GKfOMmXOTNz/n8yM4eTV5gWptzEsQhn
+        OWSlRuUO6bkVbC6hPQoAImLxuB/cFwaNLMIYEkY4I5oMOocmcbrKZEvNr904vx4WMsgpe82NCRBhIUnY
+        lRpz4k6nIvOewZRT+irA9mH+DfRPeJHXOOBLv6XNJpOQwcm73dwoHxTvzS1Ze6L4xYfirmE8+zgFq8OP
+        zzzw0gUYXX/xbmYOGXe7qTgqZHDstoHEYeu27VshLdQPV/bYYfjmg7y8D8mXtThVY4bOAShtM0jOaxMS
+        Uu7IWf1iOpB0XMp1PRmEJ51vunBD/R6aERf2nn2KB0/6MDQyDraPgo5PSFaoYBmyw+vl0fNmFAbTSDfT
+        LeKS8jrIYPG+C2pzdf93HC8x4v7jXvh8Png8HiTldSL3pho/Jn9ixs3W+Fm4PQFcKeqiq0SIYkbc7rOa
+        QLOdR2KmEh9tY6I4EAiwE73geR68EECL7j0cLgFubwAXC9vJIJLbntM8ul2mRiKj0ubDztNa0Fx6TYcf
+        U040tb8TUbVbodIG8+e9n6EoaBUfk4vfc2nX4av6WZNjDnVf/6JnehY7MuvRax6GwE5t1Frx08WLJze2
+        US5g5rcf8vzmoAGLpeuTi26nP7KgdOwPDl7To7CsS3yDX24BSo0V005BpEFjwTQZsDfIuqgiA7o+J4mM
+        WRUbf+ihWaH7ithNZ/qdTif7gQnUt1qCqAdRx6hXB/Muow0nFQ1ksIRbc6CCTCJWbkjbvHp/mT0qbuuW
+        7xNOuNx+TP/iUdcyiCk2ErUtA2wU4GR76adqyGApiSmo/+lLaGF5m84qFk0yUc1TEvGhnEYiTVYVNPjf
+        kqHWZF/zRPvWIM2thlRWLRYezSEqRVKzK3EkqwIpGaXUwlELGVCL0utGz7NsAWid1XCSf8+gTyTiQhaO
+        AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="mnurptemployeeByDate.Properties.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnurptemployeeByDate.Properties.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnurptemployeeByDate.Properties.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="mnurptemployeeByDate.Properties.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="mnurptemployeeByDate.Properties.Appearance.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="mnurptemployeeByDate.Properties.Appearance.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnurptemployeeByDate.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="mnurptemployeeByDate.Properties.DisplayValueChecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnurptemployeeByDate.Properties.DisplayValueGrayed" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnurptemployeeByDate.Properties.DisplayValueUnchecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnurptemployeeByDate.Properties.PictureChecked" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAAbdEVYdFRpdGxlAFN3aXRjaFJvd0NvbHVtbjtHcmlk
+        O1FF2ocAAAL7SURBVDhPbZJZTFNBFIYvlUVF9AF88FWNwRejaIxP8mDUxAWJxhCRmqCSsJTUaN2iYMQl
+        RCUQF1D2pRRFSikCTdW0oBQlhdYYEYuEYozKYm2pbe9tQX/n3GKfOMmXOTNz/n8yM4eTV5gWptzEsQhn
+        OWSlRuUO6bkVbC6hPQoAImLxuB/cFwaNLMIYEkY4I5oMOocmcbrKZEvNr904vx4WMsgpe82NCRBhIUnY
+        lRpz4k6nIvOewZRT+irA9mH+DfRPeJHXOOBLv6XNJpOQwcm73dwoHxTvzS1Ze6L4xYfirmE8+zgFq8OP
+        zzzw0gUYXX/xbmYOGXe7qTgqZHDstoHEYeu27VshLdQPV/bYYfjmg7y8D8mXtThVY4bOAShtM0jOaxMS
+        Uu7IWf1iOpB0XMp1PRmEJ51vunBD/R6aERf2nn2KB0/6MDQyDraPgo5PSFaoYBmyw+vl0fNmFAbTSDfT
+        LeKS8jrIYPG+C2pzdf93HC8x4v7jXvh8Png8HiTldSL3pho/Jn9ixs3W+Fm4PQFcKeqiq0SIYkbc7rOa
+        QLOdR2KmEh9tY6I4EAiwE73geR68EECL7j0cLgFubwAXC9vJIJLbntM8ul2mRiKj0ubDztNa0Fx6TYcf
+        U040tb8TUbVbodIG8+e9n6EoaBUfk4vfc2nX4av6WZNjDnVf/6JnehY7MuvRax6GwE5t1Frx08WLJze2
+        US5g5rcf8vzmoAGLpeuTi26nP7KgdOwPDl7To7CsS3yDX24BSo0V005BpEFjwTQZsDfIuqgiA7o+J4mM
+        WRUbf+ihWaH7ithNZ/qdTif7gQnUt1qCqAdRx6hXB/Muow0nFQ1ksIRbc6CCTCJWbkjbvHp/mT0qbuuW
+        7xNOuNx+TP/iUdcyiCk2ErUtA2wU4GR76adqyGApiSmo/+lLaGF5m84qFk0yUc1TEvGhnEYiTVYVNPjf
+        kqHWZF/zRPvWIM2thlRWLRYezSEqRVKzK3EkqwIpGaXUwlELGVCL0utGz7NsAWid1XCSf8+gTyTiQhaO
+        AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="mnurptEmpWorkDetail1_M.Properties.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnurptEmpWorkDetail1_M.Properties.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnurptEmpWorkDetail1_M.Properties.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="mnurptEmpWorkDetail1_M.Properties.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="mnurptEmpWorkDetail1_M.Properties.Appearance.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="mnurptEmpWorkDetail1_M.Properties.Appearance.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnurptEmpWorkDetail1_M.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="mnurptEmpWorkDetail1_M.Properties.DisplayValueChecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnurptEmpWorkDetail1_M.Properties.DisplayValueGrayed" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnurptEmpWorkDetail1_M.Properties.DisplayValueUnchecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnurptEmpWorkDetail1_M.Properties.PictureChecked" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAAbdEVYdFRpdGxlAFN3aXRjaFJvd0NvbHVtbjtHcmlk
+        O1FF2ocAAAL7SURBVDhPbZJZTFNBFIYvlUVF9AF88FWNwRejaIxP8mDUxAWJxhCRmqCSsJTUaN2iYMQl
+        RCUQF1D2pRRFSikCTdW0oBQlhdYYEYuEYozKYm2pbe9tQX/n3GKfOMmXOTNz/n8yM4eTV5gWptzEsQhn
+        OWSlRuUO6bkVbC6hPQoAImLxuB/cFwaNLMIYEkY4I5oMOocmcbrKZEvNr904vx4WMsgpe82NCRBhIUnY
+        lRpz4k6nIvOewZRT+irA9mH+DfRPeJHXOOBLv6XNJpOQwcm73dwoHxTvzS1Ze6L4xYfirmE8+zgFq8OP
+        zzzw0gUYXX/xbmYOGXe7qTgqZHDstoHEYeu27VshLdQPV/bYYfjmg7y8D8mXtThVY4bOAShtM0jOaxMS
+        Uu7IWf1iOpB0XMp1PRmEJ51vunBD/R6aERf2nn2KB0/6MDQyDraPgo5PSFaoYBmyw+vl0fNmFAbTSDfT
+        LeKS8jrIYPG+C2pzdf93HC8x4v7jXvh8Png8HiTldSL3pho/Jn9ixs3W+Fm4PQFcKeqiq0SIYkbc7rOa
+        QLOdR2KmEh9tY6I4EAiwE73geR68EECL7j0cLgFubwAXC9vJIJLbntM8ul2mRiKj0ubDztNa0Fx6TYcf
+        U040tb8TUbVbodIG8+e9n6EoaBUfk4vfc2nX4av6WZNjDnVf/6JnehY7MuvRax6GwE5t1Frx08WLJze2
+        US5g5rcf8vzmoAGLpeuTi26nP7KgdOwPDl7To7CsS3yDX24BSo0V005BpEFjwTQZsDfIuqgiA7o+J4mM
+        WRUbf+ihWaH7ithNZ/qdTif7gQnUt1qCqAdRx6hXB/Muow0nFQ1ksIRbc6CCTCJWbkjbvHp/mT0qbuuW
+        7xNOuNx+TP/iUdcyiCk2ErUtA2wU4GR76adqyGApiSmo/+lLaGF5m84qFk0yUc1TEvGhnEYiTVYVNPjf
+        kqHWZF/zRPvWIM2thlRWLRYezSEqRVKzK3EkqwIpGaXUwlELGVCL0utGz7NsAWid1XCSf8+gTyTiQhaO
+        AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="XtraTabPage6.Appearance.Header.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="XtraTabPage6.Appearance.Header.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="XtraTabPage6.Appearance.Header.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="XtraTabPage6.Appearance.Header.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="XtraTabPage6.Appearance.HeaderActive.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="XtraTabPage6.Appearance.HeaderActive.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="XtraTabPage6.Appearance.HeaderActive.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="XtraTabPage6.Appearance.HeaderActive.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="XtraScrollableControl4.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="XtraScrollableControl4.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="XtraScrollableControl4.Appearance.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="XtraScrollableControl4.Appearance.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnuPerUser.Properties.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnuPerUser.Properties.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnuPerUser.Properties.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="mnuPerUser.Properties.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="mnuPerUser.Properties.Appearance.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="mnuPerUser.Properties.Appearance.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnuPerUser.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="mnuPerUser.Properties.DisplayValueChecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnuPerUser.Properties.DisplayValueGrayed" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnuPerUser.Properties.DisplayValueUnchecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnuPerUser.Properties.PictureChecked" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAAbdEVYdFRpdGxlAFN3aXRjaFJvd0NvbHVtbjtHcmlk
+        O1FF2ocAAAL7SURBVDhPbZJZTFNBFIYvlUVF9AF88FWNwRejaIxP8mDUxAWJxhCRmqCSsJTUaN2iYMQl
+        RCUQF1D2pRRFSikCTdW0oBQlhdYYEYuEYozKYm2pbe9tQX/n3GKfOMmXOTNz/n8yM4eTV5gWptzEsQhn
+        OWSlRuUO6bkVbC6hPQoAImLxuB/cFwaNLMIYEkY4I5oMOocmcbrKZEvNr904vx4WMsgpe82NCRBhIUnY
+        lRpz4k6nIvOewZRT+irA9mH+DfRPeJHXOOBLv6XNJpOQwcm73dwoHxTvzS1Ze6L4xYfirmE8+zgFq8OP
+        zzzw0gUYXX/xbmYOGXe7qTgqZHDstoHEYeu27VshLdQPV/bYYfjmg7y8D8mXtThVY4bOAShtM0jOaxMS
+        Uu7IWf1iOpB0XMp1PRmEJ51vunBD/R6aERf2nn2KB0/6MDQyDraPgo5PSFaoYBmyw+vl0fNmFAbTSDfT
+        LeKS8jrIYPG+C2pzdf93HC8x4v7jXvh8Png8HiTldSL3pho/Jn9ixs3W+Fm4PQFcKeqiq0SIYkbc7rOa
+        QLOdR2KmEh9tY6I4EAiwE73geR68EECL7j0cLgFubwAXC9vJIJLbntM8ul2mRiKj0ubDztNa0Fx6TYcf
+        U040tb8TUbVbodIG8+e9n6EoaBUfk4vfc2nX4av6WZNjDnVf/6JnehY7MuvRax6GwE5t1Frx08WLJze2
+        US5g5rcf8vzmoAGLpeuTi26nP7KgdOwPDl7To7CsS3yDX24BSo0V005BpEFjwTQZsDfIuqgiA7o+J4mM
+        WRUbf+ihWaH7ithNZ/qdTif7gQnUt1qCqAdRx6hXB/Muow0nFQ1ksIRbc6CCTCJWbkjbvHp/mT0qbuuW
+        7xNOuNx+TP/iUdcyiCk2ErUtA2wU4GR76adqyGApiSmo/+lLaGF5m84qFk0yUc1TEvGhnEYiTVYVNPjf
+        kqHWZF/zRPvWIM2thlRWLRYezSEqRVKzK3EkqwIpGaXUwlELGVCL0utGz7NsAWid1XCSf8+gTyTiQhaO
+        AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="mnuPermission.Properties.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnuPermission.Properties.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnuPermission.Properties.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="mnuPermission.Properties.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="mnuPermission.Properties.Appearance.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="mnuPermission.Properties.Appearance.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnuPermission.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="mnuPermission.Properties.DisplayValueChecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnuPermission.Properties.DisplayValueGrayed" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnuPermission.Properties.DisplayValueUnchecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnuPerPattern.Properties.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnuPerPattern.Properties.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnuPerPattern.Properties.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="mnuPerPattern.Properties.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="mnuPerPattern.Properties.Appearance.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="mnuPerPattern.Properties.Appearance.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnuPerPattern.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="mnuPerPattern.Properties.DisplayValueChecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnuPerPattern.Properties.DisplayValueGrayed" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnuPerPattern.Properties.DisplayValueUnchecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnuPerPattern.Properties.PictureChecked" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAAbdEVYdFRpdGxlAFN3aXRjaFJvd0NvbHVtbjtHcmlk
+        O1FF2ocAAAL7SURBVDhPbZJZTFNBFIYvlUVF9AF88FWNwRejaIxP8mDUxAWJxhCRmqCSsJTUaN2iYMQl
+        RCUQF1D2pRRFSikCTdW0oBQlhdYYEYuEYozKYm2pbe9tQX/n3GKfOMmXOTNz/n8yM4eTV5gWptzEsQhn
+        OWSlRuUO6bkVbC6hPQoAImLxuB/cFwaNLMIYEkY4I5oMOocmcbrKZEvNr904vx4WMsgpe82NCRBhIUnY
+        lRpz4k6nIvOewZRT+irA9mH+DfRPeJHXOOBLv6XNJpOQwcm73dwoHxTvzS1Ze6L4xYfirmE8+zgFq8OP
+        zzzw0gUYXX/xbmYOGXe7qTgqZHDstoHEYeu27VshLdQPV/bYYfjmg7y8D8mXtThVY4bOAShtM0jOaxMS
+        Uu7IWf1iOpB0XMp1PRmEJ51vunBD/R6aERf2nn2KB0/6MDQyDraPgo5PSFaoYBmyw+vl0fNmFAbTSDfT
+        LeKS8jrIYPG+C2pzdf93HC8x4v7jXvh8Png8HiTldSL3pho/Jn9ixs3W+Fm4PQFcKeqiq0SIYkbc7rOa
+        QLOdR2KmEh9tY6I4EAiwE73geR68EECL7j0cLgFubwAXC9vJIJLbntM8ul2mRiKj0ubDztNa0Fx6TYcf
+        U040tb8TUbVbodIG8+e9n6EoaBUfk4vfc2nX4av6WZNjDnVf/6JnehY7MuvRax6GwE5t1Frx08WLJze2
+        US5g5rcf8vzmoAGLpeuTi26nP7KgdOwPDl7To7CsS3yDX24BSo0V005BpEFjwTQZsDfIuqgiA7o+J4mM
+        WRUbf+ihWaH7ithNZ/qdTif7gQnUt1qCqAdRx6hXB/Muow0nFQ1ksIRbc6CCTCJWbkjbvHp/mT0qbuuW
+        7xNOuNx+TP/iUdcyiCk2ErUtA2wU4GR76adqyGApiSmo/+lLaGF5m84qFk0yUc1TEvGhnEYiTVYVNPjf
+        kqHWZF/zRPvWIM2thlRWLRYezSEqRVKzK3EkqwIpGaXUwlELGVCL0utGz7NsAWid1XCSf8+gTyTiQhaO
+        AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="mnuUserPass.Properties.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnuUserPass.Properties.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnuUserPass.Properties.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="mnuUserPass.Properties.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="mnuUserPass.Properties.Appearance.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="mnuUserPass.Properties.Appearance.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="mnuUserPass.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="mnuUserPass.Properties.DisplayValueChecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnuUserPass.Properties.DisplayValueGrayed" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnuUserPass.Properties.DisplayValueUnchecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnuUserPass.Properties.PictureChecked" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAAbdEVYdFRpdGxlAFN3aXRjaFJvd0NvbHVtbjtHcmlk
+        O1FF2ocAAAL7SURBVDhPbZJZTFNBFIYvlUVF9AF88FWNwRejaIxP8mDUxAWJxhCRmqCSsJTUaN2iYMQl
+        RCUQF1D2pRRFSikCTdW0oBQlhdYYEYuEYozKYm2pbe9tQX/n3GKfOMmXOTNz/n8yM4eTV5gWptzEsQhn
+        OWSlRuUO6bkVbC6hPQoAImLxuB/cFwaNLMIYEkY4I5oMOocmcbrKZEvNr904vx4WMsgpe82NCRBhIUnY
+        lRpz4k6nIvOewZRT+irA9mH+DfRPeJHXOOBLv6XNJpOQwcm73dwoHxTvzS1Ze6L4xYfirmE8+zgFq8OP
+        zzzw0gUYXX/xbmYOGXe7qTgqZHDstoHEYeu27VshLdQPV/bYYfjmg7y8D8mXtThVY4bOAShtM0jOaxMS
+        Uu7IWf1iOpB0XMp1PRmEJ51vunBD/R6aERf2nn2KB0/6MDQyDraPgo5PSFaoYBmyw+vl0fNmFAbTSDfT
+        LeKS8jrIYPG+C2pzdf93HC8x4v7jXvh8Png8HiTldSL3pho/Jn9ixs3W+Fm4PQFcKeqiq0SIYkbc7rOa
+        QLOdR2KmEh9tY6I4EAiwE73geR68EECL7j0cLgFubwAXC9vJIJLbntM8ul2mRiKj0ubDztNa0Fx6TYcf
+        U040tb8TUbVbodIG8+e9n6EoaBUfk4vfc2nX4av6WZNjDnVf/6JnehY7MuvRax6GwE5t1Frx08WLJze2
+        US5g5rcf8vzmoAGLpeuTi26nP7KgdOwPDl7To7CsS3yDX24BSo0V005BpEFjwTQZsDfIuqgiA7o+J4mM
+        WRUbf+ihWaH7ithNZ/qdTif7gQnUt1qCqAdRx6hXB/Muow0nFQ1ksIRbc6CCTCJWbkjbvHp/mT0qbuuW
+        7xNOuNx+TP/iUdcyiCk2ErUtA2wU4GR76adqyGApiSmo/+lLaGF5m84qFk0yUc1TEvGhnEYiTVYVNPjf
+        kqHWZF/zRPvWIM2thlRWLRYezSEqRVKzK3EkqwIpGaXUwlELGVCL0utGz7NsAWid1XCSf8+gTyTiQhaO
+        AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="XtraTabPage2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAAbdEVYdFRpdGxlAFN0YWNrZWRMYXlvdXQ7TGF5b3V0
+        Oysc2NUAAAJjSURBVDhPfdP7T1JhGAfwd5llYhF2WeWqP6ZckCbL5qo1V3Otu6IomoJm17XU5jQvNM2i
+        i6tNlIgUCRCEo2S3H7suhxdytWn2Bzx9H86h0LXe7bPv2Xmf9zmc874IjJWw+h9SIUXJtCRrlFwFK4Tl
+        jhSst72i+nuAvIBkli4piAKVGVnXM0G1kMjanpdUfTs0Gm9y4oaX/JO/yP3lJ7k/g5LHr3sJBRpO3+Qi
+        7i3I88ghKLr6gufThb68z5tf5aTl9MY+Hzcouuah3nc/yDoWI+t4jDqR7NgVDzfIALEWNsBG2KTg63WM
+        Cx+9/a4snKUOJsXo6OVhuUFVRzBk7o6QuStCNUlM7YEwCtS5pU/8+goH6SueAqeD8iDH8HgE82mCO3m/
+        LtLgp4UlCi+6+QnrFVthG2Qp+DoTUkXhJTc9eDNHbaEZusXCnLN0pH6IG2wua/FJVVaJKsGUyE6JDM1e
+        CfPpggttr+eoFYtbR2eoBTgP1w1ygyxOD3bG9XF+iYOW5zyvFrri3sA+4wAlywXtud4ACrYcsrjo7sQ3
+        ag5M/zUyTQU1zxKvGN+B7bAzyQ7gnVDvOfMwmFPWTzml/bQXEpl9+j4fJJUovukZK28PkyxERqSxLUxn
+        m9zjKOCtVAE/iT9aggb4foooqHbRME6Y8/287IOcB847+SdqGv1ToisSE5yNPlmDLyq0JXZMY+SjsBsn
+        rMkfpUYfxHOK9lfGG2Q2eKPxBcsT50FusPuULaQz2ElXYid0/ZO7TtpCmM7QFtuF3uQQecCLcIhk5QNy
+        Aww+z/xe/NES+MPyff47/2cI8RvoiNDMrlbbIwAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="grpRight.Text" xml:space="preserve">
+    <value>Employee List - Set Permission Group :</value>
+  </data>
+  <data name="lblEmpId.ButtonCustom.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lblEmpId.ButtonCustom.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="lblEmpId.ButtonCustom.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblEmpId.ButtonCustom2.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lblEmpId.ButtonCustom2.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="lblEmpId.ButtonCustom2.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnexit.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAB10RVh0VGl0
+        bGUAQ2xvc2U7RXhpdDtCYXJzO1JpYmJvbjtGA7noAAADCklEQVQ4T42TaUhUURiGp0xzK1HTINrc00yz
+        1EnTMtfUGItS8YclRhAJ6o/EJW1cAjOp3CEGJDEpMYkgR81RsqgYncQlTUfTMpd05mraOCP14+1816F/
+        QRceeO8553vOd++5VzBzu0jArs0MA8aW/8BQD63fxBAYfC4Uv/p6qwBfioh8TBWJNyhkFNzEJE8eJvMZ
+        4jx8FudiNDenm9WSUGBIE9oP7Rso9PC5TU8rtL2EFFp5C89oThZYrREJjJQ3sqHtacHS40oMZqdDYu+B
+        jvMX+HtCFhsLiZ0HBjLTwD0qB1dfho8Z10lgTIKtI5kZWHv3nC1IRV1EPGRSBZ5czUHrGRHaRDF8lrX0
+        oi48Hv0ZKVDX3UN/ajoJTEhg3H8tBZruZkj2umFSOQvVkhbKKQ6NqQU8oyzPqzWYGJuFZI8bVLWlkF++
+        QgJTEpi8PnOWtVrBWo1DT8l9aLS/oV7RYewrh7EvHBZ/6LC69oufk7FHm85KRntIJAnMSGAqC43C9/tZ
+        +JaZhI7oaLwvKcfCsg4LrJPvywxOh7fFZXgZGYmptAQoE0Lwwj+YBOYkMJMGhmG2KBUTF0+j9bgf2sV3
+        WMtazKnXMKvSMLRoyyuB1E+IsQtB+HQuEM+OBpBgGwnMn/sGYTrnClp9vNCcno+hcRVmFjXgVnXgVtYx
+        vaDBgHIRT9PEkHp5YDjSB43uQhJsJ8G2Jk8/vrUGexeo59WYUa1haXUdA+VVPBuSn1DNqdFg54KBYE/U
+        Ox8lgQUJtje4+mA8WQRFTCg6E5OwznHoKymFLOAYOhiUaawz8RLkEYHo83dF7b5DJLAkgcVDOy98igvB
+        cLQQvdEn0eRyAF0BvhiJOYFhUSC6/H34MXnYcfSf8oTiiAMe7HIlgRUvkOw+iKEotpPQGYPBh9mLCsbH
+        cF8ohI5QeDtiKNQbI6IAtrMb5J77IXffi2obp78Cs7u2Tm9qdjqjxtYF1bbOqLIhnDawdkSllSMqeBxQ
+        YemAckaxhd1bVssfI/2W9EGQzVrPjn9go4cyO0KBwR+nGRqWKfsCHQAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="btnexit.Text" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="frmSetUserLogIn.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="frmSetUserLogIn.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="frmSetUserLogIn.Appearance.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="frmSetUserLogIn.Appearance.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Set Permission Menu</value>
+  </data>
+</root>

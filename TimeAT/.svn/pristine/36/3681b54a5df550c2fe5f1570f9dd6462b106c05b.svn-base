@@ -1,0 +1,183 @@
+﻿Imports System.Data
+Imports System.Data.SqlClient
+
+Public Class SearchData
+    Public Shared Sub LoadCompany(ByVal Control As DevComponents.DotNetBar.Controls.ComboBoxEx, ByVal All As Boolean)
+        Dim Da As New SqlDataAdapter
+        Dim Ds As New DataSet
+        Dim strSQL As String
+        strSQL = "Select CompanyName From Company_Sub "
+        Da = New SqlDataAdapter(strSQL, Conn)
+        Da.Fill(Ds, "Data")
+        With Ds.Tables("Data")
+            Control.Items.Clear()
+            Control.Items.Add("ทั้งหมด")
+
+            Dim I As Integer
+            For I = 0 To .Rows.Count - 1
+                Control.Items.Add(.Rows(I).Item("CompanyName"))
+            Next
+            Ds.Clear()
+            Control.SelectedIndex = 0
+        End With
+    End Sub
+
+    Public Shared Sub LoadDivision(ByVal Control As DevComponents.DotNetBar.Controls.ComboBoxEx, ByVal All As Boolean, ByVal CompanyId As String)
+        Dim Da As SqlDataAdapter
+        Dim Ds As New DataSet
+        Dim strSQL As String = ""
+        strSQL = "select DivId,Division " & _
+                " From Division "
+
+        If CompanyId.Trim <> "" Then
+            strSQL &= " Where DivId In (Select DivId From Emp Where WorkStatus = 'W' and CompanyId = '" & CompanyId.Trim & "')"
+        End If
+
+        strSQL &= " Order By Division"
+
+        Da = New SqlDataAdapter(strSQL, Conn)
+        Da.Fill(Ds, "data")
+        With Ds.Tables("data")
+            Control.Items.Clear()
+            If All = True Then
+                Control.Items.Add("(ทุกฝ่าย)")
+            End If
+
+            For Each dr As DataRow In .Rows
+                Control.Items.Add(dr("Division"))
+            Next
+            Control.SelectedIndex = 0
+        End With
+    End Sub
+
+    Public Shared Sub LoadDepartment(ByVal Control As DevComponents.DotNetBar.Controls.ComboBoxEx, ByVal All As Boolean, ByVal CompanyId As String)
+        Dim Da As SqlDataAdapter
+        Dim Ds As New DataSet
+        Dim strSQL As String = ""
+        strSQL = "select Department " & _
+                " From Department "
+        If CompanyId.Trim <> "" Then
+            strSQL &= " Where DeptId In (Select DeptId From Emp Where WorkStatus = 'W' and CompanyId = '" & CompanyId.Trim & "')"
+        End If
+        strSQL &= " Order By Department"
+
+        Da = New SqlDataAdapter(strSQL, Conn)
+        Da.Fill(Ds, "data")
+        With Ds.Tables("data")
+            Control.Items.Clear()
+
+            If All = True Then
+                Control.Items.Add("(ทุกแผนก)")
+            End If
+
+            For Each dr As DataRow In .Rows
+                Control.Items.Add(dr("Department"))
+            Next
+            Control.SelectedIndex = 0
+        End With
+    End Sub
+
+    Public Shared Sub LoadSection(ByVal Control As DevComponents.DotNetBar.Controls.ComboBoxEx, ByVal All As Boolean, ByVal CompanyId As String)
+        Dim Da As SqlDataAdapter
+        Dim Ds As New DataSet
+        Dim strSQL As String = ""
+        strSQL = "select Section " & _
+                " From Section "
+        If CompanyId.Trim <> "" Then
+            strSQL &= " Where SecId In (Select SecId From Emp Where WorkStatus = 'W' and CompanyId = '" & CompanyId.Trim & "')"
+        End If
+        strSQL &= " Order By Section"
+
+        Da = New SqlDataAdapter(strSQL, Conn)
+        Da.Fill(Ds, "data")
+        With Ds.Tables("data")
+            Control.Items.Clear()
+
+            If All = True Then
+                Control.Items.Add("(ทุกส่วน)")
+            End If
+
+            For Each dr As DataRow In .Rows
+                Control.Items.Add(dr("Section"))
+            Next
+            Control.SelectedIndex = 0
+        End With
+    End Sub
+
+    Public Shared Sub LoadPosition(ByVal Control As DevComponents.DotNetBar.Controls.ComboBoxEx, ByVal All As Boolean, ByVal CompanyId As String)
+        Dim Da As SqlDataAdapter
+        Dim Ds As New DataSet
+        Dim strSQL As String = ""
+        strSQL = "select Position " & _
+                " From Emp "
+        If CompanyId.Trim <> "" Then
+            strSQL &= " Where Position In (Select LTrim(RTrim(Position)) From Emp Where WorkStatus = 'W' and CompanyId = '" & CompanyId.Trim & "')"
+        End If
+        strSQL &= " Group By Position " & _
+                " Order By Position"
+
+        Da = New SqlDataAdapter(strSQL, Conn)
+        Da.Fill(Ds, "data")
+        With Ds.Tables("data")
+            Control.Items.Clear()
+
+            If All = True Then
+                Control.Items.Add("(ทุกตำแหน่ง)")
+            End If
+
+            For Each dr As DataRow In .Rows
+                Control.Items.Add(dr("Position"))
+            Next
+            Control.SelectedIndex = 0
+        End With
+    End Sub
+
+    Public Shared Sub LoadEmpGroup(ByVal Control As DevComponents.DotNetBar.Controls.ComboBoxEx, ByVal All As Boolean, ByVal CompanyId As String)
+        Dim Da As SqlDataAdapter
+        Dim Ds As New DataSet
+        Dim strSQL As String = ""
+        strSQL = "select GroupName " & _
+                " From EmpGroup "
+        If CompanyId.Trim <> "" Then
+            strSQL &= " Where GroupId In (Select GroupId From Emp Where WorkStatus = 'W' and CompanyId = '" & CompanyId.Trim & "')"
+        End If
+        strSQL &= " Order By GroupName"
+
+        Da = New SqlDataAdapter(strSQL, Conn)
+        Da.Fill(Ds, "data")
+        With Ds.Tables("data")
+            Control.Items.Clear()
+            Control.Items.Add("(ทุกกลุ่ม)")
+
+            For Each dr As DataRow In .Rows
+                Control.Items.Add(dr("GroupName"))
+            Next
+            Control.SelectedIndex = 0
+        End With
+    End Sub
+
+
+    Public Shared Sub LoadBroker(ByVal Control As DevComponents.DotNetBar.Controls.ComboBoxEx, ByVal All As Boolean, ByVal CompanyId As String)
+        Dim Da As SqlDataAdapter
+        Dim Ds As New DataSet
+        Dim strSQL As String = ""
+        strSQL = "Select BrokerId,BrokerName " & _
+                " From BrokerGroup "
+        If CompanyId.Trim <> "" Then
+            strSQL &= " Where BrokerId In (Select BrokerId From Emp Where WorkStatus = 'W' and CompanyId = '" & CompanyId.Trim & "')"
+        End If
+        strSQL &= " Order By BrokerName"
+
+        Da = New SqlDataAdapter(strSQL, Conn)
+        Da.Fill(Ds, "data")
+        With Ds.Tables("data")
+            Control.Items.Clear()
+            Control.Items.Add("(ทุกสายรถ)")
+
+            For Each dr As DataRow In .Rows
+                Control.Items.Add(dr("BrokerName"))
+            Next
+            Control.SelectedIndex = 0
+        End With
+    End Sub
+End Class

@@ -1,0 +1,557 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="txtDateStart.Location" type="System.Drawing.Point, System.Drawing">
+    <value>124, 7</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="GroupPanel1.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="cboSection.Size" type="System.Drawing.Size, System.Drawing">
+    <value>256, 20</value>
+  </data>
+  <data name="&gt;&gt;btnExit.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;LabelX3.Parent" xml:space="preserve">
+    <value>GroupPanel1</value>
+  </data>
+  <data name="LabelX2.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;LabelX1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="LabelX3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>110, 20</value>
+  </data>
+  <data name="&gt;&gt;LabelX6.Name" xml:space="preserve">
+    <value>LabelX6</value>
+  </data>
+  <data name="&gt;&gt;LabelX5.Parent" xml:space="preserve">
+    <value>GroupPanel1</value>
+  </data>
+  <data name="&gt;&gt;btnExit.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="LabelX5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 28</value>
+  </data>
+  <data name="GroupPanel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 33</value>
+  </data>
+  <data name="LabelX4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>110, 20</value>
+  </data>
+  <data name="btnReport.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 191</value>
+  </data>
+  <data name="btnExit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>221, 191</value>
+  </data>
+  <data name="LabelX1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 7</value>
+  </data>
+  <data name="txtDateStart.ButtonDropDown.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;txtDateStart.Type" xml:space="preserve">
+    <value>DevComponents.Editors.DateTimeAdv.DateTimeInput, DevComponents.DotNetBar2, Version=10.0.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b</value>
+  </data>
+  <data name="&gt;&gt;LabelX5.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=10.0.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b</value>
+  </data>
+  <data name="btnExit.Text" xml:space="preserve">
+    <value>ออก</value>
+  </data>
+  <data name="txtDateStart.MonthCalendar.AnnuallyMarkedDates" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>AAEAAAD/////AQAAAAAAAAAPAQAAAAAAAAANCw==</value>
+  </data>
+  <data name="btnExit.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="LabelX5.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;cboDivision.Parent" xml:space="preserve">
+    <value>GroupPanel1</value>
+  </data>
+  <data name="cboDepartment.Location" type="System.Drawing.Point, System.Drawing">
+    <value>119, 54</value>
+  </data>
+  <data name="LabelX4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 54</value>
+  </data>
+  <data name="LabelX1.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="txtDateStart.MonthCalendar.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;cboDepartment.Name" xml:space="preserve">
+    <value>cboDepartment</value>
+  </data>
+  <data name="&gt;&gt;txtDateStart.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>575, 254</value>
+  </data>
+  <data name="&gt;&gt;LabelX4.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=10.0.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b</value>
+  </data>
+  <data name="cboSection.Location" type="System.Drawing.Point, System.Drawing">
+    <value>119, 80</value>
+  </data>
+  <data name="&gt;&gt;GroupPanel1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="LabelX1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>116, 20</value>
+  </data>
+  <data name="cboCompany.ItemHeight" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;LabelX1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="txtDateStart.ButtonCustom2.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtDateStart.ButtonCustom2.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtDateStart.ButtonFreeText.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;GroupPanel1.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.GroupPanel, DevComponents.DotNetBar2, Version=10.0.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b</value>
+  </data>
+  <data name="btnReport.Text" xml:space="preserve">
+    <value>รายงาน</value>
+  </data>
+  <data name="cboCompany.Location" type="System.Drawing.Point, System.Drawing">
+    <value>119, 3</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>ใบรายงานค่าแรง รายวัน</value>
+  </data>
+  <data name="&gt;&gt;btnExit.Name" xml:space="preserve">
+    <value>btnExit</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LabelX4.Name" xml:space="preserve">
+    <value>LabelX4</value>
+  </data>
+  <data name="&gt;&gt;cboEmpGroup.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="cboDivision.ItemHeight" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="&gt;&gt;LabelX2.Parent" xml:space="preserve">
+    <value>GroupPanel1</value>
+  </data>
+  <data name="GroupPanel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>570, 152</value>
+  </data>
+  <data name="txtDateStart.ButtonClear.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;cboDepartment.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="cboEmpGroup.Size" type="System.Drawing.Size, System.Drawing">
+    <value>256, 20</value>
+  </data>
+  <data name="txtDateStart.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;LabelX2.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=10.0.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b</value>
+  </data>
+  <data name="cboDepartment.Size" type="System.Drawing.Size, System.Drawing">
+    <value>256, 20</value>
+  </data>
+  <data name="cboEmpGroup.Location" type="System.Drawing.Point, System.Drawing">
+    <value>119, 106</value>
+  </data>
+  <data name="cboDivision.Location" type="System.Drawing.Point, System.Drawing">
+    <value>119, 28</value>
+  </data>
+  <data name="&gt;&gt;LabelX2.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="btnReport.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;LabelX5.Name" xml:space="preserve">
+    <value>LabelX5</value>
+  </data>
+  <data name="LabelX6.Text" xml:space="preserve">
+    <value>กลุ่ม : </value>
+  </data>
+  <data name="txtDateStart.MonthCalendar.Category" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cboCompany.Size" type="System.Drawing.Size, System.Drawing">
+    <value>256, 20</value>
+  </data>
+  <data name="txtDateStart.Size" type="System.Drawing.Size, System.Drawing">
+    <value>96, 20</value>
+  </data>
+  <data name="cboDepartment.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="txtDateStart.ButtonDropDown.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;btnReport.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;LabelX5.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="txtDateStart.MonthCalendar.Tooltip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;LabelX3.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;LabelX4.Parent" xml:space="preserve">
+    <value>GroupPanel1</value>
+  </data>
+  <data name="LabelX1.Text" xml:space="preserve">
+    <value>แสดงข้อมูลระหว่างวันที่ : </value>
+  </data>
+  <data name="cboEmpGroup.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="LabelX6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 106</value>
+  </data>
+  <data name="&gt;&gt;txtDateStart.Name" xml:space="preserve">
+    <value>txtDateStart</value>
+  </data>
+  <data name="&gt;&gt;cboDivision.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.ComboBoxEx, DevComponents.DotNetBar2, Version=10.0.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b</value>
+  </data>
+  <data name="cboCompany.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="LabelX3.Text" xml:space="preserve">
+    <value>หน่วยงาน : </value>
+  </data>
+  <data name="&gt;&gt;cboSection.Name" xml:space="preserve">
+    <value>cboSection</value>
+  </data>
+  <data name="&gt;&gt;LabelX2.Name" xml:space="preserve">
+    <value>LabelX2</value>
+  </data>
+  <data name="LabelX4.Text" xml:space="preserve">
+    <value>แผนก : </value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>frmRPTSumaryWagePerDay</value>
+  </data>
+  <data name="LabelX3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 80</value>
+  </data>
+  <data name="cboEmpGroup.ItemHeight" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="txtDateStart.MonthCalendar.MonthlyMarkedDates" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>AAEAAAD/////AQAAAAAAAAAPAQAAAAAAAAANCw==</value>
+  </data>
+  <data name="&gt;&gt;btnReport.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=10.0.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b</value>
+  </data>
+  <data name="&gt;&gt;cboCompany.Parent" xml:space="preserve">
+    <value>GroupPanel1</value>
+  </data>
+  <data name="LabelX2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>110, 20</value>
+  </data>
+  <data name="btnExit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>212, 58</value>
+  </data>
+  <data name="LabelX6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>110, 20</value>
+  </data>
+  <data name="btnReport.Size" type="System.Drawing.Size, System.Drawing">
+    <value>212, 58</value>
+  </data>
+  <data name="txtDateStart.ButtonFreeText.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="LabelX6.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="cboSection.ItemHeight" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="cboDivision.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;LabelX1.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=10.0.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b</value>
+  </data>
+  <data name="&gt;&gt;GroupPanel1.Name" xml:space="preserve">
+    <value>GroupPanel1</value>
+  </data>
+  <data name="txtDateStart.MonthCalendar.Tag" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtDateStart.MonthCalendar.WeeklyMarkedDays" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>AAEAAAD/////AQAAAAAAAAAHAQAAAAABAAAAAAAAAAMQU3lzdGVtLkRheU9mV2Vlaws=</value>
+  </data>
+  <data name="&gt;&gt;cboCompany.Name" xml:space="preserve">
+    <value>cboCompany</value>
+  </data>
+  <data name="LabelX5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>110, 20</value>
+  </data>
+  <data name="&gt;&gt;btnReport.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="cboDepartment.ItemHeight" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;LabelX3.Name" xml:space="preserve">
+    <value>LabelX3</value>
+  </data>
+  <data name="&gt;&gt;LabelX3.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=10.0.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b</value>
+  </data>
+  <data name="&gt;&gt;LabelX6.Parent" xml:space="preserve">
+    <value>GroupPanel1</value>
+  </data>
+  <data name="GroupPanel1.Text" xml:space="preserve">
+    <value>แสดงตาม</value>
+  </data>
+  <data name="LabelX2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="&gt;&gt;cboCompany.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.ComboBoxEx, DevComponents.DotNetBar2, Version=10.0.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b</value>
+  </data>
+  <data name="LabelX4.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;cboDepartment.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.ComboBoxEx, DevComponents.DotNetBar2, Version=10.0.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b</value>
+  </data>
+  <data name="&gt;&gt;btnReport.Name" xml:space="preserve">
+    <value>btnReport</value>
+  </data>
+  <data name="txtDateStart.ButtonCustom.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;btnExit.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=10.0.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b</value>
+  </data>
+  <data name="&gt;&gt;GroupPanel1.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;LabelX6.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=10.0.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b</value>
+  </data>
+  <data name="&gt;&gt;LabelX6.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;cboEmpGroup.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.ComboBoxEx, DevComponents.DotNetBar2, Version=10.0.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b</value>
+  </data>
+  <data name="&gt;&gt;cboDivision.Name" xml:space="preserve">
+    <value>cboDivision</value>
+  </data>
+  <data name="txtDateStart.CustomFormat" xml:space="preserve">
+    <value>dd/MM/yyyy</value>
+  </data>
+  <data name="&gt;&gt;cboDivision.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="cboDivision.Size" type="System.Drawing.Size, System.Drawing">
+    <value>256, 20</value>
+  </data>
+  <data name="cboSection.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="txtDateStart.MonthCalendar.MarkedDates" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>AAEAAAD/////AQAAAAAAAAAPAQAAAAAAAAANCw==</value>
+  </data>
+  <data name="&gt;&gt;cboSection.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="txtDateStart.ButtonCustom.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="LabelX3.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="LabelX2.Text" xml:space="preserve">
+    <value>บริษัท</value>
+  </data>
+  <data name="&gt;&gt;cboCompany.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;LabelX1.Name" xml:space="preserve">
+    <value>LabelX1</value>
+  </data>
+  <data name="&gt;&gt;cboEmpGroup.Parent" xml:space="preserve">
+    <value>GroupPanel1</value>
+  </data>
+  <data name="&gt;&gt;cboSection.Parent" xml:space="preserve">
+    <value>GroupPanel1</value>
+  </data>
+  <data name="&gt;&gt;cboEmpGroup.Name" xml:space="preserve">
+    <value>cboEmpGroup</value>
+  </data>
+  <data name="txtDateStart.ButtonClear.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtDateStart.MonthCalendar.Description" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;cboDepartment.Parent" xml:space="preserve">
+    <value>GroupPanel1</value>
+  </data>
+  <data name="&gt;&gt;cboSection.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.ComboBoxEx, DevComponents.DotNetBar2, Version=10.0.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b</value>
+  </data>
+  <data name="LabelX5.Text" xml:space="preserve">
+    <value>ฝ่าย : </value>
+  </data>
+  <data name="&gt;&gt;txtDateStart.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;LabelX4.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+</root>

@@ -1,0 +1,274 @@
+Imports System.Data
+Imports System.Data.SqlClient
+
+Public Class frmMainConfig
+
+    Private Sub frmMainConfig_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        cboGetText.SelectedIndex = 0
+        cboOtRate.SelectedItem = 1.5
+        Call LoadDATA()
+    End Sub
+
+    Private Sub btnSave_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSave.Click
+        Dim strSQL As String
+        Dim dCmd As New SqlCommand
+
+        Dim Late As String = "N"
+        Dim OT As String = "N"
+
+        If rdOT_PayHour.Checked = True Then
+            OT = "N"
+        ElseIf rdOT_PayCash.Checked = True Then
+            OT = "C"
+        End If
+
+        If IsNumeric(txtOtDeduc.Text.Trim) = False Then txtOtDeduc.Text = "0"
+
+        If rdLate_ByWage.Checked = True Then
+            Late = "N"
+        ElseIf rdLate_ByConfig.Checked = True Then
+            Late = "C"
+        End If
+
+        If IsNumeric(txtStartDay.Text) = False Then
+            MsgBox("กรุณาป้อนวันที่เป็นตัวเลขให้ถูกต้องด้วย", MsgBoxStyle.Information, Me.Text)
+            txtStartDay.Focus()
+            Exit Sub
+        End If
+
+        If Not (CInt(txtStartDay.Text) > 0 And CInt(txtEndDay.Text) <= 28) Then
+            MsgBox("วันที่เริ่มควรป้อนได้ตั้งแต่วันที่ 1-28 เท่านั้น", MsgBoxStyle.Information, Me.Text)
+            txtStartDay.Focus()
+            Exit Sub
+        End If
+
+        If IsNumeric(txtEndDay.Text) = False Then
+            MsgBox("กรุณาป้อนวันที่เป็นตัวเลขให้ถูกต้องด้วย", MsgBoxStyle.Information, Me.Text)
+            txtEndDay.Focus()
+            Exit Sub
+        End If
+
+        If chkEndMonth.Checked = False Then
+            If Not (CInt(txtEndDay.Text) > 0 And CInt(txtEndDay.Text) <= 28) Then
+                MsgBox("วันที่เริ่มควรป้อนได้ตั้งแต่วันที่ 1-28 เท่านั้น" & Chr(10) & _
+                        "*** ถ้าต้องการสิ้นเดือนก็ติ๊กที่ ถึงสิ้นเดือน แทน", MsgBoxStyle.Information, Me.Text)
+                txtEndDay.Focus()
+                Exit Sub
+            End If
+        End If
+
+        If cboGetText.SelectedIndex = -1 Then
+            MsgBox("กรุณาเลือกรูปแบบการ GetText ด้วย", MsgBoxStyle.Information, Me.Text)
+            cboGetText.Focus()
+            Exit Sub
+        End If
+
+        If IsNumeric(cboOtRate.Text) = False Then
+            cboOtRate.SelectedItem = 1
+        End If
+
+        If IsNumeric(txtOtFixedBathPerHour.Text) = False Then
+            txtOtFixedBathPerHour.Text = 0
+        End If
+
+        If IsNumeric(txtOtFixedBathPerPeriod.Text) = False Then
+            txtOtFixedBathPerPeriod.Text = 0
+        End If
+
+        Dim Tn As SqlTransaction
+        Tn = Conn.BeginTransaction
+        dCmd.Transaction = Tn
+        Try
+            strSQL = "Delete From MainConfig"
+            dCmd.Connection = Conn
+            dCmd.CommandText = strSQL
+            dCmd.ExecuteNonQuery()
+
+            strSQL = "Insert Into MainConfig(OT,OtDeduc,LATE,DayST,DaySp," & _
+                            " PreviousM,NextM,EndM,GetText,HaftDay_M,HaftDay_A," & _
+                            " ViewCompany,OtFixedRate,OtFixedBathPerHour,OtFixedBathPerPeriod) " & _
+                            " Values('" & OT.Trim & "'," & txtOtDeduc.Text & "," & _
+                                " '" & Late.Trim & "'," & _
+                                " '" & Format(CInt(txtStartDay.Text), "00") & "','" & Format(CInt(txtEndDay.Text), "00") & "'," & _
+                                " " & IIf(chkPreviousMonth.Checked, 1, 0) & "," & _
+                                " " & IIf(chkNextMonth.Checked, 1, 0) & "," & _
+                                " " & IIf(chkEndMonth.Checked, 1, 0) & "," & _
+                                " " & cboGetText.SelectedIndex + 1 & "," & _
+                                " " & txtHaftDay_M.Text & "," & _
+                                " " & txtHaftDay_A.Text & "," & _
+                                " " & IIf(rdAllCompany.Checked, 0, 1) & "," & _
+                                " " & cboOtRate.Text.Trim & "," & _
+                                " " & txtOtFixedBathPerHour.Text & "," & _
+                                " " & txtOtFixedBathPerPeriod.Text & ")"
+            dCmd.Connection = Conn
+            dCmd.CommandText = strSQL
+            dCmd.ExecuteNonQuery()
+            Tn.Commit()
+        Catch ex As Exception
+            Tn.Rollback()
+            MsgBox(ex.Message, MsgBoxStyle.Information, Me.Text)
+            Exit Sub
+        End Try
+        MsgBox("บันทึกข้อมูลเรียบร้อยแล้ว", MsgBoxStyle.Information, Me.Text)
+    End Sub
+
+    Private Sub LoadDATA()
+        Dim Da As New SqlDataAdapter
+        Dim Ds As New DataSet
+        Dim strSQL As String
+        strSQL = "Select * From MainConfig"
+        Da = New SqlDataAdapter(strSQL, Conn)
+        Da.Fill(Ds, "data")
+
+        With Ds.Tables("data")
+            If .Rows.Count = 0 Then
+                rdOT_PayHour.Checked = True
+                rdLate_ByWage.Checked = True
+                Exit Sub
+            End If
+
+
+            Dim Dr As DataRow = .Rows(0)
+            Select Case Dr("OT").ToString
+                Case "C" ' By Config
+                    rdOT_PayCash.Checked = True
+                Case Else
+                    rdOT_PayHour.Checked = True
+            End Select
+
+            Select Case Dr("LATE").ToString
+                Case "C"
+                    rdLate_ByConfig.Checked = True
+                Case Else
+                    rdLate_ByWage.Checked = True
+            End Select
+
+            txtOtDeduc.Text = Dr("OtDeduc")
+
+            txtStartDay.Text = Dr("DayST")
+            txtEndDay.Text = Dr("DaySP")
+            chkPreviousMonth.Checked = Dr("PreviousM")
+            chkNextMonth.Checked = Dr("NextM")
+            chkEndMonth.Checked = Dr("EndM")
+
+            txtHaftDay_M.Text = Dr("HaftDay_M")
+            txtHaftDay_A.Text = Dr("HaftDay_A")
+
+            cboGetText.SelectedIndex = Dr("GetText") - 1
+            'OtFixedRate, OtFixedBathPerHour
+
+            If IsDBNull(Dr("OtFixedRate")) = True Then
+                cboOtRate.Text = 1
+            Else
+                cboOtRate.Text = Replace(Format(Dr("OtFixedRate"), "#.0"), ".0", "")
+            End If
+
+            If IsDBNull(Dr("OtFixedBathPerHour")) = True Then
+                txtOtFixedBathPerHour.Text = "0"
+            Else
+                txtOtFixedBathPerHour.Text = Dr("OtFixedBathPerHour")
+            End If
+
+            If IsDBNull(Dr("OtFixedBathPerPeriod")) = True Then
+                txtOtFixedBathPerPeriod.Text = "0"
+            Else
+                txtOtFixedBathPerPeriod.Text = Dr("OtFixedBathPerPeriod")
+            End If
+        End With
+    End Sub
+
+    Private Sub btnExit_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnExit.Click
+        Me.Close()
+    End Sub
+
+    Private Sub chkPreviousMonth_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles chkPreviousMonth.CheckedChanged
+        If chkPreviousMonth.Checked = True Then
+            chkNextMonth.Checked = False
+            chkEndMonth.Checked = False
+        End If
+    End Sub
+
+    Private Sub chkNextMonth_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles chkNextMonth.CheckedChanged
+        If chkNextMonth.Checked = True Then
+            chkPreviousMonth.Checked = False
+            chkEndMonth.Checked = False
+        End If
+    End Sub
+
+    Private Sub chkEndMonth_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles chkEndMonth.CheckedChanged
+        If chkEndMonth.Checked = True Then
+            chkPreviousMonth.Checked = False
+            chkNextMonth.Checked = False
+
+            txtStartDay.Text = "1"
+            txtEndDay.Text = "0"
+        End If
+    End Sub
+
+    Private Sub cboGetText_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cboGetText.SelectedIndexChanged
+        Select Case cboGetText.SelectedIndex
+            Case 0
+                txtTextExample.Text = "20364            201002221348F1001"
+                txtDescription.Text = "[20364(รหัสพนง. Barcode) ][20100222]วันที่ [1348]เวลา F1001"
+            Case 1
+                txtTextExample.Text = "31201008302022010000000000130000"
+                txtDescription.Text = "31[20100830]วันที่[2022]เวลา 0100000000[0013]รหัส Barcode 0000"
+            Case 2
+                txtTextExample.Text = "K011011040917010100042"
+                txtDescription.Text = "K01[10]ปี[11]เดือน[04]วัน[0917]เวลา010[100042]รหัสพนง. Barcode"
+            Case 3
+                txtTextExample.Text = " OUR COMPANY 10014          10014 21/04/2011 07:28:00  C/In     102            "
+                txtDescription.Text = " OUR COMPANY 10014          10014[รหัสบัตร] 21/04/2011 07:28:00[วันที่ + เวลา]  C/In     102            "
+            Case 4
+                txtTextExample.Text = "00001	01	    02453469	35	    0	    2011/08/10 11:56:05"
+                txtDescription.Text = "No.	    MchNo	EnrNo		Verify	InOut	DateTime"
+            Case 5
+                '01354074         T10831111147900
+                txtTextExample.Text = "01354074         T10831111147900"
+                txtDescription.Text = "01 354074[รหัสพนักงาน]         T1 [08เดือน31วัน11ปี][1147เวลา]900"
+            Case 6 ' แบบที่ 7
+                '04156519            201108151039F2001
+                'PI-053            201110180552F1002
+                txtTextExample.Text = "PI-053            201110180552F1002"
+                txtDescription.Text = "PI-053[รหัสพนักงาน]         วันที่[20111018]เวลา[0552]F1002"
+            Case 7
+                txtTextExample.Text = "117771120201153801"
+                txtDescription.Text = "117771[รหัสพนักงาน] 120201[วันที่] 1538[เวลา] 01"
+            Case 8
+                txtTextExample.Text = "31201201040739000200PSR.00170001"
+                txtDescription.Text = "31 20120104[วันที่] 0739[เวลา] 000200 PSR.0017[รหัสพนักงาน] 0001"
+            Case 9 ' แบบที่ 10
+                '01	27-03-2012	15:44:49	'058823	
+                txtTextExample.Text = "01	27-03-2012	15:44:49	'058823	"
+                txtDescription.Text = "01	27-03-2012[วันที่]	15:44:49[เวลา]	'058823[รหัส]	"
+            Case 10 ' แบบที่ 11
+                txtTextExample.Text = "        0013448176                 2012/04/20  10:38"
+                txtDescription.Text = "        0013448176[รหัสBarcode]                 2012/04/20  10:38[วันที่เวลา]"
+            Case 11 ' แบบที่ 12
+                txtTextExample.Text = "53-2-131            201211230711F1001"
+                txtDescription.Text = "53-2-131[รหัสพนักงาน]            20121123[วันที่]0711[เวลา]F1001"
+            Case Else
+                txtTextExample.Text = ""
+        End Select
+    End Sub
+
+    Private Sub lblTextExample_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+
+    End Sub
+
+    Private Sub TextBox1_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtOtDeduc.TextChanged, txtOtFixedBathPerHour.TextChanged, txtOtFixedBathPerPeriod.TextChanged
+
+    End Sub
+
+    Private Sub Label6_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label6.Click, Label12.Click, Label11.Click, Label10.Click, Label14.Click, Label13.Click
+
+    End Sub
+
+    Private Sub Label8_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label8.Click
+
+    End Sub
+
+    Private Sub GroupBox6_Enter(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles GroupBox6.Enter
+
+    End Sub
+End Class

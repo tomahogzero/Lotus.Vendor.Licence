@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="mnuImportData.Text" xml:space="preserve">
+    <value>Imported Data</value>
+  </data>
+  <data name="mnuPermissionTimeAtt.Text" xml:space="preserve">
+    <value>Process Working Time</value>
+  </data>
+  <data name="mnuManageTime.Text" xml:space="preserve">
+    <value>Correct/Add Working Time</value>
+  </data>
+  <data name="mnuOvertime.Text" xml:space="preserve">
+    <value>OT Calculation</value>
+  </data>
+  <data name="mnuLateTime.Text" xml:space="preserve">
+    <value>Calculate: Arrive Late &amp; Leave Early</value>
+  </data>
+  <data name="mnuabsenceTime.Text" xml:space="preserve">
+    <value>Absence Calculation</value>
+  </data>
+  <data name="mnuInputLeaveData.Text" xml:space="preserve">
+    <value>Input Leave Data</value>
+  </data>
+  <data name="mnumodelcalculations.Text" xml:space="preserve">
+    <value>Config. Calculation Type</value>
+  </data>
+  <data name="mnuworkinggroup.Text" xml:space="preserve">
+    <value>Config. Group of Working Time - Normal/by day</value>
+  </data>
+  <data name="mnuDeterminedTime.Text" xml:space="preserve">
+    <value>Config. Working Time </value>
+  </data>
+  <data name="mnuDeterminedTimeEmpByOne.Text" xml:space="preserve">
+    <value>Config. Basic Working Time for Individual Employee</value>
+  </data>
+  <data name="mnuDeterminedTimeEmpByDate.Text" xml:space="preserve">
+    <value>Config Timing by Date</value>
+  </data>
+  <data name="mnuDeterminedTimeEmp.Text" xml:space="preserve">
+    <value>Config Timing to Employee</value>
+  </data>
+  <data name="mnuTimeWork.Text" xml:space="preserve">
+    <value>Working Time </value>
+  </data>
+  <data name="mnusetBarcode.Text" xml:space="preserve">
+    <value>Config. Barcode</value>
+  </data>
+  <data name="mnuProcessOT.Text" xml:space="preserve">
+    <value>Config. Group of employee for OT Calculation/Config. OT Calculation Type</value>
+  </data>
+  <data name="mnucalculationLate.Text" xml:space="preserve">
+    <value>Config. Group of employee - Late Attendance Calculation</value>
+  </data>
+  <data name="mnucalculationAbs.Text" xml:space="preserve">
+    <value>Config. Group of employee - Absense Calculation</value>
+  </data>
+  <data name="mnucalculationBreak.Text" xml:space="preserve">
+    <value>Config. Working time + Breaking Time</value>
+  </data>
+  <data name="mnuSetholiday.Text" xml:space="preserve">
+    <value>Config. The annual leave</value>
+  </data>
+  <data name="mnuSetLeave.Text" xml:space="preserve">
+    <value>Config. Leave data</value>
+  </data>
+  <data name="mnuSetabsenceTimeByYear.Text" xml:space="preserve">
+    <value>Config. The yearly right to leave</value>
+  </data>
+  <data name="MenuItem7.Text" xml:space="preserve">
+    <value>Config. Basic OT Condition </value>
+  </data>
+  <data name="mnusetovertimepay.Text" xml:space="preserve">
+    <value>Config. OT - Paid by Cash</value>
+  </data>
+  <data name="MenuItem2.Text" xml:space="preserve">
+    <value>Config. OT - Paid by period of time</value>
+  </data>
+  <data name="MenuItem1.Text" xml:space="preserve">
+    <value>Config. All Conditions of OT</value>
+  </data>
+  <data name="mnusetdelaytime.Text" xml:space="preserve">
+    <value>Config. Employee Group with beaking time</value>
+  </data>
+  <data name="mnusetdelayOT.Text" xml:space="preserve">
+    <value>Config. The breaking time of OT</value>
+  </data>
+  <data name="mnuSetCancelDelayOTByDay.Text" xml:space="preserve">
+    <value>Config Piece rate employee, cancel breaking time</value>
+  </data>
+  <data name="mnusetOT.Text" xml:space="preserve">
+    <value>Config. Breaking time of OT</value>
+  </data>
+  <data name="mnuOTbyDay.Text" xml:space="preserve">
+    <value>Input OT special daily deduction by Individual</value>
+  </data>
+  <data name="mnuconditionslate.Text" xml:space="preserve">
+    <value>Config. Deduction Condition of Late Attendance</value>
+  </data>
+  <data name="mnuconditionslatesomeone.Text" xml:space="preserve">
+    <value>Config. Condition of Late Attendance - in case of Single Deduction</value>
+  </data>
+  <data name="MenuItem8.Text" xml:space="preserve">
+    <value>Config. Special condition: Deduction of Late Attendance</value>
+  </data>
+  <data name="mnuconditionslatebyRate.Text" xml:space="preserve">
+    <value>Config. Condition of Late Attendance - deduction by Rate</value>
+  </data>
+  <data name="mnusetconditionsLate.Text" xml:space="preserve">
+    <value>Config. Condition of Late Attendance</value>
+  </data>
+  <data name="mnusetAllowance.Text" xml:space="preserve">
+    <value>Config. Automatic Allowance Condition</value>
+  </data>
+  <data name="mnuLinkCodePayroll.Text" xml:space="preserve">
+    <value>Config. Link Code with Payroll</value>
+  </data>
+  <data name="MenuWorkHolidaySpacial.Text" xml:space="preserve">
+    <value>Config. Special working days - Special Holidays</value>
+  </data>
+  <data name="MenuItem9.Text" xml:space="preserve">
+    <value>Config. Hours of OT Limitation</value>
+  </data>
+  <data name="mnurptTimeWork.Text" xml:space="preserve">
+    <value>Working Time Check List</value>
+  </data>
+  <data name="mnurptTimeWorkLateByOne.Text" xml:space="preserve">
+    <value>Employees' Working Time/Late Attendance Information Report</value>
+  </data>
+  <data name="mnuSumaryWagePerDay.Text" xml:space="preserve">
+    <value>Daily Wage Report</value>
+  </data>
+  <data name="mnurptEmpWorkDetail1.Text" xml:space="preserve">
+    <value>Employees' Working Time Report (Details)</value>
+  </data>
+  <data name="mnurptEmpWorkDetail2.Text" xml:space="preserve">
+    <value>Employees' Working Time Report (Type 2)</value>
+  </data>
+  <data name="mnurptEmployeework.Text" xml:space="preserve">
+    <value>Employees' Working Time Report</value>
+  </data>
+  <data name="mnurptOT.Text" xml:space="preserve">
+    <value>OT Report </value>
+  </data>
+  <data name="mnurptSumaryMonth.Text" xml:space="preserve">
+    <value>Monthly Summary Report</value>
+  </data>
+  <data name="mnurptrptSumaryMonthLateByBath.Text" xml:space="preserve">
+    <value>Monthly Summary Amount of Late Attendance - Absence (Baht) Report</value>
+  </data>
+  <data name="mnurptScheduleWorkAllEmp.Text" xml:space="preserve">
+    <value>Working Schedule of All Employees Report</value>
+  </data>
+  <data name="mnuConfigSummaryScheduleWorkAllEmp.Text" xml:space="preserve">
+    <value>Config. Column</value>
+  </data>
+  <data name="mnurptSummaryScheduleWorkAllEmp.Text" xml:space="preserve">
+    <value>Summary Employees' Working Time Report</value>
+  </data>
+  <data name="mnuSummaryScheduleWorkAllEmp.Text" xml:space="preserve">
+    <value>Summary Employees' Working Time Report</value>
+  </data>
+  <data name="mnuConfigEmpNotWork.Text" xml:space="preserve">
+    <value>Config. Column</value>
+  </data>
+  <data name="mnurptEmpNotWork.Text" xml:space="preserve">
+    <value>Employees' Absence Report</value>
+  </data>
+  <data name="mnuEmpNotWork.Text" xml:space="preserve">
+    <value>Report of Absent Employee</value>
+  </data>
+  <data name="mnurptemployeeByDate.Text" xml:space="preserve">
+    <value>Daily Time Attendance Report</value>
+  </data>
+  <data name="mnuConfogSumaryemployee.Text" xml:space="preserve">
+    <value>Config. Column</value>
+  </data>
+  <data name="mnurptSumaryemployee.Text" xml:space="preserve">
+    <value>Summary Time Attendance Report</value>
+  </data>
+  <data name="mnuSumaryemployee.Text" xml:space="preserve">
+    <value>Summary Time Attendance Report</value>
+  </data>
+  <data name="mnurptMaximumOThoursdaysweeksyear.Text" xml:space="preserve">
+    <value>Maximum OT /day/week/year Report</value>
+  </data>
+  <data name="mnurptNormalworkinghoursOTByWeek.Text" xml:space="preserve">
+    <value>Weekly Nornal Working Time + OT Hours Report</value>
+  </data>
+  <data name="mnuConfigSumaryHolidayInYears.Text" xml:space="preserve">
+    <value>Config. Column</value>
+  </data>
+  <data name="mnurptSumaryHolidayInYears.Text" xml:space="preserve">
+    <value>Summary Annual Leave Report</value>
+  </data>
+  <data name="mnuSumaryHolidayInYears.Text" xml:space="preserve">
+    <value>Summary Annual Leave Report</value>
+  </data>
+  <data name="mnuprtAllowance.Text" xml:space="preserve">
+    <value>Allowance Report</value>
+  </data>
+  <data name="mnuRptSumary.Text" xml:space="preserve">
+    <value>Summry Report</value>
+  </data>
+  <data name="mnuRptSumaryByMonth.Text" xml:space="preserve">
+    <value>Monthly Summary Report</value>
+  </data>
+  <data name="mnuRptSumaryByYear.Text" xml:space="preserve">
+    <value>Yearly Summary Report</value>
+  </data>
+  <data name="MenuItem6.Text" xml:space="preserve">
+    <value>OT Report (by duration of time)</value>
+  </data>
+  <data name="mnuReport.Text" xml:space="preserve">
+    <value>Reports</value>
+  </data>
+  <data name="mnuConfigPermission.Text" xml:space="preserve">
+    <value>Config. User and Right Authentication</value>
+  </data>
+  <data name="mnuPermission.Text" xml:space="preserve">
+    <value>Right Authentication</value>
+  </data>
+  <data name="mnuExit.Text" xml:space="preserve">
+    <value>Exit</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Program Time - Attendance V.2.0.99 LastUpdate : 15/03/2013 14:49</value>
+  </data>
+</root>

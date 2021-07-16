@@ -1,0 +1,465 @@
+Imports System.Data
+Imports System.Data.SqlClient
+
+Public Class frmLateSpaRate
+
+    Private Sub frmOTRate_Disposed(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Disposed
+        fLateSpaRate = Nothing
+    End Sub
+
+    Private Sub frmLateSpaRate_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles Me.KeyPress
+        If Asc(e.KeyChar) = 13 Then
+            'If e.KeyChar = Microsoft.VisualBasic.ChrW(Keys.Enter) Then
+            If TypeOf Me.ActiveControl Is TextBox Then
+                Dim tb As TextBox = DirectCast(Me.ActiveControl, TextBox)
+                If tb.Multiline AndAlso tb.AcceptsReturn Then
+                    e.Handled = False
+                    Exit Sub
+                End If
+            End If
+            e.Handled = True
+            Dim oform As Form = Me.FindForm
+            oform.SelectNextControl(oform.ActiveControl, True, True, True, True)
+            oform.ActiveControl.Focus()
+        End If
+    End Sub
+
+    Private Sub frmOTRate_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        Call LoadWorkingTime()
+        Call ClearData()
+        Call LoadRateOT()
+        Call LoadData()
+    End Sub
+
+    Private Sub LoadWorkingTime()
+        Dim DA As New SqlDataAdapter
+        Dim Ds As New DataSet
+        Dim strSQL As String
+        strSQL = "Select * From TimeWorkingTime"
+        DA = New SqlDataAdapter(strSQL, Conn)
+        DA.Fill(Ds, "Data")
+        With Ds.Tables("data")
+            If .Rows.Count = 0 Then
+                txtDayStart.Text = ""
+                txtDayStop.Text = ""
+                txtMidDayStart.Text = ""
+                txtMidDayStop.Text = ""
+                chkNextDay.Checked = False
+                txtTimeEndDay.Text = ""
+                chkMonDay.Checked = False
+                chkTuesday.Checked = False
+                chkWednesday.Checked = False
+                chkThursday.Checked = False
+                chkFriday.Checked = False
+                chkSaturday.Checked = False
+                chkSunday.Checked = False
+                Ds.Clear()
+                Exit Sub
+            End If
+
+            txtDayStart.Text = .Rows(0).Item("DayStart")
+            txtDayStop.Text = .Rows(0).Item("DayStop")
+
+            txtMidDayStart.Text = .Rows(0).Item("MidDayStart")
+            txtMidDayStop.Text = .Rows(0).Item("MidDayStop")
+            chkNextDay.Checked = .Rows(0).Item("NextDay")
+            txtTimeEndDay.Text = .Rows(0).Item("TimeEndDay")
+            chkMonDay.Checked = .Rows(0).Item("Monday")
+            chkTuesday.Checked = .Rows(0).Item("Tuesday")
+            chkWednesday.Checked = .Rows(0).Item("Wednesday")
+            chkThursday.Checked = .Rows(0).Item("Thursday")
+            chkFriday.Checked = .Rows(0).Item("Friday")
+            chkSaturday.Checked = .Rows(0).Item("Saturday")
+            chkSunday.Checked = .Rows(0).Item("Sunday")
+            Ds.Clear()
+        End With
+    End Sub
+
+    Private Sub btnExit_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnExit.Click
+        Me.Close()
+    End Sub
+
+    Private Sub rdWorkDay_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
+        Call LoadWorkingTime()
+        Call LoadData()
+    End Sub
+
+    Private Sub rdHoliday_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
+        Call LoadWorkingTime()
+        Call LoadData()
+    End Sub
+
+    Private Sub btnClear_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnClear.Click
+        Call ClearData()
+        Call LoadData()
+        Call EnaCmd(True, False, False)
+        txtCode.Focus()
+    End Sub
+
+    Private Sub ClearData()
+        txtCode.Text = ""
+        txtTimeOutSt.Text = ""
+        txtTimeOutSp.Text = ""
+        txtTimeSt.Text = ""
+        txtTimeSp.Text = ""
+        txtHour.Text = ""
+        txtRemark.Text = ""
+        chkRecord.Checked = False
+    End Sub
+
+    Private Sub LoadRateOT()
+        Dim Da As New SqlDataAdapter
+        Dim Ds As New DataSet
+        Dim strSQL As String
+        strSQL = "Select Multiply from OT Order By Multiply"
+        Da = New SqlDataAdapter(strSQL, Conn)
+        Da.Fill(Ds, "data")
+        With Ds.Tables("Data")
+            cboRate.Items.Clear()
+            Dim I As Integer
+            For I = 0 To .Rows.Count - 1
+                cboRate.Items.Add(.Rows(I).Item("Multiply"))
+            Next
+            Ds.Clear()
+        End With
+
+    End Sub
+
+    Private Sub btnAdd_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAdd.Click
+        If txtCode.Text.Trim = "" Then
+            MsgBox("กรุณาป้อนรหัสด้วย", MsgBoxStyle.Information, Me.Text)
+            txtCode.Focus()
+            Exit Sub
+        End If
+
+        If IsDate("2006/01/01 " & txtTimeOutSt.Text.Trim) = False Then
+            MsgBox("กรุณาป้อนเวลาให้ถูกต้องด้วย", MsgBoxStyle.Information, Me.Text)
+            txtTimeOutSt.Focus()
+            txtTimeOutSt.SelectAll()
+            Exit Sub
+        End If
+
+        If IsDate("2006/01/01 " & txtTimeOutSp.Text.Trim) = False Then
+            MsgBox("กรุณาป้อนเวลาให้ถูกต้องด้วย", MsgBoxStyle.Information, Me.Text)
+            txtTimeOutSp.Focus()
+            txtTimeOutSp.SelectAll()
+            Exit Sub
+        End If
+
+        If IsDate("2006/01/01 " & txtTimeSt.Text.Trim) = False Then
+            MsgBox("กรุณาป้อนเวลาให้ถูกต้องด้วย", MsgBoxStyle.Information, Me.Text)
+            txtTimeSt.Focus()
+            txtTimeSt.SelectAll()
+            Exit Sub
+        End If
+
+        If IsDate("2006/01/01 " & txtTimeSp.Text.Trim) = False Then
+            MsgBox("กรุณาป้อนเวลาให้ถูกต้องด้วย", MsgBoxStyle.Information, Me.Text)
+            txtTimeSp.Focus()
+            txtTimeSp.SelectAll()
+            Exit Sub
+        End If
+
+        If IsNumeric(txtHour.Text.Trim) = False Then
+            MsgBox("กรุณาป้อนตัวเลขให้ถูกต้องด้วย", MsgBoxStyle.Information, Me.Text)
+            txtHour.Focus()
+            txtHour.SelectAll()
+            Exit Sub
+        End If
+
+        If IsNumeric(cboRate.Text.Trim) = False Then
+            MsgBox("กรุณาป้อนตัวเลขให้ถูกต้องด้วย", MsgBoxStyle.Information, Me.Text)
+            cboRate.Focus()
+            cboRate.SelectAll()
+            Exit Sub
+        End If
+
+
+        Dim dCmd As New SqlCommand
+        Dim strSQL As String
+        Dim Tn As SqlTransaction
+        Tn = Conn.BeginTransaction
+        dCmd.Transaction = Tn
+        Try
+            strSQL = "Delete From TimeLateSpaRate" & _
+                    " Where Code = '" & txtCode.Text.Trim & "'"
+            dCmd.Connection = Conn
+            dCmd.CommandText = strSQL
+            dCmd.ExecuteNonQuery()
+
+            strSQL = "Insert Into TimeLateSpaRate(Code,TimeOutSt,TimeOutSp,TimeSt,TimeSp,Amt,Rate,Recording,Remark,LastUpdate) Values(" & _
+                    " '" & txtCode.Text.Trim & "'," & _
+                    " '" & txtTimeOutSt.Text.Trim & "'," & _
+                    " '" & txtTimeOutSp.Text.Trim & "'," & _
+                    " '" & txtTimeSt.Text.Trim & "'," & _
+                    " '" & txtTimeSp.Text.Trim & "'," & _
+                    " " & txtHour.Text.Trim & "," & _
+                    " " & cboRate.Text.Trim & "," & _
+                    " " & IIf(chkRecord.Checked = True, 1, 0) & "," & _
+                    " '" & txtRemark.Text.Trim & "'," & _
+                    " Getdate())"
+            dCmd.Connection = Conn
+            dCmd.CommandText = strSQL
+            dCmd.ExecuteNonQuery()
+
+            Tn.Commit()
+        Catch ex As Exception
+            Tn.Rollback()
+            MsgBox(ex.Message, MsgBoxStyle.Critical, Me.Text)
+            Exit Sub
+        End Try
+        Call btnClear_Click(Me, System.EventArgs.Empty)
+    End Sub
+
+    Private Sub btnEdit_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnEdit.Click
+        If txtCode.Text.Trim = "" Then
+            MsgBox("กรุณาป้อนรหัสด้วย", MsgBoxStyle.Information, Me.Text)
+            txtCode.Focus()
+            Exit Sub
+        End If
+
+        If IsDate("2006/01/01 " & txtTimeOutSt.Text.Trim) = False Then
+            MsgBox("กรุณาป้อนเวลาให้ถูกต้องด้วย", MsgBoxStyle.Information, Me.Text)
+            txtTimeOutSt.Focus()
+            txtTimeOutSt.SelectAll()
+            Exit Sub
+        End If
+
+        If IsDate("2006/01/01 " & txtTimeOutSp.Text.Trim) = False Then
+            MsgBox("กรุณาป้อนเวลาให้ถูกต้องด้วย", MsgBoxStyle.Information, Me.Text)
+            txtTimeOutSp.Focus()
+            txtTimeOutSp.SelectAll()
+            Exit Sub
+        End If
+
+        If IsDate("2006/01/01 " & txtTimeSt.Text.Trim) = False Then
+            MsgBox("กรุณาป้อนเวลาให้ถูกต้องด้วย", MsgBoxStyle.Information, Me.Text)
+            txtTimeSt.Focus()
+            txtTimeSt.SelectAll()
+            Exit Sub
+        End If
+
+        If IsDate("2006/01/01 " & txtTimeSp.Text.Trim) = False Then
+            MsgBox("กรุณาป้อนเวลาให้ถูกต้องด้วย", MsgBoxStyle.Information, Me.Text)
+            txtTimeSp.Focus()
+            txtTimeSp.SelectAll()
+            Exit Sub
+        End If
+
+        If IsNumeric(txtHour.Text.Trim) = False Then
+            MsgBox("กรุณาป้อนตัวเลขให้ถูกต้องด้วย", MsgBoxStyle.Information, Me.Text)
+            txtHour.Focus()
+            txtHour.SelectAll()
+            Exit Sub
+        End If
+
+        If IsNumeric(cboRate.Text.Trim) = False Then
+            MsgBox("กรุณาป้อนตัวเลขให้ถูกต้องด้วย", MsgBoxStyle.Information, Me.Text)
+            cboRate.Focus()
+            cboRate.SelectAll()
+            Exit Sub
+        End If
+
+
+        Dim dCmd As New SqlCommand
+        Dim strSQL As String
+        Dim Tn As SqlTransaction
+        Tn = Conn.BeginTransaction
+        dCmd.Transaction = Tn
+        Try
+            strSQL = "Delete From TimeLateSpaRate" & _
+                    " Where Code = '" & txtCode.Text.Trim & "'"
+            dCmd.Connection = Conn
+            dCmd.CommandText = strSQL
+            dCmd.ExecuteNonQuery()
+
+            strSQL = "Insert Into TimeLateSpaRate(Code,TimeOutSt,TimeOutSp,TimeSt,TimeSp,Amt,Rate,Recording,Remark,LastUpdate) Values(" & _
+                    " '" & txtCode.Text.Trim & "'," & _
+                    " '" & txtTimeOutSt.Text.Trim & "'," & _
+                    " '" & txtTimeOutSp.Text.Trim & "'," & _
+                    " '" & txtTimeSt.Text.Trim & "'," & _
+                    " '" & txtTimeSp.Text.Trim & "'," & _
+                    " " & txtHour.Text.Trim & "," & _
+                    " " & cboRate.Text.Trim & "," & _
+                    " " & IIf(chkRecord.Checked = True, 1, 0) & "," & _
+                    " '" & txtRemark.Text.Trim & "'," & _
+                    " Getdate())"
+            dCmd.Connection = Conn
+            dCmd.CommandText = strSQL
+            dCmd.ExecuteNonQuery()
+
+            Tn.Commit()
+        Catch ex As Exception
+            Tn.Rollback()
+            MsgBox(ex.Message, MsgBoxStyle.Critical, Me.Text)
+            Exit Sub
+        End Try
+        Call btnClear_Click(Me, System.EventArgs.Empty)
+    End Sub
+
+    Private Sub btnDelete_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnDelete.Click
+        If txtCode.Text.Trim = "" Then
+            MsgBox("กรุณาป้อนรหัสด้วย", MsgBoxStyle.Information, Me.Text)
+            txtCode.Focus()
+            Exit Sub
+        End If
+
+        Dim dCmd As New SqlCommand
+        Dim strSQL As String
+        Dim Tn As SqlTransaction
+        Tn = Conn.BeginTransaction
+        dCmd.Transaction = Tn
+        Try
+            strSQL = "Delete From TimeLateSpaRate" & _
+                    " Where Code = '" & txtCode.Text.Trim & "'"
+            dCmd.Connection = Conn
+            dCmd.CommandText = strSQL
+            dCmd.ExecuteNonQuery()
+
+            Tn.Commit()
+        Catch ex As Exception
+            Tn.Rollback()
+            MsgBox(ex.Message, MsgBoxStyle.Critical, Me.Text)
+            Exit Sub
+        End Try
+        Call btnClear_Click(Me, System.EventArgs.Empty)
+    End Sub
+
+    Private Sub LoadData()
+        Dim Da As New SqlDataAdapter
+        Dim Ds As New DataSet
+        Dim strSQL As String
+        Dim arrData() As String
+        Dim List As ListViewItem
+        strSQL = "Select Code," & _
+                        " TimeOutSt = Right(Convert(nVarchar(16),TimeOutSt,120),5)," & _
+                        " TimeOutSp = Right(Convert(nVarchar(16),TimeOutSp,120),5)," & _
+                        " TimeSt = Right(Convert(nVarchar(16),TimeSt,120),5)," & _
+                        " TimeSp = Right(Convert(nVarchar(16),TimeSp,120),5)," & _
+                        " Amt,Rate,Recording,Remark,LastUpdate" & _
+                " From TimeLateSpaRate " & _
+                " Order by dbo.fNextDayOvertime('2000/01/01' + ' ' + Right(Convert(nVarchar(16),TimeOutSt,120),5)) + ' ' + Right(Convert(nVarchar(16),TimeOutSt,120),5)," & _
+                        " dbo.fNextDayOvertime('2000/01/01' + ' ' + Right(Convert(nVarchar(16),TimeSt,120),5)) + ' ' + Right(Convert(nVarchar(16),TimeSt,120),5) "
+        Da = New SqlDataAdapter(strSQL, Conn)
+        Da.Fill(Ds, "Data")
+        With Ds.Tables("Data")
+            lstOtRate.Items.Clear()
+            Dim I As Integer
+            For I = 0 To .Rows.Count - 1
+                arrData = New String() {I + 1, _
+                                    .Rows(I).Item("Code"), _
+                                    .Rows(I).Item("TimeOutSt"), _
+                                    .Rows(I).Item("TimeOutSp"), _
+                                    .Rows(I).Item("TimeSt"), _
+                                    .Rows(I).Item("TimeSp"), _
+                                    .Rows(I).Item("Amt"), _
+                                    .Rows(I).Item("Rate"), _
+                                    IIf(.Rows(I).Item("Recording"), "/", ""), _
+                                    .Rows(I).Item("Remark"), _
+                                    .Rows(I).Item("LastUpdate")}
+                List = New ListViewItem(arrData)
+                lstOtRate.Items.Add(List)
+            Next
+            Ds.Clear()
+        End With
+    End Sub
+
+    Private Sub EnaCmd(ByVal Add As Boolean, ByVal Edit As Boolean, ByVal Delete As Boolean)
+        btnAdd.Enabled = Add
+        btnEdit.Enabled = Edit
+        btnDelete.Enabled = Delete
+    End Sub
+
+    Private Sub txtCode_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtCode.LostFocus
+        Dim Da As New SqlDataAdapter
+        Dim Ds As New DataSet
+        Dim strSQL As String
+        strSQL = "Select Code," & _
+                        " TimeOutSt = Right(Convert(nVarchar(16),TimeOutSt,120),5)," & _
+                        " TimeOutSp = Right(Convert(nVarchar(16),TimeOutSp,120),5)," & _
+                        " TimeSt = Right(Convert(nVarchar(16),TimeSt,120),5)," & _
+                        " TimeSp = Right(Convert(nVarchar(16),TimeSp,120),5)," & _
+                        " Amt,Rate,Recording,Remark,LastUpdate" & _
+                " From TimeLateSpaRate " & _
+                " Where Code = '" & txtCode.Text.Trim & "' " & _
+                " Order by Code "
+        Da = New SqlDataAdapter(strSQL, Conn)
+        Da.Fill(Ds, "Data")
+        With Ds.Tables("Data")
+            If .Rows.Count = 0 Then
+                Dim Code As String
+                Code = txtCode.Text.Trim
+                Call ClearData()
+                txtCode.Text = Code.Trim
+                Call EnaCmd(True, False, False)
+                Ds.Clear()
+                Exit Sub
+            End If
+            txtTimeOutSt.Text = .Rows(0).Item("TimeOutSt")
+            txtTimeOutSp.Text = .Rows(0).Item("TimeOutSp")
+            txtTimeSt.Text = .Rows(0).Item("TimeSt")
+            txtTimeSp.Text = .Rows(0).Item("TimeSp")
+            txtHour.Text = .Rows(0).Item("Amt")
+            cboRate.Text = .Rows(0).Item("Rate")
+            txtRemark.Text = .Rows(0).Item("Remark")
+            chkRecord.Checked = .Rows(0).Item("Recording")
+            Call EnaCmd(False, True, True)
+        End With
+    End Sub
+
+    Private Sub txtCode_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtCode.TextChanged
+
+    End Sub
+
+    Private Sub lstOtRate_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles lstOtRate.SelectedIndexChanged
+        With lstOtRate
+            If .SelectedItems.Count = 0 Then Exit Sub
+            txtCode.Text = .SelectedItems(0).SubItems(1).Text.Trim
+            txtCode_LostFocus(Me, System.EventArgs.Empty)
+        End With
+    End Sub
+
+    Private Sub btnGenScrip_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnGenScrip.Click
+        Dim FileName As String
+        'SaveFileDialog1.Filter = "All File|*.*"
+        SaveFileDialog1.Filter = "Text File|*.txt"
+        SaveFileDialog1.ShowDialog()
+        Application.DoEvents()
+        If Trim(SaveFileDialog1.FileName) = "" Then
+            FileName = ""
+            Exit Sub
+        End If
+        'txtFileName.Text = System.IO.Path.GetFileName(OpenFileDialog1.FileName)
+        FileName = SaveFileDialog1.FileName
+
+        Dim Da As New SqlDataAdapter
+        Dim Ds As New DataSet
+        Dim strSQL As String
+        Dim SQLExport As String
+
+        strSQL = "Select * from TimeLateSpaRate Order By Code"
+        Da = New SqlDataAdapter(strSQL, Conn)
+        Da.Fill(Ds, "Data")
+        With Ds.Tables("Data")
+            Dim I As Integer
+            For I = 0 To Ds.Tables("Data").Rows.Count - 1
+                Dim file As New System.IO.StreamWriter(FileName, True)
+
+                SQLExport = "Insert Into TimeLateSpaRate(Code,TimeOutSt,TimeOutSp,TimeSt,TimeSp,Amt,Rate,Remark,LastUpdate) Values(" & _
+                            " '" & .Rows(I).Item("Code") & "'," & _
+                            " '" & .Rows(I).Item("TimeOutSt") & "'," & _
+                            " '" & .Rows(I).Item("TimeOutSp") & "'," & _
+                            " '" & .Rows(I).Item("TimeSt") & "'," & _
+                            " '" & .Rows(I).Item("TimeSp") & "'," & _
+                            " " & .Rows(I).Item("Amt") & "," & _
+                            " " & .Rows(I).Item("Rate") & "," & _
+                            " '" & .Rows(I).Item("Remark") & "'," & _
+                            " Getdate())"
+
+                file.WriteLine(SQLExport)
+                file.Close()
+            Next
+            MsgBox("Gen Scrip Complete", MsgBoxStyle.Information, "Gen Scrip")
+        End With
+    End Sub
+End Class

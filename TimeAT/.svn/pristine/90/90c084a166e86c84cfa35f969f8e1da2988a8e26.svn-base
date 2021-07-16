@@ -1,0 +1,748 @@
+Imports System.Data
+Imports System.Data.SqlClient
+
+Public Class frmEmpSetTimeByDate
+
+    Dim lblDay As New ArrayList
+
+    Private Sub frmEmpSetTimeByDate_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        LoadControlDay()
+        txtYear.Text = Now.Year
+        Call LoadMonth()
+        cboMonth.SelectedIndex = Now.Month - 1
+        Call LoadKA()
+        Call LoadCompany()
+        If ComId <> "" Then
+            cboCompany.Enabled = False
+            cboCompany.SelectedItem = ComName
+        End If
+
+        Call LoadDivision()
+        Call LoadDepartment()
+        Call LoadPosition()
+        Call LoadEmpGroup()
+    End Sub
+
+    Private Sub LoadDepartment()
+        Dim Da As SqlDataAdapter
+        Dim Ds As New DataSet
+        Dim strSQL As String = ""
+        strSQL = "select Department " & _
+                " From Department " & _
+                " Order By Department"
+
+        Da = New SqlDataAdapter(strSQL, Conn)
+        Da.Fill(Ds, "data")
+        With Ds.Tables("data")
+            cboDepartment.Items.Clear()
+            cboDepartment.Items.Add("(ทุกแผนก)")
+            For Each dr As DataRow In .Rows
+                cboDepartment.Items.Add(dr("Department"))
+            Next
+            cboDepartment.SelectedIndex = 0
+        End With
+    End Sub
+
+    Private Sub LoadDivision()
+        Dim Da As SqlDataAdapter
+        Dim Ds As New DataSet
+        Dim strSQL As String = ""
+        strSQL = "select Division " & _
+                " From Division " & _
+                " Order By Division"
+
+        Da = New SqlDataAdapter(strSQL, Conn)
+        Da.Fill(Ds, "data")
+        With Ds.Tables("data")
+            cboDivision.Items.Clear()
+            cboDivision.Items.Add("(ทุกฝ่าย)")
+
+            For Each dr As DataRow In .Rows
+                cboDivision.Items.Add(dr("Division"))
+            Next
+            cboDivision.SelectedIndex = 0
+        End With
+    End Sub
+
+    Private Sub LoadPosition()
+        Dim Da As SqlDataAdapter
+        Dim Ds As New DataSet
+        Dim strSQL As String = ""
+        strSQL = "select Position " & _
+                " From Emp " & _
+                " Group By Position " & _
+                " Order By Position"
+
+        Da = New SqlDataAdapter(strSQL, Conn)
+        Da.Fill(Ds, "data")
+        With Ds.Tables("data")
+            cboPosition.Items.Clear()
+            cboPosition.Items.Add("(ทุกตำแหน่ง)")
+
+            For Each dr As DataRow In .Rows
+                cboPosition.Items.Add(dr("Position"))
+            Next
+            cboPosition.SelectedIndex = 0
+        End With
+    End Sub
+
+    Private Sub LoadEmpGroup()
+        Dim Da As SqlDataAdapter
+        Dim Ds As New DataSet
+        Dim strSQL As String = ""
+        strSQL = "select GroupName " & _
+                " From EmpGroup " & _
+                " Order By GroupName"
+
+        Da = New SqlDataAdapter(strSQL, Conn)
+        Da.Fill(Ds, "data")
+        With Ds.Tables("data")
+            cboEmpGroup.Items.Clear()
+            cboEmpGroup.Items.Add("(ทุกกลุ่ม)")
+
+            For Each dr As DataRow In .Rows
+                cboEmpGroup.Items.Add(dr("GroupName"))
+            Next
+            cboEmpGroup.SelectedIndex = 0
+        End With
+    End Sub
+
+    Private Sub LoadMonth()
+        cboMonth.Items.Clear()
+        For i As Integer = 1 To 12
+            cboMonth.Items.Add(MonthNameThaiLang(i))
+        Next
+    End Sub
+
+    Private Sub LoadControlDay()
+        lblDay.Clear()
+        lblDay.Add(lbl1)
+        lblDay.Add(lbl2)
+        lblDay.Add(lbl3)
+        lblDay.Add(lbl4)
+        lblDay.Add(lbl5)
+
+        lblDay.Add(lbl6)
+        lblDay.Add(lbl7)
+        lblDay.Add(lbl8)
+        lblDay.Add(lbl9)
+        lblDay.Add(lbl10)
+
+        lblDay.Add(lbl11)
+        lblDay.Add(lbl12)
+        lblDay.Add(lbl13)
+        lblDay.Add(lbl14)
+        lblDay.Add(lbl15)
+
+        lblDay.Add(lbl16)
+        lblDay.Add(lbl17)
+        lblDay.Add(lbl18)
+        lblDay.Add(lbl19)
+        lblDay.Add(lbl20)
+
+        lblDay.Add(lbl21)
+        lblDay.Add(lbl22)
+        lblDay.Add(lbl23)
+        lblDay.Add(lbl24)
+        lblDay.Add(lbl25)
+
+        lblDay.Add(lbl26)
+        lblDay.Add(lbl27)
+        lblDay.Add(lbl28)
+        lblDay.Add(lbl29)
+        lblDay.Add(lbl30)
+
+        lblDay.Add(lbl31)
+        lblDay.Add(lbl32)
+        lblDay.Add(lbl33)
+        lblDay.Add(lbl34)
+        lblDay.Add(lbl35)
+
+        lblDay.Add(lbl36)
+        lblDay.Add(lbl37)
+        lblDay.Add(lbl38)
+        lblDay.Add(lbl39)
+        lblDay.Add(lbl40)
+
+        lblDay.Add(lbl41)
+        lblDay.Add(lbl42)
+    End Sub
+
+    Private Sub cboMonth_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cboMonth.SelectedIndexChanged
+        Call LoadMonthDetail()
+        Call ClearDayBG()
+    End Sub
+
+    Private Sub LoadMonthDetail()
+        If IsDate(txtYear.Text & "/" & cboMonth.SelectedIndex + 1 & "/01") = False Then Exit Sub
+        Dim dDate As Date = txtYear.Text & "/" & Format(cboMonth.SelectedIndex + 1, "00") & "/01"
+        Dim StartDay As Integer = dDate.DayOfWeek
+        Dim endMonth As Integer = MonthEnd(dDate).Day
+
+        grpCarlendar.Text = " ปฏิทิน เดือน " & cboMonth.Text.Trim & " " & txtYear.Text.Trim
+
+        Dim nDay As Integer = 0
+        For i As Integer = 0 To 41
+            If i >= StartDay And i < StartDay + endMonth Then
+                nDay += 1
+                CType(lblDay(i), Label).Text = nDay
+            Else
+                CType(lblDay(i), Label).Text = ""
+            End If
+        Next
+    End Sub
+
+    Private Sub lbl2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) _
+            Handles lbl1.Click, lbl2.Click, lbl3.Click, lbl4.Click, lbl5.Click, _
+                    lbl6.Click, lbl7.Click, lbl8.Click, lbl9.Click, lbl10.Click, _
+                    lbl11.Click, lbl12.Click, lbl13.Click, lbl14.Click, lbl15.Click, _
+                    lbl16.Click, lbl17.Click, lbl18.Click, lbl19.Click, lbl20.Click, _
+                    lbl21.Click, lbl22.Click, lbl23.Click, lbl24.Click, lbl25.Click, _
+                    lbl26.Click, lbl27.Click, lbl28.Click, lbl29.Click, lbl30.Click, _
+                    lbl31.Click, lbl32.Click, lbl33.Click, lbl34.Click, lbl35.Click, _
+                    lbl36.Click, lbl37.Click, lbl38.Click, lbl39.Click, lbl40.Click, _
+                    lbl41.Click, lbl42.Click
+        Dim lblControl As Label = CType(sender, Label)
+
+        If lblControl.Text.Trim <> "" Then
+            If lblControl.BackColor = Color.YellowGreen Then
+                lblControl.BackColor = Color.Transparent
+            Else
+                lblControl.BackColor = Color.YellowGreen
+            End If
+        End If
+    End Sub
+
+    Private Sub ClearDayBG()
+        For i As Integer = 0 To 41
+            CType(lblDay(i), Label).BackColor = Color.Transparent
+        Next
+    End Sub
+
+    Private Sub LoadKA()
+        Dim Da As SqlDataAdapter
+        Dim Ds As New DataSet
+        Dim strSQL As String = ""
+        strSQL = "select Ka_Code,KaName From TimeKa Order By KaName"
+        Da = New SqlDataAdapter(strSQL, Conn)
+        Da.Fill(Ds, "data")
+        With Ds.Tables("data")
+            If .Rows.Count = 0 Then
+                cboKa.Items.Clear()
+            Else
+                cboKa.Items.Clear()
+                For Each dr As DataRow In .Rows
+                    cboKa.Items.Add(dr("KaName"))
+                Next
+            End If
+        End With
+    End Sub
+
+    Function GetKaCode(ByVal KaName As String) As String
+        Dim Da As SqlDataAdapter
+        Dim Ds As New DataSet
+        Dim strSQL As String = ""
+        strSQL = "select Ka_Code,KaName " & _
+                " From TimeKa " & _
+                " Where KaName = '" & KaName.Trim & "'"
+
+        Da = New SqlDataAdapter(strSQL, Conn)
+        Da.Fill(Ds, "data")
+        With Ds.Tables("data")
+            If .Rows.Count = 0 Then
+                Return ""
+            Else
+                Return .Rows(0).Item("Ka_Code")
+            End If
+        End With
+    End Function
+
+    Private Sub LoadEmp()
+        Dim Da As SqlDataAdapter
+        Dim Ds As New DataSet
+        Dim strSQL As String = ""
+        Dim arrData() As String
+        Dim List As ListViewItem
+
+        strSQL = "select Code,Fname,Lname, " & _
+                        " Department = Isnull(Department.Department,''), " & _
+                        " UseKaDate = Isnull(Emp.UseKaDate,0) " & _
+                " From Emp Left Join Department " & _
+                        " On Emp.DeptId = Department.DeptId " & _
+                             " Left Join Company_sub cs" & _
+                       " on Emp.CompanyID = cs.CompanyID " & _
+                " Where WorkStatus = 'W' "
+
+        If rdGPByDate.Checked = True Then
+            strSQL &= " and Isnull(UseKaDate,0) = 1 "
+        ElseIf rdGP_Normal.Checked = True Then
+            strSQL &= " and Isnull(UseKaDate,0) = 0 "
+        End If
+
+        If cboCompany.SelectedIndex > 0 Then
+            strSQL &= " and isnull(Emp.CompanyId,'') = '" & GetData.GetCompanyId(cboCompany.Text.Trim) & "'"
+        End If
+
+        If cboDivision.SelectedIndex > 0 Then
+            strSQL &= " and Isnull(Emp.DivId,'') = '" & GetData.GetDivisionId(cboDivision.Text.Trim) & "'"
+        End If
+
+        If cboDepartment.SelectedIndex > 0 Then
+            strSQL &= " and Isnull(Emp.DeptId,'') = '" & GetData.GetDepartmentId(cboDepartment.Text.Trim) & "'"
+        End If
+
+        If cboPosition.SelectedIndex > 0 Then
+            strSQL &= " and Isnull(Emp.Position,'') = '" & cboPosition.Text.Trim & "'"
+        End If
+
+        If cboEmpGroup.SelectedIndex > 0 Then
+            strSQL &= " and Isnull(Emp.GroupId,'') = '" & GetData.GetEmpGroupId(cboEmpGroup.Text.Trim) & "'"
+        End If
+
+        If rdMonth.Checked = True Then
+            strSQL &= " and Emp.WageType = 'M'"
+        End If
+
+        If rdDay.Checked = True Then
+            strSQL &= " and Emp.WageType = 'D' and Contractor = 0"
+        End If
+
+        If rdContractor.Checked = True Then
+            strSQL &= " and Emp.WageType = 'D' and Contractor = 1"
+        End If
+
+        If txtNameSearch.Text.Trim <> "" Then
+            strSQL &= " and (Fname + LName) Like '%" & Replace(txtNameSearch.Text.Trim, " ", "") & "%'"
+        End If
+
+        If rdByCode.Checked = True Then
+            strSQL &= " Order By Emp.Code"
+        End If
+
+        If rdByName.Checked = True Then
+            strSQL &= " Order By Fname,Lname"
+        End If
+
+        If rdByDeptCode.Checked = True Then
+            strSQL &= " Order By Department.Department,Emp.Code"
+        End If
+
+        If rdByDeptName.Checked = True Then
+            strSQL &= " Order By Department.Department,Fname,Lname"
+        End If
+
+        Da = New SqlDataAdapter(strSQL, Conn)
+        Da.Fill(Ds, "data")
+        With Ds.Tables("data")
+            'lstEmp.BeginUpdate()
+            If .Rows.Count = 0 Then
+                lstEmp.Items.Clear()
+            Else
+                lstEmp.Items.Clear()
+
+                Dim I As Integer = 0
+                ProgressBar1.Value = 0
+                ProgressBar1.Maximum = .Rows.Count
+
+                For Each dr As DataRow In .Rows
+                    I = +1
+                    ProgressBar1.Value = I
+
+                    arrData = New String() {lstEmp.Items.Count + 1, _
+                                            dr("Code"), _
+                                            dr("Fname"), _
+                                            dr("LName"), _
+                                            dr("Department")}
+                    List = New ListViewItem(arrData)
+                    lstEmp.Items.Add(List)
+
+                    If dr("UseKaDate") = False Then
+                        lstEmp.Items(lstEmp.Items.Count - 1).ForeColor = pnlNormalKa.BackColor
+                    End If
+                Next
+            End If
+            'lstEmp.EndUpdate()
+        End With
+    End Sub
+
+    Private Sub LoadEmpKa(ByVal Ka_Code As String)
+        Dim Da As SqlDataAdapter
+        Dim Ds As New DataSet
+        Dim strSQL As String = ""
+        Dim arrData() As String
+        Dim List As ListViewItem
+        strSQL = "select Code,Fname,Lname " & _
+                " From Emp " & _
+                " Where Code In " & _
+                        " (Select Code From TimeEmpKa" & _
+                        " Where Ka_Code = '" & Ka_Code.Trim & "')" & _
+                " Order By Code"
+
+        Da = New SqlDataAdapter(strSQL, Conn)
+        Da.Fill(Ds, "data")
+        With Ds.Tables("data")
+            'lstEmp.BeginUpdate()
+            If .Rows.Count = 0 Then
+                lstEmpKa.Items.Clear()
+            Else
+                lstEmpKa.Items.Clear()
+                For Each dr As DataRow In .Rows
+                    arrData = New String() {lstEmpKa.Items.Count + 1, _
+                                            dr("Code"), _
+                                            dr("Fname"), _
+                                            dr("LName")}
+                    List = New ListViewItem(arrData)
+                    lstEmpKa.Items.Add(List)
+                Next
+            End If
+            'lstEmpKa.EndUpdate()
+        End With
+    End Sub
+
+
+    Private Sub cboKa_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cboKa.SelectedIndexChanged
+        lblKaCode.Text = GetKaCode(cboKa.Text.Trim).Trim
+        'Call LoadEmpKa(lblKaCode.Text.Trim)
+    End Sub
+
+    Private Sub btnRefresh_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnRefresh.Click
+        btnRefresh.Enabled = False
+        Application.DoEvents()
+        Call LoadEmp()
+        btnRefresh.Enabled = True
+    End Sub
+
+    Private Sub btnAdd_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAdd.Click
+        Dim List As ListViewItem
+        Dim arrDATA() As String
+        With lstEmp
+            For i As Integer = 0 To .CheckedItems.Count - 1
+                If CheckDataListIsExist(.CheckedItems(i).SubItems(1).Text.Trim) = False Then
+                    arrDATA = New String() {lstEmpKa.Items.Count + 1, _
+                                            .CheckedItems(i).SubItems(1).Text.Trim, _
+                                            .CheckedItems(i).SubItems(2).Text.Trim, _
+                                            .CheckedItems(i).SubItems(3).Text.Trim, _
+                                            .CheckedItems(i).SubItems(4).Text.Trim}
+                    List = New ListViewItem(arrDATA)
+                    lstEmpKa.Items.Add(List)
+                End If
+            Next
+        End With
+    End Sub
+
+    Function CheckDataListIsExist(ByVal Code As String) As Boolean
+        With lstEmpKa
+            For i As Integer = 0 To .Items.Count - 1
+                If .Items(i).SubItems(1).Text.Trim = Code.Trim Then
+                    Return True
+                End If
+            Next
+            Return False
+        End With
+    End Function
+
+    Private Sub btnRemove_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnRemove.Click
+        With lstEmpKa
+            For i As Integer = .CheckedItems.Count - 1 To 0 Step -1
+                .CheckedItems(i).Remove()
+            Next
+        End With
+    End Sub
+
+    Private Sub btnSelectAll_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSelectAll.Click
+        With lstEmp
+            For i As Integer = 0 To .Items.Count - 1
+                .Items(i).Checked = True
+            Next
+        End With
+    End Sub
+
+    Private Sub btnNoneSelectAll_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnNoneSelectAll.Click
+        With lstEmp
+            For i As Integer = 0 To .Items.Count - 1
+                .Items(i).Checked = False
+            Next
+        End With
+    End Sub
+
+    Private Sub btnClearList_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnClearList.Click
+        lstEmpKa.Items.Clear()
+    End Sub
+
+    Private Sub btnSave_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSave.Click
+        If lblKaCode.Text.Trim = "" Then
+            MsgBox("กรุณาเลือกกะที่ต้องการ กำหนด", MsgBoxStyle.Information, Me.Text)
+            cboKa.Focus()
+            Exit Sub
+        End If
+        If lstEmpKa.Items.Count = 0 Then
+            MsgBox("กรุณาไม่มีพนักงานที่ต้องการ กำหนด", MsgBoxStyle.Information, Me.Text)
+            Exit Sub
+        End If
+
+        If DaySelect() <= 0 Then
+            MsgBox("กรุณาเลือกวันที่ที่ต้องการกำหนดกะทำงาน", MsgBoxStyle.Information, Me.Text)
+            Exit Sub
+        End If
+
+        Dim Code As String
+        Dim Ka_Code As String = lblKaCode.Text.Trim
+        Dim Ka_Date As String
+        Dim strSQL As String
+        Dim dCmd As New SqlCommand
+        Dim Tn As SqlTransaction
+        Tn = Conn.BeginTransaction
+        dCmd.Transaction = Tn
+        Try
+            For i As Integer = 0 To lstEmpKa.Items.Count - 1
+                Code = lstEmpKa.Items(i).SubItems(1).Text.Trim
+                For j As Integer = 0 To 41
+                    Dim lblControl As Label = CType(lblDay(j), Label)
+                    If lblControl.BackColor = Color.YellowGreen Then
+                        Ka_Date = txtYear.Text.Trim & "/" & _
+                                    Format(cboMonth.SelectedIndex + 1, "00") & "/" & _
+                                    Format(CInt(lblControl.Text.Trim), "00")
+
+                        strSQL = "Delete From TimeEmpKaDate " & _
+                                " Where Code = '" & Code.Trim & "' and " & _
+                                            " Ka_Date = '" & Ka_Date.Trim & "' "
+                        dCmd.Connection = Conn
+                        dCmd.CommandText = strSQL
+                        dCmd.ExecuteNonQuery()
+
+                        strSQL = "Insert Into TimeEmpKaDate" & _
+                                    " (Code,Ka_Date,Ka_Code) Values(" & _
+                                    " '" & Code.Trim & "'," & _
+                                    " '" & Ka_Date.Trim & "'," & _
+                                    " '" & Ka_Code.Trim & "')"
+                        dCmd.Connection = Conn
+                        dCmd.CommandText = strSQL
+                        dCmd.ExecuteNonQuery()
+                    End If
+                Next
+            Next
+
+            Tn.Commit()
+        Catch ex As Exception
+            Tn.Rollback()
+            MsgBox(ex.Message, MsgBoxStyle.Information, Me.Text)
+            Exit Sub
+        End Try
+        MsgBox("บันทึกข้อมูลเรียบร้อยแล้ว", MsgBoxStyle.Information, Me.Text)
+    End Sub
+
+    Function DaySelect() As Integer
+        Dim total As Integer = 0
+        For i As Integer = 0 To 41
+            If CType(lblDay(i), Label).BackColor = Color.YellowGreen Then
+                total += 1
+            End If
+        Next
+        Return total
+    End Function
+
+    Private Sub LoadKaDateByCode(ByVal Code As String, ByVal Month As Integer, ByVal Year As Integer)
+        Dim strSQL As String
+        Dim Da As New SqlDataAdapter
+        Dim Ds As New DataSet
+
+        Dim arrData() As String
+        Dim List As ListViewItem
+        Dim dOfw As String
+        strSQL = "select dOfW = datepart(dw,ka_date)" & _
+                     " ,ka_date," & _
+                            "t.ka_code, k.Timest, k.Timesp" & _
+                " from timeempkadate t inner join TimeKa k " & _
+                        " on t.ka_code = k.ka_code  " & _
+                " where Code = '" & Code.Trim & "' and " & _
+                        " month(ka_date) = " & Month & " and " & _
+                        " year(ka_date)= " & Year & _
+                " Order by ka_date "
+
+        Da = New SqlDataAdapter(strSQL, Conn)
+        Da.Fill(Ds, "data")
+        With Ds.Tables("data")
+            lstKaByDay.Items.Clear()
+            For Each dr As DataRow In .Rows
+                Select Case dr("dOfw")
+                    Case 1
+                        dOfw = "อา"
+                    Case 2
+                        dOfw = "จ"
+                    Case 3
+                        dOfw = "อ"
+                    Case 4
+                        dOfw = "พ"
+                    Case 5
+                        dOfw = "พฤ"
+                    Case 6
+                        dOfw = "ศ"
+                    Case 7
+                        dOfw = "ส"
+                    Case Else
+                        dOfw = ""
+                End Select
+                arrData = New String() {"", _
+                                        dOfw, _
+                                        Format(dr("ka_date"), "dd/MM/yyyy"), _
+                                        dr("ka_code"), _
+                                        Format(dr("TimeSt"), "HH:mm") & "-" & Format(dr("TimeSp"), "HH:mm")}
+                List = New ListViewItem(arrData)
+                lstKaByDay.Items.Add(List)
+
+                If dr("dOfw") = 1 Or dr("dOfw") = 7 Then
+                    lstKaByDay.Items(lstKaByDay.Items.Count - 1).ForeColor = Color.Blue
+                End If
+            Next
+        End With
+
+    End Sub
+
+    Private Sub lstEmp_DoubleClick(ByVal sender As Object, ByVal e As System.EventArgs) Handles lstEmp.DoubleClick
+        With lstEmp
+            If .SelectedItems.Count <= 0 Then Exit Sub
+            txtCode.Text = .SelectedItems(0).SubItems(1).Text.Trim
+            txtName.Text = .SelectedItems(0).SubItems(2).Text.Trim & "   " & .SelectedItems(0).SubItems(3).Text.Trim
+            txtDepartment.Text = .SelectedItems(0).SubItems(4).Text.Trim
+            Call LoadKaDateByCode(txtCode.Text.Trim, cboMonth.SelectedIndex + 1, txtYear.Text.Trim)
+            tbShowDate.SelectedIndex = 1
+        End With
+    End Sub
+
+    Private Sub lstEmpKa_DoubleClick(ByVal sender As Object, ByVal e As System.EventArgs) Handles lstEmpKa.DoubleClick
+        With lstEmpKa
+            If .SelectedItems.Count <= 0 Then Exit Sub
+            txtCode.Text = .SelectedItems(0).SubItems(1).Text.Trim
+            txtName.Text = .SelectedItems(0).SubItems(2).Text.Trim & "   " & .SelectedItems(0).SubItems(3).Text.Trim
+            txtDepartment.Text = .SelectedItems(0).SubItems(4).Text.Trim
+            Call LoadKaDateByCode(txtCode.Text.Trim, cboMonth.SelectedIndex + 1, txtYear.Text.Trim)
+            tbShowDate.SelectedIndex = 1
+        End With
+    End Sub
+
+    Private Sub btnExit_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnExit.Click
+        Me.Close()
+    End Sub
+
+    Private Sub btnClearKa_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnClearKa.Click
+        If MsgBox("คุณต้องการยกเลิก กะทั้งเดือนของทุกคน ทุกวันหรือไม่", MsgBoxStyle.Information Or MsgBoxStyle.YesNo) = MsgBoxResult.No Then Exit Sub
+
+        Dim Month As Integer
+        Dim Year As Integer
+
+        If cboMonth.SelectedIndex < 0 Then
+            MsgBox("กรุณาเลือกเดือนด้วย", MsgBoxStyle.Information, Me.Text)
+            cboMonth.Focus()
+            Exit Sub
+        End If
+        If IsNumeric(txtYear.Text.Trim) = False Then
+            MsgBox("กรุณาป้อนปีให้ถูกต้องด้วย", MsgBoxStyle.Information, Me.Text)
+            txtYear.Focus()
+            Exit Sub
+        End If
+        If CInt(txtYear.Text.Trim) < 1900 Or CInt(txtYear.Text.Trim) > 2500 Then
+            MsgBox("กรุณาป้อนปีให้ถูกต้องด้วย", MsgBoxStyle.Information, Me.Text)
+            txtYear.Focus()
+            Exit Sub
+        End If
+
+        Month = cboMonth.SelectedIndex + 1
+        Year = CInt(txtYear.Text.Trim)
+
+        Dim strSQL As String
+        Dim dCmd As New SqlCommand
+        Dim Tn As SqlTransaction
+        Tn = Conn.BeginTransaction
+        dCmd.Transaction = Tn
+        Try
+            strSQL = "Delete From TimeEmpKaDate " & _
+                    " Where Month(Ka_Date) = " & Month & " and " & _
+                            " Year(Ka_Date) = " & Year
+            dCmd.Connection = Conn
+            dCmd.CommandText = strSQL
+            dCmd.ExecuteNonQuery()
+            Tn.Commit()
+        Catch ex As Exception
+            Tn.Rollback()
+            MsgBox(ex.Message, MsgBoxStyle.Information, Me.Text)
+            Exit Sub
+        End Try
+        MsgBox("ยกเลิกกะทั้งหมดเรียบร้อยแล้ว", MsgBoxStyle.Information, Me.Text)
+    End Sub
+
+    Private Sub btnDeleteKaByEmp_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnDeleteKaByEmp.Click
+        If MsgBox("คุณต้องการยกเลิก กะทั้งเดือนของคนนี้หรือไม่", MsgBoxStyle.Information Or MsgBoxStyle.YesNo) = MsgBoxResult.No Then Exit Sub
+
+        If txtCode.Text.Trim = "" Then
+            MsgBox("กรุณาเลือกรายชื่อพนักงานด้วย", MsgBoxStyle.Information, Me.Text)
+            Exit Sub
+        End If
+
+        If lstKaByDay.CheckedItems.Count <= 0 Then
+            MsgBox("กรุณาเลือกรายการที่ต้องการลบด้วย", MsgBoxStyle.Information, Me.Text)
+            Exit Sub
+        End If
+
+        Dim strSQL As String
+        Dim dCmd As New SqlCommand
+        Dim Tn As SqlTransaction
+        Tn = Conn.BeginTransaction
+        dCmd.Transaction = Tn
+
+        Try
+            For i As Integer = 0 To lstKaByDay.CheckedItems.Count - 1
+                strSQL = "Delete From TimeEmpKaDate " & _
+                        " Where Code = '" & txtCode.Text.Trim & "' and " & _
+                                " Convert(nVarchar(10),Ka_Date,111) = '" & ConvertDate(lstKaByDay.CheckedItems(i).SubItems(2).Text.Trim) & "'"
+
+                dCmd.Connection = Conn
+                dCmd.CommandText = strSQL
+                dCmd.ExecuteNonQuery()
+            Next
+            Tn.Commit()
+        Catch ex As Exception
+            Tn.Rollback()
+            MsgBox(ex.Message, MsgBoxStyle.Information, Me.Text)
+            Exit Sub
+        End Try
+        MsgBox("ยกเลิกกะเรียบร้อยแล้ว", MsgBoxStyle.Information, Me.Text)
+    End Sub
+
+    Private Sub btnSelAll_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSelAll.Click
+        With lstKaByDay
+            For i As Integer = 0 To .Items.Count - 1
+                .Items(i).Checked = True
+            Next
+        End With
+    End Sub
+
+    Private Sub btnNoneSelAll_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnNoneSelAll.Click
+        With lstKaByDay
+            For i As Integer = 0 To .Items.Count - 1
+                .Items(i).Checked = False
+            Next
+        End With
+    End Sub
+
+
+    Private Sub LoadCompany()
+        Dim Da As New SqlDataAdapter
+        Dim Ds As New DataSet
+        Dim strSQL As String
+        strSQL = "Select CompanyName From Company_Sub "
+        Da = New SqlDataAdapter(strSQL, Conn)
+        Da.Fill(Ds, "Data")
+        With Ds.Tables("Data")
+            cboCompany.Items.Clear()
+            cboCompany.Items.Add("ทั้งหมด")
+            Dim I As Integer
+            For I = 0 To .Rows.Count - 1
+                cboCompany.Items.Add(.Rows(I).Item("CompanyName"))
+            Next
+            Ds.Clear()
+            cboCompany.SelectedIndex = 0
+        End With
+    End Sub
+
+
+End Class

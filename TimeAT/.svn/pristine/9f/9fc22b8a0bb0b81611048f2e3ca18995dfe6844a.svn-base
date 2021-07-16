@@ -1,0 +1,1706 @@
+<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+Partial Class frmEmpSetTimeByDate
+    Inherits System.Windows.Forms.Form
+
+    'Form overrides dispose to clean up the component list.
+    <System.Diagnostics.DebuggerNonUserCode()> _
+    Protected Overrides Sub Dispose(ByVal disposing As Boolean)
+        If disposing AndAlso components IsNot Nothing Then
+            components.Dispose()
+        End If
+        MyBase.Dispose(disposing)
+    End Sub
+
+    'Required by the Windows Form Designer
+    Private components As System.ComponentModel.IContainer
+
+    'NOTE: The following procedure is required by the Windows Form Designer
+    'It can be modified using the Windows Form Designer.  
+    'Do not modify it using the code editor.
+    <System.Diagnostics.DebuggerStepThrough()> _
+    Private Sub InitializeComponent()
+        Dim ListViewItem1 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"", "จ", "01/08/2010", "01", "08:00 - 17:00"}, -1)
+        Me.cboMonth = New System.Windows.Forms.ComboBox
+        Me.Label1 = New System.Windows.Forms.Label
+        Me.txtYear = New System.Windows.Forms.TextBox
+        Me.grpCarlendar = New System.Windows.Forms.GroupBox
+        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel
+        Me.lbl1 = New System.Windows.Forms.Label
+        Me.lbl2 = New System.Windows.Forms.Label
+        Me.lbl42 = New System.Windows.Forms.Label
+        Me.lbl41 = New System.Windows.Forms.Label
+        Me.lbl40 = New System.Windows.Forms.Label
+        Me.lbl39 = New System.Windows.Forms.Label
+        Me.lbl38 = New System.Windows.Forms.Label
+        Me.lbl37 = New System.Windows.Forms.Label
+        Me.lbl36 = New System.Windows.Forms.Label
+        Me.lbl35 = New System.Windows.Forms.Label
+        Me.lbl34 = New System.Windows.Forms.Label
+        Me.lbl33 = New System.Windows.Forms.Label
+        Me.lbl32 = New System.Windows.Forms.Label
+        Me.lbl31 = New System.Windows.Forms.Label
+        Me.lbl30 = New System.Windows.Forms.Label
+        Me.lbl29 = New System.Windows.Forms.Label
+        Me.lbl28 = New System.Windows.Forms.Label
+        Me.lbl27 = New System.Windows.Forms.Label
+        Me.lbl26 = New System.Windows.Forms.Label
+        Me.lbl25 = New System.Windows.Forms.Label
+        Me.lbl24 = New System.Windows.Forms.Label
+        Me.lbl23 = New System.Windows.Forms.Label
+        Me.lbl22 = New System.Windows.Forms.Label
+        Me.lbl21 = New System.Windows.Forms.Label
+        Me.lbl20 = New System.Windows.Forms.Label
+        Me.lbl19 = New System.Windows.Forms.Label
+        Me.lbl18 = New System.Windows.Forms.Label
+        Me.lbl17 = New System.Windows.Forms.Label
+        Me.lbl16 = New System.Windows.Forms.Label
+        Me.lbl15 = New System.Windows.Forms.Label
+        Me.lbl14 = New System.Windows.Forms.Label
+        Me.lbl13 = New System.Windows.Forms.Label
+        Me.lbl12 = New System.Windows.Forms.Label
+        Me.lbl11 = New System.Windows.Forms.Label
+        Me.lbl10 = New System.Windows.Forms.Label
+        Me.lbl9 = New System.Windows.Forms.Label
+        Me.lbl8 = New System.Windows.Forms.Label
+        Me.lbl7 = New System.Windows.Forms.Label
+        Me.lbl6 = New System.Windows.Forms.Label
+        Me.lbl5 = New System.Windows.Forms.Label
+        Me.lbl4 = New System.Windows.Forms.Label
+        Me.lbl3 = New System.Windows.Forms.Label
+        Me.Label7 = New System.Windows.Forms.Label
+        Me.Label6 = New System.Windows.Forms.Label
+        Me.Label5 = New System.Windows.Forms.Label
+        Me.Label4 = New System.Windows.Forms.Label
+        Me.Label3 = New System.Windows.Forms.Label
+        Me.Label2 = New System.Windows.Forms.Label
+        Me.lblMon = New System.Windows.Forms.Label
+        Me.lblKaCode = New System.Windows.Forms.Label
+        Me.Label8 = New System.Windows.Forms.Label
+        Me.cboKa = New System.Windows.Forms.ComboBox
+        Me.btnRemove = New System.Windows.Forms.Button
+        Me.btnAdd = New System.Windows.Forms.Button
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox
+        Me.lstEmpKa = New System.Windows.Forms.ListView
+        Me.ColumnHeader1 = New System.Windows.Forms.ColumnHeader
+        Me.ColumnHeader2 = New System.Windows.Forms.ColumnHeader
+        Me.ColumnHeader3 = New System.Windows.Forms.ColumnHeader
+        Me.ColumnHeader4 = New System.Windows.Forms.ColumnHeader
+        Me.ColumnHeader5 = New System.Windows.Forms.ColumnHeader
+        Me.GroupBox4 = New System.Windows.Forms.GroupBox
+        Me.pnlNormalKa = New System.Windows.Forms.Panel
+        Me.rdGP_Normal = New System.Windows.Forms.RadioButton
+        Me.rdGPByDate = New System.Windows.Forms.RadioButton
+        Me.rdGPAll = New System.Windows.Forms.RadioButton
+        Me.btnSave = New System.Windows.Forms.Button
+        Me.tbShowDate = New System.Windows.Forms.TabControl
+        Me.TabPage1 = New System.Windows.Forms.TabPage
+        Me.TabPage2 = New System.Windows.Forms.TabPage
+        Me.btnNoneSelAll = New System.Windows.Forms.Button
+        Me.btnSelAll = New System.Windows.Forms.Button
+        Me.lstKaByDay = New System.Windows.Forms.ListView
+        Me.colSel = New System.Windows.Forms.ColumnHeader
+        Me.colDofW = New System.Windows.Forms.ColumnHeader
+        Me.colDate = New System.Windows.Forms.ColumnHeader
+        Me.KaCode = New System.Windows.Forms.ColumnHeader
+        Me.colTime = New System.Windows.Forms.ColumnHeader
+        Me.btnDeleteKaByEmp = New System.Windows.Forms.Button
+        Me.Label13 = New System.Windows.Forms.Label
+        Me.Label12 = New System.Windows.Forms.Label
+        Me.Label11 = New System.Windows.Forms.Label
+        Me.txtDepartment = New System.Windows.Forms.TextBox
+        Me.txtName = New System.Windows.Forms.TextBox
+        Me.txtCode = New System.Windows.Forms.TextBox
+        Me.btnClearKa = New System.Windows.Forms.Button
+        Me.btnExit = New System.Windows.Forms.Button
+        Me.btnClearList = New System.Windows.Forms.Button
+        Me.GroupBox3 = New System.Windows.Forms.GroupBox
+        Me.lstEmp = New System.Windows.Forms.ListView
+        Me.colNO = New System.Windows.Forms.ColumnHeader
+        Me.colCode = New System.Windows.Forms.ColumnHeader
+        Me.colName = New System.Windows.Forms.ColumnHeader
+        Me.colSName = New System.Windows.Forms.ColumnHeader
+        Me.colDepartment = New System.Windows.Forms.ColumnHeader
+        Me.Panel1 = New System.Windows.Forms.Panel
+        Me.btnSelectAll = New System.Windows.Forms.Button
+        Me.btnNoneSelectAll = New System.Windows.Forms.Button
+        Me.ExpandablePanel1 = New DevComponents.DotNetBar.ExpandablePanel
+        Me.ProgressBar1 = New System.Windows.Forms.ProgressBar
+        Me.GroupBox5 = New System.Windows.Forms.GroupBox
+        Me.rdContractor = New System.Windows.Forms.RadioButton
+        Me.rdDay = New System.Windows.Forms.RadioButton
+        Me.rdMonth = New System.Windows.Forms.RadioButton
+        Me.rdAll = New System.Windows.Forms.RadioButton
+        Me.cboEmpGroup = New System.Windows.Forms.ComboBox
+        Me.cboDivision = New System.Windows.Forms.ComboBox
+        Me.cboPosition = New System.Windows.Forms.ComboBox
+        Me.Label9 = New System.Windows.Forms.Label
+        Me.Label10 = New System.Windows.Forms.Label
+        Me.Label14 = New System.Windows.Forms.Label
+        Me.Label15 = New System.Windows.Forms.Label
+        Me.txtNameSearch = New System.Windows.Forms.TextBox
+        Me.Label16 = New System.Windows.Forms.Label
+        Me.GroupBox6 = New System.Windows.Forms.GroupBox
+        Me.rdByDeptName = New System.Windows.Forms.RadioButton
+        Me.rdByDeptCode = New System.Windows.Forms.RadioButton
+        Me.rdByName = New System.Windows.Forms.RadioButton
+        Me.rdByCode = New System.Windows.Forms.RadioButton
+        Me.Label17 = New System.Windows.Forms.Label
+        Me.btnRefresh = New System.Windows.Forms.Button
+        Me.cboDepartment = New System.Windows.Forms.ComboBox
+        Me.cboCompany = New System.Windows.Forms.ComboBox
+        Me.grpCarlendar.SuspendLayout()
+        Me.TableLayoutPanel1.SuspendLayout()
+        Me.GroupBox2.SuspendLayout()
+        Me.GroupBox4.SuspendLayout()
+        Me.tbShowDate.SuspendLayout()
+        Me.TabPage1.SuspendLayout()
+        Me.TabPage2.SuspendLayout()
+        Me.GroupBox3.SuspendLayout()
+        Me.Panel1.SuspendLayout()
+        Me.ExpandablePanel1.SuspendLayout()
+        Me.GroupBox5.SuspendLayout()
+        Me.GroupBox6.SuspendLayout()
+        Me.SuspendLayout()
+        '
+        'cboMonth
+        '
+        Me.cboMonth.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboMonth.FormattingEnabled = True
+        Me.cboMonth.Location = New System.Drawing.Point(110, 12)
+        Me.cboMonth.Name = "cboMonth"
+        Me.cboMonth.Size = New System.Drawing.Size(136, 21)
+        Me.cboMonth.TabIndex = 0
+        '
+        'Label1
+        '
+        Me.Label1.Location = New System.Drawing.Point(8, 15)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(96, 16)
+        Me.Label1.TabIndex = 2
+        Me.Label1.Text = "ประจำเดือน : "
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.TopRight
+        '
+        'txtYear
+        '
+        Me.txtYear.Location = New System.Drawing.Point(252, 12)
+        Me.txtYear.Name = "txtYear"
+        Me.txtYear.Size = New System.Drawing.Size(71, 20)
+        Me.txtYear.TabIndex = 3
+        '
+        'grpCarlendar
+        '
+        Me.grpCarlendar.Controls.Add(Me.TableLayoutPanel1)
+        Me.grpCarlendar.Location = New System.Drawing.Point(6, 6)
+        Me.grpCarlendar.Name = "grpCarlendar"
+        Me.grpCarlendar.Size = New System.Drawing.Size(296, 250)
+        Me.grpCarlendar.TabIndex = 4
+        Me.grpCarlendar.TabStop = False
+        Me.grpCarlendar.Text = "ปฏิทิน"
+        '
+        'TableLayoutPanel1
+        '
+        Me.TableLayoutPanel1.BackColor = System.Drawing.Color.Transparent
+        Me.TableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Inset
+        Me.TableLayoutPanel1.ColumnCount = 7
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 35.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 35.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 35.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 35.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 35.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 35.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 68.0!))
+        Me.TableLayoutPanel1.Controls.Add(Me.lbl1, 0, 1)
+        Me.TableLayoutPanel1.Controls.Add(Me.lbl2, 1, 1)
+        Me.TableLayoutPanel1.Controls.Add(Me.lbl42, 6, 6)
+        Me.TableLayoutPanel1.Controls.Add(Me.lbl41, 5, 6)
+        Me.TableLayoutPanel1.Controls.Add(Me.lbl40, 4, 6)
+        Me.TableLayoutPanel1.Controls.Add(Me.lbl39, 3, 6)
+        Me.TableLayoutPanel1.Controls.Add(Me.lbl38, 2, 6)
+        Me.TableLayoutPanel1.Controls.Add(Me.lbl37, 1, 6)
+        Me.TableLayoutPanel1.Controls.Add(Me.lbl36, 0, 6)
+        Me.TableLayoutPanel1.Controls.Add(Me.lbl35, 6, 5)
+        Me.TableLayoutPanel1.Controls.Add(Me.lbl34, 5, 5)
+        Me.TableLayoutPanel1.Controls.Add(Me.lbl33, 4, 5)
+        Me.TableLayoutPanel1.Controls.Add(Me.lbl32, 3, 5)
+        Me.TableLayoutPanel1.Controls.Add(Me.lbl31, 2, 5)
+        Me.TableLayoutPanel1.Controls.Add(Me.lbl30, 1, 5)
+        Me.TableLayoutPanel1.Controls.Add(Me.lbl29, 0, 5)
+        Me.TableLayoutPanel1.Controls.Add(Me.lbl28, 6, 4)
+        Me.TableLayoutPanel1.Controls.Add(Me.lbl27, 5, 4)
+        Me.TableLayoutPanel1.Controls.Add(Me.lbl26, 4, 4)
+        Me.TableLayoutPanel1.Controls.Add(Me.lbl25, 3, 4)
+        Me.TableLayoutPanel1.Controls.Add(Me.lbl24, 2, 4)
+        Me.TableLayoutPanel1.Controls.Add(Me.lbl23, 1, 4)
+        Me.TableLayoutPanel1.Controls.Add(Me.lbl22, 0, 4)
+        Me.TableLayoutPanel1.Controls.Add(Me.lbl21, 6, 3)
+        Me.TableLayoutPanel1.Controls.Add(Me.lbl20, 5, 3)
+        Me.TableLayoutPanel1.Controls.Add(Me.lbl19, 4, 3)
+        Me.TableLayoutPanel1.Controls.Add(Me.lbl18, 3, 3)
+        Me.TableLayoutPanel1.Controls.Add(Me.lbl17, 2, 3)
+        Me.TableLayoutPanel1.Controls.Add(Me.lbl16, 1, 3)
+        Me.TableLayoutPanel1.Controls.Add(Me.lbl15, 0, 3)
+        Me.TableLayoutPanel1.Controls.Add(Me.lbl14, 6, 2)
+        Me.TableLayoutPanel1.Controls.Add(Me.lbl13, 5, 2)
+        Me.TableLayoutPanel1.Controls.Add(Me.lbl12, 4, 2)
+        Me.TableLayoutPanel1.Controls.Add(Me.lbl11, 3, 2)
+        Me.TableLayoutPanel1.Controls.Add(Me.lbl10, 2, 2)
+        Me.TableLayoutPanel1.Controls.Add(Me.lbl9, 1, 2)
+        Me.TableLayoutPanel1.Controls.Add(Me.lbl8, 0, 2)
+        Me.TableLayoutPanel1.Controls.Add(Me.lbl7, 6, 1)
+        Me.TableLayoutPanel1.Controls.Add(Me.lbl6, 5, 1)
+        Me.TableLayoutPanel1.Controls.Add(Me.lbl5, 4, 1)
+        Me.TableLayoutPanel1.Controls.Add(Me.lbl4, 3, 1)
+        Me.TableLayoutPanel1.Controls.Add(Me.lbl3, 2, 1)
+        Me.TableLayoutPanel1.Controls.Add(Me.Label7, 6, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.Label6, 5, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.Label5, 4, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.Label4, 3, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.Label3, 2, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.Label2, 1, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.lblMon, 0, 0)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(6, 19)
+        Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
+        Me.TableLayoutPanel1.RowCount = 7
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30.0!))
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(284, 224)
+        Me.TableLayoutPanel1.TabIndex = 1
+        '
+        'lbl1
+        '
+        Me.lbl1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lbl1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.lbl1.Location = New System.Drawing.Point(5, 34)
+        Me.lbl1.Name = "lbl1"
+        Me.lbl1.Size = New System.Drawing.Size(29, 30)
+        Me.lbl1.TabIndex = 7
+        Me.lbl1.Text = "1"
+        Me.lbl1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lbl2
+        '
+        Me.lbl2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lbl2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.lbl2.Location = New System.Drawing.Point(42, 34)
+        Me.lbl2.Name = "lbl2"
+        Me.lbl2.Size = New System.Drawing.Size(29, 30)
+        Me.lbl2.TabIndex = 8
+        Me.lbl2.Text = "2"
+        Me.lbl2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lbl42
+        '
+        Me.lbl42.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lbl42.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.lbl42.Location = New System.Drawing.Point(227, 194)
+        Me.lbl42.Name = "lbl42"
+        Me.lbl42.Size = New System.Drawing.Size(62, 30)
+        Me.lbl42.TabIndex = 48
+        Me.lbl42.Text = "42"
+        Me.lbl42.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lbl41
+        '
+        Me.lbl41.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lbl41.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.lbl41.Location = New System.Drawing.Point(190, 194)
+        Me.lbl41.Name = "lbl41"
+        Me.lbl41.Size = New System.Drawing.Size(29, 30)
+        Me.lbl41.TabIndex = 47
+        Me.lbl41.Text = "41"
+        Me.lbl41.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lbl40
+        '
+        Me.lbl40.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lbl40.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.lbl40.Location = New System.Drawing.Point(153, 194)
+        Me.lbl40.Name = "lbl40"
+        Me.lbl40.Size = New System.Drawing.Size(29, 30)
+        Me.lbl40.TabIndex = 46
+        Me.lbl40.Text = "40"
+        Me.lbl40.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lbl39
+        '
+        Me.lbl39.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lbl39.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.lbl39.Location = New System.Drawing.Point(116, 194)
+        Me.lbl39.Name = "lbl39"
+        Me.lbl39.Size = New System.Drawing.Size(29, 30)
+        Me.lbl39.TabIndex = 45
+        Me.lbl39.Text = "39"
+        Me.lbl39.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lbl38
+        '
+        Me.lbl38.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lbl38.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.lbl38.Location = New System.Drawing.Point(79, 194)
+        Me.lbl38.Name = "lbl38"
+        Me.lbl38.Size = New System.Drawing.Size(29, 30)
+        Me.lbl38.TabIndex = 44
+        Me.lbl38.Text = "38"
+        Me.lbl38.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lbl37
+        '
+        Me.lbl37.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lbl37.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.lbl37.Location = New System.Drawing.Point(42, 194)
+        Me.lbl37.Name = "lbl37"
+        Me.lbl37.Size = New System.Drawing.Size(29, 30)
+        Me.lbl37.TabIndex = 43
+        Me.lbl37.Text = "37"
+        Me.lbl37.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lbl36
+        '
+        Me.lbl36.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lbl36.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.lbl36.Location = New System.Drawing.Point(5, 194)
+        Me.lbl36.Name = "lbl36"
+        Me.lbl36.Size = New System.Drawing.Size(29, 30)
+        Me.lbl36.TabIndex = 42
+        Me.lbl36.Text = "36"
+        Me.lbl36.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lbl35
+        '
+        Me.lbl35.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lbl35.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.lbl35.Location = New System.Drawing.Point(227, 162)
+        Me.lbl35.Name = "lbl35"
+        Me.lbl35.Size = New System.Drawing.Size(62, 30)
+        Me.lbl35.TabIndex = 41
+        Me.lbl35.Text = "35"
+        Me.lbl35.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lbl34
+        '
+        Me.lbl34.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lbl34.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.lbl34.Location = New System.Drawing.Point(190, 162)
+        Me.lbl34.Name = "lbl34"
+        Me.lbl34.Size = New System.Drawing.Size(29, 30)
+        Me.lbl34.TabIndex = 40
+        Me.lbl34.Text = "34"
+        Me.lbl34.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lbl33
+        '
+        Me.lbl33.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lbl33.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.lbl33.Location = New System.Drawing.Point(153, 162)
+        Me.lbl33.Name = "lbl33"
+        Me.lbl33.Size = New System.Drawing.Size(29, 30)
+        Me.lbl33.TabIndex = 39
+        Me.lbl33.Text = "33"
+        Me.lbl33.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lbl32
+        '
+        Me.lbl32.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lbl32.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.lbl32.Location = New System.Drawing.Point(116, 162)
+        Me.lbl32.Name = "lbl32"
+        Me.lbl32.Size = New System.Drawing.Size(29, 30)
+        Me.lbl32.TabIndex = 38
+        Me.lbl32.Text = "32"
+        Me.lbl32.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lbl31
+        '
+        Me.lbl31.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lbl31.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.lbl31.Location = New System.Drawing.Point(79, 162)
+        Me.lbl31.Name = "lbl31"
+        Me.lbl31.Size = New System.Drawing.Size(29, 30)
+        Me.lbl31.TabIndex = 37
+        Me.lbl31.Text = "31"
+        Me.lbl31.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lbl30
+        '
+        Me.lbl30.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lbl30.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.lbl30.Location = New System.Drawing.Point(42, 162)
+        Me.lbl30.Name = "lbl30"
+        Me.lbl30.Size = New System.Drawing.Size(29, 30)
+        Me.lbl30.TabIndex = 36
+        Me.lbl30.Text = "30"
+        Me.lbl30.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lbl29
+        '
+        Me.lbl29.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lbl29.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.lbl29.Location = New System.Drawing.Point(5, 162)
+        Me.lbl29.Name = "lbl29"
+        Me.lbl29.Size = New System.Drawing.Size(29, 30)
+        Me.lbl29.TabIndex = 35
+        Me.lbl29.Text = "29"
+        Me.lbl29.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lbl28
+        '
+        Me.lbl28.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lbl28.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.lbl28.Location = New System.Drawing.Point(227, 130)
+        Me.lbl28.Name = "lbl28"
+        Me.lbl28.Size = New System.Drawing.Size(62, 30)
+        Me.lbl28.TabIndex = 34
+        Me.lbl28.Text = "28"
+        Me.lbl28.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lbl27
+        '
+        Me.lbl27.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lbl27.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.lbl27.Location = New System.Drawing.Point(190, 130)
+        Me.lbl27.Name = "lbl27"
+        Me.lbl27.Size = New System.Drawing.Size(29, 30)
+        Me.lbl27.TabIndex = 33
+        Me.lbl27.Text = "27"
+        Me.lbl27.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lbl26
+        '
+        Me.lbl26.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lbl26.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.lbl26.Location = New System.Drawing.Point(153, 130)
+        Me.lbl26.Name = "lbl26"
+        Me.lbl26.Size = New System.Drawing.Size(29, 30)
+        Me.lbl26.TabIndex = 32
+        Me.lbl26.Text = "26"
+        Me.lbl26.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lbl25
+        '
+        Me.lbl25.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lbl25.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.lbl25.Location = New System.Drawing.Point(116, 130)
+        Me.lbl25.Name = "lbl25"
+        Me.lbl25.Size = New System.Drawing.Size(29, 30)
+        Me.lbl25.TabIndex = 31
+        Me.lbl25.Text = "25"
+        Me.lbl25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lbl24
+        '
+        Me.lbl24.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lbl24.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.lbl24.Location = New System.Drawing.Point(79, 130)
+        Me.lbl24.Name = "lbl24"
+        Me.lbl24.Size = New System.Drawing.Size(29, 30)
+        Me.lbl24.TabIndex = 30
+        Me.lbl24.Text = "24"
+        Me.lbl24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lbl23
+        '
+        Me.lbl23.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lbl23.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.lbl23.Location = New System.Drawing.Point(42, 130)
+        Me.lbl23.Name = "lbl23"
+        Me.lbl23.Size = New System.Drawing.Size(29, 30)
+        Me.lbl23.TabIndex = 29
+        Me.lbl23.Text = "23"
+        Me.lbl23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lbl22
+        '
+        Me.lbl22.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lbl22.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.lbl22.Location = New System.Drawing.Point(5, 130)
+        Me.lbl22.Name = "lbl22"
+        Me.lbl22.Size = New System.Drawing.Size(29, 30)
+        Me.lbl22.TabIndex = 28
+        Me.lbl22.Text = "22"
+        Me.lbl22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lbl21
+        '
+        Me.lbl21.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lbl21.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.lbl21.Location = New System.Drawing.Point(227, 98)
+        Me.lbl21.Name = "lbl21"
+        Me.lbl21.Size = New System.Drawing.Size(62, 30)
+        Me.lbl21.TabIndex = 27
+        Me.lbl21.Text = "21"
+        Me.lbl21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lbl20
+        '
+        Me.lbl20.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lbl20.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.lbl20.Location = New System.Drawing.Point(190, 98)
+        Me.lbl20.Name = "lbl20"
+        Me.lbl20.Size = New System.Drawing.Size(29, 30)
+        Me.lbl20.TabIndex = 26
+        Me.lbl20.Text = "20"
+        Me.lbl20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lbl19
+        '
+        Me.lbl19.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lbl19.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.lbl19.Location = New System.Drawing.Point(153, 98)
+        Me.lbl19.Name = "lbl19"
+        Me.lbl19.Size = New System.Drawing.Size(29, 30)
+        Me.lbl19.TabIndex = 25
+        Me.lbl19.Text = "19"
+        Me.lbl19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lbl18
+        '
+        Me.lbl18.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lbl18.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.lbl18.Location = New System.Drawing.Point(116, 98)
+        Me.lbl18.Name = "lbl18"
+        Me.lbl18.Size = New System.Drawing.Size(29, 30)
+        Me.lbl18.TabIndex = 24
+        Me.lbl18.Text = "18"
+        Me.lbl18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lbl17
+        '
+        Me.lbl17.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lbl17.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.lbl17.Location = New System.Drawing.Point(79, 98)
+        Me.lbl17.Name = "lbl17"
+        Me.lbl17.Size = New System.Drawing.Size(29, 30)
+        Me.lbl17.TabIndex = 23
+        Me.lbl17.Text = "17"
+        Me.lbl17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lbl16
+        '
+        Me.lbl16.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lbl16.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.lbl16.Location = New System.Drawing.Point(42, 98)
+        Me.lbl16.Name = "lbl16"
+        Me.lbl16.Size = New System.Drawing.Size(29, 30)
+        Me.lbl16.TabIndex = 22
+        Me.lbl16.Text = "16"
+        Me.lbl16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lbl15
+        '
+        Me.lbl15.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lbl15.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.lbl15.Location = New System.Drawing.Point(5, 98)
+        Me.lbl15.Name = "lbl15"
+        Me.lbl15.Size = New System.Drawing.Size(29, 30)
+        Me.lbl15.TabIndex = 21
+        Me.lbl15.Text = "15"
+        Me.lbl15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lbl14
+        '
+        Me.lbl14.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lbl14.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.lbl14.Location = New System.Drawing.Point(227, 66)
+        Me.lbl14.Name = "lbl14"
+        Me.lbl14.Size = New System.Drawing.Size(62, 30)
+        Me.lbl14.TabIndex = 20
+        Me.lbl14.Text = "14"
+        Me.lbl14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lbl13
+        '
+        Me.lbl13.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lbl13.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.lbl13.Location = New System.Drawing.Point(190, 66)
+        Me.lbl13.Name = "lbl13"
+        Me.lbl13.Size = New System.Drawing.Size(29, 30)
+        Me.lbl13.TabIndex = 19
+        Me.lbl13.Text = "13"
+        Me.lbl13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lbl12
+        '
+        Me.lbl12.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lbl12.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.lbl12.Location = New System.Drawing.Point(153, 66)
+        Me.lbl12.Name = "lbl12"
+        Me.lbl12.Size = New System.Drawing.Size(29, 30)
+        Me.lbl12.TabIndex = 18
+        Me.lbl12.Text = "12"
+        Me.lbl12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lbl11
+        '
+        Me.lbl11.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lbl11.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.lbl11.Location = New System.Drawing.Point(116, 66)
+        Me.lbl11.Name = "lbl11"
+        Me.lbl11.Size = New System.Drawing.Size(29, 30)
+        Me.lbl11.TabIndex = 17
+        Me.lbl11.Text = "11"
+        Me.lbl11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lbl10
+        '
+        Me.lbl10.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lbl10.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.lbl10.Location = New System.Drawing.Point(79, 66)
+        Me.lbl10.Name = "lbl10"
+        Me.lbl10.Size = New System.Drawing.Size(29, 30)
+        Me.lbl10.TabIndex = 16
+        Me.lbl10.Text = "10"
+        Me.lbl10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lbl9
+        '
+        Me.lbl9.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lbl9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.lbl9.Location = New System.Drawing.Point(42, 66)
+        Me.lbl9.Name = "lbl9"
+        Me.lbl9.Size = New System.Drawing.Size(29, 30)
+        Me.lbl9.TabIndex = 15
+        Me.lbl9.Text = "9"
+        Me.lbl9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lbl8
+        '
+        Me.lbl8.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lbl8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.lbl8.Location = New System.Drawing.Point(5, 66)
+        Me.lbl8.Name = "lbl8"
+        Me.lbl8.Size = New System.Drawing.Size(29, 30)
+        Me.lbl8.TabIndex = 14
+        Me.lbl8.Text = "8"
+        Me.lbl8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lbl7
+        '
+        Me.lbl7.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lbl7.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.lbl7.Location = New System.Drawing.Point(227, 34)
+        Me.lbl7.Name = "lbl7"
+        Me.lbl7.Size = New System.Drawing.Size(62, 30)
+        Me.lbl7.TabIndex = 13
+        Me.lbl7.Text = "7"
+        Me.lbl7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lbl6
+        '
+        Me.lbl6.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lbl6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.lbl6.Location = New System.Drawing.Point(190, 34)
+        Me.lbl6.Name = "lbl6"
+        Me.lbl6.Size = New System.Drawing.Size(29, 30)
+        Me.lbl6.TabIndex = 12
+        Me.lbl6.Text = "6"
+        Me.lbl6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lbl5
+        '
+        Me.lbl5.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lbl5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.lbl5.Location = New System.Drawing.Point(153, 34)
+        Me.lbl5.Name = "lbl5"
+        Me.lbl5.Size = New System.Drawing.Size(29, 30)
+        Me.lbl5.TabIndex = 11
+        Me.lbl5.Text = "5"
+        Me.lbl5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lbl4
+        '
+        Me.lbl4.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lbl4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.lbl4.Location = New System.Drawing.Point(116, 34)
+        Me.lbl4.Name = "lbl4"
+        Me.lbl4.Size = New System.Drawing.Size(29, 30)
+        Me.lbl4.TabIndex = 10
+        Me.lbl4.Text = "4"
+        Me.lbl4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lbl3
+        '
+        Me.lbl3.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lbl3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.lbl3.Location = New System.Drawing.Point(79, 34)
+        Me.lbl3.Name = "lbl3"
+        Me.lbl3.Size = New System.Drawing.Size(29, 30)
+        Me.lbl3.TabIndex = 9
+        Me.lbl3.Text = "3"
+        Me.lbl3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label7
+        '
+        Me.Label7.BackColor = System.Drawing.Color.Transparent
+        Me.Label7.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.Label7.ForeColor = System.Drawing.Color.Blue
+        Me.Label7.Location = New System.Drawing.Point(227, 2)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(62, 30)
+        Me.Label7.TabIndex = 6
+        Me.Label7.Text = "ส"
+        Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label6
+        '
+        Me.Label6.BackColor = System.Drawing.Color.Transparent
+        Me.Label6.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.Label6.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Label6.Location = New System.Drawing.Point(190, 2)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(29, 30)
+        Me.Label6.TabIndex = 5
+        Me.Label6.Text = "ศ"
+        Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label5
+        '
+        Me.Label5.BackColor = System.Drawing.Color.Transparent
+        Me.Label5.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.Label5.Location = New System.Drawing.Point(153, 2)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(29, 30)
+        Me.Label5.TabIndex = 4
+        Me.Label5.Text = "พฤ"
+        Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label4
+        '
+        Me.Label4.BackColor = System.Drawing.Color.Transparent
+        Me.Label4.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.Label4.Location = New System.Drawing.Point(116, 2)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(29, 30)
+        Me.Label4.TabIndex = 3
+        Me.Label4.Text = "พ"
+        Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label3
+        '
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
+        Me.Label3.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.Label3.Location = New System.Drawing.Point(79, 2)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(29, 30)
+        Me.Label3.TabIndex = 2
+        Me.Label3.Text = "อ"
+        Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label2
+        '
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
+        Me.Label2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.Label2.Location = New System.Drawing.Point(42, 2)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(29, 30)
+        Me.Label2.TabIndex = 1
+        Me.Label2.Text = "จ"
+        Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lblMon
+        '
+        Me.lblMon.BackColor = System.Drawing.Color.Transparent
+        Me.lblMon.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lblMon.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.lblMon.ForeColor = System.Drawing.Color.Blue
+        Me.lblMon.Location = New System.Drawing.Point(5, 2)
+        Me.lblMon.Name = "lblMon"
+        Me.lblMon.Size = New System.Drawing.Size(29, 30)
+        Me.lblMon.TabIndex = 0
+        Me.lblMon.Text = "อา"
+        Me.lblMon.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lblKaCode
+        '
+        Me.lblKaCode.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblKaCode.Location = New System.Drawing.Point(332, 43)
+        Me.lblKaCode.Name = "lblKaCode"
+        Me.lblKaCode.Size = New System.Drawing.Size(77, 20)
+        Me.lblKaCode.TabIndex = 6
+        Me.lblKaCode.TextAlign = System.Drawing.ContentAlignment.TopRight
+        Me.lblKaCode.Visible = False
+        '
+        'Label8
+        '
+        Me.Label8.Location = New System.Drawing.Point(12, 43)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(92, 16)
+        Me.Label8.TabIndex = 7
+        Me.Label8.Text = "เวลาทำงาน : "
+        Me.Label8.TextAlign = System.Drawing.ContentAlignment.TopRight
+        '
+        'cboKa
+        '
+        Me.cboKa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboKa.FormattingEnabled = True
+        Me.cboKa.Location = New System.Drawing.Point(110, 39)
+        Me.cboKa.Name = "cboKa"
+        Me.cboKa.Size = New System.Drawing.Size(216, 21)
+        Me.cboKa.TabIndex = 5
+        '
+        'btnRemove
+        '
+        Me.btnRemove.Location = New System.Drawing.Point(416, 443)
+        Me.btnRemove.Name = "btnRemove"
+        Me.btnRemove.Size = New System.Drawing.Size(52, 62)
+        Me.btnRemove.TabIndex = 10
+        Me.btnRemove.Text = "<<"
+        Me.btnRemove.UseVisualStyleBackColor = True
+        '
+        'btnAdd
+        '
+        Me.btnAdd.Location = New System.Drawing.Point(415, 375)
+        Me.btnAdd.Name = "btnAdd"
+        Me.btnAdd.Size = New System.Drawing.Size(52, 62)
+        Me.btnAdd.TabIndex = 11
+        Me.btnAdd.Text = ">>"
+        Me.btnAdd.UseVisualStyleBackColor = True
+        '
+        'GroupBox2
+        '
+        Me.GroupBox2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+                    Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.GroupBox2.Controls.Add(Me.lstEmpKa)
+        Me.GroupBox2.Location = New System.Drawing.Point(471, 342)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(533, 346)
+        Me.GroupBox2.TabIndex = 8
+        Me.GroupBox2.TabStop = False
+        Me.GroupBox2.Text = "รายชื่อพนักงานที่ใช้เวลาทำงานนี้ทั้งหมด"
+        '
+        'lstEmpKa
+        '
+        Me.lstEmpKa.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+                    Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lstEmpKa.CheckBoxes = True
+        Me.lstEmpKa.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader2, Me.ColumnHeader3, Me.ColumnHeader4, Me.ColumnHeader5})
+        Me.lstEmpKa.FullRowSelect = True
+        Me.lstEmpKa.GridLines = True
+        Me.lstEmpKa.Location = New System.Drawing.Point(6, 19)
+        Me.lstEmpKa.Name = "lstEmpKa"
+        Me.lstEmpKa.Size = New System.Drawing.Size(521, 321)
+        Me.lstEmpKa.TabIndex = 0
+        Me.lstEmpKa.UseCompatibleStateImageBehavior = False
+        Me.lstEmpKa.View = System.Windows.Forms.View.Details
+        '
+        'ColumnHeader1
+        '
+        Me.ColumnHeader1.Text = "#"
+        Me.ColumnHeader1.Width = 44
+        '
+        'ColumnHeader2
+        '
+        Me.ColumnHeader2.Text = "รหัสพนง."
+        Me.ColumnHeader2.Width = 77
+        '
+        'ColumnHeader3
+        '
+        Me.ColumnHeader3.Text = "ชื่อ"
+        Me.ColumnHeader3.Width = 108
+        '
+        'ColumnHeader4
+        '
+        Me.ColumnHeader4.Text = "สกุล"
+        Me.ColumnHeader4.Width = 130
+        '
+        'ColumnHeader5
+        '
+        Me.ColumnHeader5.Text = "แผนก"
+        Me.ColumnHeader5.Width = 217
+        '
+        'GroupBox4
+        '
+        Me.GroupBox4.Controls.Add(Me.pnlNormalKa)
+        Me.GroupBox4.Controls.Add(Me.rdGP_Normal)
+        Me.GroupBox4.Controls.Add(Me.rdGPByDate)
+        Me.GroupBox4.Controls.Add(Me.rdGPAll)
+        Me.GroupBox4.Location = New System.Drawing.Point(6, 194)
+        Me.GroupBox4.Name = "GroupBox4"
+        Me.GroupBox4.Size = New System.Drawing.Size(385, 47)
+        Me.GroupBox4.TabIndex = 9
+        Me.GroupBox4.TabStop = False
+        Me.GroupBox4.Text = "แสดงข้อมูล กลุ่มเวลา"
+        '
+        'pnlNormalKa
+        '
+        Me.pnlNormalKa.BackColor = System.Drawing.Color.RoyalBlue
+        Me.pnlNormalKa.Location = New System.Drawing.Point(256, 16)
+        Me.pnlNormalKa.Name = "pnlNormalKa"
+        Me.pnlNormalKa.Size = New System.Drawing.Size(21, 21)
+        Me.pnlNormalKa.TabIndex = 1
+        '
+        'rdGP_Normal
+        '
+        Me.rdGP_Normal.AutoSize = True
+        Me.rdGP_Normal.Location = New System.Drawing.Point(192, 20)
+        Me.rdGP_Normal.Name = "rdGP_Normal"
+        Me.rdGP_Normal.Size = New System.Drawing.Size(58, 17)
+        Me.rdGP_Normal.TabIndex = 0
+        Me.rdGP_Normal.Text = "กะปกติ"
+        Me.rdGP_Normal.UseVisualStyleBackColor = True
+        '
+        'rdGPByDate
+        '
+        Me.rdGPByDate.AutoSize = True
+        Me.rdGPByDate.Location = New System.Drawing.Point(96, 20)
+        Me.rdGPByDate.Name = "rdGPByDate"
+        Me.rdGPByDate.Size = New System.Drawing.Size(90, 17)
+        Me.rdGPByDate.TabIndex = 0
+        Me.rdGPByDate.Text = "กลุ่มกะตามวัน"
+        Me.rdGPByDate.UseVisualStyleBackColor = True
+        '
+        'rdGPAll
+        '
+        Me.rdGPAll.AutoSize = True
+        Me.rdGPAll.Checked = True
+        Me.rdGPAll.Location = New System.Drawing.Point(6, 20)
+        Me.rdGPAll.Name = "rdGPAll"
+        Me.rdGPAll.Size = New System.Drawing.Size(84, 17)
+        Me.rdGPAll.TabIndex = 0
+        Me.rdGPAll.TabStop = True
+        Me.rdGPAll.Text = "แสดงทั้งหมด"
+        Me.rdGPAll.UseVisualStyleBackColor = True
+        '
+        'btnSave
+        '
+        Me.btnSave.Location = New System.Drawing.Point(477, 304)
+        Me.btnSave.Name = "btnSave"
+        Me.btnSave.Size = New System.Drawing.Size(149, 32)
+        Me.btnSave.TabIndex = 12
+        Me.btnSave.Text = "บันทีกข้อมูล"
+        Me.btnSave.UseVisualStyleBackColor = True
+        '
+        'tbShowDate
+        '
+        Me.tbShowDate.Controls.Add(Me.TabPage1)
+        Me.tbShowDate.Controls.Add(Me.TabPage2)
+        Me.tbShowDate.Location = New System.Drawing.Point(477, 2)
+        Me.tbShowDate.Name = "tbShowDate"
+        Me.tbShowDate.SelectedIndex = 0
+        Me.tbShowDate.Size = New System.Drawing.Size(527, 296)
+        Me.tbShowDate.TabIndex = 13
+        '
+        'TabPage1
+        '
+        Me.TabPage1.Controls.Add(Me.grpCarlendar)
+        Me.TabPage1.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage1.Name = "TabPage1"
+        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage1.Size = New System.Drawing.Size(519, 270)
+        Me.TabPage1.TabIndex = 0
+        Me.TabPage1.Text = "กำหนดกะในแต่ละวัน"
+        Me.TabPage1.UseVisualStyleBackColor = True
+        '
+        'TabPage2
+        '
+        Me.TabPage2.Controls.Add(Me.btnNoneSelAll)
+        Me.TabPage2.Controls.Add(Me.btnSelAll)
+        Me.TabPage2.Controls.Add(Me.lstKaByDay)
+        Me.TabPage2.Controls.Add(Me.btnDeleteKaByEmp)
+        Me.TabPage2.Controls.Add(Me.Label13)
+        Me.TabPage2.Controls.Add(Me.Label12)
+        Me.TabPage2.Controls.Add(Me.Label11)
+        Me.TabPage2.Controls.Add(Me.txtDepartment)
+        Me.TabPage2.Controls.Add(Me.txtName)
+        Me.TabPage2.Controls.Add(Me.txtCode)
+        Me.TabPage2.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage2.Name = "TabPage2"
+        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage2.Size = New System.Drawing.Size(519, 270)
+        Me.TabPage2.TabIndex = 1
+        Me.TabPage2.Text = "แสดงเวลาทำงานของพนักงานทั้งเดือน"
+        Me.TabPage2.UseVisualStyleBackColor = True
+        '
+        'btnNoneSelAll
+        '
+        Me.btnNoneSelAll.Location = New System.Drawing.Point(435, 52)
+        Me.btnNoneSelAll.Name = "btnNoneSelAll"
+        Me.btnNoneSelAll.Size = New System.Drawing.Size(75, 23)
+        Me.btnNoneSelAll.TabIndex = 13
+        Me.btnNoneSelAll.Text = "None Sel All"
+        Me.btnNoneSelAll.UseVisualStyleBackColor = True
+        '
+        'btnSelAll
+        '
+        Me.btnSelAll.Location = New System.Drawing.Point(354, 53)
+        Me.btnSelAll.Name = "btnSelAll"
+        Me.btnSelAll.Size = New System.Drawing.Size(75, 23)
+        Me.btnSelAll.TabIndex = 13
+        Me.btnSelAll.Text = "Sel All"
+        Me.btnSelAll.UseVisualStyleBackColor = True
+        '
+        'lstKaByDay
+        '
+        Me.lstKaByDay.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+                    Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lstKaByDay.CheckBoxes = True
+        Me.lstKaByDay.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.colSel, Me.colDofW, Me.colDate, Me.KaCode, Me.colTime})
+        Me.lstKaByDay.FullRowSelect = True
+        Me.lstKaByDay.GridLines = True
+        ListViewItem1.StateImageIndex = 0
+        Me.lstKaByDay.Items.AddRange(New System.Windows.Forms.ListViewItem() {ListViewItem1})
+        Me.lstKaByDay.Location = New System.Drawing.Point(6, 82)
+        Me.lstKaByDay.Name = "lstKaByDay"
+        Me.lstKaByDay.Size = New System.Drawing.Size(507, 185)
+        Me.lstKaByDay.TabIndex = 1
+        Me.lstKaByDay.UseCompatibleStateImageBehavior = False
+        Me.lstKaByDay.View = System.Windows.Forms.View.Details
+        '
+        'colSel
+        '
+        Me.colSel.Text = "Sel"
+        Me.colSel.Width = 33
+        '
+        'colDofW
+        '
+        Me.colDofW.Text = "วัน"
+        Me.colDofW.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'colDate
+        '
+        Me.colDate.Text = "วันที่"
+        Me.colDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.colDate.Width = 78
+        '
+        'KaCode
+        '
+        Me.KaCode.Text = "รหัสกะ"
+        Me.KaCode.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.KaCode.Width = 51
+        '
+        'colTime
+        '
+        Me.colTime.Text = "เวลา เข้า - ออก"
+        Me.colTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.colTime.Width = 108
+        '
+        'btnDeleteKaByEmp
+        '
+        Me.btnDeleteKaByEmp.Location = New System.Drawing.Point(351, 19)
+        Me.btnDeleteKaByEmp.Name = "btnDeleteKaByEmp"
+        Me.btnDeleteKaByEmp.Size = New System.Drawing.Size(159, 32)
+        Me.btnDeleteKaByEmp.TabIndex = 12
+        Me.btnDeleteKaByEmp.Text = "ลบกะที่เลือก"
+        Me.btnDeleteKaByEmp.UseVisualStyleBackColor = True
+        '
+        'Label13
+        '
+        Me.Label13.Location = New System.Drawing.Point(3, 57)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(68, 16)
+        Me.Label13.TabIndex = 2
+        Me.Label13.Text = "แผนก : "
+        Me.Label13.TextAlign = System.Drawing.ContentAlignment.TopRight
+        '
+        'Label12
+        '
+        Me.Label12.Location = New System.Drawing.Point(3, 32)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(68, 16)
+        Me.Label12.TabIndex = 2
+        Me.Label12.Text = "ชื่อ - สกุล : "
+        Me.Label12.TextAlign = System.Drawing.ContentAlignment.TopRight
+        '
+        'Label11
+        '
+        Me.Label11.Location = New System.Drawing.Point(3, 6)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(68, 16)
+        Me.Label11.TabIndex = 2
+        Me.Label11.Text = "รหัส : "
+        Me.Label11.TextAlign = System.Drawing.ContentAlignment.TopRight
+        '
+        'txtDepartment
+        '
+        Me.txtDepartment.ForeColor = System.Drawing.Color.Blue
+        Me.txtDepartment.Location = New System.Drawing.Point(77, 54)
+        Me.txtDepartment.Name = "txtDepartment"
+        Me.txtDepartment.ReadOnly = True
+        Me.txtDepartment.Size = New System.Drawing.Size(271, 20)
+        Me.txtDepartment.TabIndex = 3
+        '
+        'txtName
+        '
+        Me.txtName.ForeColor = System.Drawing.Color.Blue
+        Me.txtName.Location = New System.Drawing.Point(77, 29)
+        Me.txtName.Name = "txtName"
+        Me.txtName.ReadOnly = True
+        Me.txtName.Size = New System.Drawing.Size(271, 20)
+        Me.txtName.TabIndex = 3
+        '
+        'txtCode
+        '
+        Me.txtCode.ForeColor = System.Drawing.Color.Blue
+        Me.txtCode.Location = New System.Drawing.Point(77, 3)
+        Me.txtCode.Name = "txtCode"
+        Me.txtCode.ReadOnly = True
+        Me.txtCode.Size = New System.Drawing.Size(87, 20)
+        Me.txtCode.TabIndex = 3
+        '
+        'btnClearKa
+        '
+        Me.btnClearKa.Location = New System.Drawing.Point(632, 304)
+        Me.btnClearKa.Name = "btnClearKa"
+        Me.btnClearKa.Size = New System.Drawing.Size(248, 32)
+        Me.btnClearKa.TabIndex = 12
+        Me.btnClearKa.Text = "ยกเลิกกะตามวันทั้งหมด(ภายในเดือนที่กำหนด)"
+        Me.btnClearKa.UseVisualStyleBackColor = True
+        '
+        'btnExit
+        '
+        Me.btnExit.Location = New System.Drawing.Point(340, 10)
+        Me.btnExit.Name = "btnExit"
+        Me.btnExit.Size = New System.Drawing.Size(69, 49)
+        Me.btnExit.TabIndex = 14
+        Me.btnExit.Text = "Exit"
+        Me.btnExit.UseVisualStyleBackColor = True
+        '
+        'btnClearList
+        '
+        Me.btnClearList.Location = New System.Drawing.Point(886, 304)
+        Me.btnClearList.Name = "btnClearList"
+        Me.btnClearList.Size = New System.Drawing.Size(112, 32)
+        Me.btnClearList.TabIndex = 12
+        Me.btnClearList.Text = "Clear รายการ"
+        Me.btnClearList.UseVisualStyleBackColor = True
+        '
+        'GroupBox3
+        '
+        Me.GroupBox3.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+                    Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.GroupBox3.Controls.Add(Me.lstEmp)
+        Me.GroupBox3.Controls.Add(Me.Panel1)
+        Me.GroupBox3.Controls.Add(Me.ExpandablePanel1)
+        Me.GroupBox3.Location = New System.Drawing.Point(4, 65)
+        Me.GroupBox3.Name = "GroupBox3"
+        Me.GroupBox3.Size = New System.Drawing.Size(406, 623)
+        Me.GroupBox3.TabIndex = 15
+        Me.GroupBox3.TabStop = False
+        Me.GroupBox3.Text = "รายชื่อพนักงานทั้งหมด"
+        '
+        'lstEmp
+        '
+        Me.lstEmp.CheckBoxes = True
+        Me.lstEmp.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.colNO, Me.colCode, Me.colName, Me.colSName, Me.colDepartment})
+        Me.lstEmp.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lstEmp.FullRowSelect = True
+        Me.lstEmp.GridLines = True
+        Me.lstEmp.Location = New System.Drawing.Point(3, 409)
+        Me.lstEmp.Name = "lstEmp"
+        Me.lstEmp.Size = New System.Drawing.Size(400, 211)
+        Me.lstEmp.TabIndex = 0
+        Me.lstEmp.UseCompatibleStateImageBehavior = False
+        Me.lstEmp.View = System.Windows.Forms.View.Details
+        '
+        'colNO
+        '
+        Me.colNO.Text = "#"
+        Me.colNO.Width = 44
+        '
+        'colCode
+        '
+        Me.colCode.Text = "รหัสพนง."
+        Me.colCode.Width = 77
+        '
+        'colName
+        '
+        Me.colName.Text = "ชื่อ"
+        Me.colName.Width = 108
+        '
+        'colSName
+        '
+        Me.colSName.Text = "สกุล"
+        Me.colSName.Width = 130
+        '
+        'colDepartment
+        '
+        Me.colDepartment.Text = "แผนก"
+        Me.colDepartment.Width = 217
+        '
+        'Panel1
+        '
+        Me.Panel1.Controls.Add(Me.btnSelectAll)
+        Me.Panel1.Controls.Add(Me.btnNoneSelectAll)
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel1.Location = New System.Drawing.Point(3, 381)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(400, 28)
+        Me.Panel1.TabIndex = 12
+        '
+        'btnSelectAll
+        '
+        Me.btnSelectAll.Location = New System.Drawing.Point(4, 3)
+        Me.btnSelectAll.Name = "btnSelectAll"
+        Me.btnSelectAll.Size = New System.Drawing.Size(172, 23)
+        Me.btnSelectAll.TabIndex = 0
+        Me.btnSelectAll.Text = "เลือกทั้งหมด"
+        Me.btnSelectAll.UseVisualStyleBackColor = True
+        '
+        'btnNoneSelectAll
+        '
+        Me.btnNoneSelectAll.Location = New System.Drawing.Point(182, 3)
+        Me.btnNoneSelectAll.Name = "btnNoneSelectAll"
+        Me.btnNoneSelectAll.Size = New System.Drawing.Size(201, 23)
+        Me.btnNoneSelectAll.TabIndex = 1
+        Me.btnNoneSelectAll.Text = "ไม่เลือกทั้งหมด"
+        Me.btnNoneSelectAll.UseVisualStyleBackColor = True
+        '
+        'ExpandablePanel1
+        '
+        Me.ExpandablePanel1.CanvasColor = System.Drawing.SystemColors.Control
+        Me.ExpandablePanel1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007
+        Me.ExpandablePanel1.Controls.Add(Me.ProgressBar1)
+        Me.ExpandablePanel1.Controls.Add(Me.GroupBox5)
+        Me.ExpandablePanel1.Controls.Add(Me.cboEmpGroup)
+        Me.ExpandablePanel1.Controls.Add(Me.GroupBox4)
+        Me.ExpandablePanel1.Controls.Add(Me.cboDivision)
+        Me.ExpandablePanel1.Controls.Add(Me.cboPosition)
+        Me.ExpandablePanel1.Controls.Add(Me.Label9)
+        Me.ExpandablePanel1.Controls.Add(Me.Label10)
+        Me.ExpandablePanel1.Controls.Add(Me.Label14)
+        Me.ExpandablePanel1.Controls.Add(Me.Label15)
+        Me.ExpandablePanel1.Controls.Add(Me.txtNameSearch)
+        Me.ExpandablePanel1.Controls.Add(Me.Label16)
+        Me.ExpandablePanel1.Controls.Add(Me.GroupBox6)
+        Me.ExpandablePanel1.Controls.Add(Me.Label17)
+        Me.ExpandablePanel1.Controls.Add(Me.btnRefresh)
+        Me.ExpandablePanel1.Controls.Add(Me.cboDepartment)
+        Me.ExpandablePanel1.Controls.Add(Me.cboCompany)
+        Me.ExpandablePanel1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.ExpandablePanel1.Location = New System.Drawing.Point(3, 16)
+        Me.ExpandablePanel1.Name = "ExpandablePanel1"
+        Me.ExpandablePanel1.Size = New System.Drawing.Size(400, 365)
+        Me.ExpandablePanel1.Style.Alignment = System.Drawing.StringAlignment.Center
+        Me.ExpandablePanel1.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground
+        Me.ExpandablePanel1.Style.BackColor2.Color = System.Drawing.Color.Transparent
+        Me.ExpandablePanel1.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
+        Me.ExpandablePanel1.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarDockedBorder
+        Me.ExpandablePanel1.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.ItemText
+        Me.ExpandablePanel1.Style.GradientAngle = 90
+        Me.ExpandablePanel1.TabIndex = 0
+        Me.ExpandablePanel1.TitleStyle.Alignment = System.Drawing.StringAlignment.Center
+        Me.ExpandablePanel1.TitleStyle.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground
+        Me.ExpandablePanel1.TitleStyle.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2
+        Me.ExpandablePanel1.TitleStyle.Border = DevComponents.DotNetBar.eBorderType.RaisedInner
+        Me.ExpandablePanel1.TitleStyle.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder
+        Me.ExpandablePanel1.TitleStyle.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText
+        Me.ExpandablePanel1.TitleStyle.GradientAngle = 90
+        Me.ExpandablePanel1.TitleText = "ค้นหา"
+        '
+        'ProgressBar1
+        '
+        Me.ProgressBar1.Location = New System.Drawing.Point(4, 352)
+        Me.ProgressBar1.Name = "ProgressBar1"
+        Me.ProgressBar1.Size = New System.Drawing.Size(386, 10)
+        Me.ProgressBar1.TabIndex = 20
+        '
+        'GroupBox5
+        '
+        Me.GroupBox5.Controls.Add(Me.rdContractor)
+        Me.GroupBox5.Controls.Add(Me.rdDay)
+        Me.GroupBox5.Controls.Add(Me.rdMonth)
+        Me.GroupBox5.Controls.Add(Me.rdAll)
+        Me.GroupBox5.Location = New System.Drawing.Point(4, 144)
+        Me.GroupBox5.Name = "GroupBox5"
+        Me.GroupBox5.Size = New System.Drawing.Size(385, 47)
+        Me.GroupBox5.TabIndex = 5
+        Me.GroupBox5.TabStop = False
+        Me.GroupBox5.Text = "พนักงาน"
+        '
+        'rdContractor
+        '
+        Me.rdContractor.AutoSize = True
+        Me.rdContractor.Location = New System.Drawing.Point(277, 20)
+        Me.rdContractor.Name = "rdContractor"
+        Me.rdContractor.Size = New System.Drawing.Size(67, 17)
+        Me.rdContractor.TabIndex = 3
+        Me.rdContractor.Text = "รายเหมา"
+        Me.rdContractor.UseVisualStyleBackColor = True
+        '
+        'rdDay
+        '
+        Me.rdDay.AutoSize = True
+        Me.rdDay.Location = New System.Drawing.Point(181, 20)
+        Me.rdDay.Name = "rdDay"
+        Me.rdDay.Size = New System.Drawing.Size(57, 17)
+        Me.rdDay.TabIndex = 2
+        Me.rdDay.Text = "รายวัน"
+        Me.rdDay.UseVisualStyleBackColor = True
+        '
+        'rdMonth
+        '
+        Me.rdMonth.AutoSize = True
+        Me.rdMonth.Location = New System.Drawing.Point(92, 20)
+        Me.rdMonth.Name = "rdMonth"
+        Me.rdMonth.Size = New System.Drawing.Size(69, 17)
+        Me.rdMonth.TabIndex = 1
+        Me.rdMonth.Text = "รายเดือน"
+        Me.rdMonth.UseVisualStyleBackColor = True
+        '
+        'rdAll
+        '
+        Me.rdAll.AutoSize = True
+        Me.rdAll.Checked = True
+        Me.rdAll.Location = New System.Drawing.Point(6, 20)
+        Me.rdAll.Name = "rdAll"
+        Me.rdAll.Size = New System.Drawing.Size(58, 17)
+        Me.rdAll.TabIndex = 0
+        Me.rdAll.TabStop = True
+        Me.rdAll.Text = "ทั้งหมด"
+        Me.rdAll.UseVisualStyleBackColor = True
+        '
+        'cboEmpGroup
+        '
+        Me.cboEmpGroup.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboEmpGroup.FormattingEnabled = True
+        Me.cboEmpGroup.Location = New System.Drawing.Point(96, 120)
+        Me.cboEmpGroup.Name = "cboEmpGroup"
+        Me.cboEmpGroup.Size = New System.Drawing.Size(291, 21)
+        Me.cboEmpGroup.TabIndex = 4
+        '
+        'cboDivision
+        '
+        Me.cboDivision.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboDivision.FormattingEnabled = True
+        Me.cboDivision.Location = New System.Drawing.Point(96, 51)
+        Me.cboDivision.Name = "cboDivision"
+        Me.cboDivision.Size = New System.Drawing.Size(291, 21)
+        Me.cboDivision.TabIndex = 1
+        '
+        'cboPosition
+        '
+        Me.cboPosition.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboPosition.FormattingEnabled = True
+        Me.cboPosition.Location = New System.Drawing.Point(96, 97)
+        Me.cboPosition.Name = "cboPosition"
+        Me.cboPosition.Size = New System.Drawing.Size(291, 21)
+        Me.cboPosition.TabIndex = 3
+        '
+        'Label9
+        '
+        Me.Label9.Location = New System.Drawing.Point(3, 123)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(87, 16)
+        Me.Label9.TabIndex = 18
+        Me.Label9.Text = "กลุ่ม พนักงาน : "
+        Me.Label9.TextAlign = System.Drawing.ContentAlignment.TopRight
+        '
+        'Label10
+        '
+        Me.Label10.Location = New System.Drawing.Point(3, 54)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(87, 16)
+        Me.Label10.TabIndex = 15
+        Me.Label10.Text = "ฝ่าย : "
+        Me.Label10.TextAlign = System.Drawing.ContentAlignment.TopRight
+        '
+        'Label14
+        '
+        Me.Label14.Location = New System.Drawing.Point(3, 100)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(87, 16)
+        Me.Label14.TabIndex = 16
+        Me.Label14.Text = "ตำแหน่ง : "
+        Me.Label14.TextAlign = System.Drawing.ContentAlignment.TopRight
+        '
+        'Label15
+        '
+        Me.Label15.Location = New System.Drawing.Point(3, 31)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(87, 16)
+        Me.Label15.TabIndex = 7
+        Me.Label15.Text = "บริษัท : "
+        Me.Label15.TextAlign = System.Drawing.ContentAlignment.TopRight
+        '
+        'txtNameSearch
+        '
+        Me.txtNameSearch.Location = New System.Drawing.Point(98, 245)
+        Me.txtNameSearch.Name = "txtNameSearch"
+        Me.txtNameSearch.Size = New System.Drawing.Size(291, 20)
+        Me.txtNameSearch.TabIndex = 6
+        '
+        'Label16
+        '
+        Me.Label16.Location = New System.Drawing.Point(3, 77)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(87, 16)
+        Me.Label16.TabIndex = 7
+        Me.Label16.Text = "แผนก : "
+        Me.Label16.TextAlign = System.Drawing.ContentAlignment.TopRight
+        '
+        'GroupBox6
+        '
+        Me.GroupBox6.Controls.Add(Me.rdByDeptName)
+        Me.GroupBox6.Controls.Add(Me.rdByDeptCode)
+        Me.GroupBox6.Controls.Add(Me.rdByName)
+        Me.GroupBox6.Controls.Add(Me.rdByCode)
+        Me.GroupBox6.Location = New System.Drawing.Point(10, 303)
+        Me.GroupBox6.Name = "GroupBox6"
+        Me.GroupBox6.Size = New System.Drawing.Size(380, 47)
+        Me.GroupBox6.TabIndex = 8
+        Me.GroupBox6.TabStop = False
+        Me.GroupBox6.Text = "เรียงข้อมูลตาม"
+        '
+        'rdByDeptName
+        '
+        Me.rdByDeptName.AutoSize = True
+        Me.rdByDeptName.Location = New System.Drawing.Point(224, 20)
+        Me.rdByDeptName.Name = "rdByDeptName"
+        Me.rdByDeptName.Size = New System.Drawing.Size(105, 17)
+        Me.rdByDeptName.TabIndex = 3
+        Me.rdByDeptName.Text = "แผนก , ชื่อ - สกุล"
+        Me.rdByDeptName.UseVisualStyleBackColor = True
+        '
+        'rdByDeptCode
+        '
+        Me.rdByDeptCode.AutoSize = True
+        Me.rdByDeptCode.Location = New System.Drawing.Point(128, 20)
+        Me.rdByDeptCode.Name = "rdByDeptCode"
+        Me.rdByDeptCode.Size = New System.Drawing.Size(83, 17)
+        Me.rdByDeptCode.TabIndex = 2
+        Me.rdByDeptCode.Text = "แผนก , รหัส"
+        Me.rdByDeptCode.UseVisualStyleBackColor = True
+        '
+        'rdByName
+        '
+        Me.rdByName.AutoSize = True
+        Me.rdByName.Location = New System.Drawing.Point(56, 20)
+        Me.rdByName.Name = "rdByName"
+        Me.rdByName.Size = New System.Drawing.Size(66, 17)
+        Me.rdByName.TabIndex = 1
+        Me.rdByName.Text = "ชื่อ - กสุล"
+        Me.rdByName.UseVisualStyleBackColor = True
+        '
+        'rdByCode
+        '
+        Me.rdByCode.AutoSize = True
+        Me.rdByCode.Checked = True
+        Me.rdByCode.Location = New System.Drawing.Point(6, 20)
+        Me.rdByCode.Name = "rdByCode"
+        Me.rdByCode.Size = New System.Drawing.Size(44, 17)
+        Me.rdByCode.TabIndex = 0
+        Me.rdByCode.TabStop = True
+        Me.rdByCode.Text = "รหัส"
+        Me.rdByCode.UseVisualStyleBackColor = True
+        '
+        'Label17
+        '
+        Me.Label17.Location = New System.Drawing.Point(5, 248)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(87, 16)
+        Me.Label17.TabIndex = 7
+        Me.Label17.Text = "ชื่อ - สกุล : "
+        Me.Label17.TextAlign = System.Drawing.ContentAlignment.TopRight
+        '
+        'btnRefresh
+        '
+        Me.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.System
+        Me.btnRefresh.Location = New System.Drawing.Point(8, 270)
+        Me.btnRefresh.Name = "btnRefresh"
+        Me.btnRefresh.Size = New System.Drawing.Size(381, 30)
+        Me.btnRefresh.TabIndex = 7
+        Me.btnRefresh.Text = "Refresh"
+        Me.btnRefresh.UseVisualStyleBackColor = True
+        '
+        'cboDepartment
+        '
+        Me.cboDepartment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboDepartment.FormattingEnabled = True
+        Me.cboDepartment.Location = New System.Drawing.Point(96, 74)
+        Me.cboDepartment.Name = "cboDepartment"
+        Me.cboDepartment.Size = New System.Drawing.Size(291, 21)
+        Me.cboDepartment.TabIndex = 2
+        '
+        'cboCompany
+        '
+        Me.cboCompany.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboCompany.FormattingEnabled = True
+        Me.cboCompany.Location = New System.Drawing.Point(96, 28)
+        Me.cboCompany.Name = "cboCompany"
+        Me.cboCompany.Size = New System.Drawing.Size(291, 21)
+        Me.cboCompany.TabIndex = 0
+        '
+        'frmEmpSetTimeByDate
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.ClientSize = New System.Drawing.Size(1016, 693)
+        Me.Controls.Add(Me.GroupBox3)
+        Me.Controls.Add(Me.btnExit)
+        Me.Controls.Add(Me.tbShowDate)
+        Me.Controls.Add(Me.btnClearKa)
+        Me.Controls.Add(Me.btnClearList)
+        Me.Controls.Add(Me.btnSave)
+        Me.Controls.Add(Me.btnRemove)
+        Me.Controls.Add(Me.btnAdd)
+        Me.Controls.Add(Me.GroupBox2)
+        Me.Controls.Add(Me.lblKaCode)
+        Me.Controls.Add(Me.Label8)
+        Me.Controls.Add(Me.cboKa)
+        Me.Controls.Add(Me.txtYear)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.cboMonth)
+        Me.Name = "frmEmpSetTimeByDate"
+        Me.Text = "กำหนดกะการทำงานในแต่ละวัน"
+        Me.grpCarlendar.ResumeLayout(False)
+        Me.TableLayoutPanel1.ResumeLayout(False)
+        Me.GroupBox2.ResumeLayout(False)
+        Me.GroupBox4.ResumeLayout(False)
+        Me.GroupBox4.PerformLayout()
+        Me.tbShowDate.ResumeLayout(False)
+        Me.TabPage1.ResumeLayout(False)
+        Me.TabPage2.ResumeLayout(False)
+        Me.TabPage2.PerformLayout()
+        Me.GroupBox3.ResumeLayout(False)
+        Me.Panel1.ResumeLayout(False)
+        Me.ExpandablePanel1.ResumeLayout(False)
+        Me.ExpandablePanel1.PerformLayout()
+        Me.GroupBox5.ResumeLayout(False)
+        Me.GroupBox5.PerformLayout()
+        Me.GroupBox6.ResumeLayout(False)
+        Me.GroupBox6.PerformLayout()
+        Me.ResumeLayout(False)
+        Me.PerformLayout()
+
+    End Sub
+    Friend WithEvents cboMonth As System.Windows.Forms.ComboBox
+    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents txtYear As System.Windows.Forms.TextBox
+    Friend WithEvents grpCarlendar As System.Windows.Forms.GroupBox
+    Friend WithEvents lblMon As System.Windows.Forms.Label
+    Friend WithEvents TableLayoutPanel1 As System.Windows.Forms.TableLayoutPanel
+    Friend WithEvents Label7 As System.Windows.Forms.Label
+    Friend WithEvents Label6 As System.Windows.Forms.Label
+    Friend WithEvents Label5 As System.Windows.Forms.Label
+    Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents lbl1 As System.Windows.Forms.Label
+    Friend WithEvents lbl2 As System.Windows.Forms.Label
+    Friend WithEvents lbl31 As System.Windows.Forms.Label
+    Friend WithEvents lbl30 As System.Windows.Forms.Label
+    Friend WithEvents lbl29 As System.Windows.Forms.Label
+    Friend WithEvents lbl28 As System.Windows.Forms.Label
+    Friend WithEvents lbl27 As System.Windows.Forms.Label
+    Friend WithEvents lbl26 As System.Windows.Forms.Label
+    Friend WithEvents lbl25 As System.Windows.Forms.Label
+    Friend WithEvents lbl24 As System.Windows.Forms.Label
+    Friend WithEvents lbl23 As System.Windows.Forms.Label
+    Friend WithEvents lbl22 As System.Windows.Forms.Label
+    Friend WithEvents lbl21 As System.Windows.Forms.Label
+    Friend WithEvents lbl20 As System.Windows.Forms.Label
+    Friend WithEvents lbl19 As System.Windows.Forms.Label
+    Friend WithEvents lbl18 As System.Windows.Forms.Label
+    Friend WithEvents lbl17 As System.Windows.Forms.Label
+    Friend WithEvents lbl16 As System.Windows.Forms.Label
+    Friend WithEvents lbl15 As System.Windows.Forms.Label
+    Friend WithEvents lbl14 As System.Windows.Forms.Label
+    Friend WithEvents lbl13 As System.Windows.Forms.Label
+    Friend WithEvents lbl12 As System.Windows.Forms.Label
+    Friend WithEvents lbl11 As System.Windows.Forms.Label
+    Friend WithEvents lbl10 As System.Windows.Forms.Label
+    Friend WithEvents lbl9 As System.Windows.Forms.Label
+    Friend WithEvents lbl8 As System.Windows.Forms.Label
+    Friend WithEvents lbl7 As System.Windows.Forms.Label
+    Friend WithEvents lbl6 As System.Windows.Forms.Label
+    Friend WithEvents lbl5 As System.Windows.Forms.Label
+    Friend WithEvents lbl4 As System.Windows.Forms.Label
+    Friend WithEvents lbl3 As System.Windows.Forms.Label
+    Friend WithEvents lbl42 As System.Windows.Forms.Label
+    Friend WithEvents lbl41 As System.Windows.Forms.Label
+    Friend WithEvents lbl40 As System.Windows.Forms.Label
+    Friend WithEvents lbl39 As System.Windows.Forms.Label
+    Friend WithEvents lbl38 As System.Windows.Forms.Label
+    Friend WithEvents lbl37 As System.Windows.Forms.Label
+    Friend WithEvents lbl36 As System.Windows.Forms.Label
+    Friend WithEvents lbl35 As System.Windows.Forms.Label
+    Friend WithEvents lbl34 As System.Windows.Forms.Label
+    Friend WithEvents lbl33 As System.Windows.Forms.Label
+    Friend WithEvents lbl32 As System.Windows.Forms.Label
+    Friend WithEvents lblKaCode As System.Windows.Forms.Label
+    Friend WithEvents Label8 As System.Windows.Forms.Label
+    Friend WithEvents cboKa As System.Windows.Forms.ComboBox
+    Friend WithEvents btnRemove As System.Windows.Forms.Button
+    Friend WithEvents btnAdd As System.Windows.Forms.Button
+    Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
+    Friend WithEvents btnSave As System.Windows.Forms.Button
+    Friend WithEvents tbShowDate As System.Windows.Forms.TabControl
+    Friend WithEvents TabPage1 As System.Windows.Forms.TabPage
+    Friend WithEvents TabPage2 As System.Windows.Forms.TabPage
+    Friend WithEvents lstKaByDay As System.Windows.Forms.ListView
+    Friend WithEvents Label11 As System.Windows.Forms.Label
+    Friend WithEvents colDate As System.Windows.Forms.ColumnHeader
+    Friend WithEvents KaCode As System.Windows.Forms.ColumnHeader
+    Friend WithEvents colTime As System.Windows.Forms.ColumnHeader
+    Friend WithEvents colDofW As System.Windows.Forms.ColumnHeader
+    Friend WithEvents Label13 As System.Windows.Forms.Label
+    Friend WithEvents Label12 As System.Windows.Forms.Label
+    Friend WithEvents txtDepartment As System.Windows.Forms.TextBox
+    Friend WithEvents txtName As System.Windows.Forms.TextBox
+    Friend WithEvents txtCode As System.Windows.Forms.TextBox
+    Friend WithEvents colSel As System.Windows.Forms.ColumnHeader
+    Friend WithEvents btnDeleteKaByEmp As System.Windows.Forms.Button
+    Friend WithEvents btnClearKa As System.Windows.Forms.Button
+    Friend WithEvents btnExit As System.Windows.Forms.Button
+    Friend WithEvents lstEmpKa As System.Windows.Forms.ListView
+    Friend WithEvents ColumnHeader1 As System.Windows.Forms.ColumnHeader
+    Friend WithEvents ColumnHeader2 As System.Windows.Forms.ColumnHeader
+    Friend WithEvents ColumnHeader3 As System.Windows.Forms.ColumnHeader
+    Friend WithEvents ColumnHeader4 As System.Windows.Forms.ColumnHeader
+    Friend WithEvents ColumnHeader5 As System.Windows.Forms.ColumnHeader
+    Friend WithEvents btnClearList As System.Windows.Forms.Button
+    Friend WithEvents btnNoneSelAll As System.Windows.Forms.Button
+    Friend WithEvents btnSelAll As System.Windows.Forms.Button
+    Friend WithEvents GroupBox4 As System.Windows.Forms.GroupBox
+    Friend WithEvents rdGP_Normal As System.Windows.Forms.RadioButton
+    Friend WithEvents rdGPByDate As System.Windows.Forms.RadioButton
+    Friend WithEvents rdGPAll As System.Windows.Forms.RadioButton
+    Friend WithEvents pnlNormalKa As System.Windows.Forms.Panel
+    Friend WithEvents GroupBox3 As System.Windows.Forms.GroupBox
+    Friend WithEvents lstEmp As System.Windows.Forms.ListView
+    Friend WithEvents colNO As System.Windows.Forms.ColumnHeader
+    Friend WithEvents colCode As System.Windows.Forms.ColumnHeader
+    Friend WithEvents colName As System.Windows.Forms.ColumnHeader
+    Friend WithEvents colSName As System.Windows.Forms.ColumnHeader
+    Friend WithEvents colDepartment As System.Windows.Forms.ColumnHeader
+    Friend WithEvents Panel1 As System.Windows.Forms.Panel
+    Friend WithEvents btnSelectAll As System.Windows.Forms.Button
+    Friend WithEvents btnNoneSelectAll As System.Windows.Forms.Button
+    Friend WithEvents ExpandablePanel1 As DevComponents.DotNetBar.ExpandablePanel
+    Friend WithEvents ProgressBar1 As System.Windows.Forms.ProgressBar
+    Friend WithEvents GroupBox5 As System.Windows.Forms.GroupBox
+    Friend WithEvents rdContractor As System.Windows.Forms.RadioButton
+    Friend WithEvents rdDay As System.Windows.Forms.RadioButton
+    Friend WithEvents rdMonth As System.Windows.Forms.RadioButton
+    Friend WithEvents rdAll As System.Windows.Forms.RadioButton
+    Friend WithEvents cboEmpGroup As System.Windows.Forms.ComboBox
+    Friend WithEvents cboDivision As System.Windows.Forms.ComboBox
+    Friend WithEvents cboPosition As System.Windows.Forms.ComboBox
+    Friend WithEvents Label9 As System.Windows.Forms.Label
+    Friend WithEvents Label10 As System.Windows.Forms.Label
+    Friend WithEvents Label14 As System.Windows.Forms.Label
+    Friend WithEvents Label15 As System.Windows.Forms.Label
+    Friend WithEvents txtNameSearch As System.Windows.Forms.TextBox
+    Friend WithEvents Label16 As System.Windows.Forms.Label
+    Friend WithEvents GroupBox6 As System.Windows.Forms.GroupBox
+    Friend WithEvents rdByDeptName As System.Windows.Forms.RadioButton
+    Friend WithEvents rdByDeptCode As System.Windows.Forms.RadioButton
+    Friend WithEvents rdByName As System.Windows.Forms.RadioButton
+    Friend WithEvents rdByCode As System.Windows.Forms.RadioButton
+    Friend WithEvents Label17 As System.Windows.Forms.Label
+    Friend WithEvents btnRefresh As System.Windows.Forms.Button
+    Friend WithEvents cboDepartment As System.Windows.Forms.ComboBox
+    Friend WithEvents cboCompany As System.Windows.Forms.ComboBox
+End Class

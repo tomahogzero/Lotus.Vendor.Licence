@@ -1,0 +1,624 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="LabelControl2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>29, 53</value>
+  </data>
+  <data name="LabelControl2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 13</value>
+  </data>
+  <data name="LabelControl2.Text" xml:space="preserve">
+    <value>Department :</value>
+  </data>
+  <data name="LabelControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>51, 31</value>
+  </data>
+  <data name="LabelControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>42, 13</value>
+  </data>
+  <data name="LabelControl1.Text" xml:space="preserve">
+    <value>Section :</value>
+  </data>
+  <data name="cboDivision.Location" type="System.Drawing.Point, System.Drawing">
+    <value>98, 28</value>
+  </data>
+  <data name="cboDivision.Size" type="System.Drawing.Size, System.Drawing">
+    <value>458, 20</value>
+  </data>
+  <data name="btnshowHide.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABV0RVh0VGl0
+        bGUARG93bmxvYWQ7QXJyb3c77I8a0AAAAk9JREFUOE91km1IU1EYxzfvsib2gkY5KaSLK4WhMLg6cdvd
+        dLV8ySSKCKmwZqEpKoYohS9gb7rUvmnOaaPRi01EIupD2SgJ55pF1Jcgs6LoQ/ghK4Lk33lsjCXHB36c
+        w3n+58c59x4FgCWWlZIRwyFSkX3Rgu67VhpinOOWCTZHNGztAfXCGb7A6dtFg3Dpjg2//rz7jxa3TCHV
+        WZeJMlwBHVtgrD7ntWL+9xTmFtx4/92Nzz98aOrLpZCaoaIsTyC0eWS0DjOGzGzTfbz55sRrxtv5AdT3
+        GlDfY0BtdzaFVVzBsfaM2zeeVmDmaxdCX85j8tNpRgMezp7Ao9lqXL13GHllKaMrCZTG0i2J5W0ZH7zB
+        vbj+0grPjBnXQkYMh0zo88vYeXTbx/ScjZspyxNQCQUOMb+yU7/oCeVhMGiAazobg9NG7K/TLurtSXbK
+        UHAlAX3IVYUO8WKTS4/+gIT+KQlV3emQijRdrBcbzvAFxZWpNCgTk9Xxux1ioGMsEy0jOmSVaJ7HJ8Su
+        pV5WSTJl+AL7cVFxZTKTpoLelpSx55S4YC3b+lMrJdCi0PNEp5CKNdTnC1hFP2FBKtTU6ORNtWxO/57u
+        HnnSPIHKOSb7L49b0Dkq48KICR03jWj35qLVk4MzbgOaB7JQ26v3U5YnUDe7DJiYK4fvlR23XtjgZX/C
+        E7RgKGCG65kR/ZMG7KvbTuE4nmDNoca0xwcb03CgYcdSsLRGi5JqLYqqUlFwUoS9QkT+kRQ6AVdAd6O3
+        vo6xPsyGZdBaHCPm3z4o/gL/F7wZt1fm3wAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="btnAdd.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAAsdEVYdFRpdGxlAE5leHQ7RG91YmxlO0Fycm93O0Zh
+        c3Q7UmV3aW5kO0luY3JlYXNlyXdAHwAAAH9JREFUOE+1kMENgDAMA7tg12EAlmAE/rzYLjQWQiVcIR8e
+        50qWbUUtZlbqvFd/e8gjJC1ssUAeITnDtwJ5hKQLXwXyCEkIq9DYohfLzmhAhcZjZFqX9IDzecnXgPM6
+        8usFqY8cDaTKDg0oSB4hoSB5hISCmbIjoWCm7KCZx8oBe7GtjhwJHysAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="rdContractor.Size" type="System.Drawing.Size, System.Drawing">
+    <value>83, 17</value>
+  </data>
+  <data name="rdContractor.Text" xml:space="preserve">
+    <value>Subcontract</value>
+  </data>
+  <data name="rdAll.Size" type="System.Drawing.Size, System.Drawing">
+    <value>36, 17</value>
+  </data>
+  <data name="rdAll.Text" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="rdDay.Location" type="System.Drawing.Point, System.Drawing">
+    <value>173, 20</value>
+  </data>
+  <data name="rdDay.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 17</value>
+  </data>
+  <data name="rdDay.Text" xml:space="preserve">
+    <value>Daily</value>
+  </data>
+  <data name="rdMonth.Location" type="System.Drawing.Point, System.Drawing">
+    <value>56, 20</value>
+  </data>
+  <data name="rdMonth.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 17</value>
+  </data>
+  <data name="rdMonth.Text" xml:space="preserve">
+    <value>Montly</value>
+  </data>
+  <data name="colrow.Caption" xml:space="preserve">
+    <value>No.</value>
+  </data>
+  <data name="colempcode.Caption" xml:space="preserve">
+    <value>Employee ID</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="colempcode.Width" type="System.Int32, mscorlib">
+    <value>86</value>
+  </data>
+  <data name="colProductName.Caption" xml:space="preserve">
+    <value>First Name </value>
+  </data>
+  <data name="collname.Caption" xml:space="preserve">
+    <value>Last Name</value>
+  </data>
+  <data name="colLDivision.Caption" xml:space="preserve">
+    <value>Section</value>
+  </data>
+  <data name="col_department.Caption" xml:space="preserve">
+    <value>Department</value>
+  </data>
+  <data name="colLPorsition.Caption" xml:space="preserve">
+    <value>Position</value>
+  </data>
+  <data name="cboDepartment.Location" type="System.Drawing.Point, System.Drawing">
+    <value>98, 50</value>
+  </data>
+  <data name="cboDepartment.Size" type="System.Drawing.Size, System.Drawing">
+    <value>458, 20</value>
+  </data>
+  <data name="rdByDeptName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>392, 27</value>
+  </data>
+  <data name="rdByDeptName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>236, 17</value>
+  </data>
+  <data name="rdByDeptName.Text" xml:space="preserve">
+    <value>Section,Department,First Name - Last Name</value>
+  </data>
+  <data name="rdByName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>76, 27</value>
+  </data>
+  <data name="rdByName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>136, 17</value>
+  </data>
+  <data name="rdByName.Text" xml:space="preserve">
+    <value>First Name - Last Name</value>
+  </data>
+  <data name="rdByDeptCode.Location" type="System.Drawing.Point, System.Drawing">
+    <value>237, 27</value>
+  </data>
+  <data name="rdByDeptCode.Size" type="System.Drawing.Size, System.Drawing">
+    <value>136, 17</value>
+  </data>
+  <data name="rdByDeptCode.Text" xml:space="preserve">
+    <value>Section,Department,ID</value>
+  </data>
+  <data name="rdByCode.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 27</value>
+  </data>
+  <data name="rdByCode.Size" type="System.Drawing.Size, System.Drawing">
+    <value>36, 17</value>
+  </data>
+  <data name="rdByCode.Text" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="GroupControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>640, 51</value>
+  </data>
+  <data name="GroupControl1.Text" xml:space="preserve">
+    <value>Sort Data By :</value>
+  </data>
+  <data name="btnRefresh.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAACd0RVh0VGl0
+        bGUAUmVmcmVzaDtSZXBlYXQ7QmFycztSaWJib247UmVsb2FkzU326QAAAwFJREFUOE+lk3sslWEcxx/k
+        uOcPl1CNoR1JbrOWUB2iCzKEJOTkMsKZ5hJHNffrZiqc6OScwznVUtks5JJbck2RLHZoLmVtNavjcjj0
+        63nkjy7a2vptn73Pvu/3+33f/fa+CAD+i7+NFEb6N4j25zD5fYhZ2UeOxCC1fY+NjFvyfXoir7cd68uE
+        RG53Rzy7PeYEPUmReIifWdm/nkWxnJ71cFC6YGdsefdYUPpdQ1pE2bHg/Pq1KZEYZkTL0DXxGbhtQrjI
+        fj7kf4Wjj/3Ss+JvKI5kGTe7SIFsZHF704vJOTidWtOubWCqYk0vLbQNrwAHhgCibjyFwY/z8KB3GiKL
+        O0bMaF5byUOjf2TRlnM5dQm8tnEYXVoD1uNhcIzmXNXZZaFsYM/QNaBFUs28CzIPRVSudMyI4FrtW/DP
+        qL5EcmHXnyHkElNqlVDeKxEuSKBftApj8ysQlFUrsfBIoREThixQwfRUXmZAXgPcGZiFM1l1ZGkKAfkt
+        CNkEc17bnOeBT0YjtMwuQkBeC+ync2Bf4C0hNlE2CpS2GTuZ2YZw4eHEPPikN6xgTQtDlorkMequyXUr
+        zR8WwDutCTSojuZYU8bIYOSck2reuF6uB8+URuCOfgVydk2uB+fEmglEdSvCHqRoz6h6xeqchjh2Hxy5
+        UJ7/UwHF9GSig19Oq6TpvRj478TQMLMEtNCKVU3zQBdkF/WIFMhZ+RenhpT0QMXQJ/BKa5LQwli51IP+
+        5kaHA6lyKhralr4F2aHsASgTLoJPZgNoWEYX4pwKsgqtIgXSylq7tS3plcJw7iDwR75A9O0B8M5sBffU
+        ZtjrWyTAHn3zAHYf88kUqFnGvZSmqGpjTQaZBt5D1VNiUiKrZeFjZeJXPu6Z2wnJNUJgDc0Ba3AOHOJr
+        Qc8hga5m5GRtcpY3SdG0O4D9FGXjeISovnyMYP1KRHk1wx26R9PzDN1LhrAOWAdDD9aw3vFspgxFSRV7
+        yEckJ2/AQITNhixOCaOGIa+pg1Hf0Mi9X2ezX/TfAfQdAvawuvfdXuIAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="btnRefresh.Size" type="System.Drawing.Size, System.Drawing">
+    <value>83, 46</value>
+  </data>
+  <data name="btnRefresh.Text" xml:space="preserve">
+    <value>Refresh</value>
+  </data>
+  <data name="grpLeft.Text" xml:space="preserve">
+    <value>Employee List Name :</value>
+  </data>
+  <data name="LabelControl4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>25, 50</value>
+  </data>
+  <data name="LabelControl4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 13</value>
+  </data>
+  <data name="LabelControl4.Text" xml:space="preserve">
+    <value>Department :</value>
+  </data>
+  <data name="btnHide_cal.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABV0RVh0VGl0
+        bGUARG93bmxvYWQ7QXJyb3c77I8a0AAAAk9JREFUOE91km1IU1EYxzfvsib2gkY5KaSLK4WhMLg6cdvd
+        dLV8ySSKCKmwZqEpKoYohS9gb7rUvmnOaaPRi01EIupD2SgJ55pF1Jcgs6LoQ/ghK4Lk33lsjCXHB36c
+        w3n+58c59x4FgCWWlZIRwyFSkX3Rgu67VhpinOOWCTZHNGztAfXCGb7A6dtFg3Dpjg2//rz7jxa3TCHV
+        WZeJMlwBHVtgrD7ntWL+9xTmFtx4/92Nzz98aOrLpZCaoaIsTyC0eWS0DjOGzGzTfbz55sRrxtv5AdT3
+        GlDfY0BtdzaFVVzBsfaM2zeeVmDmaxdCX85j8tNpRgMezp7Ao9lqXL13GHllKaMrCZTG0i2J5W0ZH7zB
+        vbj+0grPjBnXQkYMh0zo88vYeXTbx/ScjZspyxNQCQUOMb+yU7/oCeVhMGiAazobg9NG7K/TLurtSXbK
+        UHAlAX3IVYUO8WKTS4/+gIT+KQlV3emQijRdrBcbzvAFxZWpNCgTk9Xxux1ioGMsEy0jOmSVaJ7HJ8Su
+        pV5WSTJl+AL7cVFxZTKTpoLelpSx55S4YC3b+lMrJdCi0PNEp5CKNdTnC1hFP2FBKtTU6ORNtWxO/57u
+        HnnSPIHKOSb7L49b0Dkq48KICR03jWj35qLVk4MzbgOaB7JQ26v3U5YnUDe7DJiYK4fvlR23XtjgZX/C
+        E7RgKGCG65kR/ZMG7KvbTuE4nmDNoca0xwcb03CgYcdSsLRGi5JqLYqqUlFwUoS9QkT+kRQ6AVdAd6O3
+        vo6xPsyGZdBaHCPm3z4o/gL/F7wZt1fm3wAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="btnHide_cal.Location" type="System.Drawing.Point, System.Drawing">
+    <value>469, 0</value>
+  </data>
+  <data name="LabelControl3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>46, 29</value>
+  </data>
+  <data name="LabelControl3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>42, 13</value>
+  </data>
+  <data name="LabelControl3.Text" xml:space="preserve">
+    <value>Section :</value>
+  </data>
+  <data name="cboDivision_Cal.Location" type="System.Drawing.Point, System.Drawing">
+    <value>97, 26</value>
+  </data>
+  <data name="cboDivision_Cal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>390, 20</value>
+  </data>
+  <data name="btnRemove.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAAsdEVYdFRpdGxlAFByZXY7RG91YmxlO0Fycm93O1Ns
+        b3c7UmV3aW5kO0RlY3JlYXNlelPeUQAAAIVJREFUOE+djMENgDAMA1mw6zAASzACf15sV+xHqiZpQ8rj
+        pMjxeau1hpTjKVGmHhYWAc551h4WKfblUaYkoS9KeZSRTxncgwxVM7BfZ1ombgBhWiZqAMGSTNTAnxE3
+        QPBIj4ijBgieqRHpuwFihVlGnCz0QpQpySJClLXHDApRph7r1O0FzGetjqM4JB4AAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="GridColumn1.Caption" xml:space="preserve">
+    <value>No.</value>
+  </data>
+  <data name="GridColumn2.Caption" xml:space="preserve">
+    <value>Employee ID</value>
+  </data>
+  <data name="GridColumn2.Width" type="System.Int32, mscorlib">
+    <value>82</value>
+  </data>
+  <data name="GridColumn3.Caption" xml:space="preserve">
+    <value>First Name </value>
+  </data>
+  <data name="GridColumn4.Caption" xml:space="preserve">
+    <value>Last Name</value>
+  </data>
+  <data name="GridColumn6.Caption" xml:space="preserve">
+    <value>Section</value>
+  </data>
+  <data name="GridColumn5.Caption" xml:space="preserve">
+    <value>Department</value>
+  </data>
+  <data name="GridColumn7.Caption" xml:space="preserve">
+    <value>Position</value>
+  </data>
+  <data name="GcEmp_Cal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>519, 415</value>
+  </data>
+  <data name="btnRefresh_Cal.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAACd0RVh0VGl0
+        bGUAUmVmcmVzaDtSZXBlYXQ7QmFycztSaWJib247UmVsb2FkzU326QAAAwFJREFUOE+lk3sslWEcxx/k
+        uOcPl1CNoR1JbrOWUB2iCzKEJOTkMsKZ5hJHNffrZiqc6OScwznVUtks5JJbck2RLHZoLmVtNavjcjj0
+        63nkjy7a2vptn73Pvu/3+33f/fa+CAD+i7+NFEb6N4j25zD5fYhZ2UeOxCC1fY+NjFvyfXoir7cd68uE
+        RG53Rzy7PeYEPUmReIifWdm/nkWxnJ71cFC6YGdsefdYUPpdQ1pE2bHg/Pq1KZEYZkTL0DXxGbhtQrjI
+        fj7kf4Wjj/3Ss+JvKI5kGTe7SIFsZHF704vJOTidWtOubWCqYk0vLbQNrwAHhgCibjyFwY/z8KB3GiKL
+        O0bMaF5byUOjf2TRlnM5dQm8tnEYXVoD1uNhcIzmXNXZZaFsYM/QNaBFUs28CzIPRVSudMyI4FrtW/DP
+        qL5EcmHXnyHkElNqlVDeKxEuSKBftApj8ysQlFUrsfBIoREThixQwfRUXmZAXgPcGZiFM1l1ZGkKAfkt
+        CNkEc17bnOeBT0YjtMwuQkBeC+ync2Bf4C0hNlE2CpS2GTuZ2YZw4eHEPPikN6xgTQtDlorkMequyXUr
+        zR8WwDutCTSojuZYU8bIYOSck2reuF6uB8+URuCOfgVydk2uB+fEmglEdSvCHqRoz6h6xeqchjh2Hxy5
+        UJ7/UwHF9GSig19Oq6TpvRj478TQMLMEtNCKVU3zQBdkF/WIFMhZ+RenhpT0QMXQJ/BKa5LQwli51IP+
+        5kaHA6lyKhralr4F2aHsASgTLoJPZgNoWEYX4pwKsgqtIgXSylq7tS3plcJw7iDwR75A9O0B8M5sBffU
+        ZtjrWyTAHn3zAHYf88kUqFnGvZSmqGpjTQaZBt5D1VNiUiKrZeFjZeJXPu6Z2wnJNUJgDc0Ba3AOHOJr
+        Qc8hga5m5GRtcpY3SdG0O4D9FGXjeISovnyMYP1KRHk1wx26R9PzDN1LhrAOWAdDD9aw3vFspgxFSRV7
+        yEckJ2/AQITNhixOCaOGIa+pg1Hf0Mi9X2ezX/TfAfQdAvawuvfdXuIAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="btnRefresh_Cal.Location" type="System.Drawing.Point, System.Drawing">
+    <value>490, 25</value>
+  </data>
+  <data name="btnRefresh_Cal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>83, 45</value>
+  </data>
+  <data name="btnRefresh_Cal.Text" xml:space="preserve">
+    <value>Refresh</value>
+  </data>
+  <data name="cboDepartment_Cal.Location" type="System.Drawing.Point, System.Drawing">
+    <value>97, 48</value>
+  </data>
+  <data name="cboDepartment_Cal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>390, 20</value>
+  </data>
+  <data name="rdByDeptName_Cal.Location" type="System.Drawing.Point, System.Drawing">
+    <value>326, 26</value>
+  </data>
+  <data name="rdByDeptName_Cal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>236, 17</value>
+  </data>
+  <data name="rdByDeptName_Cal.Text" xml:space="preserve">
+    <value>Section,Department,First Name - Last Name</value>
+  </data>
+  <data name="rdByName_Cal.Location" type="System.Drawing.Point, System.Drawing">
+    <value>46, 26</value>
+  </data>
+  <data name="rdByName_Cal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>136, 17</value>
+  </data>
+  <data name="rdByName_Cal.Text" xml:space="preserve">
+    <value>First Name - Last Name</value>
+  </data>
+  <data name="rdByDeptCode_Cal.Location" type="System.Drawing.Point, System.Drawing">
+    <value>185, 26</value>
+  </data>
+  <data name="rdByDeptCode_Cal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>136, 17</value>
+  </data>
+  <data name="rdByDeptCode_Cal.Text" xml:space="preserve">
+    <value>Section,Department,ID</value>
+  </data>
+  <data name="rdByCode_Cal.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 26</value>
+  </data>
+  <data name="rdByCode_Cal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>36, 17</value>
+  </data>
+  <data name="rdByCode_Cal.Text" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="GroupControl7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>568, 50</value>
+  </data>
+  <data name="GroupControl7.Text" xml:space="preserve">
+    <value>Sort Data By</value>
+  </data>
+  <data name="GrpRight.Size" type="System.Drawing.Size, System.Drawing">
+    <value>580, 553</value>
+  </data>
+  <data name="GrpRight.Text" xml:space="preserve">
+    <value>Employee with Special Working Shift : (Shift Work of 8 Hours Counting from Time-In) :</value>
+  </data>
+  <data name="SplitContainerControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1256, 562</value>
+  </data>
+  <data name="GroupBox1.Text" xml:space="preserve">
+    <value>Employee's Name</value>
+  </data>
+  <data name="colCode.Text" xml:space="preserve">
+    <value>Emp.Code</value>
+  </data>
+  <data name="colName.Text" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="colSName.Text" xml:space="preserve">
+    <value>Surname</value>
+  </data>
+  <data name="colDepartment.Text" xml:space="preserve">
+    <value>Department</value>
+  </data>
+  <data name="btnSelectAll.Text" xml:space="preserve">
+    <value>Selected ALL</value>
+  </data>
+  <data name="btnNoneSelectAll.Text" xml:space="preserve">
+    <value>Non-Selected ALL</value>
+  </data>
+  <data name="ExpandablePanel1.TitleText" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="GroupBox5.Text" xml:space="preserve">
+    <value>Employee</value>
+  </data>
+  <data name="Label7.Text" xml:space="preserve">
+    <value>Section :</value>
+  </data>
+  <data name="Label8.Text" xml:space="preserve">
+    <value>Position :</value>
+  </data>
+  <data name="Label9.Text" xml:space="preserve">
+    <value>Department :</value>
+  </data>
+  <data name="GroupBox3.Text" xml:space="preserve">
+    <value>Sort by</value>
+  </data>
+  <data name="Label10.Text" xml:space="preserve">
+    <value>Name - Surname :</value>
+  </data>
+  <data name="Label6.Text" xml:space="preserve">
+    <value>Employee's Group :</value>
+  </data>
+  <data name="Label3.Text" xml:space="preserve">
+    <value>Company :</value>
+  </data>
+  <data name="GroupBox2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>187, 159</value>
+  </data>
+  <data name="GroupBox2.Text" xml:space="preserve">
+    <value>Member of extra working time</value>
+  </data>
+  <data name="lstEmp_Cal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>181, 0</value>
+  </data>
+  <data name="ColumnHeader2.Text" xml:space="preserve">
+    <value>Emp.Code</value>
+  </data>
+  <data name="ColumnHeader3.Text" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="ColumnHeader4.Text" xml:space="preserve">
+    <value>Surname</value>
+  </data>
+  <data name="ColumnHeader6.Text" xml:space="preserve">
+    <value>Section</value>
+  </data>
+  <data name="ColumnHeader5.Text" xml:space="preserve">
+    <value>Department</value>
+  </data>
+  <data name="ColumnHeader7.Text" xml:space="preserve">
+    <value>Position</value>
+  </data>
+  <data name="ColumnHeader8.Text" xml:space="preserve">
+    <value>Group</value>
+  </data>
+  <data name="Panel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>181, 30</value>
+  </data>
+  <data name="btnSelectAll_Cal.Text" xml:space="preserve">
+    <value>Selected ALL</value>
+  </data>
+  <data name="btnNoneSelectAll_Cal.Text" xml:space="preserve">
+    <value>Non-Selected ALL</value>
+  </data>
+  <data name="ExpandablePanel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>181, 280</value>
+  </data>
+  <data name="ExpandablePanel2.TitleText" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="GroupBox4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>170, 47</value>
+  </data>
+  <data name="GroupBox4.Text" xml:space="preserve">
+    <value>Sort by</value>
+  </data>
+  <data name="ProgressBar2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>171, 10</value>
+  </data>
+  <data name="GroupBox6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>165, 47</value>
+  </data>
+  <data name="GroupBox6.Text" xml:space="preserve">
+    <value>Employee</value>
+  </data>
+  <data name="Label1.Text" xml:space="preserve">
+    <value>Name - Surname :</value>
+  </data>
+  <data name="Label12.Text" xml:space="preserve">
+    <value>Position :</value>
+  </data>
+  <data name="txtNameSearch_Cal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>74, 21</value>
+  </data>
+  <data name="Label11.Text" xml:space="preserve">
+    <value>Section :</value>
+  </data>
+  <data name="Label2.Text" xml:space="preserve">
+    <value>Department :</value>
+  </data>
+  <data name="cboEmpGroup_Cal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 21</value>
+  </data>
+  <data name="cboCompany_Cal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 21</value>
+  </data>
+  <data name="Label4.Text" xml:space="preserve">
+    <value>Company :</value>
+  </data>
+  <data name="Label13.Text" xml:space="preserve">
+    <value>Employee's Group : </value>
+  </data>
+  <data name="btnExit.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABF0RVh0VGl0
+        bGUAQ2xvc2U7RXhpdDsFGf+FAAAArElEQVQ4T7XSOwoCQRCE4c0E8XEDQTMRA+/gTTykGBuYGm6olxBE
+        tP1LHGl1WoZVg2+DYrqYZrYys6/cPvVibk38teBUkkUFNcbYuGyFCXYuyxYcMYSyPlSi4fY9m+KMsECW
+        aEF5D2m4gzUeZ6MC8SXZYflU4K8taZ2nc1GBH+4i3eStJFdwwABpWNf268xwQVggW4zgd1aJnnbvsrBA
+        9JyvWfGPVOx3Bc1ZdQWpA3U147gCvgAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="btnExit.Text" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="ProgressBarX1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1115, 27</value>
+  </data>
+  <data name="panelApp.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1256, 562</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1264, 601</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Set Special Shift Employee (Counting 8 Hours from Time-In Only )</value>
+  </data>
+</root>

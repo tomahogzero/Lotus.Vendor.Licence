@@ -1,0 +1,563 @@
+<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+Partial Class frmRightManagementControl
+    Inherits System.Windows.Forms.Form
+
+    'Form overrides dispose to clean up the component list.
+    <System.Diagnostics.DebuggerNonUserCode()> _
+    Protected Overrides Sub Dispose(ByVal disposing As Boolean)
+        If disposing AndAlso components IsNot Nothing Then
+            components.Dispose()
+        End If
+        MyBase.Dispose(disposing)
+    End Sub
+
+    'Required by the Windows Form Designer
+    Private components As System.ComponentModel.IContainer
+
+    'NOTE: The following procedure is required by the Windows Form Designer
+    'It can be modified using the Windows Form Designer.  
+    'Do not modify it using the code editor.
+    <System.Diagnostics.DebuggerStepThrough()> _
+    Private Sub InitializeComponent()
+        Dim TreeNode139 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Import Data")
+        Dim TreeNode140 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("ประมวลผลเวลาทำงาน ")
+        Dim TreeNode141 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("แก้ไข/เพิ่ม เวลาทำงาน")
+        Dim TreeNode142 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("คำนวณค่าล่วงเวลา")
+        Dim TreeNode143 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("คำนวณมาสาย/ออกก่อน")
+        Dim TreeNode144 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("คำนวณขาดงาน")
+        Dim TreeNode145 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Allowance")
+        Dim TreeNode146 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("คีย์ข้อมูลการลา")
+        Dim TreeNode147 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Daily Update", New System.Windows.Forms.TreeNode() {TreeNode139, TreeNode140, TreeNode141, TreeNode142, TreeNode143, TreeNode144, TreeNode145, TreeNode146})
+        Dim TreeNode148 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("กำหนดรูปแบบการคำนวณ")
+        Dim TreeNode149 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("กำหนดกลุ่มเวลาทำงาน - ปกติ/ตามวัน")
+        Dim TreeNode150 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("กำหนดเวลาทำงาน")
+        Dim TreeNode151 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("กำหนดเวลาทำงานพื้นฐานพนักงานแต่ละคน")
+        Dim TreeNode152 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("กำหนดเวลาตามวันที่")
+        Dim TreeNode153 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("กำหนดเวลาให้กับพนักงาน", New System.Windows.Forms.TreeNode() {TreeNode151, TreeNode152})
+        Dim TreeNode154 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("เวลาทำงาน", New System.Windows.Forms.TreeNode() {TreeNode149, TreeNode150, TreeNode153})
+        Dim TreeNode155 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("กำหนด Barcode")
+        Dim TreeNode156 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("กำหนดพนักงานคำนวณ OT")
+        Dim TreeNode157 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("กำหนดพนักงานคำนวณ สาย")
+        Dim TreeNode158 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("กำหนดเวลาทำงาน + เวลาพัก")
+        Dim TreeNode159 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("กำหนดวันหยุดประจำปี")
+        Dim TreeNode160 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("กำหนดข้อมูลการลา")
+        Dim TreeNode161 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("กำหนดสิทธิการลาในแต่ละปี")
+        Dim TreeNode162 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("กำหนดเงือนไขการหักมาสาย")
+        Dim TreeNode163 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("กำหนดเงื่อนไขสาย - กรณีหักยอดเดียว")
+        Dim TreeNode164 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("กำหนดเงื่อนไขสาย - สายหักเงินตาม Rate")
+        Dim TreeNode165 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("กำหนดเงือนไขการสาย", New System.Windows.Forms.TreeNode() {TreeNode162, TreeNode163, TreeNode164})
+        Dim TreeNode166 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("กำหนดพนักงาน ใช้เวลาหน่วง")
+        Dim TreeNode167 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("กำหนดเวลาหน่วงการทำ OT")
+        Dim TreeNode168 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("กำหนดเวลาหน่วงการทำ OT", New System.Windows.Forms.TreeNode() {TreeNode166, TreeNode167})
+        Dim TreeNode169 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("กำหนดค่าล่วงเวลา - กรณีจ่ายเป็นเงิน")
+        Dim TreeNode170 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("กำหนดเงื่อนไขจ่าย Allowance อัตโนมัติ")
+        Dim TreeNode171 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("กำหนด Link Code กับ Payroll")
+        Dim TreeNode172 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Configuration", New System.Windows.Forms.TreeNode() {TreeNode148, TreeNode154, TreeNode155, TreeNode156, TreeNode157, TreeNode158, TreeNode159, TreeNode160, TreeNode161, TreeNode165, TreeNode168, TreeNode169, TreeNode170, TreeNode171})
+        Dim TreeNode173 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("บัญชีลงเวลาทำงาน")
+        Dim TreeNode174 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("รายงานแสดงเวลาทำงาน/ข้อมูลมาสาย ของพนักงานแต่ละคน")
+        Dim TreeNode175 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Time Sheet")
+        Dim TreeNode176 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Report all employee's work")
+        Dim TreeNode177 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("รายงานเวลาทำงานของพนักงาน(แบบละเอียด)")
+        Dim TreeNode178 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("รายงานเวลาทำงานของพนักงาน แบบที่ 2")
+        Dim TreeNode179 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("รายงานเวลาทำงานของพนักงาน", New System.Windows.Forms.TreeNode() {TreeNode177, TreeNode178})
+        Dim TreeNode180 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("รายงาน OT")
+        Dim TreeNode181 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("สรุปยอดประจำเดือน")
+        Dim TreeNode182 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("รายงาน สรุปยอด สาย - ขาด (บาท) รายเดือน")
+        Dim TreeNode183 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("รายงานตารางการทำงาน ของพนักงานทั้งหมด")
+        Dim TreeNode184 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("กำหนด Config Column")
+        Dim TreeNode185 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("รายงานเวลาการทำงานของพนักงาน(แบบสรุป)")
+        Dim TreeNode186 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("รายงานเวลาการทำงานของพนักงาน(แบบสรุป)", New System.Windows.Forms.TreeNode() {TreeNode184, TreeNode185})
+        Dim TreeNode187 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("กำหนด Config Column")
+        Dim TreeNode188 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("รายงานของพนักงานที่ไม่มาทำงาน")
+        Dim TreeNode189 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("รายงานของพนักงานที่ไม่มาทำงาน", New System.Windows.Forms.TreeNode() {TreeNode187, TreeNode188})
+        Dim TreeNode190 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("รายงานการลาขาดสายของพนักงาน ประจำวัน")
+        Dim TreeNode191 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("กำหนด Config Column")
+        Dim TreeNode192 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("รายงาน มาสาย/ลา/ขาด ของพนักงาน(แบบสรุป)")
+        Dim TreeNode193 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("รายงาน มาสาย/ลา/ขาด ของพนักงาน(แบบสรุป)", New System.Windows.Forms.TreeNode() {TreeNode191, TreeNode192})
+        Dim TreeNode194 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("รายงาน ชั่วโมง O.T. สูงสุด/วัน/สัปดาห์  ประจำปี")
+        Dim TreeNode195 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("รายงานทำงานปกติ + ชั่วโมง O.T. / ต่อสัปดาห์ ")
+        Dim TreeNode196 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("กำหนด Config Column")
+        Dim TreeNode197 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("รายงานสรุปการหยุดประจำปี")
+        Dim TreeNode198 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("รายงานสรุปการหยุดประจำปี", New System.Windows.Forms.TreeNode() {TreeNode196, TreeNode197})
+        Dim TreeNode199 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("รายงาน Allowance")
+        Dim TreeNode200 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("รายงานสรุปยอด")
+        Dim TreeNode201 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("สรุปรายงานประจำเดือน")
+        Dim TreeNode202 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("สรุปรายงานประจำปี")
+        Dim TreeNode203 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("รายงาน", New System.Windows.Forms.TreeNode() {TreeNode173, TreeNode174, TreeNode175, TreeNode176, TreeNode179, TreeNode180, TreeNode181, TreeNode182, TreeNode183, TreeNode186, TreeNode189, TreeNode190, TreeNode193, TreeNode194, TreeNode195, TreeNode198, TreeNode199, TreeNode200, TreeNode201, TreeNode202})
+        Dim TreeNode204 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Windows")
+        Dim TreeNode205 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("กำหนด User และ สิทธิ์")
+        Dim TreeNode206 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("กำหนดสิทธิ์", New System.Windows.Forms.TreeNode() {TreeNode205})
+        Dim TreeNode207 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Exit")
+        Me.lstUser = New System.Windows.Forms.ListView
+        Me.colStaffId = New System.Windows.Forms.ColumnHeader
+        Me.colFirstName = New System.Windows.Forms.ColumnHeader
+        Me.colLastName = New System.Windows.Forms.ColumnHeader
+        Me.colUsername = New System.Windows.Forms.ColumnHeader
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox
+        Me.txtLname = New System.Windows.Forms.TextBox
+        Me.txtUserName = New System.Windows.Forms.TextBox
+        Me.txtFirstName = New System.Windows.Forms.TextBox
+        Me.Label2 = New System.Windows.Forms.Label
+        Me.Label6 = New System.Windows.Forms.Label
+        Me.Label1 = New System.Windows.Forms.Label
+        Me.txtStaffId = New System.Windows.Forms.TextBox
+        Me.Label3 = New System.Windows.Forms.Label
+        Me.TreeView1 = New System.Windows.Forms.TreeView
+        Me.btnExit = New System.Windows.Forms.Button
+        Me.btnRefresh = New System.Windows.Forms.Button
+        Me.btnDelete = New System.Windows.Forms.Button
+        Me.btnEdit = New System.Windows.Forms.Button
+        Me.btnAdd = New System.Windows.Forms.Button
+        Me.TabControl1 = New System.Windows.Forms.TabControl
+        Me.TabPage1 = New System.Windows.Forms.TabPage
+        Me.TabPage2 = New System.Windows.Forms.TabPage
+        Me.LstCompany = New System.Windows.Forms.ListView
+        Me.colNo = New System.Windows.Forms.ColumnHeader
+        Me.colCode = New System.Windows.Forms.ColumnHeader
+        Me.colCompanyName = New System.Windows.Forms.ColumnHeader
+        Me.GroupBox1.SuspendLayout()
+        Me.TabControl1.SuspendLayout()
+        Me.TabPage1.SuspendLayout()
+        Me.TabPage2.SuspendLayout()
+        Me.SuspendLayout()
+        '
+        'lstUser
+        '
+        Me.lstUser.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+                    Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.lstUser.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.colStaffId, Me.colFirstName, Me.colLastName, Me.colUsername})
+        Me.lstUser.FullRowSelect = True
+        Me.lstUser.GridLines = True
+        Me.lstUser.Location = New System.Drawing.Point(2, 2)
+        Me.lstUser.Name = "lstUser"
+        Me.lstUser.Size = New System.Drawing.Size(458, 448)
+        Me.lstUser.TabIndex = 0
+        Me.lstUser.UseCompatibleStateImageBehavior = False
+        Me.lstUser.View = System.Windows.Forms.View.Details
+        '
+        'colStaffId
+        '
+        Me.colStaffId.Text = "รหัสพนง."
+        '
+        'colFirstName
+        '
+        Me.colFirstName.Text = "ชื่อ"
+        Me.colFirstName.Width = 112
+        '
+        'colLastName
+        '
+        Me.colLastName.Text = "สกุล"
+        Me.colLastName.Width = 100
+        '
+        'colUsername
+        '
+        Me.colUsername.Text = "Username"
+        Me.colUsername.Width = 111
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.GroupBox1.BackColor = System.Drawing.Color.Gainsboro
+        Me.GroupBox1.Controls.Add(Me.txtLname)
+        Me.GroupBox1.Controls.Add(Me.txtUserName)
+        Me.GroupBox1.Controls.Add(Me.txtFirstName)
+        Me.GroupBox1.Controls.Add(Me.Label2)
+        Me.GroupBox1.Controls.Add(Me.Label6)
+        Me.GroupBox1.Controls.Add(Me.Label1)
+        Me.GroupBox1.Controls.Add(Me.txtStaffId)
+        Me.GroupBox1.Controls.Add(Me.Label3)
+        Me.GroupBox1.Location = New System.Drawing.Point(6, 6)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(512, 118)
+        Me.GroupBox1.TabIndex = 1
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "User Config"
+        '
+        'txtLname
+        '
+        Me.txtLname.Location = New System.Drawing.Point(104, 66)
+        Me.txtLname.Name = "txtLname"
+        Me.txtLname.ReadOnly = True
+        Me.txtLname.Size = New System.Drawing.Size(212, 20)
+        Me.txtLname.TabIndex = 11
+        '
+        'txtUserName
+        '
+        Me.txtUserName.Location = New System.Drawing.Point(104, 90)
+        Me.txtUserName.Name = "txtUserName"
+        Me.txtUserName.ReadOnly = True
+        Me.txtUserName.Size = New System.Drawing.Size(212, 20)
+        Me.txtUserName.TabIndex = 10
+        Me.txtUserName.Text = " "
+        '
+        'txtFirstName
+        '
+        Me.txtFirstName.Location = New System.Drawing.Point(104, 42)
+        Me.txtFirstName.Name = "txtFirstName"
+        Me.txtFirstName.ReadOnly = True
+        Me.txtFirstName.Size = New System.Drawing.Size(212, 20)
+        Me.txtFirstName.TabIndex = 10
+        '
+        'Label2
+        '
+        Me.Label2.Location = New System.Drawing.Point(8, 18)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(96, 18)
+        Me.Label2.TabIndex = 9
+        Me.Label2.Text = "Staff I.D. : "
+        Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'Label6
+        '
+        Me.Label6.Location = New System.Drawing.Point(26, 64)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(78, 18)
+        Me.Label6.TabIndex = 4
+        Me.Label6.Text = "Last Name : "
+        Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'Label1
+        '
+        Me.Label1.Location = New System.Drawing.Point(32, 90)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(72, 18)
+        Me.Label1.TabIndex = 6
+        Me.Label1.Text = "Username : "
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'txtStaffId
+        '
+        Me.txtStaffId.Location = New System.Drawing.Point(104, 18)
+        Me.txtStaffId.Name = "txtStaffId"
+        Me.txtStaffId.ReadOnly = True
+        Me.txtStaffId.Size = New System.Drawing.Size(100, 20)
+        Me.txtStaffId.TabIndex = 7
+        '
+        'Label3
+        '
+        Me.Label3.Location = New System.Drawing.Point(32, 42)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(72, 18)
+        Me.Label3.TabIndex = 6
+        Me.Label3.Text = "First Name : "
+        Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'TreeView1
+        '
+        Me.TreeView1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+                    Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TreeView1.CheckBoxes = True
+        Me.TreeView1.Location = New System.Drawing.Point(11, 130)
+        Me.TreeView1.Name = "TreeView1"
+        TreeNode139.Name = "ImportData"
+        TreeNode139.Text = "Import Data"
+        TreeNode140.Name = "Processingtime"
+        TreeNode140.Text = "ประมวลผลเวลาทำงาน "
+        TreeNode141.Name = "ManageTime"
+        TreeNode141.Text = "แก้ไข/เพิ่ม เวลาทำงาน"
+        TreeNode142.Name = "Overtime"
+        TreeNode142.Text = "คำนวณค่าล่วงเวลา"
+        TreeNode143.Name = "LateTime"
+        TreeNode143.Text = "คำนวณมาสาย/ออกก่อน"
+        TreeNode144.Name = "absenceTime"
+        TreeNode144.Text = "คำนวณขาดงาน"
+        TreeNode145.Name = "Allowance"
+        TreeNode145.Text = "Allowance"
+        TreeNode146.Name = "InputLeaveData"
+        TreeNode146.Text = "คีย์ข้อมูลการลา"
+        TreeNode147.Name = "DailyUpdate"
+        TreeNode147.Text = "Daily Update"
+        TreeNode148.Name = "modelcalculations"
+        TreeNode148.Text = "กำหนดรูปแบบการคำนวณ"
+        TreeNode149.Name = "workinggroup"
+        TreeNode149.Text = "กำหนดกลุ่มเวลาทำงาน - ปกติ/ตามวัน"
+        TreeNode150.Name = "DeterminedTime"
+        TreeNode150.Text = "กำหนดเวลาทำงาน"
+        TreeNode151.Name = "DeterminedTimeEmpByOne"
+        TreeNode151.Text = "กำหนดเวลาทำงานพื้นฐานพนักงานแต่ละคน"
+        TreeNode152.Name = "DeterminedTimeEmpByDate"
+        TreeNode152.Text = "กำหนดเวลาตามวันที่"
+        TreeNode153.Name = "DeterminedTimeEmp"
+        TreeNode153.Text = "กำหนดเวลาให้กับพนักงาน"
+        TreeNode154.Name = "TimeWork"
+        TreeNode154.Text = "เวลาทำงาน"
+        TreeNode155.Name = "setBarcode"
+        TreeNode155.Text = "กำหนด Barcode"
+        TreeNode156.Name = "ProcessOT"
+        TreeNode156.Text = "กำหนดพนักงานคำนวณ OT"
+        TreeNode157.Name = "calculationLate"
+        TreeNode157.Text = "กำหนดพนักงานคำนวณ สาย"
+        TreeNode158.Name = "calculationBreak"
+        TreeNode158.Text = "กำหนดเวลาทำงาน + เวลาพัก"
+        TreeNode159.Name = "Setholiday"
+        TreeNode159.Text = "กำหนดวันหยุดประจำปี"
+        TreeNode160.Name = "SetLeave"
+        TreeNode160.Text = "กำหนดข้อมูลการลา"
+        TreeNode161.Name = "SetabsenceTimeByYear"
+        TreeNode161.Text = "กำหนดสิทธิการลาในแต่ละปี"
+        TreeNode162.Name = "conditionslate"
+        TreeNode162.Text = "กำหนดเงือนไขการหักมาสาย"
+        TreeNode163.Name = "conditionslatesomeone"
+        TreeNode163.Text = "กำหนดเงื่อนไขสาย - กรณีหักยอดเดียว"
+        TreeNode164.Name = "conditionslatebyRate"
+        TreeNode164.Text = "กำหนดเงื่อนไขสาย - สายหักเงินตาม Rate"
+        TreeNode165.Name = "setconditionsLate"
+        TreeNode165.Text = "กำหนดเงือนไขการสาย"
+        TreeNode166.Name = "setdelaytime"
+        TreeNode166.Text = "กำหนดพนักงาน ใช้เวลาหน่วง"
+        TreeNode167.Name = "setdelayOT"
+        TreeNode167.Text = "กำหนดเวลาหน่วงการทำ OT"
+        TreeNode168.Name = "setOT"
+        TreeNode168.Text = "กำหนดเวลาหน่วงการทำ OT"
+        TreeNode169.Name = "setovertimepay"
+        TreeNode169.Text = "กำหนดค่าล่วงเวลา - กรณีจ่ายเป็นเงิน"
+        TreeNode170.Name = "setAllowance "
+        TreeNode170.Text = "กำหนดเงื่อนไขจ่าย Allowance อัตโนมัติ"
+        TreeNode171.Name = "LinkCodePayroll "
+        TreeNode171.Text = "กำหนด Link Code กับ Payroll"
+        TreeNode172.Name = "Configuration"
+        TreeNode172.Text = "Configuration"
+        TreeNode173.Name = "rptTimeWork"
+        TreeNode173.Text = "บัญชีลงเวลาทำงาน"
+        TreeNode174.Name = "rptTimeWorkLateByOne"
+        TreeNode174.Text = "รายงานแสดงเวลาทำงาน/ข้อมูลมาสาย ของพนักงานแต่ละคน"
+        TreeNode175.Name = "rptTimeSheet"
+        TreeNode175.Text = "Time Sheet"
+        TreeNode176.Name = "rptAllemployeework"
+        TreeNode176.Text = "Report all employee's work"
+        TreeNode177.Name = "rptEmpWorkDetail1"
+        TreeNode177.Text = "รายงานเวลาทำงานของพนักงาน(แบบละเอียด)"
+        TreeNode178.Name = "rptEmpWorkDetail2"
+        TreeNode178.Text = "รายงานเวลาทำงานของพนักงาน แบบที่ 2"
+        TreeNode179.Name = "rptEmployeework"
+        TreeNode179.Text = "รายงานเวลาทำงานของพนักงาน"
+        TreeNode180.Name = "rptOT"
+        TreeNode180.Text = "รายงาน OT"
+        TreeNode181.Name = "rptSumaryMonth"
+        TreeNode181.Text = "สรุปยอดประจำเดือน"
+        TreeNode182.Name = "rptrptSumaryMonthLateByBath"
+        TreeNode182.Text = "รายงาน สรุปยอด สาย - ขาด (บาท) รายเดือน"
+        TreeNode183.Name = "rptScheduleWorkAllEmp"
+        TreeNode183.Text = "รายงานตารางการทำงาน ของพนักงานทั้งหมด"
+        TreeNode184.Name = "ConfigSummaryScheduleWorkAllEmp"
+        TreeNode184.Text = "กำหนด Config Column"
+        TreeNode185.Name = "rptSummaryScheduleWorkAllEmp"
+        TreeNode185.Text = "รายงานเวลาการทำงานของพนักงาน(แบบสรุป)"
+        TreeNode186.Name = "SummaryScheduleWorkAllEmp"
+        TreeNode186.Text = "รายงานเวลาการทำงานของพนักงาน(แบบสรุป)"
+        TreeNode187.Name = "ConfigEmpNotWork"
+        TreeNode187.Text = "กำหนด Config Column"
+        TreeNode188.Name = "rptEmpNotWork" & Global.Microsoft.VisualBasic.ChrW(9)
+        TreeNode188.Text = "รายงานของพนักงานที่ไม่มาทำงาน"
+        TreeNode189.Name = "EmpNotWork"
+        TreeNode189.Text = "รายงานของพนักงานที่ไม่มาทำงาน"
+        TreeNode190.Name = "rptemployeeByDate"
+        TreeNode190.Text = "รายงานการลาขาดสายของพนักงาน ประจำวัน"
+        TreeNode191.Name = "ConfogSumaryemployee"
+        TreeNode191.Text = "กำหนด Config Column"
+        TreeNode192.Name = "rptSumaryemployee"
+        TreeNode192.Text = "รายงาน มาสาย/ลา/ขาด ของพนักงาน(แบบสรุป)"
+        TreeNode193.Name = "Sumaryemployee"
+        TreeNode193.Text = "รายงาน มาสาย/ลา/ขาด ของพนักงาน(แบบสรุป)"
+        TreeNode194.Name = "rptMaximumOThoursdaysweeksyear   "
+        TreeNode194.Text = "รายงาน ชั่วโมง O.T. สูงสุด/วัน/สัปดาห์  ประจำปี"
+        TreeNode195.Name = "rptNormalworkinghoursOTByWeek"
+        TreeNode195.Text = "รายงานทำงานปกติ + ชั่วโมง O.T. / ต่อสัปดาห์ "
+        TreeNode196.Name = "ConfigSumaryHolidayInYears"
+        TreeNode196.Text = "กำหนด Config Column"
+        TreeNode197.Name = "rptSumaryHolidayInYears"
+        TreeNode197.Text = "รายงานสรุปการหยุดประจำปี"
+        TreeNode198.Name = "SumaryHolidayInYears"
+        TreeNode198.Text = "รายงานสรุปการหยุดประจำปี"
+        TreeNode199.Name = "prtAllowance "
+        TreeNode199.Text = "รายงาน Allowance"
+        TreeNode200.Name = "RptSumary"
+        TreeNode200.Text = "รายงานสรุปยอด"
+        TreeNode201.Name = "RptSumaryByMonth"
+        TreeNode201.Text = "สรุปรายงานประจำเดือน"
+        TreeNode202.Name = "RptSumaryByYear"
+        TreeNode202.Text = "สรุปรายงานประจำปี"
+        TreeNode203.Name = "Report"
+        TreeNode203.Text = "รายงาน"
+        TreeNode204.Name = "Windows  "
+        TreeNode204.Text = "Windows"
+        TreeNode205.Name = "ConfigPermission"
+        TreeNode205.Text = "กำหนด User และ สิทธิ์"
+        TreeNode206.Name = "Permission"
+        TreeNode206.Text = "กำหนดสิทธิ์"
+        TreeNode207.Name = "Exitx"
+        TreeNode207.Text = "Exit"
+        Me.TreeView1.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode147, TreeNode172, TreeNode203, TreeNode204, TreeNode206, TreeNode207})
+        Me.TreeView1.Size = New System.Drawing.Size(511, 252)
+        Me.TreeView1.TabIndex = 2
+        '
+        'btnExit
+        '
+        Me.btnExit.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.btnExit.Location = New System.Drawing.Point(701, 426)
+        Me.btnExit.Name = "btnExit"
+        Me.btnExit.Size = New System.Drawing.Size(75, 23)
+        Me.btnExit.TabIndex = 10
+        Me.btnExit.Text = "Exit"
+        Me.btnExit.UseVisualStyleBackColor = True
+        '
+        'btnRefresh
+        '
+        Me.btnRefresh.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.btnRefresh.Location = New System.Drawing.Point(623, 426)
+        Me.btnRefresh.Name = "btnRefresh"
+        Me.btnRefresh.Size = New System.Drawing.Size(75, 23)
+        Me.btnRefresh.TabIndex = 9
+        Me.btnRefresh.Text = "Refresh"
+        Me.btnRefresh.UseVisualStyleBackColor = True
+        '
+        'btnDelete
+        '
+        Me.btnDelete.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.btnDelete.Location = New System.Drawing.Point(545, 426)
+        Me.btnDelete.Name = "btnDelete"
+        Me.btnDelete.Size = New System.Drawing.Size(75, 23)
+        Me.btnDelete.TabIndex = 8
+        Me.btnDelete.Text = "Delete"
+        Me.btnDelete.UseVisualStyleBackColor = True
+        '
+        'btnEdit
+        '
+        Me.btnEdit.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.btnEdit.Location = New System.Drawing.Point(891, 426)
+        Me.btnEdit.Name = "btnEdit"
+        Me.btnEdit.Size = New System.Drawing.Size(75, 23)
+        Me.btnEdit.TabIndex = 7
+        Me.btnEdit.Text = "Save"
+        Me.btnEdit.UseVisualStyleBackColor = True
+        Me.btnEdit.Visible = False
+        '
+        'btnAdd
+        '
+        Me.btnAdd.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.btnAdd.Location = New System.Drawing.Point(464, 426)
+        Me.btnAdd.Name = "btnAdd"
+        Me.btnAdd.Size = New System.Drawing.Size(75, 23)
+        Me.btnAdd.TabIndex = 6
+        Me.btnAdd.Text = "Save"
+        Me.btnAdd.UseVisualStyleBackColor = True
+        '
+        'TabControl1
+        '
+        Me.TabControl1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+                    Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TabControl1.Controls.Add(Me.TabPage1)
+        Me.TabControl1.Controls.Add(Me.TabPage2)
+        Me.TabControl1.Location = New System.Drawing.Point(466, 2)
+        Me.TabControl1.Name = "TabControl1"
+        Me.TabControl1.SelectedIndex = 0
+        Me.TabControl1.Size = New System.Drawing.Size(533, 418)
+        Me.TabControl1.TabIndex = 12
+        '
+        'TabPage1
+        '
+        Me.TabPage1.Controls.Add(Me.GroupBox1)
+        Me.TabPage1.Controls.Add(Me.TreeView1)
+        Me.TabPage1.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage1.Name = "TabPage1"
+        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage1.Size = New System.Drawing.Size(525, 392)
+        Me.TabPage1.TabIndex = 0
+        Me.TabPage1.Text = "User"
+        Me.TabPage1.UseVisualStyleBackColor = True
+        '
+        'TabPage2
+        '
+        Me.TabPage2.Controls.Add(Me.LstCompany)
+        Me.TabPage2.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage2.Name = "TabPage2"
+        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage2.Size = New System.Drawing.Size(525, 392)
+        Me.TabPage2.TabIndex = 1
+        Me.TabPage2.Text = "Company"
+        Me.TabPage2.UseVisualStyleBackColor = True
+        '
+        'LstCompany
+        '
+        Me.LstCompany.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+                    Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.LstCompany.CheckBoxes = True
+        Me.LstCompany.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.colNo, Me.colCode, Me.colCompanyName})
+        Me.LstCompany.FullRowSelect = True
+        Me.LstCompany.GridLines = True
+        Me.LstCompany.Location = New System.Drawing.Point(6, 6)
+        Me.LstCompany.Name = "LstCompany"
+        Me.LstCompany.Size = New System.Drawing.Size(512, 380)
+        Me.LstCompany.TabIndex = 0
+        Me.LstCompany.UseCompatibleStateImageBehavior = False
+        Me.LstCompany.View = System.Windows.Forms.View.Details
+        '
+        'colNo
+        '
+        Me.colNo.Text = "ลำดับ"
+        Me.colNo.Width = 68
+        '
+        'colCode
+        '
+        Me.colCode.Text = "รหัสบริษัท"
+        Me.colCode.Width = 71
+        '
+        'colCompanyName
+        '
+        Me.colCompanyName.Text = "ชื่อบริษัท"
+        Me.colCompanyName.Width = 290
+        '
+        'frmRightManagementControl
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.ClientSize = New System.Drawing.Size(1000, 451)
+        Me.Controls.Add(Me.TabControl1)
+        Me.Controls.Add(Me.btnExit)
+        Me.Controls.Add(Me.btnRefresh)
+        Me.Controls.Add(Me.btnDelete)
+        Me.Controls.Add(Me.btnEdit)
+        Me.Controls.Add(Me.btnAdd)
+        Me.Controls.Add(Me.lstUser)
+        Me.Name = "frmRightManagementControl"
+        Me.Text = "Right Management Control"
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
+        Me.TabControl1.ResumeLayout(False)
+        Me.TabPage1.ResumeLayout(False)
+        Me.TabPage2.ResumeLayout(False)
+        Me.ResumeLayout(False)
+
+    End Sub
+    Friend WithEvents lstUser As System.Windows.Forms.ListView
+    Friend WithEvents colStaffId As System.Windows.Forms.ColumnHeader
+    Friend WithEvents colFirstName As System.Windows.Forms.ColumnHeader
+    Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
+    Friend WithEvents colUsername As System.Windows.Forms.ColumnHeader
+    Friend WithEvents txtLname As System.Windows.Forms.TextBox
+    Friend WithEvents txtUserName As System.Windows.Forms.TextBox
+    Friend WithEvents txtFirstName As System.Windows.Forms.TextBox
+    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents Label6 As System.Windows.Forms.Label
+    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents txtStaffId As System.Windows.Forms.TextBox
+    Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents TreeView1 As System.Windows.Forms.TreeView
+    Friend WithEvents btnExit As System.Windows.Forms.Button
+    Friend WithEvents btnRefresh As System.Windows.Forms.Button
+    Friend WithEvents btnDelete As System.Windows.Forms.Button
+    Friend WithEvents btnEdit As System.Windows.Forms.Button
+    Friend WithEvents btnAdd As System.Windows.Forms.Button
+    Friend WithEvents colLastName As System.Windows.Forms.ColumnHeader
+    Friend WithEvents TabControl1 As System.Windows.Forms.TabControl
+    Friend WithEvents TabPage1 As System.Windows.Forms.TabPage
+    Friend WithEvents TabPage2 As System.Windows.Forms.TabPage
+    Friend WithEvents LstCompany As System.Windows.Forms.ListView
+    Friend WithEvents colNo As System.Windows.Forms.ColumnHeader
+    Friend WithEvents colCode As System.Windows.Forms.ColumnHeader
+    Friend WithEvents colCompanyName As System.Windows.Forms.ColumnHeader
+End Class

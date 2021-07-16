@@ -1,0 +1,316 @@
+<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+Partial Class frmSetBarcode
+    Inherits System.Windows.Forms.Form
+
+    'Form overrides dispose to clean up the component list.
+    <System.Diagnostics.DebuggerNonUserCode()> _
+    Protected Overrides Sub Dispose(ByVal disposing As Boolean)
+        If disposing AndAlso components IsNot Nothing Then
+            components.Dispose()
+        End If
+        MyBase.Dispose(disposing)
+    End Sub
+
+    'Required by the Windows Form Designer
+    Private components As System.ComponentModel.IContainer
+
+    'NOTE: The following procedure is required by the Windows Form Designer
+    'It can be modified using the Windows Form Designer.  
+    'Do not modify it using the code editor.
+    <System.Diagnostics.DebuggerStepThrough()> _
+    Private Sub InitializeComponent()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox
+        Me.lstEmp = New System.Windows.Forms.ListView
+        Me.colNO = New System.Windows.Forms.ColumnHeader
+        Me.colCode = New System.Windows.Forms.ColumnHeader
+        Me.colName = New System.Windows.Forms.ColumnHeader
+        Me.colSName = New System.Windows.Forms.ColumnHeader
+        Me.Barcode = New System.Windows.Forms.ColumnHeader
+        Me.colDepartment = New System.Windows.Forms.ColumnHeader
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox
+        Me.btnSearch = New System.Windows.Forms.Button
+        Me.txtEmpNameSearch = New System.Windows.Forms.TextBox
+        Me.cboDepartment = New System.Windows.Forms.ComboBox
+        Me.Label2 = New System.Windows.Forms.Label
+        Me.Label1 = New System.Windows.Forms.Label
+        Me.Label3 = New System.Windows.Forms.Label
+        Me.txtCode = New System.Windows.Forms.TextBox
+        Me.lblEmpName = New System.Windows.Forms.Label
+        Me.txtBarcode = New System.Windows.Forms.TextBox
+        Me.Label5 = New System.Windows.Forms.Label
+        Me.btnSave = New System.Windows.Forms.Button
+        Me.btnExit = New System.Windows.Forms.Button
+        Me.lblDeptID = New System.Windows.Forms.Label
+        Me.btnAutoGenBarcode = New System.Windows.Forms.Button
+        Me.Label4 = New System.Windows.Forms.Label
+        Me.cboCompany = New System.Windows.Forms.ComboBox
+        Me.GroupBox1.SuspendLayout()
+        Me.GroupBox2.SuspendLayout()
+        Me.SuspendLayout()
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+                    Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.GroupBox1.Controls.Add(Me.lstEmp)
+        Me.GroupBox1.Location = New System.Drawing.Point(4, 232)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(740, 298)
+        Me.GroupBox1.TabIndex = 3
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "รายชื่อพนักงานทั้งหมด"
+        '
+        'lstEmp
+        '
+        Me.lstEmp.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+                    Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lstEmp.CheckBoxes = True
+        Me.lstEmp.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.colNO, Me.colCode, Me.colName, Me.colSName, Me.Barcode, Me.colDepartment})
+        Me.lstEmp.FullRowSelect = True
+        Me.lstEmp.GridLines = True
+        Me.lstEmp.Location = New System.Drawing.Point(6, 16)
+        Me.lstEmp.Name = "lstEmp"
+        Me.lstEmp.Size = New System.Drawing.Size(726, 276)
+        Me.lstEmp.TabIndex = 0
+        Me.lstEmp.UseCompatibleStateImageBehavior = False
+        Me.lstEmp.View = System.Windows.Forms.View.Details
+        '
+        'colNO
+        '
+        Me.colNO.Text = "#"
+        Me.colNO.Width = 44
+        '
+        'colCode
+        '
+        Me.colCode.Text = "รหัสพนง."
+        Me.colCode.Width = 129
+        '
+        'colName
+        '
+        Me.colName.Text = "ชื่อ"
+        Me.colName.Width = 119
+        '
+        'colSName
+        '
+        Me.colSName.Text = "สกุล"
+        Me.colSName.Width = 136
+        '
+        'Barcode
+        '
+        Me.Barcode.Text = "BarCode"
+        Me.Barcode.Width = 234
+        '
+        'colDepartment
+        '
+        Me.colDepartment.Text = "แผนก"
+        Me.colDepartment.Width = 162
+        '
+        'GroupBox2
+        '
+        Me.GroupBox2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.GroupBox2.Controls.Add(Me.btnSearch)
+        Me.GroupBox2.Controls.Add(Me.txtEmpNameSearch)
+        Me.GroupBox2.Controls.Add(Me.cboCompany)
+        Me.GroupBox2.Controls.Add(Me.cboDepartment)
+        Me.GroupBox2.Controls.Add(Me.Label4)
+        Me.GroupBox2.Controls.Add(Me.Label2)
+        Me.GroupBox2.Controls.Add(Me.Label1)
+        Me.GroupBox2.Location = New System.Drawing.Point(4, 119)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(738, 107)
+        Me.GroupBox2.TabIndex = 4
+        Me.GroupBox2.TabStop = False
+        Me.GroupBox2.Text = "ค้นหา"
+        '
+        'btnSearch
+        '
+        Me.btnSearch.Location = New System.Drawing.Point(407, 17)
+        Me.btnSearch.Name = "btnSearch"
+        Me.btnSearch.Size = New System.Drawing.Size(140, 80)
+        Me.btnSearch.TabIndex = 2
+        Me.btnSearch.Text = "ค้นหา/Refresh"
+        Me.btnSearch.UseVisualStyleBackColor = True
+        '
+        'txtEmpNameSearch
+        '
+        Me.txtEmpNameSearch.Location = New System.Drawing.Point(110, 71)
+        Me.txtEmpNameSearch.Name = "txtEmpNameSearch"
+        Me.txtEmpNameSearch.Size = New System.Drawing.Size(278, 20)
+        Me.txtEmpNameSearch.TabIndex = 0
+        '
+        'cboDepartment
+        '
+        Me.cboDepartment.FormattingEnabled = True
+        Me.cboDepartment.Location = New System.Drawing.Point(110, 44)
+        Me.cboDepartment.Name = "cboDepartment"
+        Me.cboDepartment.Size = New System.Drawing.Size(278, 21)
+        Me.cboDepartment.TabIndex = 1
+        '
+        'Label2
+        '
+        Me.Label2.Location = New System.Drawing.Point(14, 73)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(96, 16)
+        Me.Label2.TabIndex = 2
+        Me.Label2.Text = "ชื่อ - สกุล : "
+        Me.Label2.TextAlign = System.Drawing.ContentAlignment.TopRight
+        '
+        'Label1
+        '
+        Me.Label1.Location = New System.Drawing.Point(14, 48)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(96, 16)
+        Me.Label1.TabIndex = 2
+        Me.Label1.Text = "แผนก : "
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.TopRight
+        '
+        'Label3
+        '
+        Me.Label3.Location = New System.Drawing.Point(4, 6)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(96, 16)
+        Me.Label3.TabIndex = 2
+        Me.Label3.Text = "รหัส : "
+        Me.Label3.TextAlign = System.Drawing.ContentAlignment.TopRight
+        '
+        'txtCode
+        '
+        Me.txtCode.Location = New System.Drawing.Point(106, 4)
+        Me.txtCode.Name = "txtCode"
+        Me.txtCode.Size = New System.Drawing.Size(120, 20)
+        Me.txtCode.TabIndex = 0
+        '
+        'lblEmpName
+        '
+        Me.lblEmpName.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.lblEmpName.Location = New System.Drawing.Point(230, 4)
+        Me.lblEmpName.Name = "lblEmpName"
+        Me.lblEmpName.Size = New System.Drawing.Size(394, 20)
+        Me.lblEmpName.TabIndex = 2
+        Me.lblEmpName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'txtBarcode
+        '
+        Me.txtBarcode.Location = New System.Drawing.Point(106, 30)
+        Me.txtBarcode.Name = "txtBarcode"
+        Me.txtBarcode.Size = New System.Drawing.Size(282, 20)
+        Me.txtBarcode.TabIndex = 1
+        '
+        'Label5
+        '
+        Me.Label5.Location = New System.Drawing.Point(4, 32)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(96, 16)
+        Me.Label5.TabIndex = 2
+        Me.Label5.Text = "Barcode : "
+        Me.Label5.TextAlign = System.Drawing.ContentAlignment.TopRight
+        '
+        'btnSave
+        '
+        Me.btnSave.Location = New System.Drawing.Point(8, 58)
+        Me.btnSave.Name = "btnSave"
+        Me.btnSave.Size = New System.Drawing.Size(162, 48)
+        Me.btnSave.TabIndex = 2
+        Me.btnSave.Text = "บันทึก"
+        Me.btnSave.UseVisualStyleBackColor = True
+        '
+        'btnExit
+        '
+        Me.btnExit.Location = New System.Drawing.Point(172, 58)
+        Me.btnExit.Name = "btnExit"
+        Me.btnExit.Size = New System.Drawing.Size(162, 48)
+        Me.btnExit.TabIndex = 3
+        Me.btnExit.Text = "ออก"
+        Me.btnExit.UseVisualStyleBackColor = True
+        '
+        'lblDeptID
+        '
+        Me.lblDeptID.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblDeptID.Location = New System.Drawing.Point(398, 32)
+        Me.lblDeptID.Name = "lblDeptID"
+        Me.lblDeptID.Size = New System.Drawing.Size(96, 20)
+        Me.lblDeptID.TabIndex = 6
+        Me.lblDeptID.TextAlign = System.Drawing.ContentAlignment.TopRight
+        Me.lblDeptID.Visible = False
+        '
+        'btnAutoGenBarcode
+        '
+        Me.btnAutoGenBarcode.Location = New System.Drawing.Point(357, 58)
+        Me.btnAutoGenBarcode.Name = "btnAutoGenBarcode"
+        Me.btnAutoGenBarcode.Size = New System.Drawing.Size(216, 48)
+        Me.btnAutoGenBarcode.TabIndex = 7
+        Me.btnAutoGenBarcode.Text = "กำหนดรหัส Barcode กับ รหัสพนักงาน เดียวกัน"
+        Me.btnAutoGenBarcode.UseVisualStyleBackColor = True
+        '
+        'Label4
+        '
+        Me.Label4.Location = New System.Drawing.Point(14, 21)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(96, 16)
+        Me.Label4.TabIndex = 2
+        Me.Label4.Text = "บริษัท : "
+        Me.Label4.TextAlign = System.Drawing.ContentAlignment.TopRight
+        '
+        'cboCompany
+        '
+        Me.cboCompany.FormattingEnabled = True
+        Me.cboCompany.Location = New System.Drawing.Point(110, 17)
+        Me.cboCompany.Name = "cboCompany"
+        Me.cboCompany.Size = New System.Drawing.Size(278, 21)
+        Me.cboCompany.TabIndex = 1
+        '
+        'frmSetBarcode
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.ClientSize = New System.Drawing.Size(748, 533)
+        Me.Controls.Add(Me.btnAutoGenBarcode)
+        Me.Controls.Add(Me.lblDeptID)
+        Me.Controls.Add(Me.btnExit)
+        Me.Controls.Add(Me.btnSave)
+        Me.Controls.Add(Me.GroupBox2)
+        Me.Controls.Add(Me.txtBarcode)
+        Me.Controls.Add(Me.txtCode)
+        Me.Controls.Add(Me.GroupBox1)
+        Me.Controls.Add(Me.lblEmpName)
+        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.Label3)
+        Me.KeyPreview = True
+        Me.Name = "frmSetBarcode"
+        Me.Text = "กำหนดรหัส Barcode"
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox2.ResumeLayout(False)
+        Me.GroupBox2.PerformLayout()
+        Me.ResumeLayout(False)
+        Me.PerformLayout()
+
+    End Sub
+    Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
+    Friend WithEvents lstEmp As System.Windows.Forms.ListView
+    Friend WithEvents colNO As System.Windows.Forms.ColumnHeader
+    Friend WithEvents colName As System.Windows.Forms.ColumnHeader
+    Friend WithEvents colSName As System.Windows.Forms.ColumnHeader
+    Friend WithEvents Barcode As System.Windows.Forms.ColumnHeader
+    Friend WithEvents colDepartment As System.Windows.Forms.ColumnHeader
+    Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
+    Friend WithEvents btnSearch As System.Windows.Forms.Button
+    Friend WithEvents txtEmpNameSearch As System.Windows.Forms.TextBox
+    Friend WithEvents cboDepartment As System.Windows.Forms.ComboBox
+    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents txtCode As System.Windows.Forms.TextBox
+    Friend WithEvents lblEmpName As System.Windows.Forms.Label
+    Friend WithEvents txtBarcode As System.Windows.Forms.TextBox
+    Friend WithEvents Label5 As System.Windows.Forms.Label
+    Friend WithEvents btnSave As System.Windows.Forms.Button
+    Friend WithEvents btnExit As System.Windows.Forms.Button
+    Friend WithEvents lblDeptID As System.Windows.Forms.Label
+    Friend WithEvents colCode As System.Windows.Forms.ColumnHeader
+    Friend WithEvents btnAutoGenBarcode As System.Windows.Forms.Button
+    Friend WithEvents cboCompany As System.Windows.Forms.ComboBox
+    Friend WithEvents Label4 As System.Windows.Forms.Label
+End Class

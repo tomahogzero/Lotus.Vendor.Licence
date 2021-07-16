@@ -1,0 +1,253 @@
+Imports System.Data
+Imports System.Data.SqlClient
+
+Public Class frmHolidayYear
+
+    Private Sub frmHolidayYear_Disposed(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Disposed
+        fHolidayYear = Nothing
+    End Sub
+
+    Private Sub frmHolidayYear_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles Me.KeyPress
+        If Asc(e.KeyChar) = 13 Then
+            'If e.KeyChar = Microsoft.VisualBasic.ChrW(Keys.Enter) Then
+            If TypeOf Me.ActiveControl Is TextBox Then
+                Dim tb As TextBox = DirectCast(Me.ActiveControl, TextBox)
+                If tb.Multiline AndAlso tb.AcceptsReturn Then
+                    e.Handled = False
+                    Exit Sub
+                End If
+            End If
+            e.Handled = True
+            Dim oform As Form = Me.FindForm
+            oform.SelectNextControl(oform.ActiveControl, True, True, True, True)
+            oform.ActiveControl.Focus()
+        End If
+    End Sub
+
+    Private Sub ClearData()
+        txtDate.Text = ""
+        txtDescription.Text = ""
+        txtRemark.Text = ""
+    End Sub
+
+    Private Sub EnaCmd(ByVal Add As Boolean, ByVal Edit As Boolean, ByVal Delete As Boolean)
+        btnAdd.Enabled = Add
+        btnEdit.Enabled = Edit
+        btnDelete.Enabled = Delete
+    End Sub
+
+    Private Sub LoadData()
+        Dim Da As New SqlDataAdapter
+        Dim Ds As New DataSet
+        Dim strSQL As String
+        Dim Year As Integer
+        Dim List As New ListViewItem
+        Dim arrData() As String
+        If IsNumeric(txtYear.Text.Trim) = False Then
+            Year = 0
+        Else
+            Year = txtYear.Text.Trim
+        End If
+
+        strSQL = "Select * From TimeHolidayYear"
+        If rdYear.Checked = True Then
+            strSQL &= " Where Year([Date]) = " & Year
+        End If
+        strSQL &= " Order By [Date]"
+
+        Da = New SqlDataAdapter(strSQL, Conn)
+        Da.Fill(Ds, "Data")
+        With Ds.Tables("Data")
+            Dim I As Integer
+            lstHoliday.Items.Clear()
+            For I = 0 To .Rows.Count - 1
+                arrData = New String() {I + 1, _
+                                        Format(.Rows(I).Item("Date"), "dd/MM/yyyy"), _
+                                        .Rows(I).Item("Description"), _
+                                        .Rows(I).Item("Remark")}
+                List = New ListViewItem(arrData)
+                lstHoliday.Items.Add(List)
+            Next
+            Ds.Clear()
+        End With
+    End Sub
+
+    Private Sub frmHolidayYear_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+        txtYear.Text = Date.Now.Year
+        Call ClearData()
+        Call LoadData()
+        Call EnaCmd(True, False, False)
+    End Sub
+
+    Private Sub btnClear_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnClear.Click
+        Call ClearData()
+        Call LoadData()
+        txtDate.Focus()
+        txtDate.SelectAll()
+        Call EnaCmd(True, False, False)
+    End Sub
+
+    Private Sub btnAdd_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAdd.Click
+        If IsDate(ConvertDate(txtDate.Text)) = False Then
+            MsgBox("กรุณาป้อนวันที่ให้ถูกต้องด้วย", MsgBoxStyle.Information, Me.Text)
+            txtDate.Focus()
+            txtDate.SelectAll()
+            Exit Sub
+        End If
+        If txtDescription.Text.Trim = "" Then
+            MsgBox("กรุณาป้อนวันหยุดด้วย", MsgBoxStyle.Information, Me.Text)
+            txtDescription.Focus()
+            txtDescription.SelectAll()
+            Exit Sub
+        End If
+
+        Dim dCmd As New SqlCommand
+        Dim strSQL As String
+        Dim Tn As SqlTransaction
+        Tn = Conn.BeginTransaction
+        dCmd.Transaction = Tn
+        Try
+            strSQL = "Delete From TimeHolidayYear" & _
+                    " Where Convert(nVarchar(10),[Date],111) = '" & ConvertDate(txtDate.Text.Trim) & "'"
+            dCmd.Connection = Conn
+            dCmd.CommandText = strSQL
+            dCmd.ExecuteNonQuery()
+
+            strSQL = "Insert Into TimeHolidayYear([Date],Description,Remark) Values(" & _
+                    " '" & ConvertDate(txtDate.Text.Trim) & "'," & _
+                    " '" & txtDescription.Text.Trim & "'," & _
+                    " '" & txtRemark.Text.Trim & "')"
+            dCmd.Connection = Conn
+            dCmd.CommandText = strSQL
+            dCmd.ExecuteNonQuery()
+
+            Tn.Commit()
+        Catch ex As Exception
+            Tn.Rollback()
+            MsgBox(ex.Message, MsgBoxStyle.Critical, Me.Text)
+            Exit Sub
+        End Try
+        Call btnClear_Click(Me, System.EventArgs.Empty)
+    End Sub
+
+    Private Sub btnDelete_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnDelete.Click
+        Dim dCmd As New SqlCommand
+        Dim strSQL As String
+        Dim Tn As SqlTransaction
+        Tn = Conn.BeginTransaction
+        dCmd.Transaction = Tn
+        Try
+            strSQL = "Delete From TimeHolidayYear" & _
+                    " Where Convert(nVarchar(10),[Date],111) = '" & ConvertDate(txtDate.Text.Trim) & "'"
+            dCmd.Connection = Conn
+            dCmd.CommandText = strSQL
+            dCmd.ExecuteNonQuery()
+
+            Tn.Commit()
+        Catch ex As Exception
+            Tn.Rollback()
+            MsgBox(ex.Message, MsgBoxStyle.Critical, Me.Text)
+            Exit Sub
+        End Try
+        Call btnClear_Click(Me, System.EventArgs.Empty)
+    End Sub
+
+    Private Sub txtDate_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtDate.LostFocus
+        Dim Da As New SqlDataAdapter
+        Dim Ds As New DataSet
+        Dim strSQL As String
+        strSQL = "Select * From TimeHolidayYear" & _
+                " Where Convert(nVarchar(10),[Date],111) = '" & ConvertDate(txtDate.Text.Trim) & "'"
+        Da = New SqlDataAdapter(strSQL, Conn)
+        Da.Fill(Ds, "Data")
+        With Ds.Tables("data")
+            If .Rows.Count = 0 Then
+                Call EnaCmd(True, False, False)
+                Ds.Clear()
+                Exit Sub
+            End If
+            txtDescription.Text = .Rows(0).Item("Description")
+            txtRemark.Text = .Rows(0).Item("Remark")
+            Ds.Clear()
+            Call EnaCmd(False, True, True)
+        End With
+    End Sub
+
+    Private Sub btnRefresh_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnRefresh.Click
+        Call LoadData()
+    End Sub
+
+    Private Sub rdAll_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles rdAll.CheckedChanged
+        Call LoadData()
+    End Sub
+
+    Private Sub rdYear_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles rdYear.CheckedChanged
+        Call LoadData()
+    End Sub
+
+    Private Sub lstHoliday_DoubleClick(ByVal sender As Object, ByVal e As System.EventArgs) Handles lstHoliday.DoubleClick
+        With lstHoliday
+            If .SelectedItems.Count = 0 Then Exit Sub
+            txtDate.Text = .SelectedItems(0).SubItems(1).Text.Trim
+            txtDescription.Text = .SelectedItems(0).SubItems(2).Text.Trim
+            txtRemark.Text = .SelectedItems(0).SubItems(3).Text.Trim
+            Call EnaCmd(False, True, True)
+        End With
+    End Sub
+
+   
+    Private Sub btnExit_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnExit.Click
+        Me.Close()
+    End Sub
+
+    Private Sub lstHoliday_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles lstHoliday.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub txtDate_MaskInputRejected(ByVal sender As System.Object, ByVal e As System.Windows.Forms.MaskInputRejectedEventArgs) Handles txtDate.MaskInputRejected
+
+    End Sub
+
+    Private Sub btnEdit_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnEdit.Click
+        If IsDate(ConvertDate(txtDate.Text)) = False Then
+            MsgBox("กรุณาป้อนวันที่ให้ถูกต้องด้วย", MsgBoxStyle.Information, Me.Text)
+            txtDate.Focus()
+            txtDate.SelectAll()
+            Exit Sub
+        End If
+        If txtDescription.Text.Trim = "" Then
+            MsgBox("กรุณาป้อนวันหยุดด้วย", MsgBoxStyle.Information, Me.Text)
+            txtDescription.Focus()
+            txtDescription.SelectAll()
+            Exit Sub
+        End If
+
+        Dim dCmd As New SqlCommand
+        Dim strSQL As String
+        Dim Tn As SqlTransaction
+        Tn = Conn.BeginTransaction
+        dCmd.Transaction = Tn
+        Try
+            strSQL = "Delete From TimeHolidayYear" & _
+                    " Where Convert(nVarchar(10),[Date],111) = '" & ConvertDate(txtDate.Text.Trim) & "'"
+            dCmd.Connection = Conn
+            dCmd.CommandText = strSQL
+            dCmd.ExecuteNonQuery()
+
+            strSQL = "Insert Into TimeHolidayYear([Date],Description,Remark) Values(" & _
+                    " '" & ConvertDate(txtDate.Text.Trim) & "'," & _
+                    " '" & txtDescription.Text.Trim & "'," & _
+                    " '" & txtRemark.Text.Trim & "')"
+            dCmd.Connection = Conn
+            dCmd.CommandText = strSQL
+            dCmd.ExecuteNonQuery()
+
+            Tn.Commit()
+        Catch ex As Exception
+            Tn.Rollback()
+            MsgBox(ex.Message, MsgBoxStyle.Critical, Me.Text)
+            Exit Sub
+        End Try
+        Call btnClear_Click(Me, System.EventArgs.Empty)
+    End Sub
+End Class

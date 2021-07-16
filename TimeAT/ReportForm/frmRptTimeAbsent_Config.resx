@@ -1,0 +1,716 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="cboVLink8.ItemHeight" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="txtVCol7.ButtonCustom2.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="LabelX13.Location" type="System.Drawing.Point, System.Drawing">
+    <value>138, 12</value>
+  </data>
+  <data name="btnExit.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;txtVCol2.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.TextBoxX, DevComponents.DotNetBar2, Version=10.0.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b</value>
+  </data>
+  <data name="&gt;&gt;btnSave.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;txtVCol7.Parent" xml:space="preserve">
+    <value>GroupPanel1</value>
+  </data>
+  <data name="cboVLink8.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="&gt;&gt;cboVLink4.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.ComboBoxEx, DevComponents.DotNetBar2, Version=10.0.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b</value>
+  </data>
+  <data name="txtVCol6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 167</value>
+  </data>
+  <data name="cboVLink8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>201, 20</value>
+  </data>
+  <data name="&gt;&gt;txtVCol4.Parent" xml:space="preserve">
+    <value>GroupPanel1</value>
+  </data>
+  <data name="&gt;&gt;cboVLink5.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.ComboBoxEx, DevComponents.DotNetBar2, Version=10.0.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b</value>
+  </data>
+  <data name="txtVCol4.ButtonCustom.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;txtVCol3.Parent" xml:space="preserve">
+    <value>GroupPanel1</value>
+  </data>
+  <data name="cboVLink4.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;GroupPanel1.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.GroupPanel, DevComponents.DotNetBar2, Version=10.0.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b</value>
+  </data>
+  <data name="LabelX1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>127, 19</value>
+  </data>
+  <data name="btnSave.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;cboVLink1.Name" xml:space="preserve">
+    <value>cboVLink1</value>
+  </data>
+  <data name="txtVCol2.ButtonCustom.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btnSave.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 275</value>
+  </data>
+  <data name="&gt;&gt;cboVLink7.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="txtVCol2.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;LabelX13.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=10.0.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b</value>
+  </data>
+  <data name="txtVCol8.ButtonCustom2.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;txtVCol6.Parent" xml:space="preserve">
+    <value>GroupPanel1</value>
+  </data>
+  <data name="cboVLink6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>201, 20</value>
+  </data>
+  <data name="txtVCol8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 219</value>
+  </data>
+  <data name="&gt;&gt;txtVCol2.Name" xml:space="preserve">
+    <value>txtVCol2</value>
+  </data>
+  <data name="&gt;&gt;txtVCol5.Parent" xml:space="preserve">
+    <value>GroupPanel1</value>
+  </data>
+  <data name="txtVCol8.ButtonCustom2.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtVCol4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 115</value>
+  </data>
+  <data name="&gt;&gt;txtVCol1.Name" xml:space="preserve">
+    <value>txtVCol1</value>
+  </data>
+  <data name="txtVCol5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 141</value>
+  </data>
+  <data name="cboVLink5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>201, 20</value>
+  </data>
+  <data name="&gt;&gt;cboVLink7.Parent" xml:space="preserve">
+    <value>GroupPanel1</value>
+  </data>
+  <data name="txtVCol3.ButtonCustom2.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;cboVLink5.Parent" xml:space="preserve">
+    <value>GroupPanel1</value>
+  </data>
+  <data name="&gt;&gt;cboVLink6.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;cboVLink8.Parent" xml:space="preserve">
+    <value>GroupPanel1</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>frmRptTimeAbsent_Config</value>
+  </data>
+  <data name="&gt;&gt;txtVCol4.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="txtVCol1.ButtonCustom2.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtVCol4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>127, 20</value>
+  </data>
+  <data name="&gt;&gt;txtVCol3.Name" xml:space="preserve">
+    <value>txtVCol3</value>
+  </data>
+  <data name="&gt;&gt;LabelX1.Name" xml:space="preserve">
+    <value>LabelX1</value>
+  </data>
+  <data name="txtVCol4.ButtonCustom2.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtVCol3.ButtonCustom.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;cboVLink1.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.ComboBoxEx, DevComponents.DotNetBar2, Version=10.0.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b</value>
+  </data>
+  <data name="txtVCol1.ButtonCustom2.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Config-รายงานของจำนวนพนักงานไม่มาทำงาน</value>
+  </data>
+  <data name="txtVCol7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>127, 20</value>
+  </data>
+  <data name="txtVCol7.ButtonCustom.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="cboVLink4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>201, 20</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="cboVLink8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>138, 219</value>
+  </data>
+  <data name="txtVCol6.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="cboVLink3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>138, 89</value>
+  </data>
+  <data name="&gt;&gt;LabelX1.Parent" xml:space="preserve">
+    <value>GroupPanel1</value>
+  </data>
+  <data name="btnSave.Size" type="System.Drawing.Size, System.Drawing">
+    <value>189, 57</value>
+  </data>
+  <data name="&gt;&gt;cboVLink6.Parent" xml:space="preserve">
+    <value>GroupPanel1</value>
+  </data>
+  <data name="GroupPanel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 3</value>
+  </data>
+  <data name="txtVCol8.ButtonCustom.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;cboVLink4.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="LabelX1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 12</value>
+  </data>
+  <data name="&gt;&gt;btnSave.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="cboVLink4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>138, 115</value>
+  </data>
+  <data name="&gt;&gt;cboVLink3.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="txtVCol7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 193</value>
+  </data>
+  <data name="GroupPanel1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;txtVCol6.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;txtVCol5.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="txtVCol5.ButtonCustom2.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtVCol5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>127, 20</value>
+  </data>
+  <data name="LabelX1.Text" xml:space="preserve">
+    <value>ชื่อ Column</value>
+  </data>
+  <data name="cboVLink2.ItemHeight" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;btnSave.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=10.0.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b</value>
+  </data>
+  <data name="txtVCol3.ButtonCustom.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;txtVCol7.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.TextBoxX, DevComponents.DotNetBar2, Version=10.0.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b</value>
+  </data>
+  <data name="&gt;&gt;txtVCol5.Name" xml:space="preserve">
+    <value>txtVCol5</value>
+  </data>
+  <data name="cboVLink2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>201, 20</value>
+  </data>
+  <data name="txtVCol2.ButtonCustom2.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;LabelX13.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="txtVCol7.ButtonCustom.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtVCol1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnExit.Text" xml:space="preserve">
+    <value>ออก</value>
+  </data>
+  <data name="cboVLink6.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="cboVLink2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>138, 63</value>
+  </data>
+  <data name="&gt;&gt;LabelX13.Parent" xml:space="preserve">
+    <value>GroupPanel1</value>
+  </data>
+  <data name="&gt;&gt;cboVLink5.Name" xml:space="preserve">
+    <value>cboVLink5</value>
+  </data>
+  <data name="cboVLink5.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;cboVLink2.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;txtVCol7.Name" xml:space="preserve">
+    <value>txtVCol7</value>
+  </data>
+  <data name="&gt;&gt;txtVCol1.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="txtVCol5.ButtonCustom2.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnSave.Text" xml:space="preserve">
+    <value>บันทึก</value>
+  </data>
+  <data name="btnExit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>147, 57</value>
+  </data>
+  <data name="&gt;&gt;cboVLink6.Name" xml:space="preserve">
+    <value>cboVLink6</value>
+  </data>
+  <data name="cboVLink1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>201, 20</value>
+  </data>
+  <data name="&gt;&gt;txtVCol1.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.TextBoxX, DevComponents.DotNetBar2, Version=10.0.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b</value>
+  </data>
+  <data name="cboVLink1.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;txtVCol1.Parent" xml:space="preserve">
+    <value>GroupPanel1</value>
+  </data>
+  <data name="&gt;&gt;cboVLink8.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.ComboBoxEx, DevComponents.DotNetBar2, Version=10.0.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b</value>
+  </data>
+  <data name="cboVLink5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>138, 141</value>
+  </data>
+  <data name="&gt;&gt;GroupPanel1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="txtVCol7.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="cboVLink7.ItemHeight" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;txtVCol3.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.TextBoxX, DevComponents.DotNetBar2, Version=10.0.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b</value>
+  </data>
+  <data name="txtVCol1.ButtonCustom.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtVCol5.ButtonCustom.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;GroupPanel1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="txtVCol4.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="txtVCol6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>127, 20</value>
+  </data>
+  <data name="&gt;&gt;cboVLink3.Name" xml:space="preserve">
+    <value>cboVLink3</value>
+  </data>
+  <data name="cboVLink1.ItemHeight" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;btnExit.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=10.0.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b</value>
+  </data>
+  <data name="&gt;&gt;txtVCol7.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;cboVLink2.Name" xml:space="preserve">
+    <value>cboVLink2</value>
+  </data>
+  <data name="txtVCol4.ButtonCustom.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtVCol8.ButtonCustom.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtVCol8.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="&gt;&gt;txtVCol4.Name" xml:space="preserve">
+    <value>txtVCol4</value>
+  </data>
+  <data name="txtVCol3.ButtonCustom2.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cboVLink7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>138, 193</value>
+  </data>
+  <data name="cboVLink7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>201, 20</value>
+  </data>
+  <data name="cboVLink6.ItemHeight" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;cboVLink7.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.ComboBoxEx, DevComponents.DotNetBar2, Version=10.0.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b</value>
+  </data>
+  <data name="&gt;&gt;cboVLink1.Parent" xml:space="preserve">
+    <value>GroupPanel1</value>
+  </data>
+  <data name="txtVCol2.ButtonCustom.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtVCol8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>127, 20</value>
+  </data>
+  <data name="cboVLink6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>138, 167</value>
+  </data>
+  <data name="txtVCol3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>127, 20</value>
+  </data>
+  <data name="&gt;&gt;txtVCol2.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="LabelX13.Text" xml:space="preserve">
+    <value>Link กับข้อมูลการลา</value>
+  </data>
+  <data name="cboVLink2.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="cboVLink7.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="&gt;&gt;txtVCol8.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.TextBoxX, DevComponents.DotNetBar2, Version=10.0.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b</value>
+  </data>
+  <data name="&gt;&gt;cboVLink8.Name" xml:space="preserve">
+    <value>cboVLink8</value>
+  </data>
+  <data name="LabelX1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtVCol6.ButtonCustom.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;txtVCol5.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.TextBoxX, DevComponents.DotNetBar2, Version=10.0.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b</value>
+  </data>
+  <data name="&gt;&gt;btnExit.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="cboVLink5.ItemHeight" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;cboVLink6.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.ComboBoxEx, DevComponents.DotNetBar2, Version=10.0.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b</value>
+  </data>
+  <data name="btnExit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>199, 275</value>
+  </data>
+  <data name="&gt;&gt;txtVCol3.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;cboVLink4.Name" xml:space="preserve">
+    <value>cboVLink4</value>
+  </data>
+  <data name="&gt;&gt;txtVCol6.Name" xml:space="preserve">
+    <value>txtVCol6</value>
+  </data>
+  <data name="cboVLink3.ItemHeight" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="txtVCol5.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;txtVCol8.Parent" xml:space="preserve">
+    <value>GroupPanel1</value>
+  </data>
+  <data name="&gt;&gt;txtVCol8.Name" xml:space="preserve">
+    <value>txtVCol8</value>
+  </data>
+  <data name="&gt;&gt;GroupPanel1.Name" xml:space="preserve">
+    <value>GroupPanel1</value>
+  </data>
+  <data name="GroupPanel1.Text" xml:space="preserve">
+    <value>กำหนด Column การลา</value>
+  </data>
+  <data name="&gt;&gt;cboVLink8.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="txtVCol6.ButtonCustom.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="cboVLink4.ItemHeight" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="txtVCol5.ButtonCustom.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;cboVLink5.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="txtVCol3.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="LabelX13.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;cboVLink4.Parent" xml:space="preserve">
+    <value>GroupPanel1</value>
+  </data>
+  <data name="&gt;&gt;txtVCol4.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.TextBoxX, DevComponents.DotNetBar2, Version=10.0.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b</value>
+  </data>
+  <data name="&gt;&gt;cboVLink3.Parent" xml:space="preserve">
+    <value>GroupPanel1</value>
+  </data>
+  <data name="&gt;&gt;cboVLink3.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.ComboBoxEx, DevComponents.DotNetBar2, Version=10.0.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b</value>
+  </data>
+  <data name="&gt;&gt;btnExit.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="txtVCol1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 37</value>
+  </data>
+  <data name="cboVLink3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>201, 20</value>
+  </data>
+  <data name="&gt;&gt;LabelX1.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="txtVCol6.ButtonCustom2.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtVCol4.ButtonCustom2.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cboVLink1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>138, 37</value>
+  </data>
+  <data name="LabelX13.Size" type="System.Drawing.Size, System.Drawing">
+    <value>201, 19</value>
+  </data>
+  <data name="GroupPanel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>350, 266</value>
+  </data>
+  <data name="&gt;&gt;cboVLink7.Name" xml:space="preserve">
+    <value>cboVLink7</value>
+  </data>
+  <data name="&gt;&gt;cboVLink1.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;txtVCol2.Parent" xml:space="preserve">
+    <value>GroupPanel1</value>
+  </data>
+  <data name="&gt;&gt;LabelX1.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=10.0.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b</value>
+  </data>
+  <data name="&gt;&gt;LabelX13.Name" xml:space="preserve">
+    <value>LabelX13</value>
+  </data>
+  <data name="txtVCol2.ButtonCustom2.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;btnExit.Name" xml:space="preserve">
+    <value>btnExit</value>
+  </data>
+  <data name="&gt;&gt;txtVCol6.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.TextBoxX, DevComponents.DotNetBar2, Version=10.0.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b</value>
+  </data>
+  <data name="&gt;&gt;cboVLink2.Parent" xml:space="preserve">
+    <value>GroupPanel1</value>
+  </data>
+  <data name="&gt;&gt;cboVLink2.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.ComboBoxEx, DevComponents.DotNetBar2, Version=10.0.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b</value>
+  </data>
+  <data name="txtVCol2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 63</value>
+  </data>
+  <data name="txtVCol2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>127, 20</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>359, 339</value>
+  </data>
+  <data name="cboVLink3.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;txtVCol8.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="txtVCol7.ButtonCustom2.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;btnSave.Name" xml:space="preserve">
+    <value>btnSave</value>
+  </data>
+  <data name="txtVCol6.ButtonCustom2.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtVCol1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>127, 20</value>
+  </data>
+  <data name="txtVCol1.ButtonCustom.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtVCol3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 89</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+</root>

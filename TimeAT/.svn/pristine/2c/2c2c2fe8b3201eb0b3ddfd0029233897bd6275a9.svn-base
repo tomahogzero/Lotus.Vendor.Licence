@@ -1,0 +1,1016 @@
+Imports System.Data
+Imports System.Data.SqlClient
+
+Public Class frmOvertime
+
+    Private Sub frmOvertime_Disposed(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Disposed
+        fOvertime = Nothing
+    End Sub
+
+    Private Sub frmOvertime_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        Call LoadCompany()
+        Call LoadMonth()
+        txtYear.Text = Date.Now.Year
+        cboMonth.SelectedIndex = Date.Now.Month - 1
+        Call LoadSite()
+        Call LoadDepartment()
+        If ComId = "" Then
+            cboCompany.Enabled = True
+        Else
+            cboCompany.SelectedItem = ComName
+            cboCompany.Enabled = False
+        End If
+    End Sub
+
+    Private Sub btnProcess_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnProcess.Click
+        Dim Da As New SqlDataAdapter
+        Dim Ds As New DataSet
+        Dim DateSt As String
+        Dim DateSp As String
+
+        DateSt = ConvertDate(txtDateSt.Text.Trim)
+        DateSp = ConvertDate(txtDateSp.Text.Trim)
+
+        lblStatus.Text = "PROCESS"
+        btnProcess.Text = "Process..."
+
+        If IsDate(DateSt.Trim) = False Then
+            MsgBox("กรุณาป้อนวันที่ให้ถูกต้องด้วย", MsgBoxStyle.Information, Me.Text)
+            txtDateSt.Focus()
+            Exit Sub
+        End If
+
+        If IsDate(DateSp.Trim) = False Then
+            MsgBox("กรุณาป้อนวันที่ให้ถูกต้องด้วย", MsgBoxStyle.Information, Me.Text)
+            txtDateSp.Focus()
+            Exit Sub
+        End If
+
+
+        'START
+        ' START
+
+
+        Dim dCmd As New SqlCommand
+
+        ProgressBar1.Maximum = DateDiff(DateInterval.Day, CDate(DateSt), CDate(DateSp)) + 1
+        ProgressBar1.Value = 0
+        lstOvertime.Items.Clear()
+        Try
+            Dim I As Date
+            I = DateSt
+            Do Until I > DateSp
+                lblDateProcess.Text = Format(I, "dd/MM/yyyy")
+                Application.DoEvents()
+                Call CalOT(Format(I, "yyyy/MM/dd"))
+                I = DateAdd(DateInterval.Day, 1, I)
+                ProgressBar1.Value += 1
+            Loop
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Information, Me.Text)
+            btnProcess.Text = "2. ประมวลผล"
+            btnProcess.Enabled = True
+        End Try
+
+        'STOP
+
+        btnProcess.Text = "2. ประมวลผล"
+        btnProcess.Enabled = True
+    End Sub
+
+    Private Sub CalOT(ByVal calDate As String)
+        Dim Da As New SqlDataAdapter
+        Dim Ds As New DataSet
+        Dim strSQL As String
+        Dim arrDATA() As String
+        Dim List As ListViewItem
+
+        'strSQL = "Select * " & _
+        '    " From (" & _
+        '         " Select Timework.DateIn,Timework.Code," & _
+        '                " EmpName = Emp.Fname + '   ' + Emp.Lname," & _
+        '                " Emp.DeptId," & _
+        '                " TimeOut = Replace(Convert(nVarchar(16)," & _
+        '                                            "dbo.fGetTimeOut(TimeWork.Code,Convert(nVarchar(10),Timework.DateIn,111))" & _
+        '                                            ",120),'-','/'), " & _
+        '                " Ot1_5 = dbo.fOtHourOut(Timework.Code,Convert(nVarchar(10),Timework.DateIn,111),1.5)," & _
+        '                " Ot1 = dbo.fOtHolDay(Timework.Code,Convert(nVarchar(10),Timework.DateIn,111),1)," & _
+        '                " Ot2 = dbo.fOtHolDay(Timework.Code,Convert(nVarchar(10),Timework.DateIn,111),2)," & _
+        '                " Ot3 = dbo.fOtHourOut(Timework.Code,Convert(nVarchar(10),Timework.DateIn,111),3)," & _
+        '                " OtBahtHol_H = dbo.fOtHolDayB(Timework.Code,Convert(nVarchar(10),Timework.DateIn,111))," & _
+        '                " OtBahtH = dbo.fOtHourOutB(Timework.Code,Convert(nVarchar(10),Timework.DateIn,111))" & _
+        '         " From TimeWork Inner Join Emp On Timework.Code = Emp.Code " & _
+        '         " Where 1 = 1 "
+        Dim OT As String
+        OT = "OT"
+        strSQL = "Select * " & _
+                    " From (" & _
+                         " Select Timework.DateIn,Timework.Code," & _
+                                " EmpName = Emp.Fname + '   ' + Emp.Lname," & _
+                                " Emp.DeptId," & _
+                                " TimeOut = Replace(Convert(nVarchar(16)," & _
+                                                            "dbo.fGetTimeOut(TimeWork.Code,Convert(nVarchar(10),Timework.DateIn,111))" & _
+                                                            ",120),'-','/'), " & _
+                                " Ot_H = dbo.fOtHourOut(Timework.Code,Convert(nVarchar(10),Timework.DateIn,111),1.5)," & _
+                                " Ot_D = dbo.fOtHolDay(Timework.Code,Convert(nVarchar(10),Timework.DateIn,111),1)," & _
+                                " OTH_Rate = dbo.fGetOT_Rate(Timework.Code,Convert(nVarchar(10),Timework.DateIn,111),'OT')," & _
+                                " OTD_Rate = dbo.fGetOT_Rate(Timework.Code,Convert(nVarchar(10),Timework.DateIn,111),'T')," & _
+                                " OtBahtHol_H = dbo.fOtHolDayB(Timework.Code,Convert(nVarchar(10),Timework.DateIn,111))," & _
+                                " OtBahtH = dbo.fOtHourOutB(Timework.Code,Convert(nVarchar(10),Timework.DateIn,111))," & _
+                                " WKEnd = dbo.fIsWKEnd(Timework.Code,Convert(nVarchar(10),Timework.DateIn,111))," & _
+                                " Hol = dbo.fIsHoliday_Hol(Convert(nVarchar(10),Timework.DateIn,111))" & _
+                         " From TimeWork Inner Join Emp On Timework.Code = Emp.Code " & _
+                         " Where 1 = 1 "
+
+        If cboCompany.SelectedIndex > 0 Then
+            strSQL &= " and isnull(Emp.CompanyId,'') = '" & GetData.GetCompanyId(cboCompany.Text.Trim) & "'"
+        End If
+        strSQL &= " and Convert(nvarchar(10),Timework.dateIn,111) Between '" & calDate.Trim & "' and '" & calDate.Trim & "'" & _
+                         ") as Ot "
+
+        If rdDate.Checked = True Then
+            StrSql &= " Order By Ot.DateIn,Ot.Code"
+        End If
+        If rdCode.Checked = True Then
+            StrSql &= " Order By Ot.Code,Ot.DateIn"
+        End If
+        If rdName.Checked = True Then
+            StrSql &= " Order By Ot.EmpName,Ot.DateIn"
+        End If
+        If rdDept.Checked = True Then
+            StrSql &= " Order By Ot.DeptId,Ot.DateIn,Ot.Code"
+        End If
+
+        btnProcess.Enabled = False
+
+        Da = New SqlDataAdapter(StrSql, Conn)
+        Da.Fill(Ds, "Data")
+        With Ds.Tables("Data")
+            Dim I As Integer
+            ProgressBar2.Maximum = .Rows.Count
+            ProgressBar2.Value = 0
+            If .Rows.Count = 0 Then
+                'MsgBox("ไม่พบข้อมูล", MsgBoxStyle.Information, Me.Text)
+                Ds.Clear()
+                btnProcess.Enabled = True
+                Exit Sub
+            End If
+            For I = 0 To .Rows.Count - 1
+                Dim dr As DataRow = .Rows(I)
+                'If IsDBNull(.Rows(I).Item("TimeOut")) = False Then
+                '    'MsgBox(.Rows(I).Item("TimeOut"))
+                '    'Call CalAllowanceAuto(txtMonthYear.Text.Trim, _
+                '    '                                        .Rows(I).Item("Code"), _
+                '    '                                        Format(.Rows(I).Item("DateIn"), "yyyy/MM/dd"), _
+                '    '                                        .Rows(I).Item("TimeOut"))
+                'End If
+
+                Dim OTBH As Integer = dr("OTBahtHol_H") + dr("OTBahtH")
+                Dim OTH As Single = OTBH / 60
+
+                Dim OTB As Single = 0
+                Dim Period As Single = 0
+                Dim OT_H As Single = dr("OT_H")
+                Dim OT_D As Single = dr("OT_D")
+                Dim OTD_Rate As Single = dr("OTD_Rate")
+                Dim OTH_Rate As Single = dr("OTH_Rate")
+                Dim WKEnd As String = ""
+                Dim Hol As String = ""
+
+                Dim OtIdx As Integer = GetData.GetOTTypeIdx(dr("Code"))
+
+                ' แบบ ที่ 2 จ่าย Ot ไปอยู่ Rate เดียว
+                'If OtIdx = 2 Then
+                '    Dim OTFixed As Single = GetData.GetOTFixedRate
+                '    Select Case OTFixed
+                '        Case 1
+                '            OT1 = OT1 + OT15 + OT2 + OT3
+
+                '            OT15 = 0
+                '            OT2 = 0
+                '            OT3 = 0
+                '        Case 1.5
+                '            OT15 = OT1 + OT15 + OT2 + OT3
+
+                '            OT1 = 0
+                '            OT2 = 0
+                '            OT3 = 0
+                '        Case 2
+                '            OT2 = OT1 + OT15 + OT2 + OT3
+
+                '            OT1 = 0
+                '            OT15 = 0
+                '            OT3 = 0
+                '        Case 3
+                '            OT3 = OT1 + OT15 + OT2 + OT3
+
+                '            OT1 = 0
+                '            OT15 = 0
+                '            OT2 = 0
+                '    End Select
+                'End If
+
+                ' แบบ ที่ 3 จ่าย Ot ไป คูณ Fixed Rate ใน OT
+
+                ' จ่ายเป็น คาบ
+                If OtIdx = 4 Then
+                    Period = GetOTPeriod(dr("Code"), OTH, Format(dr("DateIn"), "yyyy/MM/dd"))
+                End If
+
+                ' จ่ายเป็น เงิน
+                If OtIdx = 5 Then
+                    OTB = GetOTBaht(dr("Code"), OTH, Format(dr("DateIn"), "yyyy/MM/dd"))
+                End If
+
+                If dr("WKEnd") = True Then
+                    WKEnd = "/"
+                Else
+                    WKEnd = ""
+                End If
+
+                If dr("Hol") = True Then
+                    Hol = "/"
+                Else
+                    Hol = ""
+                End If
+
+
+
+                'arrDATA = New String() {I + 1, _
+                '                        Format(dr("DateIn"), "dd/MM/yyyy"), _
+                '                        dr("Code"), _
+                '                        dr("EmpName"), _
+                '                        dr("DeptId"), _
+                '                        OT15, _
+                '                        OT1, _
+                '                        OT2, _
+                '                        OT3, _
+                '                        OTBH, _
+                '                        OTH, _
+                '                        Format(OTB, "#,##0.00"), _
+                '                        Period}
+
+                arrDATA = New String() {I + 1, _
+                                       Format(dr("DateIn"), "dd/MM/yyyy"), _
+                                       dr("Code"), _
+                                       dr("EmpName"), _
+                                       dr("DeptId"), _
+                                       OT_D, _
+                                       OT_H, _
+                                       OTD_Rate, _
+                                       OTH_Rate, _
+                                       OTBH, _
+                                       OTH, _
+                                       Format(OTB, "#,##0.00"), _
+                                       Period, WKEnd, Hol}
+
+                List = New ListViewItem(arrDATA)
+                lstOvertime.Items.Add(List)
+                ProgressBar2.Value = I + 1
+            Next
+        End With
+    End Sub
+
+    Function GetOTBaht(ByVal Code As String, ByVal OT As Integer, ByVal DateIn As String) As Single
+        Dim Da As New SqlDataAdapter
+        Dim Ds As New DataSet
+        Dim strSQL As String
+        strSQL = "Select Baht= dbo.fCalOtBaht('" & Code.Trim & "'," & OT & ",'" & DateIn.Trim & "')"
+        Da = New SqlDataAdapter(strSQL, Conn)
+        Da.Fill(Ds, "data")
+        With Ds.Tables("data")
+            If .Rows.Count = 0 Then
+                Return 0
+            Else
+                Return .Rows(0).Item("Baht")
+            End If
+        End With
+    End Function
+
+    Function GetOTPeriod(ByVal Code As String, ByVal OT As Single, ByVal DateIn As String) As Single
+        Dim Da As New SqlDataAdapter
+        Dim Ds As New DataSet
+        Dim strSQL As String
+        strSQL = "Select Baht= dbo.fCalOtPeriod('" & Code.Trim & "'," & OT & ",'" & DateIn.Trim & "')"
+        Da = New SqlDataAdapter(strSQL, Conn)
+        Da.Fill(Ds, "data")
+        With Ds.Tables("data")
+            If .Rows.Count = 0 Then
+                Return 0
+            Else
+                Return .Rows(0).Item("Baht")
+            End If
+        End With
+    End Function
+
+    Private Sub CalAllowanceAuto(ByVal MonthYear As String, ByVal Code As String, ByVal DateIn As String, ByVal TimeOut As String)
+        Dim dCmd As New SqlCommand
+        Dim strSQL As String
+        Try
+            strSQL = "Exec spTimeGenAutoAllowance '" & MonthYear.Trim & "','" & Code.Trim & "','" & DateIn.Trim & "','" & TimeOut.Trim & "'"
+            dCmd.Connection = Conn
+            dCmd.CommandText = strSQL
+            dCmd.ExecuteNonQuery()
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+    End Sub
+
+    Private Sub LoadData()
+        Dim Da As New SqlDataAdapter
+        Dim Ds As New DataSet
+        Dim strSQL As String
+        Dim DateSt As String
+        Dim DateSp As String
+        Dim arrDATA() As String
+        Dim List As ListViewItem
+
+        DateSt = ConvertDate(txtDateSt.Text.Trim)
+        DateSp = ConvertDate(txtDateSp.Text.Trim)
+        strSQL = "Select * " & _
+                " From (" & _
+                     " Select TimeOvertime.DateIn,TimeOvertime.Code," & _
+                            " EmpName = Emp.Fname + '   ' + Emp.Lname," & _
+                            " Emp.DeptId,OT1,Ot2,OT15,OT3,OTBaht_H,OTBaht,OTH,OTPeriod," & _
+                            " TimeOverTime.OT_Time,TimeOverTime.OT_Time_Rate, " & _
+                            " TimeOverTime.OT_OverTime,TimeOverTime.OT_OverTime_Rate, " & _
+                            " WKEnd = Isnull(TimeOvertime.WKEnd,0)," & _
+                            " Hol = Isnull(TimeOvertime.Hol,0)" & _
+                     " From TimeOvertime Inner Join Emp On TimeOvertime.Code = Emp.Code"
+        If cboCompany.SelectedIndex > 0 Then
+            strSQL &= " Where isnull(Emp.CompanyId,'') = '" & GetData.GetCompanyId(cboCompany.Text.Trim) & "'"
+        End If
+        strSQL &= " and Convert(nvarchar(10),TimeOvertime.dateIn,111) Between '" & DateSt.Trim & "' and '" & DateSp.Trim & "'" & _
+                     ") as Ot" & _
+                 " Where 1 = 1 "
+
+        If chkLateOnly.Checked = True Then
+            strSQL &= " and (Ot.OT_Time <> 0 Or " & _
+                            " Ot.OT_Time_Rate <> 0 Or " & _
+                            " Ot.OtBaht_H <> 0 Or " & _
+                            " Ot.OtBaht <> 0 Or " & _
+                            " Ot.Oth <> 0 Or " & _
+                            " Ot.OtPeriod <> 0)"
+        End If
+
+        If rdDate.Checked = True Then
+            strSQL &= " Order By Ot.DateIn,Ot.Code"
+        End If
+        If rdCode.Checked = True Then
+            strSQL &= " Order By Ot.Code,Ot.DateIn"
+        End If
+        If rdName.Checked = True Then
+            strSQL &= " Order By Ot.EmpName,Ot.DateIn"
+        End If
+        If rdDept.Checked = True Then
+            strSQL &= " Order By Ot.DeptId,Ot.DateIn,Ot.Code"
+        End If
+
+        Da = New SqlDataAdapter(strSQL, Conn)
+        Da.Fill(Ds, "Data")
+        With Ds.Tables("Data")
+            Dim I As Integer
+            ProgressBar1.Maximum = .Rows.Count
+            ProgressBar1.Value = 0
+            lstOvertime.Items.Clear()
+            For I = 0 To .Rows.Count - 1
+                arrDATA = New String() {I + 1, _
+                                        Format(.Rows(I).Item("DateIn"), "dd/MM/yyyy"), _
+                                        .Rows(I).Item("Code"), _
+                                        .Rows(I).Item("EmpName"), _
+                                        .Rows(I).Item("DeptId"), _
+                                        .Rows(I).Item("OT_Time"), _
+                                        .Rows(I).Item("OT_OverTime"), _
+                                        .Rows(I).Item("OT_Time_Rate"), _
+                                        .Rows(I).Item("OT_OverTime_Rate"), _
+                                        .Rows(I).Item("OTBaht_H"), _
+                                        .Rows(I).Item("OTH"), _
+                                        Format(.Rows(I).Item("OTBaht"), "#,##0.00"), _
+                                        .Rows(I).Item("OTPeriod"), _
+                                        IIf(.Rows(I).Item("WKEnd") = True, "/", ""), _
+                                        IIf(.Rows(I).Item("Hol") = True, "/", "")}
+                List = New ListViewItem(arrDATA)
+                lstOvertime.Items.Add(List)
+                ProgressBar1.Value = I + 1
+            Next
+        End With
+
+    End Sub
+
+
+    Private Sub LoadDataSearch()
+        Dim Da As New SqlDataAdapter
+        Dim Ds As New DataSet
+        Dim strSQL As String
+        Dim DateSt As String
+        Dim DateSp As String
+        Dim arrDATA() As String
+        Dim List As ListViewItem
+
+        DateSt = ConvertDate(txtDateSt.Text.Trim)
+        DateSp = ConvertDate(txtDateSp.Text.Trim)
+        strSQL = "Select * " & _
+                " From (" & _
+                     " Select TimeOvertime.DateIn,TimeOvertime.Code," & _
+                            " EmpName = Emp.Fname + '   ' + Emp.Lname," & _
+                            " Emp.Fname,Emp.Lname," & _
+                            " Emp.Workingplace," & _
+                            " Emp.DeptId,OT1,Ot2,OT15,OT3,OTBaht_H,OTBaht ,Emp.CompanyID ," & _
+                            " OTH,OTPeriod," & _
+                            " Companyname = isnull(cs.CompanyName,''), " & _
+                            " TimeOverTime.OT_Time, " & _
+                            " TimeOverTime.OT_Time_Rate, " & _
+                            " TimeOverTime.OT_OverTime," & _
+                            " TimeOverTime.OT_OverTime_Rate," & _
+                            " WKEnd = Isnull(TimeOvertime.WKEnd,0)," & _
+                            " Hol = Isnull(TimeOvertime.Hol,0)" & _
+                     " From TimeOvertime Inner Join Emp On TimeOvertime.Code = Emp.Code" & _
+                            " Left Join Company_sub cs" & _
+                                    " on Emp.CompanyID = cs.CompanyID "
+
+        If cboCompany.SelectedIndex > 0 Then
+            strSQL &= " Where isnull(Emp.CompanyId,'') = '" & GetData.GetCompanyId(cboCompany.Text.Trim) & "'"
+        End If
+
+        strSQL &= " AND Convert(nvarchar(10),TimeOvertime.dateIn,111) Between '" & DateSt.Trim & "' and '" & DateSp.Trim & "'" & _
+                     ") as Ot" & _
+                 " Where 1=1 "
+
+        
+
+        If cboSite.Text.Trim <> "" Then
+            strSQL &= " and Ot.WorkingPlace = '" & cboSite.Text.Trim & "'"
+        End If
+        If txtCode.Text.Trim <> "" Then
+            strSQL &= " and Ot.Code = '" & txtCode.Text.Trim & "' "
+        End If
+        If txtCode.Text.Trim = "" Then
+            If txtFname.Text.Trim <> "" Then
+                strSQL &= " and Ot.Fname Like '%" & txtFname.Text.Trim & "%'"
+            End If
+            If txtLname.Text.Trim <> "" Then
+                strSQL &= " and Ot.Lname Like '%" & txtLname.Text.Trim & "%'"
+            End If
+        End If
+        If lblDeptId.Text.Trim <> "" Then
+            strSQL &= " and Ot.DeptId = '" & lblDeptId.Text.Trim & "'"
+        End If
+
+        If rdDate.Checked = True Then
+            strSQL &= " Order By Ot.DateIn,Ot.Code"
+        End If
+        If rdCode.Checked = True Then
+            strSQL &= " Order By Ot.Code,Ot.DateIn"
+        End If
+        If rdName.Checked = True Then
+            strSQL &= " Order By Ot.EmpName,Ot.DateIn"
+        End If
+        If rdDept.Checked = True Then
+            strSQL &= " Order By Ot.DeptId,Ot.DateIn,Ot.Code"
+        End If
+
+        Da = New SqlDataAdapter(strSQL, Conn)
+        Da.Fill(Ds, "Data")
+        With Ds.Tables("Data")
+            Dim I As Integer
+            ProgressBar1.Maximum = .Rows.Count
+            ProgressBar1.Value = 0
+            lstOvertime.Items.Clear()
+            If .Rows.Count = 0 Then
+                MsgBox("ไม่พบข้อมูล", MsgBoxStyle.Information, Me.Text)
+                Ds.Clear()
+                Exit Sub
+            End If
+            For I = 0 To .Rows.Count - 1
+                arrDATA = New String() {I + 1, _
+                                        Format(.Rows(I).Item("DateIn"), "dd/MM/yyyy"), _
+                                        .Rows(I).Item("Code"), _
+                                        .Rows(I).Item("EmpName"), _
+                                        .Rows(I).Item("DeptId"), _
+                                        .Rows(I).Item("OT_Time"), _
+                                        .Rows(I).Item("OT_OverTime"), _
+                                        .Rows(I).Item("OT_Time_Rate"), _
+                                        .Rows(I).Item("OT_OverTime_Rate"), _
+                                        .Rows(I).Item("OTBaht_H"), _
+                                        .Rows(I).Item("OTH"), _
+                                        Format(.Rows(I).Item("OTBaht"), "#,##0.00"), _
+                                        .Rows(I).Item("OTPeriod"), _
+                                        IIf(.Rows(I).Item("WKEnd") = True, "/", ""), _
+                                        IIf(.Rows(I).Item("Hol") = True, "/", "")}
+                List = New ListViewItem(arrDATA)
+                lstOvertime.Items.Add(List)
+                ProgressBar1.Value = I + 1
+            Next
+        End With
+    End Sub
+
+    Private Sub LoadMonth()
+        Dim I As Integer
+        cboMonth.Items.Clear()
+        For I = 1 To 12
+            cboMonth.Items.Add(MonthNameThai(I))
+        Next
+    End Sub
+
+
+    Private Sub LoadSite()
+        Dim Da As New SqlDataAdapter
+        Dim Ds As New DataSet
+        Dim strSQL As String
+        strSQL = "Select Workingplace From Emp " & _
+                " Group By Workingplace" & _
+                " Order By Workingplace"
+        Da = New SqlDataAdapter(strSQL, Conn)
+        Da.Fill(Ds, "Data")
+        With Ds.Tables("Data")
+            cboSite.Items.Clear()
+            cboSite.Items.Add("")
+            Dim I As Integer
+            For I = 0 To .Rows.Count - 1
+                cboSite.Items.Add(.Rows(I).Item("WorkingPlace"))
+            Next
+            Ds.Clear()
+        End With
+    End Sub
+
+    Private Sub LoadDepartment()
+        Dim Da As New SqlDataAdapter
+        Dim Ds As New DataSet
+        Dim strSQL As String
+        strSQL = "Select Department From Department" & _
+                " Order By Department"
+        Da = New SqlDataAdapter(strSQL, Conn)
+        Da.Fill(Ds, "Data")
+        With Ds.Tables("Data")
+            cboDepartment.Items.Clear()
+            cboDepartment.Items.Add("")
+            Dim I As Integer
+            For I = 0 To .Rows.Count - 1
+                cboDepartment.Items.Add(.Rows(I).Item("Department"))
+            Next
+            Ds.Clear()
+        End With
+    End Sub
+
+    Private Sub cboMonth_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cboMonth.SelectedIndexChanged
+        If IsNumeric(txtYear.Text.Trim) = False Then Exit Sub
+        Dim newMonth As String
+        Dim newYear As String
+        newMonth = Format(cboMonth.SelectedIndex + 1, "00")
+        newYear = txtYear.Text.Trim
+        Dim ar As New ArrayList
+        ar = GetDayMonth(newMonth, newYear)
+        txtDateSt.Text = ConvertDate(ar.Item(0))
+        txtDateSp.Text = ConvertDate(ar.Item(1))
+
+        txtMonthYear.Text = Format(cboMonth.SelectedIndex + 1, "00") & "/" & txtYear.Text.Trim
+
+        'Dim DateSt As String
+
+
+        'Dim newMonth As Integer
+        'Dim newYear As String
+        'If cboMonth.SelectedIndex = 0 Then
+        '    newMonth = 12
+        '    newYear = CInt(txtYear.Text) - 1
+        'Else
+        '    newMonth = cboMonth.SelectedIndex
+        '    newYear = txtYear.Text.Trim
+        'End If
+        ''DateSt = "11/" & Format(newMonth, "00") & "/" & newYear
+        'DateSt = "01/" & Format(cboMonth.SelectedIndex + 1, "00") & "/" & txtYear.Text.Trim
+        'txtDateSt.Text = DateSt
+        'txtDateSp.Text = Format(MonthEnd(ConvertDate(DateSt)).Day, "00") & Format(cboMonth.SelectedIndex + 1, "00") & "/" & txtYear.Text.Trim
+        'txtMonthYear.Text = Format(cboMonth.SelectedIndex + 1, "00") & "/" & txtYear.Text.Trim
+    End Sub
+
+    Private Sub btnExit_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnExit.Click
+        Me.Close()
+    End Sub
+
+    Private Sub btnSave_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSave.Click
+        Dim Dcmd As New SqlCommand
+        Dim strSQL As String
+
+        With lstOvertime
+            If .Items.Count = 0 Then
+                MsgBox("ไม่มีข้อมูลที่จะบันทึก", MsgBoxStyle.Information, Me.Text)
+                Exit Sub
+            End If
+            If IsDate(ConvertDate("01/" & txtMonthYear.Text.Trim)) = False Then
+                MsgBox("กรุณาระบุเดือนที่ต้องการจ่ายให้ถูกต้องด้วย", MsgBoxStyle.Information, Me.Text)
+                txtMonthYear.Focus()
+                txtMonthYear.SelectAll()
+                Exit Sub
+            End If
+
+            Dim DateSt As String
+            Dim DateSp As String
+            Dim newMonth As Integer
+            Dim newYear As String
+            If Mid(txtMonthYear.Text.Trim, 1, 2) = "01" Then
+                newMonth = 12
+                newYear = CInt(Mid(txtMonthYear.Text.Trim, 4, 4)) - 1
+            Else
+                newMonth = CInt(Mid(txtMonthYear.Text.Trim, 1, 2)) - 1
+                newYear = Mid(txtMonthYear.Text.Trim, 4, 4)
+            End If
+            'DateSt = ConvertDate("11/" & Format(newMonth, "00") & "/" & newYear)
+
+            DateSt = "01/" & Format(cboMonth.SelectedIndex + 1, "00") & "/" & txtYear.Text.Trim
+            DateSp = Format(MonthEnd(ConvertDate(DateSt)).Day, "00") & Format(cboMonth.SelectedIndex + 1, "00") & "/" & txtYear.Text.Trim
+
+
+
+            'DateSt = ConvertDate("04/" & Format(newMonth, "00") & "/" & newYear)
+            'DateSp = ConvertDate("10/" & Mid(txtMonthYear.Text.Trim, 1, 2) & "/" & Mid(txtMonthYear.Text.Trim, 4, 4))
+
+            If ConvertDate(txtDateSt.Text.Trim) < DateSt Then
+                MsgBox("วันที่ที่ป้อนอยู่นอกรอบเดือน " & txtMonthYear.Text.Trim & "กรุณาป้อนใหม่ วันที่เริ่ม ไม่ควรน้อยกว่าวันที่ 11 ของเดือนก่อนหน้า", MsgBoxStyle.Information, Me.Text)
+                txtDateSt.Focus()
+                Exit Sub
+            End If
+
+            If ConvertDate(txtDateSp.Text.Trim) > DateSp Then
+                MsgBox("วันที่ที่ป้อนอยู่นอกรอบเดือน " & txtMonthYear.Text.Trim & "กรุณาป้อนใหม่ วันที่สิ้นสุด ไม่ควรเกินกว่าวันที่ 10 ของเดือนที่เลือก", MsgBoxStyle.Information, Me.Text)
+                txtDateSp.Focus()
+                Exit Sub
+            End If
+
+            Dim I As Integer
+            ProgressBar1.Maximum = .Items.Count
+            ProgressBar1.Value = 0
+
+
+            Select Case lblStatus.Text.Trim.ToUpper
+                Case "PROCESS", "REFRESH"
+                    strSQL = "Delete From TimeOvertime" & _
+                            " Where DateIn Between '" & ConvertDate(txtDateSt.Text.Trim) & "' and " & _
+                                            " '" & ConvertDate(txtDateSp.Text.Trim) & "'and   " & _
+                                            " Code In (Select Code From Emp "
+                    If cboCompany.SelectedIndex > 0 Then
+                        strSQL &= " Where isnull(Emp.CompanyId,'') = '" & GetData.GetCompanyId(cboCompany.Text.Trim) & "'"
+                    End If
+                    strSQL &= ")"
+
+
+                    Dcmd.Connection = Conn
+                    Dcmd.CommandText = strSQL
+                    Dcmd.ExecuteNonQuery()
+            End Select
+
+
+            For I = 0 To .Items.Count - 1
+
+                Select Case lblStatus.Text.Trim.ToUpper
+                    Case "SEARCH"
+                        strSQL = "Delete From TimeOvertime" & _
+                            " Where Code = '" & .Items(I).SubItems(2).Text.Trim & "' and " & _
+                                    " DateIn = '" & ConvertDate(.Items(I).SubItems(1).Text.Trim) & "'"
+                        If cboCompany.SelectedIndex > 0 Then
+                            strSQL &= " and Code In (Select Code From Emp"
+                            strSQL &= " Where isnull(Emp.CompanyId,'') = '" & GetData.GetCompanyId(cboCompany.Text.Trim) & "')"
+                        End If
+                        Dcmd.Connection = Conn
+                        Dcmd.CommandText = strSQL
+                        Dcmd.ExecuteNonQuery()
+                End Select
+
+
+                'strSQL = "Insert Into TimeOvertime(Month_year,Code,DateIn,Ot15,Ot1,Ot2,Ot3,OtBaht_H,OtBaht,Approve,OTH,OTPeriod," & _
+                '               " OT_Time,OT_Time_Rate,OT_OverTime,OT_OverTime_Rate) Values(" & _
+
+                strSQL = "Insert Into TimeOvertime(Month_year,Code,DateIn,OT_Time,OT_OverTime,OT_Time_Rate,OT_OverTime_Rate, " & _
+                                "OtBaht_H,OtBaht,Approve,OTH,OTPeriod,WKEnd,Hol) Values(" & _
+                        " '" & txtMonthYear.Text.Trim & "','" & .Items(I).SubItems(2).Text.Trim & "'," & _
+                        " '" & ConvertDate(.Items(I).SubItems(1).Text.Trim) & "'," & _
+                        " " & .Items(I).SubItems(5).Text.Trim & "," & _
+                        " " & .Items(I).SubItems(6).Text.Trim & "," & _
+                        " " & .Items(I).SubItems(7).Text.Trim & "," & _
+                        " " & .Items(I).SubItems(8).Text.Trim & "," & _
+                        " " & CInt(.Items(I).SubItems(9).Text.Trim) & "," & _
+                        " " & CSng(.Items(I).SubItems(11).Text.Trim) & ",0," & _
+                        " " & CSng(.Items(I).SubItems(10).Text.Trim) & "," & _
+                        " " & CSng(.Items(I).SubItems(12).Text.Trim) & "," & _
+                        " " & IIf(.Items(I).SubItems(13).Text.Trim = "/", 1, 0) & "," & _
+                        " " & IIf(.Items(I).SubItems(14).Text.Trim = "/", 1, 0) & ")"
+
+                Dcmd.Connection = Conn
+                Dcmd.CommandText = strSQL
+                Dcmd.ExecuteNonQuery()
+                ProgressBar1.Value = I + 1
+            Next
+        End With
+        MsgBox("บันทึกข้อมูลสำเร็จแล้ว", MsgBoxStyle.Information, Me.Text)
+    End Sub
+
+    Private Sub btnReport_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnReport.Click
+        ReportPrint = Report.PrintOTSheet
+        Dim Rpt As New frmViewReport
+        Rpt.ShowDialog()
+    End Sub
+
+    Private Sub lstOvertime_DoubleClick(ByVal sender As Object, ByVal e As System.EventArgs) Handles lstOvertime.DoubleClick
+        With lstOvertime
+            If .SelectedItems.Count = 0 Then Exit Sub
+            Dim frm As New frmEditTime
+
+            ' LoadTime
+            frm.txtDate.Text = .SelectedItems(0).SubItems(1).Text
+            frm.txtCode.Text = .SelectedItems(0).SubItems(2).Text
+            Call frm.txtCode_LostFocus(Me, System.EventArgs.Empty)
+            frm.StartPosition = FormStartPosition.CenterScreen
+            frm.ShowDialog()
+            frm.BringToFront()
+        End With
+    End Sub
+
+    Public Sub txtCode_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtCode.LostFocus
+        Dim Da As New SqlDataAdapter
+        Dim Ds As New DataSet
+        Dim strSQL As String
+
+        strSQL = "Select Code,Fname,Lname From Emp" & _
+                " Where Code = '" & txtCode.Text.Trim & "' "
+        If cboCompany.SelectedIndex > 0 Then
+            strSQL &= " and isnull(Emp.CompanyId,'') = '" & GetData.GetCompanyId(cboCompany.Text.Trim) & "'"
+        End If
+
+        Da = New SqlDataAdapter(strSQL, Conn)
+        Da.Fill(Ds, "Data")
+        With Ds.Tables("Data")
+            If .Rows.Count = 0 Then
+                txtCode.Text = ""
+                txtFname.Text = ""
+                txtLname.Text = ""
+                Ds.Clear()
+                Exit Sub
+            Else
+                txtFname.Text = .Rows(0).Item("FName")
+                txtLname.Text = .Rows(0).Item("LName")
+            End If
+            Ds.Clear()
+        End With
+    End Sub
+
+    Private Sub txtCode_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtCode.TextChanged
+
+    End Sub
+
+    Private Sub btnRefresh_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnRefresh.Click
+        lblStatus.Text = "REFRESH"
+        Call LoadData()
+        Call LoadCompany()
+        txtDate.Text = "__/__/____"
+        txtCodeEdit.Text = ""
+        txtNameEdit.Text = ""
+        txtOT15x.Text = ""
+        txtOT1x.Text = ""
+        txtOT3x.Text = ""
+        btnEditOT.Enabled = False
+    End Sub
+
+    Public Sub btnSearch_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSearch.Click
+        lblStatus.Text = "SEARCH"
+        Call LoadDataSearch()
+    End Sub
+
+    Private Sub cboDepartment_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cboDepartment.SelectedIndexChanged
+        Dim Da As New SqlDataAdapter
+        Dim Ds As New DataSet
+        Dim strSQL As String
+        strSQL = "Select DeptId From Department" & _
+                " Where Department = '" & cboDepartment.Text.Trim & "' " & _
+                " Order By Department"
+        Da = New SqlDataAdapter(strSQL, Conn)
+        Da.Fill(Ds, "Data")
+        With Ds.Tables("Data")
+            lblDeptId.Text = ""
+            Dim I As Integer
+            For I = 0 To .Rows.Count - 1
+                lblDeptId.Text = .Rows(I).Item("DeptId")
+            Next
+            Ds.Clear()
+        End With
+    End Sub
+
+    Private Sub txtCodeEdit_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtCodeEdit.LostFocus
+        Dim Da As New SqlDataAdapter
+        Dim Ds As New DataSet
+        Dim strSQL As String
+
+        strSQL = " Select Code,EmpName = Fname + '   ' + Lname From Emp " & _
+                 " Where Code = '" & txtCodeEdit.Text.Trim & "' "
+
+        If cboCompany.SelectedIndex > 0 Then
+            strSQL &= " and isnull(Emp.CompanyId,'') = '" & GetData.GetCompanyId(cboCompany.Text.Trim) & "'"
+        End If
+
+        Da = New SqlDataAdapter(strSQL, Conn)
+        Da.Fill(Ds, "Data")
+        With Ds.Tables("Data")
+            If .Rows.Count = 0 Then
+                txtCodeEdit.Text = ""
+                txtNameEdit.Text = ""
+                Ds.Clear()
+                Exit Sub
+            Else
+                txtNameEdit.Text = .Rows(0).Item("EmpName")
+            End If
+            Ds.Clear()
+        End With
+    End Sub
+
+    Private Sub txtCodeEdit_MaskInputRejected(ByVal sender As System.Object, ByVal e As System.Windows.Forms.MaskInputRejectedEventArgs) Handles txtCodeEdit.MaskInputRejected
+
+    End Sub
+
+    Private Sub lstOvertime_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles lstOvertime.SelectedIndexChanged
+        With lstOvertime
+            If .SelectedItems.Count = 0 Then Exit Sub
+            txtDate.Text = .SelectedItems(0).SubItems(1).Text.Trim
+            txtCodeEdit.Text = .SelectedItems(0).SubItems(2).Text.Trim
+            Call txtCodeEdit_LostFocus(Me, System.EventArgs.Empty)
+            txtOT15x.Text = .SelectedItems(0).SubItems(5).Text.Trim
+            txtOT1x.Text = .SelectedItems(0).SubItems(6).Text.Trim
+            txtOt2x.Text = .SelectedItems(0).SubItems(7).Text.Trim
+            txtOT3x.Text = .SelectedItems(0).SubItems(8).Text.Trim
+            txtOtMin.Text = .SelectedItems(0).SubItems(9).Text.Trim
+            txtOtHour.Text = .SelectedItems(0).SubItems(10).Text.Trim
+            txtOtBaht.Text = .SelectedItems(0).SubItems(11).Text.Trim
+            txtOtPeriod.Text = .SelectedItems(0).SubItems(12).Text.Trim
+            lblRow.Text = .Items.IndexOf(.SelectedItems(0)).ToString
+            btnEditOT.Enabled = True
+        End With
+    End Sub
+
+    Private Sub btnEditOT_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnEditOT.Click
+        If lblRow.Text = "" Then Exit Sub
+        With lstOvertime
+            If IsNumeric(txtOT15x.Text.Trim) = False Then
+                MsgBox("กรุณาป้อนตัวเลขให้ถูกต้องด้วย", MsgBoxStyle.Information, Me.Text)
+                txtOT15x.Focus()
+                txtOT15x.SelectAll()
+                Exit Sub
+            End If
+            If IsNumeric(txtOT1x.Text.Trim) = False Then
+                MsgBox("กรุณาป้อนตัวเลขให้ถูกต้องด้วย", MsgBoxStyle.Information, Me.Text)
+                txtOT1x.Focus()
+                txtOT1x.SelectAll()
+                Exit Sub
+            End If
+            If IsNumeric(txtOt2x.Text.Trim) = False Then
+                MsgBox("กรุณาป้อนตัวเลขให้ถูกต้องด้วย", MsgBoxStyle.Information, Me.Text)
+                txtOt2x.Focus()
+                txtOt2x.SelectAll()
+                Exit Sub
+            End If
+            If IsNumeric(txtOT3x.Text.Trim) = False Then
+                MsgBox("กรุณาป้อนตัวเลขให้ถูกต้องด้วย", MsgBoxStyle.Information, Me.Text)
+                txtOT3x.Focus()
+                txtOT3x.SelectAll()
+                Exit Sub
+            End If
+
+            If IsNumeric(txtOtMin.Text.Trim) = False Then
+                MsgBox("กรุณาป้อนตัวเลขให้ถูกต้องด้วย", MsgBoxStyle.Information, Me.Text)
+                txtOtMin.Focus()
+                txtOtMin.SelectAll()
+                Exit Sub
+            End If
+
+            If IsNumeric(txtOtHour.Text.Trim) = False Then
+                MsgBox("กรุณาป้อนตัวเลขให้ถูกต้องด้วย", MsgBoxStyle.Information, Me.Text)
+                txtOtHour.Focus()
+                txtOtHour.SelectAll()
+                Exit Sub
+            End If
+
+            If IsNumeric(txtOtPeriod.Text.Trim) = False Then
+                MsgBox("กรุณาป้อนตัวเลขให้ถูกต้องด้วย", MsgBoxStyle.Information, Me.Text)
+                txtOtPeriod.Focus()
+                txtOtPeriod.SelectAll()
+                Exit Sub
+            End If
+
+            If IsNumeric(txtOtBaht.Text.Trim) = False Then
+                MsgBox("กรุณาป้อนตัวเลขให้ถูกต้องด้วย", MsgBoxStyle.Information, Me.Text)
+                txtOtBaht.Focus()
+                txtOtBaht.SelectAll()
+                Exit Sub
+            End If
+
+            lstOvertime.Items(CInt(lblRow.Text)).SubItems(5).Text = txtOT15x.Text
+            lstOvertime.Items(CInt(lblRow.Text)).SubItems(6).Text = txtOT1x.Text
+            lstOvertime.Items(CInt(lblRow.Text)).SubItems(7).Text = txtOt2x.Text
+            lstOvertime.Items(CInt(lblRow.Text)).SubItems(8).Text = txtOT3x.Text
+            lstOvertime.Items(CInt(lblRow.Text)).SubItems(9).Text = txtOtMin.Text
+            lstOvertime.Items(CInt(lblRow.Text)).SubItems(10).Text = txtOtHour.Text
+            lstOvertime.Items(CInt(lblRow.Text)).SubItems(11).Text = txtOtBaht.Text ' Format(GetOTBaht(txtCodeEdit.Text.Trim, CSng(txtOtHour.Text), ConvertDate(txtDate.Text.Trim)), "#,##0.00")
+            lstOvertime.Items(CInt(lblRow.Text)).SubItems(12).Text = txtOtPeriod.Text
+
+            txtDate.Text = "__/__/____"
+            txtCodeEdit.Text = ""
+            txtNameEdit.Text = ""
+            txtOT15x.Text = ""
+            txtOT1x.Text = ""
+            txtOt2x.Text = ""
+            txtOT3x.Text = ""
+            txtOtMin.Text = ""
+            txtOtHour.Text = ""
+            txtOtPeriod.Text = ""
+            txtOtBaht.Text = ""
+            btnEditOT.Enabled = False
+        End With
+    End Sub
+
+    Private Sub btnClearOTAll_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnClearOTAll.Click
+        With lstOvertime
+            Dim I As Integer
+            For I = 0 To .Items.Count - 1
+                .Items(I).SubItems(5).Text = "0"
+                .Items(I).SubItems(6).Text = "0"
+                .Items(I).SubItems(7).Text = "0"
+                .Items(I).SubItems(8).Text = "0"
+                .Items(I).SubItems(9).Text = "0"
+                .Items(I).SubItems(10).Text = "0"
+                .Items(I).SubItems(11).Text = "0.00"
+                .Items(I).SubItems(12).Text = "0"
+            Next
+        End With
+    End Sub
+
+    Private Sub btnClearData_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnClearData.Click
+        Dim dCMD As New SqlCommand
+        Dim strSQL As String
+
+        If MsgBox("คุณต้องการลบข้อมูล OT ทั้งหมดหรือไม่", MsgBoxStyle.Information + MsgBoxStyle.YesNo, Me.Text) = MsgBoxResult.No Then Exit Sub
+        Try
+            strSQL = "Delete From TimeOvertime Where Month_year = '" & txtMonthYear.Text.Trim & "'and   " & _
+                        " Code In (Select Code From Emp"
+            If cboCompany.SelectedIndex > 0 Then
+                strSQL &= " Where isnull(Emp.CompanyId,'') = '" & GetData.GetCompanyId(cboCompany.Text.Trim) & "')"
+            End If
+
+            dCMD.Connection = Conn
+            dCMD.CommandText = strSQL
+            dCMD.ExecuteNonQuery()
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Information, Me.Text)
+            Exit Sub
+        End Try
+        MsgBox("ลบข้อมูลเรียบร้อยแล้ว", MsgBoxStyle.Information, Me.Text)
+        lstOvertime.Items.Clear()
+    End Sub
+
+    Private Sub GroupBox6_Enter(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles GroupBox6.Enter
+
+    End Sub
+
+    Private Sub LoadCompany()
+        Dim Da As New SqlDataAdapter
+        Dim Ds As New DataSet
+        Dim strSQL As String
+        strSQL = "Select CompanyName From Company_Sub "
+        Da = New SqlDataAdapter(strSQL, Conn)
+        Da.Fill(Ds, "Data")
+        With Ds.Tables("Data")
+            cboCompany.Items.Clear()
+            cboCompany.Items.Add("ทั้งหมด")
+            Dim I As Integer
+            For I = 0 To .Rows.Count - 1
+                cboCompany.Items.Add(.Rows(I).Item("CompanyName"))
+            Next
+            Ds.Clear()
+            cboCompany.SelectedIndex = 0
+        End With
+    End Sub
+
+    Private Sub txtOtHour_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtOtHour.LostFocus
+        If IsNumeric(txtOtHour.Text) = True Then
+            txtOtMin.Text = CSng(txtOtHour.Text) * 60
+        End If
+    End Sub
+
+    Private Sub txtOtHour_MaskInputRejected(ByVal sender As System.Object, ByVal e As System.Windows.Forms.MaskInputRejectedEventArgs) Handles txtOtHour.MaskInputRejected
+
+    End Sub
+
+    Private Sub txtOtMin_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtOtMin.LostFocus
+        If IsNumeric(txtOtMin.Text) = True Then
+            txtOtHour.Text = CSng(txtOtMin.Text) / 60
+        End If
+    End Sub
+
+    Private Sub txtOtMin_MaskInputRejected(ByVal sender As System.Object, ByVal e As System.Windows.Forms.MaskInputRejectedEventArgs) Handles txtOtMin.MaskInputRejected
+
+    End Sub
+
+    Private Sub txtOtBaht_MaskInputRejected(ByVal sender As System.Object, ByVal e As System.Windows.Forms.MaskInputRejectedEventArgs) Handles txtOtBaht.MaskInputRejected
+
+    End Sub
+
+    Private Sub Label21_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label21.Click
+
+    End Sub
+End Class

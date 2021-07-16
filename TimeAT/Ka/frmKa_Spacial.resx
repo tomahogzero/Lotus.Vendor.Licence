@@ -1,0 +1,3205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="&gt;&gt;ColumnHeader7.Name" xml:space="preserve">
+    <value>ColumnHeader7</value>
+  </data>
+  <data name="&gt;&gt;GroupBox3.Name" xml:space="preserve">
+    <value>GroupBox3</value>
+  </data>
+  <data name="&gt;&gt;rdByName_Cal.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;rdByCode.Parent" xml:space="preserve">
+    <value>GroupControl1</value>
+  </data>
+  <data name="GroupControl1.Text" xml:space="preserve">
+    <value>เรียงข้อมูลตาม</value>
+  </data>
+  <data name="&gt;&gt;grpLeft.Name" xml:space="preserve">
+    <value>grpLeft</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="GcEmp_Cal.Location" type="System.Drawing.Point, System.Drawing">
+    <value>55, 133</value>
+  </data>
+  <data name="&gt;&gt;cboPosition.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.ComboBoxEdit, DevExpress.XtraEditors.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;LabelControl2.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;BtnDel.Name" xml:space="preserve">
+    <value>BtnDel</value>
+  </data>
+  <data name="btnshowHide.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 9.75pt</value>
+  </data>
+  <data name="&gt;&gt;colempcode.Name" xml:space="preserve">
+    <value>colempcode</value>
+  </data>
+  <data name="GroupBox3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>380, 47</value>
+  </data>
+  <data name="rdByDeptCode.Text" xml:space="preserve">
+    <value>ฝ่าย, แผนก, รหัส</value>
+  </data>
+  <data name="&gt;&gt;ColumnHeader3.Name" xml:space="preserve">
+    <value>ColumnHeader3</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="btnExit.TabIndex" type="System.Int32, mscorlib">
+    <value>53</value>
+  </data>
+  <data name="&gt;&gt;rdByCode_Cal.Parent" xml:space="preserve">
+    <value>GroupControl7</value>
+  </data>
+  <data name="Label2.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="colLPorsition.Caption" xml:space="preserve">
+    <value>ตำแหน่ง</value>
+  </data>
+  <data name="&gt;&gt;rdContractor.Parent" xml:space="preserve">
+    <value>GroupControl3</value>
+  </data>
+  <data name="&gt;&gt;GcEmp_Cal.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.GridControl, DevExpress.XtraGrid.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="GridColumn6.Caption" xml:space="preserve">
+    <value>ฝ่าย</value>
+  </data>
+  <data name="&gt;&gt;GroupControl3.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;col_department.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;RepositoryItemButtonEdit1.Name" xml:space="preserve">
+    <value>RepositoryItemButtonEdit1</value>
+  </data>
+  <data name="btnRefresh_Cal.Location" type="System.Drawing.Point, System.Drawing">
+    <value>447, 25</value>
+  </data>
+  <data name="Label12.Text" xml:space="preserve">
+    <value>ตำแหน่ง : </value>
+  </data>
+  <data name="&gt;&gt;Label12.Name" xml:space="preserve">
+    <value>Label12</value>
+  </data>
+  <data name="&gt;&gt;LabelControl3.Name" xml:space="preserve">
+    <value>LabelControl3</value>
+  </data>
+  <data name="rdDay.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="BtnDel.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;colName.Name" xml:space="preserve">
+    <value>colName</value>
+  </data>
+  <data name="&gt;&gt;rdContractor.Name" xml:space="preserve">
+    <value>rdContractor</value>
+  </data>
+  <data name="GcEmp.EmbeddedNavigator.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;Label9.Parent" xml:space="preserve">
+    <value>ExpandablePanel1</value>
+  </data>
+  <data name="colrow.Width" type="System.Int32, mscorlib">
+    <value>41</value>
+  </data>
+  <data name="rdByCode_Cal.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="rdByName.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="btnRefresh.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="panelApp.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1219, 562</value>
+  </data>
+  <data name="&gt;&gt;colLPorsition.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="RepositoryItemLookUpEdit1.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;GridColumn4.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;rdAll.Parent" xml:space="preserve">
+    <value>GroupControl3</value>
+  </data>
+  <data name="Label7.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;btnRefresh_Cal.Name" xml:space="preserve">
+    <value>btnRefresh_Cal</value>
+  </data>
+  <data name="&gt;&gt;btnshowHide.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="colCode.Text" xml:space="preserve">
+    <value>รหัสพนง.</value>
+  </data>
+  <data name="&gt;&gt;LabelControl4.Parent" xml:space="preserve">
+    <value>GrpRight</value>
+  </data>
+  <data name="&gt;&gt;cboTransport_detail.Name" xml:space="preserve">
+    <value>cboTransport_detail</value>
+  </data>
+  <data name="rdDay.Location" type="System.Drawing.Point, System.Drawing">
+    <value>215, 24</value>
+  </data>
+  <data name="Label6.Text" xml:space="preserve">
+    <value>กลุ่ม พนักงาน : </value>
+  </data>
+  <data name="&gt;&gt;Label12.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;rdByCode.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="Label13.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;Label12.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GridColumn5.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="cboDivision_Cal.Properties.NullValuePrompt" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;LabelControl1.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="rdByDeptName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>130, 17</value>
+  </data>
+  <data name="col_department.Width" type="System.Int32, mscorlib">
+    <value>178</value>
+  </data>
+  <data name="&gt;&gt;cboUnitName.Name" xml:space="preserve">
+    <value>cboUnitName</value>
+  </data>
+  <data name="LabelControl3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>25, 13</value>
+  </data>
+  <data name="ColumnHeader8.Width" type="System.Int32, mscorlib">
+    <value>100</value>
+  </data>
+  <data name="cboPosition.Location" type="System.Drawing.Point, System.Drawing">
+    <value>258, 342</value>
+  </data>
+  <data name="colProductName.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;rdByCode.Name" xml:space="preserve">
+    <value>rdByCode</value>
+  </data>
+  <data name="&gt;&gt;lstEmp.Parent" xml:space="preserve">
+    <value>GroupBox1</value>
+  </data>
+  <data name="btnSelectAll_Cal.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="rdDay.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;txtNameSearch.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label13.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="SplitContainerControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="rdByName_Cal.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;GridColumn2.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;ExpandablePanel1.Parent" xml:space="preserve">
+    <value>GroupBox1</value>
+  </data>
+  <data name="GcEmp_Cal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>476, 415</value>
+  </data>
+  <data name="Label11.Text" xml:space="preserve">
+    <value>ฝ่าย : </value>
+  </data>
+  <data name="GvEmp_Cal.Appearance.HeaderPanel.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="btnExit.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABF0RVh0VGl0
+        bGUAQ2xvc2U7RXhpdDsFGf+FAAAArElEQVQ4T7XSOwoCQRCE4c0E8XEDQTMRA+/gTTykGBuYGm6olxBE
+        tP1LHGl1WoZVg2+DYrqYZrYys6/cPvVibk38teBUkkUFNcbYuGyFCXYuyxYcMYSyPlSi4fY9m+KMsECW
+        aEF5D2m4gzUeZ6MC8SXZYflU4K8taZ2nc1GBH+4i3eStJFdwwABpWNf268xwQVggW4zgd1aJnnbvsrBA
+        9JyvWfGPVOx3Bc1ZdQWpA3U147gCvgAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="RepositoryItemLookUpEdit1.Columns2" xml:space="preserve">
+    <value>บริษัทขนส่ง</value>
+  </data>
+  <data name="LabelControl2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 13</value>
+  </data>
+  <data name="&gt;&gt;lstEmp.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="cboDivision_Cal.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="colCode.Width" type="System.Int32, mscorlib">
+    <value>77</value>
+  </data>
+  <data name="&gt;&gt;btnAdd.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="GcEmp.Size" type="System.Drawing.Size, System.Drawing">
+    <value>593, 415</value>
+  </data>
+  <data name="ExpandablePanel2.TitleText" xml:space="preserve">
+    <value>ค้นหา</value>
+  </data>
+  <data name="rdByCode.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="colrow.AppearanceCell.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="lstEmp.Size" type="System.Drawing.Size, System.Drawing">
+    <value>179, 0</value>
+  </data>
+  <data name="GroupBox1.Text" xml:space="preserve">
+    <value>รายชื่อพนักงาน</value>
+  </data>
+  <data name="&gt;&gt;btnshowHide.Name" xml:space="preserve">
+    <value>btnshowHide</value>
+  </data>
+  <data name="&gt;&gt;Label13.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;GroupBox5.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;btnHide_cal.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="RepositoryItemButtonEdit1.Mask.EditMask" xml:space="preserve">
+    <value />
+  </data>
+  <data name="LabelControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>25, 13</value>
+  </data>
+  <data name="btnRemove.Size" type="System.Drawing.Size, System.Drawing">
+    <value>44, 417</value>
+  </data>
+  <data name="&gt;&gt;Label3.Name" xml:space="preserve">
+    <value>Label3</value>
+  </data>
+  <data name="&gt;&gt;lstEmp_Cal.Name" xml:space="preserve">
+    <value>lstEmp_Cal</value>
+  </data>
+  <data name="rdContractor.Text" xml:space="preserve">
+    <value>รายเหมา</value>
+  </data>
+  <data name="Label4.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;Label7.Name" xml:space="preserve">
+    <value>Label7</value>
+  </data>
+  <data name="cboDivision_Cal.Properties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="Label8.Text" xml:space="preserve">
+    <value>ตำแหน่ง : </value>
+  </data>
+  <data name="GroupBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>185, 159</value>
+  </data>
+  <data name="LabelControl2.TabIndex" type="System.Int32, mscorlib">
+    <value>56</value>
+  </data>
+  <data name="&gt;&gt;RepositoryItemLookUpEdit2.Name" xml:space="preserve">
+    <value>RepositoryItemLookUpEdit2</value>
+  </data>
+  <data name="&gt;&gt;rdMonth.Name" xml:space="preserve">
+    <value>rdMonth</value>
+  </data>
+  <data name="RepositoryItemLookUpEdit2.Columns1" xml:space="preserve">
+    <value>หน่วยนับ</value>
+  </data>
+  <data name="GcEmp_Cal.EmbeddedNavigator.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left</value>
+  </data>
+  <data name="&gt;&gt;Label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="SplitContainerControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1219, 562</value>
+  </data>
+  <data name="ColumnHeader1.Width" type="System.Int32, mscorlib">
+    <value>44</value>
+  </data>
+  <data name="RepositoryItemLookUpEdit2.Columns" xml:space="preserve">
+    <value>unit</value>
+  </data>
+  <data name="Label2.Text" xml:space="preserve">
+    <value>แผนก : </value>
+  </data>
+  <data name="&gt;&gt;rdByCode_Cal.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ProgressBar2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="&gt;&gt;LabelControl4.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="btnRemove.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 9.75pt, style=Bold</value>
+  </data>
+  <data name="&gt;&gt;cboEmpGroup_Cal.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="GcEmp.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt</value>
+  </data>
+  <data name="GroupBox2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 159</value>
+  </data>
+  <data name="cboDepartment.Location" type="System.Drawing.Point, System.Drawing">
+    <value>75, 50</value>
+  </data>
+  <data name="lstEmp_Cal.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 327</value>
+  </data>
+  <data name="GroupBox2.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;cboEmpGroup.Parent" xml:space="preserve">
+    <value>GroupBox1</value>
+  </data>
+  <data name="LabelControl2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>34, 55</value>
+  </data>
+  <data name="rdByName_Cal.Location" type="System.Drawing.Point, System.Drawing">
+    <value>59, 25</value>
+  </data>
+  <data name="LabelControl4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>34, 50</value>
+  </data>
+  <data name="&gt;&gt;rdByName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SplitContainerControl1.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SplitContainerControl, DevExpress.Utils.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="GroupBox6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 105</value>
+  </data>
+  <data name="btnRefresh.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 9.75pt, style=Bold</value>
+  </data>
+  <assembly alias="DevExpress.XtraEditors.v17.1" name="DevExpress.XtraEditors.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <data name="BtnDel.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v17.1">
+    <value>Default</value>
+  </data>
+  <data name="&gt;&gt;GridColumn6.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="panelApp.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="GroupBox4.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>frmKa_Spacial</value>
+  </data>
+  <data name="SplitContainerControl1.Panel2.Text" xml:space="preserve">
+    <value>Panel2</value>
+  </data>
+  <data name="cboDivision_Cal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>369, 20</value>
+  </data>
+  <data name="GridColumn4.VisibleIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="rdByDeptCode_Cal.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="Label1.Text" xml:space="preserve">
+    <value>ชื่อ - สกุล : </value>
+  </data>
+  <data name="&gt;&gt;GroupBox4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="GroupBox4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>133, 47</value>
+  </data>
+  <data name="&gt;&gt;RepositoryItemButtonEdit1.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit, DevExpress.XtraEditors.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="ColumnHeader6.DisplayIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;lstEmp.Name" xml:space="preserve">
+    <value>lstEmp</value>
+  </data>
+  <data name="&gt;&gt;ProgressBarX1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="btnHide_cal.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABV0RVh0VGl0
+        bGUARG93bmxvYWQ7QXJyb3c77I8a0AAAAk9JREFUOE91km1IU1EYxzfvsib2gkY5KaSLK4WhMLg6cdvd
+        dLV8ySSKCKmwZqEpKoYohS9gb7rUvmnOaaPRi01EIupD2SgJ55pF1Jcgs6LoQ/ghK4Lk33lsjCXHB36c
+        w3n+58c59x4FgCWWlZIRwyFSkX3Rgu67VhpinOOWCTZHNGztAfXCGb7A6dtFg3Dpjg2//rz7jxa3TCHV
+        WZeJMlwBHVtgrD7ntWL+9xTmFtx4/92Nzz98aOrLpZCaoaIsTyC0eWS0DjOGzGzTfbz55sRrxtv5AdT3
+        GlDfY0BtdzaFVVzBsfaM2zeeVmDmaxdCX85j8tNpRgMezp7Ao9lqXL13GHllKaMrCZTG0i2J5W0ZH7zB
+        vbj+0grPjBnXQkYMh0zo88vYeXTbx/ScjZspyxNQCQUOMb+yU7/oCeVhMGiAazobg9NG7K/TLurtSXbK
+        UHAlAX3IVYUO8WKTS4/+gIT+KQlV3emQijRdrBcbzvAFxZWpNCgTk9Xxux1ioGMsEy0jOmSVaJ7HJ8Su
+        pV5WSTJl+AL7cVFxZTKTpoLelpSx55S4YC3b+lMrJdCi0PNEp5CKNdTnC1hFP2FBKtTU6ORNtWxO/57u
+        HnnSPIHKOSb7L49b0Dkq48KICR03jWj35qLVk4MzbgOaB7JQ26v3U5YnUDe7DJiYK4fvlR23XtjgZX/C
+        E7RgKGCG65kR/ZMG7KvbTuE4nmDNoca0xwcb03CgYcdSsLRGi5JqLYqqUlFwUoS9QkT+kRQ6AVdAd6O3
+        vo6xPsyGZdBaHCPm3z4o/gL/F7wZt1fm3wAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="ColumnHeader2.Text" xml:space="preserve">
+    <value>รหัสพนง.</value>
+  </data>
+  <data name="colempcode.AppearanceCell.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="Label10.Size" type="System.Drawing.Size, System.Drawing">
+    <value>87, 16</value>
+  </data>
+  <data name="btnRefresh_Cal.Appearance.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="&gt;&gt;rdByDeptName_Cal.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cboCompany_Cal.Parent" xml:space="preserve">
+    <value>GroupBox2</value>
+  </data>
+  <data name="&gt;&gt;ExpandablePanel1.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;GroupBox2.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;cboCompany_Cal.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="colempcode.AppearanceCell.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="&gt;&gt;rdByDeptCode.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label15.Name" xml:space="preserve">
+    <value>Label15</value>
+  </data>
+  <data name="&gt;&gt;btnRefresh.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;rdDay.Name" xml:space="preserve">
+    <value>rdDay</value>
+  </data>
+  <data name="cboDepartment_Cal.Properties.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="rdByName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>93, 28</value>
+  </data>
+  <data name="GroupBox5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>385, 47</value>
+  </data>
+  <data name="colLDivision.Caption" xml:space="preserve">
+    <value>ฝ่าย</value>
+  </data>
+  <data name="&gt;&gt;colLPorsition.Name" xml:space="preserve">
+    <value>colLPorsition</value>
+  </data>
+  <data name="btnRefresh_Cal.TabIndex" type="System.Int32, mscorlib">
+    <value>28</value>
+  </data>
+  <data name="GridColumn2.Caption" xml:space="preserve">
+    <value>รหัส พนง.</value>
+  </data>
+  <data name="btnRefresh.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="btnshowHide.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 21</value>
+  </data>
+  <data name="&gt;&gt;rdAll.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;ColumnHeader6.Name" xml:space="preserve">
+    <value>ColumnHeader6</value>
+  </data>
+  <data name="grpLeft.TabIndex" type="System.Int32, mscorlib">
+    <value>50</value>
+  </data>
+  <data name="btnHide_cal.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 9.75pt</value>
+  </data>
+  <data name="&gt;&gt;btnSelectAll_Cal.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ProgressBar2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>134, 10</value>
+  </data>
+  <data name="Label2.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopRight</value>
+  </data>
+  <data name="&gt;&gt;GroupBox6.Name" xml:space="preserve">
+    <value>GroupBox6</value>
+  </data>
+  <data name="rdAll.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="GroupBox6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>128, 47</value>
+  </data>
+  <data name="&gt;&gt;GroupBox3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="GridColumn1.AppearanceHeader.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;ColumnHeader2.Name" xml:space="preserve">
+    <value>ColumnHeader2</value>
+  </data>
+  <data name="cboDepartment_Cal.Properties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="cboDepartment.Properties.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;cboEmpGroup.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="txtNameSearch_Cal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>37, 21</value>
+  </data>
+  <data name="btnshowHide.Text" xml:space="preserve">
+    <value>ซ่อนค้นหา</value>
+  </data>
+  <data name="&gt;&gt;GroupBox2.Name" xml:space="preserve">
+    <value>GroupBox2</value>
+  </data>
+  <data name="btnAdd.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <assembly alias="DevExpress.Utils.v17.1" name="DevExpress.Utils.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <data name="cboTransport_detail.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v17.1">
+    <value>Combo</value>
+  </data>
+  <data name="cboDivision_Cal.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v17.1">
+    <value>Combo</value>
+  </data>
+  <data name="BtnDel.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="ColumnHeader7.Text" xml:space="preserve">
+    <value>ตำแหน่ง</value>
+  </data>
+  <data name="GridColumn1.AppearanceCell.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="GridColumn1.AppearanceCell.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="&gt;&gt;btnNoneSelectAll_Cal.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;cboCompany.Parent" xml:space="preserve">
+    <value>GroupBox1</value>
+  </data>
+  <data name="cboDepartment.TabIndex" type="System.Int32, mscorlib">
+    <value>31</value>
+  </data>
+  <data name="&gt;&gt;cboDepartment.Parent" xml:space="preserve">
+    <value>grpLeft</value>
+  </data>
+  <data name="&gt;&gt;rdDay.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="txtNameSearch.Size" type="System.Drawing.Size, System.Drawing">
+    <value>291, 21</value>
+  </data>
+  <data name="GridColumn5.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="rdContractor.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 17</value>
+  </data>
+  <data name="ProgressBar1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>380, 10</value>
+  </data>
+  <data name="rdByDeptCode.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="btnAdd.Location" type="System.Drawing.Point, System.Drawing">
+    <value>601, 133</value>
+  </data>
+  <data name="ProgressBarX1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1078, 27</value>
+  </data>
+  <data name="btnSelectAll_Cal.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 2</value>
+  </data>
+  <data name="&gt;&gt;Label10.Name" xml:space="preserve">
+    <value>Label10</value>
+  </data>
+  <data name="&gt;&gt;GridColumn4.Name" xml:space="preserve">
+    <value>GridColumn4</value>
+  </data>
+  <data name="ColumnHeader5.Text" xml:space="preserve">
+    <value>แผนก</value>
+  </data>
+  <data name="btnRefresh.Location" type="System.Drawing.Point, System.Drawing">
+    <value>562, 24</value>
+  </data>
+  <data name="btnRefresh.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="SplitContainerControl1.Panel1.Text" xml:space="preserve">
+    <value>Panel1</value>
+  </data>
+  <data name="&gt;&gt;SplitContainerControl1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="Label13.Text" xml:space="preserve">
+    <value>กลุ่ม พนักงาน : </value>
+  </data>
+  <data name="&gt;&gt;cboCompany_Cal.Name" xml:space="preserve">
+    <value>cboCompany_Cal</value>
+  </data>
+  <data name="&gt;&gt;cboDepartment.Name" xml:space="preserve">
+    <value>cboDepartment</value>
+  </data>
+  <data name="rdByDeptName_Cal.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="cboEmpGroup.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="BtnDel.Mask.EditMask" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;GrpRight.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.GroupControl, DevExpress.Utils.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;Label11.Name" xml:space="preserve">
+    <value>Label11</value>
+  </data>
+  <data name="SplitContainerControl1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;btnRemove.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="collname.Caption" xml:space="preserve">
+    <value>สกุล</value>
+  </data>
+  <data name="rdByCode.Size" type="System.Drawing.Size, System.Drawing">
+    <value>44, 17</value>
+  </data>
+  <data name="&gt;&gt;Panel1.Parent" xml:space="preserve">
+    <value>GroupBox1</value>
+  </data>
+  <data name="&gt;&gt;ProgressBar2.Parent" xml:space="preserve">
+    <value>ExpandablePanel2</value>
+  </data>
+  <data name="GridColumn4.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="BtnDel.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v17.1">
+    <value>None</value>
+  </data>
+  <data name="ProgressBar1.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="grpLeft.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="grpLeft.Text" xml:space="preserve">
+    <value>รายชื่อพนักงาน</value>
+  </data>
+  <data name="ExpandablePanel2.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="rdContractor.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="GcEmp_Cal.EmbeddedNavigator.ToolTipTitle" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GroupControl7.Text" xml:space="preserve">
+    <value>เรียงข้อมูลตาม</value>
+  </data>
+  <data name="Label9.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopRight</value>
+  </data>
+  <data name="Label11.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 35</value>
+  </data>
+  <data name="ColumnHeader1.Text" xml:space="preserve">
+    <value>ลำดับ</value>
+  </data>
+  <data name="rdByName.Text" xml:space="preserve">
+    <value>ชื่อ - สกุล</value>
+  </data>
+  <data name="btnRefresh.Text" xml:space="preserve">
+    <value>รีเฟรช</value>
+  </data>
+  <data name="&gt;&gt;rdByName.Name" xml:space="preserve">
+    <value>rdByName</value>
+  </data>
+  <data name="GcEmp.EmbeddedNavigator.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left</value>
+  </data>
+  <data name="rdByDeptName.Text" xml:space="preserve">
+    <value>ฝ่าย, แผนก, ชื่อ - สกุล</value>
+  </data>
+  <data name="btnAdd.TabIndex" type="System.Int32, mscorlib">
+    <value>55</value>
+  </data>
+  <data name="cboUnitName.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v17.1">
+    <value>Combo</value>
+  </data>
+  <data name="&gt;&gt;RepositoryItemLookUpEdit1.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit, DevExpress.XtraEditors.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;GcEmp_Cal.Name" xml:space="preserve">
+    <value>GcEmp_Cal</value>
+  </data>
+  <data name="cboDivision.Size" type="System.Drawing.Size, System.Drawing">
+    <value>481, 20</value>
+  </data>
+  <data name="&gt;&gt;btnHide_cal.Parent" xml:space="preserve">
+    <value>GrpRight</value>
+  </data>
+  <data name="&gt;&gt;Label3.Parent" xml:space="preserve">
+    <value>GroupBox1</value>
+  </data>
+  <data name="colLDivision.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label4.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="Label15.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopRight</value>
+  </data>
+  <data name="cboCompany.Location" type="System.Drawing.Point, System.Drawing">
+    <value>144, 431</value>
+  </data>
+  <data name="&gt;&gt;ColumnHeader3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Label3.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopRight</value>
+  </data>
+  <data name="&gt;&gt;GvEmp.Name" xml:space="preserve">
+    <value>GvEmp</value>
+  </data>
+  <data name="&gt;&gt;btnRefresh_Cal.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="GroupBox6.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;Label8.Name" xml:space="preserve">
+    <value>Label8</value>
+  </data>
+  <data name="&gt;&gt;btnSelectAll_Cal.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GridColumn5.VisibleIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;btnSelectAll_Cal.Parent" xml:space="preserve">
+    <value>Panel2</value>
+  </data>
+  <data name="&gt;&gt;GroupControl7.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="btnHide_cal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>111, 21</value>
+  </data>
+  <data name="&gt;&gt;ColumnHeader5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="rdAll.Size" type="System.Drawing.Size, System.Drawing">
+    <value>59, 17</value>
+  </data>
+  <data name="GvEmp.Appearance.Row.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="GcEmp_Cal.EmbeddedNavigator.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="Label10.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="grpLeft.Size" type="System.Drawing.Size, System.Drawing">
+    <value>653, 553</value>
+  </data>
+  <data name="GridColumn1.VisibleIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="GvEmp.Appearance.HeaderPanel.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="GridColumn6.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;cboUnitName.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit, DevExpress.XtraEditors.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;GcEmp.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.GridControl, DevExpress.XtraGrid.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="GridColumn2.Width" type="System.Int32, mscorlib">
+    <value>65</value>
+  </data>
+  <data name="GridColumn1.AppearanceCell.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="btnRemove.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="cboEmpGroup_Cal.Location" type="System.Drawing.Point, System.Drawing">
+    <value>165, 416</value>
+  </data>
+  <data name="&gt;&gt;GcEmp.Parent" xml:space="preserve">
+    <value>grpLeft</value>
+  </data>
+  <data name="Label1.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopRight</value>
+  </data>
+  <data name="lstEmp.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 340</value>
+  </data>
+  <data name="Label7.Text" xml:space="preserve">
+    <value>ฝ่าย : </value>
+  </data>
+  <data name="cboDivision.TabIndex" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <data name="Label15.TabIndex" type="System.Int32, mscorlib">
+    <value>34</value>
+  </data>
+  <data name="GridColumn1.AppearanceHeader.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="btnshowHide.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="&gt;&gt;Label6.Parent" xml:space="preserve">
+    <value>GroupBox1</value>
+  </data>
+  <data name="&gt;&gt;ProgressBarX1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="Label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 159</value>
+  </data>
+  <data name="rdContractor.Location" type="System.Drawing.Point, System.Drawing">
+    <value>311, 24</value>
+  </data>
+  <data name="cboDepartment.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v17.1">
+    <value>Combo</value>
+  </data>
+  <data name="&gt;&gt;Panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="GridColumn2.AppearanceCell.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="&gt;&gt;panelApp.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="btnSelectAll.Text" xml:space="preserve">
+    <value>เลือกทั้งหมด</value>
+  </data>
+  <data name="&gt;&gt;LabelControl4.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GrpRight.TabIndex" type="System.Int32, mscorlib">
+    <value>56</value>
+  </data>
+  <data name="colDepartment.Text" xml:space="preserve">
+    <value>แผนก</value>
+  </data>
+  <data name="GroupControl7.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;cboDepartment_Cal.Name" xml:space="preserve">
+    <value>cboDepartment_Cal</value>
+  </data>
+  <data name="&gt;&gt;ColumnHeader2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Panel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>144, 30</value>
+  </data>
+  <data name="&gt;&gt;rdByDeptName.Name" xml:space="preserve">
+    <value>rdByDeptName</value>
+  </data>
+  <data name="ColumnHeader4.Text" xml:space="preserve">
+    <value>สกุล</value>
+  </data>
+  <data name="ProgressBar2.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="&gt;&gt;lstEmp_Cal.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ColumnHeader8.Name" xml:space="preserve">
+    <value>ColumnHeader8</value>
+  </data>
+  <data name="btnRefresh_Cal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>83, 100</value>
+  </data>
+  <data name="&gt;&gt;colProductName.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="Label15.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="rdByDeptCode.Size" type="System.Drawing.Size, System.Drawing">
+    <value>104, 17</value>
+  </data>
+  <data name="btnNoneSelectAll.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="GcEmp_Cal.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt</value>
+  </data>
+  <data name="RepositoryItemButtonEdit1.Mask.BeepOnError" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;ColumnHeader4.Name" xml:space="preserve">
+    <value>ColumnHeader4</value>
+  </data>
+  <data name="&gt;&gt;ProgressBar1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;rdAll.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label13.Name" xml:space="preserve">
+    <value>Label13</value>
+  </data>
+  <data name="&gt;&gt;colNO.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnSelectAll.Parent" xml:space="preserve">
+    <value>Panel1</value>
+  </data>
+  <data name="btnRefresh_Cal.Text" xml:space="preserve">
+    <value>รีเฟรช</value>
+  </data>
+  <data name="GrpRight.Text" xml:space="preserve">
+    <value>รายชื่อพนักงาน - ใช้กะทำงานพิเศษ (กะ 8 ชม. นับเวลาเข้าเป็นหลัก)</value>
+  </data>
+  <data name="RepositoryItemButtonEdit1.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;GroupBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LabelControl2.Name" xml:space="preserve">
+    <value>LabelControl2</value>
+  </data>
+  <data name="GcEmp.EmbeddedNavigator.TextLocation" type="DevExpress.XtraEditors.NavigatorButtonsTextLocation, DevExpress.XtraEditors.v17.1">
+    <value>Center</value>
+  </data>
+  <data name="Label13.Location" type="System.Drawing.Point, System.Drawing">
+    <value>46, 419</value>
+  </data>
+  <data name="&gt;&gt;RepositoryItemLookUpEdit1.Name" xml:space="preserve">
+    <value>RepositoryItemLookUpEdit1</value>
+  </data>
+  <data name="&gt;&gt;rdContractor.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="RepositoryItemLookUpEdit1.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v17.1">
+    <value>Combo</value>
+  </data>
+  <data name="GridColumn2.AppearanceHeader.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="GroupBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>56, 572</value>
+  </data>
+  <data name="colempcode.VisibleIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="cboEmpGroup_Cal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>11, 21</value>
+  </data>
+  <data name="GroupControl1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="colNO.Text" xml:space="preserve">
+    <value>ลำดับ</value>
+  </data>
+  <data name="btnRefresh.TabIndex" type="System.Int32, mscorlib">
+    <value>28</value>
+  </data>
+  <data name="&gt;&gt;LabelControl3.Parent" xml:space="preserve">
+    <value>GrpRight</value>
+  </data>
+  <data name="&gt;&gt;LabelControl1.Name" xml:space="preserve">
+    <value>LabelControl1</value>
+  </data>
+  <data name="&gt;&gt;SplitterItem2.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.SplitterItem, DevExpress.XtraLayout.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="rdByDeptCode_Cal.Text" xml:space="preserve">
+    <value>ฝ่าย, แผนก, รหัส</value>
+  </data>
+  <data name="colSName.Text" xml:space="preserve">
+    <value>สกุล</value>
+  </data>
+  <data name="btnRefresh.Size" type="System.Drawing.Size, System.Drawing">
+    <value>83, 103</value>
+  </data>
+  <data name="GcEmp.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <assembly alias="DevExpress.Data.v17.1" name="DevExpress.Data.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <data name="GcEmp.EmbeddedNavigator.AllowHtmlTextInToolTip" type="DevExpress.Utils.DefaultBoolean, DevExpress.Data.v17.1">
+    <value>Default</value>
+  </data>
+  <data name="GridColumn2.VisibleIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="colDepartment.Width" type="System.Int32, mscorlib">
+    <value>217</value>
+  </data>
+  <data name="&gt;&gt;BtnDel.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit, DevExpress.XtraEditors.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="GridColumn1.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;btnshowHide.Parent" xml:space="preserve">
+    <value>grpLeft</value>
+  </data>
+  <data name="&gt;&gt;colCode.Name" xml:space="preserve">
+    <value>colCode</value>
+  </data>
+  <data name="cboDivision_Cal.Location" type="System.Drawing.Point, System.Drawing">
+    <value>75, 26</value>
+  </data>
+  <data name="&gt;&gt;rdByDeptName_Cal.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;rdMonth.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="rdDay.Text" xml:space="preserve">
+    <value>รายวัน</value>
+  </data>
+  <data name="cboDepartment.Size" type="System.Drawing.Size, System.Drawing">
+    <value>481, 20</value>
+  </data>
+  <data name="colrow.Caption" xml:space="preserve">
+    <value>ลำดับ</value>
+  </data>
+  <data name="ColumnHeader8.Text" xml:space="preserve">
+    <value>กลุ่ม</value>
+  </data>
+  <data name="RepositoryItemLookUpEdit1.NullText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;colLDivision.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;GroupBox2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GroupControl1.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="cboTransport_detail.Columns1" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <data name="&gt;&gt;rdByDeptCode_Cal.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="rdMonth.Text" xml:space="preserve">
+    <value>รายเดือน</value>
+  </data>
+  <data name="rdByDeptName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>298, 28</value>
+  </data>
+  <data name="colempcode.Caption" xml:space="preserve">
+    <value>รหัส พนง.</value>
+  </data>
+  <data name="btnHide_cal.Text" xml:space="preserve">
+    <value>ซ่อนค้นหา</value>
+  </data>
+  <data name="cboDivision.Location" type="System.Drawing.Point, System.Drawing">
+    <value>75, 28</value>
+  </data>
+  <data name="colempcode.Width" type="System.Int32, mscorlib">
+    <value>65</value>
+  </data>
+  <data name="&gt;&gt;Label8.Parent" xml:space="preserve">
+    <value>ExpandablePanel1</value>
+  </data>
+  <data name="&gt;&gt;rdByDeptName.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="rdByDeptName.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="GridColumn3.VisibleIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="Label4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>62, 421</value>
+  </data>
+  <data name="RepositoryItemButtonEdit1.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="cboPosition.Properties.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="col_department.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;txtNameSearch_Cal.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;LabelControl2.Parent" xml:space="preserve">
+    <value>grpLeft</value>
+  </data>
+  <data name="&gt;&gt;Label4.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="Label11.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopRight</value>
+  </data>
+  <data name="GvEmp_Cal.Appearance.Row.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1227, 601</value>
+  </data>
+  <data name="cboPosition.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v17.1">
+    <value>Combo</value>
+  </data>
+  <data name="&gt;&gt;cboEmpGroup_Cal.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="GrpRight.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="ProgressBarX1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="&gt;&gt;txtNameSearch_Cal.Parent" xml:space="preserve">
+    <value>ExpandablePanel2</value>
+  </data>
+  <data name="GridColumn4.Caption" xml:space="preserve">
+    <value>สกุล</value>
+  </data>
+  <data name="&gt;&gt;btnRemove.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="cboDepartment_Cal.TabIndex" type="System.Int32, mscorlib">
+    <value>31</value>
+  </data>
+  <data name="btnshowHide.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABV0RVh0VGl0
+        bGUARG93bmxvYWQ7QXJyb3c77I8a0AAAAk9JREFUOE91km1IU1EYxzfvsib2gkY5KaSLK4WhMLg6cdvd
+        dLV8ySSKCKmwZqEpKoYohS9gb7rUvmnOaaPRi01EIupD2SgJ55pF1Jcgs6LoQ/ghK4Lk33lsjCXHB36c
+        w3n+58c59x4FgCWWlZIRwyFSkX3Rgu67VhpinOOWCTZHNGztAfXCGb7A6dtFg3Dpjg2//rz7jxa3TCHV
+        WZeJMlwBHVtgrD7ntWL+9xTmFtx4/92Nzz98aOrLpZCaoaIsTyC0eWS0DjOGzGzTfbz55sRrxtv5AdT3
+        GlDfY0BtdzaFVVzBsfaM2zeeVmDmaxdCX85j8tNpRgMezp7Ao9lqXL13GHllKaMrCZTG0i2J5W0ZH7zB
+        vbj+0grPjBnXQkYMh0zo88vYeXTbx/ScjZspyxNQCQUOMb+yU7/oCeVhMGiAazobg9NG7K/TLurtSXbK
+        UHAlAX3IVYUO8WKTS4/+gIT+KQlV3emQijRdrBcbzvAFxZWpNCgTk9Xxux1ioGMsEy0jOmSVaJ7HJ8Su
+        pV5WSTJl+AL7cVFxZTKTpoLelpSx55S4YC3b+lMrJdCi0PNEp5CKNdTnC1hFP2FBKtTU6ORNtWxO/57u
+        HnnSPIHKOSb7L49b0Dkq48KICR03jWj35qLVk4MzbgOaB7JQ26v3U5YnUDe7DJiYK4fvlR23XtjgZX/C
+        E7RgKGCG65kR/ZMG7KvbTuE4nmDNoca0xwcb03CgYcdSsLRGi5JqLYqqUlFwUoS9QkT+kRQ6AVdAd6O3
+        vo6xPsyGZdBaHCPm3z4o/gL/F7wZt1fm3wAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="btnSelectAll.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 3</value>
+  </data>
+  <data name="&gt;&gt;Label1.Name" xml:space="preserve">
+    <value>Label1</value>
+  </data>
+  <data name="Label15.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="&gt;&gt;Label15.Parent" xml:space="preserve">
+    <value>grpLeft</value>
+  </data>
+  <data name="&gt;&gt;btnNoneSelectAll.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;rdByDeptCode_Cal.Name" xml:space="preserve">
+    <value>rdByDeptCode_Cal</value>
+  </data>
+  <data name="&gt;&gt;Label9.Name" xml:space="preserve">
+    <value>Label9</value>
+  </data>
+  <data name="Panel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>179, 28</value>
+  </data>
+  <data name="&gt;&gt;rdByName_Cal.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="cboDivision.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="btnSelectAll.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnHide_cal.Location" type="System.Drawing.Point, System.Drawing">
+    <value>426, 0</value>
+  </data>
+  <data name="&gt;&gt;Label11.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="colempcode.AppearanceHeader.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="rdMonth.Size" type="System.Drawing.Size, System.Drawing">
+    <value>66, 17</value>
+  </data>
+  <data name="colNO.Width" type="System.Int32, mscorlib">
+    <value>44</value>
+  </data>
+  <data name="btnRefresh_Cal.Appearance.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="rdByDeptName_Cal.Text" xml:space="preserve">
+    <value>ฝ่าย, แผนก, ชื่อ - สกุล</value>
+  </data>
+  <data name="rdByDeptCode_Cal.Location" type="System.Drawing.Point, System.Drawing">
+    <value>142, 25</value>
+  </data>
+  <data name="&gt;&gt;cboDepartment_Cal.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.ComboBoxEdit, DevExpress.XtraEditors.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;cboDivision_Cal.Parent" xml:space="preserve">
+    <value>GrpRight</value>
+  </data>
+  <data name="cboDivision.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="btnHide_cal.Appearance.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="Label12.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 81</value>
+  </data>
+  <data name="GroupControl3.Text" xml:space="preserve">
+    <value>พนักงาน</value>
+  </data>
+  <data name="&gt;&gt;GroupControl1.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.GroupControl, DevExpress.Utils.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;rdByDeptCode_Cal.Parent" xml:space="preserve">
+    <value>GroupControl7</value>
+  </data>
+  <data name="btnshowHide.Appearance.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="btnRefresh.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAACd0RVh0VGl0
+        bGUAUmVmcmVzaDtSZXBlYXQ7QmFycztSaWJib247UmVsb2FkzU326QAAAwFJREFUOE+lk3sslWEcxx/k
+        uOcPl1CNoR1JbrOWUB2iCzKEJOTkMsKZ5hJHNffrZiqc6OScwznVUtks5JJbck2RLHZoLmVtNavjcjj0
+        63nkjy7a2vptn73Pvu/3+33f/fa+CAD+i7+NFEb6N4j25zD5fYhZ2UeOxCC1fY+NjFvyfXoir7cd68uE
+        RG53Rzy7PeYEPUmReIifWdm/nkWxnJ71cFC6YGdsefdYUPpdQ1pE2bHg/Pq1KZEYZkTL0DXxGbhtQrjI
+        fj7kf4Wjj/3Ss+JvKI5kGTe7SIFsZHF704vJOTidWtOubWCqYk0vLbQNrwAHhgCibjyFwY/z8KB3GiKL
+        O0bMaF5byUOjf2TRlnM5dQm8tnEYXVoD1uNhcIzmXNXZZaFsYM/QNaBFUs28CzIPRVSudMyI4FrtW/DP
+        qL5EcmHXnyHkElNqlVDeKxEuSKBftApj8ysQlFUrsfBIoREThixQwfRUXmZAXgPcGZiFM1l1ZGkKAfkt
+        CNkEc17bnOeBT0YjtMwuQkBeC+ync2Bf4C0hNlE2CpS2GTuZ2YZw4eHEPPikN6xgTQtDlorkMequyXUr
+        zR8WwDutCTSojuZYU8bIYOSck2reuF6uB8+URuCOfgVydk2uB+fEmglEdSvCHqRoz6h6xeqchjh2Hxy5
+        UJ7/UwHF9GSig19Oq6TpvRj478TQMLMEtNCKVU3zQBdkF/WIFMhZ+RenhpT0QMXQJ/BKa5LQwli51IP+
+        5kaHA6lyKhralr4F2aHsASgTLoJPZgNoWEYX4pwKsgqtIgXSylq7tS3plcJw7iDwR75A9O0B8M5sBffU
+        ZtjrWyTAHn3zAHYf88kUqFnGvZSmqGpjTQaZBt5D1VNiUiKrZeFjZeJXPu6Z2wnJNUJgDc0Ba3AOHOJr
+        Qc8hga5m5GRtcpY3SdG0O4D9FGXjeISovnyMYP1KRHk1wx26R9PzDN1LhrAOWAdDD9aw3vFspgxFSRV7
+        yEckJ2/AQITNhixOCaOGIa+pg1Hf0Mi9X2ezX/TfAfQdAvawuvfdXuIAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="&gt;&gt;grpLeft.Parent" xml:space="preserve">
+    <value>SplitContainerControl1.Panel1</value>
+  </data>
+  <data name="&gt;&gt;GroupBox6.Parent" xml:space="preserve">
+    <value>ExpandablePanel2</value>
+  </data>
+  <data name="Label4.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopRight</value>
+  </data>
+  <data name="txtNameSearch_Cal.Location" type="System.Drawing.Point, System.Drawing">
+    <value>100, 156</value>
+  </data>
+  <data name="cboUnitName.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="rdByDeptCode.Location" type="System.Drawing.Point, System.Drawing">
+    <value>179, 28</value>
+  </data>
+  <data name="GcEmp_Cal.EmbeddedNavigator.BackgroundImage" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;GroupControl3.Name" xml:space="preserve">
+    <value>GroupControl3</value>
+  </data>
+  <data name="&gt;&gt;btnSelectAll_Cal.Name" xml:space="preserve">
+    <value>btnSelectAll_Cal</value>
+  </data>
+  <data name="&gt;&gt;ExpandablePanel2.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ExpandablePanel, DevComponents.DotNetBar2, Version=10.0.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b</value>
+  </data>
+  <data name="&gt;&gt;rdByName.Parent" xml:space="preserve">
+    <value>GroupControl1</value>
+  </data>
+  <data name="&gt;&gt;cboDivision.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.ComboBoxEdit, DevExpress.XtraEditors.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;GroupBox3.Parent" xml:space="preserve">
+    <value>ExpandablePanel1</value>
+  </data>
+  <data name="colLPorsition.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;btnNoneSelectAll_Cal.Parent" xml:space="preserve">
+    <value>Panel2</value>
+  </data>
+  <data name="cboPosition.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;btnRefresh_Cal.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;Label8.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;txtNameSearch_Cal.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Label13.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;cboCompany.Name" xml:space="preserve">
+    <value>cboCompany</value>
+  </data>
+  <data name="GridColumn7.Caption" xml:space="preserve">
+    <value>ตำแหน่ง</value>
+  </data>
+  <data name="ProgressBar1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>11, 278</value>
+  </data>
+  <data name="txtNameSearch.Location" type="System.Drawing.Point, System.Drawing">
+    <value>99, 166</value>
+  </data>
+  <data name="Label8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>116, 16</value>
+  </data>
+  <data name="btnRemove.TabIndex" type="System.Int32, mscorlib">
+    <value>54</value>
+  </data>
+  <data name="&gt;&gt;colLDivision.Name" xml:space="preserve">
+    <value>colLDivision</value>
+  </data>
+  <data name="GcEmp_Cal.EmbeddedNavigator.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;Label10.Parent" xml:space="preserve">
+    <value>ExpandablePanel1</value>
+  </data>
+  <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>87, 16</value>
+  </data>
+  <data name="Label15.Text" xml:space="preserve">
+    <value>ตำแหน่ง : </value>
+  </data>
+  <data name="&gt;&gt;btnExit.Name" xml:space="preserve">
+    <value>btnExit</value>
+  </data>
+  <data name="rdByName_Cal.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="txtNameSearch.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="GroupBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="GroupBox2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="&gt;&gt;GroupBox4.Parent" xml:space="preserve">
+    <value>ExpandablePanel2</value>
+  </data>
+  <data name="&gt;&gt;GcEmp.Name" xml:space="preserve">
+    <value>GcEmp</value>
+  </data>
+  <data name="cboDepartment_Cal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>369, 20</value>
+  </data>
+  <data name="GvEmp.Appearance.HeaderPanel.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;rdByDeptCode.Parent" xml:space="preserve">
+    <value>GroupControl1</value>
+  </data>
+  <data name="&gt;&gt;Label11.Parent" xml:space="preserve">
+    <value>ExpandablePanel2</value>
+  </data>
+  <data name="&gt;&gt;btnExit.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="cboCompany_Cal.Location" type="System.Drawing.Point, System.Drawing">
+    <value>183, 418</value>
+  </data>
+  <data name="btnAdd.Appearance.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="GridColumn7.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="ExpandablePanel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>144, 280</value>
+  </data>
+  <data name="GroupBox5.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="LabelControl4.Text" xml:space="preserve">
+    <value>แผนก :</value>
+  </data>
+  <data name="&gt;&gt;btnAdd.Parent" xml:space="preserve">
+    <value>grpLeft</value>
+  </data>
+  <data name="&gt;&gt;GroupControl7.Name" xml:space="preserve">
+    <value>GroupControl7</value>
+  </data>
+  <data name="GvEmp.Appearance.HeaderPanel.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="rdByName_Cal.Text" xml:space="preserve">
+    <value>ชื่อ - สกุล</value>
+  </data>
+  <data name="GcEmp_Cal.EmbeddedNavigator.TextLocation" type="DevExpress.XtraEditors.NavigatorButtonsTextLocation, DevExpress.XtraEditors.v17.1">
+    <value>Center</value>
+  </data>
+  <data name="&gt;&gt;btnRemove.Parent" xml:space="preserve">
+    <value>GrpRight</value>
+  </data>
+  <data name="&gt;&gt;btnNoneSelectAll_Cal.Name" xml:space="preserve">
+    <value>btnNoneSelectAll_Cal</value>
+  </data>
+  <data name="&gt;&gt;GroupControl7.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.GroupControl, DevExpress.Utils.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="Label12.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="btnAdd.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Right</value>
+  </data>
+  <data name="&gt;&gt;GroupBox4.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;cboDepartment_Cal.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;GroupBox5.Parent" xml:space="preserve">
+    <value>ExpandablePanel1</value>
+  </data>
+  <data name="btnRefresh_Cal.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 9.75pt, style=Bold</value>
+  </data>
+  <data name="GroupBox4.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="&gt;&gt;rdByCode_Cal.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;colDepartment.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="GridColumn1.AppearanceHeader.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="cboUnitName.NullText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GvEmp_Cal.Appearance.Row.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="cboDivision.Properties.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="rdByDeptCode.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="LabelControl2.Text" xml:space="preserve">
+    <value>แผนก :</value>
+  </data>
+  <data name="btnRefresh_Cal.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="GridColumn7.Width" type="System.Int32, mscorlib">
+    <value>120</value>
+  </data>
+  <data name="cboPosition.Properties.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="GridColumn2.AppearanceHeader.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;ColumnHeader7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ExpandablePanel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 17</value>
+  </data>
+  <data name="&gt;&gt;Label4.Parent" xml:space="preserve">
+    <value>GroupBox2</value>
+  </data>
+  <data name="RepositoryItemButtonEdit1.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v17.1">
+    <value>Default</value>
+  </data>
+  <data name="GridColumn1.AppearanceCell.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="LabelControl3.Text" xml:space="preserve">
+    <value>ฝ่าย :</value>
+  </data>
+  <data name="&gt;&gt;Label7.Parent" xml:space="preserve">
+    <value>ExpandablePanel1</value>
+  </data>
+  <data name="&gt;&gt;Label2.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="GridColumn3.Width" type="System.Int32, mscorlib">
+    <value>116</value>
+  </data>
+  <data name="cboCompany.Size" type="System.Drawing.Size, System.Drawing">
+    <value>262, 21</value>
+  </data>
+  <data name="btnExit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>135, 28</value>
+  </data>
+  <data name="rdByCode_Cal.Text" xml:space="preserve">
+    <value>รหัส</value>
+  </data>
+  <data name="&gt;&gt;GroupBox6.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="rdMonth.Location" type="System.Drawing.Point, System.Drawing">
+    <value>118, 26</value>
+  </data>
+  <data name="&gt;&gt;colSName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtNameSearch.Parent" xml:space="preserve">
+    <value>ExpandablePanel1</value>
+  </data>
+  <data name="cboDivision_Cal.TabIndex" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <data name="cboDepartment_Cal.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;Label7.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;cboTransport_detail.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit, DevExpress.XtraEditors.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;cboEmpGroup.Name" xml:space="preserve">
+    <value>cboEmpGroup</value>
+  </data>
+  <data name="&gt;&gt;btnshowHide.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="SplitContainerControl1.Text" xml:space="preserve">
+    <value>SplitContainerControl1</value>
+  </data>
+  <data name="&gt;&gt;btnSelectAll.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;rdByName.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;rdByName_Cal.Name" xml:space="preserve">
+    <value>rdByName_Cal</value>
+  </data>
+  <data name="&gt;&gt;GroupBox3.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="GroupBox6.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="btnRefresh.Appearance.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="rdByName.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="GroupBox1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left</value>
+  </data>
+  <data name="&gt;&gt;Label1.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="GridColumn7.VisibleIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="GridColumn3.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;txtNameSearch.Name" xml:space="preserve">
+    <value>txtNameSearch</value>
+  </data>
+  <data name="Label15.Size" type="System.Drawing.Size, System.Drawing">
+    <value>70, 16</value>
+  </data>
+  <data name="colempcode.AppearanceCell.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="BtnDel.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v17.1">
+    <value>Glyph</value>
+  </data>
+  <data name="&gt;&gt;rdMonth.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="LabelControl1.Text" xml:space="preserve">
+    <value>ฝ่าย :</value>
+  </data>
+  <data name="&gt;&gt;Label2.Name" xml:space="preserve">
+    <value>Label2</value>
+  </data>
+  <data name="btnRefresh_Cal.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="GridColumn2.AppearanceHeader.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="&gt;&gt;Label6.Name" xml:space="preserve">
+    <value>Label6</value>
+  </data>
+  <data name="&gt;&gt;ExpandablePanel1.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ExpandablePanel, DevComponents.DotNetBar2, Version=10.0.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b</value>
+  </data>
+  <data name="collname.VisibleIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="btnHide_cal.TabIndex" type="System.Int32, mscorlib">
+    <value>49</value>
+  </data>
+  <data name="&gt;&gt;LabelControl3.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="RepositoryItemLookUpEdit2.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="RepositoryItemButtonEdit1.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v17.1">
+    <value>None</value>
+  </data>
+  <data name="rdByCode.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="rdByDeptName.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;LabelControl4.Name" xml:space="preserve">
+    <value>LabelControl4</value>
+  </data>
+  <data name="RepositoryItemLookUpEdit1.Columns1" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <data name="GvEmp.Appearance.HeaderPanel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt, style=Bold</value>
+  </data>
+  <data name="&gt;&gt;Label12.Parent" xml:space="preserve">
+    <value>ExpandablePanel2</value>
+  </data>
+  <data name="btnHide_cal.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="RepositoryItemLookUpEdit1.Columns" xml:space="preserve">
+    <value>TransName</value>
+  </data>
+  <data name="txtNameSearch_Cal.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="GcEmp.EmbeddedNavigator.ToolTipIconType" type="DevExpress.Utils.ToolTipIconType, DevExpress.Utils.v17.1">
+    <value>None</value>
+  </data>
+  <data name="&gt;&gt;Label10.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;GcEmp.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;ExpandablePanel2.Parent" xml:space="preserve">
+    <value>GroupBox2</value>
+  </data>
+  <data name="&gt;&gt;ProgressBar1.Parent" xml:space="preserve">
+    <value>ExpandablePanel1</value>
+  </data>
+  <data name="&gt;&gt;GridColumn3.Name" xml:space="preserve">
+    <value>GridColumn3</value>
+  </data>
+  <data name="&gt;&gt;cboPosition.Name" xml:space="preserve">
+    <value>cboPosition</value>
+  </data>
+  <data name="&gt;&gt;Label13.Parent" xml:space="preserve">
+    <value>GroupBox2</value>
+  </data>
+  <data name="Panel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="&gt;&gt;Panel2.Parent" xml:space="preserve">
+    <value>GroupBox2</value>
+  </data>
+  <data name="&gt;&gt;rdContractor.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btnRefresh.Appearance.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="colLDivision.VisibleIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="btnHide_cal.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="rdAll.Location" type="System.Drawing.Point, System.Drawing">
+    <value>27, 26</value>
+  </data>
+  <data name="&gt;&gt;GroupBox5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnSelectAll.Name" xml:space="preserve">
+    <value>btnSelectAll</value>
+  </data>
+  <data name="Label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 58</value>
+  </data>
+  <data name="&gt;&gt;rdByName_Cal.Parent" xml:space="preserve">
+    <value>GroupControl7</value>
+  </data>
+  <data name="collname.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="btnNoneSelectAll_Cal.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="Label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>22, 434</value>
+  </data>
+  <data name="&gt;&gt;rdByDeptName_Cal.Parent" xml:space="preserve">
+    <value>GroupControl7</value>
+  </data>
+  <data name="&gt;&gt;btnExit.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="cboPosition.Size" type="System.Drawing.Size, System.Drawing">
+    <value>310, 20</value>
+  </data>
+  <data name="&gt;&gt;cboEmpGroup_Cal.Name" xml:space="preserve">
+    <value>cboEmpGroup_Cal</value>
+  </data>
+  <data name="Label6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>116, 16</value>
+  </data>
+  <data name="GvEmp_Cal.Appearance.HeaderPanel.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="GridColumn2.AppearanceCell.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="GroupBox5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 113</value>
+  </data>
+  <data name="lstEmp.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="GcEmp.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 133</value>
+  </data>
+  <data name="ExpandablePanel1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;GridColumn1.Name" xml:space="preserve">
+    <value>GridColumn1</value>
+  </data>
+  <data name="Label13.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopRight</value>
+  </data>
+  <data name="&gt;&gt;GvEmp_Cal.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.Grid.GridView, DevExpress.XtraGrid.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;LabelControl3.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="cboDepartment.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;txtNameSearch.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="GridColumn3.Caption" xml:space="preserve">
+    <value>ชื่อ</value>
+  </data>
+  <data name="&gt;&gt;rdDay.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;collname.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;ProgressBarX1.Name" xml:space="preserve">
+    <value>ProgressBarX1</value>
+  </data>
+  <data name="colempcode.AppearanceCell.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnHide_cal.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="panelApp.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 37</value>
+  </data>
+  <data name="LabelControl3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>44, 29</value>
+  </data>
+  <data name="cboDepartment_Cal.Location" type="System.Drawing.Point, System.Drawing">
+    <value>75, 48</value>
+  </data>
+  <data name="&gt;&gt;rdByDeptName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ExpandablePanel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 17</value>
+  </data>
+  <data name="Label9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>116, 16</value>
+  </data>
+  <data name="GridColumn2.AppearanceCell.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="rdByDeptName_Cal.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="btnSelectAll_Cal.Text" xml:space="preserve">
+    <value>เลือกทั้งหมด</value>
+  </data>
+  <data name="colrow.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="rdByCode.Location" type="System.Drawing.Point, System.Drawing">
+    <value>26, 28</value>
+  </data>
+  <data name="cboTransport_detail.Columns2" xml:space="preserve">
+    <value>บริษัทขนส่ง</value>
+  </data>
+  <data name="colLDivision.Width" type="System.Int32, mscorlib">
+    <value>144</value>
+  </data>
+  <data name="cboEmpGroup.Size" type="System.Drawing.Size, System.Drawing">
+    <value>262, 21</value>
+  </data>
+  <data name="cboDepartment.Properties.NullValuePrompt" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnRemove.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left</value>
+  </data>
+  <data name="colempcode.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;cboDivision_Cal.Name" xml:space="preserve">
+    <value>cboDivision_Cal</value>
+  </data>
+  <data name="&gt;&gt;cboDivision_Cal.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="BtnDel.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="rdByCode_Cal.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 25</value>
+  </data>
+  <data name="Label12.Size" type="System.Drawing.Size, System.Drawing">
+    <value>113, 16</value>
+  </data>
+  <data name="btnRemove.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAAsdEVYdFRpdGxlAFByZXY7RG91YmxlO0Fycm93O1Ns
+        b3c7UmV3aW5kO0RlY3JlYXNlelPeUQAAAIVJREFUOE+djMENgDAMA1mw6zAASzACf15sV+xHqiZpQ8rj
+        pMjxeau1hpTjKVGmHhYWAc551h4WKfblUaYkoS9KeZSRTxncgwxVM7BfZ1ombgBhWiZqAMGSTNTAnxE3
+        QPBIj4ijBgieqRHpuwFihVlGnCz0QpQpySJClLXHDApRph7r1O0FzGetjqM4JB4AAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="cboDepartment.Properties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="cboDepartment_Cal.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v17.1">
+    <value>Combo</value>
+  </data>
+  <data name="Label10.Text" xml:space="preserve">
+    <value>ชื่อ - สกุล : </value>
+  </data>
+  <data name="Label10.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopRight</value>
+  </data>
+  <data name="GcEmp.TabIndex" type="System.Int32, mscorlib">
+    <value>33</value>
+  </data>
+  <data name="cboCompany.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="cboUnitName.Columns1" xml:space="preserve">
+    <value>หน่วยนับ</value>
+  </data>
+  <data name="&gt;&gt;txtNameSearch_Cal.Name" xml:space="preserve">
+    <value>txtNameSearch_Cal</value>
+  </data>
+  <data name="GridColumn6.VisibleIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="Label3.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;LabelControl2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;LabelControl1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;panelApp.Name" xml:space="preserve">
+    <value>panelApp</value>
+  </data>
+  <data name="&gt;&gt;cboDepartment.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.ComboBoxEdit, DevExpress.XtraEditors.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="Panel2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="Label6.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopRight</value>
+  </data>
+  <data name="&gt;&gt;ExpandablePanel2.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="BtnDel.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label1.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="cboPosition.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="rdByDeptCode_Cal.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Panel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 297</value>
+  </data>
+  <data name="&gt;&gt;GridColumn5.Name" xml:space="preserve">
+    <value>GridColumn5</value>
+  </data>
+  <data name="&gt;&gt;rdByCode.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GridColumn7.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="LabelControl4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 13</value>
+  </data>
+  <data name="GcEmp.EmbeddedNavigator.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>Inherit</value>
+  </data>
+  <data name="colempcode.AppearanceHeader.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="GcEmp_Cal.EmbeddedNavigator.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Tile</value>
+  </data>
+  <data name="colrow.AppearanceCell.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="cboTransport_detail.Columns" xml:space="preserve">
+    <value>TransName</value>
+  </data>
+  <data name="&gt;&gt;GroupBox4.Name" xml:space="preserve">
+    <value>GroupBox4</value>
+  </data>
+  <data name="cboDivision.Properties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="GroupBox3.Text" xml:space="preserve">
+    <value>เรียงข้อมูลตาม</value>
+  </data>
+  <data name="&gt;&gt;Label9.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;GroupControl7.Parent" xml:space="preserve">
+    <value>GrpRight</value>
+  </data>
+  <data name="&gt;&gt;GvEmp_Cal.Name" xml:space="preserve">
+    <value>GvEmp_Cal</value>
+  </data>
+  <data name="rdByName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>70, 17</value>
+  </data>
+  <data name="RepositoryItemButtonEdit1.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="Label9.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;GcEmp_Cal.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;panelApp.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="txtNameSearch_Cal.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;RepositoryItemLookUpEdit2.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit, DevExpress.XtraEditors.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="cboCompany_Cal.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="&gt;&gt;colProductName.Name" xml:space="preserve">
+    <value>colProductName</value>
+  </data>
+  <data name="Label8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 89</value>
+  </data>
+  <data name="rdByDeptName_Cal.Location" type="System.Drawing.Point, System.Drawing">
+    <value>261, 25</value>
+  </data>
+  <data name="&gt;&gt;ColumnHeader1.Name" xml:space="preserve">
+    <value>ColumnHeader1</value>
+  </data>
+  <data name="Label11.Size" type="System.Drawing.Size, System.Drawing">
+    <value>113, 16</value>
+  </data>
+  <data name="GroupControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>551, 51</value>
+  </data>
+  <data name="LabelControl1.TabIndex" type="System.Int32, mscorlib">
+    <value>56</value>
+  </data>
+  <data name="LabelControl3.TabIndex" type="System.Int32, mscorlib">
+    <value>56</value>
+  </data>
+  <data name="GcEmp_Cal.EmbeddedNavigator.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>Inherit</value>
+  </data>
+  <data name="Panel2.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="btnNoneSelectAll_Cal.Location" type="System.Drawing.Point, System.Drawing">
+    <value>190, 2</value>
+  </data>
+  <data name="&gt;&gt;btnAdd.Name" xml:space="preserve">
+    <value>btnAdd</value>
+  </data>
+  <data name="GcEmp.EmbeddedNavigator.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="rdByCode.Text" xml:space="preserve">
+    <value>รหัส</value>
+  </data>
+  <data name="&gt;&gt;grpLeft.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.GroupControl, DevExpress.Utils.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;ExpandablePanel1.Name" xml:space="preserve">
+    <value>ExpandablePanel1</value>
+  </data>
+  <data name="GroupControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 76</value>
+  </data>
+  <data name="Label3.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;collname.Name" xml:space="preserve">
+    <value>collname</value>
+  </data>
+  <data name="cboDepartment.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="Label13.Size" type="System.Drawing.Size, System.Drawing">
+    <value>113, 16</value>
+  </data>
+  <data name="GcEmp.EmbeddedNavigator.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Tile</value>
+  </data>
+  <data name="&gt;&gt;colrow.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="Label7.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopRight</value>
+  </data>
+  <data name="GridColumn4.Width" type="System.Int32, mscorlib">
+    <value>137</value>
+  </data>
+  <data name="&gt;&gt;ColumnHeader4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btnshowHide.Location" type="System.Drawing.Point, System.Drawing">
+    <value>532, 0</value>
+  </data>
+  <data name="Label11.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="GcEmp_Cal.EmbeddedNavigator.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label15.Location" type="System.Drawing.Point, System.Drawing">
+    <value>189, 346</value>
+  </data>
+  <data name="Label3.Text" xml:space="preserve">
+    <value>บริษัท : </value>
+  </data>
+  <data name="&gt;&gt;GroupControl3.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.GroupControl, DevExpress.Utils.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;ExpandablePanel2.Name" xml:space="preserve">
+    <value>ExpandablePanel2</value>
+  </data>
+  <data name="&gt;&gt;btnRefresh.Parent" xml:space="preserve">
+    <value>grpLeft</value>
+  </data>
+  <data name="cboDivision.Properties.NullValuePrompt" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Panel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 312</value>
+  </data>
+  <data name="&gt;&gt;ProgressBar1.Name" xml:space="preserve">
+    <value>ProgressBar1</value>
+  </data>
+  <data name="GroupControl3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>480, 49</value>
+  </data>
+  <data name="col_department.VisibleIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="RepositoryItemButtonEdit1.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v17.1">
+    <value>Glyph</value>
+  </data>
+  <data name="&gt;&gt;panelApp.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnNoneSelectAll.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btnSelectAll_Cal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>178, 23</value>
+  </data>
+  <data name="lstEmp_Cal.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="GvEmp_Cal.Appearance.Row.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="ColumnHeader5.DisplayIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="GvEmp.Appearance.Row.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="&gt;&gt;GridColumn7.Name" xml:space="preserve">
+    <value>GridColumn7</value>
+  </data>
+  <data name="GroupControl1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="cboDepartment_Cal.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="BtnDel.Mask.BeepOnError" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;ProgressBar2.Name" xml:space="preserve">
+    <value>ProgressBar2</value>
+  </data>
+  <data name="LabelControl4.TabIndex" type="System.Int32, mscorlib">
+    <value>56</value>
+  </data>
+  <data name="ExpandablePanel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="&gt;&gt;Label6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="LabelControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>44, 32</value>
+  </data>
+  <data name="GvEmp_Cal.Appearance.HeaderPanel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt, style=Bold</value>
+  </data>
+  <data name="ProgressBarX1.Text" xml:space="preserve">
+    <value>100%</value>
+  </data>
+  <data name="btnAdd.Size" type="System.Drawing.Size, System.Drawing">
+    <value>44, 415</value>
+  </data>
+  <data name="cboDivision_Cal.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;rdByDeptCode.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="lstEmp_Cal.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="colrow.AppearanceHeader.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="col_department.Caption" xml:space="preserve">
+    <value>แผนก</value>
+  </data>
+  <data name="ProgressBar2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 262</value>
+  </data>
+  <data name="&gt;&gt;GridColumn6.Name" xml:space="preserve">
+    <value>GridColumn6</value>
+  </data>
+  <data name="cboEmpGroup.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="btnNoneSelectAll.Text" xml:space="preserve">
+    <value>ไม่เลือกทั้งหมด</value>
+  </data>
+  <data name="rdByCode_Cal.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="cboDepartment_Cal.Properties.NullValuePrompt" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GcEmp_Cal.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="ExpandablePanel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>179, 295</value>
+  </data>
+  <data name="&gt;&gt;lstEmp_Cal.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;cboEmpGroup_Cal.Parent" xml:space="preserve">
+    <value>GroupBox2</value>
+  </data>
+  <data name="&gt;&gt;Label2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnHide_cal.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="cboEmpGroup_Cal.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="GcEmp.EmbeddedNavigator.BackgroundImage" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="colrow.AppearanceCell.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="&gt;&gt;GroupBox1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="GridColumn2.AppearanceCell.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="cboEmpGroup.Location" type="System.Drawing.Point, System.Drawing">
+    <value>144, 434</value>
+  </data>
+  <data name="colName.Width" type="System.Int32, mscorlib">
+    <value>108</value>
+  </data>
+  <data name="btnNoneSelectAll.Location" type="System.Drawing.Point, System.Drawing">
+    <value>182, 3</value>
+  </data>
+  <data name="GcEmp.EmbeddedNavigator.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="GcEmp_Cal.EmbeddedNavigator.AllowHtmlTextInToolTip" type="DevExpress.Utils.DefaultBoolean, DevExpress.Data.v17.1">
+    <value>Default</value>
+  </data>
+  <data name="ExpandablePanel1.TitleText" xml:space="preserve">
+    <value>ค้นหา</value>
+  </data>
+  <data name="&gt;&gt;Label11.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="rdByDeptName_Cal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>130, 17</value>
+  </data>
+  <data name="Label4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>113, 16</value>
+  </data>
+  <data name="GvEmp_Cal.Appearance.Row.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;btnRefresh_Cal.Parent" xml:space="preserve">
+    <value>GrpRight</value>
+  </data>
+  <data name="&gt;&gt;colNO.Name" xml:space="preserve">
+    <value>colNO</value>
+  </data>
+  <data name="&gt;&gt;grpLeft.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;rdDay.Parent" xml:space="preserve">
+    <value>GroupControl3</value>
+  </data>
+  <data name="&gt;&gt;Panel1.Name" xml:space="preserve">
+    <value>Panel1</value>
+  </data>
+  <data name="&gt;&gt;GroupBox2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;ProgressBar1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ProgressBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SplitterItem2.Name" xml:space="preserve">
+    <value>SplitterItem2</value>
+  </data>
+  <data name="&gt;&gt;Label6.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="Label10.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 169</value>
+  </data>
+  <data name="GrpRight.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="GroupBox2.Text" xml:space="preserve">
+    <value>รายชื่อพนักงาน - ใช้ กะ 8 ชม.</value>
+  </data>
+  <data name="GroupControl7.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="colrow.VisibleIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;rdMonth.Parent" xml:space="preserve">
+    <value>GroupControl3</value>
+  </data>
+  <data name="&gt;&gt;lstEmp_Cal.Parent" xml:space="preserve">
+    <value>GroupBox2</value>
+  </data>
+  <data name="btnRefresh_Cal.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnExit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 4</value>
+  </data>
+  <data name="&gt;&gt;Label3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btnNoneSelectAll_Cal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>201, 23</value>
+  </data>
+  <data name="btnshowHide.Appearance.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;btnAdd.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="btnAdd.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 9.75pt, style=Bold</value>
+  </data>
+  <data name="panelApp.TabIndex" type="System.Int32, mscorlib">
+    <value>57</value>
+  </data>
+  <data name="&gt;&gt;rdByDeptName.Parent" xml:space="preserve">
+    <value>GroupControl1</value>
+  </data>
+  <data name="&gt;&gt;btnHide_cal.Name" xml:space="preserve">
+    <value>btnHide_cal</value>
+  </data>
+  <data name="btnRemove.Appearance.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="&gt;&gt;colempcode.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;Label8.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="GrpRight.Size" type="System.Drawing.Size, System.Drawing">
+    <value>537, 553</value>
+  </data>
+  <data name="cboTransport_detail.NullText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label8.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="lstEmp_Cal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>144, 0</value>
+  </data>
+  <data name="&gt;&gt;btnExit.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="RepositoryItemButtonEdit1.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="ProgressBarX1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>145, 4</value>
+  </data>
+  <data name="&gt;&gt;rdByCode_Cal.Name" xml:space="preserve">
+    <value>rdByCode_Cal</value>
+  </data>
+  <data name="grpLeft.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="colProductName.VisibleIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="rdAll.Text" xml:space="preserve">
+    <value>ทั้งหมด</value>
+  </data>
+  <data name="colLPorsition.VisibleIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="btnRemove.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="rdContractor.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="GcEmp.EmbeddedNavigator.ToolTipTitle" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GridColumn1.Width" type="System.Int32, mscorlib">
+    <value>41</value>
+  </data>
+  <data name="btnAdd.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;GroupBox1.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;Label4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ColumnHeader6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ColumnHeader3.Text" xml:space="preserve">
+    <value>ชื่อ</value>
+  </data>
+  <data name="GroupBox4.Text" xml:space="preserve">
+    <value>เรียงข้อมูลตาม</value>
+  </data>
+  <data name="cboDivision.Properties.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="cboCompany_Cal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>11, 21</value>
+  </data>
+  <data name="rdAll.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;cboDivision.Parent" xml:space="preserve">
+    <value>grpLeft</value>
+  </data>
+  <data name="cboTransport_detail.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="GroupControl3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>190, 388</value>
+  </data>
+  <data name="GroupBox2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>973, 511</value>
+  </data>
+  <data name="&gt;&gt;ProgressBar2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="GvEmp_Cal.Appearance.HeaderPanel.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnshowHide.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;cboCompany.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;colrow.Name" xml:space="preserve">
+    <value>colrow</value>
+  </data>
+  <data name="rdMonth.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="cboCompany_Cal.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="cboDepartment_Cal.Properties.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="GridColumn1.AppearanceHeader.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="colSName.Width" type="System.Int32, mscorlib">
+    <value>130</value>
+  </data>
+  <data name="GroupBox5.Text" xml:space="preserve">
+    <value>พนักงาน</value>
+  </data>
+  <data name="&gt;&gt;rdByDeptCode.Name" xml:space="preserve">
+    <value>rdByDeptCode</value>
+  </data>
+  <data name="Label7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 35</value>
+  </data>
+  <data name="&gt;&gt;colCode.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GrpRight.Parent" xml:space="preserve">
+    <value>SplitContainerControl1.Panel2</value>
+  </data>
+  <data name="ProgressBarX1.TabIndex" type="System.Int32, mscorlib">
+    <value>52</value>
+  </data>
+  <data name="&gt;&gt;Label2.Parent" xml:space="preserve">
+    <value>ExpandablePanel2</value>
+  </data>
+  <data name="Label8.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopRight</value>
+  </data>
+  <data name="&gt;&gt;Label9.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="colrow.AppearanceHeader.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="Label7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>116, 16</value>
+  </data>
+  <data name="GridColumn5.Caption" xml:space="preserve">
+    <value>แผนก</value>
+  </data>
+  <data name="SplitContainerControl1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="btnExit.Text" xml:space="preserve">
+    <value>ออก</value>
+  </data>
+  <data name="&gt;&gt;ColumnHeader1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btnHide_cal.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="GroupBox6.Text" xml:space="preserve">
+    <value>พนักงาน</value>
+  </data>
+  <data name="GcEmp_Cal.TabIndex" type="System.Int32, mscorlib">
+    <value>33</value>
+  </data>
+  <data name="&gt;&gt;colName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GroupBox5.Name" xml:space="preserve">
+    <value>GroupBox5</value>
+  </data>
+  <data name="&gt;&gt;colDepartment.Name" xml:space="preserve">
+    <value>colDepartment</value>
+  </data>
+  <data name="&gt;&gt;Label4.Name" xml:space="preserve">
+    <value>Label4</value>
+  </data>
+  <data name="&gt;&gt;btnRemove.Name" xml:space="preserve">
+    <value>btnRemove</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.XtraForm, DevExpress.Utils.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="ColumnHeader2.Width" type="System.Int32, mscorlib">
+    <value>105</value>
+  </data>
+  <data name="btnNoneSelectAll.Size" type="System.Drawing.Size, System.Drawing">
+    <value>201, 23</value>
+  </data>
+  <data name="GcEmp.EmbeddedNavigator.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="cboDivision_Cal.Properties.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;Label1.Parent" xml:space="preserve">
+    <value>ExpandablePanel2</value>
+  </data>
+  <data name="&gt;&gt;GroupBox1.Name" xml:space="preserve">
+    <value>GroupBox1</value>
+  </data>
+  <data name="collname.Width" type="System.Int32, mscorlib">
+    <value>137</value>
+  </data>
+  <data name="GroupControl3.TabIndex" type="System.Int32, mscorlib">
+    <value>29</value>
+  </data>
+  <data name="&gt;&gt;GvEmp.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.Grid.GridView, DevExpress.XtraGrid.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;SplitContainerControl1.Parent" xml:space="preserve">
+    <value>panelApp</value>
+  </data>
+  <data name="Label4.Text" xml:space="preserve">
+    <value>บริษัท : </value>
+  </data>
+  <data name="&gt;&gt;GrpRight.Name" xml:space="preserve">
+    <value>GrpRight</value>
+  </data>
+  <data name="Label6.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="rdMonth.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;cboDepartment.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;ProgressBarX1.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.ProgressBarX, DevComponents.DotNetBar2, Version=10.0.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b</value>
+  </data>
+  <data name="colProductName.Width" type="System.Int32, mscorlib">
+    <value>116</value>
+  </data>
+  <data name="colLPorsition.Width" type="System.Int32, mscorlib">
+    <value>141</value>
+  </data>
+  <data name="&gt;&gt;cboEmpGroup.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="ColumnHeader6.Width" type="System.Int32, mscorlib">
+    <value>120</value>
+  </data>
+  <data name="&gt;&gt;cboPosition.Parent" xml:space="preserve">
+    <value>grpLeft</value>
+  </data>
+  <data name="&gt;&gt;Label15.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="cboCompany_Cal.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnshowHide.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lstEmp.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="GvEmp.Appearance.Row.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="RepositoryItemButtonEdit1.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
+    <value>_</value>
+  </data>
+  <data name="cboCompany.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;col_department.Name" xml:space="preserve">
+    <value>col_department</value>
+  </data>
+  <data name="&gt;&gt;cboCompany.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="Label6.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="Label6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>22, 437</value>
+  </data>
+  <data name="RepositoryItemButtonEdit1.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="btnshowHide.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="&gt;&gt;Panel2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="GridColumn2.AppearanceHeader.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="BtnDel.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;btnSelectAll.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="rdByDeptCode_Cal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>104, 17</value>
+  </data>
+  <data name="&gt;&gt;GrpRight.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;rdByDeptName_Cal.Name" xml:space="preserve">
+    <value>rdByDeptName_Cal</value>
+  </data>
+  <data name="&gt;&gt;GroupControl3.Parent" xml:space="preserve">
+    <value>grpLeft</value>
+  </data>
+  <data name="&gt;&gt;Panel1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="btnAdd.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAAsdEVYdFRpdGxlAE5leHQ7RG91YmxlO0Fycm93O0Zh
+        c3Q7UmV3aW5kO0luY3JlYXNlyXdAHwAAAH9JREFUOE+1kMENgDAMA7tg12EAlmAE/rzYLjQWQiVcIR8e
+        50qWbUUtZlbqvFd/e8gjJC1ssUAeITnDtwJ5hKQLXwXyCEkIq9DYohfLzmhAhcZjZFqX9IDzecnXgPM6
+        8usFqY8cDaTKDg0oSB4hoSB5hISCmbIjoWCm7KCZx8oBe7GtjhwJHysAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="RepositoryItemLookUpEdit2.NullText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;GridColumn2.Name" xml:space="preserve">
+    <value>GridColumn2</value>
+  </data>
+  <data name="btnSelectAll.Size" type="System.Drawing.Size, System.Drawing">
+    <value>172, 23</value>
+  </data>
+  <data name="&gt;&gt;SplitContainerControl1.Name" xml:space="preserve">
+    <value>SplitContainerControl1</value>
+  </data>
+  <data name="&gt;&gt;btnRefresh.Name" xml:space="preserve">
+    <value>btnRefresh</value>
+  </data>
+  <data name="&gt;&gt;Label15.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;colSName.Name" xml:space="preserve">
+    <value>colSName</value>
+  </data>
+  <data name="GridColumn2.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;btnNoneSelectAll.Name" xml:space="preserve">
+    <value>btnNoneSelectAll</value>
+  </data>
+  <data name="colName.Text" xml:space="preserve">
+    <value>ชื่อ</value>
+  </data>
+  <data name="RepositoryItemLookUpEdit2.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v17.1">
+    <value>Combo</value>
+  </data>
+  <data name="&gt;&gt;GroupBox6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;rdAll.Name" xml:space="preserve">
+    <value>rdAll</value>
+  </data>
+  <data name="&gt;&gt;cboPosition.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="Label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>116, 16</value>
+  </data>
+  <data name="rdByCode_Cal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>44, 17</value>
+  </data>
+  <data name="ExpandablePanel2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="Label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>113, 16</value>
+  </data>
+  <data name="&gt;&gt;Label3.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="GvEmp.Appearance.Row.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="BtnDel.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
+    <value>_</value>
+  </data>
+  <data name="&gt;&gt;cboDivision.Name" xml:space="preserve">
+    <value>cboDivision</value>
+  </data>
+  <data name="&gt;&gt;cboCompany_Cal.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;btnRefresh.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="btnshowHide.TabIndex" type="System.Int32, mscorlib">
+    <value>47</value>
+  </data>
+  <data name="GroupControl7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>439, 50</value>
+  </data>
+  <data name="Panel1.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;rdByDeptCode_Cal.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="GcEmp_Cal.EmbeddedNavigator.ToolTipIconType" type="DevExpress.Utils.ToolTipIconType, DevExpress.Utils.v17.1">
+    <value>None</value>
+  </data>
+  <data name="GridColumn5.Width" type="System.Int32, mscorlib">
+    <value>162</value>
+  </data>
+  <data name="btnRemove.Appearance.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="btnAdd.Appearance.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="cboPosition.TabIndex" type="System.Int32, mscorlib">
+    <value>32</value>
+  </data>
+  <data name="cboDivision.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v17.1">
+    <value>Combo</value>
+  </data>
+  <data name="&gt;&gt;lstEmp.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Panel2.Name" xml:space="preserve">
+    <value>Panel2</value>
+  </data>
+  <data name="cboUnitName.Columns" xml:space="preserve">
+    <value>unit</value>
+  </data>
+  <data name="&gt;&gt;GcEmp_Cal.Parent" xml:space="preserve">
+    <value>GrpRight</value>
+  </data>
+  <data name="cboEmpGroup_Cal.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="Label9.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 62</value>
+  </data>
+  <data name="btnRefresh_Cal.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAACd0RVh0VGl0
+        bGUAUmVmcmVzaDtSZXBlYXQ7QmFycztSaWJib247UmVsb2FkzU326QAAAwFJREFUOE+lk3sslWEcxx/k
+        uOcPl1CNoR1JbrOWUB2iCzKEJOTkMsKZ5hJHNffrZiqc6OScwznVUtks5JJbck2RLHZoLmVtNavjcjj0
+        63nkjy7a2vptn73Pvu/3+33f/fa+CAD+i7+NFEb6N4j25zD5fYhZ2UeOxCC1fY+NjFvyfXoir7cd68uE
+        RG53Rzy7PeYEPUmReIifWdm/nkWxnJ71cFC6YGdsefdYUPpdQ1pE2bHg/Pq1KZEYZkTL0DXxGbhtQrjI
+        fj7kf4Wjj/3Ss+JvKI5kGTe7SIFsZHF704vJOTidWtOubWCqYk0vLbQNrwAHhgCibjyFwY/z8KB3GiKL
+        O0bMaF5byUOjf2TRlnM5dQm8tnEYXVoD1uNhcIzmXNXZZaFsYM/QNaBFUs28CzIPRVSudMyI4FrtW/DP
+        qL5EcmHXnyHkElNqlVDeKxEuSKBftApj8ysQlFUrsfBIoREThixQwfRUXmZAXgPcGZiFM1l1ZGkKAfkt
+        CNkEc17bnOeBT0YjtMwuQkBeC+ync2Bf4C0hNlE2CpS2GTuZ2YZw4eHEPPikN6xgTQtDlorkMequyXUr
+        zR8WwDutCTSojuZYU8bIYOSck2reuF6uB8+URuCOfgVydk2uB+fEmglEdSvCHqRoz6h6xeqchjh2Hxy5
+        UJ7/UwHF9GSig19Oq6TpvRj478TQMLMEtNCKVU3zQBdkF/WIFMhZ+RenhpT0QMXQJ/BKa5LQwli51IP+
+        5kaHA6lyKhralr4F2aHsASgTLoJPZgNoWEYX4pwKsgqtIgXSylq7tS3plcJw7iDwR75A9O0B8M5sBffU
+        ZtjrWyTAHn3zAHYf88kUqFnGvZSmqGpjTQaZBt5D1VNiUiKrZeFjZeJXPu6Z2wnJNUJgDc0Ba3AOHOJr
+        Qc8hga5m5GRtcpY3SdG0O4D9FGXjeISovnyMYP1KRHk1wx26R9PzDN1LhrAOWAdDD9aw3vFspgxFSRV7
+        yEckJ2/AQITNhixOCaOGIa+pg1Hf0Mi9X2ezX/TfAfQdAvawuvfdXuIAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="&gt;&gt;Label10.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="GcEmp_Cal.EmbeddedNavigator.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="&gt;&gt;GridColumn3.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="cboPosition.Properties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="GroupControl3.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="cboPosition.Properties.NullValuePrompt" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;cboDivision.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="btnNoneSelectAll_Cal.Text" xml:space="preserve">
+    <value>ไม่เลือกทั้งหมด</value>
+  </data>
+  <data name="rdDay.Size" type="System.Drawing.Size, System.Drawing">
+    <value>53, 17</value>
+  </data>
+  <data name="colrow.AppearanceHeader.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="&gt;&gt;GroupControl1.Name" xml:space="preserve">
+    <value>GroupControl1</value>
+  </data>
+  <data name="&gt;&gt;ColumnHeader5.Name" xml:space="preserve">
+    <value>ColumnHeader5</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>กำหนดพนักงานกะพิเศษ(กะ 8 ชม. นับเวลาเข้าเป็นหลัก)</value>
+  </data>
+  <data name="colempcode.AppearanceHeader.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="&gt;&gt;btnNoneSelectAll_Cal.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="cboDivision_Cal.Properties.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="GridColumn6.Width" type="System.Int32, mscorlib">
+    <value>132</value>
+  </data>
+  <data name="GroupBox3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>11, 225</value>
+  </data>
+  <data name="colempcode.AppearanceHeader.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="colrow.AppearanceCell.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="GroupBox3.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;Label7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Panel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ColumnHeader5.Width" type="System.Int32, mscorlib">
+    <value>120</value>
+  </data>
+  <data name="&gt;&gt;ProgressBar2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ProgressBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="GroupControl7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 75</value>
+  </data>
+  <data name="cboDepartment.Properties.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="rdByName_Cal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>70, 17</value>
+  </data>
+  <data name="GridColumn1.Caption" xml:space="preserve">
+    <value>ลำดับ</value>
+  </data>
+  <data name="&gt;&gt;btnNoneSelectAll.Parent" xml:space="preserve">
+    <value>Panel1</value>
+  </data>
+  <data name="&gt;&gt;ColumnHeader8.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cboDivision_Cal.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.ComboBoxEdit, DevExpress.XtraEditors.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;LabelControl1.Parent" xml:space="preserve">
+    <value>grpLeft</value>
+  </data>
+  <data name="btnHide_cal.Appearance.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="GroupBox4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 211</value>
+  </data>
+  <data name="&gt;&gt;GridColumn1.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="Label12.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopRight</value>
+  </data>
+  <data name="colrow.AppearanceHeader.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="ColumnHeader7.Width" type="System.Int32, mscorlib">
+    <value>120</value>
+  </data>
+  <data name="GvEmp_Cal.Appearance.HeaderPanel.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="btnRemove.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 131</value>
+  </data>
+  <data name="ColumnHeader6.Text" xml:space="preserve">
+    <value>ฝ่าย</value>
+  </data>
+  <data name="ColumnHeader3.Width" type="System.Int32, mscorlib">
+    <value>108</value>
+  </data>
+  <data name="&gt;&gt;cboDepartment_Cal.Parent" xml:space="preserve">
+    <value>GrpRight</value>
+  </data>
+  <data name="&gt;&gt;GroupControl1.Parent" xml:space="preserve">
+    <value>grpLeft</value>
+  </data>
+  <data name="colProductName.Caption" xml:space="preserve">
+    <value>ชื่อ</value>
+  </data>
+  <data name="ColumnHeader4.Width" type="System.Int32, mscorlib">
+    <value>130</value>
+  </data>
+  <data name="Label9.Text" xml:space="preserve">
+    <value>แผนก : </value>
+  </data>
+  <data name="GvEmp.Appearance.HeaderPanel.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="cboEmpGroup_Cal.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+</root>

@@ -1,0 +1,57 @@
+Imports System.Data
+Imports System.Data.SqlClient
+
+Public Class frmLateRate
+
+    Private Sub btnSAVE_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSAVE.Click
+        If IsNumeric(txtLate.Text.Trim) = False Then
+            MsgBox("กรุณาป้อนตัวเลขให้ถูกต้องด้วย", MsgBoxStyle.Information, Me.Text.Trim)
+            txtLate.Focus()
+            Exit Sub
+        End If
+
+        Dim strSQL As String = ""
+        Dim dCmd As New SqlCommand
+
+
+        Try
+            strSQL = "Delete From TimeLateRate"
+            dCmd.Connection = Conn
+            dCmd.CommandText = strSQL
+            dCmd.ExecuteNonQuery()
+
+            strSQL = "Insert Into TimeLateRate(Late) Values(" & txtLate.Text & ")"
+            dCmd.Connection = Conn
+            dCmd.CommandText = strSQL
+            dCmd.ExecuteNonQuery()
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Information, Me.Text)
+            Exit Sub
+        End Try
+        MsgBox("บันทึกข้อมูลเรียบร้อยแล้ว", MsgBoxStyle.Information, Me.Text)
+    End Sub
+
+    Private Sub LoadDATA()
+        Dim strSQL As String
+        Dim DA As New SqlDataAdapter
+        Dim Ds As New DataSet
+        strSQL = "Select Isnull(Late,0) as Late From TimeLateRate"
+        DA = New SqlDataAdapter(strSQL, Conn)
+        DA.Fill(Ds, "data")
+        With Ds.Tables("data")
+            If .Rows.Count = 0 Then
+                txtLate.Text = "0"
+            Else
+                txtLate.Text = .Rows(0).Item("Late")
+            End If
+        End With
+    End Sub
+
+    Private Sub frmLateRate_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        Call LoadDATA()
+    End Sub
+
+    Private Sub btnExit_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnExit.Click
+        Me.Close()
+    End Sub
+End Class

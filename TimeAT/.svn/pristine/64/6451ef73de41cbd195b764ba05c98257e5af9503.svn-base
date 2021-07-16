@@ -1,0 +1,274 @@
+Imports System.Data
+Imports System.Data.SqlClient
+
+Public Class frmLinkCodeToPayroll
+
+    Private Sub frmLinkCodeToPayroll_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        Call LoadOvertime()
+        Call LoadAttendant()
+        Call LoadDeduction()
+        Call LoadData()
+    End Sub
+
+    Private Sub LoadOvertime()
+        Dim Da As New SqlDataAdapter
+        Dim Ds As New DataSet
+        Dim strSQL As String
+        strSQL = "select Code,Description from ot Order By Code"
+        Da = New SqlDataAdapter(strSQL, Conn)
+        Da.Fill(Ds, "data")
+        With Ds.Tables("data")
+            cboOT1.Items.Clear()
+            cboOT15.Items.Clear()
+            cboOT2.Items.Clear()
+            cboOT3.Items.Clear()
+            cboOtH.Items.Clear()
+            cboOtBaht.Items.Clear()
+
+            cboOT1.Items.Add("")
+            cboOT15.Items.Add("")
+            cboOT2.Items.Add("")
+            cboOT3.Items.Add("")
+            cboOtH.Items.Add("")
+            cboOtBaht.Items.Add("")
+            For Each dr As DataRow In .Rows
+                cboOT1.Items.Add(dr("Description"))
+                cboOT15.Items.Add(dr("Description"))
+                cboOT2.Items.Add(dr("Description"))
+                cboOT3.Items.Add(dr("Description"))
+                cboOtH.Items.Add(dr("Description"))
+                cboOtBaht.Items.Add(dr("Description"))
+            Next
+        End With
+    End Sub
+
+    Private Sub LoadAttendant()
+        Dim Da As New SqlDataAdapter
+        Dim Ds As New DataSet
+        Dim strSQL As String
+        strSQL = "Select Code,Description from Attendant order by RecOrder,Code"
+        Da = New SqlDataAdapter(strSQL, Conn)
+        Da.Fill(Ds, "data")
+        With Ds.Tables("data")
+            cboLate.Items.Clear()
+            cboLateOut.Items.Clear()
+            cboAbs.Items.Clear()
+
+            cboLate.Items.Add("")
+            cboLateOut.Items.Add("")
+            cboAbs.Items.Add("")
+            For Each dr As DataRow In .Rows
+                cboLate.Items.Add(dr("Description"))
+                cboLateOut.Items.Add(dr("Description"))
+                cboAbs.Items.Add(dr("Description"))
+            Next
+        End With
+    End Sub
+
+    Private Sub LoadDeduction()
+        Dim Da As New SqlDataAdapter
+        Dim Ds As New DataSet
+        Dim strSQL As String
+        strSQL = "Select Code,Description from Deduction order by Code"
+        Da = New SqlDataAdapter(strSQL, Conn)
+        Da.Fill(Ds, "data")
+        With Ds.Tables("data")
+            cboDeduc_Late.Items.Clear()
+            cboDeduc_LateOut.Items.Clear()
+            cboLateRateMin_Deduc.Items.Clear()
+
+            cboDeduc_Late.Items.Add("")
+            cboDeduc_LateOut.Items.Add("")
+            For Each dr As DataRow In .Rows
+                cboDeduc_Late.Items.Add(dr("Description"))
+                cboDeduc_LateOut.Items.Add(dr("Description"))
+                cboLateRateMin_Deduc.Items.Add(dr("Description"))
+            Next
+        End With
+    End Sub
+
+
+    Function GetOvertimeId(ByVal Description As String) As String
+        Dim Da As New SqlDataAdapter
+        Dim Ds As New DataSet
+        Dim strSQL As String
+        strSQL = "select Code from ot " & _
+                " Where Description = '" & Description.Trim & "' " & _
+                " Order By Code"
+        Da = New SqlDataAdapter(strSQL, Conn)
+        Da.Fill(Ds, "data")
+        With Ds.Tables("data")
+            If .Rows.Count = 0 Then
+                Return ""
+            Else
+                Return .Rows(0).Item("Code")
+            End If
+        End With
+    End Function
+
+    Function GetAttendantId(ByVal Description As String) As String
+        Dim Da As New SqlDataAdapter
+        Dim Ds As New DataSet
+        Dim strSQL As String
+        strSQL = "select Code from Attendant " & _
+                " Where Description = '" & Description.Trim & "' " & _
+                " Order By Code"
+        Da = New SqlDataAdapter(strSQL, Conn)
+        Da.Fill(Ds, "data")
+        With Ds.Tables("data")
+            If .Rows.Count = 0 Then
+                Return ""
+            Else
+                Return .Rows(0).Item("Code")
+            End If
+        End With
+    End Function
+
+    Function GetDeductionId(ByVal Description As String) As String
+        Dim Da As New SqlDataAdapter
+        Dim Ds As New DataSet
+        Dim strSQL As String
+        strSQL = "select Code from Deduction " & _
+                " Where Description = '" & Description.Trim & "' " & _
+                " Order By Code"
+        Da = New SqlDataAdapter(strSQL, Conn)
+        Da.Fill(Ds, "data")
+        With Ds.Tables("data")
+            If .Rows.Count = 0 Then
+                Return ""
+            Else
+                Return .Rows(0).Item("Code")
+            End If
+        End With
+    End Function
+
+    Private Sub btnSave_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSave.Click
+        Dim dCmd As New SqlCommand
+        Dim strSQL As String
+        Dim Ot1 As String = GetOvertimeId(cboOT1.Text.Trim).Trim
+        Dim Ot15 As String = GetOvertimeId(cboOT15.Text.Trim).Trim
+        Dim Ot2 As String = GetOvertimeId(cboOT2.Text.Trim).Trim
+        Dim Ot3 As String = GetOvertimeId(cboOT3.Text.Trim).Trim
+        Dim OtH As String = GetOvertimeId(cboOtH.Text.Trim).Trim
+        Dim OtBaht As String = GetOvertimeId(cboOtBaht.Text.Trim).Trim
+
+        Dim Late As String = GetAttendantId(cboLate.Text.Trim).Trim
+        Dim LateOut As String = GetAttendantId(cboLateOut.Text.Trim).Trim
+
+        Dim Absent As String = GetAttendantId(cboAbs.Text.Trim).Trim
+
+        Dim Late_Deduc As String = GetDeductionId(cboDeduc_Late.Text.Trim).Trim
+        Dim LateOut_Deduc As String = GetDeductionId(cboDeduc_LateOut.Text.Trim).Trim
+        Dim LateRateMin_Deduc As String = GetDeductionId(cboLateRateMin_Deduc.Text.Trim).Trim
+
+        Try
+            strSQL = "Delete From TimeLinkCode"
+            dCmd.Connection = Conn
+            dCmd.CommandText = strSQL
+            dCmd.ExecuteNonQuery()
+
+            strSQL = "Insert Into " & _
+                                    " TimeLinkCode(Ot1,Ot15,Ot2,Ot3,OtH,OtBaht," & _
+                                    " Late,LateOut,Absent," & _
+                                    " Late_Deduc,LateOut_Deduc,LateRateMin_Deduc) Values(" & _
+                            " '" & Ot1.Trim & "'," & _
+                            " '" & Ot15.Trim & "'," & _
+                            " '" & Ot2.Trim & "'," & _
+                            " '" & Ot3.Trim & "'," & _
+                            " '" & OtH.Trim & "'," & _
+                            " '" & OtBaht.Trim & "'," & _
+                            " '" & Late.Trim & "'," & _
+                            " '" & LateOut.Trim & "'," & _
+                            " '" & Absent.Trim & "'," & _
+                            " '" & Late_Deduc.Trim & "'," & _
+                            " '" & LateOut_Deduc.Trim & "'," & _
+                            " '" & LateRateMin_Deduc & "')"
+            dCmd.Connection = Conn
+            dCmd.CommandText = strSQL
+            dCmd.ExecuteNonQuery()
+
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Information, Me.Text)
+            Exit Sub
+        End Try
+        MsgBox("บันทึกข้อมูลเรียบร้อยแล้ว", MsgBoxStyle.Information, Me.Text)
+    End Sub
+
+    Private Sub btnExit_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnExit.Click
+        Me.Close()
+    End Sub
+
+    Private Sub LoadData()
+        Dim Da As New SqlDataAdapter
+        Dim Ds As New DataSet
+        Dim strSQL As String
+        strSQL = "Select Ot1 = Isnull(Ot1.Description,'')," & _
+                     " Ot15 = Isnull(Ot15.Description,'')," & _
+                     " Ot2 = Isnull(Ot2.Description,'')," & _
+                     " Ot3 = Isnull(Ot3.Description,'')," & _
+                     " OtH = Isnull(OtH.Description,'')," & _
+                     " OtBaht = Isnull(OtBaht.Description,'')," & _
+                     " Late = Isnull(AT_Late.Description,'')," & _
+                     " LateOut = Isnull(AT_LateOut.Description,'')," & _
+                     " Absent = Isnull(AT_Abs.Description,''), " & _
+                     " Late_Deduc = Isnull(Deduc_Late.Description,''), " & _
+                     " LateOut_Deduc = Isnull(Deduc_LateOut.Description,''), " & _
+                     " LateRateMin_Deduc = Isnull(LateRateMin_Deduc.Description,'') " & _
+                " From TimeLinkCode L " & _
+                     " Left Join Ot Ot1 On L.Ot1 = Ot1.Code" & _
+                     " Left Join Ot Ot15 On L.Ot15 = Ot15.Code" & _
+                     " Left Join Ot Ot2 On L.Ot2 = Ot2.Code" & _
+                     " Left Join Ot Ot3 On L.Ot3 = Ot3.Code" & _
+                     " Left Join Ot OtH On L.OtH = OtH.Code" & _
+                     " Left Join Ot OtBaht On L.OtBaht = OtBaht.Code" & _
+                     " Left Join Attendant At_Late On L.Late = At_Late.Code " & _
+                     " Left Join Attendant At_LateOut On L.LateOut = At_LateOut.Code " & _
+                     " Left Join Attendant At_Abs On L.Absent = At_Abs.Code " & _
+                     " Left Join Deduction Deduc_Late On L.Late_Deduc = Deduc_Late.Code " & _
+                     " Left Join Deduction Deduc_LateOut On L.LateOut_Deduc = Deduc_LateOut.Code " & _
+                     " Left Join Deduction LateRateMin_Deduc On L.LateRateMin_Deduc = LateRateMin_Deduc.Code "
+        Da = New SqlDataAdapter(strSQL, Conn)
+        Da.Fill(Ds, "data")
+        With Ds.Tables("data")
+            If .Rows.Count = 0 Then
+                cboOT1.SelectedIndex = -1
+                cboOT15.SelectedIndex = -1
+                cboOT2.SelectedIndex = -1
+                cboOT3.SelectedIndex = -1
+                cboOtH.SelectedIndex = -1
+                cboOtBaht.SelectedIndex = -1
+                cboLate.SelectedIndex = -1
+                cboLateOut.SelectedIndex = -1
+                cboAbs.SelectedIndex = -1
+                cboDeduc_Late.SelectedIndex = -1
+                cboDeduc_LateOut.SelectedIndex = -1
+                cboLateRateMin_Deduc.SelectedIndex = -1
+            Else
+                cboOT1.SelectedItem = .Rows(0).Item("Ot1")
+                cboOT15.SelectedItem = .Rows(0).Item("Ot15")
+                cboOT2.SelectedItem = .Rows(0).Item("Ot2")
+                cboOT3.SelectedItem = .Rows(0).Item("Ot3")
+                cboOtH.SelectedItem = .Rows(0).Item("OtH")
+                cboOtBaht.SelectedItem = .Rows(0).Item("OtBaht")
+                cboLate.SelectedItem = .Rows(0).Item("Late")
+                cboLateOut.SelectedItem = .Rows(0).Item("LateOut")
+                cboAbs.SelectedItem = .Rows(0).Item("Absent")
+                cboDeduc_Late.SelectedItem = .Rows(0).Item("Late_Deduc")
+                cboDeduc_LateOut.SelectedItem = .Rows(0).Item("LateOut_Deduc")
+                cboLateRateMin_Deduc.SelectedItem = .Rows(0).Item("LateRateMin_Deduc")
+            End If
+        End With
+    End Sub
+
+    Private Sub cboOtBaht_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cboOtBaht.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub cboAbs_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cboAbs.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub ComboBox1_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cboLateOut.SelectedIndexChanged
+
+    End Sub
+End Class

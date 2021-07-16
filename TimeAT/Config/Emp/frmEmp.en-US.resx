@@ -1,0 +1,1473 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1041, 638</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Employee Database</value>
+  </data>
+  <data name="PG1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>497, 6</value>
+  </data>
+  <data name="PG1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>513, 21</value>
+  </data>
+  <data name="LabelX3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 21</value>
+  </data>
+  <data name="LabelX3.Text" xml:space="preserve">
+    <value>Company :</value>
+  </data>
+  <data name="cboCompany.Location" type="System.Drawing.Point, System.Drawing">
+    <value>100, 6</value>
+  </data>
+  <data name="cboCompany.Size" type="System.Drawing.Size, System.Drawing">
+    <value>388, 21</value>
+  </data>
+  <data name="GroupPanel3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1033, 39</value>
+  </data>
+  <data name="optCompany.Text" xml:space="preserve">
+    <value>Sort by Company</value>
+  </data>
+  <data name="optName.Text" xml:space="preserve">
+    <value>Sort by Alphabet</value>
+  </data>
+  <data name="optDept.Text" xml:space="preserve">
+    <value>Sort by Department Code</value>
+  </data>
+  <data name="optCode.Text" xml:space="preserve">
+    <value>Sort by Employee Code</value>
+  </data>
+  <data name="GroupPanel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1034, 56</value>
+  </data>
+  <data name="GroupPanel2.Text" xml:space="preserve">
+    <value>Sort by</value>
+  </data>
+  <data name="LabelX129.Location" type="System.Drawing.Point, System.Drawing">
+    <value>245, 7</value>
+  </data>
+  <data name="LabelX129.Text" xml:space="preserve">
+    <value>Name :</value>
+  </data>
+  <data name="LabelX125.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 6</value>
+  </data>
+  <data name="LabelX125.Size" type="System.Drawing.Size, System.Drawing">
+    <value>99, 27</value>
+  </data>
+  <data name="LabelX125.Text" xml:space="preserve">
+    <value>Employee Code :</value>
+  </data>
+  <data name="cmdSearch.Text" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="txtFname.Location" type="System.Drawing.Point, System.Drawing">
+    <value>376, 11</value>
+  </data>
+  <data name="txtFname.Size" type="System.Drawing.Size, System.Drawing">
+    <value>277, 23</value>
+  </data>
+  <data name="txtCode.Location" type="System.Drawing.Point, System.Drawing">
+    <value>117, 9</value>
+  </data>
+  <data name="OptEmpName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>858, 25</value>
+  </data>
+  <data name="OptEmpName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 21</value>
+  </data>
+  <data name="OptEmpName.Text" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="OptEmpcode.Size" type="System.Drawing.Size, System.Drawing">
+    <value>109, 21</value>
+  </data>
+  <data name="OptEmpcode.Text" xml:space="preserve">
+    <value>Employee Code</value>
+  </data>
+  <data name="GroupPanel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1033, 67</value>
+  </data>
+  <data name="GroupPanel1.Text" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="colNo.Text" xml:space="preserve">
+    <value>No.</value>
+  </data>
+  <data name="colEmpId.Text" xml:space="preserve">
+    <value>Employee Code</value>
+  </data>
+  <data name="ColCardId.Text" xml:space="preserve">
+    <value>ID Code</value>
+  </data>
+  <data name="colName.Text" xml:space="preserve">
+    <value>Employee Name</value>
+  </data>
+  <data name="ColDepartmentId.Text" xml:space="preserve">
+    <value>Department Code</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="ColDepartmentId.Width" type="System.Int32, mscorlib">
+    <value>120</value>
+  </data>
+  <data name="ColStartWork.Text" xml:space="preserve">
+    <value>Start Work</value>
+  </data>
+  <data name="ColExp.Text" xml:space="preserve">
+    <value>Job Experience</value>
+  </data>
+  <data name="ColCompany.Text" xml:space="preserve">
+    <value>Company Name</value>
+  </data>
+  <data name="ColUpdate.Text" xml:space="preserve">
+    <value>Updated date</value>
+  </data>
+  <data name="LstData.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1033, 399</value>
+  </data>
+  <data name="TabControlPanel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1041, 585</value>
+  </data>
+  <data name="TabItem1.Text" xml:space="preserve">
+    <value>Employee Database</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="TabControl2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="txtDateExpire.Location" type="System.Drawing.Point, System.Drawing">
+    <value>144, 103</value>
+  </data>
+  <data name="txtDateExpire.Size" type="System.Drawing.Size, System.Drawing">
+    <value>124, 21</value>
+  </data>
+  <data name="txtDatePro.Location" type="System.Drawing.Point, System.Drawing">
+    <value>144, 31</value>
+  </data>
+  <data name="txtDatePro.Size" type="System.Drawing.Size, System.Drawing">
+    <value>124, 21</value>
+  </data>
+  <data name="txtDateIn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>144, 8</value>
+  </data>
+  <data name="txtDateIn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>124, 21</value>
+  </data>
+  <data name="chkContractor.Location" type="System.Drawing.Point, System.Drawing">
+    <value>139, 3</value>
+  </data>
+  <data name="chkContractor.Size" type="System.Drawing.Size, System.Drawing">
+    <value>76, 18</value>
+  </data>
+  <data name="chkContractor.Text" xml:space="preserve">
+    <value>Contractor</value>
+  </data>
+  <data name="OptDay.Text" xml:space="preserve">
+    <value>Daily</value>
+  </data>
+  <data name="OptMonth.Text" xml:space="preserve">
+    <value>Monthly</value>
+  </data>
+  <data name="txtSalary.Size" type="System.Drawing.Size, System.Drawing">
+    <value>123, 21</value>
+  </data>
+  <data name="LabelX39.Location" type="System.Drawing.Point, System.Drawing">
+    <value>351, 1</value>
+  </data>
+  <data name="LabelX39.Size" type="System.Drawing.Size, System.Drawing">
+    <value>127, 20</value>
+  </data>
+  <data name="LabelX39.Text" xml:space="preserve">
+    <value>The latest Bonus earned :</value>
+  </data>
+  <data name="txtBonus.Location" type="System.Drawing.Point, System.Drawing">
+    <value>481, 1</value>
+  </data>
+  <data name="txtBonus.Size" type="System.Drawing.Size, System.Drawing">
+    <value>113, 21</value>
+  </data>
+  <data name="GroupPanel15.Location" type="System.Drawing.Point, System.Drawing">
+    <value>144, 241</value>
+  </data>
+  <data name="GroupPanel15.Size" type="System.Drawing.Size, System.Drawing">
+    <value>603, 29</value>
+  </data>
+  <data name="optBank.Location" type="System.Drawing.Point, System.Drawing">
+    <value>120, 4</value>
+  </data>
+  <data name="optBank.Text" xml:space="preserve">
+    <value>To Bank :</value>
+  </data>
+  <data name="optCash.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 4</value>
+  </data>
+  <data name="optCash.Text" xml:space="preserve">
+    <value>Cash</value>
+  </data>
+  <data name="cboBank.Size" type="System.Drawing.Size, System.Drawing">
+    <value>390, 21</value>
+  </data>
+  <data name="GroupPanel4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>144, 298</value>
+  </data>
+  <data name="GroupPanel4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>603, 31</value>
+  </data>
+  <data name="cmbCompanyName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>144, 332</value>
+  </data>
+  <data name="cmbCompanyName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>262, 21</value>
+  </data>
+  <data name="txtIdCard.Location" type="System.Drawing.Point, System.Drawing">
+    <value>144, 80</value>
+  </data>
+  <data name="txtIdCard.Size" type="System.Drawing.Size, System.Drawing">
+    <value>124, 21</value>
+  </data>
+  <data name="txtBankId.Location" type="System.Drawing.Point, System.Drawing">
+    <value>144, 195</value>
+  </data>
+  <data name="txtBankId.Size" type="System.Drawing.Size, System.Drawing">
+    <value>223, 21</value>
+  </data>
+  <data name="txtSocTax.Location" type="System.Drawing.Point, System.Drawing">
+    <value>144, 218</value>
+  </data>
+  <data name="txtSocTax.Size" type="System.Drawing.Size, System.Drawing">
+    <value>223, 21</value>
+  </data>
+  <data name="txtMarryWorkCom.Location" type="System.Drawing.Point, System.Drawing">
+    <value>144, 172</value>
+  </data>
+  <data name="txtMarryWorkCom.Size" type="System.Drawing.Size, System.Drawing">
+    <value>602, 21</value>
+  </data>
+  <data name="txtMarryName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>144, 149</value>
+  </data>
+  <data name="txtMarryName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>246, 21</value>
+  </data>
+  <data name="txtTaxId.Location" type="System.Drawing.Point, System.Drawing">
+    <value>144, 126</value>
+  </data>
+  <data name="txtTaxId.Size" type="System.Drawing.Size, System.Drawing">
+    <value>125, 21</value>
+  </data>
+  <data name="cboWeek.Location" type="System.Drawing.Point, System.Drawing">
+    <value>144, 273</value>
+  </data>
+  <data name="cboEmpGroup.Location" type="System.Drawing.Point, System.Drawing">
+    <value>464, 274</value>
+  </data>
+  <data name="cboEmpGroup.Size" type="System.Drawing.Size, System.Drawing">
+    <value>283, 21</value>
+  </data>
+  <data name="ComboItem11.Text" xml:space="preserve">
+    <value>Single</value>
+  </data>
+  <data name="ComboItem12.Text" xml:space="preserve">
+    <value>Married</value>
+  </data>
+  <data name="ComboItem13.Text" xml:space="preserve">
+    <value>Widowed</value>
+  </data>
+  <data name="ComboItem14.Text" xml:space="preserve">
+    <value>Divorced</value>
+  </data>
+  <data name="ComboItem15.Text" xml:space="preserve">
+    <value>Separated</value>
+  </data>
+  <data name="ComboItem9.Text" xml:space="preserve">
+    <value>Juristic Partnership</value>
+  </data>
+  <data name="ComboItem10.Text" xml:space="preserve">
+    <value>Non-Juristic Partnership</value>
+  </data>
+  <data name="ComboItem7.Text" xml:space="preserve">
+    <value>Male</value>
+  </data>
+  <data name="ComboItem8.Text" xml:space="preserve">
+    <value>Female</value>
+  </data>
+  <data name="txtAddress.Location" type="System.Drawing.Point, System.Drawing">
+    <value>144, 56</value>
+  </data>
+  <data name="txtAddress.Size" type="System.Drawing.Size, System.Drawing">
+    <value>603, 21</value>
+  </data>
+  <data name="LabelX42.Location" type="System.Drawing.Point, System.Drawing">
+    <value>357, 274</value>
+  </data>
+  <data name="LabelX42.Size" type="System.Drawing.Size, System.Drawing">
+    <value>102, 20</value>
+  </data>
+  <data name="LabelX42.Text" xml:space="preserve">
+    <value>Employee Group :</value>
+  </data>
+  <data name="LabelX37.Location" type="System.Drawing.Point, System.Drawing">
+    <value>396, 216</value>
+  </data>
+  <data name="LabelX37.Size" type="System.Drawing.Size, System.Drawing">
+    <value>98, 20</value>
+  </data>
+  <data name="LabelX37.Text" xml:space="preserve">
+    <value>Marital Status :</value>
+  </data>
+  <data name="LabelX32.Location" type="System.Drawing.Point, System.Drawing">
+    <value>398, 149</value>
+  </data>
+  <data name="LabelX32.Size" type="System.Drawing.Size, System.Drawing">
+    <value>164, 20</value>
+  </data>
+  <data name="LabelX32.Text" xml:space="preserve">
+    <value>Spouse Non-Juristic Partnership :</value>
+  </data>
+  <data name="LabelX29.Text" xml:space="preserve">
+    <value>Education :</value>
+  </data>
+  <data name="LabelX28.Text" xml:space="preserve">
+    <value>Issued at :</value>
+  </data>
+  <data name="LabelX33.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 169</value>
+  </data>
+  <data name="LabelX33.Size" type="System.Drawing.Size, System.Drawing">
+    <value>130, 20</value>
+  </data>
+  <data name="LabelX33.Text" xml:space="preserve">
+    <value>Spouse Company Name :</value>
+  </data>
+  <data name="LabelX38.Location" type="System.Drawing.Point, System.Drawing">
+    <value>40, 244</value>
+  </data>
+  <data name="LabelX38.Text" xml:space="preserve">
+    <value>Salary :</value>
+  </data>
+  <data name="LabelX45.Location" type="System.Drawing.Point, System.Drawing">
+    <value>403, 333</value>
+  </data>
+  <data name="LabelX45.Size" type="System.Drawing.Size, System.Drawing">
+    <value>91, 20</value>
+  </data>
+  <data name="LabelX45.Text" xml:space="preserve">
+    <value>Bus Routing :</value>
+  </data>
+  <data name="LabelX41.Location" type="System.Drawing.Point, System.Drawing">
+    <value>227, 274</value>
+  </data>
+  <data name="LabelX41.Size" type="System.Drawing.Size, System.Drawing">
+    <value>108, 20</value>
+  </data>
+  <data name="LabelX41.Text" xml:space="preserve">
+    <value>Frequency per month</value>
+  </data>
+  <data name="LabelX44.Location" type="System.Drawing.Point, System.Drawing">
+    <value>23, 331</value>
+  </data>
+  <data name="LabelX44.Size" type="System.Drawing.Size, System.Drawing">
+    <value>113, 20</value>
+  </data>
+  <data name="LabelX44.Text" xml:space="preserve">
+    <value>Work with company :</value>
+  </data>
+  <data name="LabelX43.Location" type="System.Drawing.Point, System.Drawing">
+    <value>27, 300</value>
+  </data>
+  <data name="LabelX43.Size" type="System.Drawing.Size, System.Drawing">
+    <value>109, 20</value>
+  </data>
+  <data name="LabelX43.Text" xml:space="preserve">
+    <value>Payroll Frequency :</value>
+  </data>
+  <data name="LabelX40.Location" type="System.Drawing.Point, System.Drawing">
+    <value>44, 270</value>
+  </data>
+  <data name="LabelX40.Text" xml:space="preserve">
+    <value>Salary paid :</value>
+  </data>
+  <data name="LabelX36.Location" type="System.Drawing.Point, System.Drawing">
+    <value>24, 217</value>
+  </data>
+  <data name="LabelX36.Size" type="System.Drawing.Size, System.Drawing">
+    <value>112, 20</value>
+  </data>
+  <data name="LabelX36.Text" xml:space="preserve">
+    <value>Social Insurance No :</value>
+  </data>
+  <data name="LabelX35.Text" xml:space="preserve">
+    <value>Type of Account :</value>
+  </data>
+  <data name="LabelX34.Location" type="System.Drawing.Point, System.Drawing">
+    <value>40, 194</value>
+  </data>
+  <data name="LabelX34.Text" xml:space="preserve">
+    <value>Account No :</value>
+  </data>
+  <data name="LabelX26.Text" xml:space="preserve">
+    <value>Gender :</value>
+  </data>
+  <data name="LabelX31.Location" type="System.Drawing.Point, System.Drawing">
+    <value>41, 147</value>
+  </data>
+  <data name="LabelX31.Text" xml:space="preserve">
+    <value>Spouse Name :</value>
+  </data>
+  <data name="LabelX25.Location" type="System.Drawing.Point, System.Drawing">
+    <value>22, 80</value>
+  </data>
+  <data name="LabelX25.Text" xml:space="preserve">
+    <value>ID Card No :</value>
+  </data>
+  <data name="LabelX30.Location" type="System.Drawing.Point, System.Drawing">
+    <value>42, 127</value>
+  </data>
+  <data name="LabelX30.Text" xml:space="preserve">
+    <value>Tax ID No :</value>
+  </data>
+  <data name="LabelX27.Location" type="System.Drawing.Point, System.Drawing">
+    <value>42, 102</value>
+  </data>
+  <data name="LabelX27.Text" xml:space="preserve">
+    <value>Expiry Date :</value>
+  </data>
+  <data name="LabelX24.Location" type="System.Drawing.Point, System.Drawing">
+    <value>44, 55</value>
+  </data>
+  <data name="LabelX24.Text" xml:space="preserve">
+    <value>Address :</value>
+  </data>
+  <data name="LabelX2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>21, 31</value>
+  </data>
+  <data name="LabelX2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>115, 20</value>
+  </data>
+  <data name="LabelX2.Text" xml:space="preserve">
+    <value>Pass Probation date:</value>
+  </data>
+  <data name="LabelX23.Size" type="System.Drawing.Size, System.Drawing">
+    <value>42, 20</value>
+  </data>
+  <data name="LabelX23.Text" xml:space="preserve">
+    <value>Year</value>
+  </data>
+  <data name="LabelX22.Location" type="System.Drawing.Point, System.Drawing">
+    <value>519, 33</value>
+  </data>
+  <data name="LabelX22.Size" type="System.Drawing.Size, System.Drawing">
+    <value>89, 20</value>
+  </data>
+  <data name="LabelX22.Text" xml:space="preserve">
+    <value>Age (At Present)</value>
+  </data>
+  <data name="LabelX20.Text" xml:space="preserve">
+    <value>Date of Birth :</value>
+  </data>
+  <data name="LabelX21.Location" type="System.Drawing.Point, System.Drawing">
+    <value>526, 9</value>
+  </data>
+  <data name="LabelX21.Size" type="System.Drawing.Size, System.Drawing">
+    <value>82, 20</value>
+  </data>
+  <data name="LabelX21.Text" xml:space="preserve">
+    <value>Job Experience :</value>
+  </data>
+  <data name="lblTermiDate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>266, 9</value>
+  </data>
+  <data name="lblTermiDate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>107, 20</value>
+  </data>
+  <data name="lblTermiDate.Text" xml:space="preserve">
+    <value>Resignition date :</value>
+  </data>
+  <data name="LabelX1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>43, 7</value>
+  </data>
+  <data name="LabelX1.Text" xml:space="preserve">
+    <value>Start work on :</value>
+  </data>
+  <data name="TabControlPanel3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1032, 369</value>
+  </data>
+  <data name="TabItem3.Text" xml:space="preserve">
+    <value>Personal Profile</value>
+  </data>
+  <data name="colTraningName.Text" xml:space="preserve">
+    <value>(E)อบรมเรื่อง</value>
+  </data>
+  <data name="colTraningDateST.Text" xml:space="preserve">
+    <value>(E)อบรมตั้งแต่</value>
+  </data>
+  <data name="colTraningDateSP.Text" xml:space="preserve">
+    <value>(E)ถึง</value>
+  </data>
+  <data name="colTraningDay.Text" xml:space="preserve">
+    <value>(E)วัน</value>
+  </data>
+  <data name="colTraningRemark.Text" xml:space="preserve">
+    <value>(E)หมายเหตุ</value>
+  </data>
+  <data name="lstTraining.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1023, 215</value>
+  </data>
+  <data name="btnTrain_Clear.Text" xml:space="preserve">
+    <value>(E)เคลียร์</value>
+  </data>
+  <data name="btnTrain_Delete.Text" xml:space="preserve">
+    <value>(E)ลบ</value>
+  </data>
+  <data name="btnTrain_Edit.Text" xml:space="preserve">
+    <value>(E)แก้ไข</value>
+  </data>
+  <data name="btnTrain_Add.Text" xml:space="preserve">
+    <value>(E)เพิ่ม</value>
+  </data>
+  <data name="LabelX128.Text" xml:space="preserve">
+    <value>(E)หมายเหตุ : </value>
+  </data>
+  <data name="LabelX123.Text" xml:space="preserve">
+    <value>(E)วัน</value>
+  </data>
+  <data name="LabelX127.Text" xml:space="preserve">
+    <value>(E)จำนวน : </value>
+  </data>
+  <data name="LabelX124.Text" xml:space="preserve">
+    <value>(E)ถึง</value>
+  </data>
+  <data name="LabelX126.Text" xml:space="preserve">
+    <value>(E)วันที่อบรม : </value>
+  </data>
+  <data name="LabelX122.Text" xml:space="preserve">
+    <value>(E)อบรมเรื่อง : </value>
+  </data>
+  <data name="TabControlPanel11.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1032, 369</value>
+  </data>
+  <data name="TabItem10.Text" xml:space="preserve">
+    <value>(E)อบรม</value>
+  </data>
+  <data name="LabelX115.Text" xml:space="preserve">
+    <value>Year :</value>
+  </data>
+  <data name="GroupPanel10.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1022, 39</value>
+  </data>
+  <data name="ColTypeWage.Text" xml:space="preserve">
+    <value>Type of Leaving</value>
+  </data>
+  <data name="ColTypeWage.Width" type="System.Int32, mscorlib">
+    <value>130</value>
+  </data>
+  <data name="ColDayCount.Text" xml:space="preserve">
+    <value>Numbers of Days</value>
+  </data>
+  <data name="ColDayCount.Width" type="System.Int32, mscorlib">
+    <value>120</value>
+  </data>
+  <data name="ColDayUse.Text" xml:space="preserve">
+    <value>Occupied (Days)</value>
+  </data>
+  <data name="ColDayUse.Width" type="System.Int32, mscorlib">
+    <value>120</value>
+  </data>
+  <data name="ColTotalDay.Text" xml:space="preserve">
+    <value>Balance (Days)</value>
+  </data>
+  <data name="GroupPanel9.Text" xml:space="preserve">
+    <value>Entitled to annual leave</value>
+  </data>
+  <data name="TabControlPanel8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1032, 369</value>
+  </data>
+  <data name="TabItem8.Text" xml:space="preserve">
+    <value>Entitled to leave each year</value>
+  </data>
+  <data name="chkCalSocTax.Text" xml:space="preserve">
+    <value>Deduct Social Insurance</value>
+  </data>
+  <data name="LabelX59.Size" type="System.Drawing.Size, System.Drawing">
+    <value>41, 20</value>
+  </data>
+  <data name="LabelX59.Text" xml:space="preserve">
+    <value>person</value>
+  </data>
+  <data name="LabelX62.Text" xml:space="preserve">
+    <value>Not study :</value>
+  </data>
+  <data name="LabelX60.Text" xml:space="preserve">
+    <value>Education :</value>
+  </data>
+  <data name="LabelX61.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 20</value>
+  </data>
+  <data name="LabelX61.Text" xml:space="preserve">
+    <value>Person</value>
+  </data>
+  <data name="GroupPanel5.Text" xml:space="preserve">
+    <value>Numbers of children</value>
+  </data>
+  <data name="cboDonateMStart.Location" type="System.Drawing.Point, System.Drawing">
+    <value>623, 88</value>
+  </data>
+  <data name="cboLoanMStart.Location" type="System.Drawing.Point, System.Drawing">
+    <value>623, 65</value>
+  </data>
+  <data name="cboPremiumMStart.Location" type="System.Drawing.Point, System.Drawing">
+    <value>623, 42</value>
+  </data>
+  <data name="LabelX54.Location" type="System.Drawing.Point, System.Drawing">
+    <value>439, 86</value>
+  </data>
+  <data name="LabelX54.Size" type="System.Drawing.Size, System.Drawing">
+    <value>177, 20</value>
+  </data>
+  <data name="LabelX54.Text" xml:space="preserve">
+    <value>Tax Calculation start from month :</value>
+  </data>
+  <data name="LabelX53.Location" type="System.Drawing.Point, System.Drawing">
+    <value>439, 64</value>
+  </data>
+  <data name="LabelX53.Size" type="System.Drawing.Size, System.Drawing">
+    <value>177, 20</value>
+  </data>
+  <data name="LabelX53.Text" xml:space="preserve">
+    <value>Tax Calculation start from month :</value>
+  </data>
+  <data name="LabelX47.Location" type="System.Drawing.Point, System.Drawing">
+    <value>439, 43</value>
+  </data>
+  <data name="LabelX47.Size" type="System.Drawing.Size, System.Drawing">
+    <value>177, 20</value>
+  </data>
+  <data name="LabelX47.Text" xml:space="preserve">
+    <value>Tax Calculation start from month :</value>
+  </data>
+  <data name="LabelX72.Text" xml:space="preserve">
+    <value>Age (years)</value>
+  </data>
+  <data name="LabelX71.Text" xml:space="preserve">
+    <value>Age (years)</value>
+  </data>
+  <data name="LabelX70.Text" xml:space="preserve">
+    <value>Age (years)</value>
+  </data>
+  <data name="LabelX69.Text" xml:space="preserve">
+    <value>Age (years)</value>
+  </data>
+  <data name="LabelX68.Text" xml:space="preserve">
+    <value>Age (years)</value>
+  </data>
+  <data name="LabelX67.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 289</value>
+  </data>
+  <data name="LabelX67.Size" type="System.Drawing.Size, System.Drawing">
+    <value>139, 20</value>
+  </data>
+  <data name="LabelX67.Text" xml:space="preserve">
+    <value>Name of the 5th Child :</value>
+  </data>
+  <data name="LabelX66.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 267</value>
+  </data>
+  <data name="LabelX66.Size" type="System.Drawing.Size, System.Drawing">
+    <value>147, 20</value>
+  </data>
+  <data name="LabelX66.Text" xml:space="preserve">
+    <value>Name of the 4th Child :</value>
+  </data>
+  <data name="LabelX65.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 245</value>
+  </data>
+  <data name="LabelX65.Size" type="System.Drawing.Size, System.Drawing">
+    <value>144, 20</value>
+  </data>
+  <data name="LabelX65.Text" xml:space="preserve">
+    <value>Name of the 3rd Child :</value>
+  </data>
+  <data name="LabelX64.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 222</value>
+  </data>
+  <data name="LabelX64.Size" type="System.Drawing.Size, System.Drawing">
+    <value>134, 20</value>
+  </data>
+  <data name="LabelX64.Text" xml:space="preserve">
+    <value>Name of the 2nd Child :</value>
+  </data>
+  <data name="LabelX63.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 200</value>
+  </data>
+  <data name="LabelX63.Size" type="System.Drawing.Size, System.Drawing">
+    <value>141, 20</value>
+  </data>
+  <data name="LabelX63.Text" xml:space="preserve">
+    <value>Name of the 1st Child :</value>
+  </data>
+  <data name="LabelX52.Text" xml:space="preserve">
+    <value>Accu Capital :</value>
+  </data>
+  <data name="LabelX51.Text" xml:space="preserve">
+    <value>Donation :</value>
+  </data>
+  <data name="LabelX50.Text" xml:space="preserve">
+    <value>Loans for housing</value>
+  </data>
+  <data name="LabelX49.Text" xml:space="preserve">
+    <value>Premium :</value>
+  </data>
+  <data name="LabelX58.Size" type="System.Drawing.Size, System.Drawing">
+    <value>46, 20</value>
+  </data>
+  <data name="LabelX58.Text" xml:space="preserve">
+    <value>per year</value>
+  </data>
+  <data name="LabelX57.Size" type="System.Drawing.Size, System.Drawing">
+    <value>46, 20</value>
+  </data>
+  <data name="LabelX57.Text" xml:space="preserve">
+    <value>per year</value>
+  </data>
+  <data name="LabelX56.Size" type="System.Drawing.Size, System.Drawing">
+    <value>46, 20</value>
+  </data>
+  <data name="LabelX56.Text" xml:space="preserve">
+    <value>per year</value>
+  </data>
+  <data name="LabelX55.Size" type="System.Drawing.Size, System.Drawing">
+    <value>46, 20</value>
+  </data>
+  <data name="LabelX55.Text" xml:space="preserve">
+    <value>per year</value>
+  </data>
+  <data name="LabelX48.Size" type="System.Drawing.Size, System.Drawing">
+    <value>76, 20</value>
+  </data>
+  <data name="LabelX48.Text" xml:space="preserve">
+    <value>days per year</value>
+  </data>
+  <data name="TabControlPanel4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1032, 369</value>
+  </data>
+  <data name="TabItem4.Text" xml:space="preserve">
+    <value>Child &amp;&amp; Tax Calculation Data</value>
+  </data>
+  <data name="chkPro_Fund.Text" xml:space="preserve">
+    <value>Pay Provident Fund</value>
+  </data>
+  <data name="chkMatherCalTaxMate.Text" xml:space="preserve">
+    <value>Tax Calculation</value>
+  </data>
+  <data name="chkFatherCalTaxMate.Text" xml:space="preserve">
+    <value>Tax Calculation</value>
+  </data>
+  <data name="chkMatherCalTax.Text" xml:space="preserve">
+    <value>Tax Calculation</value>
+  </data>
+  <data name="chkFatherCalTax.Text" xml:space="preserve">
+    <value>Tax Calculation</value>
+  </data>
+  <data name="LabelX92.Text" xml:space="preserve">
+    <value>ID Card No :</value>
+  </data>
+  <data name="LabelX91.Text" xml:space="preserve">
+    <value>ID Card No :</value>
+  </data>
+  <data name="LabelX90.Text" xml:space="preserve">
+    <value>ID Card No :</value>
+  </data>
+  <data name="LabelX89.Text" xml:space="preserve">
+    <value>ID Card No :</value>
+  </data>
+  <data name="ComboItem37.Text" xml:space="preserve">
+    <value>Exempted</value>
+  </data>
+  <data name="ComboItem38.Text" xml:space="preserve">
+    <value>Military Service</value>
+  </data>
+  <data name="LabelX82.Text" xml:space="preserve">
+    <value>Military Status :</value>
+  </data>
+  <data name="LabelX97.Text" xml:space="preserve">
+    <value>Military :</value>
+  </data>
+  <data name="LabelX81.Text" xml:space="preserve">
+    <value>Start work date :</value>
+  </data>
+  <data name="LabelX80.Text" xml:space="preserve">
+    <value>Start work date :</value>
+  </data>
+  <data name="txtReligion.Location" type="System.Drawing.Point, System.Drawing">
+    <value>594, 11</value>
+  </data>
+  <data name="LabelX75.Location" type="System.Drawing.Point, System.Drawing">
+    <value>513, 11</value>
+  </data>
+  <data name="LabelX75.Text" xml:space="preserve">
+    <value>Religion :</value>
+  </data>
+  <data name="txtRace.Location" type="System.Drawing.Point, System.Drawing">
+    <value>175, 13</value>
+  </data>
+  <data name="txtNationalily.Location" type="System.Drawing.Point, System.Drawing">
+    <value>374, 12</value>
+  </data>
+  <data name="txtNationalily.Size" type="System.Drawing.Size, System.Drawing">
+    <value>106, 21</value>
+  </data>
+  <data name="LabelX74.Location" type="System.Drawing.Point, System.Drawing">
+    <value>291, 13</value>
+  </data>
+  <data name="LabelX74.Size" type="System.Drawing.Size, System.Drawing">
+    <value>77, 20</value>
+  </data>
+  <data name="LabelX74.Text" xml:space="preserve">
+    <value>Nationality :</value>
+  </data>
+  <data name="txtMatherNameMate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>175, 219</value>
+  </data>
+  <data name="txtMatherNameMate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>305, 21</value>
+  </data>
+  <data name="LabelX88.Location" type="System.Drawing.Point, System.Drawing">
+    <value>72, 219</value>
+  </data>
+  <data name="LabelX88.Text" xml:space="preserve">
+    <value>Mother's Name :</value>
+  </data>
+  <data name="txtRemark.Location" type="System.Drawing.Point, System.Drawing">
+    <value>175, 308</value>
+  </data>
+  <data name="txtRemark.Size" type="System.Drawing.Size, System.Drawing">
+    <value>677, 21</value>
+  </data>
+  <data name="LabelX96.Location" type="System.Drawing.Point, System.Drawing">
+    <value>71, 307</value>
+  </data>
+  <data name="LabelX96.Text" xml:space="preserve">
+    <value>Remarks :</value>
+  </data>
+  <data name="txtEduSpacial.Location" type="System.Drawing.Point, System.Drawing">
+    <value>175, 286</value>
+  </data>
+  <data name="txtEduSpacial.Size" type="System.Drawing.Size, System.Drawing">
+    <value>677, 21</value>
+  </data>
+  <data name="LabelX95.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 285</value>
+  </data>
+  <data name="LabelX95.Size" type="System.Drawing.Size, System.Drawing">
+    <value>148, 20</value>
+  </data>
+  <data name="LabelX95.Text" xml:space="preserve">
+    <value>Others - Special Knowledge :</value>
+  </data>
+  <data name="txtErContract.Location" type="System.Drawing.Point, System.Drawing">
+    <value>175, 263</value>
+  </data>
+  <data name="txtErContract.Size" type="System.Drawing.Size, System.Drawing">
+    <value>305, 21</value>
+  </data>
+  <data name="LabelX87.Location" type="System.Drawing.Point, System.Drawing">
+    <value>72, 262</value>
+  </data>
+  <data name="LabelX87.Text" xml:space="preserve">
+    <value>Emergency Call :</value>
+  </data>
+  <data name="LabelX94.Location" type="System.Drawing.Point, System.Drawing">
+    <value>492, 264</value>
+  </data>
+  <data name="LabelX94.Size" type="System.Drawing.Size, System.Drawing">
+    <value>95, 20</value>
+  </data>
+  <data name="LabelX94.Text" xml:space="preserve">
+    <value>Contact Tel. No :</value>
+  </data>
+  <data name="LabelX93.Location" type="System.Drawing.Point, System.Drawing">
+    <value>507, 242</value>
+  </data>
+  <data name="LabelX93.Text" xml:space="preserve">
+    <value>Working :</value>
+  </data>
+  <data name="txtGuaranteeName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>175, 241</value>
+  </data>
+  <data name="txtGuaranteeName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>305, 21</value>
+  </data>
+  <data name="LabelX86.Location" type="System.Drawing.Point, System.Drawing">
+    <value>72, 239</value>
+  </data>
+  <data name="LabelX86.Text" xml:space="preserve">
+    <value>Certified by :</value>
+  </data>
+  <data name="txtFatherNameMate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>175, 197</value>
+  </data>
+  <data name="txtFatherNameMate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>305, 21</value>
+  </data>
+  <data name="LabelX85.Location" type="System.Drawing.Point, System.Drawing">
+    <value>72, 195</value>
+  </data>
+  <data name="LabelX85.Text" xml:space="preserve">
+    <value>Father's Name :</value>
+  </data>
+  <data name="txtMatherName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>175, 175</value>
+  </data>
+  <data name="txtMatherName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>305, 21</value>
+  </data>
+  <data name="LabelX84.Location" type="System.Drawing.Point, System.Drawing">
+    <value>72, 173</value>
+  </data>
+  <data name="LabelX84.Text" xml:space="preserve">
+    <value>Mother's Name :</value>
+  </data>
+  <data name="txtFatherName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>175, 153</value>
+  </data>
+  <data name="txtFatherName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>305, 21</value>
+  </data>
+  <data name="LabelX83.Location" type="System.Drawing.Point, System.Drawing">
+    <value>72, 152</value>
+  </data>
+  <data name="LabelX83.Text" xml:space="preserve">
+    <value>Father's Name :</value>
+  </data>
+  <data name="txtDrivePlace.Location" type="System.Drawing.Point, System.Drawing">
+    <value>175, 107</value>
+  </data>
+  <data name="txtDrivePlace.Size" type="System.Drawing.Size, System.Drawing">
+    <value>305, 21</value>
+  </data>
+  <data name="LabelX79.Location" type="System.Drawing.Point, System.Drawing">
+    <value>72, 105</value>
+  </data>
+  <data name="LabelX79.Text" xml:space="preserve">
+    <value>Issued at :</value>
+  </data>
+  <data name="txtDriveNo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>175, 84</value>
+  </data>
+  <data name="txtDriveNo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>305, 21</value>
+  </data>
+  <data name="LabelX78.Location" type="System.Drawing.Point, System.Drawing">
+    <value>62, 83</value>
+  </data>
+  <data name="LabelX78.Size" type="System.Drawing.Size, System.Drawing">
+    <value>106, 20</value>
+  </data>
+  <data name="LabelX78.Text" xml:space="preserve">
+    <value>Driving License - No :</value>
+  </data>
+  <data name="txtforeignNo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>175, 61</value>
+  </data>
+  <data name="txtforeignNo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>305, 21</value>
+  </data>
+  <data name="LabelX77.Location" type="System.Drawing.Point, System.Drawing">
+    <value>72, 61</value>
+  </data>
+  <data name="LabelX77.Text" xml:space="preserve">
+    <value>Alien ID - No :</value>
+  </data>
+  <data name="txtTelContract.Location" type="System.Drawing.Point, System.Drawing">
+    <value>175, 37</value>
+  </data>
+  <data name="txtTelContract.Size" type="System.Drawing.Size, System.Drawing">
+    <value>305, 21</value>
+  </data>
+  <data name="LabelX76.Location" type="System.Drawing.Point, System.Drawing">
+    <value>72, 36</value>
+  </data>
+  <data name="LabelX76.Text" xml:space="preserve">
+    <value>Contact Tel. No :</value>
+  </data>
+  <data name="LabelX73.Location" type="System.Drawing.Point, System.Drawing">
+    <value>71, 12</value>
+  </data>
+  <data name="LabelX73.Text" xml:space="preserve">
+    <value>Race :</value>
+  </data>
+  <data name="TabControlPanel5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1032, 369</value>
+  </data>
+  <data name="TabItem5.Text" xml:space="preserve">
+    <value>:: Others::</value>
+  </data>
+  <data name="LabelX113.Text" xml:space="preserve">
+    <value>Added Item in the month</value>
+  </data>
+  <data name="ColumnHeader2.Text" xml:space="preserve">
+    <value>Month</value>
+  </data>
+  <data name="ColumnHeader3.Text" xml:space="preserve">
+    <value>Income Tax</value>
+  </data>
+  <data name="ColumnHeader4.Text" xml:space="preserve">
+    <value>Tax</value>
+  </data>
+  <data name="ColumnHeader5.Text" xml:space="preserve">
+    <value>Social Insurance Amount</value>
+  </data>
+  <data name="ColumnHeader5.Width" type="System.Int32, mscorlib">
+    <value>160</value>
+  </data>
+  <data name="ColumnHeader6.Text" xml:space="preserve">
+    <value>Social Insurance</value>
+  </data>
+  <data name="ColumnHeader6.Width" type="System.Int32, mscorlib">
+    <value>130</value>
+  </data>
+  <data name="ColumnHeader8.Text" xml:space="preserve">
+    <value>Remarks</value>
+  </data>
+  <data name="cmdDelTax.Text" xml:space="preserve">
+    <value>Deleted</value>
+  </data>
+  <data name="cmdAddTax.Text" xml:space="preserve">
+    <value>Added</value>
+  </data>
+  <data name="txtMonth_Year.Location" type="System.Drawing.Point, System.Drawing">
+    <value>142, 6</value>
+  </data>
+  <data name="LabelX19.Location" type="System.Drawing.Point, System.Drawing">
+    <value>284, 6</value>
+  </data>
+  <data name="LabelX19.Size" type="System.Drawing.Size, System.Drawing">
+    <value>136, 20</value>
+  </data>
+  <data name="LabelX19.Text" xml:space="preserve">
+    <value>Input year number of AD</value>
+  </data>
+  <data name="LabelX106.Location" type="System.Drawing.Point, System.Drawing">
+    <value>76, 6</value>
+  </data>
+  <data name="LabelX106.Text" xml:space="preserve">
+    <value>Month :</value>
+  </data>
+  <data name="txteRemark.Location" type="System.Drawing.Point, System.Drawing">
+    <value>142, 121</value>
+  </data>
+  <data name="txteRemark.Size" type="System.Drawing.Size, System.Drawing">
+    <value>306, 21</value>
+  </data>
+  <data name="LabelX111.Location" type="System.Drawing.Point, System.Drawing">
+    <value>40, 121</value>
+  </data>
+  <data name="LabelX111.Text" xml:space="preserve">
+    <value>Remarks :</value>
+  </data>
+  <data name="txteSocTax.Location" type="System.Drawing.Point, System.Drawing">
+    <value>142, 98</value>
+  </data>
+  <data name="LabelX110.Location" type="System.Drawing.Point, System.Drawing">
+    <value>40, 98</value>
+  </data>
+  <data name="LabelX110.Text" xml:space="preserve">
+    <value>Social Insurance :</value>
+  </data>
+  <data name="txtGrossSoc.Location" type="System.Drawing.Point, System.Drawing">
+    <value>142, 76</value>
+  </data>
+  <data name="LabelX109.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 76</value>
+  </data>
+  <data name="LabelX109.Size" type="System.Drawing.Size, System.Drawing">
+    <value>133, 20</value>
+  </data>
+  <data name="LabelX109.Text" xml:space="preserve">
+    <value>Social Insurance Amount :</value>
+  </data>
+  <data name="txtTax.Location" type="System.Drawing.Point, System.Drawing">
+    <value>142, 53</value>
+  </data>
+  <data name="LabelX108.Location" type="System.Drawing.Point, System.Drawing">
+    <value>41, 53</value>
+  </data>
+  <data name="LabelX108.Text" xml:space="preserve">
+    <value>Tax :</value>
+  </data>
+  <data name="txtGrossTax.Location" type="System.Drawing.Point, System.Drawing">
+    <value>142, 30</value>
+  </data>
+  <data name="LabelX107.Location" type="System.Drawing.Point, System.Drawing">
+    <value>41, 31</value>
+  </data>
+  <data name="LabelX107.Text" xml:space="preserve">
+    <value>Income :</value>
+  </data>
+  <data name="LabelX112.Text" xml:space="preserve">
+    <value>Monthly Total</value>
+  </data>
+  <data name="ColMonth.Text" xml:space="preserve">
+    <value>Month</value>
+  </data>
+  <data name="colVatCal.Text" xml:space="preserve">
+    <value>Income Tax</value>
+  </data>
+  <data name="ColVat.Text" xml:space="preserve">
+    <value>Tax</value>
+  </data>
+  <data name="ColPricePKS.Text" xml:space="preserve">
+    <value>Social Insurance Amount</value>
+  </data>
+  <data name="ColPricePKS.Width" type="System.Int32, mscorlib">
+    <value>160</value>
+  </data>
+  <data name="ColPKS.Text" xml:space="preserve">
+    <value>Social Insurance</value>
+  </data>
+  <data name="ColPKS.Width" type="System.Int32, mscorlib">
+    <value>120</value>
+  </data>
+  <data name="cboYear.Location" type="System.Drawing.Point, System.Drawing">
+    <value>177, 1</value>
+  </data>
+  <data name="LabelX98.Location" type="System.Drawing.Point, System.Drawing">
+    <value>27, 1</value>
+  </data>
+  <data name="LabelX98.Text" xml:space="preserve">
+    <value>Year :</value>
+  </data>
+  <data name="lblAccuPFAll.Location" type="System.Drawing.Point, System.Drawing">
+    <value>177, 155</value>
+  </data>
+  <data name="LabelX105.Location" type="System.Drawing.Point, System.Drawing">
+    <value>74, 152</value>
+  </data>
+  <data name="LabelX105.Text" xml:space="preserve">
+    <value>Accu. PF (All) :</value>
+  </data>
+  <data name="lblAccuPF.Location" type="System.Drawing.Point, System.Drawing">
+    <value>177, 133</value>
+  </data>
+  <data name="LabelX104.Location" type="System.Drawing.Point, System.Drawing">
+    <value>74, 130</value>
+  </data>
+  <data name="lblAccSocTax.Location" type="System.Drawing.Point, System.Drawing">
+    <value>177, 111</value>
+  </data>
+  <data name="LabelX103.Size" type="System.Drawing.Size, System.Drawing">
+    <value>123, 20</value>
+  </data>
+  <data name="LabelX103.Text" xml:space="preserve">
+    <value>Accu. Social Insurance :</value>
+  </data>
+  <data name="lblAccGrossSoc.Location" type="System.Drawing.Point, System.Drawing">
+    <value>177, 89</value>
+  </data>
+  <data name="LabelX102.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1, 88</value>
+  </data>
+  <data name="LabelX102.Size" type="System.Drawing.Size, System.Drawing">
+    <value>168, 20</value>
+  </data>
+  <data name="LabelX102.Text" xml:space="preserve">
+    <value>Accu. Social Insurance Amount :</value>
+  </data>
+  <data name="lblAccTax.Location" type="System.Drawing.Point, System.Drawing">
+    <value>177, 67</value>
+  </data>
+  <data name="LabelX101.Location" type="System.Drawing.Point, System.Drawing">
+    <value>73, 66</value>
+  </data>
+  <data name="LabelX101.Text" xml:space="preserve">
+    <value>Accu. Tax :</value>
+  </data>
+  <data name="lblAccBonus.Location" type="System.Drawing.Point, System.Drawing">
+    <value>177, 45</value>
+  </data>
+  <data name="LabelX100.Location" type="System.Drawing.Point, System.Drawing">
+    <value>73, 44</value>
+  </data>
+  <data name="LabelX100.Text" xml:space="preserve">
+    <value>Accu. Bonus :</value>
+  </data>
+  <data name="lblAccGrossTax.Location" type="System.Drawing.Point, System.Drawing">
+    <value>177, 23</value>
+  </data>
+  <data name="LabelX99.Location" type="System.Drawing.Point, System.Drawing">
+    <value>73, 22</value>
+  </data>
+  <data name="LabelX99.Text" xml:space="preserve">
+    <value>Accu. Income :</value>
+  </data>
+  <data name="TabControlPanel6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1032, 369</value>
+  </data>
+  <data name="TabItem6.Text" xml:space="preserve">
+    <value>Accu. Total amount</value>
+  </data>
+  <data name="cmdPP_Delete.Text" xml:space="preserve">
+    <value>Delete Passport</value>
+  </data>
+  <data name="cmdPP_Edit.Text" xml:space="preserve">
+    <value>Edit Passport</value>
+  </data>
+  <data name="cmdPP_Add.Text" xml:space="preserve">
+    <value>Add Passport</value>
+  </data>
+  <data name="cmdVisa_Delete.Text" xml:space="preserve">
+    <value>Delete Visa</value>
+  </data>
+  <data name="cmdVisa_Edit.Text" xml:space="preserve">
+    <value>Edit Visa</value>
+  </data>
+  <data name="cmdVisa_Add.Text" xml:space="preserve">
+    <value>Add Visa</value>
+  </data>
+  <data name="TabControlPanel7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1032, 369</value>
+  </data>
+  <data name="chkCalOtDeduc.Text" xml:space="preserve">
+    <value>Config. Crib Break </value>
+  </data>
+  <data name="chkCalLate.Text" xml:space="preserve">
+    <value>Late Calculation</value>
+  </data>
+  <data name="ComboItem39.Text" xml:space="preserve">
+    <value>With Overtime</value>
+  </data>
+  <data name="ComboItem40.Text" xml:space="preserve">
+    <value>Without Overtime</value>
+  </data>
+  <data name="TabControlPanel9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1032, 369</value>
+  </data>
+  <data name="cmdCancel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 9pt</value>
+  </data>
+  <data name="cmdCancel.Text" xml:space="preserve">
+    <value>Cancelled</value>
+  </data>
+  <data name="cmdConfirm.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 9pt</value>
+  </data>
+  <data name="cmdConfirm.Text" xml:space="preserve">
+    <value>Confirmed</value>
+  </data>
+  <data name="txtTermiDate_Move.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 9pt</value>
+  </data>
+  <data name="txtTermiDate_Move.Size" type="System.Drawing.Size, System.Drawing">
+    <value>136, 22</value>
+  </data>
+  <data name="LabelX121.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 9pt</value>
+  </data>
+  <data name="LabelX121.Text" xml:space="preserve">
+    <value>End of the work on :</value>
+  </data>
+  <data name="GroupPanel16.Size" type="System.Drawing.Size, System.Drawing">
+    <value>872, 97</value>
+  </data>
+  <data name="TabControlPanel10.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1032, 369</value>
+  </data>
+  <data name="TabMoveToEmpOut.Text" xml:space="preserve">
+    <value>Move employees to the file of staff resignation </value>
+  </data>
+  <data name="TabControl2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1032, 394</value>
+  </data>
+  <data name="TabControl2.Text" xml:space="preserve">
+    <value>Personal Profile</value>
+  </data>
+  <data name="ComboItem1.Text" xml:space="preserve">
+    <value>Mr.</value>
+  </data>
+  <data name="ComboItem2.Text" xml:space="preserve">
+    <value>Mrs.</value>
+  </data>
+  <data name="ComboItem3.Text" xml:space="preserve">
+    <value>Miss</value>
+  </data>
+  <data name="LabelX8.Text" xml:space="preserve">
+    <value>Family Name :</value>
+  </data>
+  <data name="LabelX14.Text" xml:space="preserve">
+    <value>Section :</value>
+  </data>
+  <data name="LabelX16.Text" xml:space="preserve">
+    <value>Position :</value>
+  </data>
+  <data name="LabelX15.Location" type="System.Drawing.Point, System.Drawing">
+    <value>502, 142</value>
+  </data>
+  <data name="LabelX15.Size" type="System.Drawing.Size, System.Drawing">
+    <value>98, 20</value>
+  </data>
+  <data name="LabelX15.Text" xml:space="preserve">
+    <value>Department Code :</value>
+  </data>
+  <data name="LabelX13.Text" xml:space="preserve">
+    <value>Division Code :</value>
+  </data>
+  <data name="LabelX11.Text" xml:space="preserve">
+    <value>Nick Name :</value>
+  </data>
+  <data name="LabelX7.Text" xml:space="preserve">
+    <value>Name :</value>
+  </data>
+  <data name="LabelX17.Text" xml:space="preserve">
+    <value>Title Name :</value>
+  </data>
+  <data name="LabelX6.Text" xml:space="preserve">
+    <value>Title Name :</value>
+  </data>
+  <data name="LabelX4.Text" xml:space="preserve">
+    <value>Employee Code :</value>
+  </data>
+  <data name="txtSection_Det.Size" type="System.Drawing.Size, System.Drawing">
+    <value>279, 21</value>
+  </data>
+  <data name="txtDivision.Size" type="System.Drawing.Size, System.Drawing">
+    <value>279, 21</value>
+  </data>
+  <data name="LabelX18.Text" xml:space="preserve">
+    <value>Account Code :</value>
+  </data>
+  <data name="LabelX5.Text" xml:space="preserve">
+    <value>Card Code :</value>
+  </data>
+  <data name="GroupBox2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1033, 195</value>
+  </data>
+  <data name="TabControlPanel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1041, 585</value>
+  </data>
+  <data name="TabItem2.Text" xml:space="preserve">
+    <value>Details of Employee Database</value>
+  </data>
+  <data name="TabControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1041, 610</value>
+  </data>
+</root>

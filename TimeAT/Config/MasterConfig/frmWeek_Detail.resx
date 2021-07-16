@@ -1,0 +1,805 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="&gt;&gt;chkNM_SP.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.CheckBoxX, DevComponents.DotNetBar2, Version=10.0.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="LabelX2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 75</value>
+  </data>
+  <data name="&gt;&gt;cboWeek.Parent" xml:space="preserve">
+    <value>GroupBox1</value>
+  </data>
+  <data name="chkPM_SP.Size" type="System.Drawing.Size, System.Drawing">
+    <value>96, 20</value>
+  </data>
+  <data name="colP_M.Text" xml:space="preserve">
+    <value>เดือนก่อน</value>
+  </data>
+  <assembly alias="DevComponents.DotNetBar2" name="DevComponents.DotNetBar2, Version=10.0.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b" />
+  <data name="LabelX4.HighlightColor" type="DevComponents.DotNetBar.Validator.eHighlightColor, DevComponents.DotNetBar2">
+    <value>None</value>
+  </data>
+  <data name="&gt;&gt;lblWK_Code.Parent" xml:space="preserve">
+    <value>GroupBox1</value>
+  </data>
+  <data name="chkPM_SP.Text" xml:space="preserve">
+    <value>เดือนก่อน</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="LabelX2.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;colTo_Date.Name" xml:space="preserve">
+    <value>colTo_Date</value>
+  </data>
+  <data name="chkEndMonth.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="txtDayST.ButtonCustom.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;GroupBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="txtDaySP.ButtonCustom.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;LabelX1.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="LabelX4.HighlightOnFocus" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="txtDaySP.ButtonCustom2.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;lblWeek.Parent" xml:space="preserve">
+    <value>GroupBox1</value>
+  </data>
+  <data name="lblWK_Code.Text" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="chkPM_SP.Location" type="System.Drawing.Point, System.Drawing">
+    <value>216, 102</value>
+  </data>
+  <data name="GroupBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>828, 131</value>
+  </data>
+  <data name="&gt;&gt;LabelX1.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=10.0.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b</value>
+  </data>
+  <data name="&gt;&gt;LabelX3.Name" xml:space="preserve">
+    <value>LabelX3</value>
+  </data>
+  <data name="LabelX3.HighlightColor" type="DevComponents.DotNetBar.Validator.eHighlightColor, DevComponents.DotNetBar2">
+    <value>None</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="txtDaySP.ButtonCustom2.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;LabelX3.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=10.0.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b</value>
+  </data>
+  <data name="chkNM_SP.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 20</value>
+  </data>
+  <data name="txtDayST.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="chkEndMonth.Location" type="System.Drawing.Point, System.Drawing">
+    <value>424, 102</value>
+  </data>
+  <data name="&gt;&gt;LabelX4.Parent" xml:space="preserve">
+    <value>GroupBox1</value>
+  </data>
+  <data name="LabelX3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 20</value>
+  </data>
+  <data name="&gt;&gt;colSP_P_M.Name" xml:space="preserve">
+    <value>colSP_P_M</value>
+  </data>
+  <data name="&gt;&gt;chkNM_ST.Parent" xml:space="preserve">
+    <value>GroupBox1</value>
+  </data>
+  <data name="LabelX4.Text" xml:space="preserve">
+    <value>ถึงวันที่ : </value>
+  </data>
+  <data name="colST_Date.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="colSP_P_M.Text" xml:space="preserve">
+    <value>เดือนก่อน</value>
+  </data>
+  <data name="lstWeek.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>กำหนดช่วงเวลาคำนวณเงินเดือน</value>
+  </data>
+  <data name="txtDaySP.Location" type="System.Drawing.Point, System.Drawing">
+    <value>108, 101</value>
+  </data>
+  <data name="chkNM_ST.Location" type="System.Drawing.Point, System.Drawing">
+    <value>318, 75</value>
+  </data>
+  <data name="colSP_P_M.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="&gt;&gt;chkNM_SP.Name" xml:space="preserve">
+    <value>chkNM_SP</value>
+  </data>
+  <data name="LabelX3.Text" xml:space="preserve">
+    <value>รอบการคำนวณ : </value>
+  </data>
+  <data name="colN_M.Text" xml:space="preserve">
+    <value>เดือนถัดไป</value>
+  </data>
+  <data name="chkPM_ST.HighlightColor" type="DevComponents.DotNetBar.Validator.eHighlightColor, DevComponents.DotNetBar2">
+    <value>None</value>
+  </data>
+  <data name="GroupBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;lblWeek.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.TextBoxX, DevComponents.DotNetBar2, Version=10.0.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b</value>
+  </data>
+  <data name="lstWeek.Size" type="System.Drawing.Size, System.Drawing">
+    <value>824, 304</value>
+  </data>
+  <data name="lblWeek.ButtonCustom.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lstWeek.HighlightColor" type="DevComponents.DotNetBar.Validator.eHighlightColor, DevComponents.DotNetBar2">
+    <value>None</value>
+  </data>
+  <data name="colN_M.Width" type="System.Int32, mscorlib">
+    <value>75</value>
+  </data>
+  <data name="chkEndMonth.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 20</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="lstWeek.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;lstWeek.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="colEndMonth.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="GroupBox1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="txtDaySP.HighlightOnFocus" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;LabelX4.Name" xml:space="preserve">
+    <value>LabelX4</value>
+  </data>
+  <data name="lblWK_Code.HighlightColor" type="DevComponents.DotNetBar.Validator.eHighlightColor, DevComponents.DotNetBar2">
+    <value>None</value>
+  </data>
+  <data name="&gt;&gt;colNo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;colSP_P_M.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="txtDayST.HighlightColor" type="DevComponents.DotNetBar.Validator.eHighlightColor, DevComponents.DotNetBar2">
+    <value>None</value>
+  </data>
+  <data name="&gt;&gt;chkNM_ST.Name" xml:space="preserve">
+    <value>chkNM_ST</value>
+  </data>
+  <data name="cboWeek.Size" type="System.Drawing.Size, System.Drawing">
+    <value>102, 21</value>
+  </data>
+  <data name="&gt;&gt;txtDayST.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.TextBoxX, DevComponents.DotNetBar2, Version=10.0.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b</value>
+  </data>
+  <data name="$this.HighlightOnFocus" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lblWeek.ButtonCustom.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtDaySP.ButtonCustom2.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtDaySP.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;chkEndMonth.Name" xml:space="preserve">
+    <value>chkEndMonth</value>
+  </data>
+  <data name="&gt;&gt;colP_M.Name" xml:space="preserve">
+    <value>colP_M</value>
+  </data>
+  <data name="lstWeek.HighlightOnFocus" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="$this.HighlightColor" type="DevComponents.DotNetBar.Validator.eHighlightColor, DevComponents.DotNetBar2">
+    <value>None</value>
+  </data>
+  <data name="&gt;&gt;chkPM_SP.Parent" xml:space="preserve">
+    <value>GroupBox1</value>
+  </data>
+  <data name="&gt;&gt;colEndMonth.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;chkNM_ST.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="lblWK_Code.Location" type="System.Drawing.Point, System.Drawing">
+    <value>216, 21</value>
+  </data>
+  <data name="LabelX1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>96, 20</value>
+  </data>
+  <data name="colSP_N_M.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="cboWeek.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="LabelX1.Text" xml:space="preserve">
+    <value>รอบที่ : </value>
+  </data>
+  <data name="&gt;&gt;LabelX3.Parent" xml:space="preserve">
+    <value>GroupBox1</value>
+  </data>
+  <data name="chkEndMonth.HighlightOnFocus" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="txtDayST.ButtonCustom2.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtDayST.Location" type="System.Drawing.Point, System.Drawing">
+    <value>108, 74</value>
+  </data>
+  <data name="lblWeek.ButtonCustom2.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;chkEndMonth.Parent" xml:space="preserve">
+    <value>GroupBox1</value>
+  </data>
+  <data name="&gt;&gt;lblWK_Code.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="chkNM_ST.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="txtDaySP.HighlightColor" type="DevComponents.DotNetBar.Validator.eHighlightColor, DevComponents.DotNetBar2">
+    <value>None</value>
+  </data>
+  <data name="chkNM_ST.HighlightColor" type="DevComponents.DotNetBar.Validator.eHighlightColor, DevComponents.DotNetBar2">
+    <value>None</value>
+  </data>
+  <data name="&gt;&gt;chkPM_SP.Name" xml:space="preserve">
+    <value>chkPM_SP</value>
+  </data>
+  <data name="txtDayST.ButtonCustom.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;txtDayST.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="lstWeek.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1, 161</value>
+  </data>
+  <data name="&gt;&gt;colST_Date.Name" xml:space="preserve">
+    <value>colST_Date</value>
+  </data>
+  <data name="txtDayST.HighlightOnFocus" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblWeek.ButtonCustom.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="chkEndMonth.HighlightColor" type="DevComponents.DotNetBar.Validator.eHighlightColor, DevComponents.DotNetBar2">
+    <value>None</value>
+  </data>
+  <data name="&gt;&gt;LabelX2.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;chkPM_ST.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="LabelX3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>96, 20</value>
+  </data>
+  <data name="chkPM_ST.HighlightOnFocus" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lblWK_Code.Size" type="System.Drawing.Size, System.Drawing">
+    <value>96, 20</value>
+  </data>
+  <data name="Highlighter1.FocusHighlightColor" type="DevComponents.DotNetBar.Validator.eHighlightColor, DevComponents.DotNetBar2">
+    <value>Orange</value>
+  </data>
+  <data name="&gt;&gt;LabelX3.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="chkPM_SP.HighlightColor" type="DevComponents.DotNetBar.Validator.eHighlightColor, DevComponents.DotNetBar2">
+    <value>None</value>
+  </data>
+  <data name="&gt;&gt;cboWeek.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;LabelX1.Parent" xml:space="preserve">
+    <value>GroupBox1</value>
+  </data>
+  <data name="&gt;&gt;colTo_Date.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GroupBox1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="colEndMonth.Text" xml:space="preserve">
+    <value>สิ้นเดือน</value>
+  </data>
+  <data name="lblWeek.HighlightOnFocus" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="chkPM_ST.Text" xml:space="preserve">
+    <value>เดือนก่อน</value>
+  </data>
+  <data name="colNo.Text" xml:space="preserve">
+    <value>รอบที่</value>
+  </data>
+  <data name="LabelX1.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="lblWK_Code.HighlightOnFocus" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="colSP_N_M.Width" type="System.Int32, mscorlib">
+    <value>74</value>
+  </data>
+  <data name="&gt;&gt;chkNM_SP.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="LabelX1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 48</value>
+  </data>
+  <data name="LabelX1.HighlightColor" type="DevComponents.DotNetBar.Validator.eHighlightColor, DevComponents.DotNetBar2">
+    <value>None</value>
+  </data>
+  <data name="&gt;&gt;LabelX4.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=10.0.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b</value>
+  </data>
+  <data name="lblWeek.Size" type="System.Drawing.Size, System.Drawing">
+    <value>102, 21</value>
+  </data>
+  <data name="txtDayST.ButtonCustom2.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chkPM_SP.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;lblWeek.Name" xml:space="preserve">
+    <value>lblWeek</value>
+  </data>
+  <data name="&gt;&gt;chkPM_ST.Name" xml:space="preserve">
+    <value>chkPM_ST</value>
+  </data>
+  <data name="chkNM_SP.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="LabelX4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>96, 20</value>
+  </data>
+  <data name="cboWeek.HighlightColor" type="DevComponents.DotNetBar.Validator.eHighlightColor, DevComponents.DotNetBar2">
+    <value>None</value>
+  </data>
+  <data name="&gt;&gt;GroupBox1.Name" xml:space="preserve">
+    <value>GroupBox1</value>
+  </data>
+  <data name="LabelX4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 102</value>
+  </data>
+  <data name="chkPM_ST.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="chkNM_ST.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 20</value>
+  </data>
+  <data name="&gt;&gt;txtDaySP.Parent" xml:space="preserve">
+    <value>GroupBox1</value>
+  </data>
+  <data name="&gt;&gt;GroupBox1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;txtDaySP.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.TextBoxX, DevComponents.DotNetBar2, Version=10.0.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b</value>
+  </data>
+  <data name="&gt;&gt;chkEndMonth.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;LabelX1.Name" xml:space="preserve">
+    <value>LabelX1</value>
+  </data>
+  <data name="&gt;&gt;chkNM_ST.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.CheckBoxX, DevComponents.DotNetBar2, Version=10.0.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b</value>
+  </data>
+  <data name="colP_M.Width" type="System.Int32, mscorlib">
+    <value>71</value>
+  </data>
+  <data name="colSP_N_M.Text" xml:space="preserve">
+    <value>เดือนถัดไป</value>
+  </data>
+  <data name="lblWeek.HighlightColor" type="DevComponents.DotNetBar.Validator.eHighlightColor, DevComponents.DotNetBar2">
+    <value>None</value>
+  </data>
+  <data name="&gt;&gt;LabelX4.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="LabelX2.HighlightColor" type="DevComponents.DotNetBar.Validator.eHighlightColor, DevComponents.DotNetBar2">
+    <value>None</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>frmWeek_Detail</value>
+  </data>
+  <data name="LabelX2.Text" xml:space="preserve">
+    <value>วันที่ เริ่ม : </value>
+  </data>
+  <data name="&gt;&gt;chkPM_ST.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.CheckBoxX, DevComponents.DotNetBar2, Version=10.0.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b</value>
+  </data>
+  <data name="chkPM_ST.Location" type="System.Drawing.Point, System.Drawing">
+    <value>216, 75</value>
+  </data>
+  <data name="txtDayST.ButtonCustom.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="chkNM_SP.HighlightOnFocus" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;cboWeek.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.ComboBoxEx, DevComponents.DotNetBar2, Version=10.0.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b</value>
+  </data>
+  <data name="&gt;&gt;chkNM_SP.Parent" xml:space="preserve">
+    <value>GroupBox1</value>
+  </data>
+  <data name="LabelX1.HighlightOnFocus" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;lstWeek.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.ListViewEx, DevComponents.DotNetBar2, Version=10.0.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>Payroll.frmBasicPage2, Payroll, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;txtDayST.Parent" xml:space="preserve">
+    <value>GroupBox1</value>
+  </data>
+  <data name="chkEndMonth.Text" xml:space="preserve">
+    <value>สิ้นเดือน</value>
+  </data>
+  <data name="GroupBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1, 24</value>
+  </data>
+  <data name="txtDayST.ButtonCustom2.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;LabelX2.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=10.0.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b</value>
+  </data>
+  <data name="&gt;&gt;colSP_N_M.Name" xml:space="preserve">
+    <value>colSP_N_M</value>
+  </data>
+  <data name="chkPM_SP.HighlightOnFocus" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="colTo_Date.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="&gt;&gt;chkPM_SP.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;chkPM_SP.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.CheckBoxX, DevComponents.DotNetBar2, Version=10.0.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b</value>
+  </data>
+  <data name="&gt;&gt;chkEndMonth.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.CheckBoxX, DevComponents.DotNetBar2, Version=10.0.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b</value>
+  </data>
+  <data name="&gt;&gt;lblWK_Code.Name" xml:space="preserve">
+    <value>lblWK_Code</value>
+  </data>
+  <data name="GroupBox1.HighlightColor" type="DevComponents.DotNetBar.Validator.eHighlightColor, DevComponents.DotNetBar2">
+    <value>None</value>
+  </data>
+  <data name="&gt;&gt;LabelX2.Name" xml:space="preserve">
+    <value>LabelX2</value>
+  </data>
+  <data name="chkNM_SP.HighlightColor" type="DevComponents.DotNetBar.Validator.eHighlightColor, DevComponents.DotNetBar2">
+    <value>None</value>
+  </data>
+  <data name="txtDaySP.Size" type="System.Drawing.Size, System.Drawing">
+    <value>102, 21</value>
+  </data>
+  <data name="lblWeek.Location" type="System.Drawing.Point, System.Drawing">
+    <value>108, 47</value>
+  </data>
+  <data name="chkNM_SP.Location" type="System.Drawing.Point, System.Drawing">
+    <value>318, 102</value>
+  </data>
+  <data name="colST_Date.Width" type="System.Int32, mscorlib">
+    <value>58</value>
+  </data>
+  <data name="LabelX2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>96, 20</value>
+  </data>
+  <data name="GroupBox1.HighlightOnFocus" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;lstWeek.Name" xml:space="preserve">
+    <value>lstWeek</value>
+  </data>
+  <data name="lblWeek.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="colNo.Width" type="System.Int32, mscorlib">
+    <value>51</value>
+  </data>
+  <data name="txtDayST.Size" type="System.Drawing.Size, System.Drawing">
+    <value>102, 21</value>
+  </data>
+  <data name="&gt;&gt;txtDayST.Name" xml:space="preserve">
+    <value>txtDayST</value>
+  </data>
+  <data name="txtDaySP.ButtonCustom.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;txtDaySP.Name" xml:space="preserve">
+    <value>txtDaySP</value>
+  </data>
+  <data name="chkNM_ST.HighlightOnFocus" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;cboWeek.Name" xml:space="preserve">
+    <value>cboWeek</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>832, 468</value>
+  </data>
+  <data name="colTo_Date.Width" type="System.Int32, mscorlib">
+    <value>59</value>
+  </data>
+  <data name="&gt;&gt;colST_Date.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;colEndMonth.Name" xml:space="preserve">
+    <value>colEndMonth</value>
+  </data>
+  <data name="&gt;&gt;chkPM_ST.Parent" xml:space="preserve">
+    <value>GroupBox1</value>
+  </data>
+  <data name="&gt;&gt;LabelX2.Parent" xml:space="preserve">
+    <value>GroupBox1</value>
+  </data>
+  <data name="chkNM_SP.Text" xml:space="preserve">
+    <value>เดือนถัดไป</value>
+  </data>
+  <data name="cboWeek.Location" type="System.Drawing.Point, System.Drawing">
+    <value>108, 20</value>
+  </data>
+  <data name="colSP_P_M.Width" type="System.Int32, mscorlib">
+    <value>70</value>
+  </data>
+  <data name="colTo_Date.Text" xml:space="preserve">
+    <value>ถึงวันที่</value>
+  </data>
+  <data name="colST_Date.Text" xml:space="preserve">
+    <value>วันที่เริ่ม</value>
+  </data>
+  <data name="&gt;&gt;Highlighter1.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Validator.Highlighter, DevComponents.DotNetBar2, Version=10.0.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b</value>
+  </data>
+  <data name="&gt;&gt;colN_M.Name" xml:space="preserve">
+    <value>colN_M</value>
+  </data>
+  <data name="chkNM_ST.Text" xml:space="preserve">
+    <value>เดือนถัดไป</value>
+  </data>
+  <data name="cboWeek.HighlightOnFocus" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lblWeek.ButtonCustom2.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;colNo.Name" xml:space="preserve">
+    <value>colNo</value>
+  </data>
+  <data name="LabelX3.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="&gt;&gt;lblWeek.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="colN_M.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="LabelX4.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="LabelX2.HighlightOnFocus" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="chkPM_ST.Size" type="System.Drawing.Size, System.Drawing">
+    <value>96, 20</value>
+  </data>
+  <data name="&gt;&gt;colN_M.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="colP_M.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="cboWeek.ItemHeight" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;Highlighter1.Name" xml:space="preserve">
+    <value>Highlighter1</value>
+  </data>
+  <data name="&gt;&gt;txtDaySP.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;lstWeek.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="lblWK_Code.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="txtDaySP.ButtonCustom.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GroupBox1.Text" xml:space="preserve">
+    <value>ช่วงเวลาคำนวณเงินเดือน</value>
+  </data>
+  <data name="&gt;&gt;lblWK_Code.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=10.0.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b</value>
+  </data>
+  <data name="&gt;&gt;colSP_N_M.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;colP_M.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lblWeek.ButtonCustom2.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="LabelX3.HighlightOnFocus" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lblWK_Code.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Highlighter1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+</root>

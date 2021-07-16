@@ -1,0 +1,1439 @@
+Imports System.Data
+Imports System.Data.SqlClient
+Imports Microsoft.Office.Interop
+
+
+Public Class frmTimework
+
+    Private Sub frmTimework_Disposed(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Disposed
+        fTimework = Nothing
+    End Sub
+
+    Private Sub frmTimework_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles Me.KeyDown
+        Select Case e.KeyCode
+            Case Keys.F5
+                Call btnRefresh_Click(Me, System.EventArgs.Empty)
+            Case Keys.F2
+                Call btnChkErrTimeOdd_Click(Me, System.EventArgs.Empty)
+            Case Keys.F3
+                Call btnChkErrTimeOver_Click(Me, System.EventArgs.Empty)
+            Case Keys.F4
+                Call btnChkTimeNear_Click(Me, System.EventArgs.Empty)
+        End Select
+    End Sub
+
+    Private Sub frmTimework_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles Me.KeyPress
+        If Asc(e.KeyChar) = 13 Then
+            'If e.KeyChar = Microsoft.VisualBasic.ChrW(Keys.Enter) Then
+            If TypeOf Me.ActiveControl Is TextBox Then
+                Dim tb As TextBox = DirectCast(Me.ActiveControl, TextBox)
+                If tb.Multiline AndAlso tb.AcceptsReturn Then
+                    e.Handled = False
+                    Exit Sub
+                End If
+            End If
+            e.Handled = True
+            Dim oform As Form = Me.FindForm
+            oform.SelectNextControl(oform.ActiveControl, True, True, True, True)
+            oform.ActiveControl.Focus()
+        End If
+    End Sub
+
+    Private Sub ReadMenuPermissionTimeAtt_ReadOnly()  ' เมนูประมวลผลเวลาทำงาน
+        fTimework.btnProcess.Enabled = setPermission.PermissionTimeAtt_ReadOnly
+        fTimework.btnAutoFixInOut.Enabled = setPermission.PermissionTimeAtt_ReadOnly
+        fTimework.btnAutoGenTimeByPerson.Enabled = setPermission.PermissionTimeAtt_ReadOnly
+    End Sub
+
+
+    Private Sub frmTimework_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        Call ReadMenuPermissionTimeAtt_ReadOnly()
+        Call LoadCompany()
+        Call LoadMonth()
+        txtYear.Text = Date.Now.Year
+        cboMonth.SelectedIndex = Date.Now.Month - 1
+        Call LoadSite()
+        Call LoadDepartment()
+        If CView = True Then
+            cboCompany.Enabled = False
+            cboCompany.SelectedItem = ComName
+        Else
+            cboCompany.Enabled = True
+        End If
+        'ToolTip1.Tag = "ตัวอักษรสีดำคือ ข้อมูลที่มาจากเครื่อง " & Chr(10) & "ตัวอักษรสีน้ำเงิน คือ ข้อมูลคีย์เข้าหรือแก้ไข" & Chr(10) & " ตัวอักษรสีแดงคือ รูดเกิน 12 ครั้ง"
+    End Sub
+
+    Private Sub btnExit_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnExit.Click
+        Me.Close()
+    End Sub
+
+    Private Sub txtDateSt_GotFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtDateSt.GotFocus
+        txtDateSt.SelectAll()
+    End Sub
+
+    Private Sub txtDateSp_GotFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtDateSp.GotFocus
+        txtDateSp.SelectAll()
+    End Sub
+
+    Private Sub btnProcess_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnProcess.Click
+        If IsDate(ConvertDate(txtDateSt.Text.Trim)) = False Then
+            MsgBox("กรุณากรอกวันที่ให้ถูกต้องด้วย", MsgBoxStyle.Information, Me.Text)
+            txtDateSt.Focus()
+            txtDateSt.SelectAll()
+            Exit Sub
+        End If
+        If IsDate(ConvertDate(txtDateSp.Text.Trim)) = False Then
+            MsgBox("กรุณากรอกวันที่ให้ถูกต้องด้วย", MsgBoxStyle.Information, Me.Text)
+            txtDateSp.Focus()
+            txtDateSp.SelectAll()
+            Exit Sub
+        End If
+        Dim DateSt As Date
+        Dim DateSp As Date
+        Dim Code As String = ""
+
+        DateSt = ConvertDate(txtDateSt.Text)
+        DateSp = ConvertDate(txtDateSp.Text)
+
+        Dim dCmd As New SqlCommand
+        'Dim Tn As SqlTransaction
+        Dim strSQL As String
+        'Tn = Conn.BeginTransaction
+        'dCmd.Transaction = Tn
+        ProgressBar1.Maximum = DateDiff(DateInterval.Day, DateSt, DateSp) + 1
+        ProgressBar1.Value = 0
+
+        btnProcess.Enabled = False
+
+        Try
+            Dim Da As New SqlDataAdapter
+            Dim Ds As New DataSet
+
+            'strSQL = "Select Code " & _
+            '        " From TimeMaster " & _
+            '        " Where dbo.fNextDay(Code,Replace(Convert(nVarchar(16),DateIn,120),'-','/')) " & _
+            '                " Between '" & Format(DateSt, "yyyy/MM/dd") & "' And '" & Format(DateSp, "yyyy/MM/dd") & "' " & _
+            '        " Group By Code"
+            strSQL = "Delete From TimeWork " & _
+                    " Where Convert(nVarchar(10),DateIn,111) " & _
+                            " between '" & Format(DateSt, "yyyy/MM/dd") & "'  and " & _
+                                    " '" & Format(DateSp, "yyyy/MM/dd") & "' and  " & _
+                                    " Code In (Select Code " & _
+                                            " From Emp "
+
+            If cboCompany.SelectedIndex > 0 Then
+                strSQL &= " Where isnull(Emp.CompanyId,'') = '" & GetData.GetCompanyId(cboCompany.Text.Trim) & "'"
+            End If
+            strSQL &= ")"
+
+            dCmd.Connection = Conn
+            dCmd.CommandText = strSQL
+            dCmd.ExecuteNonQuery()
+
+
+            strSQL = "Select T.Code " & _
+                    " From TimeMaster t Left Join Emp e " & _
+                            " on t.Code = e.Code " & _
+                    " Where Convert(nVarchar(10),T.DateIn,111) " & _
+                            " Between '" & Format(DateSt.AddDays(-1), "yyyy/MM/dd") & "' And '" & Format(DateSp.AddDays(1), "yyyy/MM/dd") & "' "
+
+            If cboCompany.SelectedIndex > 0 Then
+                strSQL &= " and isnull(e.CompanyId,'') = '" & GetData.GetCompanyId(cboCompany.Text.Trim) & "'"
+            End If
+
+            strSQL &= " Group By T.Code"
+
+            dCmd.Connection = Conn
+            dCmd.CommandText = strSQL
+            dCmd.ExecuteNonQuery()
+            Da.SelectCommand = dCmd
+            Ds.Clear()
+            Da.Fill(Ds, "data")
+
+            Dim I As Date
+            I = DateSt
+            Do Until I > DateSp
+                lblDateProcess.Text = Format(I, "dd/MM/yyyy")
+                Application.DoEvents()
+
+                With Ds.Tables("data")
+                    ProgressBar2.Value = 0
+                    ProgressBar2.Maximum = .Rows.Count
+                    For Each dr As DataRow In .Rows
+                        ProgressBar2.Value += 1
+                        lblRecord.Text = ProgressBar2.Value & "/" & ProgressBar2.Maximum
+                        Application.DoEvents()
+                        Code = dr("Code")
+
+                        If chkINOUT.Checked = True Then
+                            'strSQL = "Exec SpTimeGenTimeWorkInOut '" & Format(I, "yyyy/MM/dd") & "'," & _
+                            '                            " '" & Format(I, "yyyy/MM/dd") & "'"
+
+                            strSQL = "Exec SpTimeGenTimeWork '" & dr("Code") & "','" & Format(I, "yyyy/MM/dd") & "'," & _
+                                                        " '" & Format(I, "yyyy/MM/dd") & "',0"
+                            dCmd.Connection = Conn
+                            dCmd.CommandText = strSQL
+                            dCmd.ExecuteNonQuery()
+                        Else
+                            strSQL = "Exec SpTimeGenTimeWork '" & dr("Code") & "','" & Format(I, "yyyy/MM/dd") & "'," & _
+                                                        " '" & Format(I, "yyyy/MM/dd") & "',1"
+                            dCmd.Connection = Conn
+                            dCmd.CommandText = strSQL
+                            dCmd.ExecuteNonQuery()
+                        End If
+                    Next
+                End With
+
+                I = DateAdd(DateInterval.Day, 1, I)
+                ProgressBar1.Value += 1
+                Application.DoEvents()
+            Loop
+            'Tn.Commit()
+            btnProcess.Enabled = True
+        Catch ex As Exception
+            btnProcess.Enabled = True
+            'Tn.Rollback()
+            MsgBox("Code : " & Code & " " & ex.Message, MsgBoxStyle.Critical, Me.Text)
+            Exit Sub
+        End Try
+        MsgBox("Process Complete", MsgBoxStyle.Information, Me.Text)
+    End Sub
+
+    Private Sub LoadTimework()
+
+        Dim Da As New SqlDataAdapter
+        Dim Ds As New DataSet
+        Dim strSQL As String
+        strSQL = "Select Timework.DateIn,Timework.Code," & _
+                     " EmpName = Fname + '   ' + Lname," & _
+                     " DeptId," & _
+                     " Time1 = Isnull(Convert(nVarchar(16),Time1,120),'')," & _
+                     " Time2 = Isnull(Convert(nVarchar(16),Time2,120),'')," & _
+                     " Time3 = Isnull(Convert(nVarchar(16),Time3,120),'')," & _
+                     " Time4 = Isnull(Convert(nVarchar(16),Time4,120),'')," & _
+                     " Time5 = Isnull(Convert(nVarchar(16),Time5,120),'')," & _
+                     " Time6 = Isnull(Convert(nVarchar(16),Time6,120),'')," & _
+                     " Time7 = Isnull(Convert(nVarchar(16),Time7,120),'')," & _
+                     " Time8 = Isnull(Convert(nVarchar(16),Time8,120),'')," & _
+                     " Time9 = Isnull(Convert(nVarchar(16),Time9,120),'')," & _
+                     " Time10 = Isnull(Convert(nVarchar(16),Time10,120),'')," & _
+                     " Time11 = Isnull(Convert(nVarchar(16),Time11,120),'')," & _
+                     " Time12 = Isnull(Convert(nVarchar(16),Time12,120),'')," & _
+                     " TimeE1 = Isnull(TimeE1,0)," & _
+                     " TimeE2 = Isnull(TimeE2,0)," & _
+                     " TimeE3 = Isnull(TimeE3,0)," & _
+                     " TimeE4 = Isnull(TimeE4,0)," & _
+                     " TimeE5 = Isnull(TimeE5,0)," & _
+                     " TimeE6 = Isnull(TimeE6,0)," & _
+                     " TimeE7 = Isnull(TimeE7,0)," & _
+                     " TimeE8 = Isnull(TimeE8,0)," & _
+                     " TimeE9 = Isnull(TimeE9,0)," & _
+                     " TimeE10 = Isnull(TimeE10,0)," & _
+                     " TimeE11 = Isnull(TimeE11,0)," & _
+                     " TimeE12 = Isnull(TimeE12,0)," & _
+                     " TimeOver = Isnull(TimeOver,0)" & _
+                " From TimeWork Inner Join Emp " & _
+                     " On TimeWork.Code = Emp.Code " & _
+                " Where Convert(nVarchar(10),Timework.DateIn,111) " & _
+                    " Between '" & ConvertDate(txtDateSt.Text.Trim) & "' and " & _
+                            " '" & ConvertDate(txtDateSp.Text.Trim) & "' "
+
+        If cboCompany.SelectedIndex > 0 Then
+            strSQL &= " and isnull(Emp.CompanyId,'') = '" & GetData.GetCompanyId(cboCompany.Text.Trim) & "'"
+        End If
+
+        If rdDate.Checked = True Then
+            strSQL &= " Order By Timework.DateIn,Timework.Code"
+        End If
+        If rdCode.Checked = True Then
+            strSQL &= " Order By Timework.Code,Timework.DateIn"
+        End If
+        If rdName.Checked = True Then
+            strSQL &= " Order By Emp.Fname,Emp.Lname,Timework.DateIn"
+        End If
+        If rdDept.Checked = True Then
+            strSQL &= " Order By Emp.DeptId,Timework.DateIn,Timework.Code"
+        End If
+        Da = New SqlDataAdapter(strSQL, Conn)
+        Da.Fill(Ds, "Data")
+
+        Dim List As ListViewItem
+        Dim arrDATA() As String
+
+        With Ds.Tables("Data")
+            lstTimework.Items.Clear()
+            Dim I As Integer
+            ProgressBar1.Maximum = .Rows.Count
+            ProgressBar1.Value = 0
+            For I = 0 To .Rows.Count - 1
+                Dim dr As DataRow = .Rows(I)
+                Dim Time1 As String = GetNewTime(Format(.Rows(I).Item("DateIn"), "yyyy/MM/dd"), dr("Time1"))
+                Dim Time2 As String = GetNewTime(Format(.Rows(I).Item("DateIn"), "yyyy/MM/dd"), dr("Time2"))
+                Dim Time3 As String = GetNewTime(Format(.Rows(I).Item("DateIn"), "yyyy/MM/dd"), dr("Time3"))
+                Dim Time4 As String = GetNewTime(Format(.Rows(I).Item("DateIn"), "yyyy/MM/dd"), dr("Time4"))
+                Dim Time5 As String = GetNewTime(Format(.Rows(I).Item("DateIn"), "yyyy/MM/dd"), dr("Time5"))
+                Dim Time6 As String = GetNewTime(Format(.Rows(I).Item("DateIn"), "yyyy/MM/dd"), dr("Time6"))
+                Dim Time7 As String = GetNewTime(Format(.Rows(I).Item("DateIn"), "yyyy/MM/dd"), dr("Time7"))
+                Dim Time8 As String = GetNewTime(Format(.Rows(I).Item("DateIn"), "yyyy/MM/dd"), dr("Time8"))
+                Dim Time9 As String = GetNewTime(Format(.Rows(I).Item("DateIn"), "yyyy/MM/dd"), dr("Time9"))
+                Dim Time10 As String = GetNewTime(Format(.Rows(I).Item("DateIn"), "yyyy/MM/dd"), dr("Time10"))
+                Dim Time11 As String = GetNewTime(Format(.Rows(I).Item("DateIn"), "yyyy/MM/dd"), dr("Time11"))
+                Dim Time12 As String = GetNewTime(Format(.Rows(I).Item("DateIn"), "yyyy/MM/dd"), dr("Time12"))
+
+                arrDATA = New String() {I + 1, _
+                                        Format(.Rows(I).Item("DateIn"), "dd/MM/yyyy"), _
+                                        .Rows(I).Item("Code"), _
+                                        .Rows(I).Item("EmpName"), _
+                                        .Rows(I).Item("DeptId"), _
+                                        Time1, _
+                                        Time2, _
+                                        Time3, _
+                                        Time4, _
+                                        Time5, _
+                                        Time6, _
+                                        Time7, _
+                                        Time8, _
+                                        Time9, _
+                                        Time10, _
+                                        Time11, _
+                                        Time12}
+                List = New ListViewItem(arrDATA)
+                lstTimework.Items.Add(List)
+
+                lstTimework.Items(I).UseItemStyleForSubItems = False
+
+
+                If .Rows(I).Item("TimeOver") = True Then
+                    lstTimework.Items(I).ForeColor = Color.Red
+                Else
+                    If .Rows(I).Item("TimeE1") = True Then
+                        lstTimework.Items(I).SubItems(5).ForeColor = Color.Blue
+                    End If
+                    If .Rows(I).Item("TimeE2") = True Then
+                        lstTimework.Items(I).SubItems(6).ForeColor = Color.Blue
+                    End If
+                    If .Rows(I).Item("TimeE3") = True Then
+                        lstTimework.Items(I).SubItems(7).ForeColor = Color.Blue
+                    End If
+                    If .Rows(I).Item("TimeE4") = True Then
+                        lstTimework.Items(I).SubItems(8).ForeColor = Color.Blue
+                    End If
+                    If .Rows(I).Item("TimeE5") = True Then
+                        lstTimework.Items(I).SubItems(9).ForeColor = Color.Blue
+                    End If
+                    If .Rows(I).Item("TimeE6") = True Then
+                        lstTimework.Items(I).SubItems(10).ForeColor = Color.Blue
+                    End If
+                    If .Rows(I).Item("TimeE7") = True Then
+                        lstTimework.Items(I).SubItems(11).ForeColor = Color.Blue
+                    End If
+                    If .Rows(I).Item("TimeE8") = True Then
+                        lstTimework.Items(I).SubItems(12).ForeColor = Color.Blue
+                    End If
+                    If .Rows(I).Item("TimeE9") = True Then
+                        lstTimework.Items(I).SubItems(13).ForeColor = Color.Blue
+                    End If
+                    If .Rows(I).Item("TimeE10") = True Then
+                        lstTimework.Items(I).SubItems(14).ForeColor = Color.Blue
+                    End If
+                    If .Rows(I).Item("TimeE11") = True Then
+                        lstTimework.Items(I).SubItems(15).ForeColor = Color.Blue
+                    End If
+                    If .Rows(I).Item("TimeE12") = True Then
+                        lstTimework.Items(I).SubItems(16).ForeColor = Color.Blue
+                    End If
+                End If
+                ProgressBar1.Value = I + 1
+            Next
+            Ds.Clear()
+        End With
+    End Sub
+
+    Function GetNewTime(ByVal DateIn As String, ByVal Time As String) As String
+        If Time.Trim = "" Then
+            Return ""
+        End If
+
+        Time = Replace(Time, "-", "/")
+
+        Dim dTime As String = LeftText(Time, 10)
+
+        If DateIn > dTime Then
+            Return "<" & RightText(Time, 5)
+        ElseIf DateIn < dTime Then
+            Return RightText(Time, 5) & ">"
+        ElseIf DateIn = dTime Then
+            Return RightText(Time, 5)
+        Else
+            Return ""
+        End If
+    End Function
+
+
+    Private Sub LoadTimeworkSearch()
+
+        Dim Da As New SqlDataAdapter
+        Dim Ds As New DataSet
+        Dim strSQL As String
+        strSQL = "Select Timework.DateIn,Timework.Code," & _
+                     " EmpName = Fname + '   ' + Lname," & _
+                     " DeptId," & _
+                     " Time1 = Isnull(Convert(nVarchar(16),Time1,120),'')," & _
+                     " Time2 = Isnull(Convert(nVarchar(16),Time2,120),'')," & _
+                     " Time3 = Isnull(Convert(nVarchar(16),Time3,120),'')," & _
+                     " Time4 = Isnull(Convert(nVarchar(16),Time4,120),'')," & _
+                     " Time5 = Isnull(Convert(nVarchar(16),Time5,120),'')," & _
+                     " Time6 = Isnull(Convert(nVarchar(16),Time6,120),'')," & _
+                     " Time7 = Isnull(Convert(nVarchar(16),Time7,120),'')," & _
+                     " Time8 = Isnull(Convert(nVarchar(16),Time8,120),'')," & _
+                     " Time9 = Isnull(Convert(nVarchar(16),Time9,120),'')," & _
+                     " Time10 = Isnull(Convert(nVarchar(16),Time10,120),'')," & _
+                     " Time11 = Isnull(Convert(nVarchar(16),Time11,120),'')," & _
+                     " Time12 = Isnull(Convert(nVarchar(16),Time12,120),'')," & _
+                     " TimeE1 = Isnull(TimeE1,0)," & _
+                     " TimeE2 = Isnull(TimeE2,0)," & _
+                     " TimeE3 = Isnull(TimeE3,0)," & _
+                     " TimeE4 = Isnull(TimeE4,0)," & _
+                     " TimeE5 = Isnull(TimeE5,0)," & _
+                     " TimeE6 = Isnull(TimeE6,0)," & _
+                     " TimeE7 = Isnull(TimeE7,0)," & _
+                     " TimeE8 = Isnull(TimeE8,0)," & _
+                     " TimeE9 = Isnull(TimeE9,0)," & _
+                     " TimeE10 = Isnull(TimeE10,0)," & _
+                     " TimeE11 = Isnull(TimeE11,0)," & _
+                     " TimeE12 = Isnull(TimeE12,0)," & _
+                     " TimeOver = Isnull(TimeOver,0)" & _
+                " From TimeWork Inner Join Emp " & _
+                     " On TimeWork.Code = Emp.Code " & _
+                            " Left Join Company_sub cs" & _
+                     " on Emp.CompanyID = cs.CompanyID " & _
+                " Where Convert(nVarchar(10),Timework.DateIn,111) " & _
+                    " Between '" & ConvertDate(txtDateSt.Text.Trim) & "' and " & _
+                            " '" & ConvertDate(txtDateSp.Text.Trim) & "' "
+
+        If cboCompany.SelectedIndex > 0 Then
+            strSQL &= " and isnull(Emp.CompanyId,'') = '" & GetData.GetCompanyId(cboCompany.Text.Trim) & "'"
+        End If
+
+        If cboSite.Text.Trim <> "" Then
+            strSQL &= " and Emp.WorkingPlace = '" & cboSite.Text.Trim & "'"
+        End If
+        If txtCode.Text.Trim <> "" Then
+            strSQL &= " and Timework.Code = '" & txtCode.Text.Trim & "' "
+        End If
+        If txtCode.Text.Trim = "" Then
+            If txtFname.Text.Trim <> "" Then
+                strSQL &= " and Emp.Fname Like '%" & txtFname.Text.Trim & "%'"
+            End If
+            If txtLname.Text.Trim <> "" Then
+                strSQL &= " and Emp.Lname Like '%" & txtLname.Text.Trim & "%'"
+            End If
+        End If
+        If lblDeptId.Text.Trim <> "" Then
+            strSQL &= " and Emp.DeptId = '" & lblDeptId.Text.Trim & "'"
+        End If
+
+        If rdDate.Checked = True Then
+            strSQL &= " Order By Timework.DateIn,Timework.Code"
+        End If
+        If rdCode.Checked = True Then
+            strSQL &= " Order By Timework.Code,Timework.DateIn"
+        End If
+        If rdName.Checked = True Then
+            strSQL &= " Order By Emp.Fname,Emp.Lname,Timework.DateIn"
+        End If
+        If rdDept.Checked = True Then
+            strSQL &= " Order By Emp.DeptId,Timework.DateIn,Timework.Code"
+        End If
+
+
+
+        Da = New SqlDataAdapter(strSQL, Conn)
+        Da.Fill(Ds, "Data")
+
+        Dim List As ListViewItem
+        Dim arrDATA() As String
+
+        With Ds.Tables("Data")
+            lstTimework.Items.Clear()
+            Dim I As Integer
+            ProgressBar1.Maximum = .Rows.Count
+            ProgressBar1.Value = 0
+            For I = 0 To .Rows.Count - 1
+                Dim dr As DataRow = .Rows(I)
+                Dim Time1 As String = GetNewTime(Format(.Rows(I).Item("DateIn"), "yyyy/MM/dd"), dr("Time1"))
+                Dim Time2 As String = GetNewTime(Format(.Rows(I).Item("DateIn"), "yyyy/MM/dd"), dr("Time2"))
+                Dim Time3 As String = GetNewTime(Format(.Rows(I).Item("DateIn"), "yyyy/MM/dd"), dr("Time3"))
+                Dim Time4 As String = GetNewTime(Format(.Rows(I).Item("DateIn"), "yyyy/MM/dd"), dr("Time4"))
+                Dim Time5 As String = GetNewTime(Format(.Rows(I).Item("DateIn"), "yyyy/MM/dd"), dr("Time5"))
+                Dim Time6 As String = GetNewTime(Format(.Rows(I).Item("DateIn"), "yyyy/MM/dd"), dr("Time6"))
+                Dim Time7 As String = GetNewTime(Format(.Rows(I).Item("DateIn"), "yyyy/MM/dd"), dr("Time7"))
+                Dim Time8 As String = GetNewTime(Format(.Rows(I).Item("DateIn"), "yyyy/MM/dd"), dr("Time8"))
+                Dim Time9 As String = GetNewTime(Format(.Rows(I).Item("DateIn"), "yyyy/MM/dd"), dr("Time9"))
+                Dim Time10 As String = GetNewTime(Format(.Rows(I).Item("DateIn"), "yyyy/MM/dd"), dr("Time10"))
+                Dim Time11 As String = GetNewTime(Format(.Rows(I).Item("DateIn"), "yyyy/MM/dd"), dr("Time11"))
+                Dim Time12 As String = GetNewTime(Format(.Rows(I).Item("DateIn"), "yyyy/MM/dd"), dr("Time12"))
+
+                arrDATA = New String() {I + 1, _
+                                        Format(.Rows(I).Item("DateIn"), "dd/MM/yyyy"), _
+                                        .Rows(I).Item("Code"), _
+                                        .Rows(I).Item("EmpName"), _
+                                        .Rows(I).Item("DeptId"), _
+                                        Time1, _
+                                        Time2, _
+                                        Time3, _
+                                        Time4, _
+                                        Time5, _
+                                        Time6, _
+                                        Time7, _
+                                        Time8, _
+                                        Time9, _
+                                        Time10, _
+                                        Time11, _
+                                        Time12}
+                List = New ListViewItem(arrDATA)
+                lstTimework.Items.Add(List)
+
+                lstTimework.Items(I).UseItemStyleForSubItems = False
+
+                If .Rows(I).Item("TimeOver") = True Then
+                    lstTimework.Items(I).ForeColor = Color.Red
+                Else
+                    If .Rows(I).Item("TimeE1") = True Then
+                        lstTimework.Items(I).SubItems(5).ForeColor = Color.Blue
+                    End If
+                    If .Rows(I).Item("TimeE2") = True Then
+                        lstTimework.Items(I).SubItems(6).ForeColor = Color.Blue
+                    End If
+                    If .Rows(I).Item("TimeE3") = True Then
+                        lstTimework.Items(I).SubItems(7).ForeColor = Color.Blue
+                    End If
+                    If .Rows(I).Item("TimeE4") = True Then
+                        lstTimework.Items(I).SubItems(8).ForeColor = Color.Blue
+                    End If
+                    If .Rows(I).Item("TimeE5") = True Then
+                        lstTimework.Items(I).SubItems(9).ForeColor = Color.Blue
+                    End If
+                    If .Rows(I).Item("TimeE6") = True Then
+                        lstTimework.Items(I).SubItems(10).ForeColor = Color.Blue
+                    End If
+                    If .Rows(I).Item("TimeE7") = True Then
+                        lstTimework.Items(I).SubItems(11).ForeColor = Color.Blue
+                    End If
+                    If .Rows(I).Item("TimeE8") = True Then
+                        lstTimework.Items(I).SubItems(12).ForeColor = Color.Blue
+                    End If
+                    If .Rows(I).Item("TimeE9") = True Then
+                        lstTimework.Items(I).SubItems(13).ForeColor = Color.Blue
+                    End If
+                    If .Rows(I).Item("TimeE10") = True Then
+                        lstTimework.Items(I).SubItems(14).ForeColor = Color.Blue
+                    End If
+                    If .Rows(I).Item("TimeE11") = True Then
+                        lstTimework.Items(I).SubItems(15).ForeColor = Color.Blue
+                    End If
+                    If .Rows(I).Item("TimeE12") = True Then
+                        lstTimework.Items(I).SubItems(16).ForeColor = Color.Blue
+                    End If
+                End If
+                ProgressBar1.Value = I + 1
+            Next
+            Ds.Clear()
+        End With
+    End Sub
+
+    Private Sub btnRefresh_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnRefresh.Click
+        Call LoadTimework()
+    End Sub
+
+    Private Sub LoadMonth()
+        Dim I As Integer
+        cboMonth.Items.Clear()
+        For I = 1 To 12
+            cboMonth.Items.Add(MonthNameThai(I))
+        Next
+    End Sub
+
+    Private Sub cboMonth_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cboMonth.SelectedIndexChanged
+        If IsNumeric(txtYear.Text.Trim) = False Then Exit Sub
+        'Dim DateSt As String
+        Dim newMonth As String
+        Dim newYear As String
+        'If cboMonth.SelectedIndex = 0 Then
+        '    newMonth = 12
+        '    newYear = CInt(txtYear.Text) - 1
+        'Else
+        newMonth = Format(cboMonth.SelectedIndex + 1, "00")
+        newYear = txtYear.Text.Trim
+        'End If
+        Dim ar As New ArrayList
+        ar = GetDayMonth(newMonth, newYear)
+        txtDateSt.Text = ConvertDate(ar.Item(0))
+        txtDateSp.Text = ConvertDate(ar.Item(1))
+
+        'DateSt = "01/" & Format(cboMonth.SelectedIndex + 1, "00") & "/" & txtYear.Text.Trim
+        'txtDateSt.Text = DateSt
+        'txtDateSp.Text = Format(MonthEnd(ConvertDate(DateSt)).Day, "00") & Format(cboMonth.SelectedIndex + 1, "00") & "/" & txtYear.Text.Trim
+    End Sub
+
+    Private Sub txtCode_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtCode.LostFocus
+        Dim Da As New SqlDataAdapter
+        Dim Ds As New DataSet
+        Dim strSQL As String
+        strSQL = "Select Code,Fname,Lname From Emp" & _
+                " Where Code = '" & txtCode.Text.Trim & "' "
+
+        If cboCompany.SelectedIndex > 0 Then
+            strSQL &= " and isnull(Emp.CompanyId,'') = '" & GetData.GetCompanyId(cboCompany.Text.Trim) & "'"
+        End If
+
+        Da = New SqlDataAdapter(strSQL, Conn)
+        Da.Fill(Ds, "Data")
+        With Ds.Tables("Data")
+            If .Rows.Count = 0 Then
+                txtCode.Text = ""
+                txtFname.Text = ""
+                txtLname.Text = ""
+                Ds.Clear()
+                Exit Sub
+            Else
+                txtFname.Text = .Rows(0).Item("FName")
+                txtLname.Text = .Rows(0).Item("LName")
+            End If
+            Ds.Clear()
+        End With
+    End Sub
+
+    Private Sub LoadCompany()
+        Dim Da As New SqlDataAdapter
+        Dim Ds As New DataSet
+        Dim strSQL As String
+        strSQL = "Select CompanyName From Company_Sub "
+        Da = New SqlDataAdapter(strSQL, Conn)
+        Da.Fill(Ds, "Data")
+        With Ds.Tables("Data")
+            cboCompany.Items.Clear()
+            cboCompany.Items.Add("ทั้งหมด")
+            Dim I As Integer
+            For I = 0 To .Rows.Count - 1
+                cboCompany.Items.Add(.Rows(I).Item("CompanyName"))
+            Next
+            Ds.Clear()
+            cboCompany.SelectedIndex = 0
+        End With
+    End Sub
+
+    Private Sub LoadSite()
+        Dim Da As New SqlDataAdapter
+        Dim Ds As New DataSet
+        Dim strSQL As String
+        strSQL = "Select Workingplace From Emp " & _
+                " Group By Workingplace" & _
+                " Order By Workingplace"
+        Da = New SqlDataAdapter(strSQL, Conn)
+        Da.Fill(Ds, "Data")
+        With Ds.Tables("Data")
+            cboSite.Items.Clear()
+            cboSite.Items.Add("")
+            Dim I As Integer
+            For I = 0 To .Rows.Count - 1
+                cboSite.Items.Add(.Rows(I).Item("WorkingPlace"))
+            Next
+            Ds.Clear()
+        End With
+    End Sub
+
+    Private Sub LoadDepartment()
+        Dim Da As New SqlDataAdapter
+        Dim Ds As New DataSet
+        Dim strSQL As String
+        strSQL = "Select Department From Department" & _
+                " Order By Department"
+        Da = New SqlDataAdapter(strSQL, Conn)
+        Da.Fill(Ds, "Data")
+        With Ds.Tables("Data")
+            cboDepartment.Items.Clear()
+            cboDepartment.Items.Add("")
+            Dim I As Integer
+            For I = 0 To .Rows.Count - 1
+                cboDepartment.Items.Add(.Rows(I).Item("Department"))
+            Next
+            Ds.Clear()
+        End With
+    End Sub
+
+    Private Sub btnChkErrTimeOdd_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnChkErrTimeOdd.Click
+        Dim Da As New SqlDataAdapter
+        Dim Ds As New DataSet
+        Dim strSQL As String
+
+        strSQL = "Select Timework.DateIn,Timework.Code," & _
+                     " EmpName = Fname + '   ' + Lname," & _
+                     " DeptId," & _
+                     " Time1 = Isnull(Right(Convert(nVarchar(16),Time1,120),5),'')," & _
+                     " Time2 = Isnull(Right(Convert(nVarchar(16),Time2,120),5),'')," & _
+                     " Time3 = Isnull(Right(Convert(nVarchar(16),Time3,120),5),'')," & _
+                     " Time4 = Isnull(Right(Convert(nVarchar(16),Time4,120),5),'')," & _
+                     " Time5 = Isnull(Right(Convert(nVarchar(16),Time5,120),5),'')," & _
+                     " Time6 = Isnull(Right(Convert(nVarchar(16),Time6,120),5),'')," & _
+                     " Time7 = Isnull(Right(Convert(nVarchar(16),Time7,120),5),'')," & _
+                     " Time8 = Isnull(Right(Convert(nVarchar(16),Time8,120),5),'')," & _
+                     " Time9 = Isnull(Right(Convert(nVarchar(16),Time9,120),5),'')," & _
+                     " Time10 = Isnull(Right(Convert(nVarchar(16),Time10,120),5),'')," & _
+                     " Time11 = Isnull(Right(Convert(nVarchar(16),Time11,120),5),'')," & _
+                     " Time12 = Isnull(Right(Convert(nVarchar(16),Time12,120),5),'')," & _
+                     " TimeE1 = Isnull(TimeE1,0)," & _
+                     " TimeE2 = Isnull(TimeE2,0)," & _
+                     " TimeE3 = Isnull(TimeE3,0)," & _
+                     " TimeE4 = Isnull(TimeE4,0)," & _
+                     " TimeE5 = Isnull(TimeE5,0)," & _
+                     " TimeE6 = Isnull(TimeE6,0)," & _
+                     " TimeE7 = Isnull(TimeE7,0)," & _
+                     " TimeE8 = Isnull(TimeE8,0)," & _
+                     " TimeE9 = Isnull(TimeE9,0)," & _
+                     " TimeE10 = Isnull(TimeE10,0)," & _
+                     " TimeE11 = Isnull(TimeE11,0)," & _
+                     " TimeE12 = Isnull(TimeE12,0)," & _
+                     " TimeOver = Isnull(TimeOver,0)" & _
+                " From TimeWork Inner Join Emp " & _
+                     " On TimeWork.Code = Emp.Code " & _
+                " Where Convert(nVarchar(10),Timework.DateIn,111) " & _
+                    " Between '" & ConvertDate(txtDateSt.Text.Trim) & "' and " & _
+                            " '" & ConvertDate(txtDateSp.Text.Trim) & "' and " & _
+                            " ((Time1 Is Not Null and Time2 Is Null) Or " & _
+                            " (Time3 Is Not Null and Time4 Is Null) Or " & _
+                            " (Time5 Is Not Null and Time6 Is Null) Or " & _
+                            " (Time7 Is Not Null and Time8 Is Null) Or " & _
+                            " (Time9 Is Not Null and Time10 Is Null) Or" & _
+                            " (Time11 Is Not Null and Time12 Is Null))"
+
+        If cboCompany.SelectedIndex > 0 Then
+            strSQL &= " and isnull(Emp.CompanyId,'') = '" & GetData.GetCompanyId(cboCompany.Text.Trim) & "'"
+        End If
+
+        If rdDate.Checked = True Then
+            strSQL &= " Order By Timework.DateIn,Timework.Code"
+        End If
+        If rdCode.Checked = True Then
+            strSQL &= " Order By Timework.Code,Timework.DateIn"
+        End If
+        If rdName.Checked = True Then
+            strSQL &= " Order By Emp.Fname,Emp.Lname,Timework.DateIn"
+        End If
+        If rdDept.Checked = True Then
+            strSQL &= " Order By Emp.DeptId,Timework.DateIn,Timework.Code"
+        End If
+        Da = New SqlDataAdapter(strSQL, Conn)
+        Da.Fill(Ds, "Data")
+
+        Dim List As ListViewItem
+        Dim arrDATA() As String
+
+        With Ds.Tables("Data")
+            lstTimework.Items.Clear()
+            Dim I As Integer
+            ProgressBar1.Maximum = .Rows.Count
+            ProgressBar1.Value = 0
+            For I = 0 To .Rows.Count - 1
+                arrDATA = New String() {I + 1, _
+                                        Format(.Rows(I).Item("DateIn"), "dd/MM/yyyy"), _
+                                        .Rows(I).Item("Code"), _
+                                        .Rows(I).Item("EmpName"), _
+                                        .Rows(I).Item("DeptId"), _
+                                        .Rows(I).Item("Time1"), _
+                                        .Rows(I).Item("Time2"), _
+                                        .Rows(I).Item("Time3"), _
+                                        .Rows(I).Item("Time4"), _
+                                        .Rows(I).Item("Time5"), _
+                                        .Rows(I).Item("Time6"), _
+                                        .Rows(I).Item("Time7"), _
+                                        .Rows(I).Item("Time8"), _
+                                        .Rows(I).Item("Time9"), _
+                                        .Rows(I).Item("Time10"), _
+                                        .Rows(I).Item("Time11"), _
+                                        .Rows(I).Item("Time12")}
+                List = New ListViewItem(arrDATA)
+                lstTimework.Items.Add(List)
+
+                lstTimework.Items(I).UseItemStyleForSubItems = False
+
+                If .Rows(I).Item("TimeOver") = True Then
+                    lstTimework.Items(I).ForeColor = Color.Red
+                Else
+                    If .Rows(I).Item("TimeE1") = True Then
+                        lstTimework.Items(I).SubItems(5).ForeColor = Color.Blue
+                    End If
+                    If .Rows(I).Item("TimeE2") = True Then
+                        lstTimework.Items(I).SubItems(6).ForeColor = Color.Blue
+                    End If
+                    If .Rows(I).Item("TimeE3") = True Then
+                        lstTimework.Items(I).SubItems(7).ForeColor = Color.Blue
+                    End If
+                    If .Rows(I).Item("TimeE4") = True Then
+                        lstTimework.Items(I).SubItems(8).ForeColor = Color.Blue
+                    End If
+                    If .Rows(I).Item("TimeE5") = True Then
+                        lstTimework.Items(I).SubItems(9).ForeColor = Color.Blue
+                    End If
+                    If .Rows(I).Item("TimeE6") = True Then
+                        lstTimework.Items(I).SubItems(10).ForeColor = Color.Blue
+                    End If
+                    If .Rows(I).Item("TimeE7") = True Then
+                        lstTimework.Items(I).SubItems(11).ForeColor = Color.Blue
+                    End If
+                    If .Rows(I).Item("TimeE8") = True Then
+                        lstTimework.Items(I).SubItems(12).ForeColor = Color.Blue
+                    End If
+                    If .Rows(I).Item("TimeE9") = True Then
+                        lstTimework.Items(I).SubItems(13).ForeColor = Color.Blue
+                    End If
+                    If .Rows(I).Item("TimeE10") = True Then
+                        lstTimework.Items(I).SubItems(14).ForeColor = Color.Blue
+                    End If
+                    If .Rows(I).Item("TimeE11") = True Then
+                        lstTimework.Items(I).SubItems(15).ForeColor = Color.Blue
+                    End If
+                    If .Rows(I).Item("TimeE12") = True Then
+                        lstTimework.Items(I).SubItems(16).ForeColor = Color.Blue
+                    End If
+                End If
+                ProgressBar1.Value = I + 1
+            Next
+            Ds.Clear()
+        End With
+        lstTimework.Focus()
+    End Sub
+
+    Private Sub btnChkErrTimeOver_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnChkErrTimeOver.Click
+        Dim Da As New SqlDataAdapter
+        Dim Ds As New DataSet
+        Dim strSQL As String
+        If IsNumeric(txtTimeMore.Text.Trim) = False Then
+            txtTimeMore.Text = 4
+        End If
+        If txtTimeMore.Text > 12 Then txtTimeMore.Text = 12
+        If txtTimeMore.Text < 1 Then txtTimeMore.Text = 1
+
+        strSQL = "Select Timework.DateIn,Timework.Code," & _
+                     " EmpName = Fname + '   ' + Lname," & _
+                     " DeptId," & _
+                     " Time1 = Isnull(Right(Convert(nVarchar(16),Time1,120),5),'')," & _
+                     " Time2 = Isnull(Right(Convert(nVarchar(16),Time2,120),5),'')," & _
+                     " Time3 = Isnull(Right(Convert(nVarchar(16),Time3,120),5),'')," & _
+                     " Time4 = Isnull(Right(Convert(nVarchar(16),Time4,120),5),'')," & _
+                     " Time5 = Isnull(Right(Convert(nVarchar(16),Time5,120),5),'')," & _
+                     " Time6 = Isnull(Right(Convert(nVarchar(16),Time6,120),5),'')," & _
+                     " Time7 = Isnull(Right(Convert(nVarchar(16),Time7,120),5),'')," & _
+                     " Time8 = Isnull(Right(Convert(nVarchar(16),Time8,120),5),'')," & _
+                     " Time9 = Isnull(Right(Convert(nVarchar(16),Time9,120),5),'')," & _
+                     " Time10 = Isnull(Right(Convert(nVarchar(16),Time10,120),5),'')," & _
+                     " Time11 = Isnull(Right(Convert(nVarchar(16),Time11,120),5),'')," & _
+                     " Time12 = Isnull(Right(Convert(nVarchar(16),Time12,120),5),'')," & _
+                     " TimeE1 = Isnull(TimeE1,0)," & _
+                     " TimeE2 = Isnull(TimeE2,0)," & _
+                     " TimeE3 = Isnull(TimeE3,0)," & _
+                     " TimeE4 = Isnull(TimeE4,0)," & _
+                     " TimeE5 = Isnull(TimeE5,0)," & _
+                     " TimeE6 = Isnull(TimeE6,0)," & _
+                     " TimeE7 = Isnull(TimeE7,0)," & _
+                     " TimeE8 = Isnull(TimeE8,0)," & _
+                     " TimeE9 = Isnull(TimeE9,0)," & _
+                     " TimeE10 = Isnull(TimeE10,0)," & _
+                     " TimeE11 = Isnull(TimeE11,0)," & _
+                     " TimeE12 = Isnull(TimeE12,0)," & _
+                     " TimeOver = Isnull(TimeOver,0)" & _
+                " From TimeWork Inner Join Emp " & _
+                     " On TimeWork.Code = Emp.Code " & _
+                " Where Convert(nVarchar(10),Timework.DateIn,111) " & _
+                    " Between '" & ConvertDate(txtDateSt.Text.Trim) & "' and " & _
+                            " '" & ConvertDate(txtDateSp.Text.Trim) & "'"
+
+        If cboCompany.SelectedIndex > 0 Then
+            strSQL &= " and isnull(Emp.CompanyId,'') = '" & GetData.GetCompanyId(cboCompany.Text.Trim) & "'"
+        End If
+
+        Dim intMoreTime As Integer
+        intMoreTime = txtTimeMore.Text.Trim
+        If intMoreTime <> 12 Then
+            strSQL &= " and Time" & (intMoreTime + 1).ToString & " is Not Null"
+        Else
+            strSQL &= " and TimeOver = 1"
+        End If
+
+        If rdDate.Checked = True Then
+            strSQL &= " Order By Timework.DateIn,Timework.Code"
+        End If
+        If rdCode.Checked = True Then
+            strSQL &= " Order By Timework.Code,Timework.DateIn"
+        End If
+        If rdName.Checked = True Then
+            strSQL &= " Order By Emp.Fname,Emp.Lname,Timework.DateIn"
+        End If
+        If rdDept.Checked = True Then
+            strSQL &= " Order By Emp.DeptId,Timework.DateIn,Timework.Code"
+        End If
+        Da = New SqlDataAdapter(strSQL, Conn)
+        Da.Fill(Ds, "Data")
+
+        Dim List As ListViewItem
+        Dim arrDATA() As String
+
+        With Ds.Tables("Data")
+            lstTimework.Items.Clear()
+            Dim I As Integer
+            ProgressBar1.Maximum = .Rows.Count
+            ProgressBar1.Value = 0
+            For I = 0 To .Rows.Count - 1
+                arrDATA = New String() {I + 1, _
+                                        Format(.Rows(I).Item("DateIn"), "dd/MM/yyyy"), _
+                                        .Rows(I).Item("Code"), _
+                                        .Rows(I).Item("EmpName"), _
+                                        .Rows(I).Item("DeptId"), _
+                                        .Rows(I).Item("Time1"), _
+                                        .Rows(I).Item("Time2"), _
+                                        .Rows(I).Item("Time3"), _
+                                        .Rows(I).Item("Time4"), _
+                                        .Rows(I).Item("Time5"), _
+                                        .Rows(I).Item("Time6"), _
+                                        .Rows(I).Item("Time7"), _
+                                        .Rows(I).Item("Time8"), _
+                                        .Rows(I).Item("Time9"), _
+                                        .Rows(I).Item("Time10"), _
+                                        .Rows(I).Item("Time11"), _
+                                        .Rows(I).Item("Time12")}
+                List = New ListViewItem(arrDATA)
+                lstTimework.Items.Add(List)
+
+
+                lstTimework.Items(I).UseItemStyleForSubItems = False
+
+                If .Rows(I).Item("TimeOver") = True Then
+                    lstTimework.Items(I).ForeColor = Color.Red
+                Else
+                    If .Rows(I).Item("TimeE1") = True Then
+                        lstTimework.Items(I).SubItems(5).ForeColor = Color.Blue
+                    End If
+                    If .Rows(I).Item("TimeE2") = True Then
+                        lstTimework.Items(I).SubItems(6).ForeColor = Color.Blue
+                    End If
+                    If .Rows(I).Item("TimeE3") = True Then
+                        lstTimework.Items(I).SubItems(7).ForeColor = Color.Blue
+                    End If
+                    If .Rows(I).Item("TimeE4") = True Then
+                        lstTimework.Items(I).SubItems(8).ForeColor = Color.Blue
+                    End If
+                    If .Rows(I).Item("TimeE5") = True Then
+                        lstTimework.Items(I).SubItems(9).ForeColor = Color.Blue
+                    End If
+                    If .Rows(I).Item("TimeE6") = True Then
+                        lstTimework.Items(I).SubItems(10).ForeColor = Color.Blue
+                    End If
+                    If .Rows(I).Item("TimeE7") = True Then
+                        lstTimework.Items(I).SubItems(11).ForeColor = Color.Blue
+                    End If
+                    If .Rows(I).Item("TimeE8") = True Then
+                        lstTimework.Items(I).SubItems(12).ForeColor = Color.Blue
+                    End If
+                    If .Rows(I).Item("TimeE9") = True Then
+                        lstTimework.Items(I).SubItems(13).ForeColor = Color.Blue
+                    End If
+                    If .Rows(I).Item("TimeE10") = True Then
+                        lstTimework.Items(I).SubItems(14).ForeColor = Color.Blue
+                    End If
+                    If .Rows(I).Item("TimeE11") = True Then
+                        lstTimework.Items(I).SubItems(15).ForeColor = Color.Blue
+                    End If
+                    If .Rows(I).Item("TimeE12") = True Then
+                        lstTimework.Items(I).SubItems(16).ForeColor = Color.Blue
+                    End If
+                End If
+                ProgressBar1.Value = I + 1
+            Next
+            Ds.Clear()
+        End With
+        lstTimework.Focus()
+    End Sub
+
+    Private Sub btnChkTimeNear_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnChkTimeNear.Click
+        Dim Da As New SqlDataAdapter
+        Dim Ds As New DataSet
+        Dim strSQL As String
+        Dim intTimeNear As Integer
+        If IsNumeric(txtTimeNear.Text.Trim) = False Then
+            txtTimeMore.Text = 15
+        End If
+        intTimeNear = txtTimeNear.Text
+
+        strSQL = "Select Timework.DateIn,Timework.Code," & _
+                     " EmpName = Fname + '   ' + Lname," & _
+                     " DeptId," & _
+                     " Time1 = Isnull(Right(Convert(nVarchar(16),Time1,120),5),'')," & _
+                     " Time2 = Isnull(Right(Convert(nVarchar(16),Time2,120),5),'')," & _
+                     " Time3 = Isnull(Right(Convert(nVarchar(16),Time3,120),5),'')," & _
+                     " Time4 = Isnull(Right(Convert(nVarchar(16),Time4,120),5),'')," & _
+                     " Time5 = Isnull(Right(Convert(nVarchar(16),Time5,120),5),'')," & _
+                     " Time6 = Isnull(Right(Convert(nVarchar(16),Time6,120),5),'')," & _
+                     " Time7 = Isnull(Right(Convert(nVarchar(16),Time7,120),5),'')," & _
+                     " Time8 = Isnull(Right(Convert(nVarchar(16),Time8,120),5),'')," & _
+                     " Time9 = Isnull(Right(Convert(nVarchar(16),Time9,120),5),'')," & _
+                     " Time10 = Isnull(Right(Convert(nVarchar(16),Time10,120),5),'')," & _
+                     " Time11 = Isnull(Right(Convert(nVarchar(16),Time11,120),5),'')," & _
+                     " Time12 = Isnull(Right(Convert(nVarchar(16),Time12,120),5),'')," & _
+                     " TimeE1 = Isnull(TimeE1,0)," & _
+                     " TimeE2 = Isnull(TimeE2,0)," & _
+                     " TimeE3 = Isnull(TimeE3,0)," & _
+                     " TimeE4 = Isnull(TimeE4,0)," & _
+                     " TimeE5 = Isnull(TimeE5,0)," & _
+                     " TimeE6 = Isnull(TimeE6,0)," & _
+                     " TimeE7 = Isnull(TimeE7,0)," & _
+                     " TimeE8 = Isnull(TimeE8,0)," & _
+                     " TimeE9 = Isnull(TimeE9,0)," & _
+                     " TimeE10 = Isnull(TimeE10,0)," & _
+                     " TimeE11 = Isnull(TimeE11,0)," & _
+                     " TimeE12 = Isnull(TimeE12,0)," & _
+                     " TimeOver = Isnull(TimeOver,0)" & _
+                " From TimeWork Inner Join Emp " & _
+                     " On TimeWork.Code = Emp.Code " & _
+                " Where Convert(nVarchar(10),Timework.DateIn,111) " & _
+                    " Between '" & ConvertDate(txtDateSt.Text.Trim) & "' and " & _
+                            " '" & ConvertDate(txtDateSp.Text.Trim) & "' and " & _
+                            " ((DateDiff(n,Time1,Time2) <= " & intTimeNear & ") Or" & _
+                          " (DateDiff(n,Time2,Time3) <= " & intTimeNear & ") Or " & _
+                          " (DateDiff(n,Time3,Time4) <= " & intTimeNear & ") Or " & _
+                          " (DateDiff(n,Time4,Time5) <= " & intTimeNear & ") Or " & _
+                          " (DateDiff(n,Time5,Time6) <= " & intTimeNear & ") Or " & _
+                            " (DateDiff(n,Time6,Time7) <= " & intTimeNear & ") Or " & _
+                            " (DateDiff(n,Time7,Time8) <= " & intTimeNear & ") Or " & _
+                            " (DateDiff(n,Time8,Time9) <= " & intTimeNear & ") Or " & _
+                            " (DateDiff(n,Time9,Time10) <= " & intTimeNear & ") Or " & _
+                            " (DateDiff(n,Time10,Time11) <= " & intTimeNear & ") Or " & _
+                            " (DateDiff(n,Time11,Time12) <= " & intTimeNear & "))"
+
+        If cboCompany.SelectedIndex > 0 Then
+            strSQL &= " and isnull(Emp.CompanyId,'') = '" & GetData.GetCompanyId(cboCompany.Text.Trim) & "'"
+        End If
+
+        If rdDate.Checked = True Then
+            strSQL &= " Order By Timework.DateIn,Timework.Code"
+        End If
+        If rdCode.Checked = True Then
+            strSQL &= " Order By Timework.Code,Timework.DateIn"
+        End If
+        If rdName.Checked = True Then
+            strSQL &= " Order By Emp.Fname,Emp.Lname,Timework.DateIn"
+        End If
+        If rdDept.Checked = True Then
+            strSQL &= " Order By Emp.DeptId,Timework.DateIn,Timework.Code"
+        End If
+        Da = New SqlDataAdapter(strSQL, Conn)
+        Da.Fill(Ds, "Data")
+
+        Dim List As ListViewItem
+        Dim arrDATA() As String
+
+        With Ds.Tables("Data")
+            lstTimework.Items.Clear()
+            Dim I As Integer
+            ProgressBar1.Maximum = .Rows.Count
+            ProgressBar1.Value = 0
+            For I = 0 To .Rows.Count - 1
+                arrDATA = New String() {I + 1, _
+                                        Format(.Rows(I).Item("DateIn"), "dd/MM/yyyy"), _
+                                        .Rows(I).Item("Code"), _
+                                        .Rows(I).Item("EmpName"), _
+                                        .Rows(I).Item("DeptId"), _
+                                        .Rows(I).Item("Time1"), _
+                                        .Rows(I).Item("Time2"), _
+                                        .Rows(I).Item("Time3"), _
+                                        .Rows(I).Item("Time4"), _
+                                        .Rows(I).Item("Time5"), _
+                                        .Rows(I).Item("Time6"), _
+                                        .Rows(I).Item("Time7"), _
+                                        .Rows(I).Item("Time8"), _
+                                        .Rows(I).Item("Time9"), _
+                                        .Rows(I).Item("Time10"), _
+                                        .Rows(I).Item("Time11"), _
+                                        .Rows(I).Item("Time12")}
+                List = New ListViewItem(arrDATA)
+                lstTimework.Items.Add(List)
+
+                lstTimework.Items(I).UseItemStyleForSubItems = False
+
+                If .Rows(I).Item("TimeOver") = True Then
+                    lstTimework.Items(I).ForeColor = Color.Red
+                Else
+                    If .Rows(I).Item("TimeE1") = True Then
+                        lstTimework.Items(I).SubItems(5).ForeColor = Color.Blue
+                    End If
+                    If .Rows(I).Item("TimeE2") = True Then
+                        lstTimework.Items(I).SubItems(6).ForeColor = Color.Blue
+                    End If
+                    If .Rows(I).Item("TimeE3") = True Then
+                        lstTimework.Items(I).SubItems(7).ForeColor = Color.Blue
+                    End If
+                    If .Rows(I).Item("TimeE4") = True Then
+                        lstTimework.Items(I).SubItems(8).ForeColor = Color.Blue
+                    End If
+                    If .Rows(I).Item("TimeE5") = True Then
+                        lstTimework.Items(I).SubItems(9).ForeColor = Color.Blue
+                    End If
+                    If .Rows(I).Item("TimeE6") = True Then
+                        lstTimework.Items(I).SubItems(10).ForeColor = Color.Blue
+                    End If
+                    If .Rows(I).Item("TimeE7") = True Then
+                        lstTimework.Items(I).SubItems(11).ForeColor = Color.Blue
+                    End If
+                    If .Rows(I).Item("TimeE8") = True Then
+                        lstTimework.Items(I).SubItems(12).ForeColor = Color.Blue
+                    End If
+                    If .Rows(I).Item("TimeE9") = True Then
+                        lstTimework.Items(I).SubItems(13).ForeColor = Color.Blue
+                    End If
+                    If .Rows(I).Item("TimeE10") = True Then
+                        lstTimework.Items(I).SubItems(14).ForeColor = Color.Blue
+                    End If
+                    If .Rows(I).Item("TimeE11") = True Then
+                        lstTimework.Items(I).SubItems(15).ForeColor = Color.Blue
+                    End If
+                    If .Rows(I).Item("TimeE12") = True Then
+                        lstTimework.Items(I).SubItems(16).ForeColor = Color.Blue
+                    End If
+                End If
+                ProgressBar1.Value = I + 1
+            Next
+            Ds.Clear()
+        End With
+        lstTimework.Focus()
+    End Sub
+
+    Private Sub txtCode_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtCode.TextChanged
+
+    End Sub
+
+    Private Sub cboDepartment_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cboDepartment.SelectedIndexChanged
+        Dim Da As New SqlDataAdapter
+        Dim Ds As New DataSet
+        Dim strSQL As String
+        strSQL = "Select DeptId From Department" & _
+                " Where Department = '" & cboDepartment.Text.Trim & "' " & _
+                " Order By Department"
+        Da = New SqlDataAdapter(strSQL, Conn)
+        Da.Fill(Ds, "Data")
+        With Ds.Tables("Data")
+            lblDeptId.Text = ""
+            Dim I As Integer
+            For I = 0 To .Rows.Count - 1
+                lblDeptId.Text = .Rows(I).Item("DeptId")
+            Next
+            Ds.Clear()
+        End With
+    End Sub
+
+    Private Sub btnSearch_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSearch.Click
+        Call LoadTimeworkSearch()
+    End Sub
+
+    Private Sub lstTimework_DoubleClick(ByVal sender As Object, ByVal e As System.EventArgs) Handles lstTimework.DoubleClick
+        With lstTimework
+            If .SelectedItems.Count = 0 Then Exit Sub
+            Dim frm As New frmEditTime
+
+            ' LoadTime
+            frm.txtDate.Text = .SelectedItems(0).SubItems(1).Text
+            frm.txtCode.Text = .SelectedItems(0).SubItems(2).Text
+            Call frm.txtCode_LostFocus(Me, System.EventArgs.Empty)
+            frm.StartPosition = FormStartPosition.CenterScreen
+            frm.ShowDialog()
+            frm.BringToFront()
+        End With
+    End Sub
+
+    Private Sub lstTimework_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles lstTimework.KeyDown
+        If e.KeyCode = Keys.Space Then
+            With lstTimework
+                If .SelectedItems.Count = 0 Then Exit Sub
+                Dim frm As New frmEditTime
+
+                ' LoadTime
+                frm.txtDate.Text = .SelectedItems(0).SubItems(1).Text
+                frm.txtCode.Text = .SelectedItems(0).SubItems(2).Text
+                Call frm.txtCode_LostFocus(Me, System.EventArgs.Empty)
+                frm.StartPosition = FormStartPosition.CenterScreen
+                frm.ShowDialog()
+                frm.BringToFront()
+            End With
+        End If
+    End Sub
+
+    Private Sub lstTimework_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles lstTimework.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub btnAutoGenTimeByPerson_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAutoGenTimeByPerson.Click
+        If txtCode.Text.Trim = "" Or txtFname.Text.Trim = "" Then
+            MsgBox("กรุณาป้อนรหัสพนักงานในช่องค้นหาก่อน", MsgBoxStyle.Information, Me.Text)
+            txtCode.Focus()
+            Exit Sub
+        End If
+        If MsgBox("การบันทึกข้อมูลอัตโนมัติจะทำการเคลียร์ข้อมูลเก่าทิ้งทั้งหมดแล้วเพิ่มเวลาเข้างาน/ออกงาน ให้อัตโนมัติตามวันที่ที่กำหนดไว้ข้างบน" & Chr(10) & _
+                    "คุณต้องการบันทีกเวลาทำงานอันโนมัติหรือไม่", MsgBoxStyle.Information + MsgBoxStyle.YesNo, "บันทึกเวลาอัตโนมัติ") = MsgBoxResult.No Then
+            Exit Sub
+        End If
+
+        btnAutoGenTimeByPerson.Enabled = False
+
+        Dim dCMD As New SqlCommand
+        'Dim Tn As SqlTransaction
+        Dim strSQL As String
+        Dim Code As String
+        Code = txtCode.Text.Trim
+        'Tn = Conn.BeginTransaction
+        'dCMD.Transaction = Tn
+        Try
+
+            Dim DateSt As DateTime
+            Dim DateSp As DateTime
+            Dim DateRun As DateTime
+            DateSt = ConvertDate(txtDateSt.Text.Trim)
+            DateSp = ConvertDate(txtDateSp.Text.Trim)
+            DateRun = DateSt
+            Do Until DateRun > DateSp
+                ' Gen เวลาเข้า ออก อัตโนมัติ
+                strSQL = "Exec spGenTimeINOutByEmp '" & Code.Trim & "','" & Format(DateRun, "yyyy/MM/dd") & "'"
+                dCMD.Connection = Conn
+                dCMD.CommandText = strSQL
+                dCMD.ExecuteNonQuery()
+                DateRun = DateAdd(DateInterval.Day, 1, DateRun)
+            Loop
+            'Tn.Commit()
+        Catch ex As Exception
+            'Tn.Rollback()
+            btnAutoGenTimeByPerson.Enabled = True
+            MsgBox(ex.Message, MsgBoxStyle.Information, "Error..")
+            Exit Sub
+        End Try
+
+        btnAutoGenTimeByPerson.Enabled = True
+        Call GenTimework(Code.Trim, ConvertDate(txtDateSt.Text.Trim), ConvertDate(txtDateSp.Text.Trim))
+        MsgBox("เรียบร้อยแล้ว", MsgBoxStyle.Information, Me.Text)
+
+    End Sub
+
+    Function IsHoliday(ByVal dCmd As SqlCommand, ByVal chkDate As String) As Boolean
+        Dim Da As New SqlDataAdapter
+        Dim Ds As New DataSet
+        Dim strSQL As String
+        strSQL = "Select Hol = dbo.fIsHoliday('" & chkDate.Trim & "')"
+        dCmd.Connection = Conn
+        dCmd.CommandText = strSQL
+        dCmd.ExecuteNonQuery()
+        Da.SelectCommand = dCmd
+        'Da = New SqlDataAdapter(strSQL, Conn)
+        Da.Fill(Ds, "Data")
+        With Ds.Tables("Data")
+            If .Rows(0).Item("Hol") = True Then
+                Return True
+            Else
+                Return False
+            End If
+        End With
+    End Function
+
+    Function LoadTimeSt(ByVal chkDate As String) As String
+        Dim Da As New SqlDataAdapter
+        Dim Ds As New DataSet
+        Dim strSQL As String
+        strSQL = "Select DayStart,DayStop from TimeWorkingtime"
+        Da = New SqlDataAdapter(strSQL, Conn)
+        Da.Fill(Ds, "Data")
+        With Ds.Tables("Data")
+            If .Rows.Count = 0 Then
+                Return chkDate & " 08:00"
+            Else
+                Return chkDate & " " & .Rows(0).Item("DayStart")
+            End If
+        End With
+    End Function
+
+    Function LoadTimeSp(ByVal chkDate As String) As String
+        Dim Da As New SqlDataAdapter
+        Dim Ds As New DataSet
+        Dim strSQL As String
+        strSQL = "Select DayStart,DayStop from TimeWorkingtime"
+        Da = New SqlDataAdapter(strSQL, Conn)
+        Da.Fill(Ds, "Data")
+        With Ds.Tables("Data")
+            If .Rows.Count = 0 Then
+                Return chkDate & " 17:00"
+            Else
+                Return chkDate & " " & .Rows(0).Item("DayStop")
+            End If
+        End With
+    End Function
+
+    Private Sub GenTimework(ByVal Code As String, ByVal strDateSt As String, ByVal strDateSp As String)
+        Dim DateSt As Date
+        Dim DateSp As Date
+
+        DateSt = strDateSt
+        DateSp = strDateSp
+
+        Dim dCmd As New SqlCommand
+        Dim Tn As SqlTransaction
+        Dim strSQL As String
+        Tn = Conn.BeginTransaction
+        dCmd.Transaction = Tn
+        Try
+            Dim I As Date
+            I = DateSt
+
+            strSQL = "Exec SpTimeGenTimeWorkByPerson '" & Code.Trim & "'," & _
+                                        " '" & Format(DateSt, "yyyy/MM/dd") & "'," & _
+                                        " '" & Format(DateSp, "yyyy/MM/dd") & "',1"
+            dCmd.Connection = Conn
+            dCmd.CommandText = strSQL
+            dCmd.ExecuteNonQuery()
+
+            Tn.Commit()
+        Catch ex As Exception
+            Tn.Rollback()
+            MsgBox(ex.Message, MsgBoxStyle.Critical, Me.Text)
+            Exit Sub
+        End Try
+    End Sub
+
+    Private Sub btnAutoFixInOut_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAutoFixInOut.Click
+
+    End Sub
+
+    Private Sub ProgressBar3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+
+    End Sub
+
+    Private Sub ProgressBar1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ProgressBar1.Click
+
+    End Sub
+
+    Private Sub ProgressBar2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ProgressBar2.Click
+
+    End Sub
+
+    Private Sub GroupBox4_Enter(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles GroupBox4.Enter
+
+    End Sub
+
+    Private Sub lblDateProcess_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles lblDateProcess.Click, lblRecord.Click
+
+    End Sub
+
+    Private Sub txtYear_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtYear.LostFocus
+        Call cboMonth_SelectedIndexChanged(Me, System.EventArgs.Empty)
+    End Sub
+
+    Private Sub txtYear_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtYear.TextChanged
+
+    End Sub
+
+
+    Private Sub PrintExcel()
+        System.Threading.Thread.CurrentThread.CurrentCulture = _
+        System.Globalization.CultureInfo.CreateSpecificCulture("en-US")
+
+
+        Dim FileName As String
+        With SaveFileDialog1
+            .Filter = "Excel File |*.XLS"
+            .ShowDialog()
+            FileName = Replace(.FileName.Trim, ".xls", "")
+            If FileName.Trim = "" Then
+                MsgBox("กรุณาป้อนชื่อไฟล์ด้วย", MsgBoxStyle.Information, Me.Text)
+                Exit Sub
+            End If
+        End With
+
+        Dim app As New Excel.Application
+        Dim exbook As Excel.Workbook
+        Dim exsheet As Excel.Worksheet
+
+        exbook = app.Workbooks.Add
+        exsheet = exbook.Sheets(1)
+        Dim xx As Integer = 0
+        Dim yy As Integer = 0
+        exsheet.Range("A1", "FF200").Font.Size = 8
+
+        ' Color
+
+        exsheet.Cells(1, 1).value = "ประมวลเวลาทำงาน"
+        exsheet.Cells(2, 1).value = "ประจำเดือน " & cboMonth.Text.Trim & " " & txtYear.Text.Trim
+        exsheet.Cells(3, 1).value = "ตั้งแต่วันที่ " & txtDateSt.Text.Trim & " - " & txtDateSp.Text.Trim
+
+        'Summary reports T / R year 2011.
+
+        ' Gen Head
+        With lstTimework
+            ' Gen Head
+            For i As Integer = 0 To .Columns.Count - 1
+                exsheet.Cells(5, i + 1).value = .Columns(i).Text.Trim
+                Select Case i
+                    Case 0
+                        CExcel.ExcelSetColumnWidth(exsheet, 5, i + 1, 5)
+                    Case 1
+                        CExcel.ExcelSetColumnWidth(exsheet, 5, i + 1, 10)
+                    Case 2
+                        CExcel.ExcelSetColumnWidth(exsheet, 5, i + 1, 10)
+                    Case 3
+                        CExcel.ExcelSetColumnWidth(exsheet, 5, i + 1, 25)
+                    Case 4
+                        CExcel.ExcelSetColumnWidth(exsheet, 5, i + 1, 10)
+                    Case Else
+                        CExcel.ExcelSetColumnWidth(exsheet, 5, i + 1, 8)
+                End Select
+                CExcel.ExcelBoarder(exsheet, 5, i + 1, 5, i + 1, False)
+                CExcel.GenCenterAlignmentCenter(exsheet, 5, i + 1, 5, i + 1)
+            Next
+            ' Gen Date
+            For r As Integer = 0 To .Items.Count - 1
+                Dim row As Integer = r + 6
+                For c As Integer = 0 To .Columns.Count - 1
+                    Dim col As Integer = c + 1
+                    Dim strText As String = ""
+                    Select Case c
+                        Case 0
+                            CExcel.GenCenterAlignmentCenter(exsheet, row, col, row, col)
+                        Case 1
+                            CExcel.GenCenterAlignmentCenter(exsheet, row, col, row, col)
+                        Case 2
+                            CExcel.GenCenterAlignmentCenter(exsheet, row, col, row, col)
+                            strText = "'"
+                        Case 3
+                            CExcel.GenCenterAlignmentLeft(exsheet, row, col, row, col)
+                        Case 4
+                            CExcel.GenCenterAlignmentCenter(exsheet, row, col, row, col)
+                            strText = "'"
+                        Case Else
+                            CExcel.GenCenterAlignmentCenter(exsheet, row, col, row, col)
+                    End Select
+                    exsheet.Cells(row, col).value = strText & .Items(r).SubItems(c).Text.Trim
+                    CExcel.ExcelBoarder(exsheet, row, col, row, col, False)
+                Next
+            Next
+        End With
+
+
+        ' Save Detail ด้านล่าง
+        exbook.SaveAs(FileName.Trim)
+        app.Visible = True
+
+        exbook = Nothing
+        exsheet = Nothing
+        'app.Quit()
+        'app = Nothing
+
+        '    MsgBox("complete")
+        '    Exit Sub
+    End Sub
+
+    Private Sub btnExporttoExcel_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnExporttoExcel.Click
+        Call PrintExcel()
+    End Sub
+End Class

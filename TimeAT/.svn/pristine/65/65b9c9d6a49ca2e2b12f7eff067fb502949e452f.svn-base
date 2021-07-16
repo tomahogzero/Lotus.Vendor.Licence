@@ -1,0 +1,870 @@
+Imports System.Data
+Imports System.Data.SqlClient
+
+Public Class frmLate
+
+    Private Sub frmLate_Disposed(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Disposed
+        fLate = Nothing
+    End Sub
+
+    Private Sub frmLate_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        Call LoadMonth()
+        txtYear.Text = Date.Now.Year
+        cboMonth.SelectedIndex = Date.Now.Month - 1
+        Call LoadSite()
+        Call LoadDepartment()
+        Call LoadCompany()
+        If ComId = "" Then
+            cboCompany.Enabled = True
+        Else
+            cboCompany.Enabled = False
+            cboCompany.SelectedItem = ComName
+        End If
+
+    End Sub
+
+    Private Sub btnProcess_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnProcess.Click
+        Dim Da As New SqlDataAdapter
+        Dim Ds As New DataSet
+        Dim DateSt As String
+        Dim DateSp As String
+        'Dim arrDATA() As String
+        'Dim List As ListViewItem
+
+        lblStatus.Text = "PROCESS"
+        btnProcess.Text = "Process..."
+        DateSt = ConvertDate(txtDateSt.Text.Trim)
+        DateSp = ConvertDate(txtDateSp.Text.Trim)
+
+        If IsDate(DateSt.Trim) = False Then
+            MsgBox("กรุณาป้อนวันที่ให้ถูกต้องด้วย", MsgBoxStyle.Information, Me.Text)
+            txtDateSt.Focus()
+            Exit Sub
+        End If
+
+        If IsDate(DateSp.Trim) = False Then
+            MsgBox("กรุณาป้อนวันที่ให้ถูกต้องด้วย", MsgBoxStyle.Information, Me.Text)
+            txtDateSp.Focus()
+            Exit Sub
+        End If
+
+
+        ' START
+
+
+        Dim dCmd As New SqlCommand
+   
+        ProgressBar1.Maximum = DateDiff(DateInterval.Day, CDate(DateSt), CDate(DateSp)) + 1
+        ProgressBar1.Value = 0
+        lstOvertime.Items.Clear()
+        Try
+            Dim I As Date
+            I = DateSt
+            Do Until I > DateSp
+                lblDateProcess.Text = Format(I, "dd/MM/yyyy")
+                Application.DoEvents()
+                Call CalLate(Format(I, "yyyy/MM/dd"))
+                I = DateAdd(DateInterval.Day, 1, I)
+                ProgressBar1.Value += 1
+            Loop
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Information, Me.Text)
+            btnProcess.Text = "2. ประมวลผล"
+            btnProcess.Enabled = True
+        End Try
+        'MsgBox("Process Complete", MsgBoxStyle.Information, Me.Text)
+        ' STOP
+        btnProcess.Text = "2. ประมวลผล"
+        btnProcess.Enabled = True
+    End Sub
+
+    Private Sub CalLate(ByVal CalDate As String)
+        Dim Da As New SqlDataAdapter
+        Dim Ds As New DataSet
+        Dim arrDATA() As String
+        Dim List As New ListViewItem
+        Dim strSQL As String
+
+        strSQL = "Select * " & _
+                    " From (" & _
+                         " Select Timework.DateIn,Timework.Code," & _
+                                " EmpName = Emp.Fname + '   ' + Emp.Lname," & _
+                                " Emp.DeptId," & _
+                                " Late = Isnull(dbo.fLate(Timework.Code,Convert(nVarchar(10),Timework.DateIn,111)),0)" & _
+                                " ,LateReal = Isnull(dbo.fLateReal(Timework.Code,Convert(nVarchar(10),Timework.DateIn,111)),0)" & _
+                                " ,LateOut = Isnull(dbo.fLateOut(Timework.Code,Convert(nVarchar(10),Timework.DateIn,111)),0)" & _
+                         " From TimeWork Inner Join Emp On Timework.Code = Emp.Code" & _
+                         " Where Convert(nvarchar(10),Timework.dateIn,111) Between '" & CalDate.Trim & "' and '" & CalDate.Trim & "'" & _
+                         ") as Ot"
+
+        '" ,LateVal = dbo.fLateValcationMorning(Timework.Code,Convert(nVarchar(10),Timework.DateIn,111)," & _
+        ' " Replace(Convert(nVarchar(16),Time1,120),'-','/')," & _
+        ' " Replace(Convert(nVarchar(16),Time2,120),'-','/'))" & _
+
+        '" ,LateRec = dbo.fLateRec(Timework.Code,Convert(nVarchar(10),Timework.DateIn,111)," & _
+        ' " Replace(Convert(nVarchar(16),Time1,120),'-','/')," & _
+        ' " Replace(Convert(nVarchar(16),Time2,120),'-','/'))" & _
+
+        '" ,LateOutVal = dbo.fLateValcationAfternoon(Timework.Code,Convert(nVarchar(10),Timework.DateIn,111)," & _
+        ' " Replace(Convert(nVarchar(16),Time1,120),'-','/')," & _
+        ' " Replace(Convert(nVarchar(16),Time2,120),'-','/'))" & _
+
+        '" ,LateAll = dbo.fLateRecord(Timework.Code,Convert(nVarchar(10),Timework.DateIn,111)," & _
+        '         " Replace(Convert(nVarchar(16),Time1,120),'-','/')," & _
+        '         " Replace(Convert(nVarchar(16),Time2,120),'-','/'))" & _
+        '" ,LateOutAll = dbo.fLateOutRecord(Timework.Code,Convert(nVarchar(10),Timework.DateIn,111)," & _
+        '         " Replace(Convert(nVarchar(16),Time1,120),'-','/')," & _
+        '         " Replace(Convert(nVarchar(16),Time2,120),'-','/'))" & _
+
+        If rdDate.Checked = True Then
+            strSQL &= " Order By Ot.DateIn,Ot.Code"
+        End If
+        If rdCode.Checked = True Then
+            strSQL &= " Order By Ot.Code,Ot.DateIn"
+        End If
+        If rdName.Checked = True Then
+            strSQL &= " Order By Ot.EmpName,Ot.DateIn"
+        End If
+        If rdDept.Checked = True Then
+            strSQL &= " Order By Ot.DeptId,Ot.DateIn,Ot.Code"
+        End If
+
+        btnProcess.Enabled = False
+
+        Da = New SqlDataAdapter(strSQL, Conn)
+        Da.Fill(Ds, "Data")
+        With Ds.Tables("Data")
+            Dim I As Integer
+
+            If .Rows.Count = 0 Then
+                'MsgBox("ไม่พบข้อมูล", MsgBoxStyle.Information, Me.Text)
+                Ds.Clear()
+                Exit Sub
+            End If
+            ProgressBar2.Maximum = .Rows.Count
+            For I = 0 To .Rows.Count - 1
+                Dim LateRec As String = "/"
+                Dim LateReal As Single
+                Dim Late As Single
+                Dim LateOut As Single
+                Dim LateVal As Single
+                Dim LateOutVal As Single
+                ''Dim LateReccord As Single
+                ''Dim LateOutRec As Single
+
+                'If IsDBNull(.Rows(I).Item("LateRec")) = True Then
+                '    LateRec = "/"
+                'Else
+                '    If .Rows(I).Item("LateRec") = True Then
+                '        LateRec = "/"
+                '    Else
+                '        LateRec = ""
+                '    End If
+                'End If
+
+                LateReal = .Rows(I).Item("LateReal")
+                Late = .Rows(I).Item("Late")
+                LateOut = .Rows(I).Item("LateOut")
+                LateVal = 0 ' .Rows(I).Item("LateVal")
+                LateOutVal = 0 ' .Rows(I).Item("LateOutVal")
+
+                ''LateReccord = .Rows(I).Item("LateAll")
+                ''LateOutRec = .Rows(I).Item("LateOutAll")
+
+                'If .Rows(I).Item("Code") = "00001" And Format(.Rows(I).Item("DateIn"), "dd/MM/yyyy") = "18/06/2009" Then
+                '    MsgBox(.Rows(I).Item("Code"), MsgBoxStyle.Information, Me.Text)
+                'End If
+
+                'If Late + LateVal > 0 Then
+                '    Late = 0
+                'Else
+                '    Late = Late + LateVal
+                'End If
+
+                'If LateOut + LateOutVal > 0 Then
+                '    LateOut = 0
+                'Else
+                '    LateOut = LateOut + LateOutVal
+                'End If
+
+                '' คิดทั้งหมด
+
+                'If LateReccord + LateVal > 0 Then
+                '    LateReccord = 0
+                'Else
+                '    LateReccord = LateReccord + LateVal
+                'End If
+
+                'If LateOutRec + LateOutVal > 0 Then
+                '    LateOutRec = 0
+                'Else
+                '    LateOutRec = LateOutRec + LateOutVal
+                'End If
+
+                Dim LateBaht As Single = GetLateBaht(.Rows(I).Item("Code"), Late, Format(.Rows(I).Item("DateIn"), "yyyy/MM/dd"))
+
+                arrDATA = New String() {I + 1, _
+                                        Format(.Rows(I).Item("DateIn"), "dd/MM/yyyy"), _
+                                        .Rows(I).Item("Code"), _
+                                        .Rows(I).Item("EmpName"), _
+                                        .Rows(I).Item("DeptId"), _
+                                        LateReal, _
+                                        Late, _
+                                        LateOut, _
+                                        LateRec.Trim, _
+                                        Late + LateOut, _
+                                        Format(LateBaht, "#,##0.00")}
+                List = New ListViewItem(arrDATA)
+                lstOvertime.Items.Add(List)
+                ProgressBar2.Value = I + 1
+            Next
+            Ds.Clear()
+        End With
+    End Sub
+
+
+    Private Sub LoadData()
+        Dim Da As New SqlDataAdapter
+        Dim Ds As New DataSet
+        Dim strSQL As String
+        Dim DateSt As String
+        Dim DateSp As String
+        Dim arrDATA() As String
+        Dim List As ListViewItem
+
+        DateSt = ConvertDate(txtDateSt.Text.Trim)
+        DateSp = ConvertDate(txtDateSp.Text.Trim)
+        strSQL = "Select * " & _
+                " From (" & _
+                     " Select TimeLate.DateIn,TimeLate.Code," & _
+                            " EmpName = Emp.Fname + '   ' + Emp.Lname," & _
+                            " Emp.DeptId,LateReal,Late,LateOut,LateBaht," & _
+                            " Recording = Isnull(Recording,0), " & _
+                            " TotalLate = Isnull(TotalLate,0) " & _
+                     " From TimeLate Inner Join Emp On TimeLate.Code = Emp.Code" & _
+                     " Where Convert(nvarchar(10),TimeLate.dateIn,111) Between '" & DateSt.Trim & "' and '" & DateSp.Trim & "'" & _
+                     ") as Ot" & _
+                 " Where 1 = 1 "
+        If chkLateOnly.Checked = True Then
+            strSQL &= " and (Ot.LateReal <> 0 or Ot.Late <> 0 Or Ot.LateOut <> 0 Or Ot.TotalLate <> 0)"
+        End If
+
+
+        If rdDate.Checked = True Then
+            strSQL &= " Order By Ot.DateIn,Ot.Code"
+        End If
+        If rdCode.Checked = True Then
+            strSQL &= " Order By Ot.Code,Ot.DateIn"
+        End If
+        If rdName.Checked = True Then
+            strSQL &= " Order By Ot.EmpName,Ot.DateIn"
+        End If
+        If rdDept.Checked = True Then
+            strSQL &= " Order By Ot.DeptId,Ot.DateIn,Ot.Code"
+        End If
+
+        Da = New SqlDataAdapter(strSQL, Conn)
+        Da.Fill(Ds, "Data")
+        With Ds.Tables("Data")
+            Dim I As Integer
+            ProgressBar1.Maximum = .Rows.Count
+            ProgressBar1.Value = 0
+            lstOvertime.Items.Clear()
+            For I = 0 To .Rows.Count - 1
+                Dim LateRec As String
+                If .Rows(I).Item("Recording") = True Then
+                    LateRec = "/"
+                Else
+                    LateRec = ""
+                End If
+                arrDATA = New String() {I + 1, _
+                                        Format(.Rows(I).Item("DateIn"), "dd/MM/yyyy"), _
+                                        .Rows(I).Item("Code"), _
+                                        .Rows(I).Item("EmpName"), _
+                                        .Rows(I).Item("DeptId"), _
+                                        .Rows(I).Item("LateReal"), _
+                                        .Rows(I).Item("Late"), _
+                                        .Rows(I).Item("LateOut"), _
+                                        LateRec.Trim, _
+                                        .Rows(I).Item("Late") + .Rows(I).Item("LateOut"), _
+                                        Format(.Rows(I).Item("LateBaht"), "#,##0.00")}
+                List = New ListViewItem(arrDATA)
+                lstOvertime.Items.Add(List)
+                ProgressBar1.Value = I + 1
+            Next
+        End With
+
+    End Sub
+
+
+    Private Sub LoadDataSearch()
+        Dim Da As New SqlDataAdapter
+        Dim Ds As New DataSet
+        Dim strSQL As String
+        Dim DateSt As String
+        Dim DateSp As String
+        Dim arrDATA() As String
+        Dim List As ListViewItem
+
+        DateSt = ConvertDate(txtDateSt.Text.Trim)
+        DateSp = ConvertDate(txtDateSp.Text.Trim)
+        strSQL = "Select * " & _
+                " From (" & _
+                     " Select TimeLate.DateIn,TimeLate.Code," & _
+                            " EmpName = Emp.Fname + '   ' + Emp.Lname," & _
+                            " Emp.Fname,Emp.Lname," & _
+                            " Emp.Workingplace," & _
+                            " Emp.DeptId,LateReal,Late,LateOut,LateBaht," & _
+                            " Recording = Isnull(Recording,0), " & _
+                            " TotalLate = Isnull(TotalLate,0) ,Emp.CompanyID ," & _
+                            " Companyname = isnull(cs.CompanyName,'') " & _
+                     " From TimeLate Inner Join Emp On TimeLate.Code = Emp.Code" & _
+                                 " Left Join Company_sub cs" & _
+                                        " on Emp.CompanyID = cs.CompanyID "
+
+        If cboCompany.SelectedIndex > 0 Then
+            strSQL &= " Where isnull(Emp.CompanyId,'') = '" & GetData.GetCompanyId(cboCompany.Text.Trim) & "'"
+        End If
+
+        strSQL &= " and Convert(nvarchar(10),TimeLate.dateIn,111) Between '" & DateSt.Trim & "' and '" & DateSp.Trim & "'" & _
+                     ") as Ot" & _
+                 " Where  1 = 1 "
+
+        If chkLateOnly.Checked = True Then
+            strSQL &= " and (Ot.Late <> 0 Or Ot.LateOut <> 0 Or ot.TotalLate <> 0)"
+        End If
+
+        If cboSite.Text.Trim <> "" Then
+            strSQL &= " and Ot.WorkingPlace = '" & cboSite.Text.Trim & "'"
+        End If
+        If txtCode.Text.Trim <> "" Then
+            strSQL &= " and Ot.Code = '" & txtCode.Text.Trim & "' "
+        End If
+        If txtCode.Text.Trim = "" Then
+            If txtFname.Text.Trim <> "" Then
+                strSQL &= " and Ot.Fname Like '%" & txtFname.Text.Trim & "%'"
+            End If
+            If txtLname.Text.Trim <> "" Then
+                strSQL &= " and Ot.Lname Like '%" & txtLname.Text.Trim & "%'"
+            End If
+        End If
+        If lblDeptId.Text.Trim <> "" Then
+            strSQL &= " and Ot.DeptId = '" & lblDeptId.Text.Trim & "'"
+        End If
+
+        If rdDate.Checked = True Then
+            strSQL &= " Order By Ot.DateIn,Ot.Code"
+        End If
+        If rdCode.Checked = True Then
+            strSQL &= " Order By Ot.Code,Ot.DateIn"
+        End If
+        If rdName.Checked = True Then
+            strSQL &= " Order By Ot.EmpName,Ot.DateIn"
+        End If
+        If rdDept.Checked = True Then
+            strSQL &= " Order By Ot.DeptId,Ot.DateIn,Ot.Code"
+        End If
+
+        Da = New SqlDataAdapter(strSQL, Conn)
+        Da.Fill(Ds, "Data")
+        With Ds.Tables("Data")
+            Dim I As Integer
+            ProgressBar1.Maximum = .Rows.Count
+            ProgressBar1.Value = 0
+            lstOvertime.Items.Clear()
+            If .Rows.Count = 0 Then
+                MsgBox("ไม่พบข้อมูล", MsgBoxStyle.Information, Me.Text)
+                Ds.Clear()
+                Exit Sub
+            End If
+            For I = 0 To .Rows.Count - 1
+                Dim LateRec As String
+                If .Rows(I).Item("Recording") = True Then
+                    LateRec = "/"
+                Else
+                    LateRec = ""
+                End If
+                'arrDATA = New String() {I + 1, _
+                '                        Format(.Rows(I).Item("DateIn"), "dd/MM/yyyy"), _
+                '                        .Rows(I).Item("Code"), _
+                '                        .Rows(I).Item("EmpName"), _
+                '                        .Rows(I).Item("DeptId"), _
+                '                        .Rows(I).Item("Late"), _
+                '                        .Rows(I).Item("LateOut"), _
+                '                        LateRec.Trim, _
+                '                        .Rows(I).Item("Late") + .Rows(I).Item("LateOut"), _
+                '                        Format(.Rows(I).Item("LateBaht"), "#,##0.00")}
+                'List = New ListViewItem(arrDATA)
+
+
+                arrDATA = New String() {I + 1, _
+                                       Format(.Rows(I).Item("DateIn"), "dd/MM/yyyy"), _
+                                       .Rows(I).Item("Code"), _
+                                       .Rows(I).Item("EmpName"), _
+                                       .Rows(I).Item("DeptId"), _
+                                       .Rows(I).Item("LateReal"), _
+                                       .Rows(I).Item("Late"), _
+                                       .Rows(I).Item("LateOut"), _
+                                       LateRec.Trim, _
+                                       .Rows(I).Item("Late") + .Rows(I).Item("LateOut"), _
+                                       Format(.Rows(I).Item("LateBaht"), "#,##0.00")}
+                List = New ListViewItem(arrDATA)
+
+                lstOvertime.Items.Add(List)
+                ProgressBar1.Value = I + 1
+            Next
+        End With
+    End Sub
+
+    Private Sub LoadMonth()
+        Dim I As Integer
+        cboMonth.Items.Clear()
+        For I = 1 To 12
+            cboMonth.Items.Add(MonthNameThai(I))
+        Next
+    End Sub
+
+
+    Private Sub LoadSite()
+        Dim Da As New SqlDataAdapter
+        Dim Ds As New DataSet
+        Dim strSQL As String
+        strSQL = "Select Workingplace From Emp " & _
+                " Group By Workingplace" & _
+                " Order By Workingplace"
+        Da = New SqlDataAdapter(strSQL, Conn)
+        Da.Fill(Ds, "Data")
+        With Ds.Tables("Data")
+            cboSite.Items.Clear()
+            cboSite.Items.Add("")
+            Dim I As Integer
+            For I = 0 To .Rows.Count - 1
+                cboSite.Items.Add(.Rows(I).Item("WorkingPlace"))
+            Next
+            Ds.Clear()
+        End With
+    End Sub
+
+    Private Sub LoadDepartment()
+        Dim Da As New SqlDataAdapter
+        Dim Ds As New DataSet
+        Dim strSQL As String
+        strSQL = "Select Department From Department" & _
+                " Order By Department"
+        Da = New SqlDataAdapter(strSQL, Conn)
+        Da.Fill(Ds, "Data")
+        With Ds.Tables("Data")
+            cboDepartment.Items.Clear()
+            cboDepartment.Items.Add("")
+            Dim I As Integer
+            For I = 0 To .Rows.Count - 1
+                cboDepartment.Items.Add(.Rows(I).Item("Department"))
+            Next
+            Ds.Clear()
+        End With
+    End Sub
+
+    Private Sub cboMonth_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cboMonth.SelectedIndexChanged
+        If IsNumeric(txtYear.Text.Trim) = False Then Exit Sub
+        Dim newMonth As String
+        Dim newYear As String
+        newMonth = Format(cboMonth.SelectedIndex + 1, "00")
+        newYear = txtYear.Text.Trim
+        Dim ar As New ArrayList
+        ar = GetDayMonth(newMonth, newYear)
+        txtDateSt.Text = ConvertDate(ar.Item(0))
+        txtDateSp.Text = ConvertDate(ar.Item(1))
+
+        txtMonthYear.Text = Format(cboMonth.SelectedIndex + 1, "00") & "/" & txtYear.Text.Trim
+
+        'Dim DateSt As String
+        'Dim newMonth As Integer
+        'Dim newYear As String
+        'If cboMonth.SelectedIndex = 0 Then
+        '    newMonth = 12
+        '    newYear = CInt(txtYear.Text) - 1
+        'Else
+        '    newMonth = cboMonth.SelectedIndex
+        '    newYear = txtYear.Text.Trim
+        'End If
+        'DateSt = "01/" & Format(cboMonth.SelectedIndex + 1, "00") & "/" & txtYear.Text.Trim
+        'txtDateSt.Text = DateSt
+        'txtDateSp.Text = Format(MonthEnd(ConvertDate(DateSt)).Day, "00") & Format(cboMonth.SelectedIndex + 1, "00") & "/" & txtYear.Text.Trim
+        'txtMonthYear.Text = Format(cboMonth.SelectedIndex + 1, "00") & "/" & txtYear.Text.Trim
+    End Sub
+
+    Private Sub btnExit_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnExit.Click
+        Me.Close()
+    End Sub
+
+    Private Sub btnSave_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSave.Click
+        Dim Dcmd As New SqlCommand
+        Dim strSQL As String
+
+        With lstOvertime
+            If .Items.Count = 0 Then
+                MsgBox("ไม่มีข้อมูลที่จะบันทึก", MsgBoxStyle.Information, Me.Text)
+                Exit Sub
+            End If
+            If IsDate(ConvertDate("01/" & txtMonthYear.Text.Trim)) = False Then
+                MsgBox("กรุณาระบุเดือนที่ต้องการจ่ายให้ถูกต้องด้วย", MsgBoxStyle.Information, Me.Text)
+                txtMonthYear.Focus()
+                txtMonthYear.SelectAll()
+                Exit Sub
+            End If
+
+            Dim DateSt As String
+            Dim DateSp As String
+            Dim newMonth As Integer
+            Dim newYear As String
+            If Mid(txtMonthYear.Text.Trim, 1, 2) = "01" Then
+                newMonth = 12
+                newYear = CInt(Mid(txtMonthYear.Text.Trim, 4, 4)) - 1
+            Else
+                newMonth = CInt(Mid(txtMonthYear.Text.Trim, 1, 2)) - 1
+                newYear = Mid(txtMonthYear.Text.Trim, 4, 4)
+            End If
+            'DateSt = ConvertDate("11/" & Format(newMonth, "00") & "/" & newYear)
+            DateSt = "01/" & Format(cboMonth.SelectedIndex + 1, "00") & "/" & txtYear.Text.Trim
+            DateSp = Format(MonthEnd(ConvertDate(DateSt)).Day, "00") & Format(cboMonth.SelectedIndex + 1, "00") & "/" & txtYear.Text.Trim
+
+
+            'DateSt = ConvertDate("04/" & Format(newMonth, "00") & "/" & newYear)
+            'DateSp = ConvertDate("10/" & Mid(txtMonthYear.Text.Trim, 1, 2) & "/" & Mid(txtMonthYear.Text.Trim, 4, 4))
+
+            If ConvertDate(txtDateSt.Text.Trim) < DateSt Then
+                MsgBox("วันที่ที่ป้อนอยู่นอกรอบเดือน " & txtMonthYear.Text.Trim & "กรุณาป้อนใหม่ วันที่เริ่ม ไม่ควรน้อยกว่าวันที่ 11 ของเดือนก่อนหน้า", MsgBoxStyle.Information, Me.Text)
+                txtDateSt.Focus()
+                Exit Sub
+            End If
+
+            If ConvertDate(txtDateSp.Text.Trim) > DateSp Then
+                MsgBox("วันที่ที่ป้อนอยู่นอกรอบเดือน " & txtMonthYear.Text.Trim & "กรุณาป้อนใหม่ วันที่สิ้นสุด ไม่ควรเกินกว่าวันที่ 10 ของเดือนที่เลือก", MsgBoxStyle.Information, Me.Text)
+                txtDateSp.Focus()
+                Exit Sub
+            End If
+
+
+            Dim I As Integer
+            ProgressBar1.Maximum = .Items.Count
+            ProgressBar1.Value = 0
+
+            Select Case lblStatus.Text.Trim.ToUpper
+                Case "PROCESS", "REFRESH"
+                    strSQL = "Delete From TimeLate" & _
+                            " Where DateIn Between '" & ConvertDate(txtDateSt.Text.Trim) & "' and " & _
+                                            " '" & ConvertDate(txtDateSp.Text.Trim) & "' and   " & _
+                                    " Code In (Select Code From Emp "
+                    If cboCompany.SelectedIndex > 0 Then
+                        strSQL &= " Where isnull(Emp.CompanyId,'') = '" & GetData.GetCompanyId(cboCompany.Text.Trim) & "'"
+                    End If
+                    strSQL &= ")"
+
+
+                    Dcmd.Connection = Conn
+                    Dcmd.CommandText = strSQL
+                    Dcmd.ExecuteNonQuery()
+            End Select
+
+            For I = 0 To .Items.Count - 1
+
+                Select Case lblStatus.Text.Trim.ToUpper
+                    Case "SEARCH"
+                        strSQL = "Delete From TimeLate" & _
+                            " Where Code = '" & .Items(I).SubItems(2).Text.Trim & "' and " & _
+                                    " DateIn = '" & ConvertDate(.Items(I).SubItems(1).Text.Trim) & "' and " & _
+                                    " Code In (Select Code From Emp "
+                        If cboCompany.SelectedIndex > 0 Then
+                            strSQL &= " Where isnull(Emp.CompanyId,'') = '" & GetData.GetCompanyId(cboCompany.Text.Trim) & "'"
+                        End If
+                        strSQL &= ")"
+
+
+                        Dcmd.Connection = Conn
+                        Dcmd.CommandText = strSQL
+                        Dcmd.ExecuteNonQuery()
+                End Select
+
+                strSQL = "Insert Into TimeLate(Month_year,Code,DateIn,LateReal,Late,LateOut,Recording,Approve,TotalLate,LateBaht) Values(" & _
+                        " '" & txtMonthYear.Text.Trim & "','" & .Items(I).SubItems(2).Text.Trim & "'," & _
+                        " '" & ConvertDate(.Items(I).SubItems(1).Text.Trim) & "'," & _
+                        " " & .Items(I).SubItems(5).Text.Trim & "," & _
+                        " " & .Items(I).SubItems(6).Text.Trim & "," & _
+                        " " & .Items(I).SubItems(7).Text.Trim & "," & _
+                        " " & IIf(.Items(I).SubItems(8).Text.Trim = "/", 1, 0) & ",0," & _
+                        " " & .Items(I).SubItems(9).Text.Trim & "," & _
+                        " " & CSng(.Items(I).SubItems(10).Text.Trim) & ")"
+                Dcmd.Connection = Conn
+                Dcmd.CommandText = strSQL
+                Dcmd.ExecuteNonQuery()
+                ProgressBar1.Value = I + 1
+            Next
+        End With
+        MsgBox("บันทึกข้อมูลสำเร็จแล้ว", MsgBoxStyle.Information, Me.Text)
+    End Sub
+
+    Private Sub btnReport_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnReport.Click
+        ReportPrint = Report.PrintOTSheet
+        Dim Rpt As New frmViewReport
+        Rpt.ShowDialog()
+    End Sub
+
+    Private Sub lstOvertime_DoubleClick(ByVal sender As Object, ByVal e As System.EventArgs) Handles lstOvertime.DoubleClick
+        With lstOvertime
+            If .SelectedItems.Count = 0 Then Exit Sub
+            Dim frm As New frmEditTime
+
+            ' LoadTime
+            frm.txtDate.Text = .SelectedItems(0).SubItems(1).Text
+            frm.txtCode.Text = .SelectedItems(0).SubItems(2).Text
+            Call frm.txtCode_LostFocus(Me, System.EventArgs.Empty)
+            frm.StartPosition = FormStartPosition.CenterScreen
+            frm.ShowDialog()
+            frm.BringToFront()
+        End With
+    End Sub
+
+    Public Sub txtCode_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtCode.LostFocus
+        Dim Da As New SqlDataAdapter
+        Dim Ds As New DataSet
+        Dim strSQL As String
+
+        strSQL = "Select Code,Fname,Lname,WorkStatus From Emp" & _
+                " Where Code = '" & txtCode.Text.Trim & "' "
+
+        If cboCompany.SelectedIndex > 0 Then
+            strSQL &= " and isnull(Emp.CompanyId,'') = '" & GetData.GetCompanyId(cboCompany.Text.Trim) & "'"
+        End If
+
+        Da = New SqlDataAdapter(strSQL, Conn)
+        Da.Fill(Ds, "Data")
+        With Ds.Tables("Data")
+            If .Rows.Count = 0 Then
+                txtCode.Text = ""
+                txtFname.Text = ""
+                txtLname.Text = ""
+                Ds.Clear()
+                Exit Sub
+            Else
+                txtFname.Text = .Rows(0).Item("FName")
+                txtLname.Text = .Rows(0).Item("LName")
+
+                If .Rows(0).Item("WorkStatus").ToString.Trim = "W" Then
+                    lblEmpStatus.Text = ""
+                Else
+                    lblEmpStatus.Text = "ลาออกแล้ว"
+                    lblEmpStatus.ForeColor = Color.Red
+                End If
+            End If
+            Ds.Clear()
+        End With
+    End Sub
+
+    Private Sub txtCode_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtCode.TextChanged
+
+    End Sub
+
+    Private Sub btnRefresh_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnRefresh.Click
+
+        lblStatus.Text = "REFRESH"
+
+        Call LoadData()
+
+        txtDate.Text = "__/__/____"
+        txtCodeEdit.Text = ""
+        txtNameEdit.Text = ""
+        txtLate.Text = ""
+        txtLateOut.Text = ""
+        btnEditOT.Enabled = False
+    End Sub
+
+    Public Sub btnSearch_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSearch.Click
+        lblStatus.Text = "SEARCH"
+        Call LoadDataSearch()
+    End Sub
+
+    Private Sub cboDepartment_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cboDepartment.SelectedIndexChanged, cboCompany.SelectedIndexChanged
+        Dim Da As New SqlDataAdapter
+        Dim Ds As New DataSet
+        Dim strSQL As String
+        strSQL = "Select DeptId From Department" & _
+                " Where Department = '" & cboDepartment.Text.Trim & "' " & _
+                " Order By Department"
+        Da = New SqlDataAdapter(strSQL, Conn)
+        Da.Fill(Ds, "Data")
+        With Ds.Tables("Data")
+            lblDeptId.Text = ""
+            Dim I As Integer
+            For I = 0 To .Rows.Count - 1
+                lblDeptId.Text = .Rows(I).Item("DeptId")
+            Next
+            Ds.Clear()
+        End With
+    End Sub
+
+    Private Sub txtCodeEdit_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtCodeEdit.LostFocus
+        Dim Da As New SqlDataAdapter
+        Dim Ds As New DataSet
+        Dim strSQL As String
+
+        strSQL = "Select Code,EmpName = Fname + '   ' + Lname From Emp" & _
+                " Where Code = '" & txtCodeEdit.Text.Trim & "' "
+
+        If cboCompany.SelectedIndex > 0 Then
+            strSQL &= " and isnull(Emp.CompanyId,'') = '" & GetData.GetCompanyId(cboCompany.Text.Trim) & "'"
+        End If
+
+        Da = New SqlDataAdapter(strSQL, Conn)
+        Da.Fill(Ds, "Data")
+        With Ds.Tables("Data")
+            If .Rows.Count = 0 Then
+                txtCodeEdit.Text = ""
+                txtNameEdit.Text = ""
+                Ds.Clear()
+                Exit Sub
+            Else
+                txtNameEdit.Text = .Rows(0).Item("EmpName")
+            End If
+            Ds.Clear()
+        End With
+    End Sub
+
+    Private Sub txtCodeEdit_MaskInputRejected(ByVal sender As System.Object, ByVal e As System.Windows.Forms.MaskInputRejectedEventArgs) Handles txtCodeEdit.MaskInputRejected
+
+    End Sub
+
+    Private Sub lstOvertime_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles lstOvertime.SelectedIndexChanged
+        With lstOvertime
+            If .SelectedItems.Count = 0 Then Exit Sub
+            txtDate.Text = .SelectedItems(0).SubItems(1).Text.Trim
+            txtCodeEdit.Text = .SelectedItems(0).SubItems(2).Text.Trim
+            Call txtCodeEdit_LostFocus(Me, System.EventArgs.Empty)
+            txtLate.Text = .SelectedItems(0).SubItems(6).Text.Trim
+            txtLateOut.Text = .SelectedItems(0).SubItems(7).Text.Trim
+            lblRow.Text = .Items.IndexOf(.SelectedItems(0)).ToString
+            btnEditOT.Enabled = True
+        End With
+    End Sub
+
+    Private Sub btnEditOT_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnEditOT.Click
+        If lblRow.Text = "" Then Exit Sub
+        With lstOvertime
+            If IsNumeric(txtLate.Text.Trim) = False Then
+                MsgBox("กรุณาป้อนตัวเลขให้ถูกต้องด้วย", MsgBoxStyle.Information, Me.Text)
+                txtLate.Focus()
+                txtLate.SelectAll()
+                Exit Sub
+            End If
+            If IsNumeric(txtLateOut.Text.Trim) = False Then
+                MsgBox("กรุณาป้อนตัวเลขให้ถูกต้องด้วย", MsgBoxStyle.Information, Me.Text)
+                txtLateOut.Focus()
+                txtLateOut.SelectAll()
+                Exit Sub
+            End If
+
+
+            lstOvertime.Items(CInt(lblRow.Text)).SubItems(6).Text = txtLate.Text
+            lstOvertime.Items(CInt(lblRow.Text)).SubItems(7).Text = txtLateOut.Text
+
+            txtDate.Text = "__/__/____"
+            txtCodeEdit.Text = ""
+            txtNameEdit.Text = ""
+            txtLate.Text = ""
+            txtLateOut.Text = ""
+            btnEditOT.Enabled = False
+        End With
+    End Sub
+
+    Private Sub btnClearOTAll_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnClearOTAll.Click
+        With lstOvertime
+            Dim I As Integer
+            For I = 0 To .Items.Count - 1
+                .Items(I).SubItems(5).Text = "0"
+                .Items(I).SubItems(6).Text = "0"
+            Next
+        End With
+    End Sub
+
+    Private Sub cboSite_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cboSite.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub btnClearData_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnClearData.Click
+        Dim dCMD As New SqlCommand
+        Dim strSQL As String
+        If MsgBox("คุณต้องการลบข้อมูลสายทั้งหมดหรือไม่", MsgBoxStyle.Information + MsgBoxStyle.YesNo, Me.Text) = MsgBoxResult.No Then Exit Sub
+        Try
+            strSQL = "Delete From TimeLate Where Month_year = '" & txtMonthYear.Text.Trim & "'"
+            dCMD.Connection = Conn
+            dCMD.CommandText = strSQL
+            dCMD.ExecuteNonQuery()
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Information, Me.Text)
+            Exit Sub
+        End Try
+        MsgBox("ลบข้อมูลเรียบร้อยแล้ว", MsgBoxStyle.Information, Me.Text)
+        lstOvertime.Items.Clear()
+    End Sub
+
+    Private Sub mnuVacation_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles mnuVacation.Click
+        With lstOvertime
+            If .SelectedItems.Count = 0 Then Exit Sub
+            If fVacation Is Nothing Then
+                fVacation = New frmVacation
+
+                fVacation.txtCode.Text = .SelectedItems(0).SubItems(2).Text.Trim
+                Call fVacation.txtCode_LostFocus(Me, System.EventArgs.Empty)
+                fVacation.txtDate.Text = .SelectedItems(0).SubItems(1).Text.Trim
+                fVacation.cboWorkingStatus.Focus()
+
+                fVacation.Show()
+                fVacation.BringToFront()
+            Else
+
+                fVacation.txtCode.Text = .SelectedItems(0).SubItems(2).Text.Trim
+                Call fVacation.txtCode_LostFocus(Me, System.EventArgs.Empty)
+                fVacation.txtDate.Text = .SelectedItems(0).SubItems(1).Text.Trim
+                fVacation.cboWorkingStatus.Focus()
+
+                fVacation.Show()
+                fVacation.BringToFront()
+            End If
+        End With
+    End Sub
+
+    Function GetLateBaht(ByVal Code As String, ByVal Late As String, ByVal DateIn As String) As Single
+        Dim Da As New SqlDataAdapter
+        Dim Ds As New DataSet
+        Dim strSQL As String
+        strSQL = "Select Baht= dbo.fCalLateBaht('" & Code.Trim & "'," & Late & ",'" & DateIn.Trim & "')"
+        Da = New SqlDataAdapter(strSQL, Conn)
+        Da.Fill(Ds, "data")
+        With Ds.Tables("data")
+            If .Rows.Count = 0 Then
+                Return 0
+            Else
+                Return .Rows(0).Item("Baht")
+            End If
+        End With
+    End Function
+    Private Sub LoadCompany()
+        Dim Da As New SqlDataAdapter
+        Dim Ds As New DataSet
+        Dim strSQL As String
+        strSQL = "Select CompanyName From Company_Sub "
+        Da = New SqlDataAdapter(strSQL, Conn)
+        Da.Fill(Ds, "Data")
+        With Ds.Tables("Data")
+            cboCompany.Items.Clear()
+            cboCompany.Items.Add("ทั้งหมด")
+            Dim I As Integer
+            For I = 0 To .Rows.Count - 1
+                cboCompany.Items.Add(.Rows(I).Item("CompanyName"))
+            Next
+            Ds.Clear()
+            cboCompany.SelectedIndex = 0
+        End With
+    End Sub
+
+
+End Class

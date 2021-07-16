@@ -1,0 +1,463 @@
+Imports System.Data
+Imports System.Data.SqlClient
+
+Public Class frmRptTimeTableByMonth
+    Private Sub frmRptTimeTableByMonth_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        Call LoadMonth()
+        txtYear.Text = Date.Now.Year
+        cboMonth.SelectedIndex = Date.Now.Month - 1
+
+        Call SearchData.LoadCompany(cboCompany, True)
+        Call SearchData.LoadDivision(cboDivision, True, "")
+        Call SearchData.LoadDepartment(cboDepartment, True, "")
+        Call SearchData.LoadSection(cboSection, True, "")
+        Call SearchData.LoadPosition(cboPosition, True, "")
+        Call SearchData.LoadEmpGroup(cboEmpGroup, True, "")
+        Call SearchData.LoadBroker(cboBroker, True, "")
+    End Sub
+
+    Private Sub LoadMonth()
+        Dim I As Integer
+        cboMonth.Items.Clear()
+        For I = 1 To 12
+            cboMonth.Items.Add(MonthNameThaiLang(I))
+        Next
+    End Sub
+
+    Private Sub cboMonth_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cboMonth.SelectedIndexChanged
+        If IsNumeric(txtYear.Text.Trim) = False Then Exit Sub
+        Dim newMonth As String
+        Dim newYear As String
+
+        newMonth = Format(cboMonth.SelectedIndex + 1, "00")
+        newYear = txtYear.Text.Trim
+
+        Dim ar As New ArrayList
+        ar = GetDayMonth(newMonth, newYear)
+        txtDateSt.Text = ConvertDate(ar.Item(0))
+        txtDateSp.Text = ConvertDate(ar.Item(1))
+    End Sub
+
+
+
+    Private Sub btnExit_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnExit.Click
+        Me.Close()
+    End Sub
+
+    Private Sub btnReport_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnReport.Click
+        If IsDate(ConvertDate(txtDateSt.Text.Trim)) = False Then
+            MsgBox("กรุณาป้อนวันที่ให้ถูกต้องด้วย", MsgBoxStyle.Information, Me.Text)
+            Exit Sub
+        End If
+        If IsDate(ConvertDate(txtDateSp.Text.Trim)) = False Then
+            MsgBox("กรุณาป้อนวันที่ให้ถูกต้องด้วย", MsgBoxStyle.Information, Me.Text)
+            Exit Sub
+        End If
+        Call GenTimeTableStdStatus(ConvertDate(txtDateSt.Text.Trim), ConvertDate(txtDateSp.Text.Trim))
+
+        ReportPrint = Report.PrintTimeTableByMonth
+        Dim Rpt As New frmViewReport
+        Rpt.ShowDialog()
+    End Sub
+
+    'Private Sub LoadSite()
+    '    Dim Da As New SqlDataAdapter
+    '    Dim Ds As New DataSet
+    '    Dim strSQL As String
+    '    strSQL = "Select Workingplace From Emp " & _
+    '            " Group By Workingplace" & _
+    '            " Order By Workingplace"
+    '    Da = New SqlDataAdapter(strSQL, Conn)
+    '    Da.Fill(Ds, "Data")
+    '    With Ds.Tables("Data")
+    '        cboSite.Items.Clear()
+    '        cboSite.Items.Add("")
+    '        Dim I As Integer
+    '        For I = 0 To .Rows.Count - 1
+    '            cboSite.Items.Add(.Rows(I).Item("WorkingPlace"))
+    '        Next
+    '        Ds.Clear()
+    '    End With
+    '  End Sub
+
+    Private Sub GenTimeTableStdStatus(ByVal DateST As String, ByVal DateSP As String)
+        Dim dCmd As New SqlCommand
+        Dim strSQL As String
+        Dim DateRun As String
+        ' ClearData
+        strSQL = "Delete From RPT_TimeTableByMonthAllEmp"
+        dCmd.Connection = Conn
+        dCmd.CommandText = strSQL
+        dCmd.ExecuteNonQuery()
+
+        strSQL = "Delete From RPT_TimeTableByMonth_Head"
+        dCmd.Connection = Conn
+        dCmd.CommandText = strSQL
+        dCmd.ExecuteNonQuery()
+
+        ' เตรียม Head
+        strSQL = "Insert Into RPT_TimeTableByMonth_Head(H1) Values('')"
+        dCmd.Connection = Conn
+        dCmd.CommandText = strSQL
+        dCmd.ExecuteNonQuery()
+
+        ' Create Head
+
+        Call CreateHead(DateST, DateSP)
+
+        ' GetEmp
+        Dim DsStd As DataSet = GetDsEmp()
+        Dim I As Integer = 0
+        ProgressBar1.Maximum = DsStd.Tables("data").Rows.Count
+        ProgressBar1.Value = 0
+        ProgressBar1.Text = ProgressBar1.Value & "/" & ProgressBar1.Maximum
+        For Each dr As DataRow In DsStd.Tables("data").Rows
+            I += 1
+            ' เตรียม Detail By Std
+            strSQL = "Insert Into RPT_TimeTableByMonthAllEmp(Code) Values('" & dr("Code") & "')"
+            dCmd.Connection = Conn
+            dCmd.CommandText = strSQL
+            dCmd.ExecuteNonQuery()
+
+            Dim DayRun As Integer = 0
+            DateRun = DateST
+            Do Until DateRun > DateSP
+                DayRun += 1
+                ' Update Detail
+                strSQL = "Update RPT_TimeTableByMonthAllEmp " & _
+                                " Set D" & DayRun & "='" & GetStdStatus(dr("Code"), DateRun) & "'" & _
+                        " Where Code = '" & dr("Code") & "'"
+                dCmd.Connection = Conn
+                dCmd.CommandText = strSQL
+                dCmd.ExecuteNonQuery()
+
+                DateRun = Format(DateAdd(DateInterval.Day, 1, CDate(DateRun)), "yyyy/MM/dd")
+            Loop
+
+            ' Update Sumary Come,Absent
+            strSQL = "Update RPT_TimeTableByMonthAllEmp " & _
+                            " Set Come = " & GetStdCome(dr("Code")) & "," & _
+                                " Abs = " & GetStdAbsent(dr("Code")) & " " & _
+                    " Where Code = '" & dr("Code") & "'"
+            dCmd.Connection = Conn
+            dCmd.CommandText = strSQL
+            dCmd.ExecuteNonQuery()
+
+            ProgressBar1.Value = I
+            ProgressBar1.Text = ProgressBar1.Value & "/" & ProgressBar1.Maximum
+        Next
+    End Sub
+
+    Private Sub CreateHead(ByVal DateST As String, ByVal DateSP As String)
+        ' Create Head
+        Dim dCmd As New SqlCommand
+        Dim DateRun As String
+        Dim DayRun As Integer = 0
+        DateRun = DateST
+        Do Until DateRun > DateSP
+            DayRun += 1
+            ' GetHead
+            StrSql = "Update RPT_TimeTableByMonth_Head " & _
+                            " Set H" & DayRun & "='" & CDate(DateRun).Day & "'"
+            dCmd.Connection = Conn
+            dCmd.CommandText = StrSql
+            dCmd.ExecuteNonQuery()
+            DateRun = Format(DateAdd(DateInterval.Day, 1, CDate(DateRun)), "yyyy/MM/dd")
+        Loop
+    End Sub
+
+    Function GetDsEmp() As DataSet
+        Dim Da As New SqlDataAdapter
+        Dim Ds As New DataSet
+        Dim strSQL As String
+        strSQL = "Select Code " & _
+                    " From Emp " & _
+                    " Where WorkStatus = 'W' "
+
+
+        If cboCompany.SelectedIndex > 0 Then
+            strSQL &= " and isnull(Emp.CompanyId,'') = '" & GetData.GetCompanyId(cboCompany.Text.Trim) & "'"
+        End If
+
+        If cboDivision.SelectedIndex > 0 Then
+            strSQL &= " and Isnull(Emp.DivId,'') = '" & GetData.GetDivisionId(cboDivision.Text.Trim) & "'"
+        End If
+
+        If cboDepartment.SelectedIndex > 0 Then
+            strSQL &= " and Isnull(Emp.DeptId,'') = '" & GetData.GetDepartmentId(cboDepartment.Text.Trim) & "'"
+        End If
+
+        If cboSection.SelectedIndex > 0 Then
+            strSQL &= " and Isnull(Emp.SecId,'') = '" & GetData.GetSectionID(cboSection.Text.Trim) & "'"
+        End If
+
+        If cboPosition.SelectedIndex > 0 Then
+            strSQL &= " and Isnull(Emp.Position,'') = '" & cboPosition.Text.Trim & "'"
+        End If
+
+        If cboEmpGroup.SelectedIndex > 0 Then
+            strSQL &= " and Isnull(Emp.GroupId,'') = '" & GetData.GetEmpGroupId(cboEmpGroup.Text.Trim) & "'"
+        End If
+
+        If cboBroker.SelectedIndex > 0 Then
+            strSQL &= " and Isnull(Emp.BrokerId,'') = '" & GetData.GetBrokerId(cboBroker.Text.Trim) & "'"
+        End If
+
+        If rdMonth.Checked = True Then
+            strSQL &= " and Emp.WageType = 'M'"
+        End If
+
+        If rdDay.Checked = True Then
+            strSQL &= " and Emp.WageType = 'D' and Contractor = 0"
+        End If
+
+        If rdContractor.Checked = True Then
+            strSQL &= " and Emp.WageType = 'D' and Contractor = 1"
+        End If
+
+        If txtEmpId.Text.Trim <> "" Then
+            strSQL &= " and Emp.Code Like '%" & Replace(txtEmpId.Text.Trim, " ", "") & "%'"
+        End If
+
+        If txtNameSearch.Text.Trim <> "" Then
+            strSQL &= " and (Fname + LName) Like '%" & Replace(txtNameSearch.Text.Trim, " ", "") & "%'"
+        End If
+
+        strSQL &= " Order By Emp.Code"
+
+
+
+        Da = New SqlDataAdapter(strSQL, Conn)
+        Da.Fill(Ds, "data")
+        Return Ds
+    End Function
+
+    Function GetStdStatus(ByVal Code As String, ByVal DateIn As String)
+        Dim Da As New SqlDataAdapter
+        Dim DS As New DataSet
+        Dim strSQL As String
+
+        strSQL = "select Status = Isnull(dbo.fTimeTableGetStatus('" & Code.Trim & "','" & DateIn.Trim & "'),'')"
+        Da = New SqlDataAdapter(strSQL, Conn)
+        Da.Fill(DS, "data")
+        With DS.Tables("data")
+            If .Rows.Count = 0 Then
+                Return ""
+            Else
+                Return .Rows(0).Item("Status")
+            End If
+        End With
+    End Function
+
+    Function GetStdCome(ByVal Code As String) As Integer
+        Dim Da As New SqlDataAdapter
+        Dim Ds As New DataSet
+        Dim strSQL As String
+        strSQL = "select Code," & _
+                        " Come = Isnull((D1+D2+D3+D4+D5+D6+D7+D8+D9+D10+D11+D12+D13+D14+D15+" & _
+                                    " D16+D17+D18+D19+D20+D21+D22+D23+D24+D25+D26+D27+D28+" & _
+                                    " D29+D30+D31),0) " & _
+                " from vTimeTableByMonth_Come" & _
+                " Where Code = '" & Code.Trim & "'"
+        Da = New SqlDataAdapter(strSQL, Conn)
+        Da.Fill(Ds, "data")
+        With Ds.Tables("data")
+            If .Rows.Count = 0 Then
+                Return 0
+            Else
+                Return .Rows(0).Item("Come")
+            End If
+        End With
+    End Function
+
+    Function GetStdAbsent(ByVal Code As String) As Integer
+        Dim Da As New SqlDataAdapter
+        Dim Ds As New DataSet
+        Dim strSQL As String
+        strSQL = "select Code," & _
+                        " Absent = Isnull((D1+D2+D3+D4+D5+D6+D7+D8+D9+D10+D11+D12+D13+D14+D15+" & _
+                                    " D16+D17+D18+D19+D20+D21+D22+D23+D24+D25+D26+D27+D28+" & _
+                                    " D29+D30+D31),0) " & _
+                " from vTimeTableByMonth_Abs" & _
+                " Where Code = '" & Code.Trim & "'"
+        Da = New SqlDataAdapter(strSQL, Conn)
+        Da.Fill(Ds, "data")
+        With Ds.Tables("data")
+            If .Rows.Count = 0 Then
+                Return 0
+            Else
+                Return .Rows(0).Item("Absent")
+            End If
+        End With
+    End Function
+
+
+    Private Sub LoadDepartment()
+
+        '--------------------------------------------
+        Dim DA As New SqlDataAdapter
+        Dim Ds As New DataSet
+        Dim Strsql As String = ""
+
+        strSQL = "select DeptId,Department " & _
+            " from department "
+
+        If cboCompany.SelectedIndex > 0 Then
+            Strsql &= " Where DeptId In (Select DeptId From Emp " & _
+                                    " Where WorkStatus  = 'W' and " & _
+                                            " CompanyId = '" & GetData.GetCompanyId(cboCompany.Text) & "')"
+        End If
+
+        strSQL = strSQL & " Order By Department"
+
+        Da = New SqlDataAdapter(strSQL, Conn)
+        Da.Fill(Ds, "data")
+
+        cboDepartment.Items.Clear()
+        cboDepartment.Items.Add("ทั้งหมด")
+        With Ds.Tables("data")
+            For Each Dr As DataRow In .Rows
+                cboDepartment.Items.Add(Dr("Department"))
+            Next
+            cboDepartment.SelectedIndex = 0
+        End With
+    End Sub
+
+    Private Sub LoadDivision()
+
+        Dim DA As New SqlDataAdapter
+        Dim Ds As New DataSet
+        Dim Strsql As String = ""
+
+        Strsql = "select DivId,Division" & _
+            " from DiviSion "
+
+        If cboCompany.SelectedIndex > 0 Then
+            Strsql &= " Where DivId In (Select DivId From Emp " & _
+                                    " Where WorkStatus  = 'W' and " & _
+                                            " CompanyId = '" & GetData.GetCompanyId(cboCompany.Text) & "')"
+        End If
+
+        Strsql = Strsql & " Order By Division"
+
+        DA = New SqlDataAdapter(Strsql, Conn)
+        DA.Fill(Ds, "data")
+
+        cboDivision.Items.Clear()
+        cboDivision.Items.Add("ทั้งหมด")
+        With Ds.Tables("data")
+            For Each Dr As DataRow In .Rows
+                cboDivision.Items.Add(Dr("Division"))
+            Next
+            cboDivision.SelectedIndex = 0
+        End With
+    End Sub
+
+
+    Private Sub LoadPosition()
+        Dim Da As SqlDataAdapter
+        Dim Ds As New DataSet
+        Dim strSQL As String = ""
+        strSQL = "select Position " & _
+                " From Emp " & _
+                " Group By Position " & _
+                " Order By Position"
+
+        Da = New SqlDataAdapter(strSQL, Conn)
+        Da.Fill(Ds, "data")
+        With Ds.Tables("data")
+            cboPosition.Items.Clear()
+            cboPosition.Items.Add("(ทั้งหมด)")
+
+            For Each dr As DataRow In .Rows
+                cboPosition.Items.Add(dr("Position"))
+            Next
+            cboPosition.SelectedIndex = 0
+        End With
+    End Sub
+
+    Private Sub LoadEmpGroup()
+        Dim Da As SqlDataAdapter
+        Dim Ds As New DataSet
+        Dim strSQL As String = ""
+        strSQL = "select GroupName " & _
+                " From EmpGroup " & _
+                " Order By GroupName"
+
+        Da = New SqlDataAdapter(strSQL, Conn)
+        Da.Fill(Ds, "data")
+        With Ds.Tables("data")
+            cboEmpGroup.Items.Clear()
+            cboEmpGroup.Items.Add("(ทั้งหมด)")
+
+            For Each dr As DataRow In .Rows
+                cboEmpGroup.Items.Add(dr("GroupName"))
+            Next
+            cboEmpGroup.SelectedIndex = 0
+        End With
+    End Sub
+
+    Private Sub LoadCompany()
+        Dim Da As New SqlDataAdapter
+        Dim Ds As New DataSet
+        Dim strSQL As String
+        strSQL = "Select CompanyName From Company_Sub "
+        Da = New SqlDataAdapter(strSQL, Conn)
+        Da.Fill(Ds, "Data")
+        With Ds.Tables("Data")
+            cboCompany.Items.Clear()
+            cboCompany.Items.Add("ทั้งหมด")
+
+            Dim I As Integer
+            For I = 0 To .Rows.Count - 1
+                cboCompany.Items.Add(.Rows(I).Item("CompanyName"))
+            Next
+            Ds.Clear()
+            cboCompany.SelectedIndex = 0
+        End With
+    End Sub
+
+    Private Sub cboCompany_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
+        Call LoadDepartment()
+        Call LoadDivision()
+    End Sub
+
+    Private Sub txtCode1_GotFocus(ByVal sender As Object, ByVal e As System.EventArgs)
+        txtNameSearch.Text = ""
+    End Sub
+
+    Private Sub txtNameSearch_GotFocus(ByVal sender As Object, ByVal e As System.EventArgs)
+        ' txtCode1.Text = ""
+    End Sub
+
+    Private Sub cboCompany_SelectedIndexChanged_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cboCompany.SelectedIndexChanged
+        Dim CompanyId As String = GetData.GetCompanyId(cboCompany.Text.Trim)
+
+        Call SearchData.LoadDivision(cboDivision, True, CompanyId.Trim)
+        Call SearchData.LoadDepartment(cboDepartment, True, CompanyId.Trim)
+        Call SearchData.LoadSection(cboSection, True, CompanyId.Trim)
+        Call SearchData.LoadPosition(cboPosition, True, CompanyId.Trim)
+        Call SearchData.LoadEmpGroup(cboEmpGroup, True, CompanyId.Trim)
+        Call SearchData.LoadBroker(cboBroker, True, CompanyId.Trim)
+    End Sub
+
+    Private Sub btnRefresh_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+
+    End Sub
+
+    Private Sub txtEmpId_GotFocus(ByVal sender As Object, ByVal e As System.EventArgs)
+        txtNameSearch.Text = ""
+    End Sub
+
+    Private Sub txtEmpId_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
+
+    End Sub
+
+    Private Sub txtNameSearch_GotFocus1(ByVal sender As Object, ByVal e As System.EventArgs)
+        txtEmpId.Text = ""
+    End Sub
+
+    Private Sub txtNameSearch_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
+
+    End Sub
+End Class

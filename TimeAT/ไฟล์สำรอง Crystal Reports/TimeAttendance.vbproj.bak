@@ -1,0 +1,2892 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="14.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{45D80104-BD0E-42BF-B921-3DBE6008F0E8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Sub Main</StartupObject>
+    <RootNamespace>TimeAttendance</RootNamespace>
+    <AssemblyName>TimeAttendance</AssemblyName>
+    <MyType>Console</MyType>
+    <ApplicationIcon>TimeICon.ico</ApplicationIcon>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <PublishUrl>D:\SourceCode\CKC\Update\publish_timeat\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>3</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>TimeAttendance.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>TimeAttendance.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>836A7AB21229A288999112E9C3CF9A1551B93374</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>TimeAttendance_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="DevComponents.DotNetBar2, Version=9.0.0.0, Culture=neutral, PublicKeyToken=e116d99a00eca71b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\DotNetBar\Bin\DevComponents.DotNetBar2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevComponents.TreeGX, Version=10.0.0.3, Culture=neutral, PublicKeyToken=cfcbd7476b2389d1" />
+    <Reference Include="DevExpress.BonusSkins.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Charts.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.CodeParser.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v17.1.UI, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGauges.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraNavBar.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v17.1.Extensions, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=11.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualBasic.Compatibility" />
+    <Reference Include="office, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\office.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SecDecLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\SecDecLib.dll</HintPath>
+    </Reference>
+    <Reference Include="SecEncLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\SecEncLib.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class\cDateTime.vb" />
+    <Compile Include="Class\cEnum.vb" />
+    <Compile Include="Class\CExcel.vb" />
+    <Compile Include="Class\cExport.vb" />
+    <Compile Include="Class\cImage.vb" />
+    <Compile Include="Class\cProcessTime.vb" />
+    <Compile Include="Class\cValGolbal.vb" />
+    <Compile Include="Class\db.vb" />
+    <Compile Include="Class\GetData.vb" />
+    <Compile Include="Class\modStartup.vb" />
+    <Compile Include="Class\SearchData.vb" />
+    <Compile Include="Config\frmHolidayYear.Designer.vb">
+      <DependentUpon>frmHolidayYear.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Config\frmHolidayYear.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Config\frmTimeKa_Move.Designer.vb">
+      <DependentUpon>frmTimeKa_Move.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Config\frmTimeKa_Move.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Config\frmEmpCalAbs.Designer.vb">
+      <DependentUpon>frmEmpCalAbs.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Config\frmEmpCalAbs.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Config\frmCal_OT_Rate.Designer.vb">
+      <DependentUpon>frmCal_OT_Rate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Config\frmCal_OT_Rate.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Config\frmEmpCalOTDeducRate_CancelByDate.Designer.vb">
+      <DependentUpon>frmEmpCalOTDeducRate_CancelByDate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Config\frmEmpCalOTDeducRate_CancelByDate.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Config\frmEmpCalOTConfig.Designer.vb">
+      <DependentUpon>frmEmpCalOTConfig.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Config\frmEmpCalOTConfig.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Config\frmEmpOTDeducByDay.Designer.vb">
+      <DependentUpon>frmEmpOTDeducByDay.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Config\frmEmpOTDeducByDay.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Config\frmHolidayYear_New.Designer.vb">
+      <DependentUpon>frmHolidayYear_New.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Config\frmHolidayYear_New.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Config\frmLimitHourOT.Designer.vb">
+      <DependentUpon>frmLimitHourOT.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Config\frmLimitHourOT.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Config\frmOTRate_Period.Designer.vb">
+      <DependentUpon>frmOTRate_Period.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Config\frmOTRate_Period.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Config\frmCaseLatebyTime.Designer.vb">
+      <DependentUpon>frmCaseLatebyTime.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Config\frmCaseLatebyTime.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Config\frmEmpCalOTDeducRate.Designer.vb">
+      <DependentUpon>frmEmpCalOTDeducRate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Config\frmEmpCalOTDeducRate.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Config\frmOtDeductRate.Designer.vb">
+      <DependentUpon>frmOtDeductRate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Config\frmOtDeductRate.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Config\frmEmpCalLate.Designer.vb">
+      <DependentUpon>frmEmpCalLate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Config\frmEmpCalLate.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Config\frmLateRateCash.Designer.vb">
+      <DependentUpon>frmLateRateCash.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Config\frmLateRateCash.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Config\frmAutoAwRate.Designer.vb">
+      <DependentUpon>frmAutoAwRate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Config\frmAutoAwRate.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Config\frmMainConfig.Designer.vb">
+      <DependentUpon>frmMainConfig.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Config\frmMainConfig.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Config\frmWorkSpecial.Designer.vb">
+      <DependentUpon>frmWorkSpecial.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Config\frmWorkSpecial.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Config\MasterConfig\frmWeek_Detail.designer.vb">
+      <DependentUpon>frmWeek_Detail.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Config\MasterConfig\frmWeek_Detail.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Config_Resources_All\popup.Designer.vb" />
+    <Compile Include="Config_Resources_All\popup.en-US.Designer.vb" />
+    <Compile Include="Config_Resources_Popup.en-US\frmAbsRS.en-US.Designer.vb">
+      <DependentUpon>frmAbsRS.en-US.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Config_Resources_Popup.en-US\frmAllowanceRS.en-US.Designer.vb">
+      <DependentUpon>frmAllowanceRS.en-US.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Config_Resources_Popup.en-US\frmAutoAwRateRS.en-US.Designer.vb">
+      <DependentUpon>frmAutoAwRateRS.en-US.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Config_Resources_Popup.en-US\frmCal_OT_RateRS.en-US.Designer.vb">
+      <DependentUpon>frmCal_OT_RateRS.en-US.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Config_Resources_Popup.en-US\frmCaseLatebyTimeRS.en-US.Designer.vb">
+      <DependentUpon>frmCaseLatebyTimeRS.en-US.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Config_Resources_Popup.en-US\frmEditTimeRS.en-US.Designer.vb">
+      <DependentUpon>frmEditTimeRS.en-US.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Config_Resources_Popup.en-US\frmEmpCalOTConfigRS.en-US.Designer.vb">
+      <DependentUpon>frmEmpCalOTConfigRS.en-US.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Config_Resources_Popup.en-US\frmEmpCalOTDeducRate_CancelByDateRS.en-US.Designer.vb">
+      <DependentUpon>frmEmpCalOTDeducRate_CancelByDateRS.en-US.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Config_Resources_Popup.en-US\frmEmpOTDeducByDayRS.en-US.Designer.vb">
+      <DependentUpon>frmEmpOTDeducByDayRS.en-US.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Config_Resources_Popup.en-US\frmEmpSetTimeByDateRS.en-US.Designer.vb">
+      <DependentUpon>frmEmpSetTimeByDateRS.en-US.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Config_Resources_Popup.en-US\frmEmpSetTimeRS.en-US.Designer.vb">
+      <DependentUpon>frmEmpSetTimeRS.en-US.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Config_Resources_Popup.en-US\frmGetTextRS.en-US.Designer.vb">
+      <DependentUpon>frmGetTextRS.en-US.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Config_Resources_Popup.en-US\frmHolidayYearRS.en-US.Designer.vb">
+      <DependentUpon>frmHolidayYearRS.en-US.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Config_Resources_Popup.en-US\frmLateRateCashRS.en-US.Designer.vb">
+      <DependentUpon>frmLateRateCashRS.en-US.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Config_Resources_Popup.en-US\frmLateRateRS.en-US.Designer.vb">
+      <DependentUpon>frmLateRateRS.en-US.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Config_Resources_Popup.en-US\frmLateRS.en-US.Designer.vb">
+      <DependentUpon>frmLateRS.en-US.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Config_Resources_Popup.en-US\frmLimitHourOTRS.en-US.Designer.vb">
+      <DependentUpon>frmLimitHourOTRS.en-US.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Config_Resources_Popup.en-US\frmLinkCodeToPayrollRS.en-US.Designer.vb">
+      <DependentUpon>frmLinkCodeToPayrollRS.en-US.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Config_Resources_Popup.en-US\frmMainConfigRS.en-US.Designer.vb">
+      <DependentUpon>frmMainConfigRS.en-US.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Config_Resources_Popup.en-US\frmOTRateRS.en-US.Designer.vb">
+      <DependentUpon>frmOTRateRS.en-US.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Config_Resources_Popup.en-US\frmOvertimeRS.en-US.Designer.vb">
+      <DependentUpon>frmOvertimeRS.en-US.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Config_Resources_Popup.en-US\frmPrivilegeValRS.en-US.Designer.vb">
+      <DependentUpon>frmPrivilegeValRS.en-US.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Config_Resources_Popup.en-US\frmRptAllEmpWorkRS.en-US.Designer.vb">
+      <DependentUpon>frmRptAllEmpWorkRS.en-US.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Config_Resources_Popup.en-US\frmRPTSummarizeVacationByYear_ConfigRS.en-US.Designer.vb">
+      <DependentUpon>frmRPTSummarizeVacationByYear_ConfigRS.en-US.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Config_Resources_Popup.en-US\frmRPTTimeworkSumaryByWeekRS.en-US.Designer.vb">
+      <DependentUpon>frmRPTTimeworkSumaryByWeekRS.en-US.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Config_Resources_Popup.en-US\frmRPTTimeworkSumaryRS.en-US.Designer.vb">
+      <DependentUpon>frmRPTTimeworkSumaryRS.en-US.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Config_Resources_Popup.en-US\frmRpt_OTreportRS.en-US.Designer.vb">
+      <DependentUpon>frmRpt_OTreportRS.en-US.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Config_Resources_Popup.en-US\frmSetBarcodeRS.en-US.Designer.vb">
+      <DependentUpon>frmSetBarcodeRS.en-US.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Config_Resources_Popup.en-US\frmTimeKaRS.en-US.Designer.vb">
+      <DependentUpon>frmTimeKaRS.en-US.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Config_Resources_Popup.en-US\frmTimeworkRS.en-US.Designer.vb">
+      <DependentUpon>frmTimeworkRS.en-US.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Config_Resources_Popup.en-US\frmUserRS.en-US.Designer.vb">
+      <DependentUpon>frmUserRS.en-US.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Config_Resources_Popup.en-US\frmVacationRS.en-US.Designer.vb">
+      <DependentUpon>frmVacationRS.en-US.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Config_Resources_Popup.en-US\frmWorkingStatusRS.en-US.Designer.vb">
+      <DependentUpon>frmWorkingStatusRS.en-US.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Config_Resources_Popup.en-US\frmWorkingTimeRS.en-US.Designer.vb">
+      <DependentUpon>frmWorkingTimeRS.en-US.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Config_Resources_Popup.en-US\frmWorkSpecialRS.en-US.Designer.vb">
+      <DependentUpon>frmWorkSpecialRS.en-US.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Config_Resources_Popup\frmImportEmpProfileRS.en-US.Designer.vb">
+      <DependentUpon>frmImportEmpProfileRS.en-US.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Config_Resources_Popup\frmImportEmpProfileRS.Designer.vb">
+      <DependentUpon>frmImportEmpProfileRS.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Config_Resources_Popup\frmAbsRS.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>frmAbsRS.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Config_Resources_Popup\frmAllowanceRS.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>frmAllowanceRS.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Config_Resources_Popup\frmAutoAwRateRS.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>frmAutoAwRateRS.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Config_Resources_Popup\frmCal_OT_RateRS.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>frmCal_OT_RateRS.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Config_Resources_Popup\frmCaseLatebyTimeRS.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>frmCaseLatebyTimeRS.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Config_Resources_Popup\frmEditTimeRS.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>frmEditTimeRS.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Config_Resources_Popup\frmEmpCalOTConfigRS.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>frmEmpCalOTConfigRS.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Config_Resources_Popup\frmEmpCalOTDeducRate_CancelByDateRS.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>frmEmpCalOTDeducRate_CancelByDateRS.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Config_Resources_Popup\frmEmpOTDeducByDayRS.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>frmEmpOTDeducByDayRS.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Config_Resources_Popup\frmEmpSetTimeByDateRS.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>frmEmpSetTimeByDateRS.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Config_Resources_Popup\frmEmpSetTimeRS.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>frmEmpSetTimeRS.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Config_Resources_Popup\frmGetTextRS.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>frmGetTextRS.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Config_Resources_Popup\frmHolidayYearRS.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>frmHolidayYearRS.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Config_Resources_Popup\frmLateRateCashRS.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>frmLateRateCashRS.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Config_Resources_Popup\frmLateRateRS.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>frmLateRateRS.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Config_Resources_Popup\frmLateRS.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>frmLateRS.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Config_Resources_Popup\frmLimitHourOTRS.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>frmLimitHourOTRS.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Config_Resources_Popup\frmLinkCodeToPayrollRS.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>frmLinkCodeToPayrollRS.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Config_Resources_Popup\frmMainConfigRS.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>frmMainConfigRS.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Config_Resources_Popup\frmOTRateRS.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>frmOTRateRS.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Config_Resources_Popup\frmOvertimeRS.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>frmOvertimeRS.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Config_Resources_Popup\frmPrivilegeValRS.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>frmPrivilegeValRS.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Config_Resources_Popup\frmRptAllEmpWorkRS.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>frmRptAllEmpWorkRS.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Config_Resources_Popup\frmRPTSummarizeVacationByYear_ConfigRS.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>frmRPTSummarizeVacationByYear_ConfigRS.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Config_Resources_Popup\frmRPTTimeworkSumaryByWeekRS.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>frmRPTTimeworkSumaryByWeekRS.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Config_Resources_Popup\frmRPTTimeworkSumaryRS.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>frmRPTTimeworkSumaryRS.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Config_Resources_Popup\frmRpt_OTreportRS.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>frmRpt_OTreportRS.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Config_Resources_Popup\frmSetBarcodeRS.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>frmSetBarcodeRS.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Config_Resources_Popup\frmTimeKaRS.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>frmTimeKaRS.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Config_Resources_Popup\frmTimeworkRS.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>frmTimeworkRS.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Config_Resources_Popup\frmUserRS.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>frmUserRS.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Config_Resources_Popup\frmVacationRS.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>frmVacationRS.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Config_Resources_Popup\frmWorkingStatusRS.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>frmWorkingStatusRS.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Config_Resources_Popup\frmWorkingTimeRS.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>frmWorkingTimeRS.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Config_Resources_Popup\frmWorkSpecialRS.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>frmWorkSpecialRS.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Config_Resources_Report.en-US\cryAbsentByEmpRS.en-US.Designer.vb">
+      <DependentUpon>cryAbsentByEmpRS.en-US.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Config_Resources_Report.en-US\cryCountAbsentRS.en-US.Designer.vb">
+      <DependentUpon>cryCountAbsentRS.en-US.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Config_Resources_Report.en-US\cryRPT_MaxOTRS.en-US.Designer.vb">
+      <DependentUpon>cryRPT_MaxOTRS.en-US.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Config_Resources_Report.en-US\cryRPT_OTreportRS.en-US.Designer.vb">
+      <DependentUpon>cryRPT_OTreportRS.en-US.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Config_Resources_Report.en-US\cryRPT_SummarizeVacationByYear_Config2RS.en-US.Designer.vb">
+      <DependentUpon>cryRPT_SummarizeVacationByYear_Config2RS.en-US.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Config_Resources_Report.en-US\cryRPT_SummarizeVacationByYear_ConfigRS.en-US.Designer.vb">
+      <DependentUpon>cryRPT_SummarizeVacationByYear_ConfigRS.en-US.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Config_Resources_Report.en-US\crySumaryWagePerDayRS.en-US.Designer.vb">
+      <DependentUpon>crySumaryWagePerDayRS.en-US.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Config_Resources_Report.en-US\cryTimeAbsentRS.en-US.Designer.vb">
+      <DependentUpon>cryTimeAbsentRS.en-US.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Config_Resources_Report.en-US\cryTimeAbsLateRS.en-US.Designer.vb">
+      <DependentUpon>cryTimeAbsLateRS.en-US.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Config_Resources_Report.en-US\cryTimeworkSummarizeRS.en-US.Designer.vb">
+      <DependentUpon>cryTimeworkSummarizeRS.en-US.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Config_Resources_Report.en-US\ExcelRS.en-US.Designer.vb">
+      <DependentUpon>ExcelRS.en-US.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Config_Resources_Report.en-US\MonthLang.en-US.Designer.vb">
+      <DependentUpon>MonthLang.en-US.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Config_Resources_Report.en-US\rptCheckComingRS.en-US.Designer.vb">
+      <DependentUpon>rptCheckComingRS.en-US.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Config_Resources_Report.en-US\rptEmpTimeINOUTRS.en-US.Designer.vb">
+      <DependentUpon>rptEmpTimeINOUTRS.en-US.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Config_Resources_Report.en-US\rptEmpTimeWorkRS.en-US.Designer.vb">
+      <DependentUpon>rptEmpTimeWorkRS.en-US.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Config_Resources_Report.en-US\rptEmpTimeWork_DetailRS.en-US.Designer.vb">
+      <DependentUpon>rptEmpTimeWork_DetailRS.en-US.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Config_Resources_Report.en-US\rptEmpTimeWork_Detail_2RS.en-US.Designer.vb">
+      <DependentUpon>rptEmpTimeWork_Detail_2RS.en-US.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Config_Resources_Report.en-US\rptTimeSheetRS.en-US.Designer.vb">
+      <DependentUpon>rptTimeSheetRS.en-US.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Config_Resources_Report.en-US\rptTimeSumAbsLateByMonthRS.en-US.Designer.vb">
+      <DependentUpon>rptTimeSumAbsLateByMonthRS.en-US.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Config_Resources_Report.en-US\rptTimeTableByMonthRS.en-US.Designer.vb">
+      <DependentUpon>rptTimeTableByMonthRS.en-US.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Config_Resources_Report\cryAbsentByEmpRS.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cryAbsentByEmpRS.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Config_Resources_Report\cryCountAbsentRS.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cryCountAbsentRS.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Config_Resources_Report\cryRPT_MaxOTRS.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cryRPT_MaxOTRS.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Config_Resources_Report\cryRPT_OTreportRS.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cryRPT_OTreportRS.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Config_Resources_Report\cryRPT_SummarizeVacationByYear_Config2RS.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cryRPT_SummarizeVacationByYear_Config2RS.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Config_Resources_Report\cryRPT_SummarizeVacationByYear_ConfigRS.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cryRPT_SummarizeVacationByYear_ConfigRS.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Config_Resources_Report\crySumaryWagePerDayRS.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crySumaryWagePerDayRS.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Config_Resources_Report\cryTimeAbsentRS.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cryTimeAbsentRS.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Config_Resources_Report\cryTimeAbsLateRS.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cryTimeAbsLateRS.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Config_Resources_Report\cryTimeworkSummarizeRS.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cryTimeworkSummarizeRS.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Config_Resources_Report\ExcelRS.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ExcelRS.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Config_Resources_Report\HTFReportForm.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HTFReportForm.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Config_Resources_Report\MonthLang.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MonthLang.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Config_Resources_Report\rptCheckComingRS.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptCheckComingRS.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Config_Resources_Report\rptEmpTimeINOUTRS.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptEmpTimeINOUTRS.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Config_Resources_Report\rptEmpTimeWorkRS.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptEmpTimeWorkRS.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Config_Resources_Report\rptEmpTimeWork_DetailRS.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptEmpTimeWork_DetailRS.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Config_Resources_Report\rptEmpTimeWork_Detail_2RS.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptEmpTimeWork_Detail_2RS.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Config_Resources_Report\rptTimeSheetRS.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptTimeSheetRS.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Config_Resources_Report\rptTimeSumAbsLateByMonthRS.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptTimeSumAbsLateByMonthRS.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Config_Resources_Report\rptTimeTableByMonthRS.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptTimeTableByMonthRS.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Config_Result_Center\Other.en-US.Designer.vb">
+      <DependentUpon>Other.en-US.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Config_Result_Center\day.en-US.Designer.vb">
+      <DependentUpon>day.en-US.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Config_Result_Center\day.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>day.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Config_Result_Center\Other.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Other.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Config_Result_Center\Search.en-US.Designer.vb">
+      <DependentUpon>Search.en-US.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Config_Result_Center\Search.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Search.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrivilegeVal.Designer.vb">
+      <DependentUpon>frmPrivilegeVal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrivilegeVal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAllowance.Designer.vb">
+      <DependentUpon>frmAllowance.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAllowance.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Config\frmEmpCalOT.Designer.vb">
+      <DependentUpon>frmEmpCalOT.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Config\frmEmpCalOT.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Import\frmImportEmpProfile.Designer.vb">
+      <DependentUpon>frmImportEmpProfile.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Import\frmImportEmpProfile.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ka\frmKa_Spacial.Designer.vb">
+      <DependentUpon>frmKa_Spacial.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ka\frmKa_Spacial.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ka\frmEmpSetTime.Designer.vb">
+      <DependentUpon>frmEmpSetTime.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ka\frmEmpSetTime.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Config\frmLinkCodeToPayroll.Designer.vb">
+      <DependentUpon>frmLinkCodeToPayroll.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Config\frmLinkCodeToPayroll.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Config\frmSetBarcode.Designer.vb">
+      <DependentUpon>frmSetBarcode.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Config\frmSetBarcode.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ka\frmEmpSetTimeByDate.Designer.vb">
+      <DependentUpon>frmEmpSetTimeByDate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ka\frmEmpSetTimeByDate.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ka\frmKaGroupUse.Designer.vb">
+      <DependentUpon>frmKaGroupUse.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ka\frmKaGroupUse.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ka\frmRestDetail.Designer.vb">
+      <DependentUpon>frmRestDetail.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ka\frmRestDetail.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ka\frmTimeKa.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Language_resource\res_month.Designer.vb" />
+    <Compile Include="Language_resource\res_month.en-US.Designer.vb" />
+    <Compile Include="Listconfig\frmListEmp.Designer.vb">
+      <DependentUpon>frmListEmp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Listconfig\frmListEmp.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\frmLoginDatabase.Designer.vb">
+      <DependentUpon>frmLoginDatabase.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Login\frmLoginDatabase.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\frmLoginPage.Designer.vb">
+      <DependentUpon>frmLoginPage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Login\frmLoginPage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainMenu_LogIn\frmBasicPage2.Designer.vb">
+      <DependentUpon>frmBasicPage2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MainMenu_LogIn\frmBasicPage2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainMenu_LogIn\frmBasicPage3.designer.vb">
+      <DependentUpon>frmBasicPage3.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MainMenu_LogIn\frmBasicPage3.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainMenu_LogIn\frmConfigViewCompany.Designer.vb">
+      <DependentUpon>frmConfigViewCompany.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MainMenu_LogIn\frmConfigViewCompany.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainMenu_LogIn\frmMainMenuDev.Designer.vb">
+      <DependentUpon>frmMainMenuDev.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MainMenu_LogIn\frmMainMenuDev.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainMenu_LogIn\frmMainMenuHD.Designer.vb">
+      <DependentUpon>frmMainMenuHD.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MainMenu_LogIn\frmMainMenuHD.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainMenu_LogIn\frmUserLogIn.Designer.vb">
+      <DependentUpon>frmUserLogIn.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MainMenu_LogIn\frmUserLogIn.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module\GenCode.vb" />
+    <Compile Include="Payroll_Config\frmCompany.designer.vb">
+      <DependentUpon>frmCompany.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Payroll_Config\frmCompany.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Payroll_Config\frmDepartment.Designer.vb">
+      <DependentUpon>frmDepartment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Payroll_Config\frmDepartment.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Payroll_Config\frmDepartment_List.designer.vb">
+      <DependentUpon>frmDepartment_List.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Payroll_Config\frmDepartment_List.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Payroll_Config\frmDivision.Designer.vb">
+      <DependentUpon>frmDivision.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Payroll_Config\frmDivision.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Payroll_Config\frmDivision_List.Designer.vb">
+      <DependentUpon>frmDivision_List.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Payroll_Config\frmDivision_List.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Payroll_Config\frmEmp.designer.vb">
+      <DependentUpon>frmEmp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Payroll_Config\frmEmp.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Permission\frmGenGroupMenuMasterHD.Designer.vb">
+      <DependentUpon>frmGenGroupMenuMasterHD.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Permission\frmGenGroupMenuMasterHD.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Permission\frmGenMenuMaster.Designer.vb">
+      <DependentUpon>frmGenMenuMaster.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Permission\frmGenMenuMaster.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Permission\frmPermission.Designer.vb">
+      <DependentUpon>frmPermission.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Permission\frmPermission.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Permission\frmRightManagementControl.Designer.vb">
+      <DependentUpon>frmRightManagementControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Permission\frmRightManagementControl.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Permission\frmSetUserLogIn.Designer.vb">
+      <DependentUpon>frmSetUserLogIn.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Permission\frmSetUserLogIn.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportForm\frmRPTSumaryWagePerDay.Designer.vb">
+      <DependentUpon>frmRPTSumaryWagePerDay.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReportForm\frmRPTSumaryWagePerDay.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportForm\frmRptAllEmpWork_Detail2.Designer.vb">
+      <DependentUpon>frmRptAllEmpWork_Detail2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReportForm\frmRptAllEmpWork_Detail2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportForm\frmRPTEmpValAbsLateByDate.Designer.vb">
+      <DependentUpon>frmRPTEmpValAbsLateByDate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReportForm\frmRPTEmpValAbsLateByDate.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportForm\frmRPTTimeworkSumaryByWeek.Designer.vb">
+      <DependentUpon>frmRPTTimeworkSumaryByWeek.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReportForm\frmRPTTimeworkSumaryByWeek.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportForm\frmRptMaxOT.Designer.vb">
+      <DependentUpon>frmRptMaxOT.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReportForm\frmRptMaxOT.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportForm\frmRPTSummarizeVacationByYear.Designer.vb">
+      <DependentUpon>frmRPTSummarizeVacationByYear.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReportForm\frmRPTSummarizeVacationByYear.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportForm\frmRPTSummarizeVacationByYear_Config.Designer.vb">
+      <DependentUpon>frmRPTSummarizeVacationByYear_Config.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReportForm\frmRPTSummarizeVacationByYear_Config.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportForm\frmRPTTimeAbsLate.Designer.vb">
+      <DependentUpon>frmRPTTimeAbsLate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReportForm\frmRPTTimeAbsLate.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportForm\frmRptTimeAbsLate_Config.Designer.vb">
+      <DependentUpon>frmRptTimeAbsLate_Config.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReportForm\frmRptTimeAbsLate_Config.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportForm\frmRPTTimeAbsent.Designer.vb">
+      <DependentUpon>frmRPTTimeAbsent.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReportForm\frmRPTTimeAbsent.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportForm\frmRptTimeAbsent_Config.Designer.vb">
+      <DependentUpon>frmRptTimeAbsent_Config.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReportForm\frmRptTimeAbsent_Config.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportForm\frmRptAllEmpWork_Detail.Designer.vb">
+      <DependentUpon>frmRptAllEmpWork_Detail.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReportForm\frmRptAllEmpWork_Detail.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportForm\frmRptTimeTableByMonth.Designer.vb">
+      <DependentUpon>frmRptTimeTableByMonth.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReportForm\frmRptTimeTableByMonth.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportForm\frmRptAllEmpWork.Designer.vb">
+      <DependentUpon>frmRptAllEmpWork.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReportForm\frmRptAllEmpWork.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportForm\frmRptCheckComingByPerson.Designer.vb">
+      <DependentUpon>frmRptCheckComingByPerson.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReportForm\frmRptCheckComingByPerson.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportForm\frmReportMonthlySumary.Designer.vb">
+      <DependentUpon>frmReportMonthlySumary.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReportForm\frmReportMonthlySumary.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportForm\frmReportYearlySumary.Designer.vb">
+      <DependentUpon>frmReportYearlySumary.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReportForm\frmReportYearlySumary.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportForm\frmRptCheckComing.Designer.vb">
+      <DependentUpon>frmRptCheckComing.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReportForm\frmRptCheckComing.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportForm\frmReportSumary.Designer.vb">
+      <DependentUpon>frmReportSumary.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReportForm\frmReportSumary.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportForm\frmReportAllowance.Designer.vb">
+      <DependentUpon>frmReportAllowance.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReportForm\frmReportAllowance.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportForm\frmReportOvertime.Designer.vb">
+      <DependentUpon>frmReportOvertime.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReportForm\frmReportOvertime.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportForm\frmRptTimeSheet.Designer.vb">
+      <DependentUpon>frmRptTimeSheet.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReportForm\frmRptTimeSheet.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmValcation.Designer.vb">
+      <DependentUpon>frmValcation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmValcation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAbs.Designer.vb">
+      <DependentUpon>frmAbs.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAbs.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLate.Designer.vb">
+      <DependentUpon>frmLate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmLate.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditTime.Designer.vb">
+      <DependentUpon>frmEditTime.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmEditTime.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Config\frmLateSpaRate.Designer.vb">
+      <DependentUpon>frmLateSpaRate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Config\frmLateSpaRate.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Config\frmLateRate.Designer.vb">
+      <DependentUpon>frmLateRate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Config\frmLateRate.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGetText.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGetText.Designer.vb">
+      <DependentUpon>frmGetText.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Config\frmOTRate.Designer.vb">
+      <DependentUpon>frmOTRate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Config\frmOTRate.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOvertime.Designer.vb">
+      <DependentUpon>frmOvertime.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmOvertime.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTimework.Designer.vb">
+      <DependentUpon>frmTimework.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmTimework.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmWorkingStatus.Designer.vb">
+      <DependentUpon>frmWorkingStatus.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmWorkingStatus.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainMenu_LogIn\frmLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmWorkingTime.Designer.vb">
+      <DependentUpon>frmWorkingTime.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmWorkingTime.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module\ModSystem.vb" />
+    <Compile Include="Module\ThaiBaht.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ReportForm\frmRptTimeSumAbsentLate.Designer.vb">
+      <DependentUpon>frmRptTimeSumAbsentLate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReportForm\frmRptTimeSumAbsentLate.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportForm\frmRPTTimeworkSumary.Designer.vb">
+      <DependentUpon>frmRPTTimeworkSumary.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReportForm\frmRPTTimeworkSumary.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportForm\frmRptTimeWorkSumary_Config.Designer.vb">
+      <DependentUpon>frmRptTimeWorkSumary_Config.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReportForm\frmRptTimeWorkSumary_Config.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportForm\frmRpt_OTreport.Designer.vb">
+      <DependentUpon>frmRpt_OTreport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReportForm\frmRpt_OTreport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\cryAbsentByEmp.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cryAbsentByEmp.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\cryCountAbsent.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cryCountAbsent.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\cryRPT_MaxOT.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cryRPT_MaxOT.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\cryRPT_OTreport.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cryRPT_OTreport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\cryRPT_SummarizeVacationByYear_Config.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cryRPT_SummarizeVacationByYear_Config.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\cryRPT_SummarizeVacationByYear_Config2.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cryRPT_SummarizeVacationByYear_Config2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\crySumaryWagePerDay.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crySumaryWagePerDay.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\cryTimeAbsent.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cryTimeAbsent.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\cryTimeAbsLate.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cryTimeAbsLate.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\cryTimeworkSummarize.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cryTimeworkSummarize.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rptAllowance.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptAllowance.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rptCheckComing.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptCheckComing.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rptEmpTimeINOUT.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptEmpTimeINOUT.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rptEmpTimeWork.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptEmpTimeWork.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rptEmpTimeWork_Detail.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptEmpTimeWork_Detail.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rptEmpTimeWork_Detail_2.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptEmpTimeWork_Detail_2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rptOtByPersonSuamry.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptOtByPersonSuamry.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rptOTSheet.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptOTSheet.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rptSumary.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptSumary.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rptSumaryMonth.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptSumaryMonth.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rptTimeSheet.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptTimeSheet.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rptTimeSumAbsLateByMonth.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptTimeSumAbsLateByMonth.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rptTimeTableByMonth.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptTimeTableByMonth.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\SJC_Report7.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SJC_Report7.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_dev\report_CheckComing.Designer.vb">
+      <DependentUpon>report_CheckComing.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_dev\report_CheckComing.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_dev\report_CountAbsent.Designer.vb">
+      <DependentUpon>report_CountAbsent.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_dev\report_CountAbsent.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_dev\report_EmpTimeWork.Designer.vb">
+      <DependentUpon>report_EmpTimeWork.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_dev\report_EmpTimeWork.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_dev\report_EmpTimeWork_detail.Designer.vb">
+      <DependentUpon>report_EmpTimeWork_detail.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_dev\report_EmpTimeWork_detail.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_dev\report_OTReport.Designer.vb">
+      <DependentUpon>report_OTReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_dev\report_OTReport.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_dev\report_TimeTableByMonth.Designer.vb">
+      <DependentUpon>report_TimeTableByMonth.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_dev\report_TimeTableByMonth.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="src\AppConstants.vb" />
+    <Compile Include="src\AppVar.vb" />
+    <Compile Include="src\models\User.vb" />
+    <Compile Include="src\utils\DBManager.vb" />
+    <Compile Include="src\utils\MsgManager.vb" />
+    <Compile Include="src\utils\UICulture.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Config\frmHolidayYear.resx">
+      <DependentUpon>frmHolidayYear.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config\frmTimeKa_Move.en-US.resx">
+      <DependentUpon>frmTimeKa_Move.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config\frmTimeKa_Move.resx">
+      <DependentUpon>frmTimeKa_Move.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config\frmAutoAwRate.en-US.resx">
+      <DependentUpon>frmAutoAwRate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config\frmCal_OT_Rate.en-US.resx">
+      <DependentUpon>frmCal_OT_Rate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config\frmCaseLatebyTime.en-US.resx">
+      <DependentUpon>frmCaseLatebyTime.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config\frmEmpCalAbs.en-US.resx">
+      <DependentUpon>frmEmpCalAbs.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config\frmEmpCalAbs.resx">
+      <DependentUpon>frmEmpCalAbs.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config\frmCal_OT_Rate.resx">
+      <DependentUpon>frmCal_OT_Rate.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config\frmEmpCalLate.en-US.resx">
+      <DependentUpon>frmEmpCalLate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config\frmEmpCalOTConfig.en-US.resx">
+      <DependentUpon>frmEmpCalOTConfig.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config\frmEmpCalOTDeducRate.en-US.resx">
+      <DependentUpon>frmEmpCalOTDeducRate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config\frmEmpCalOTDeducRate_CancelByDate.en-US.resx">
+      <DependentUpon>frmEmpCalOTDeducRate_CancelByDate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config\frmEmpCalOTDeducRate_CancelByDate.resx">
+      <DependentUpon>frmEmpCalOTDeducRate_CancelByDate.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config\frmEmpCalOTConfig.resx">
+      <DependentUpon>frmEmpCalOTConfig.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config\frmEmpOTDeducByDay.en-US.resx">
+      <DependentUpon>frmEmpOTDeducByDay.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config\frmEmpOTDeducByDay.resx">
+      <DependentUpon>frmEmpOTDeducByDay.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config\frmHolidayYear_New.en-US.resx">
+      <DependentUpon>frmHolidayYear_New.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config\frmHolidayYear_New.resx">
+      <DependentUpon>frmHolidayYear_New.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config\frmLateRate.en-US.resx">
+      <DependentUpon>frmLateRate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config\frmLateRateCash.en-US.resx">
+      <DependentUpon>frmLateRateCash.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config\frmLimitHourOT.en-US.resx">
+      <DependentUpon>frmLimitHourOT.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config\frmLimitHourOT.resx">
+      <DependentUpon>frmLimitHourOT.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config\frmLinkCodeToPayroll.en-US.resx">
+      <DependentUpon>frmLinkCodeToPayroll.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config\frmMainConfig.en-US.resx">
+      <DependentUpon>frmMainConfig.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config\frmOtDeductRate.en-US.resx">
+      <DependentUpon>frmOtDeductRate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config\frmOTRate.en-US.resx">
+      <DependentUpon>frmOTRate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config\frmOTRate_Period.en-US.resx">
+      <DependentUpon>frmOTRate_Period.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config\frmOTRate_Period.resx">
+      <DependentUpon>frmOTRate_Period.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config\frmCaseLatebyTime.resx">
+      <DependentUpon>frmCaseLatebyTime.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config\frmEmpCalOTDeducRate.resx">
+      <DependentUpon>frmEmpCalOTDeducRate.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config\frmOtDeductRate.resx">
+      <DependentUpon>frmOtDeductRate.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config\frmEmpCalLate.resx">
+      <DependentUpon>frmEmpCalLate.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config\frmLateRateCash.resx">
+      <DependentUpon>frmLateRateCash.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config\frmAutoAwRate.resx">
+      <DependentUpon>frmAutoAwRate.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config\frmMainConfig.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmMainConfig.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config\frmSetBarcode.en-US.resx">
+      <DependentUpon>frmSetBarcode.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config\frmWorkSpecial.en-US.resx">
+      <DependentUpon>frmWorkSpecial.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config\frmWorkSpecial.resx">
+      <DependentUpon>frmWorkSpecial.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config\MasterConfig\frmWeek_Detail.en-US.resx">
+      <DependentUpon>frmWeek_Detail.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config\MasterConfig\frmWeek_Detail.resx">
+      <DependentUpon>frmWeek_Detail.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Resources_All\popup.en-US.resx" />
+    <EmbeddedResource Include="Config_Resources_All\popup.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Resources_Popup.en-US\frmAbsRS.en-US.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>frmAbsRS.en-US.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Resources_Popup.en-US\frmAllowanceRS.en-US.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>frmAllowanceRS.en-US.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Resources_Popup.en-US\frmAutoAwRateRS.en-US.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>frmAutoAwRateRS.en-US.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Resources_Popup.en-US\frmCal_OT_RateRS.en-US.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>frmCal_OT_RateRS.en-US.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Resources_Popup.en-US\frmCaseLatebyTimeRS.en-US.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>frmCaseLatebyTimeRS.en-US.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Resources_Popup.en-US\frmEditTimeRS.en-US.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>frmEditTimeRS.en-US.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Resources_Popup.en-US\frmEmpCalOTConfigRS.en-US.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>frmEmpCalOTConfigRS.en-US.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Resources_Popup.en-US\frmEmpCalOTDeducRate_CancelByDateRS.en-US.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>frmEmpCalOTDeducRate_CancelByDateRS.en-US.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Resources_Popup.en-US\frmEmpOTDeducByDayRS.en-US.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>frmEmpOTDeducByDayRS.en-US.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Resources_Popup.en-US\frmEmpSetTimeByDateRS.en-US.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>frmEmpSetTimeByDateRS.en-US.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Resources_Popup.en-US\frmEmpSetTimeRS.en-US.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>frmEmpSetTimeRS.en-US.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Resources_Popup.en-US\frmGetTextRS.en-US.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>frmGetTextRS.en-US.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Resources_Popup.en-US\frmHolidayYearRS.en-US.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>frmHolidayYearRS.en-US.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Resources_Popup.en-US\frmLateRateCashRS.en-US.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>frmLateRateCashRS.en-US.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Resources_Popup.en-US\frmLateRateRS.en-US.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>frmLateRateRS.en-US.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Resources_Popup.en-US\frmLateRS.en-US.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>frmLateRS.en-US.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Resources_Popup.en-US\frmLimitHourOTRS.en-US.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>frmLimitHourOTRS.en-US.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Resources_Popup.en-US\frmLinkCodeToPayrollRS.en-US.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>frmLinkCodeToPayrollRS.en-US.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Resources_Popup.en-US\frmMainConfigRS.en-US.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>frmMainConfigRS.en-US.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Resources_Popup.en-US\frmOTRateRS.en-US.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>frmOTRateRS.en-US.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Resources_Popup.en-US\frmOvertimeRS.en-US.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>frmOvertimeRS.en-US.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Resources_Popup.en-US\frmPrivilegeValRS.en-US.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>frmPrivilegeValRS.en-US.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Resources_Popup.en-US\frmRptAllEmpWorkRS.en-US.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>frmRptAllEmpWorkRS.en-US.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Resources_Popup.en-US\frmRPTSummarizeVacationByYear_ConfigRS.en-US.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>frmRPTSummarizeVacationByYear_ConfigRS.en-US.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Resources_Popup.en-US\frmRPTTimeworkSumaryByWeekRS.en-US.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>frmRPTTimeworkSumaryByWeekRS.en-US.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Resources_Popup.en-US\frmRPTTimeworkSumaryRS.en-US.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>frmRPTTimeworkSumaryRS.en-US.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Resources_Popup.en-US\frmRpt_OTreportRS.en-US.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>frmRpt_OTreportRS.en-US.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Resources_Popup.en-US\frmSetBarcodeRS.en-US.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>frmSetBarcodeRS.en-US.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Resources_Popup.en-US\frmTimeKaRS.en-US.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>frmTimeKaRS.en-US.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Resources_Popup.en-US\frmTimeworkRS.en-US.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>frmTimeworkRS.en-US.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Resources_Popup.en-US\frmUserRS.en-US.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>frmUserRS.en-US.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Resources_Popup.en-US\frmVacationRS.en-US.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>frmVacationRS.en-US.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Resources_Popup.en-US\frmWorkingStatusRS.en-US.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>frmWorkingStatusRS.en-US.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Resources_Popup.en-US\frmWorkingTimeRS.en-US.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>frmWorkingTimeRS.en-US.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Resources_Popup.en-US\frmWorkSpecialRS.en-US.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>frmWorkSpecialRS.en-US.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Resources_Popup\frmImportEmpProfileRS.en-US.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>frmImportEmpProfileRS.en-US.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Resources_Popup\frmImportEmpProfileRS.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>frmImportEmpProfileRS.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Resources_Popup\frmAbsRS.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>frmAbsRS.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Resources_Popup\frmAllowanceRS.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>frmAllowanceRS.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Resources_Popup\frmAutoAwRateRS.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>frmAutoAwRateRS.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Resources_Popup\frmCal_OT_RateRS.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>frmCal_OT_RateRS.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Resources_Popup\frmCaseLatebyTimeRS.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>frmCaseLatebyTimeRS.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Resources_Popup\frmEditTimeRS.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>frmEditTimeRS.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Resources_Popup\frmEmpCalOTConfigRS.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>frmEmpCalOTConfigRS.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Resources_Popup\frmEmpCalOTDeducRate_CancelByDateRS.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>frmEmpCalOTDeducRate_CancelByDateRS.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Resources_Popup\frmEmpOTDeducByDayRS.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>frmEmpOTDeducByDayRS.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Resources_Popup\frmEmpSetTimeByDateRS.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>frmEmpSetTimeByDateRS.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Resources_Popup\frmEmpSetTimeRS.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>frmEmpSetTimeRS.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Resources_Popup\frmGetTextRS.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>frmGetTextRS.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Resources_Popup\frmHolidayYearRS.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>frmHolidayYearRS.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Resources_Popup\frmLateRateCashRS.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>frmLateRateCashRS.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Resources_Popup\frmLateRateRS.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>frmLateRateRS.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Resources_Popup\frmLateRS.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>frmLateRS.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Resources_Popup\frmLimitHourOTRS.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>frmLimitHourOTRS.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Resources_Popup\frmLinkCodeToPayrollRS.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>frmLinkCodeToPayrollRS.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Resources_Popup\frmMainConfigRS.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>frmMainConfigRS.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Resources_Popup\frmOTRateRS.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>frmOTRateRS.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Resources_Popup\frmOvertimeRS.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>frmOvertimeRS.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Resources_Popup\frmPrivilegeValRS.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>frmPrivilegeValRS.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Resources_Popup\frmRptAllEmpWorkRS.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>frmRptAllEmpWorkRS.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Resources_Popup\frmRPTSummarizeVacationByYear_ConfigRS.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>frmRPTSummarizeVacationByYear_ConfigRS.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Resources_Popup\frmRPTTimeworkSumaryByWeekRS.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>frmRPTTimeworkSumaryByWeekRS.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Resources_Popup\frmRPTTimeworkSumaryRS.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>frmRPTTimeworkSumaryRS.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Resources_Popup\frmRpt_OTreportRS.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>frmRpt_OTreportRS.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Resources_Popup\frmSetBarcodeRS.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>frmSetBarcodeRS.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Resources_Popup\frmTimeKaRS.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>frmTimeKaRS.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Resources_Popup\frmTimeworkRS.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>frmTimeworkRS.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Resources_Popup\frmUserRS.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>frmUserRS.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Resources_Popup\frmVacationRS.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>frmVacationRS.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Resources_Popup\frmWorkingStatusRS.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>frmWorkingStatusRS.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Resources_Popup\frmWorkingTimeRS.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>frmWorkingTimeRS.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Resources_Popup\frmWorkSpecialRS.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>frmWorkSpecialRS.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Resources_Report.en-US\cryAbsentByEmpRS.en-US.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>cryAbsentByEmpRS.en-US.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Resources_Report.en-US\cryCountAbsentRS.en-US.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>cryCountAbsentRS.en-US.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Resources_Report.en-US\cryRPT_MaxOTRS.en-US.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>cryRPT_MaxOTRS.en-US.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Resources_Report.en-US\cryRPT_OTreportRS.en-US.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>cryRPT_OTreportRS.en-US.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Resources_Report.en-US\cryRPT_SummarizeVacationByYear_Config2RS.en-US.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>cryRPT_SummarizeVacationByYear_Config2RS.en-US.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Resources_Report.en-US\cryRPT_SummarizeVacationByYear_ConfigRS.en-US.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>cryRPT_SummarizeVacationByYear_ConfigRS.en-US.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Resources_Report.en-US\crySumaryWagePerDayRS.en-US.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>crySumaryWagePerDayRS.en-US.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Resources_Report.en-US\cryTimeAbsentRS.en-US.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>cryTimeAbsentRS.en-US.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Resources_Report.en-US\cryTimeAbsLateRS.en-US.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>cryTimeAbsLateRS.en-US.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Resources_Report.en-US\cryTimeworkSummarizeRS.en-US.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>cryTimeworkSummarizeRS.en-US.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Resources_Report.en-US\ExcelRS.en-US.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ExcelRS.en-US.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Resources_Report.en-US\HTFReportForm.en-US.resx" />
+    <EmbeddedResource Include="Config_Resources_Report.en-US\MonthLang.en-US.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MonthLang.en-US.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Resources_Report.en-US\rptCheckComingRS.en-US.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>rptCheckComingRS.en-US.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Resources_Report.en-US\rptEmpTimeINOUTRS.en-US.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>rptEmpTimeINOUTRS.en-US.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Resources_Report.en-US\rptEmpTimeWorkRS.en-US.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>rptEmpTimeWorkRS.en-US.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Resources_Report.en-US\rptEmpTimeWork_DetailRS.en-US.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>rptEmpTimeWork_DetailRS.en-US.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Resources_Report.en-US\rptEmpTimeWork_Detail_2RS.en-US.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>rptEmpTimeWork_Detail_2RS.en-US.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Resources_Report.en-US\rptTimeSheetRS.en-US.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>rptTimeSheetRS.en-US.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Resources_Report.en-US\rptTimeSumAbsLateByMonthRS.en-US.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>rptTimeSumAbsLateByMonthRS.en-US.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Resources_Report.en-US\rptTimeTableByMonthRS.en-US.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>rptTimeTableByMonthRS.en-US.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Resources_Report\cryAbsentByEmpRS.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>cryAbsentByEmpRS.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Resources_Report\cryCountAbsentRS.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>cryCountAbsentRS.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Resources_Report\cryRPT_MaxOTRS.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>cryRPT_MaxOTRS.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Resources_Report\cryRPT_OTreportRS.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>cryRPT_OTreportRS.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Resources_Report\cryRPT_SummarizeVacationByYear_Config2RS.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>cryRPT_SummarizeVacationByYear_Config2RS.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Resources_Report\cryRPT_SummarizeVacationByYear_ConfigRS.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>cryRPT_SummarizeVacationByYear_ConfigRS.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Resources_Report\crySumaryWagePerDayRS.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>crySumaryWagePerDayRS.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Resources_Report\cryTimeAbsentRS.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>cryTimeAbsentRS.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Resources_Report\cryTimeAbsLateRS.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>cryTimeAbsLateRS.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Resources_Report\cryTimeworkSummarizeRS.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>cryTimeworkSummarizeRS.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Resources_Report\ExcelRS.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ExcelRS.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Resources_Report\HTFReportForm.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>HTFReportForm.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Resources_Report\MonthLang.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MonthLang.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Resources_Report\rptCheckComingRS.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>rptCheckComingRS.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Resources_Report\rptEmpTimeINOUTRS.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>rptEmpTimeINOUTRS.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Resources_Report\rptEmpTimeWorkRS.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>rptEmpTimeWorkRS.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Resources_Report\rptEmpTimeWork_DetailRS.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>rptEmpTimeWork_DetailRS.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Resources_Report\rptEmpTimeWork_Detail_2RS.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>rptEmpTimeWork_Detail_2RS.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Resources_Report\rptTimeSheetRS.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>rptTimeSheetRS.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Resources_Report\rptTimeSumAbsLateByMonthRS.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>rptTimeSumAbsLateByMonthRS.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Resources_Report\rptTimeTableByMonthRS.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>rptTimeTableByMonthRS.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Result_Center\Other.en-US.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Other.en-US.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Result_Center\day.en-US.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>day.en-US.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Result_Center\day.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>day.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Result_Center\Other.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Other.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Result_Center\Search.en-US.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Search.en-US.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Result_Center\Search.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Search.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAbs.en-US.resx">
+      <DependentUpon>frmAbs.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAllowance.en-US.resx">
+      <DependentUpon>frmAllowance.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditTime.en-US.resx">
+      <DependentUpon>frmEditTime.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGetText.en-US.resx">
+      <DependentUpon>frmGetText.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLate.en-US.resx">
+      <DependentUpon>frmLate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOvertime.en-US.resx">
+      <DependentUpon>frmOvertime.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrivilegeVal.en-US.resx">
+      <DependentUpon>frmPrivilegeVal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrivilegeVal.resx">
+      <DependentUpon>frmPrivilegeVal.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAllowance.resx">
+      <DependentUpon>frmAllowance.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config\frmEmpCalOT.resx">
+      <DependentUpon>frmEmpCalOT.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTimework.en-US.resx">
+      <DependentUpon>frmTimework.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmValcation.en-US.resx">
+      <DependentUpon>frmValcation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmWorkingStatus.en-US.resx">
+      <DependentUpon>frmWorkingStatus.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmWorkingTime.en-US.resx">
+      <DependentUpon>frmWorkingTime.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Import\frmImportEmpProfile.resx">
+      <DependentUpon>frmImportEmpProfile.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ka\frmKa_Spacial.en-US.resx">
+      <DependentUpon>frmKa_Spacial.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ka\frmKa_Spacial.resx">
+      <DependentUpon>frmKa_Spacial.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ka\frmEmpSetTime.en-US.resx">
+      <DependentUpon>frmEmpSetTime.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ka\frmEmpSetTime.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmEmpSetTime.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config\frmLinkCodeToPayroll.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmLinkCodeToPayroll.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config\frmSetBarcode.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmSetBarcode.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ka\frmEmpSetTimeByDate.en-US.resx">
+      <DependentUpon>frmEmpSetTimeByDate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ka\frmEmpSetTimeByDate.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmEmpSetTimeByDate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ka\frmKaGroupUse.en-US.resx">
+      <DependentUpon>frmKaGroupUse.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ka\frmKaGroupUse.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmKaGroupUse.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ka\frmRestDetail.resx">
+      <DependentUpon>frmRestDetail.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ka\frmTimeKa.en-US.resx">
+      <DependentUpon>frmTimeKa.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ka\frmTimeKa.resx">
+      <DependentUpon>frmTimeKa.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmValcation.resx">
+      <DependentUpon>frmValcation.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAbs.resx">
+      <DependentUpon>frmAbs.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLate.resx">
+      <DependentUpon>frmLate.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditTime.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmEditTime.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config\frmLateSpaRate.resx">
+      <DependentUpon>frmLateSpaRate.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config\frmLateRate.resx">
+      <DependentUpon>frmLateRate.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGetText.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmGetText.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config\frmOTRate.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmOTRate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOvertime.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmOvertime.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTimework.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmTimework.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmWorkingStatus.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmWorkingStatus.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmWorkingTime.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmWorkingTime.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Language_resource\res_month.en-US.resx" />
+    <EmbeddedResource Include="Language_resource\res_month.resx" />
+    <EmbeddedResource Include="Listconfig\frmListEmp.resx">
+      <DependentUpon>frmListEmp.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\frmLoginDatabase.resx">
+      <DependentUpon>frmLoginDatabase.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\frmLoginPage.resx">
+      <DependentUpon>frmLoginPage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainMenu_LogIn\frmBasicPage2.en-US.resx">
+      <DependentUpon>frmBasicPage2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainMenu_LogIn\frmBasicPage2.resx">
+      <DependentUpon>frmBasicPage2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainMenu_LogIn\frmBasicPage3.en-US.resx">
+      <DependentUpon>frmBasicPage3.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainMenu_LogIn\frmBasicPage3.resx">
+      <DependentUpon>frmBasicPage3.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainMenu_LogIn\frmConfigViewCompany.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmConfigViewCompany.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainMenu_LogIn\frmLogin.resx">
+      <DependentUpon>frmLogin.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainMenu_LogIn\frmMainMenuDev.resx">
+      <DependentUpon>frmMainMenuDev.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainMenu_LogIn\frmMainMenuHD.en-US.resx">
+      <DependentUpon>frmMainMenuHD.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainMenu_LogIn\frmMainMenuHD.resx">
+      <DependentUpon>frmMainMenuHD.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainMenu_LogIn\frmUserLogIn.resx">
+      <DependentUpon>frmUserLogIn.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payroll_Config\frmCompany.en-US.resx">
+      <DependentUpon>frmCompany.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payroll_Config\frmCompany.resx">
+      <DependentUpon>frmCompany.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payroll_Config\frmDepartment.en-US.resx">
+      <DependentUpon>frmDepartment.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payroll_Config\frmDepartment.resx">
+      <DependentUpon>frmDepartment.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payroll_Config\frmDepartment_List.resx">
+      <DependentUpon>frmDepartment_List.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payroll_Config\frmDivision.en-US.resx">
+      <DependentUpon>frmDivision.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payroll_Config\frmDivision.resx">
+      <DependentUpon>frmDivision.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payroll_Config\frmDivision_List.resx">
+      <DependentUpon>frmDivision_List.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payroll_Config\frmEmp.en-US.resx">
+      <DependentUpon>frmEmp.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payroll_Config\frmEmp.resx">
+      <DependentUpon>frmEmp.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Permission\frmGenGroupMenuMasterHD.resx">
+      <DependentUpon>frmGenGroupMenuMasterHD.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Permission\frmGenMenuMaster.resx">
+      <DependentUpon>frmGenMenuMaster.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Permission\frmPermission.en-US.resx">
+      <DependentUpon>frmPermission.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Permission\frmPermission.resx">
+      <DependentUpon>frmPermission.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Permission\frmRightManagementControl.resx">
+      <DependentUpon>frmRightManagementControl.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Permission\frmSetUserLogIn.en-US.resx">
+      <DependentUpon>frmSetUserLogIn.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Permission\frmSetUserLogIn.resx">
+      <DependentUpon>frmSetUserLogIn.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForm\frmReportAllowance.en-US.resx">
+      <DependentUpon>frmReportAllowance.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForm\frmReportMonthlySumary.en-US.resx">
+      <DependentUpon>frmReportMonthlySumary.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForm\frmReportOvertime.en-US.resx">
+      <DependentUpon>frmReportOvertime.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForm\frmReportSumary.en-US.resx">
+      <DependentUpon>frmReportSumary.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForm\frmReportYearlySumary.en-US.resx">
+      <DependentUpon>frmReportYearlySumary.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForm\frmRptAllEmpWork.en-US.resx">
+      <DependentUpon>frmRptAllEmpWork.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForm\frmRptAllEmpWork_Detail.en-US.resx">
+      <DependentUpon>frmRptAllEmpWork_Detail.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForm\frmRptAllEmpWork_Detail2.en-US.resx">
+      <DependentUpon>frmRptAllEmpWork_Detail2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForm\frmRptCheckComing.en-US.resx">
+      <DependentUpon>frmRptCheckComing.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForm\frmRptCheckComingByPerson.en-US.resx">
+      <DependentUpon>frmRptCheckComingByPerson.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForm\frmRPTEmpValAbsLateByDate.en-US.resx">
+      <DependentUpon>frmRPTEmpValAbsLateByDate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForm\frmRptMaxOT.en-US.resx">
+      <DependentUpon>frmRptMaxOT.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForm\frmRPTSumaryWagePerDay.en-US.resx">
+      <DependentUpon>frmRPTSumaryWagePerDay.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForm\frmRPTSumaryWagePerDay.resx">
+      <DependentUpon>frmRPTSumaryWagePerDay.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForm\frmRptAllEmpWork_Detail2.resx">
+      <DependentUpon>frmRptAllEmpWork_Detail2.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForm\frmRPTEmpValAbsLateByDate.resx">
+      <DependentUpon>frmRPTEmpValAbsLateByDate.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForm\frmRPTSummarizeVacationByYear.en-US.resx">
+      <DependentUpon>frmRPTSummarizeVacationByYear.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForm\frmRPTSummarizeVacationByYear_Config.en-US.resx">
+      <DependentUpon>frmRPTSummarizeVacationByYear_Config.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForm\frmRPTTimeAbsent.en-US.resx">
+      <DependentUpon>frmRPTTimeAbsent.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForm\frmRptTimeAbsent_Config.en-US.resx">
+      <DependentUpon>frmRptTimeAbsent_Config.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForm\frmRPTTimeAbsLate.en-US.resx">
+      <DependentUpon>frmRPTTimeAbsLate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForm\frmRptTimeAbsLate_Config.en-US.resx">
+      <DependentUpon>frmRptTimeAbsLate_Config.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForm\frmRptTimeSheet.en-US.resx">
+      <DependentUpon>frmRptTimeSheet.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForm\frmRptTimeSumAbsentLate.en-US.resx">
+      <DependentUpon>frmRptTimeSumAbsentLate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForm\frmRptTimeTableByMonth.en-US.resx">
+      <DependentUpon>frmRptTimeTableByMonth.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForm\frmRPTTimeworkSumary.en-US.resx">
+      <DependentUpon>frmRPTTimeworkSumary.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForm\frmRPTTimeworkSumaryByWeek.en-US.resx">
+      <DependentUpon>frmRPTTimeworkSumaryByWeek.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForm\frmRPTTimeworkSumaryByWeek.resx">
+      <DependentUpon>frmRPTTimeworkSumaryByWeek.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForm\frmRptMaxOT.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmRptMaxOT.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForm\frmRPTSummarizeVacationByYear.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmRPTSummarizeVacationByYear.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForm\frmRPTSummarizeVacationByYear_Config.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmRPTSummarizeVacationByYear_Config.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForm\frmRPTTimeAbsLate.resx">
+      <DependentUpon>frmRPTTimeAbsLate.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForm\frmRptTimeAbsLate_Config.resx">
+      <DependentUpon>frmRptTimeAbsLate_Config.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForm\frmRPTTimeAbsent.resx">
+      <DependentUpon>frmRPTTimeAbsent.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForm\frmRptTimeAbsent_Config.resx">
+      <DependentUpon>frmRptTimeAbsent_Config.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForm\frmRptAllEmpWork_Detail.resx">
+      <DependentUpon>frmRptAllEmpWork_Detail.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForm\frmRptTimeTableByMonth.resx">
+      <DependentUpon>frmRptTimeTableByMonth.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForm\frmRptAllEmpWork.resx">
+      <DependentUpon>frmRptAllEmpWork.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForm\frmRptCheckComingByPerson.resx">
+      <DependentUpon>frmRptCheckComingByPerson.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForm\frmReportMonthlySumary.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmReportMonthlySumary.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForm\frmReportYearlySumary.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmReportYearlySumary.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForm\frmRptCheckComing.resx">
+      <DependentUpon>frmRptCheckComing.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForm\frmReportSumary.resx">
+      <DependentUpon>frmReportSumary.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForm\frmReportAllowance.resx">
+      <DependentUpon>frmReportAllowance.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForm\frmReportOvertime.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmReportOvertime.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForm\frmRptTimeSheet.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmRptTimeSheet.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForm\frmRptTimeSumAbsentLate.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmRptTimeSumAbsentLate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForm\frmRPTTimeworkSumary.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmRPTTimeworkSumary.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForm\frmRptTimeWorkSumary_Config.en-US.resx">
+      <DependentUpon>frmRptTimeWorkSumary_Config.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForm\frmRptTimeWorkSumary_Config.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmRptTimeWorkSumary_Config.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForm\frmRpt_OTreport.en-US.resx">
+      <DependentUpon>frmRpt_OTreport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForm\frmRpt_OTreport.resx">
+      <DependentUpon>frmRpt_OTreport.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\cryAbsentByEmp.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cryAbsentByEmp.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\cryCountAbsent.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cryCountAbsent.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\cryRPT_MaxOT.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cryRPT_MaxOT.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\cryRPT_OTreport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cryRPT_OTreport.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\cryRPT_SummarizeVacationByYear_Config.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cryRPT_SummarizeVacationByYear_Config.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\cryRPT_SummarizeVacationByYear_Config2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cryRPT_SummarizeVacationByYear_Config2.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\crySumaryWagePerDay.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crySumaryWagePerDay.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\cryTimeAbsent.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cryTimeAbsent.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\cryTimeAbsLate.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cryTimeAbsLate.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\cryTimeworkSummarize.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cryTimeworkSummarize.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptAllowance.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptAllowance.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptCheckComing.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCheckComing.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptEmpTimeINOUT.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptEmpTimeINOUT.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptEmpTimeWork.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptEmpTimeWork.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptEmpTimeWork_Detail.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptEmpTimeWork_Detail.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptEmpTimeWork_Detail_2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptEmpTimeWork_Detail_2.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptOtByPersonSuamry.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptOtByPersonSuamry.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptOTSheet.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptOTSheet.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptSumary.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptSumary.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptSumaryMonth.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptSumaryMonth.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptTimeSheet.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptTimeSheet.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptTimeSumAbsLateByMonth.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptTimeSumAbsLateByMonth.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptTimeTableByMonth.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptTimeTableByMonth.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\SJC_Report7.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SJC_Report7.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_dev\report_CheckComing.resx">
+      <DependentUpon>report_CheckComing.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_dev\report_CountAbsent.resx">
+      <DependentUpon>report_CountAbsent.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_dev\report_EmpTimeWork.resx">
+      <DependentUpon>report_EmpTimeWork.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_dev\report_EmpTimeWork_detail.resx">
+      <DependentUpon>report_EmpTimeWork_detail.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_dev\report_OTReport.resx">
+      <DependentUpon>report_OTReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_dev\report_TimeTableByMonth.resx">
+      <DependentUpon>report_TimeTableByMonth.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <EmbeddedResource Include="Report\rptEmpTimeWork_th-t.rpt" />
+    <None Include="TimeAttendance_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Actions-stock-save-as%281%29.ico" />
+    <None Include="Resources\Delete%282%29.ico" />
+    <None Include="Resources\Log-Out.ico" />
+    <None Include="Resources\Actions-edit-clear-locationbar-rtl.ico" />
+    <None Include="Resources\Fixicon-Slate-Works.ico" />
+    <None Include="Resources\Fixicon-Slate-Works1.ico" />
+    <None Include="Resources\Dapino-Summer-Holiday-Sun.ico" />
+    <None Include="Resources\Oxygen-Icons.org-Oxygen-Categories-applications-office.ico" />
+    <None Include="Resources\Mazenl77-I-Like-Buttons-Aqua-Next.ico" />
+    <None Include="Resources\Mazenl77-I-Like-Buttons-Aqua-Previous.ico" />
+    <None Include="Resources\Oxygen-Icons.org-Oxygen-Actions-media-seek-forward.ico" />
+    <None Include="Resources\Oxygen-Icons.org-Oxygen-Actions-media-seek-backward.ico" />
+    <None Include="Resources\login.png" />
+    <None Include="Resources\System-Key.ico" />
+    <None Include="Resources\logout.ico" />
+    <Content Include="ProgramEdit\PrigramEdit.txt" />
+    <None Include="Resources\Actions-stock-save-as%281%291.ico" />
+    <None Include="Resources\Pencil.ico" />
+    <None Include="Resources\Actions-button-cancel.ico" />
+    <None Include="Resources\Actions-edit-clear-locationbar-rtl1.ico" />
+    <None Include="Resources\Logout%281%29.ico" />
+    <None Include="Resources\3d-Database-Table.ico" />
+    <None Include="Resources\Icojam-Blue-Bits-User-settings.ico" />
+    <None Include="Resources\Printed-Matter-Books-icon.png" />
+    <None Include="Resources\Tatice-Operating-Systems-Windows%281%29.ico" />
+    <None Include="Resources\Apps-kmymoney-icon64.png" />
+    <None Include="Resources\Design-Database-development.ico" />
+    <None Include="Resources\Rafiqul-Hassan-Blogger-Key.ico" />
+    <None Include="Resources\Matter-Books.ico" />
+    <None Include="Resources\Alarm-Plus%281%29.ico" />
+    <None Include="Resources\Alarm-Minus.ico" />
+    <None Include="Resources\-Checked-user.ico" />
+    <None Include="Resources\Actions-button-cancel1.ico" />
+    <Content Include="TimeICon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Config\Emp\" />
+    <Folder Include="PrintPreview\" />
+    <Folder Include="src\controller\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

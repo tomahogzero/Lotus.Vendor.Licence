@@ -1,0 +1,190 @@
+Imports System.Data
+Imports System.Data.SqlClient
+Public Class frmCaseLatebyTime
+
+    Private Sub frmCaseLatebyTime_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        Call ClearData()
+        Call LoadData()
+        Call EnaCmd(True, False, False)
+    End Sub
+    Private Sub ClearData()
+        txtDeductions.Text = ""
+        txtEndLate.Text = ""
+        txtStartLate.Text = ""
+    End Sub
+
+    Private Sub EnaCmd(ByVal Add As Boolean, ByVal Edit As Boolean, ByVal Delete As Boolean)
+        btnAdd.Enabled = Add
+        btnEdit.Enabled = Edit
+        btnDelete.Enabled = Delete
+    End Sub
+
+    Private Sub LoadData()
+        Dim Da As New SqlDataAdapter
+        Dim Ds As New DataSet
+        Dim strSQL As String
+        Dim arrData() As String
+        Dim List As ListViewItem
+        strSQL = "Select Min_SP = Isnull(Min_SP,0)," & _
+                        " Min_ST = Isnull(Min_ST,0)," & _
+                        " Deduc = Isnull(Deduc,0) , " & _
+                        " NO " & _
+                " From TimeLateRateByMin "
+        Da = New SqlDataAdapter(strSQL, Conn)
+        Da.Fill(Ds, "Data")
+        With Ds.Tables("Data")
+            lstView.Items.Clear()
+            Dim I As Integer
+            For I = 0 To .Rows.Count - 1
+                arrData = New String() {1 + I, _
+                                    .Rows(I).Item("Min_ST"), _
+                                    .Rows(I).Item("Min_SP"), _
+                                    .Rows(I).Item("Deduc"), _
+                                    .Rows(I).Item("NO")}
+                List = New ListViewItem(arrData)
+                lstView.Items.Add(List)
+            Next
+            Ds.Clear()
+        End With
+    End Sub
+
+    Private Sub btnClear_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnClear.Click
+        Call ClearData()
+        Call LoadData()
+        Call EnaCmd(True, False, False)
+    End Sub
+
+    Private Sub btnAdd_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAdd.Click
+        If (txtStartLate.Text.Trim) = False Then
+            MsgBox("กรุณาป้อนเวลา (นาที) เป็นตัวเลขให้ถูกต้อง", MsgBoxStyle.Information, Me.Text)
+            txtStartLate.Focus()
+            Exit Sub
+        End If
+
+        If IsNumeric(txtEndLate.Text.Trim) = False Then
+            MsgBox("กรุณาป้อนเวลา (นาที) เป็นตัวเลขให้ถูกต้อง", MsgBoxStyle.Information, Me.Text)
+            txtEndLate.Focus()
+            Exit Sub
+        End If
+
+        If IsNumeric(txtDeductions.Text.Trim) = False Then
+            MsgBox("กรุณาป้อนจำนวนเงิน เป็นตัวเลขให้ถูกต้อง", MsgBoxStyle.Information, Me.Text)
+            txtDeductions.Focus()
+            Exit Sub
+        End If
+
+
+        Dim dCmd As New SqlCommand
+        Dim strSQL As String
+        Dim Tn As SqlTransaction
+        Tn = Conn.BeginTransaction
+        dCmd.Transaction = Tn
+        Try
+
+            strSQL = "Insert Into TimeLateRateByMin(Min_ST,Min_SP,Deduc) Values(" & _
+                    " " & txtStartLate.Text.Trim & "," & _
+                    " " & txtEndLate.Text.Trim & "," & _
+                    " " & txtDeductions.Text.Trim & ")"
+
+            dCmd.Connection = Conn
+            dCmd.CommandText = strSQL
+            dCmd.ExecuteNonQuery()
+
+            Tn.Commit()
+        Catch ex As Exception
+            Tn.Rollback()
+            MsgBox(ex.Message, MsgBoxStyle.Critical, Me.Text)
+            Exit Sub
+        End Try
+        Call btnClear_Click(Me, System.EventArgs.Empty)
+    End Sub
+
+    Private Sub btnEdit_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnEdit.Click
+        Dim Code As String = txtCode.Text.Trim
+
+        If (txtStartLate.Text.Trim) = False Then
+            MsgBox("กรุณาป้อนเวลา (นาที) เป็นตัวเลขให้ถูกต้อง", MsgBoxStyle.Information, Me.Text)
+            txtStartLate.Focus()
+            Exit Sub
+        End If
+
+        If IsNumeric(txtEndLate.Text.Trim) = False Then
+            MsgBox("กรุณาป้อนเวลา (นาที) เป็นตัวเลขให้ถูกต้อง", MsgBoxStyle.Information, Me.Text)
+            txtEndLate.Focus()
+            Exit Sub
+        End If
+
+        If IsNumeric(txtDeductions.Text.Trim) = False Then
+            MsgBox("กรุณาป้อนจำนวนเงิน เป็นตัวเลขให้ถูกต้อง", MsgBoxStyle.Information, Me.Text)
+            txtDeductions.Focus()
+            Exit Sub
+        End If
+
+        Dim dCmd As New SqlCommand
+        Dim strSQL As String
+        Dim Tn As SqlTransaction
+        Tn = Conn.BeginTransaction
+        dCmd.Transaction = Tn
+        Try
+
+            strSQL = " UPDATE TimeLateRateByMin " & _
+                    " SET Min_ST = " & txtStartLate.Text & " ," & _
+                    " Min_SP = " & txtEndLate.Text & "," & _
+                    " Deduc = " & txtDeductions.Text.Trim & "" & _
+                    " where NO = " & Code & " "
+
+            dCmd.Connection = Conn
+            dCmd.CommandText = strSQL
+            dCmd.ExecuteNonQuery()
+            Tn.Commit()
+        Catch ex As Exception
+            Tn.Rollback()
+            MsgBox(ex.Message, MsgBoxStyle.Critical, Me.Text)
+            Exit Sub
+        End Try
+        Call btnClear_Click(Me, System.EventArgs.Empty)
+    End Sub
+
+    Private Sub lstView_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles lstView.SelectedIndexChanged
+        With lstView
+            If .SelectedItems.Count = 0 Then Exit Sub
+            Dim Code As String = .SelectedItems(0).SubItems(4).Text.Trim
+            Dim start As String = .SelectedItems(0).SubItems(1).Text.Trim
+            Dim stopt As String = .SelectedItems(0).SubItems(2).Text.Trim
+            Dim DeDuc As String = .SelectedItems(0).SubItems(3).Text.Trim
+            txtCode.Text = Code.Trim
+            txtDeductions.Text = DeDuc.Trim
+            txtStartLate.Text = start.Trim
+            txtEndLate.Text = stopt.Trim
+        End With
+        Call EnaCmd(False, True, True)
+    End Sub
+
+
+    Private Sub btnDelete_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnDelete.Click
+
+        Dim dCmd As New SqlCommand
+        Dim strSQL As String
+        Dim Tn As SqlTransaction
+        Tn = Conn.BeginTransaction
+        dCmd.Transaction = Tn
+        Try
+            strSQL = "Delete From TimeLateRateByMin" & _
+                    " Where NO = '" & txtCode.Text.Trim & "'"
+            dCmd.Connection = Conn
+            dCmd.CommandText = strSQL
+            dCmd.ExecuteNonQuery()
+
+            Tn.Commit()
+        Catch ex As Exception
+            Tn.Rollback()
+            MsgBox(ex.Message, MsgBoxStyle.Critical, Me.Text)
+            Exit Sub
+        End Try
+        Call btnClear_Click(Me, System.EventArgs.Empty)
+    End Sub
+
+    Private Sub btnExit_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnExit.Click
+        Me.Close()
+    End Sub
+End Class

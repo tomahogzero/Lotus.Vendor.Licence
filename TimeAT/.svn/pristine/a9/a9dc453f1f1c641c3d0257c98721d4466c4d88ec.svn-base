@@ -1,0 +1,621 @@
+﻿Imports System.Data
+Imports System.Data.SqlClient
+
+Public Class frmRpt_OTreport
+
+    Private Sub btnReport_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnReport.Click
+
+
+        Call GenCodeEmp()
+        ' Call GenTimeSheet()
+
+        If IsDate(ConvertDate(txtDateStart.Text.Trim)) = False Then
+            MsgBox("กรุณาป้อนวันที่ให้ถูกต้องด้วย", MsgBoxStyle.Information, Me.Text)
+            txtDateStart.Focus()
+            Exit Sub
+        End If
+        If IsDate(ConvertDate(txtDateStop.Text.Trim)) = False Then
+            MsgBox("กรุณาป้อนวันที่ให้ถูกต้องด้วย", MsgBoxStyle.Information, Me.Text)
+            txtDateStop.Focus()
+            Exit Sub
+        End If
+
+        If chkFixedWHour.Checked = True Then
+            If IsNumeric(txtFixedWHour.Text) = False Then
+                MsgBox("กรุณาป้อนตัวเลขให้ถูกต้องด้วย", MsgBoxStyle.Information, Me.Text)
+                txtFixedWHour.Focus()
+                Exit Sub
+            End If
+        End If
+
+        btnReport.Text = "รอสักครู่..."
+        btnReport.Enabled = False
+        Call GenTimeSheet()
+        btnReport.Text = "รายงาน"
+        btnReport.Enabled = True
+
+        ReportPrint = Report.Print_OTReport
+        Dim Rpt As New frmViewReport
+        Rpt.ShowDialog()
+    End Sub
+
+
+    Private Sub GenTimeSheet()
+        Dim dCmd As New SqlCommand
+
+        Dim DateST As Date = ConvertDate(txtDateStart.Text.Trim)
+        Dim DateSP As Date = ConvertDate(txtDateStop.Text.Trim)
+
+        Dim dRun As Date = DateST
+        Dim DT As DataTable = GetDTEmp(dCmd, Format(DateST, "yyyy/MM/dd"), Format(DateSP, "yyyy/MM/dd"))
+
+        PbOverall.Value = 0
+        PbOverall.Maximum = (DateDiff(DateInterval.Day, DateST, DateSP)) + 1
+
+        Dim I As Integer = 0
+        Dim D As Integer = 0
+        Do Until dRun > DateSP
+            D += 1
+
+            If D > 31 Then Exit Do
+            'lblStatus1.Text = "วันที่ " & Format(dRun, "dd/MM/yyyy")
+            PbOverall.Text = "วันที่ " & Format(dRun, "dd/MM/yyyy")
+            Application.DoEvents()
+            I = 0
+            PB_Emp.Value = 0
+            PB_Emp.Maximum = DT.Rows.Count
+            For Each dr As DataRow In DT.Rows
+                I += 1
+                PB_Emp.Value = I
+                'lblStatus2.Text = " พนักงาน : " & I & "/" & DT.Rows.Count
+                PB_Emp.Text = " พนักงาน : " & I & "/" & DT.Rows.Count
+
+                Application.DoEvents()
+
+
+                Call UpdateData_OT(dCmd, Format(dRun, "yyyy/MM/dd"), dr("Code"), D)
+                ' Call GetUpdate_Hour(dCmd, Format(dRun, "yyyy/MM/dd HH:mm"), dr("Code"), D)
+            Next
+            dRun = dRun.AddDays(1)
+            PbOverall.Value += 1
+        Loop
+        'Catch ex As Exception
+        '    MsgBox(ex.Message, MsgBoxStyle.Information, Me.Text)
+        '    Exit Sub
+        'End Try
+    End Sub
+
+    Private Sub GenCodeEmp()
+        Dim dCmd As New SqlCommand
+        If txtDateStart.Text = "  /  /" Or txtDateStop.Text = "  /  /" Then
+            MsgBox("กรุณาป้อนวันที่ด้วย", MsgBoxStyle.OkOnly, "ผิดพลาด")
+            Exit Sub
+        End If
+
+
+        Dim DateST As Date = ConvertDate(txtDateStart.Text.Trim)
+        Dim DateSP As Date = ConvertDate(txtDateStop.Text.Trim)
+
+        'Try
+        Call ClearData(dCmd)
+
+        Dim i As Integer = "0"
+        Dim dRun As Date = DateST
+        Dim Hdate As String = ""
+
+
+        Dim DT As DataTable = GetDTEmp(dCmd, Format(DateST, "yyyy/MM/dd"), Format(DateSP, "yyyy/MM/dd"))
+        Do Until dRun > DateSP
+
+            ' For Each dr As DataRow In DT.Rows
+            i += 1
+            Hdate = "H" & i
+            If i > "31" Then
+                Exit Do
+            End If
+
+            If ChkDataNull_HotReport() = False Then
+                StrSql = "Insert into Hrpt_Otreport  (" & Hdate & ")Values ('" & Mid(Format(dRun, "dd/MM/yyyy"), 1, 2) & "')"
+            Else
+                StrSql = "Update Hrpt_Otreport Set " & Hdate & "='" & Mid(Format(dRun, "dd/MM/yyyy"), 1, 2) & "'"
+            End If
+
+
+            dCmd.Connection = Conn
+            dCmd.CommandText = StrSql
+            dCmd.ExecuteNonQuery()
+            ' Call UpdateData(dCmd, Format(dRun, "yyyy/MM/dd"), dr("Code"))
+
+            'Next
+            dRun = dRun.AddDays(1)
+
+
+        Loop
+
+        PB_Emp.Value = 1
+        PB_Emp.Maximum = DT.Rows.Count
+        For Each dr As DataRow In DT.Rows
+            Call InsertDataFrist(dCmd, dr("Code"), dr("OtId"), dr("Salary"))
+            PB_Emp.Value += 1
+        Next
+
+    End Sub
+
+    Private Sub InsertDataFrist(ByVal dCmd As SqlCommand, ByVal Code As String, ByVal OTid As String, ByVal Salary As Single)
+        Dim Da As New SqlDataAdapter
+        Dim Ds As New DataSet
+        Dim Strsql As String = ""
+        Dim db As New db
+
+        Dim strType As String = ""
+        Dim Data As New ArrayList
+        Dim ChkOT As Single = 0
+
+        If OTid = 1 Then
+            ChkOT = 0
+        ElseIf OTid = 2 Then
+            ChkOT = (Salary / 8) * 1.5
+        ElseIf OTid = 3 Then
+            ChkOT = 35
+        ElseIf OTid = 4 Then
+            ChkOT = 100
+        ElseIf OTid = 5 Then
+            ChkOT = 0
+        Else
+            ChkOT = 0
+        End If
+
+        Data.Clear() : strType = ""
+        Data.Add(Code.Trim) : strType &= "T"
+        Data.Add(ChkOT) : strType &= "T"
+
+        Strsql = "Insert Into rpt_Otreport(Code,OT) " & _
+                        " Values(@P1,@P2)"
+        db.ExecuteCommand(Conn, dCmd, Strsql, strType, Data)
+
+    End Sub
+
+    Private Sub ClearData(ByVal dCmd As SqlCommand)
+        Dim strSQL As String
+        Dim Da As New SqlDataAdapter
+        Dim Ds As New DataSet
+
+        strSQL = "Delete From rpt_Otreport"
+        dCmd.Connection = Conn
+        dCmd.CommandText = strSQL
+        dCmd.ExecuteNonQuery()
+
+
+        strSQL = "Delete From Hrpt_Otreport"
+        dCmd.Connection = Conn
+        dCmd.CommandText = strSQL
+        dCmd.ExecuteNonQuery()
+    End Sub
+
+
+    Function GetDTEmp(ByVal dCmd As SqlCommand, ByVal DateST As String, ByVal DateSP As String) As DataTable
+        Dim strSQL As String
+        Dim DA As New SqlDataAdapter
+        Dim Ds As New DataSet
+
+        'Dim DivId As String = GetDivId(cboDivision1.Text.Trim)
+        'Dim DeptId As String = GetDeptId(cboDepartment1.Text.Trim)
+        'Dim SecId As String = GetSecId(cboSection.Text.Trim)
+        Dim Company_Id As String = GetData.GetCompanyId(cboCompany.Text.Trim)
+        Dim Division_Id As String = GetData.GetDivisionId(cboDivision.Text.Trim)
+        Dim Department_Id As String = GetData.GetDepartmentId(cboDepartment.Text.Trim)
+        Dim EmpGroup_Id As String = GetData.GetEmpGroupId(cboEmpGroup.Text.Trim)
+
+
+        strSQL = "select Code,divid,Deptid,Secid,Groupid,Position," & _
+                            " Fname, Lname, WorkStatus, CompanyId, Brokerid, " & _
+                            " OtId=Isnull(OtId,''),Salary" & _
+                 " from Emp Left Join EmpconfigOT " & _
+                            " On Emp.code=empconfigOt.empcode " & _
+                 " Where WorkStatus='W' "
+
+
+        If txtCode1.Text <> "" Then   ' ค้นหาเฉพาะรหัสพนักงาน
+            strSQL &= " And Emp.Code='" & txtCode1.Text.Trim & "'"
+        End If
+        If txtNameSearch.Text <> "" Then  ' ค้นหาเฉพาะชื่อ
+            strSQL &= " And Emp.Fname like '%" & txtNameSearch.Text.Trim & "%'"
+        End If
+
+        If cboCompany.SelectedIndex > 0 Then  ' บริษัท
+            strSQL &= " and Emp.CompanyId = '" & Company_Id.Trim & "'"
+        End If
+        If cboDivision.SelectedIndex > 0 Then  ' ฝ่าย
+            strSQL &= " and Emp.DivId = '" & Division_Id.Trim & "'"
+        End If
+        If cboDepartment.SelectedIndex > 0 Then '  แผนก
+            strSQL &= " and Emp.DeptId = '" & Department_Id.Trim & "'"
+        End If
+        If cboPosition.SelectedIndex > 0 Then ' ตำแหน่ง
+            strSQL &= " And Emp.Position='" & cboPosition.Text.Trim & "'"
+        End If
+        If cboEmpGroup.SelectedIndex > 0 Then  ' กลุ่ม
+            strSQL &= " And Emp.GroupId='" & EmpGroup_Id.Trim & "'"
+        End If
+
+        If rdMonth.Checked = True Then ' เฉพาะรายเดือน
+            strSQL &= " And Emp.WageType='M'"
+        End If
+        If rdDay.Checked = True Then  ' เฉพาะรายวัน
+            strSQL &= " And Emp.WageType='D'And Emp.Contractor=0 "
+        End If
+        If rdContractor.Checked = True Then  ' รายเหมา
+            strSQL &= " And Emp.WageType='D' And Emp.Contractor=1"
+        End If
+
+
+        strSQL &= " Order by Code"
+
+        dCmd.Connection = Conn
+        dCmd.CommandText = strSQL
+        dCmd.ExecuteNonQuery()
+        DA.SelectCommand = dCmd
+        DA.Fill(Ds, "data")
+        Return Ds.Tables("data")
+    End Function
+
+
+    Function DateInIsExist(ByVal dCmd As SqlCommand, ByVal DateIn As String, ByVal Code As String) As Boolean
+        Dim strSQL As String
+        Dim Da As New SqlDataAdapter
+        Dim Ds As New DataSet
+
+        strSQL = "Select Code From TimeOvertime " & _
+                " Where Convert(nVarchar(10),DateIn,111) = '" & DateIn.Trim & "' and Code = '" & Code.Trim & "'"
+        dCmd.Connection = Conn
+        dCmd.CommandText = strSQL
+        dCmd.ExecuteNonQuery()
+
+        Da.SelectCommand = dCmd
+        Da.Fill(Ds, "data")
+
+        With Ds.Tables("data")
+            If .Rows.Count = 0 Then
+                Return False
+            Else
+                Return True
+            End If
+        End With
+    End Function
+
+    Private Sub UpdateData_OT(ByVal dCmd As SqlCommand, ByVal DateIn As String, ByVal Code As String, ByVal D As Integer)
+        GetUpdate_OT(dCmd, DateIn, Code, D)  ' Insert OT การทำงาน
+        GetUpdate_Hour(dCmd, DateIn, Code, D) ' insert เวลาที่ทำงาน คิดเป็นชั่วโมง
+     
+    End Sub
+
+    Private Sub GetUpdate_OT(ByVal dCmd As SqlCommand, ByVal DateIn As String, ByVal Code As String, ByVal D As Integer)
+        Dim Da As New SqlDataAdapter
+        Dim Ds As New DataSet
+        Dim Strsql As String = ""
+        Dim db As New db
+        Dim OTName As String = ""
+        Dim OT_Amt As String = ""
+
+        Dim strType As String = ""
+        Dim Data As New ArrayList
+
+        Strsql = "select Code,Datein,OT15,OTH,OTPeriod,Otid " & _
+                " from timeOvertime ToT Inner join empconfigOt EOT" & _
+                      " On tot.code=eot.empcode " & _
+                " Where convert(nvarchar(10),Datein,111)='" & DateIn.Trim & "' " & _
+                            " And Code='" & Code.Trim & "'"
+
+        Try
+            dCmd.Connection = Conn
+            dCmd.CommandText = Strsql
+            dCmd.ExecuteNonQuery()
+
+            Da.SelectCommand = dCmd
+            Da.Fill(Ds, "DATA")
+
+            With Ds.Tables("DATA")
+                If .Rows.Count = 0 Then
+                    OT_Amt = "0"
+                Else
+                    ' จำนวนชั่วโมง ตามลำดับ  1 คาบ 2 fix 3. เป็นบาท
+                    If .Rows(0).Item("OTPeriod") > 0 Then  ' แบบคาบ 
+                        OTName = "Period"
+                        OT_Amt = .Rows(0).Item("OTPeriod")
+                    ElseIf .Rows(0).Item("OTH") > 0 Then   ' แบบ fix  1.5
+                        If .Rows(0).Item("OtId") = 4 Then
+                            OTName = "OTH"
+                            OT_Amt = "0"
+                        Else
+                            OTName = "OTH"
+                            OT_Amt = .Rows(0).Item("OTH")
+                        End If
+
+                    ElseIf .Rows(0).Item("OT15") Then   ' แบบเป็นเงินบาท  เช่น 35 
+                        OTName = "OT15"
+                        OT_Amt = .Rows(0).Item("OT15")
+                    Else
+                        OT_Amt = "0"
+                    End If
+                End If
+
+            End With
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.OkOnly, "ผิดพลาด")
+            Exit Sub
+        End Try
+        Dim Day_Name As String = ""
+        Day_Name = "OTH" & D
+
+        Data.Clear() : strType = ""
+        Data.Add(Code.Trim) : strType &= "T"
+        Data.Add(OT_Amt) : strType &= "T"
+
+        Strsql = "Update rpt_Otreport Set " & Day_Name & "=@P2 where Code=@P1"
+        db.ExecuteCommand(Conn, dCmd, Strsql, strType, Data)
+
+
+    End Sub
+
+    Private Sub GetUpdate_Hour(ByVal dCmd As SqlCommand, ByVal DateIn As String, ByVal Code As String, ByVal D As Integer)
+        Dim Da As New SqlDataAdapter
+        Dim Ds As New DataSet
+        Dim Strsql As String = ""
+        Dim db As New db
+        Dim OTName As String = ""
+        Dim OT_Amt As String = ""
+
+        Dim strType As String = ""
+        Dim Data As New ArrayList
+        Dim Hour_Day As String = ""
+        Dim Day_Hour As String = ""
+
+        Strsql = "select hour_day = Isnull(dbo.fDaydo_day_full_hour" & _
+                             " (Code, " & _
+                             " REPLACE(Convert(nVarchar(10),DateIn,111),'-','/')," & _
+                             " REPLACE(Convert(nVarchar(16),Time1,121),'-','/')," & _
+                             " replace(convert(nvarchar(16),dbo.fGetTimeOut(Code,Convert(nVarchar(10),DateIn,111)),121),'-','/')),0) " & _
+                    " from timework " & _
+                    " Where code='" & Code.Trim & "' And " & _
+                         " Convert(nvarchar(10),Datein,111)='" & DateIn.Trim & "'"
+
+        Try
+            dCmd.Connection = Conn
+            dCmd.CommandText = Strsql
+            dCmd.ExecuteNonQuery()
+            Da.SelectCommand = dCmd
+            Da.Fill(Ds, "DATA")
+
+            With Ds.Tables("DATA")
+
+                If .Rows.Count = 0 Then
+                    Day_Hour = "0"
+                Else
+                    If chkFixedWHour.Checked = True Then
+                        Day_Hour = IIf(.Rows(0).Item("hour_day") > CSng(txtFixedWHour.Text), CSng(txtFixedWHour.Text), .Rows(0).Item("hour_day"))
+                    Else
+                        Day_Hour = .Rows(0).Item("hour_day")
+                    End If
+                    ' / 60
+                End If
+            End With
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            Exit Sub
+        End Try
+        Dim Day_name As String = ""
+        Day_name = "D" & D   ' หาลำกับวันที
+
+        Data.Clear() : strType = ""
+        Data.Add(Code.Trim) : strType &= "T"
+        Data.Add(Day_Hour) : strType &= "T"
+
+        Strsql = "Update rpt_Otreport Set " & day_name & "=@P2 where Code=@P1"
+        db.ExecuteCommand(Conn, dCmd, Strsql, strType, Data)
+
+
+
+
+    End Sub
+
+    Private Sub btnExit_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnExit.Click
+        Me.Close()
+    End Sub
+
+    Private Sub frmRpt_OTreport_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        Call LoadCompany()
+        Call LoadDivision()
+        Call LoadDepartment()
+        Call LoadPosition()
+        Call LoadEmpGroup()
+    End Sub
+
+    Private Sub LoadDepartment()
+
+        '--------------------------------------------
+        Dim DA As New SqlDataAdapter
+        Dim Ds As New DataSet
+        Dim Strsql As String = ""
+
+        strSQL = "select DeptId,Department " & _
+            " from department "
+
+        If cboCompany.SelectedIndex > 0 Then
+            Strsql &= " Where DeptId In (Select DeptId From Emp " & _
+                                    " Where WorkStatus  = 'W' and " & _
+                                            " CompanyId = '" & GetData.GetCompanyId(cboCompany.Text) & "')"
+        End If
+
+        strSQL = strSQL & " Order By Department"
+
+        Da = New SqlDataAdapter(strSQL, Conn)
+        Da.Fill(Ds, "data")
+
+        cboDepartment.Items.Clear()
+        cboDepartment.Items.Add("ทั้งหมด")
+        With Ds.Tables("data")
+            For Each Dr As DataRow In .Rows
+                cboDepartment.Items.Add(Dr("Department"))
+            Next
+            cboDepartment.SelectedIndex = 0
+        End With
+    End Sub
+
+    Private Sub LoadDivision()
+
+        Dim DA As New SqlDataAdapter
+        Dim Ds As New DataSet
+        Dim Strsql As String = ""
+
+        Strsql = "select DivId,Division" & _
+            " from DiviSion "
+
+        If cboCompany.SelectedIndex > 0 Then
+            Strsql &= " Where DivId In (Select DivId From Emp " & _
+                                    " Where WorkStatus  = 'W' and " & _
+                                            " CompanyId = '" & GetData.GetCompanyId(cboCompany.Text) & "')"
+        End If
+
+        Strsql = Strsql & " Order By Division"
+
+        DA = New SqlDataAdapter(Strsql, Conn)
+        DA.Fill(Ds, "data")
+
+        cboDivision.Items.Clear()
+        cboDivision.Items.Add("ทั้งหมด")
+        With Ds.Tables("data")
+            For Each Dr As DataRow In .Rows
+                cboDivision.Items.Add(Dr("Division"))
+            Next
+            cboDivision.SelectedIndex = 0
+        End With
+    End Sub
+
+
+    Private Sub LoadPosition()
+        Dim Da As SqlDataAdapter
+        Dim Ds As New DataSet
+        Dim strSQL As String = ""
+        strSQL = "select Position " & _
+                " From Emp "
+
+        If cboPosition.SelectedIndex > 0 Then
+            strSQL &= " Where WorkStatus  = 'W' and " & _
+                                            " CompanyId = '" & GetData.GetCompanyId(cboCompany.Text) & "'"
+        End If
+
+        strSQL = strSQL & "Group by Position Order By Position "
+
+        '" Group By Position " & _
+        '" Order By Position"
+
+        Da = New SqlDataAdapter(strSQL, Conn)
+        Da.Fill(Ds, "data")
+        With Ds.Tables("data")
+            cboPosition.Items.Clear()
+            cboPosition.Items.Add("(ทั้งหมด)")
+
+            For Each dr As DataRow In .Rows
+                cboPosition.Items.Add(dr("Position"))
+            Next
+            cboPosition.SelectedIndex = 0
+        End With
+    End Sub
+
+    Private Sub LoadEmpGroup()
+        Dim Da As SqlDataAdapter
+        Dim Ds As New DataSet
+        Dim strSQL As String = ""
+        strSQL = "select GroupName " & _
+                " From EmpGroup "
+
+        If cboEmpGroup.SelectedIndex > 0 Then
+            strSQL &= " Where Groupid In (Select Groupid From Emp " & _
+                                    " Where WorkStatus  = 'W' and " & _
+                                            " CompanyId = '" & GetData.GetCompanyId(cboCompany.Text) & "')"
+        End If
+
+        strSQL = strSQL & " Order By Groupname"
+
+        '" Order By GroupName"
+
+        Da = New SqlDataAdapter(strSQL, Conn)
+        Da.Fill(Ds, "data")
+        With Ds.Tables("data")
+            cboEmpGroup.Items.Clear()
+            cboEmpGroup.Items.Add("(ทั้งหมด)")
+
+            For Each dr As DataRow In .Rows
+                cboEmpGroup.Items.Add(dr("GroupName"))
+            Next
+            cboEmpGroup.SelectedIndex = 0
+        End With
+    End Sub
+
+    Private Sub LoadCompany()
+        Dim Da As New SqlDataAdapter
+        Dim Ds As New DataSet
+        Dim strSQL As String
+        strSQL = "Select CompanyName From Company_Sub "
+        Da = New SqlDataAdapter(strSQL, Conn)
+        Da.Fill(Ds, "Data")
+        With Ds.Tables("Data")
+            cboCompany.Items.Clear()
+            cboCompany.Items.Add("ทั้งหมด")
+
+            Dim I As Integer
+            For I = 0 To .Rows.Count - 1
+                cboCompany.Items.Add(.Rows(I).Item("CompanyName"))
+            Next
+            Ds.Clear()
+            cboCompany.SelectedIndex = 0
+        End With
+    End Sub
+
+    Private Sub cboCompany_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cboCompany.SelectedIndexChanged
+        Call LoadDepartment()
+        Call LoadDivision()
+        Call LoadEmpGroup()
+        Call LoadPosition()
+    End Sub
+
+    Private Sub txtNameSearch_GotFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtNameSearch.GotFocus
+        txtCode1.Text = ""
+    End Sub
+
+    Private Sub txtNameSearch_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtNameSearch.TextChanged
+
+    End Sub
+
+    Private Sub txtCode1_GotFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtCode1.GotFocus
+        txtNameSearch.Text = ""
+    End Sub
+
+    Private Sub txtCode1_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtCode1.TextChanged
+
+    End Sub
+
+    Function ChkDataNull_HotReport()
+        Dim DA As New SqlDataAdapter
+        Dim DS As New DataSet
+        Dim Strsql As String = ""
+
+        Strsql = "Select * from Hrpt_Otreport"
+
+        Try
+            DA = New SqlDataAdapter(Strsql, Conn)
+            DA.Fill(DS, "DATA")
+
+            With DS.Tables("DATA")
+                If .Rows.Count = 0 Then
+                    Return False
+                Else
+                    Return True
+                End If
+            End With
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            Return False
+        End Try
+    End Function
+End Class

@@ -1,0 +1,490 @@
+<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+Partial Class frmPrivilegeVal
+    Inherits System.Windows.Forms.Form
+
+    'Form overrides dispose to clean up the component list.
+    <System.Diagnostics.DebuggerNonUserCode()> _
+    Protected Overrides Sub Dispose(ByVal disposing As Boolean)
+        If disposing AndAlso components IsNot Nothing Then
+            components.Dispose()
+        End If
+        MyBase.Dispose(disposing)
+    End Sub
+
+    'Required by the Windows Form Designer
+    Private components As System.ComponentModel.IContainer
+
+    'NOTE: The following procedure is required by the Windows Form Designer
+    'It can be modified using the Windows Form Designer.  
+    'Do not modify it using the code editor.
+    <System.Diagnostics.DebuggerStepThrough()> _
+    Private Sub InitializeComponent()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox
+        Me.Label5 = New System.Windows.Forms.Label
+        Me.txtDeptId = New System.Windows.Forms.TextBox
+        Me.txtSite = New System.Windows.Forms.TextBox
+        Me.txtDepartment = New System.Windows.Forms.TextBox
+        Me.txtName = New System.Windows.Forms.TextBox
+        Me.txtCode = New System.Windows.Forms.TextBox
+        Me.Label4 = New System.Windows.Forms.Label
+        Me.Label3 = New System.Windows.Forms.Label
+        Me.Label2 = New System.Windows.Forms.Label
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox
+        Me.lblValCode = New System.Windows.Forms.Label
+        Me.cboWorkingStatus = New System.Windows.Forms.ComboBox
+        Me.Label8 = New System.Windows.Forms.Label
+        Me.Label1 = New System.Windows.Forms.Label
+        Me.Label6 = New System.Windows.Forms.Label
+        Me.txtAmt = New System.Windows.Forms.TextBox
+        Me.lblId = New System.Windows.Forms.Label
+        Me.Panel1 = New System.Windows.Forms.Panel
+        Me.btnEdit = New System.Windows.Forms.Button
+        Me.btnExit = New System.Windows.Forms.Button
+        Me.btnClear = New System.Windows.Forms.Button
+        Me.btnDelete = New System.Windows.Forms.Button
+        Me.btnAdd = New System.Windows.Forms.Button
+        Me.lstVacation = New System.Windows.Forms.ListView
+        Me.colNo = New System.Windows.Forms.ColumnHeader
+        Me.colID = New System.Windows.Forms.ColumnHeader
+        Me.colCode = New System.Windows.Forms.ColumnHeader
+        Me.colFName = New System.Windows.Forms.ColumnHeader
+        Me.colLName = New System.Windows.Forms.ColumnHeader
+        Me.colValType = New System.Windows.Forms.ColumnHeader
+        Me.colAmt = New System.Windows.Forms.ColumnHeader
+        Me.GroupBox4 = New System.Windows.Forms.GroupBox
+        Me.lstSumaryVacation = New System.Windows.Forms.ListView
+        Me.ColumnHeader1 = New System.Windows.Forms.ColumnHeader
+        Me.colVacation = New System.Windows.Forms.ColumnHeader
+        Me.colDay = New System.Windows.Forms.ColumnHeader
+        Me.txtYearly = New System.Windows.Forms.TextBox
+        Me.Label7 = New System.Windows.Forms.Label
+        Me.colAmtUse = New System.Windows.Forms.ColumnHeader
+        Me.colAmtRemain = New System.Windows.Forms.ColumnHeader
+        Me.GroupBox1.SuspendLayout()
+        Me.GroupBox2.SuspendLayout()
+        Me.Panel1.SuspendLayout()
+        Me.GroupBox4.SuspendLayout()
+        Me.SuspendLayout()
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.Label5)
+        Me.GroupBox1.Controls.Add(Me.txtDeptId)
+        Me.GroupBox1.Controls.Add(Me.txtSite)
+        Me.GroupBox1.Controls.Add(Me.txtDepartment)
+        Me.GroupBox1.Controls.Add(Me.txtName)
+        Me.GroupBox1.Controls.Add(Me.txtCode)
+        Me.GroupBox1.Controls.Add(Me.Label4)
+        Me.GroupBox1.Controls.Add(Me.Label3)
+        Me.GroupBox1.Controls.Add(Me.Label2)
+        Me.GroupBox1.Location = New System.Drawing.Point(2, 36)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(368, 124)
+        Me.GroupBox1.TabIndex = 1
+        Me.GroupBox1.TabStop = False
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(9, 97)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(25, 13)
+        Me.Label5.TabIndex = 6
+        Me.Label5.Text = "Site"
+        '
+        'txtDeptId
+        '
+        Me.txtDeptId.Location = New System.Drawing.Point(68, 68)
+        Me.txtDeptId.Name = "txtDeptId"
+        Me.txtDeptId.ReadOnly = True
+        Me.txtDeptId.Size = New System.Drawing.Size(44, 20)
+        Me.txtDeptId.TabIndex = 5
+        Me.txtDeptId.TabStop = False
+        '
+        'txtSite
+        '
+        Me.txtSite.Location = New System.Drawing.Point(68, 94)
+        Me.txtSite.Name = "txtSite"
+        Me.txtSite.ReadOnly = True
+        Me.txtSite.Size = New System.Drawing.Size(289, 20)
+        Me.txtSite.TabIndex = 4
+        Me.txtSite.TabStop = False
+        '
+        'txtDepartment
+        '
+        Me.txtDepartment.Location = New System.Drawing.Point(118, 68)
+        Me.txtDepartment.Name = "txtDepartment"
+        Me.txtDepartment.ReadOnly = True
+        Me.txtDepartment.Size = New System.Drawing.Size(239, 20)
+        Me.txtDepartment.TabIndex = 3
+        Me.txtDepartment.TabStop = False
+        '
+        'txtName
+        '
+        Me.txtName.Location = New System.Drawing.Point(68, 42)
+        Me.txtName.Name = "txtName"
+        Me.txtName.ReadOnly = True
+        Me.txtName.Size = New System.Drawing.Size(289, 20)
+        Me.txtName.TabIndex = 2
+        Me.txtName.TabStop = False
+        '
+        'txtCode
+        '
+        Me.txtCode.Location = New System.Drawing.Point(68, 16)
+        Me.txtCode.Name = "txtCode"
+        Me.txtCode.Size = New System.Drawing.Size(100, 20)
+        Me.txtCode.TabIndex = 0
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(9, 71)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(37, 13)
+        Me.Label4.TabIndex = 1
+        Me.Label4.Text = "แผนก"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(9, 45)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(48, 13)
+        Me.Label3.TabIndex = 1
+        Me.Label3.Text = "ชื่อ - สกุล"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(9, 19)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(32, 13)
+        Me.Label2.TabIndex = 1
+        Me.Label2.Text = "Code"
+        '
+        'GroupBox2
+        '
+        Me.GroupBox2.Controls.Add(Me.lblValCode)
+        Me.GroupBox2.Controls.Add(Me.cboWorkingStatus)
+        Me.GroupBox2.Controls.Add(Me.Label8)
+        Me.GroupBox2.Controls.Add(Me.Label1)
+        Me.GroupBox2.Controls.Add(Me.Label6)
+        Me.GroupBox2.Controls.Add(Me.txtAmt)
+        Me.GroupBox2.Controls.Add(Me.lblId)
+        Me.GroupBox2.Location = New System.Drawing.Point(2, 165)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(704, 78)
+        Me.GroupBox2.TabIndex = 2
+        Me.GroupBox2.TabStop = False
+        Me.GroupBox2.Text = "การลาของพนักงาน"
+        '
+        'lblValCode
+        '
+        Me.lblValCode.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblValCode.Location = New System.Drawing.Point(471, 22)
+        Me.lblValCode.Name = "lblValCode"
+        Me.lblValCode.Size = New System.Drawing.Size(100, 23)
+        Me.lblValCode.TabIndex = 9
+        Me.lblValCode.Visible = False
+        '
+        'cboWorkingStatus
+        '
+        Me.cboWorkingStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboWorkingStatus.FormattingEnabled = True
+        Me.cboWorkingStatus.Location = New System.Drawing.Point(89, 20)
+        Me.cboWorkingStatus.Name = "cboWorkingStatus"
+        Me.cboWorkingStatus.Size = New System.Drawing.Size(247, 21)
+        Me.cboWorkingStatus.TabIndex = 0
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(170, 50)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(33, 13)
+        Me.Label8.TabIndex = 6
+        Me.Label8.Text = "วัน/ปี"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(10, 50)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(40, 13)
+        Me.Label1.TabIndex = 6
+        Me.Label1.Text = "จำนวน"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(10, 20)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(73, 13)
+        Me.Label6.TabIndex = 6
+        Me.Label6.Text = "ประเภทการลา"
+        '
+        'txtAmt
+        '
+        Me.txtAmt.Location = New System.Drawing.Point(89, 47)
+        Me.txtAmt.Name = "txtAmt"
+        Me.txtAmt.Size = New System.Drawing.Size(75, 20)
+        Me.txtAmt.TabIndex = 1
+        '
+        'lblId
+        '
+        Me.lblId.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblId.Location = New System.Drawing.Point(620, 16)
+        Me.lblId.Name = "lblId"
+        Me.lblId.Size = New System.Drawing.Size(40, 40)
+        Me.lblId.TabIndex = 1
+        Me.lblId.Visible = False
+        '
+        'Panel1
+        '
+        Me.Panel1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Panel1.Controls.Add(Me.btnEdit)
+        Me.Panel1.Controls.Add(Me.btnExit)
+        Me.Panel1.Controls.Add(Me.btnClear)
+        Me.Panel1.Controls.Add(Me.btnDelete)
+        Me.Panel1.Controls.Add(Me.btnAdd)
+        Me.Panel1.Location = New System.Drawing.Point(2, 248)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(704, 32)
+        Me.Panel1.TabIndex = 3
+        '
+        'btnEdit
+        '
+        Me.btnEdit.Location = New System.Drawing.Point(78, 3)
+        Me.btnEdit.Name = "btnEdit"
+        Me.btnEdit.Size = New System.Drawing.Size(75, 23)
+        Me.btnEdit.TabIndex = 1
+        Me.btnEdit.Text = "แก้ไข"
+        Me.btnEdit.UseVisualStyleBackColor = True
+        '
+        'btnExit
+        '
+        Me.btnExit.Location = New System.Drawing.Point(380, 3)
+        Me.btnExit.Name = "btnExit"
+        Me.btnExit.Size = New System.Drawing.Size(75, 23)
+        Me.btnExit.TabIndex = 4
+        Me.btnExit.Text = "ออก"
+        Me.btnExit.UseVisualStyleBackColor = True
+        '
+        'btnClear
+        '
+        Me.btnClear.Location = New System.Drawing.Point(228, 3)
+        Me.btnClear.Name = "btnClear"
+        Me.btnClear.Size = New System.Drawing.Size(140, 23)
+        Me.btnClear.TabIndex = 3
+        Me.btnClear.Text = "เคลียร์/Refresh"
+        Me.btnClear.UseVisualStyleBackColor = True
+        '
+        'btnDelete
+        '
+        Me.btnDelete.Location = New System.Drawing.Point(153, 3)
+        Me.btnDelete.Name = "btnDelete"
+        Me.btnDelete.Size = New System.Drawing.Size(75, 23)
+        Me.btnDelete.TabIndex = 2
+        Me.btnDelete.Text = "ลบ"
+        Me.btnDelete.UseVisualStyleBackColor = True
+        '
+        'btnAdd
+        '
+        Me.btnAdd.Location = New System.Drawing.Point(3, 3)
+        Me.btnAdd.Name = "btnAdd"
+        Me.btnAdd.Size = New System.Drawing.Size(75, 23)
+        Me.btnAdd.TabIndex = 0
+        Me.btnAdd.Text = "เพิ่ม"
+        Me.btnAdd.UseVisualStyleBackColor = True
+        '
+        'lstVacation
+        '
+        Me.lstVacation.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+                    Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lstVacation.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.colNo, Me.colID, Me.colCode, Me.colFName, Me.colLName, Me.colValType, Me.colAmt, Me.colAmtUse, Me.colAmtRemain})
+        Me.lstVacation.FullRowSelect = True
+        Me.lstVacation.GridLines = True
+        Me.lstVacation.Location = New System.Drawing.Point(2, 286)
+        Me.lstVacation.Name = "lstVacation"
+        Me.lstVacation.Size = New System.Drawing.Size(713, 271)
+        Me.lstVacation.TabIndex = 5
+        Me.lstVacation.UseCompatibleStateImageBehavior = False
+        Me.lstVacation.View = System.Windows.Forms.View.Details
+        '
+        'colNo
+        '
+        Me.colNo.Text = "No."
+        Me.colNo.Width = 41
+        '
+        'colID
+        '
+        Me.colID.Text = "ID"
+        Me.colID.Width = 0
+        '
+        'colCode
+        '
+        Me.colCode.Text = "Code"
+        Me.colCode.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.colCode.Width = 71
+        '
+        'colFName
+        '
+        Me.colFName.Text = "ชื่อ"
+        Me.colFName.Width = 133
+        '
+        'colLName
+        '
+        Me.colLName.Text = "สกุล"
+        Me.colLName.Width = 145
+        '
+        'colValType
+        '
+        Me.colValType.Text = "ประเภทการลา"
+        Me.colValType.Width = 209
+        '
+        'colAmt
+        '
+        Me.colAmt.Text = "จำนวน(วัน/ปี)"
+        Me.colAmt.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        Me.colAmt.Width = 85
+        '
+        'GroupBox4
+        '
+        Me.GroupBox4.Controls.Add(Me.lstSumaryVacation)
+        Me.GroupBox4.Location = New System.Drawing.Point(376, 36)
+        Me.GroupBox4.Name = "GroupBox4"
+        Me.GroupBox4.Size = New System.Drawing.Size(339, 124)
+        Me.GroupBox4.TabIndex = 5
+        Me.GroupBox4.TabStop = False
+        Me.GroupBox4.Text = "สถิต ขาด - สาย"
+        Me.GroupBox4.Visible = False
+        '
+        'lstSumaryVacation
+        '
+        Me.lstSumaryVacation.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+                    Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lstSumaryVacation.CheckBoxes = True
+        Me.lstSumaryVacation.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.colVacation, Me.colDay})
+        Me.lstSumaryVacation.FullRowSelect = True
+        Me.lstSumaryVacation.GridLines = True
+        Me.lstSumaryVacation.Location = New System.Drawing.Point(6, 19)
+        Me.lstSumaryVacation.Name = "lstSumaryVacation"
+        Me.lstSumaryVacation.Size = New System.Drawing.Size(327, 98)
+        Me.lstSumaryVacation.TabIndex = 0
+        Me.lstSumaryVacation.UseCompatibleStateImageBehavior = False
+        Me.lstSumaryVacation.View = System.Windows.Forms.View.Details
+        '
+        'ColumnHeader1
+        '
+        Me.ColumnHeader1.Text = "No."
+        Me.ColumnHeader1.Width = 39
+        '
+        'colVacation
+        '
+        Me.colVacation.Text = "ขาด/ลา"
+        Me.colVacation.Width = 138
+        '
+        'colDay
+        '
+        Me.colDay.Text = "จำนวน(วัน)"
+        Me.colDay.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.colDay.Width = 128
+        '
+        'txtYearly
+        '
+        Me.txtYearly.Location = New System.Drawing.Point(70, 10)
+        Me.txtYearly.Name = "txtYearly"
+        Me.txtYearly.Size = New System.Drawing.Size(75, 20)
+        Me.txtYearly.TabIndex = 0
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(12, 13)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(52, 13)
+        Me.Label7.TabIndex = 1
+        Me.Label7.Text = "ประจำปี : "
+        '
+        'colAmtUse
+        '
+        Me.colAmtUse.Text = "ใช้ไป(วัน)"
+        Me.colAmtUse.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        Me.colAmtUse.Width = 85
+        '
+        'colAmtRemain
+        '
+        Me.colAmtRemain.Text = "คงเหลือ(วัน)"
+        Me.colAmtRemain.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        Me.colAmtRemain.Width = 85
+        '
+        'frmPrivilegeVal
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.ClientSize = New System.Drawing.Size(718, 558)
+        Me.Controls.Add(Me.txtYearly)
+        Me.Controls.Add(Me.GroupBox4)
+        Me.Controls.Add(Me.lstVacation)
+        Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.GroupBox2)
+        Me.Controls.Add(Me.GroupBox1)
+        Me.Controls.Add(Me.Label7)
+        Me.KeyPreview = True
+        Me.Name = "frmPrivilegeVal"
+        Me.Text = "กำหนดสิทธิการลาในแต่ละปี"
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
+        Me.GroupBox2.ResumeLayout(False)
+        Me.GroupBox2.PerformLayout()
+        Me.Panel1.ResumeLayout(False)
+        Me.GroupBox4.ResumeLayout(False)
+        Me.ResumeLayout(False)
+        Me.PerformLayout()
+
+    End Sub
+    Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
+    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents txtDeptId As System.Windows.Forms.TextBox
+    Friend WithEvents txtSite As System.Windows.Forms.TextBox
+    Friend WithEvents txtDepartment As System.Windows.Forms.TextBox
+    Friend WithEvents txtName As System.Windows.Forms.TextBox
+    Friend WithEvents txtCode As System.Windows.Forms.TextBox
+    Friend WithEvents Label5 As System.Windows.Forms.Label
+    Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
+    Friend WithEvents Label6 As System.Windows.Forms.Label
+    Friend WithEvents Panel1 As System.Windows.Forms.Panel
+    Friend WithEvents btnEdit As System.Windows.Forms.Button
+    Friend WithEvents btnExit As System.Windows.Forms.Button
+    Friend WithEvents btnClear As System.Windows.Forms.Button
+    Friend WithEvents btnDelete As System.Windows.Forms.Button
+    Friend WithEvents btnAdd As System.Windows.Forms.Button
+    Friend WithEvents lstVacation As System.Windows.Forms.ListView
+    Friend WithEvents colNo As System.Windows.Forms.ColumnHeader
+    Friend WithEvents lblId As System.Windows.Forms.Label
+    Friend WithEvents cboWorkingStatus As System.Windows.Forms.ComboBox
+    Friend WithEvents GroupBox4 As System.Windows.Forms.GroupBox
+    Friend WithEvents lstSumaryVacation As System.Windows.Forms.ListView
+    Friend WithEvents ColumnHeader1 As System.Windows.Forms.ColumnHeader
+    Friend WithEvents colVacation As System.Windows.Forms.ColumnHeader
+    Friend WithEvents colDay As System.Windows.Forms.ColumnHeader
+    Friend WithEvents lblValCode As System.Windows.Forms.Label
+    Friend WithEvents colAmt As System.Windows.Forms.ColumnHeader
+    Friend WithEvents txtYearly As System.Windows.Forms.TextBox
+    Friend WithEvents Label7 As System.Windows.Forms.Label
+    Friend WithEvents Label8 As System.Windows.Forms.Label
+    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents txtAmt As System.Windows.Forms.TextBox
+    Friend WithEvents colCode As System.Windows.Forms.ColumnHeader
+    Friend WithEvents colFName As System.Windows.Forms.ColumnHeader
+    Friend WithEvents colLName As System.Windows.Forms.ColumnHeader
+    Friend WithEvents colValType As System.Windows.Forms.ColumnHeader
+    Friend WithEvents colID As System.Windows.Forms.ColumnHeader
+    Friend WithEvents colAmtUse As System.Windows.Forms.ColumnHeader
+    Friend WithEvents colAmtRemain As System.Windows.Forms.ColumnHeader
+End Class

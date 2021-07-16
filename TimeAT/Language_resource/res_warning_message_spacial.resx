@@ -1,0 +1,246 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Amount_hr_over_zero" xml:space="preserve">
+    <value>จน.ชม.ทำงานควรมากกว่า 0</value>
+  </data>
+  <data name="Ask_Procress" xml:space="preserve">
+    <value>คุณต้องการประมวลผลเวลาทำงานจริงหรือไม่?</value>
+  </data>
+  <data name="Cancle_Ka" xml:space="preserve">
+    <value>คุณต้องการยกเลิก กะทั้งเดือนของทุกคน ทุกวันหรือไม่</value>
+  </data>
+  <data name="Cancle_Ka2" xml:space="preserve">
+    <value>คุณต้องการยกเลิก กะทั้งเดือนของคนนี้หรือไม่</value>
+  </data>
+  <data name="Cancle_Ka_Complete" xml:space="preserve">
+    <value>ยกเลิกกะทั้งหมดเรียบร้อยแล้ว</value>
+  </data>
+  <data name="Cancle_Ka_Complete2" xml:space="preserve">
+    <value>ยกเลิกกะเรียบร้อยแล้ว</value>
+  </data>
+  <data name="Check_Date_Start" xml:space="preserve">
+    <value>วันที่เริ่มควรป้อนได้ตั้งแต่วันที่ 1-28 เท่านั้น</value>
+  </data>
+  <data name="Check_Date_Start2" xml:space="preserve">
+    <value>วันที่เริ่มควรป้อนได้ตั้งแต่วันที่ 1-28 เท่านั้น *** ถ้าต้องการสิ้นเดือนก็ติ๊กที่ ถึงสิ้นเดือน แทน</value>
+  </data>
+  <data name="Check_Holiday" xml:space="preserve">
+    <value>กรุณาป้อนวันหยุดด้วย</value>
+  </data>
+  <data name="Check_Hour" xml:space="preserve">
+    <value>จำนวนชม.ที่ชดเชยไม่ควร 4 ชม.กรุณาตรวจสอบด้วย</value>
+  </data>
+  <data name="Config_OT" xml:space="preserve">
+    <value>กรุณากำหนดจำนวนชั่วโมง OT ด้วย</value>
+  </data>
+  <data name="Edit_Failed_spacial_holiday" xml:space="preserve">
+    <value>ไม่สามารถแก้ไขได้เนื่องจากวันที่นี้ ได้บันทึกไปแล้ว</value>
+  </data>
+  <data name="Gen_Scrip_Complete" xml:space="preserve">
+    <value>สร้างสคริปเสร็สแล้ว</value>
+  </data>
+  <data name="Insert_Data_Again" xml:space="preserve">
+    <value>วันสุดท้ายน้อยกว่าวันที่เริ่มต้นกรุณากรอกใหม่</value>
+  </data>
+  <data name="login_user_password_fail" xml:space="preserve">
+    <value>คุณไม่มีสิทธิ์เข้าใจโปรแกรม อาจเป็นเพราะ ชื่อผู้ใช้ หรือ รหัสผ่าน ไม่ถูกต้อง</value>
+  </data>
+  <data name="MS_In_Use" xml:space="preserve">
+    <value>นาทีนี้ถูกใช้แล้ว กรุณาเปลี่ยนใหม่</value>
+  </data>
+  <data name="password_notsame_confirmPassword" xml:space="preserve">
+    <value>ยืนยันรหัสผ่านไม่ตรงกับรหัสผ่าน</value>
+  </data>
+  <data name="permissionGroup_selectdata" xml:space="preserve">
+    <value>กรุณาดับเบิ้ลคลิ๊กกลุ่มสิทธิ์เพื่อทำการกำหนดกลุ่มสิทธิ์</value>
+  </data>
+  <data name="permission_exportdata" xml:space="preserve">
+    <value>นำออกจากกลุ่มสิทธิ์เรียบร้อย</value>
+  </data>
+  <data name="permission_groupsame" xml:space="preserve">
+    <value>ชื่อกลุ่มซ้ำ</value>
+  </data>
+  <data name="permission_please_input_groupname" xml:space="preserve">
+    <value>กรุณาป้อนชื่อกลุ่มสิทธิ์</value>
+  </data>
+  <data name="please_input_companyname" xml:space="preserve">
+    <value>กรุณาป้อนชื่อบริษัท</value>
+  </data>
+  <data name="please_input_TimeIN" xml:space="preserve">
+    <value>กรุณาป้อนเวลาเข้า</value>
+  </data>
+  <data name="please_select_ka_" xml:space="preserve">
+    <value>กรุณาเลือกกะที่ต้องการกำหนด</value>
+  </data>
+  <data name="Procress_complete" xml:space="preserve">
+    <value>ประมวลเรียบร้อยแล้ว</value>
+  </data>
+  <data name="Procress_label" xml:space="preserve">
+    <value>ประมวลผล.....</value>
+  </data>
+  <data name="Quit_job" xml:space="preserve">
+    <value>คุณต้องการปรับให้พ้นสภาพจากการเป็นพนักงานหรือไม่</value>
+  </data>
+  <data name="repleace_Data" xml:space="preserve">
+    <value>ข้อมูลนี้มีอยู่แล้วคุณต้องการเขียนข้อมูลทับหรือไม่</value>
+  </data>
+  <data name="Repleace_Data_2" xml:space="preserve">
+    <value>มีข้อมูลอยู่ในระหว่างช่วงที่กำหนด คุณต้องการเขียนข้อมูลทับหรือเปล่า</value>
+  </data>
+  <data name="Report_date_label" xml:space="preserve">
+    <value>วันที่ :</value>
+  </data>
+  <data name="Report_Overtime_31" xml:space="preserve">
+    <value>ช่วงเวลาเกิน 31 วัน กรุณาเลือกใหม่</value>
+  </data>
+  <data name="Report_Selectdata" xml:space="preserve">
+    <value>กรุณาเลือกข้อมูลที่ต้องการค้นหาก่อนออกรายงาน</value>
+  </data>
+  <data name="Save_Failed" xml:space="preserve">
+    <value>ไม่สามารถบันทึกข้อมูลได้เนื่องจากสิทธิในการลาหมด</value>
+  </data>
+  <data name="Save_Failed_spacial_holiday" xml:space="preserve">
+    <value>ไม่สามารถบันทึกได้ เนื่องจากการกำหนด {วันที่ทำงานพิเศษ} ต้องไม่ตรงกับ {วันที่วันหยุดพิเศษ}</value>
+  </data>
+  <data name="Save_Failed_Vacation" xml:space="preserve">
+    <value>ไม่สามารถบันทึกข้อมูลได้เนื่องจากสิทธิในการลาหมด เนื่องจากช่วงเวลาที่กำหนดเกินสิทธิที่ได้กำหนดไว้</value>
+  </data>
+  <data name="Select_Cal_OT" xml:space="preserve">
+    <value>กรุณาเลือกรูปแบบการคำนวณ OT ด้วย</value>
+  </data>
+  <data name="Select_Data_For_Del" xml:space="preserve">
+    <value>กรุณาเลือกรายการที่ต้องการลบด้วย</value>
+  </data>
+  <data name="Select_Day" xml:space="preserve">
+    <value>กรุณาเลือกว่าจะเอา วันถัดไป หรือ จะเอาวันก่อนหน้า ให้เลือกอย่างใดอย่างหนึ่ง</value>
+  </data>
+  <data name="Select_GetText" xml:space="preserve">
+    <value>กรุณาเลือกรูปแบบการ GetText ด้วย</value>
+  </data>
+  <data name="Select_Type_Abs" xml:space="preserve">
+    <value>กรุณาเลือกประเภทการลาด้วย</value>
+  </data>
+  <data name="Select_Vacation" xml:space="preserve">
+    <value>กรุณาเลือกประเภทการลาด้วย</value>
+  </data>
+  <data name="Username_same" xml:space="preserve">
+    <value>ชื่อผู้ใช้งานนี้มีอยู่แล้ว</value>
+  </data>
+</root>

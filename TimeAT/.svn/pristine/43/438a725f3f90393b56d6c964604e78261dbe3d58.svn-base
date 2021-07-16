@@ -1,0 +1,735 @@
+<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+Partial Class frmAllowance
+    Inherits System.Windows.Forms.Form
+
+    'Form overrides dispose to clean up the component list.
+    <System.Diagnostics.DebuggerNonUserCode()> _
+    Protected Overrides Sub Dispose(ByVal disposing As Boolean)
+        If disposing AndAlso components IsNot Nothing Then
+            components.Dispose()
+        End If
+        MyBase.Dispose(disposing)
+    End Sub
+
+    'Required by the Windows Form Designer
+    Private components As System.ComponentModel.IContainer
+
+    'NOTE: The following procedure is required by the Windows Form Designer
+    'It can be modified using the Windows Form Designer.  
+    'Do not modify it using the code editor.
+    <System.Diagnostics.DebuggerStepThrough()> _
+    Private Sub InitializeComponent()
+        Me.pnlEmp = New System.Windows.Forms.GroupBox
+        Me.Label5 = New System.Windows.Forms.Label
+        Me.txtDeptId = New System.Windows.Forms.TextBox
+        Me.txtSite = New System.Windows.Forms.TextBox
+        Me.txtDepartment = New System.Windows.Forms.TextBox
+        Me.txtName = New System.Windows.Forms.TextBox
+        Me.txtCode = New System.Windows.Forms.TextBox
+        Me.Label4 = New System.Windows.Forms.Label
+        Me.Label3 = New System.Windows.Forms.Label
+        Me.Label2 = New System.Windows.Forms.Label
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox
+        Me.lblawCode = New System.Windows.Forms.Label
+        Me.txtTotal = New System.Windows.Forms.TextBox
+        Me.Label10 = New System.Windows.Forms.Label
+        Me.cboAllowance = New System.Windows.Forms.ComboBox
+        Me.Label7 = New System.Windows.Forms.Label
+        Me.Label6 = New System.Windows.Forms.Label
+        Me.lblId = New System.Windows.Forms.Label
+        Me.Panel1 = New System.Windows.Forms.Panel
+        Me.btnLoadDefault = New System.Windows.Forms.Button
+        Me.btnEdit = New System.Windows.Forms.Button
+        Me.btnExit = New System.Windows.Forms.Button
+        Me.btnClear = New System.Windows.Forms.Button
+        Me.btnDelete = New System.Windows.Forms.Button
+        Me.btnAdd = New System.Windows.Forms.Button
+        Me.lstAllowance = New System.Windows.Forms.ListView
+        Me.colNo = New System.Windows.Forms.ColumnHeader
+        Me.colId = New System.Windows.Forms.ColumnHeader
+        Me.colCode = New System.Windows.Forms.ColumnHeader
+        Me.colName = New System.Windows.Forms.ColumnHeader
+        Me.colDept = New System.Windows.Forms.ColumnHeader
+        Me.colAllowance = New System.Windows.Forms.ColumnHeader
+        Me.colPrice = New System.Windows.Forms.ColumnHeader
+        Me.j = New System.Windows.Forms.GroupBox
+        Me.txtMonthYear = New System.Windows.Forms.MaskedTextBox
+        Me.Label9 = New System.Windows.Forms.Label
+        Me.rdByPerson = New System.Windows.Forms.RadioButton
+        Me.rdByDept = New System.Windows.Forms.RadioButton
+        Me.pnlDept = New System.Windows.Forms.GroupBox
+        Me.lblDeptId = New System.Windows.Forms.Label
+        Me.cboDepartment = New System.Windows.Forms.ComboBox
+        Me.Label8 = New System.Windows.Forms.Label
+        Me.Label1 = New System.Windows.Forms.Label
+        Me.TabControl1 = New System.Windows.Forms.TabControl
+        Me.TabPage1 = New System.Windows.Forms.TabPage
+        Me.TabPage2 = New System.Windows.Forms.TabPage
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox
+        Me.rdCode = New System.Windows.Forms.RadioButton
+        Me.rdawCode = New System.Windows.Forms.RadioButton
+        Me.btnRefresh = New System.Windows.Forms.Button
+        Me.lstAllData = New System.Windows.Forms.ListView
+        Me.ColumnHeader1 = New System.Windows.Forms.ColumnHeader
+        Me.ColumnHeader2 = New System.Windows.Forms.ColumnHeader
+        Me.ColumnHeader3 = New System.Windows.Forms.ColumnHeader
+        Me.ColumnHeader4 = New System.Windows.Forms.ColumnHeader
+        Me.ColumnHeader5 = New System.Windows.Forms.ColumnHeader
+        Me.ColumnHeader6 = New System.Windows.Forms.ColumnHeader
+        Me.ColumnHeader7 = New System.Windows.Forms.ColumnHeader
+        Me.colRemark = New System.Windows.Forms.ColumnHeader
+        Me.colStatus = New System.Windows.Forms.ColumnHeader
+        Me.colAutoDate = New System.Windows.Forms.ColumnHeader
+        Me.pnlEmp.SuspendLayout()
+        Me.GroupBox2.SuspendLayout()
+        Me.Panel1.SuspendLayout()
+        Me.j.SuspendLayout()
+        Me.pnlDept.SuspendLayout()
+        Me.TabControl1.SuspendLayout()
+        Me.TabPage1.SuspendLayout()
+        Me.TabPage2.SuspendLayout()
+        Me.GroupBox1.SuspendLayout()
+        Me.SuspendLayout()
+        '
+        'pnlEmp
+        '
+        Me.pnlEmp.Controls.Add(Me.Label5)
+        Me.pnlEmp.Controls.Add(Me.txtDeptId)
+        Me.pnlEmp.Controls.Add(Me.txtSite)
+        Me.pnlEmp.Controls.Add(Me.txtDepartment)
+        Me.pnlEmp.Controls.Add(Me.txtName)
+        Me.pnlEmp.Controls.Add(Me.txtCode)
+        Me.pnlEmp.Controls.Add(Me.Label4)
+        Me.pnlEmp.Controls.Add(Me.Label3)
+        Me.pnlEmp.Controls.Add(Me.Label2)
+        Me.pnlEmp.Location = New System.Drawing.Point(28, 29)
+        Me.pnlEmp.Name = "pnlEmp"
+        Me.pnlEmp.Size = New System.Drawing.Size(749, 71)
+        Me.pnlEmp.TabIndex = 1
+        Me.pnlEmp.TabStop = False
+        Me.pnlEmp.Text = "พนักงาน"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(375, 45)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(25, 13)
+        Me.Label5.TabIndex = 6
+        Me.Label5.Text = "Site"
+        '
+        'txtDeptId
+        '
+        Me.txtDeptId.Location = New System.Drawing.Point(428, 16)
+        Me.txtDeptId.Name = "txtDeptId"
+        Me.txtDeptId.ReadOnly = True
+        Me.txtDeptId.Size = New System.Drawing.Size(44, 20)
+        Me.txtDeptId.TabIndex = 5
+        Me.txtDeptId.TabStop = False
+        '
+        'txtSite
+        '
+        Me.txtSite.Location = New System.Drawing.Point(428, 42)
+        Me.txtSite.Name = "txtSite"
+        Me.txtSite.ReadOnly = True
+        Me.txtSite.Size = New System.Drawing.Size(289, 20)
+        Me.txtSite.TabIndex = 4
+        Me.txtSite.TabStop = False
+        '
+        'txtDepartment
+        '
+        Me.txtDepartment.Location = New System.Drawing.Point(478, 16)
+        Me.txtDepartment.Name = "txtDepartment"
+        Me.txtDepartment.ReadOnly = True
+        Me.txtDepartment.Size = New System.Drawing.Size(239, 20)
+        Me.txtDepartment.TabIndex = 3
+        Me.txtDepartment.TabStop = False
+        '
+        'txtName
+        '
+        Me.txtName.Location = New System.Drawing.Point(62, 42)
+        Me.txtName.Name = "txtName"
+        Me.txtName.ReadOnly = True
+        Me.txtName.Size = New System.Drawing.Size(289, 20)
+        Me.txtName.TabIndex = 2
+        Me.txtName.TabStop = False
+        '
+        'txtCode
+        '
+        Me.txtCode.Location = New System.Drawing.Point(62, 16)
+        Me.txtCode.Name = "txtCode"
+        Me.txtCode.Size = New System.Drawing.Size(100, 20)
+        Me.txtCode.TabIndex = 0
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(375, 19)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(37, 13)
+        Me.Label4.TabIndex = 1
+        Me.Label4.Text = "แผนก"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(9, 45)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(48, 13)
+        Me.Label3.TabIndex = 1
+        Me.Label3.Text = "ชื่อ - สกุล"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(9, 19)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(32, 13)
+        Me.Label2.TabIndex = 1
+        Me.Label2.Text = "Code"
+        '
+        'GroupBox2
+        '
+        Me.GroupBox2.Controls.Add(Me.lblawCode)
+        Me.GroupBox2.Controls.Add(Me.txtTotal)
+        Me.GroupBox2.Controls.Add(Me.Label10)
+        Me.GroupBox2.Controls.Add(Me.cboAllowance)
+        Me.GroupBox2.Controls.Add(Me.Label7)
+        Me.GroupBox2.Controls.Add(Me.Label6)
+        Me.GroupBox2.Controls.Add(Me.lblId)
+        Me.GroupBox2.Location = New System.Drawing.Point(5, 189)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(772, 76)
+        Me.GroupBox2.TabIndex = 4
+        Me.GroupBox2.TabStop = False
+        Me.GroupBox2.Text = "รายการจ่าย Allowance"
+        '
+        'lblawCode
+        '
+        Me.lblawCode.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblawCode.Location = New System.Drawing.Point(435, 20)
+        Me.lblawCode.Name = "lblawCode"
+        Me.lblawCode.Size = New System.Drawing.Size(110, 21)
+        Me.lblawCode.TabIndex = 9
+        '
+        'txtTotal
+        '
+        Me.txtTotal.Location = New System.Drawing.Point(89, 49)
+        Me.txtTotal.Name = "txtTotal"
+        Me.txtTotal.Size = New System.Drawing.Size(129, 20)
+        Me.txtTotal.TabIndex = 1
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Location = New System.Drawing.Point(342, 23)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(87, 13)
+        Me.Label10.TabIndex = 1
+        Me.Label10.Text = "รหัส Allowance : "
+        '
+        'cboAllowance
+        '
+        Me.cboAllowance.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboAllowance.FormattingEnabled = True
+        Me.cboAllowance.Location = New System.Drawing.Point(89, 20)
+        Me.cboAllowance.Name = "cboAllowance"
+        Me.cboAllowance.Size = New System.Drawing.Size(247, 21)
+        Me.cboAllowance.TabIndex = 0
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(9, 52)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(54, 13)
+        Me.Label7.TabIndex = 6
+        Me.Label7.Text = "ยอดเงิน : "
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(10, 23)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(56, 13)
+        Me.Label6.TabIndex = 6
+        Me.Label6.Text = "Allowance"
+        '
+        'lblId
+        '
+        Me.lblId.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblId.Location = New System.Drawing.Point(621, 16)
+        Me.lblId.Name = "lblId"
+        Me.lblId.Size = New System.Drawing.Size(40, 40)
+        Me.lblId.TabIndex = 1
+        Me.lblId.Visible = False
+        '
+        'Panel1
+        '
+        Me.Panel1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Panel1.Controls.Add(Me.btnLoadDefault)
+        Me.Panel1.Controls.Add(Me.btnEdit)
+        Me.Panel1.Controls.Add(Me.btnExit)
+        Me.Panel1.Controls.Add(Me.btnClear)
+        Me.Panel1.Controls.Add(Me.btnDelete)
+        Me.Panel1.Controls.Add(Me.btnAdd)
+        Me.Panel1.Location = New System.Drawing.Point(5, 271)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(760, 32)
+        Me.Panel1.TabIndex = 5
+        '
+        'btnLoadDefault
+        '
+        Me.btnLoadDefault.Location = New System.Drawing.Point(586, 3)
+        Me.btnLoadDefault.Name = "btnLoadDefault"
+        Me.btnLoadDefault.Size = New System.Drawing.Size(154, 23)
+        Me.btnLoadDefault.TabIndex = 5
+        Me.btnLoadDefault.Text = "Load Default"
+        Me.btnLoadDefault.UseVisualStyleBackColor = True
+        '
+        'btnEdit
+        '
+        Me.btnEdit.Location = New System.Drawing.Point(472, 3)
+        Me.btnEdit.Name = "btnEdit"
+        Me.btnEdit.Size = New System.Drawing.Size(75, 23)
+        Me.btnEdit.TabIndex = 1
+        Me.btnEdit.Text = "แก้ไข"
+        Me.btnEdit.UseVisualStyleBackColor = True
+        Me.btnEdit.Visible = False
+        '
+        'btnExit
+        '
+        Me.btnExit.Location = New System.Drawing.Point(380, 3)
+        Me.btnExit.Name = "btnExit"
+        Me.btnExit.Size = New System.Drawing.Size(75, 23)
+        Me.btnExit.TabIndex = 4
+        Me.btnExit.Text = "ออก"
+        Me.btnExit.UseVisualStyleBackColor = True
+        '
+        'btnClear
+        '
+        Me.btnClear.Location = New System.Drawing.Point(292, 3)
+        Me.btnClear.Name = "btnClear"
+        Me.btnClear.Size = New System.Drawing.Size(82, 23)
+        Me.btnClear.TabIndex = 3
+        Me.btnClear.Text = "Refresh"
+        Me.btnClear.UseVisualStyleBackColor = True
+        '
+        'btnDelete
+        '
+        Me.btnDelete.Location = New System.Drawing.Point(78, 3)
+        Me.btnDelete.Name = "btnDelete"
+        Me.btnDelete.Size = New System.Drawing.Size(208, 23)
+        Me.btnDelete.TabIndex = 2
+        Me.btnDelete.Text = "ลบ (ลบเฉพาะข้อมูลที่ ติ๊กถูกเท่านั้น)"
+        Me.btnDelete.UseVisualStyleBackColor = True
+        '
+        'btnAdd
+        '
+        Me.btnAdd.Location = New System.Drawing.Point(3, 3)
+        Me.btnAdd.Name = "btnAdd"
+        Me.btnAdd.Size = New System.Drawing.Size(75, 23)
+        Me.btnAdd.TabIndex = 0
+        Me.btnAdd.Text = "บันทึก"
+        Me.btnAdd.UseVisualStyleBackColor = True
+        '
+        'lstAllowance
+        '
+        Me.lstAllowance.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+                    Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lstAllowance.CheckBoxes = True
+        Me.lstAllowance.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.colNo, Me.colId, Me.colCode, Me.colName, Me.colDept, Me.colAllowance, Me.colPrice, Me.colStatus, Me.colAutoDate, Me.colRemark})
+        Me.lstAllowance.FullRowSelect = True
+        Me.lstAllowance.GridLines = True
+        Me.lstAllowance.Location = New System.Drawing.Point(5, 306)
+        Me.lstAllowance.Name = "lstAllowance"
+        Me.lstAllowance.Size = New System.Drawing.Size(806, 148)
+        Me.lstAllowance.TabIndex = 4
+        Me.lstAllowance.UseCompatibleStateImageBehavior = False
+        Me.lstAllowance.View = System.Windows.Forms.View.Details
+        '
+        'colNo
+        '
+        Me.colNo.Text = "No."
+        Me.colNo.Width = 41
+        '
+        'colId
+        '
+        Me.colId.Text = "Id"
+        Me.colId.Width = 0
+        '
+        'colCode
+        '
+        Me.colCode.Text = "รหัสพนง."
+        Me.colCode.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.colCode.Width = 87
+        '
+        'colName
+        '
+        Me.colName.Text = "ชื่อ - กสุล"
+        Me.colName.Width = 192
+        '
+        'colDept
+        '
+        Me.colDept.Text = "รหัสแผนก"
+        Me.colDept.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.colDept.Width = 82
+        '
+        'colAllowance
+        '
+        Me.colAllowance.Text = "Allowance"
+        Me.colAllowance.Width = 247
+        '
+        'colPrice
+        '
+        Me.colPrice.Text = "ยอดเงิน"
+        Me.colPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        Me.colPrice.Width = 110
+        '
+        'j
+        '
+        Me.j.Controls.Add(Me.txtMonthYear)
+        Me.j.Controls.Add(Me.Label9)
+        Me.j.Location = New System.Drawing.Point(3, 6)
+        Me.j.Name = "j"
+        Me.j.Size = New System.Drawing.Size(796, 40)
+        Me.j.TabIndex = 0
+        Me.j.TabStop = False
+        Me.j.Text = "ประจำเดือน"
+        '
+        'txtMonthYear
+        '
+        Me.txtMonthYear.Location = New System.Drawing.Point(78, 14)
+        Me.txtMonthYear.Mask = "##/####"
+        Me.txtMonthYear.Name = "txtMonthYear"
+        Me.txtMonthYear.Size = New System.Drawing.Size(100, 20)
+        Me.txtMonthYear.TabIndex = 0
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(9, 17)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(71, 13)
+        Me.Label9.TabIndex = 1
+        Me.Label9.Text = "ประจำเดือน : "
+        '
+        'rdByPerson
+        '
+        Me.rdByPerson.AutoSize = True
+        Me.rdByPerson.Checked = True
+        Me.rdByPerson.Location = New System.Drawing.Point(8, 6)
+        Me.rdByPerson.Name = "rdByPerson"
+        Me.rdByPerson.Size = New System.Drawing.Size(77, 17)
+        Me.rdByPerson.TabIndex = 0
+        Me.rdByPerson.TabStop = True
+        Me.rdByPerson.Text = "จ่ายตามคน"
+        Me.rdByPerson.UseVisualStyleBackColor = True
+        '
+        'rdByDept
+        '
+        Me.rdByDept.AutoSize = True
+        Me.rdByDept.Location = New System.Drawing.Point(8, 106)
+        Me.rdByDept.Name = "rdByDept"
+        Me.rdByDept.Size = New System.Drawing.Size(92, 17)
+        Me.rdByDept.TabIndex = 2
+        Me.rdByDept.Text = "จ่ายตามแผนก"
+        Me.rdByDept.UseVisualStyleBackColor = True
+        '
+        'pnlDept
+        '
+        Me.pnlDept.Controls.Add(Me.lblDeptId)
+        Me.pnlDept.Controls.Add(Me.cboDepartment)
+        Me.pnlDept.Controls.Add(Me.Label8)
+        Me.pnlDept.Controls.Add(Me.Label1)
+        Me.pnlDept.Enabled = False
+        Me.pnlDept.Location = New System.Drawing.Point(28, 129)
+        Me.pnlDept.Name = "pnlDept"
+        Me.pnlDept.Size = New System.Drawing.Size(749, 54)
+        Me.pnlDept.TabIndex = 3
+        Me.pnlDept.TabStop = False
+        Me.pnlDept.Text = "แผนก"
+        '
+        'lblDeptId
+        '
+        Me.lblDeptId.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblDeptId.Location = New System.Drawing.Point(422, 22)
+        Me.lblDeptId.Name = "lblDeptId"
+        Me.lblDeptId.Size = New System.Drawing.Size(100, 21)
+        Me.lblDeptId.TabIndex = 9
+        '
+        'cboDepartment
+        '
+        Me.cboDepartment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboDepartment.FormattingEnabled = True
+        Me.cboDepartment.Location = New System.Drawing.Point(62, 22)
+        Me.cboDepartment.Name = "cboDepartment"
+        Me.cboDepartment.Size = New System.Drawing.Size(283, 21)
+        Me.cboDepartment.TabIndex = 0
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(351, 25)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(65, 13)
+        Me.Label8.TabIndex = 1
+        Me.Label8.Text = "รหัสแผนก : "
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(16, 25)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(46, 13)
+        Me.Label1.TabIndex = 1
+        Me.Label1.Text = "แผนก : "
+        '
+        'TabControl1
+        '
+        Me.TabControl1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+                    Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TabControl1.Controls.Add(Me.TabPage1)
+        Me.TabControl1.Controls.Add(Me.TabPage2)
+        Me.TabControl1.Location = New System.Drawing.Point(3, 52)
+        Me.TabControl1.Name = "TabControl1"
+        Me.TabControl1.SelectedIndex = 0
+        Me.TabControl1.Size = New System.Drawing.Size(824, 486)
+        Me.TabControl1.TabIndex = 1
+        '
+        'TabPage1
+        '
+        Me.TabPage1.Controls.Add(Me.pnlDept)
+        Me.TabPage1.Controls.Add(Me.pnlEmp)
+        Me.TabPage1.Controls.Add(Me.rdByDept)
+        Me.TabPage1.Controls.Add(Me.GroupBox2)
+        Me.TabPage1.Controls.Add(Me.rdByPerson)
+        Me.TabPage1.Controls.Add(Me.Panel1)
+        Me.TabPage1.Controls.Add(Me.lstAllowance)
+        Me.TabPage1.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage1.Name = "TabPage1"
+        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage1.Size = New System.Drawing.Size(816, 460)
+        Me.TabPage1.TabIndex = 0
+        Me.TabPage1.Text = "คีย์ข้อมูล Allowance"
+        Me.TabPage1.UseVisualStyleBackColor = True
+        '
+        'TabPage2
+        '
+        Me.TabPage2.Controls.Add(Me.GroupBox1)
+        Me.TabPage2.Controls.Add(Me.btnRefresh)
+        Me.TabPage2.Controls.Add(Me.lstAllData)
+        Me.TabPage2.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage2.Name = "TabPage2"
+        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage2.Size = New System.Drawing.Size(816, 460)
+        Me.TabPage2.TabIndex = 1
+        Me.TabPage2.Text = "สรุป Allowance ประจำเดือน"
+        Me.TabPage2.UseVisualStyleBackColor = True
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.rdCode)
+        Me.GroupBox1.Controls.Add(Me.rdawCode)
+        Me.GroupBox1.Location = New System.Drawing.Point(6, 3)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(376, 37)
+        Me.GroupBox1.TabIndex = 7
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "เรียงข้อมูลตาม"
+        '
+        'rdCode
+        '
+        Me.rdCode.AutoSize = True
+        Me.rdCode.Location = New System.Drawing.Point(160, 14)
+        Me.rdCode.Name = "rdCode"
+        Me.rdCode.Size = New System.Drawing.Size(143, 17)
+        Me.rdCode.TabIndex = 0
+        Me.rdCode.TabStop = True
+        Me.rdCode.Text = "รหัสพนักงาน , Allowance"
+        Me.rdCode.UseVisualStyleBackColor = True
+        '
+        'rdawCode
+        '
+        Me.rdawCode.AutoSize = True
+        Me.rdawCode.Checked = True
+        Me.rdawCode.Location = New System.Drawing.Point(6, 14)
+        Me.rdawCode.Name = "rdawCode"
+        Me.rdawCode.Size = New System.Drawing.Size(143, 17)
+        Me.rdawCode.TabIndex = 0
+        Me.rdawCode.TabStop = True
+        Me.rdawCode.Text = "Allowance , รหัสพนักงาน"
+        Me.rdawCode.UseVisualStyleBackColor = True
+        '
+        'btnRefresh
+        '
+        Me.btnRefresh.Location = New System.Drawing.Point(6, 46)
+        Me.btnRefresh.Name = "btnRefresh"
+        Me.btnRefresh.Size = New System.Drawing.Size(133, 23)
+        Me.btnRefresh.TabIndex = 6
+        Me.btnRefresh.Text = "Refresh"
+        Me.btnRefresh.UseVisualStyleBackColor = True
+        '
+        'lstAllData
+        '
+        Me.lstAllData.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+                    Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lstAllData.CheckBoxes = True
+        Me.lstAllData.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader2, Me.ColumnHeader3, Me.ColumnHeader4, Me.ColumnHeader5, Me.ColumnHeader6, Me.ColumnHeader7})
+        Me.lstAllData.FullRowSelect = True
+        Me.lstAllData.GridLines = True
+        Me.lstAllData.Location = New System.Drawing.Point(5, 75)
+        Me.lstAllData.Name = "lstAllData"
+        Me.lstAllData.Size = New System.Drawing.Size(806, 379)
+        Me.lstAllData.TabIndex = 5
+        Me.lstAllData.UseCompatibleStateImageBehavior = False
+        Me.lstAllData.View = System.Windows.Forms.View.Details
+        '
+        'ColumnHeader1
+        '
+        Me.ColumnHeader1.Text = "No."
+        Me.ColumnHeader1.Width = 41
+        '
+        'ColumnHeader2
+        '
+        Me.ColumnHeader2.Text = "Id"
+        Me.ColumnHeader2.Width = 0
+        '
+        'ColumnHeader3
+        '
+        Me.ColumnHeader3.Text = "รหัสพนง."
+        Me.ColumnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.ColumnHeader3.Width = 87
+        '
+        'ColumnHeader4
+        '
+        Me.ColumnHeader4.Text = "ชื่อ - กสุล"
+        Me.ColumnHeader4.Width = 192
+        '
+        'ColumnHeader5
+        '
+        Me.ColumnHeader5.Text = "รหัสแผนก"
+        Me.ColumnHeader5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.ColumnHeader5.Width = 82
+        '
+        'ColumnHeader6
+        '
+        Me.ColumnHeader6.Text = "Allowance"
+        Me.ColumnHeader6.Width = 247
+        '
+        'ColumnHeader7
+        '
+        Me.ColumnHeader7.Text = "ยอดเงิน"
+        Me.ColumnHeader7.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        Me.ColumnHeader7.Width = 110
+        '
+        'colRemark
+        '
+        Me.colRemark.Text = "หมายเหตุ"
+        '
+        'colStatus
+        '
+        Me.colStatus.Text = "สถานะ"
+        Me.colStatus.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.colStatus.Width = 80
+        '
+        'colAutoDate
+        '
+        Me.colAutoDate.Text = "วันที่คิด Allwoance"
+        Me.colAutoDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.colAutoDate.Width = 130
+        '
+        'frmAllowance
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.ClientSize = New System.Drawing.Size(830, 541)
+        Me.Controls.Add(Me.j)
+        Me.Controls.Add(Me.TabControl1)
+        Me.KeyPreview = True
+        Me.Name = "frmAllowance"
+        Me.Text = "Allowance"
+        Me.pnlEmp.ResumeLayout(False)
+        Me.pnlEmp.PerformLayout()
+        Me.GroupBox2.ResumeLayout(False)
+        Me.GroupBox2.PerformLayout()
+        Me.Panel1.ResumeLayout(False)
+        Me.j.ResumeLayout(False)
+        Me.j.PerformLayout()
+        Me.pnlDept.ResumeLayout(False)
+        Me.pnlDept.PerformLayout()
+        Me.TabControl1.ResumeLayout(False)
+        Me.TabPage1.ResumeLayout(False)
+        Me.TabPage1.PerformLayout()
+        Me.TabPage2.ResumeLayout(False)
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
+        Me.ResumeLayout(False)
+
+    End Sub
+    Friend WithEvents pnlEmp As System.Windows.Forms.GroupBox
+    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents txtDeptId As System.Windows.Forms.TextBox
+    Friend WithEvents txtSite As System.Windows.Forms.TextBox
+    Friend WithEvents txtDepartment As System.Windows.Forms.TextBox
+    Friend WithEvents txtName As System.Windows.Forms.TextBox
+    Friend WithEvents txtCode As System.Windows.Forms.TextBox
+    Friend WithEvents Label5 As System.Windows.Forms.Label
+    Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
+    Friend WithEvents Label6 As System.Windows.Forms.Label
+    Friend WithEvents Panel1 As System.Windows.Forms.Panel
+    Friend WithEvents btnEdit As System.Windows.Forms.Button
+    Friend WithEvents btnExit As System.Windows.Forms.Button
+    Friend WithEvents btnClear As System.Windows.Forms.Button
+    Friend WithEvents btnDelete As System.Windows.Forms.Button
+    Friend WithEvents btnAdd As System.Windows.Forms.Button
+    Friend WithEvents lstAllowance As System.Windows.Forms.ListView
+    Friend WithEvents colNo As System.Windows.Forms.ColumnHeader
+    Friend WithEvents colCode As System.Windows.Forms.ColumnHeader
+    Friend WithEvents lblId As System.Windows.Forms.Label
+    Friend WithEvents txtTotal As System.Windows.Forms.TextBox
+    Friend WithEvents cboAllowance As System.Windows.Forms.ComboBox
+    Friend WithEvents Label7 As System.Windows.Forms.Label
+    Friend WithEvents lblawCode As System.Windows.Forms.Label
+    Friend WithEvents colId As System.Windows.Forms.ColumnHeader
+    Friend WithEvents j As System.Windows.Forms.GroupBox
+    Friend WithEvents txtMonthYear As System.Windows.Forms.MaskedTextBox
+    Friend WithEvents Label9 As System.Windows.Forms.Label
+    Friend WithEvents rdByPerson As System.Windows.Forms.RadioButton
+    Friend WithEvents rdByDept As System.Windows.Forms.RadioButton
+    Friend WithEvents pnlDept As System.Windows.Forms.GroupBox
+    Friend WithEvents cboDepartment As System.Windows.Forms.ComboBox
+    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents TabControl1 As System.Windows.Forms.TabControl
+    Friend WithEvents TabPage1 As System.Windows.Forms.TabPage
+    Friend WithEvents TabPage2 As System.Windows.Forms.TabPage
+    Friend WithEvents colName As System.Windows.Forms.ColumnHeader
+    Friend WithEvents colDept As System.Windows.Forms.ColumnHeader
+    Friend WithEvents colAllowance As System.Windows.Forms.ColumnHeader
+    Friend WithEvents colPrice As System.Windows.Forms.ColumnHeader
+    Friend WithEvents lblDeptId As System.Windows.Forms.Label
+    Friend WithEvents Label8 As System.Windows.Forms.Label
+    Friend WithEvents Label10 As System.Windows.Forms.Label
+    Friend WithEvents lstAllData As System.Windows.Forms.ListView
+    Friend WithEvents ColumnHeader1 As System.Windows.Forms.ColumnHeader
+    Friend WithEvents ColumnHeader2 As System.Windows.Forms.ColumnHeader
+    Friend WithEvents ColumnHeader3 As System.Windows.Forms.ColumnHeader
+    Friend WithEvents ColumnHeader4 As System.Windows.Forms.ColumnHeader
+    Friend WithEvents ColumnHeader5 As System.Windows.Forms.ColumnHeader
+    Friend WithEvents ColumnHeader6 As System.Windows.Forms.ColumnHeader
+    Friend WithEvents ColumnHeader7 As System.Windows.Forms.ColumnHeader
+    Friend WithEvents btnRefresh As System.Windows.Forms.Button
+    Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
+    Friend WithEvents rdCode As System.Windows.Forms.RadioButton
+    Friend WithEvents rdawCode As System.Windows.Forms.RadioButton
+    Friend WithEvents btnLoadDefault As System.Windows.Forms.Button
+    Friend WithEvents colStatus As System.Windows.Forms.ColumnHeader
+    Friend WithEvents colAutoDate As System.Windows.Forms.ColumnHeader
+    Friend WithEvents colRemark As System.Windows.Forms.ColumnHeader
+End Class

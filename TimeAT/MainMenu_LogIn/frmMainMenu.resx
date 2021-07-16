@@ -1,0 +1,1094 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="MainMenu1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="mnuImportData.Text" xml:space="preserve">
+    <value>Import Data</value>
+  </data>
+  <data name="MenuItem11.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="mnuPermissionTimeAtt.Text" xml:space="preserve">
+    <value>ประมวลผลเวลาทำงาน </value>
+  </data>
+  <data name="mnuManageTime.Text" xml:space="preserve">
+    <value>แก้ไข/เพิ่ม เวลาทำงาน</value>
+  </data>
+  <data name="MenuItem12.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="mnuOvertime.Text" xml:space="preserve">
+    <value>คำนวณค่าล่วงเวลา</value>
+  </data>
+  <data name="mnuLateTime.Text" xml:space="preserve">
+    <value>คำนวณมาสาย/ออกก่อน</value>
+  </data>
+  <data name="mnuabsenceTime.Text" xml:space="preserve">
+    <value>คำนวณขาดงาน</value>
+  </data>
+  <data name="MenuItem20.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="MenuItem20.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="mnuAllowance.Text" xml:space="preserve">
+    <value>Allowance</value>
+  </data>
+  <data name="mnuAllowance.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="MenuItem17.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="mnuInputLeaveData.Text" xml:space="preserve">
+    <value>คีย์ข้อมูลการลา</value>
+  </data>
+  <data name="mnuDailyUpdate.Text" xml:space="preserve">
+    <value>Daily Update</value>
+  </data>
+  <data name="mnumodelcalculations.Text" xml:space="preserve">
+    <value>กำหนดรูปแบบการคำนวณ</value>
+  </data>
+  <data name="MenuItem46.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="mnuworkinggroup.Text" xml:space="preserve">
+    <value>กำหนดกลุ่มเวลาทำงาน - ปกติ/ตามวัน</value>
+  </data>
+  <data name="MenuItem44.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="mnuDeterminedTime.Text" xml:space="preserve">
+    <value>กำหนดเวลาทำงาน</value>
+  </data>
+  <data name="mnuDeterminedTimeEmpByOne.Text" xml:space="preserve">
+    <value>กำหนดเวลาทำงานพื้นฐานพนักงานแต่ละคน</value>
+  </data>
+  <data name="mnuDeterminedTimeEmpByDate.Text" xml:space="preserve">
+    <value>กำหนดเวลาตามวันที่</value>
+  </data>
+  <data name="mnuDeterminedTimeEmp.Text" xml:space="preserve">
+    <value>กำหนดเวลาให้กับพนักงาน</value>
+  </data>
+  <data name="mnuTimeWork.Text" xml:space="preserve">
+    <value>เวลาทำงาน</value>
+  </data>
+  <data name="MenuItem34.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="mnusetBarcode.Text" xml:space="preserve">
+    <value>กำหนด Barcode</value>
+  </data>
+  <data name="MenuItem36.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="mnuProcessOT.Text" xml:space="preserve">
+    <value>กำหนดพนักงานคำนวณ OT / กำหนดรูปแบบการคำนวณ OT</value>
+  </data>
+  <data name="mnucalculationLate.Text" xml:space="preserve">
+    <value>กำหนดพนักงานคำนวณ สาย</value>
+  </data>
+  <data name="mnucalculationAbs.Text" xml:space="preserve">
+    <value>กำหนดพนักงานคำนวณขาด</value>
+  </data>
+  <data name="MenuItem50.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="mnucalculationBreak.Text" xml:space="preserve">
+    <value>กำหนดเวลาทำงาน + เวลาพัก</value>
+  </data>
+  <data name="mnucalculationBreak.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="mnuSetholiday.Text" xml:space="preserve">
+    <value>กำหนดวันหยุดประจำปี</value>
+  </data>
+  <data name="MenuItem53.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="mnuSetLeave.Text" xml:space="preserve">
+    <value>กำหนดข้อมูลการลา</value>
+  </data>
+  <data name="mnuSetabsenceTimeByYear.Text" xml:space="preserve">
+    <value>กำหนดสิทธิการลาในแต่ละปี</value>
+  </data>
+  <data name="MenuItem16.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="MenuItem7.Text" xml:space="preserve">
+    <value>กำหนดเงือนไข OT พื้นฐาน</value>
+  </data>
+  <data name="mnusetovertimepay.Text" xml:space="preserve">
+    <value>กำหนดค่าล่วงเวลา - กรณีจ่ายเป็นเงิน</value>
+  </data>
+  <data name="MenuItem2.Text" xml:space="preserve">
+    <value>กำหนดค่าล่วงเวลา - กรณีจ่ายคาบ</value>
+  </data>
+  <data name="MenuItem1.Text" xml:space="preserve">
+    <value>กำหนดเงือนไข ต่างๆ ของ OT</value>
+  </data>
+  <data name="MenuItem4.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="mnusetdelaytime.Text" xml:space="preserve">
+    <value>กำหนดพนักงาน ใช้เวลาหน่วง</value>
+  </data>
+  <data name="MenuItem55.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="mnusetdelayOT.Text" xml:space="preserve">
+    <value>กำหนดเวลาหน่วงการทำ OT</value>
+  </data>
+  <data name="mnuSetCancelDelayOTByDay.Text" xml:space="preserve">
+    <value>กำหนดพนักงาน ยกเลิกการหน่วง รายวัน</value>
+  </data>
+  <data name="mnusetOT.Text" xml:space="preserve">
+    <value>กำหนดเวลาหน่วงการทำ OT</value>
+  </data>
+  <data name="MenuItem5.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="mnuOTbyDay.Text" xml:space="preserve">
+    <value>คีร์ข้อมูล OT หักพิเศษรายวัน ตามรายบุคคล</value>
+  </data>
+  <data name="MenuItem3.Text" xml:space="preserve">
+    <value>OT</value>
+  </data>
+  <data name="mnuconditionslate.Text" xml:space="preserve">
+    <value>กำหนดเงือนไขการหักมาสาย</value>
+  </data>
+  <data name="MenuItem62.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="mnuconditionslatesomeone.Text" xml:space="preserve">
+    <value>กำหนดเงื่อนไขสาย - กรณีหักยอดเดียว</value>
+  </data>
+  <data name="MenuItem8.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="MenuItem8.Text" xml:space="preserve">
+    <value>กำหนดเงื่อนไขพิเศษการหักเงินมาสาย</value>
+  </data>
+  <data name="MenuItem8.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="mnuconditionslatebyRate.Text" xml:space="preserve">
+    <value>กำหนดเงื่อนไขสาย - สายหักเงินตาม Rate</value>
+  </data>
+  <data name="mnusetconditionsLate.Text" xml:space="preserve">
+    <value>กำหนดเงือนไขการสาย</value>
+  </data>
+  <data name="mnusetAllowance.Text" xml:space="preserve">
+    <value>กำหนดเงื่อนไขจ่าย Allowance อัตโนมัติ</value>
+  </data>
+  <data name="mnusetAllowance.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="mnuLinkCodePayroll.Text" xml:space="preserve">
+    <value>กำหนด Link Code กับ Payroll</value>
+  </data>
+  <data name="MenuWorkHolidaySpacial.Text" xml:space="preserve">
+    <value>กำหนดวันทำงานพิเศษ - วันหยุดพิเศษ</value>
+  </data>
+  <data name="MenuItem9.Text" xml:space="preserve">
+    <value>กำหนดการจำกัดชั่วโมง OT</value>
+  </data>
+  <data name="TimeKaMove.Text" xml:space="preserve">
+    <value>ปรับเวลาเข้างาน อัตโนมัติ</value>
+  </data>
+  <data name="mnuConfiguration.Text" xml:space="preserve">
+    <value>Configuration</value>
+  </data>
+  <data name="mnurptTimeWork.Text" xml:space="preserve">
+    <value>บัญชีลงเวลาทำงาน</value>
+  </data>
+  <data name="mnurptTimeWorkLateByOne.Text" xml:space="preserve">
+    <value>รายงานแสดงเวลาทำงาน/ข้อมูลมาสาย ของพนักงานแต่ละคน</value>
+  </data>
+  <data name="mnurptTimeSheet.Text" xml:space="preserve">
+    <value>Time Sheet</value>
+  </data>
+  <data name="mnurptAllemployeework.Text" xml:space="preserve">
+    <value>Report all employee's work</value>
+  </data>
+  <data name="mnuSumaryWagePerDay.Text" xml:space="preserve">
+    <value>รายงานใบค่าแรงรายวัน</value>
+  </data>
+  <data name="mnuSumaryWagePerDay.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="mnurptEmpWorkDetail1.Text" xml:space="preserve">
+    <value>รายงานเวลาทำงานของพนักงาน(แบบละเอียด)</value>
+  </data>
+  <data name="mnurptEmpWorkDetail2.Text" xml:space="preserve">
+    <value>รายงานเวลาทำงานของพนักงาน แบบที่ 2</value>
+  </data>
+  <data name="mnurptEmployeework.Text" xml:space="preserve">
+    <value>รายงานเวลาทำงานของพนักงาน</value>
+  </data>
+  <data name="mnurptOT.Text" xml:space="preserve">
+    <value>รายงาน OT</value>
+  </data>
+  <data name="mnurptOT.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="mnurptSumaryMonth.Text" xml:space="preserve">
+    <value>สรุปยอดประจำเดือน</value>
+  </data>
+  <data name="mnurptSumaryMonth.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="mnurptrptSumaryMonthLateByBath.Text" xml:space="preserve">
+    <value>รายงาน สรุปยอด สาย - ขาด (บาท) รายเดือน</value>
+  </data>
+  <data name="mnurptScheduleWorkAllEmp.Text" xml:space="preserve">
+    <value>รายงานตารางการทำงาน ของพนักงานทั้งหมด</value>
+  </data>
+  <data name="mnuConfigSummaryScheduleWorkAllEmp.Text" xml:space="preserve">
+    <value>กำหนด Config Column</value>
+  </data>
+  <data name="MenuItem60.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="mnurptSummaryScheduleWorkAllEmp.Text" xml:space="preserve">
+    <value>รายงานเวลาการทำงานของพนักงาน(แบบสรุป)</value>
+  </data>
+  <data name="mnuSummaryScheduleWorkAllEmp.Text" xml:space="preserve">
+    <value>รายงานเวลาการทำงานของพนักงาน(แบบสรุป)</value>
+  </data>
+  <data name="mnuConfigEmpNotWork.Text" xml:space="preserve">
+    <value>กำหนด Config Column</value>
+  </data>
+  <data name="mnurptEmpNotWork.Text" xml:space="preserve">
+    <value>รายงานของพนักงานที่ไม่มาทำงาน</value>
+  </data>
+  <data name="mnuEmpNotWork.Text" xml:space="preserve">
+    <value>รายงานของพนักงานที่ไม่มาทำงาน</value>
+  </data>
+  <data name="mnurptemployeeByDate.Text" xml:space="preserve">
+    <value>รายงานการลาขาดสายของพนักงาน ประจำวัน</value>
+  </data>
+  <data name="mnuConfogSumaryemployee.Text" xml:space="preserve">
+    <value>กำหนด Config Column</value>
+  </data>
+  <data name="mnurptSumaryemployee.Text" xml:space="preserve">
+    <value>รายงาน มาสาย/ลา/ขาด ของพนักงาน(แบบสรุป)</value>
+  </data>
+  <data name="mnuSumaryemployee.Text" xml:space="preserve">
+    <value>รายงาน มาสาย/ลา/ขาด ของพนักงาน(แบบสรุป)</value>
+  </data>
+  <data name="mnurptMaximumOThoursdaysweeksyear.Text" xml:space="preserve">
+    <value>รายงาน ชั่วโมง O.T. สูงสุด/วัน/สัปดาห์  ประจำปี</value>
+  </data>
+  <data name="mnurptNormalworkinghoursOTByWeek.Text" xml:space="preserve">
+    <value>รายงานทำงานปกติ + ชั่วโมง O.T. / ต่อสัปดาห์ </value>
+  </data>
+  <data name="mnuConfigSumaryHolidayInYears.Text" xml:space="preserve">
+    <value>กำหนด Config Column</value>
+  </data>
+  <data name="mnurptSumaryHolidayInYears.Text" xml:space="preserve">
+    <value>รายงานสรุปการหยุดประจำปี</value>
+  </data>
+  <data name="mnuSumaryHolidayInYears.Text" xml:space="preserve">
+    <value>รายงานสรุปการหยุดประจำปี</value>
+  </data>
+  <data name="MenuItem24.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="MenuItem24.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="mnuprtAllowance.Text" xml:space="preserve">
+    <value>รายงาน Allowance</value>
+  </data>
+  <data name="mnuprtAllowance.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="mnuRptSumary.Text" xml:space="preserve">
+    <value>รายงานสรุปยอด</value>
+  </data>
+  <data name="mnuRptSumary.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="MenuItem30.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="MenuItem30.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="mnuRptSumaryByMonth.Text" xml:space="preserve">
+    <value>สรุปรายงานประจำเดือน</value>
+  </data>
+  <data name="mnuRptSumaryByMonth.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="mnuRptSumaryByYear.Text" xml:space="preserve">
+    <value>สรุปรายงานประจำปี</value>
+  </data>
+  <data name="mnuRptSumaryByYear.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="MenuItem6.Text" xml:space="preserve">
+    <value>รายงานค่าล่วงเวลาทำงาน (ตามช่วงเวลา)</value>
+  </data>
+  <data name="mnuReport.Text" xml:space="preserve">
+    <value>รายงาน</value>
+  </data>
+  <data name="mnuWindows.Text" xml:space="preserve">
+    <value>Windows</value>
+  </data>
+  <data name="mnuConfigPermission.Text" xml:space="preserve">
+    <value>กำหนด User และ สิทธิ์</value>
+  </data>
+  <data name="mnuPermission.Text" xml:space="preserve">
+    <value>กำหนดสิทธิ์</value>
+  </data>
+  <data name="mnuExit.Text" xml:space="preserve">
+    <value>E&amp;xit</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.AutoScaleBaseSize" type="System.Drawing.Size, System.Drawing">
+    <value>5, 13</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>576, 415</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>โปรแกรม Time - Attendance V.2.0.101 LastUpdate : 19/09/2013 14:36</value>
+  </data>
+  <data name="&gt;&gt;MainMenu1.Name" xml:space="preserve">
+    <value>MainMenu1</value>
+  </data>
+  <data name="&gt;&gt;MainMenu1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MainMenu, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mnuDailyUpdate.Name" xml:space="preserve">
+    <value>mnuDailyUpdate</value>
+  </data>
+  <data name="&gt;&gt;mnuDailyUpdate.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mnuImportData.Name" xml:space="preserve">
+    <value>mnuImportData</value>
+  </data>
+  <data name="&gt;&gt;mnuImportData.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MenuItem11.Name" xml:space="preserve">
+    <value>MenuItem11</value>
+  </data>
+  <data name="&gt;&gt;MenuItem11.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mnuPermissionTimeAtt.Name" xml:space="preserve">
+    <value>mnuPermissionTimeAtt</value>
+  </data>
+  <data name="&gt;&gt;mnuPermissionTimeAtt.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mnuManageTime.Name" xml:space="preserve">
+    <value>mnuManageTime</value>
+  </data>
+  <data name="&gt;&gt;mnuManageTime.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MenuItem12.Name" xml:space="preserve">
+    <value>MenuItem12</value>
+  </data>
+  <data name="&gt;&gt;MenuItem12.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mnuOvertime.Name" xml:space="preserve">
+    <value>mnuOvertime</value>
+  </data>
+  <data name="&gt;&gt;mnuOvertime.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mnuLateTime.Name" xml:space="preserve">
+    <value>mnuLateTime</value>
+  </data>
+  <data name="&gt;&gt;mnuLateTime.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mnuabsenceTime.Name" xml:space="preserve">
+    <value>mnuabsenceTime</value>
+  </data>
+  <data name="&gt;&gt;mnuabsenceTime.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MenuItem20.Name" xml:space="preserve">
+    <value>MenuItem20</value>
+  </data>
+  <data name="&gt;&gt;MenuItem20.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mnuAllowance.Name" xml:space="preserve">
+    <value>mnuAllowance</value>
+  </data>
+  <data name="&gt;&gt;mnuAllowance.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MenuItem17.Name" xml:space="preserve">
+    <value>MenuItem17</value>
+  </data>
+  <data name="&gt;&gt;MenuItem17.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mnuInputLeaveData.Name" xml:space="preserve">
+    <value>mnuInputLeaveData</value>
+  </data>
+  <data name="&gt;&gt;mnuInputLeaveData.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mnuConfiguration.Name" xml:space="preserve">
+    <value>mnuConfiguration</value>
+  </data>
+  <data name="&gt;&gt;mnuConfiguration.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mnumodelcalculations.Name" xml:space="preserve">
+    <value>mnumodelcalculations</value>
+  </data>
+  <data name="&gt;&gt;mnumodelcalculations.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MenuItem46.Name" xml:space="preserve">
+    <value>MenuItem46</value>
+  </data>
+  <data name="&gt;&gt;MenuItem46.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mnuTimeWork.Name" xml:space="preserve">
+    <value>mnuTimeWork</value>
+  </data>
+  <data name="&gt;&gt;mnuTimeWork.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mnuworkinggroup.Name" xml:space="preserve">
+    <value>mnuworkinggroup</value>
+  </data>
+  <data name="&gt;&gt;mnuworkinggroup.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MenuItem44.Name" xml:space="preserve">
+    <value>MenuItem44</value>
+  </data>
+  <data name="&gt;&gt;MenuItem44.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mnuDeterminedTime.Name" xml:space="preserve">
+    <value>mnuDeterminedTime</value>
+  </data>
+  <data name="&gt;&gt;mnuDeterminedTime.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mnuDeterminedTimeEmp.Name" xml:space="preserve">
+    <value>mnuDeterminedTimeEmp</value>
+  </data>
+  <data name="&gt;&gt;mnuDeterminedTimeEmp.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mnuDeterminedTimeEmpByOne.Name" xml:space="preserve">
+    <value>mnuDeterminedTimeEmpByOne</value>
+  </data>
+  <data name="&gt;&gt;mnuDeterminedTimeEmpByOne.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mnuDeterminedTimeEmpByDate.Name" xml:space="preserve">
+    <value>mnuDeterminedTimeEmpByDate</value>
+  </data>
+  <data name="&gt;&gt;mnuDeterminedTimeEmpByDate.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MenuItem34.Name" xml:space="preserve">
+    <value>MenuItem34</value>
+  </data>
+  <data name="&gt;&gt;MenuItem34.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mnusetBarcode.Name" xml:space="preserve">
+    <value>mnusetBarcode</value>
+  </data>
+  <data name="&gt;&gt;mnusetBarcode.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MenuItem36.Name" xml:space="preserve">
+    <value>MenuItem36</value>
+  </data>
+  <data name="&gt;&gt;MenuItem36.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mnuProcessOT.Name" xml:space="preserve">
+    <value>mnuProcessOT</value>
+  </data>
+  <data name="&gt;&gt;mnuProcessOT.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mnucalculationLate.Name" xml:space="preserve">
+    <value>mnucalculationLate</value>
+  </data>
+  <data name="&gt;&gt;mnucalculationLate.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mnucalculationAbs.Name" xml:space="preserve">
+    <value>mnucalculationAbs</value>
+  </data>
+  <data name="&gt;&gt;mnucalculationAbs.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MenuItem50.Name" xml:space="preserve">
+    <value>MenuItem50</value>
+  </data>
+  <data name="&gt;&gt;MenuItem50.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mnucalculationBreak.Name" xml:space="preserve">
+    <value>mnucalculationBreak</value>
+  </data>
+  <data name="&gt;&gt;mnucalculationBreak.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mnuSetholiday.Name" xml:space="preserve">
+    <value>mnuSetholiday</value>
+  </data>
+  <data name="&gt;&gt;mnuSetholiday.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MenuItem53.Name" xml:space="preserve">
+    <value>MenuItem53</value>
+  </data>
+  <data name="&gt;&gt;MenuItem53.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mnuSetLeave.Name" xml:space="preserve">
+    <value>mnuSetLeave</value>
+  </data>
+  <data name="&gt;&gt;mnuSetLeave.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mnuSetabsenceTimeByYear.Name" xml:space="preserve">
+    <value>mnuSetabsenceTimeByYear</value>
+  </data>
+  <data name="&gt;&gt;mnuSetabsenceTimeByYear.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MenuItem16.Name" xml:space="preserve">
+    <value>MenuItem16</value>
+  </data>
+  <data name="&gt;&gt;MenuItem16.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MenuItem3.Name" xml:space="preserve">
+    <value>MenuItem3</value>
+  </data>
+  <data name="&gt;&gt;MenuItem3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MenuItem7.Name" xml:space="preserve">
+    <value>MenuItem7</value>
+  </data>
+  <data name="&gt;&gt;MenuItem7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MenuItem1.Name" xml:space="preserve">
+    <value>MenuItem1</value>
+  </data>
+  <data name="&gt;&gt;MenuItem1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mnusetovertimepay.Name" xml:space="preserve">
+    <value>mnusetovertimepay</value>
+  </data>
+  <data name="&gt;&gt;mnusetovertimepay.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MenuItem2.Name" xml:space="preserve">
+    <value>MenuItem2</value>
+  </data>
+  <data name="&gt;&gt;MenuItem2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MenuItem4.Name" xml:space="preserve">
+    <value>MenuItem4</value>
+  </data>
+  <data name="&gt;&gt;MenuItem4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mnusetOT.Name" xml:space="preserve">
+    <value>mnusetOT</value>
+  </data>
+  <data name="&gt;&gt;mnusetOT.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mnusetdelaytime.Name" xml:space="preserve">
+    <value>mnusetdelaytime</value>
+  </data>
+  <data name="&gt;&gt;mnusetdelaytime.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MenuItem55.Name" xml:space="preserve">
+    <value>MenuItem55</value>
+  </data>
+  <data name="&gt;&gt;MenuItem55.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mnusetdelayOT.Name" xml:space="preserve">
+    <value>mnusetdelayOT</value>
+  </data>
+  <data name="&gt;&gt;mnusetdelayOT.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mnuSetCancelDelayOTByDay.Name" xml:space="preserve">
+    <value>mnuSetCancelDelayOTByDay</value>
+  </data>
+  <data name="&gt;&gt;mnuSetCancelDelayOTByDay.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MenuItem5.Name" xml:space="preserve">
+    <value>MenuItem5</value>
+  </data>
+  <data name="&gt;&gt;MenuItem5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mnuOTbyDay.Name" xml:space="preserve">
+    <value>mnuOTbyDay</value>
+  </data>
+  <data name="&gt;&gt;mnuOTbyDay.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mnusetconditionsLate.Name" xml:space="preserve">
+    <value>mnusetconditionsLate</value>
+  </data>
+  <data name="&gt;&gt;mnusetconditionsLate.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mnuconditionslate.Name" xml:space="preserve">
+    <value>mnuconditionslate</value>
+  </data>
+  <data name="&gt;&gt;mnuconditionslate.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MenuItem62.Name" xml:space="preserve">
+    <value>MenuItem62</value>
+  </data>
+  <data name="&gt;&gt;MenuItem62.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mnuconditionslatesomeone.Name" xml:space="preserve">
+    <value>mnuconditionslatesomeone</value>
+  </data>
+  <data name="&gt;&gt;mnuconditionslatesomeone.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MenuItem8.Name" xml:space="preserve">
+    <value>MenuItem8</value>
+  </data>
+  <data name="&gt;&gt;MenuItem8.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mnuconditionslatebyRate.Name" xml:space="preserve">
+    <value>mnuconditionslatebyRate</value>
+  </data>
+  <data name="&gt;&gt;mnuconditionslatebyRate.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mnusetAllowance.Name" xml:space="preserve">
+    <value>mnusetAllowance</value>
+  </data>
+  <data name="&gt;&gt;mnusetAllowance.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mnuLinkCodePayroll.Name" xml:space="preserve">
+    <value>mnuLinkCodePayroll</value>
+  </data>
+  <data name="&gt;&gt;mnuLinkCodePayroll.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MenuWorkHolidaySpacial.Name" xml:space="preserve">
+    <value>MenuWorkHolidaySpacial</value>
+  </data>
+  <data name="&gt;&gt;MenuWorkHolidaySpacial.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MenuItem9.Name" xml:space="preserve">
+    <value>MenuItem9</value>
+  </data>
+  <data name="&gt;&gt;MenuItem9.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TimeKaMove.Name" xml:space="preserve">
+    <value>TimeKaMove</value>
+  </data>
+  <data name="&gt;&gt;TimeKaMove.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mnuReport.Name" xml:space="preserve">
+    <value>mnuReport</value>
+  </data>
+  <data name="&gt;&gt;mnuReport.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mnurptTimeWork.Name" xml:space="preserve">
+    <value>mnurptTimeWork</value>
+  </data>
+  <data name="&gt;&gt;mnurptTimeWork.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mnurptTimeWorkLateByOne.Name" xml:space="preserve">
+    <value>mnurptTimeWorkLateByOne</value>
+  </data>
+  <data name="&gt;&gt;mnurptTimeWorkLateByOne.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mnurptTimeSheet.Name" xml:space="preserve">
+    <value>mnurptTimeSheet</value>
+  </data>
+  <data name="&gt;&gt;mnurptTimeSheet.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mnurptAllemployeework.Name" xml:space="preserve">
+    <value>mnurptAllemployeework</value>
+  </data>
+  <data name="&gt;&gt;mnurptAllemployeework.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mnuSumaryWagePerDay.Name" xml:space="preserve">
+    <value>mnuSumaryWagePerDay</value>
+  </data>
+  <data name="&gt;&gt;mnuSumaryWagePerDay.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mnurptEmployeework.Name" xml:space="preserve">
+    <value>mnurptEmployeework</value>
+  </data>
+  <data name="&gt;&gt;mnurptEmployeework.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mnurptEmpWorkDetail1.Name" xml:space="preserve">
+    <value>mnurptEmpWorkDetail1</value>
+  </data>
+  <data name="&gt;&gt;mnurptEmpWorkDetail1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mnurptEmpWorkDetail2.Name" xml:space="preserve">
+    <value>mnurptEmpWorkDetail2</value>
+  </data>
+  <data name="&gt;&gt;mnurptEmpWorkDetail2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mnurptOT.Name" xml:space="preserve">
+    <value>mnurptOT</value>
+  </data>
+  <data name="&gt;&gt;mnurptOT.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mnurptSumaryMonth.Name" xml:space="preserve">
+    <value>mnurptSumaryMonth</value>
+  </data>
+  <data name="&gt;&gt;mnurptSumaryMonth.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mnurptrptSumaryMonthLateByBath.Name" xml:space="preserve">
+    <value>mnurptrptSumaryMonthLateByBath</value>
+  </data>
+  <data name="&gt;&gt;mnurptrptSumaryMonthLateByBath.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mnurptScheduleWorkAllEmp.Name" xml:space="preserve">
+    <value>mnurptScheduleWorkAllEmp</value>
+  </data>
+  <data name="&gt;&gt;mnurptScheduleWorkAllEmp.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mnuSummaryScheduleWorkAllEmp.Name" xml:space="preserve">
+    <value>mnuSummaryScheduleWorkAllEmp</value>
+  </data>
+  <data name="&gt;&gt;mnuSummaryScheduleWorkAllEmp.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mnuConfigSummaryScheduleWorkAllEmp.Name" xml:space="preserve">
+    <value>mnuConfigSummaryScheduleWorkAllEmp</value>
+  </data>
+  <data name="&gt;&gt;mnuConfigSummaryScheduleWorkAllEmp.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MenuItem60.Name" xml:space="preserve">
+    <value>MenuItem60</value>
+  </data>
+  <data name="&gt;&gt;MenuItem60.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mnurptSummaryScheduleWorkAllEmp.Name" xml:space="preserve">
+    <value>mnurptSummaryScheduleWorkAllEmp</value>
+  </data>
+  <data name="&gt;&gt;mnurptSummaryScheduleWorkAllEmp.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mnuEmpNotWork.Name" xml:space="preserve">
+    <value>mnuEmpNotWork</value>
+  </data>
+  <data name="&gt;&gt;mnuEmpNotWork.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mnuConfigEmpNotWork.Name" xml:space="preserve">
+    <value>mnuConfigEmpNotWork</value>
+  </data>
+  <data name="&gt;&gt;mnuConfigEmpNotWork.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mnurptEmpNotWork.Name" xml:space="preserve">
+    <value>mnurptEmpNotWork</value>
+  </data>
+  <data name="&gt;&gt;mnurptEmpNotWork.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mnurptemployeeByDate.Name" xml:space="preserve">
+    <value>mnurptemployeeByDate</value>
+  </data>
+  <data name="&gt;&gt;mnurptemployeeByDate.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mnuSumaryemployee.Name" xml:space="preserve">
+    <value>mnuSumaryemployee</value>
+  </data>
+  <data name="&gt;&gt;mnuSumaryemployee.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mnuConfogSumaryemployee.Name" xml:space="preserve">
+    <value>mnuConfogSumaryemployee</value>
+  </data>
+  <data name="&gt;&gt;mnuConfogSumaryemployee.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mnurptSumaryemployee.Name" xml:space="preserve">
+    <value>mnurptSumaryemployee</value>
+  </data>
+  <data name="&gt;&gt;mnurptSumaryemployee.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mnurptMaximumOThoursdaysweeksyear.Name" xml:space="preserve">
+    <value>mnurptMaximumOThoursdaysweeksyear</value>
+  </data>
+  <data name="&gt;&gt;mnurptMaximumOThoursdaysweeksyear.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mnurptNormalworkinghoursOTByWeek.Name" xml:space="preserve">
+    <value>mnurptNormalworkinghoursOTByWeek</value>
+  </data>
+  <data name="&gt;&gt;mnurptNormalworkinghoursOTByWeek.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mnuSumaryHolidayInYears.Name" xml:space="preserve">
+    <value>mnuSumaryHolidayInYears</value>
+  </data>
+  <data name="&gt;&gt;mnuSumaryHolidayInYears.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mnuConfigSumaryHolidayInYears.Name" xml:space="preserve">
+    <value>mnuConfigSumaryHolidayInYears</value>
+  </data>
+  <data name="&gt;&gt;mnuConfigSumaryHolidayInYears.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mnurptSumaryHolidayInYears.Name" xml:space="preserve">
+    <value>mnurptSumaryHolidayInYears</value>
+  </data>
+  <data name="&gt;&gt;mnurptSumaryHolidayInYears.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MenuItem24.Name" xml:space="preserve">
+    <value>MenuItem24</value>
+  </data>
+  <data name="&gt;&gt;MenuItem24.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mnuprtAllowance.Name" xml:space="preserve">
+    <value>mnuprtAllowance</value>
+  </data>
+  <data name="&gt;&gt;mnuprtAllowance.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mnuRptSumary.Name" xml:space="preserve">
+    <value>mnuRptSumary</value>
+  </data>
+  <data name="&gt;&gt;mnuRptSumary.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MenuItem30.Name" xml:space="preserve">
+    <value>MenuItem30</value>
+  </data>
+  <data name="&gt;&gt;MenuItem30.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mnuRptSumaryByMonth.Name" xml:space="preserve">
+    <value>mnuRptSumaryByMonth</value>
+  </data>
+  <data name="&gt;&gt;mnuRptSumaryByMonth.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mnuRptSumaryByYear.Name" xml:space="preserve">
+    <value>mnuRptSumaryByYear</value>
+  </data>
+  <data name="&gt;&gt;mnuRptSumaryByYear.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MenuItem6.Name" xml:space="preserve">
+    <value>MenuItem6</value>
+  </data>
+  <data name="&gt;&gt;MenuItem6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mnuWindows.Name" xml:space="preserve">
+    <value>mnuWindows</value>
+  </data>
+  <data name="&gt;&gt;mnuWindows.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mnuPermission.Name" xml:space="preserve">
+    <value>mnuPermission</value>
+  </data>
+  <data name="&gt;&gt;mnuPermission.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mnuConfigPermission.Name" xml:space="preserve">
+    <value>mnuConfigPermission</value>
+  </data>
+  <data name="&gt;&gt;mnuConfigPermission.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mnuExit.Name" xml:space="preserve">
+    <value>mnuExit</value>
+  </data>
+  <data name="&gt;&gt;mnuExit.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>frmMainMenu</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+</root>

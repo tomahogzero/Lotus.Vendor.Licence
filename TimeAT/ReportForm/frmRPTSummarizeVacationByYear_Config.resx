@@ -1,0 +1,1218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="lblColumns.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 7</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="lblColumnID.HighlightOnFocus" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="txtVCol3.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;LabelX5.Name" xml:space="preserve">
+    <value>LabelX5</value>
+  </data>
+  <data name="&gt;&gt;Label1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;txtVCol2.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.TextBoxX, DevComponents.DotNetBar2, Version=10.0.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b</value>
+  </data>
+  <data name="LabelX2.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;GroupPanel2.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.GroupPanel, DevComponents.DotNetBar2, Version=10.0.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b</value>
+  </data>
+  <data name="txtVCol2.ButtonCustom.Text" xml:space="preserve">
+    <value />
+  </data>
+  <assembly alias="DevComponents.DotNetBar2" name="DevComponents.DotNetBar2, Version=10.0.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b" />
+  <data name="lvType.HighlightColor" type="DevComponents.DotNetBar.Validator.eHighlightColor, DevComponents.DotNetBar2">
+    <value>None</value>
+  </data>
+  <data name="LabelX2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>99, 19</value>
+  </data>
+  <data name="cboVCalType2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>277, 58</value>
+  </data>
+  <data name="ComboItem11.Text" xml:space="preserve">
+    <value>วัน</value>
+  </data>
+  <data name="cboAbsCalType.ItemHeight" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="txtVCol5.HighlightColor" type="DevComponents.DotNetBar.Validator.eHighlightColor, DevComponents.DotNetBar2">
+    <value>None</value>
+  </data>
+  <data name="&gt;&gt;GroupPanel2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;ComboItem6.Type" xml:space="preserve">
+    <value>DevComponents.Editors.ComboItem, DevComponents.DotNetBar2, Version=10.0.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b</value>
+  </data>
+  <data name="&gt;&gt;cboVCalType2.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;LabelX3.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=10.0.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b</value>
+  </data>
+  <data name="&gt;&gt;lblColumns.Parent" xml:space="preserve">
+    <value>GroupPanel2</value>
+  </data>
+  <data name="C1.Text" xml:space="preserve">
+    <value>C1</value>
+  </data>
+  <data name="&gt;&gt;txtVCol4.Parent" xml:space="preserve">
+    <value>GroupPanel1</value>
+  </data>
+  <data name="&gt;&gt;ComboItem2.Name" xml:space="preserve">
+    <value>ComboItem2</value>
+  </data>
+  <data name="txtVCol2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>135, 58</value>
+  </data>
+  <data name="cboVCalType5.HighlightColor" type="DevComponents.DotNetBar.Validator.eHighlightColor, DevComponents.DotNetBar2">
+    <value>None</value>
+  </data>
+  <data name="LabelX3.HighlightColor" type="DevComponents.DotNetBar.Validator.eHighlightColor, DevComponents.DotNetBar2">
+    <value>None</value>
+  </data>
+  <data name="&gt;&gt;txtVCol3.Parent" xml:space="preserve">
+    <value>GroupPanel1</value>
+  </data>
+  <data name="txtVCol1.HighlightOnFocus" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="btnExit.HighlightColor" type="DevComponents.DotNetBar.Validator.eHighlightColor, DevComponents.DotNetBar2">
+    <value>None</value>
+  </data>
+  <data name="&gt;&gt;ComboItem10.Type" xml:space="preserve">
+    <value>DevComponents.Editors.ComboItem, DevComponents.DotNetBar2, Version=10.0.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b</value>
+  </data>
+  <data name="LabelX5.HighlightColor" type="DevComponents.DotNetBar.Validator.eHighlightColor, DevComponents.DotNetBar2">
+    <value>None</value>
+  </data>
+  <data name="&gt;&gt;GroupPanel1.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.GroupPanel, DevComponents.DotNetBar2, Version=10.0.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b</value>
+  </data>
+  <data name="LabelX1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>127, 19</value>
+  </data>
+  <data name="cboVCalType4.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="lblColumnID.Size" type="System.Drawing.Size, System.Drawing">
+    <value>86, 27</value>
+  </data>
+  <data name="cboVCalType3.HighlightColor" type="DevComponents.DotNetBar.Validator.eHighlightColor, DevComponents.DotNetBar2">
+    <value>None</value>
+  </data>
+  <data name="ComboItem12.Text" xml:space="preserve">
+    <value>ชั่วโมง</value>
+  </data>
+  <data name="LabelX2.HighlightOnFocus" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="Label1.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;cboVCalType5.Parent" xml:space="preserve">
+    <value>GroupPanel1</value>
+  </data>
+  <data name="clbAbsType.Size" type="System.Drawing.Size, System.Drawing">
+    <value>168, 162</value>
+  </data>
+  <data name="btnSave.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="cboVCalType2.ItemHeight" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="cboVCalType3.ItemHeight" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;cboVCalType4.Parent" xml:space="preserve">
+    <value>GroupPanel1</value>
+  </data>
+  <data name="txtVCol2.ButtonCustom.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="LabelX8.Text" xml:space="preserve">
+    <value>ขาดงาน : </value>
+  </data>
+  <data name="&gt;&gt;cboVCalType3.Parent" xml:space="preserve">
+    <value>GroupPanel1</value>
+  </data>
+  <data name="&gt;&gt;LabelX2.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="txtVCol2.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="cboVCalType3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>99, 20</value>
+  </data>
+  <data name="&gt;&gt;cboVCalType4.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;btnSaveType.Name" xml:space="preserve">
+    <value>btnSaveType</value>
+  </data>
+  <data name="txtVCol3.HighlightOnFocus" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="LabelX4.Text" xml:space="preserve">
+    <value>Column 2 :</value>
+  </data>
+  <data name="&gt;&gt;cboVCalType3.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="btnSaveType.HighlightOnFocus" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;txtVCol5.Parent" xml:space="preserve">
+    <value>GroupPanel1</value>
+  </data>
+  <data name="LabelX3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>57, 32</value>
+  </data>
+  <data name="&gt;&gt;lblColumns.Name" xml:space="preserve">
+    <value>lblColumns</value>
+  </data>
+  <data name="btnSave.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1, 221</value>
+  </data>
+  <data name="LabelX3.HighlightOnFocus" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="LabelX1.HighlightOnFocus" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="LabelX5.Text" xml:space="preserve">
+    <value>Column 3 :</value>
+  </data>
+  <data name="lvType.Location" type="System.Drawing.Point, System.Drawing">
+    <value>372, 304</value>
+  </data>
+  <data name="&gt;&gt;LabelX3.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="LabelX7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>78, 19</value>
+  </data>
+  <data name="txtVCol1.ButtonCustom.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;LabelX1.Parent" xml:space="preserve">
+    <value>GroupPanel1</value>
+  </data>
+  <data name="&gt;&gt;clbAbsType.Parent" xml:space="preserve">
+    <value>GroupPanel2</value>
+  </data>
+  <data name="$this.HighlightColor" type="DevComponents.DotNetBar.Validator.eHighlightColor, DevComponents.DotNetBar2">
+    <value>None</value>
+  </data>
+  <data name="LabelX6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>57, 110</value>
+  </data>
+  <data name="&gt;&gt;btnSave.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;txtVCol1.Name" xml:space="preserve">
+    <value>txtVCol1</value>
+  </data>
+  <data name="txtVCol5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>135, 136</value>
+  </data>
+  <data name="LabelX8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>144, 162</value>
+  </data>
+  <data name="cboVCalType5.ItemHeight" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="cboVCalType5.HighlightOnFocus" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;C1.Name" xml:space="preserve">
+    <value>C1</value>
+  </data>
+  <data name="txtVCol3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>127, 20</value>
+  </data>
+  <data name="&gt;&gt;LabelX2.Name" xml:space="preserve">
+    <value>LabelX2</value>
+  </data>
+  <data name="&gt;&gt;txtVCol4.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;ComboItem7.Type" xml:space="preserve">
+    <value>DevComponents.Editors.ComboItem, DevComponents.DotNetBar2, Version=10.0.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b</value>
+  </data>
+  <data name="txtVCol4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>127, 20</value>
+  </data>
+  <data name="&gt;&gt;txtVCol3.Name" xml:space="preserve">
+    <value>txtVCol3</value>
+  </data>
+  <data name="&gt;&gt;LabelX1.Name" xml:space="preserve">
+    <value>LabelX1</value>
+  </data>
+  <data name="txtVCol3.HighlightColor" type="DevComponents.DotNetBar.Validator.eHighlightColor, DevComponents.DotNetBar2">
+    <value>None</value>
+  </data>
+  <data name="&gt;&gt;LabelX6.Parent" xml:space="preserve">
+    <value>GroupPanel1</value>
+  </data>
+  <data name="lblColumnID.HighlightColor" type="DevComponents.DotNetBar.Validator.eHighlightColor, DevComponents.DotNetBar2">
+    <value>None</value>
+  </data>
+  <data name="txtVCol3.ButtonCustom.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;LabelX8.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="lvType.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="txtVCol1.ButtonCustom2.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;ComboItem12.Name" xml:space="preserve">
+    <value>ComboItem12</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>รายงานสรุปการหยุดงานประจำปี</value>
+  </data>
+  <data name="btnSaveType.HighlightColor" type="DevComponents.DotNetBar.Validator.eHighlightColor, DevComponents.DotNetBar2">
+    <value>None</value>
+  </data>
+  <data name="&gt;&gt;Highlighter1.Name" xml:space="preserve">
+    <value>Highlighter1</value>
+  </data>
+  <data name="&gt;&gt;lvType.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.ListViewEx, DevComponents.DotNetBar2, Version=10.0.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="&gt;&gt;ComboItem8.Name" xml:space="preserve">
+    <value>ComboItem8</value>
+  </data>
+  <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>39, 13</value>
+  </data>
+  <data name="txtVCol4.ButtonCustom.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;Label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;C1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cboVCalType1.Parent" xml:space="preserve">
+    <value>GroupPanel1</value>
+  </data>
+  <data name="LabelX3.Text" xml:space="preserve">
+    <value>Column 1 :</value>
+  </data>
+  <data name="&gt;&gt;cboAbsCalType.Parent" xml:space="preserve">
+    <value>GroupPanel1</value>
+  </data>
+  <data name="txtVCol2.HighlightOnFocus" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="LabelX7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>57, 137</value>
+  </data>
+  <data name="&gt;&gt;LabelX7.Parent" xml:space="preserve">
+    <value>GroupPanel1</value>
+  </data>
+  <data name="&gt;&gt;clbAbsType.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;LabelX8.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=10.0.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b</value>
+  </data>
+  <data name="GroupPanel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1, 3</value>
+  </data>
+  <data name="&gt;&gt;LabelX6.Name" xml:space="preserve">
+    <value>LabelX6</value>
+  </data>
+  <data name="&gt;&gt;GroupPanel1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="LabelX7.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="LabelX2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>277, 7</value>
+  </data>
+  <data name="&gt;&gt;ComboItem5.Type" xml:space="preserve">
+    <value>DevComponents.Editors.ComboItem, DevComponents.DotNetBar2, Version=10.0.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b</value>
+  </data>
+  <data name="lblColumns.HighlightOnFocus" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="LabelX1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>133, 7</value>
+  </data>
+  <data name="&gt;&gt;btnSave.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;ComboItem9.Name" xml:space="preserve">
+    <value>ComboItem9</value>
+  </data>
+  <data name="cboVCalType5.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="txtVCol5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>127, 20</value>
+  </data>
+  <data name="txtVCol1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>135, 32</value>
+  </data>
+  <data name="GroupPanel1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="cboAbsCalType.Size" type="System.Drawing.Size, System.Drawing">
+    <value>99, 20</value>
+  </data>
+  <data name="&gt;&gt;txtVCol5.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.TextBoxX, DevComponents.DotNetBar2, Version=10.0.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b</value>
+  </data>
+  <data name="ComboItem1.Text" xml:space="preserve">
+    <value>วัน</value>
+  </data>
+  <data name="txtVCol4.ButtonCustom2.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ComboItem4.Text" xml:space="preserve">
+    <value>ชั่วโมง</value>
+  </data>
+  <data name="Label1.Text" xml:space="preserve">
+    <value>Label1</value>
+  </data>
+  <data name="&gt;&gt;lblColumns.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;txtVCol5.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="Label1.HighlightColor" type="DevComponents.DotNetBar.Validator.eHighlightColor, DevComponents.DotNetBar2">
+    <value>None</value>
+  </data>
+  <data name="ComboItem10.Text" xml:space="preserve">
+    <value>ชั่วโมง</value>
+  </data>
+  <data name="LabelX6.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="LabelX1.HighlightColor" type="DevComponents.DotNetBar.Validator.eHighlightColor, DevComponents.DotNetBar2">
+    <value>None</value>
+  </data>
+  <data name="LabelX1.Text" xml:space="preserve">
+    <value>ชื่อ Column</value>
+  </data>
+  <data name="GroupPanel1.HighlightOnFocus" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="Highlighter1.FocusHighlightColor" type="DevComponents.DotNetBar.Validator.eHighlightColor, DevComponents.DotNetBar2">
+    <value>Orange</value>
+  </data>
+  <data name="&gt;&gt;cboVCalType1.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.ComboBoxEx, DevComponents.DotNetBar2, Version=10.0.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b</value>
+  </data>
+  <data name="ColumnHeader2.Text" xml:space="preserve">
+    <value>รายละเอียด</value>
+  </data>
+  <data name="&gt;&gt;btnSave.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=10.0.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b</value>
+  </data>
+  <data name="&gt;&gt;ComboItem11.Type" xml:space="preserve">
+    <value>DevComponents.Editors.ComboItem, DevComponents.DotNetBar2, Version=10.0.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b</value>
+  </data>
+  <data name="cboVCalType1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>99, 20</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LabelX7.Name" xml:space="preserve">
+    <value>LabelX7</value>
+  </data>
+  <data name="&gt;&gt;txtVCol5.Name" xml:space="preserve">
+    <value>txtVCol5</value>
+  </data>
+  <data name="&gt;&gt;cboAbsCalType.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="cboVCalType1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>277, 32</value>
+  </data>
+  <data name="txtVCol1.ButtonCustom.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtVCol1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnExit.Text" xml:space="preserve">
+    <value>ออก</value>
+  </data>
+  <data name="LabelX8.HighlightOnFocus" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="GroupPanel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>459, 3</value>
+  </data>
+  <data name="txtVCol3.ButtonCustom2.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;cboVCalType3.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.ComboBoxEx, DevComponents.DotNetBar2, Version=10.0.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b</value>
+  </data>
+  <data name="cboVCalType3.HighlightOnFocus" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="txtVCol2.ButtonCustom2.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;ComboItem4.Type" xml:space="preserve">
+    <value>DevComponents.Editors.ComboItem, DevComponents.DotNetBar2, Version=10.0.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b</value>
+  </data>
+  <data name="&gt;&gt;btnExit.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=10.0.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b</value>
+  </data>
+  <data name="&gt;&gt;GroupPanel2.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="txtVCol5.HighlightOnFocus" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="txtVCol5.ButtonCustom2.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lvType.Size" type="System.Drawing.Size, System.Drawing">
+    <value>66, 115</value>
+  </data>
+  <data name="btnSave.Text" xml:space="preserve">
+    <value>บันทึก</value>
+  </data>
+  <data name="LabelX3.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;Label1.Name" xml:space="preserve">
+    <value>Label1</value>
+  </data>
+  <data name="Label1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;cboVCalType4.Name" xml:space="preserve">
+    <value>cboVCalType4</value>
+  </data>
+  <data name="&gt;&gt;ComboItem5.Name" xml:space="preserve">
+    <value>ComboItem5</value>
+  </data>
+  <data name="LabelX4.HighlightColor" type="DevComponents.DotNetBar.Validator.eHighlightColor, DevComponents.DotNetBar2">
+    <value>None</value>
+  </data>
+  <data name="btnExit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>227, 57</value>
+  </data>
+  <data name="LabelX7.HighlightColor" type="DevComponents.DotNetBar.Validator.eHighlightColor, DevComponents.DotNetBar2">
+    <value>None</value>
+  </data>
+  <data name="&gt;&gt;txtVCol2.Parent" xml:space="preserve">
+    <value>GroupPanel1</value>
+  </data>
+  <data name="&gt;&gt;txtVCol1.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.TextBoxX, DevComponents.DotNetBar2, Version=10.0.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b</value>
+  </data>
+  <data name="ComboItem5.Text" xml:space="preserve">
+    <value>วัน</value>
+  </data>
+  <data name="cboVCalType1.HighlightOnFocus" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;ComboItem7.Name" xml:space="preserve">
+    <value>ComboItem7</value>
+  </data>
+  <data name="&gt;&gt;txtVCol1.Parent" xml:space="preserve">
+    <value>GroupPanel1</value>
+  </data>
+  <data name="txtVCol4.HighlightColor" type="DevComponents.DotNetBar.Validator.eHighlightColor, DevComponents.DotNetBar2">
+    <value>None</value>
+  </data>
+  <data name="cboVCalType1.HighlightColor" type="DevComponents.DotNetBar.Validator.eHighlightColor, DevComponents.DotNetBar2">
+    <value>None</value>
+  </data>
+  <data name="&gt;&gt;cboVCalType3.Name" xml:space="preserve">
+    <value>cboVCalType3</value>
+  </data>
+  <data name="lblColumns.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="&gt;&gt;GroupPanel1.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;LabelX4.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;cboVCalType5.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.ComboBoxEx, DevComponents.DotNetBar2, Version=10.0.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b</value>
+  </data>
+  <data name="&gt;&gt;LabelX2.Parent" xml:space="preserve">
+    <value>GroupPanel1</value>
+  </data>
+  <data name="lblColumns.HighlightColor" type="DevComponents.DotNetBar.Validator.eHighlightColor, DevComponents.DotNetBar2">
+    <value>None</value>
+  </data>
+  <data name="&gt;&gt;ComboItem6.Name" xml:space="preserve">
+    <value>ComboItem6</value>
+  </data>
+  <data name="&gt;&gt;txtVCol3.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.TextBoxX, DevComponents.DotNetBar2, Version=10.0.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b</value>
+  </data>
+  <data name="cboVCalType5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>99, 20</value>
+  </data>
+  <data name="LabelX4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>57, 59</value>
+  </data>
+  <data name="&gt;&gt;LabelX1.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="&gt;&gt;btnSaveType.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=10.0.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b</value>
+  </data>
+  <data name="Label1.HighlightOnFocus" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;lblColumnID.Name" xml:space="preserve">
+    <value>lblColumnID</value>
+  </data>
+  <data name="txtVCol4.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="LabelX6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>78, 19</value>
+  </data>
+  <data name="btnExit.HighlightOnFocus" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;cboVCalType2.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.ComboBoxEx, DevComponents.DotNetBar2, Version=10.0.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b</value>
+  </data>
+  <data name="&gt;&gt;ColumnHeader1.Name" xml:space="preserve">
+    <value>ColumnHeader1</value>
+  </data>
+  <data name="cboVCalType4.HighlightOnFocus" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="cboAbsCalType.HighlightColor" type="DevComponents.DotNetBar.Validator.eHighlightColor, DevComponents.DotNetBar2">
+    <value>None</value>
+  </data>
+  <data name="cboVCalType5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>277, 136</value>
+  </data>
+  <data name="txtVCol4.ButtonCustom2.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;LabelX4.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=10.0.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b</value>
+  </data>
+  <data name="cboVCalType2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>99, 20</value>
+  </data>
+  <data name="GroupPanel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>188, 275</value>
+  </data>
+  <data name="cboVCalType4.ItemHeight" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="txtVCol2.HighlightColor" type="DevComponents.DotNetBar.Validator.eHighlightColor, DevComponents.DotNetBar2">
+    <value>None</value>
+  </data>
+  <data name="&gt;&gt;lvType.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;LabelX5.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;txtVCol4.Name" xml:space="preserve">
+    <value>txtVCol4</value>
+  </data>
+  <data name="LabelX8.TabIndex" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="&gt;&gt;cboVCalType5.Name" xml:space="preserve">
+    <value>cboVCalType5</value>
+  </data>
+  <data name="&gt;&gt;ColumnHeader1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnExit.Name" xml:space="preserve">
+    <value>btnExit</value>
+  </data>
+  <data name="ComboItem3.Text" xml:space="preserve">
+    <value>วัน</value>
+  </data>
+  <data name="&gt;&gt;clbAbsType.Name" xml:space="preserve">
+    <value>clbAbsType</value>
+  </data>
+  <data name="txtVCol3.ButtonCustom2.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="LabelX8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>127, 19</value>
+  </data>
+  <data name="ComboItem7.Text" xml:space="preserve">
+    <value>วัน</value>
+  </data>
+  <data name="lblColumnID.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="$this.HighlightOnFocus" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;LabelX5.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=10.0.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b</value>
+  </data>
+  <data name="&gt;&gt;lblColumns.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=10.0.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>frmRPTSummarizeVacationByYear_Config</value>
+  </data>
+  <data name="txtVCol4.HighlightOnFocus" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;LabelX3.Name" xml:space="preserve">
+    <value>LabelX3</value>
+  </data>
+  <data name="LabelX4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>78, 19</value>
+  </data>
+  <data name="txtVCol4.ButtonCustom.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="LabelX5.HighlightOnFocus" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lblColumns.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lblColumnID.Location" type="System.Drawing.Point, System.Drawing">
+    <value>149, 349</value>
+  </data>
+  <data name="GroupPanel2.HighlightColor" type="DevComponents.DotNetBar.Validator.eHighlightColor, DevComponents.DotNetBar2">
+    <value>None</value>
+  </data>
+  <data name="&gt;&gt;ComboItem9.Type" xml:space="preserve">
+    <value>DevComponents.Editors.ComboItem, DevComponents.DotNetBar2, Version=10.0.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b</value>
+  </data>
+  <data name="&gt;&gt;lvType.Name" xml:space="preserve">
+    <value>lvType</value>
+  </data>
+  <data name="&gt;&gt;txtVCol2.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;cboAbsCalType.Name" xml:space="preserve">
+    <value>cboAbsCalType</value>
+  </data>
+  <data name="btnSave.HighlightOnFocus" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="ColumnHeader1.Text" xml:space="preserve">
+    <value>รหัส</value>
+  </data>
+  <data name="cboVCalType2.HighlightColor" type="DevComponents.DotNetBar.Validator.eHighlightColor, DevComponents.DotNetBar2">
+    <value>None</value>
+  </data>
+  <data name="&gt;&gt;txtVCol1.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="cboVCalType4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>277, 110</value>
+  </data>
+  <data name="GroupPanel1.Text" xml:space="preserve">
+    <value>กำหนด Column การลา</value>
+  </data>
+  <data name="&gt;&gt;LabelX8.Name" xml:space="preserve">
+    <value>LabelX8</value>
+  </data>
+  <data name="btnSaveType.Text" xml:space="preserve">
+    <value>บันทึกประเภท</value>
+  </data>
+  <data name="&gt;&gt;ComboItem4.Name" xml:space="preserve">
+    <value>ComboItem4</value>
+  </data>
+  <data name="&gt;&gt;cboVCalType2.Name" xml:space="preserve">
+    <value>cboVCalType2</value>
+  </data>
+  <data name="&gt;&gt;LabelX3.Parent" xml:space="preserve">
+    <value>GroupPanel1</value>
+  </data>
+  <data name="&gt;&gt;btnExit.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="txtVCol5.ButtonCustom.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GroupPanel2.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="cboVCalType3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>277, 84</value>
+  </data>
+  <data name="clbAbsType.HighlightOnFocus" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="txtVCol2.ButtonCustom2.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnSave.HighlightColor" type="DevComponents.DotNetBar.Validator.eHighlightColor, DevComponents.DotNetBar2">
+    <value>None</value>
+  </data>
+  <data name="&gt;&gt;GroupPanel2.Name" xml:space="preserve">
+    <value>GroupPanel2</value>
+  </data>
+  <data name="cboAbsCalType.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="ComboItem9.Text" xml:space="preserve">
+    <value>วัน</value>
+  </data>
+  <data name="&gt;&gt;btnSaveType.Parent" xml:space="preserve">
+    <value>GroupPanel2</value>
+  </data>
+  <data name="&gt;&gt;cboVCalType1.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;ComboItem3.Type" xml:space="preserve">
+    <value>DevComponents.Editors.ComboItem, DevComponents.DotNetBar2, Version=10.0.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b</value>
+  </data>
+  <data name="&gt;&gt;cboVCalType2.Parent" xml:space="preserve">
+    <value>GroupPanel1</value>
+  </data>
+  <data name="&gt;&gt;ComboItem1.Name" xml:space="preserve">
+    <value>ComboItem1</value>
+  </data>
+  <data name="GroupPanel2.Text" xml:space="preserve">
+    <value>ประเภทการลา</value>
+  </data>
+  <data name="LabelX7.HighlightOnFocus" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="LabelX7.Text" xml:space="preserve">
+    <value>Column 5 :</value>
+  </data>
+  <data name="btnSaveType.Size" type="System.Drawing.Size, System.Drawing">
+    <value>168, 50</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>661, 284</value>
+  </data>
+  <data name="&gt;&gt;ColumnHeader2.Name" xml:space="preserve">
+    <value>ColumnHeader2</value>
+  </data>
+  <data name="clbAbsType.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 32</value>
+  </data>
+  <data name="txtVCol5.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;LabelX8.Parent" xml:space="preserve">
+    <value>GroupPanel1</value>
+  </data>
+  <data name="&gt;&gt;GroupPanel1.Name" xml:space="preserve">
+    <value>GroupPanel1</value>
+  </data>
+  <data name="&gt;&gt;cboVCalType1.Name" xml:space="preserve">
+    <value>cboVCalType1</value>
+  </data>
+  <data name="LabelX3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>78, 19</value>
+  </data>
+  <data name="ComboItem8.Text" xml:space="preserve">
+    <value>ชั่วโมง</value>
+  </data>
+  <data name="txtVCol4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>135, 110</value>
+  </data>
+  <data name="txtVCol1.HighlightColor" type="DevComponents.DotNetBar.Validator.eHighlightColor, DevComponents.DotNetBar2">
+    <value>None</value>
+  </data>
+  <data name="Label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>146, 320</value>
+  </data>
+  <data name="GroupPanel2.HighlightOnFocus" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="LabelX6.HighlightOnFocus" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="cboVCalType4.HighlightColor" type="DevComponents.DotNetBar.Validator.eHighlightColor, DevComponents.DotNetBar2">
+    <value>None</value>
+  </data>
+  <data name="&gt;&gt;ComboItem1.Type" xml:space="preserve">
+    <value>DevComponents.Editors.ComboItem, DevComponents.DotNetBar2, Version=10.0.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b</value>
+  </data>
+  <data name="LabelX4.HighlightOnFocus" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="GroupPanel1.HighlightColor" type="DevComponents.DotNetBar.Validator.eHighlightColor, DevComponents.DotNetBar2">
+    <value>None</value>
+  </data>
+  <data name="&gt;&gt;LabelX2.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=10.0.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b</value>
+  </data>
+  <data name="&gt;&gt;txtVCol4.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.TextBoxX, DevComponents.DotNetBar2, Version=10.0.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b</value>
+  </data>
+  <data name="ComboItem2.Text" xml:space="preserve">
+    <value>ชั่วโมง</value>
+  </data>
+  <data name="&gt;&gt;ComboItem3.Name" xml:space="preserve">
+    <value>ComboItem3</value>
+  </data>
+  <data name="&gt;&gt;clbAbsType.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.ListViewEx, DevComponents.DotNetBar2, Version=10.0.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b</value>
+  </data>
+  <data name="&gt;&gt;btnExit.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="txtVCol3.ButtonCustom.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lvType.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="LabelX6.Text" xml:space="preserve">
+    <value>Column 4 :</value>
+  </data>
+  <data name="LabelX2.HighlightColor" type="DevComponents.DotNetBar.Validator.eHighlightColor, DevComponents.DotNetBar2">
+    <value>None</value>
+  </data>
+  <data name="LabelX4.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;lblColumnID.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;Highlighter1.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Validator.Highlighter, DevComponents.DotNetBar2, Version=10.0.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b</value>
+  </data>
+  <data name="txtVCol5.ButtonCustom2.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnSave.Size" type="System.Drawing.Size, System.Drawing">
+    <value>219, 57</value>
+  </data>
+  <data name="&gt;&gt;lblColumnID.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="cboVCalType1.ItemHeight" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;lblColumnID.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="GroupPanel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>452, 209</value>
+  </data>
+  <data name="&gt;&gt;btnSaveType.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;Label1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="txtVCol1.ButtonCustom2.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="LabelX8.HighlightColor" type="DevComponents.DotNetBar.Validator.eHighlightColor, DevComponents.DotNetBar2">
+    <value>None</value>
+  </data>
+  <data name="&gt;&gt;txtVCol3.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;LabelX1.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=10.0.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b</value>
+  </data>
+  <data name="txtVCol5.ButtonCustom.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="LabelX5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>57, 85</value>
+  </data>
+  <data name="&gt;&gt;ColumnHeader2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LabelX4.Parent" xml:space="preserve">
+    <value>GroupPanel1</value>
+  </data>
+  <data name="lvType.HighlightOnFocus" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="btnExit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>226, 221</value>
+  </data>
+  <data name="&gt;&gt;ComboItem2.Type" xml:space="preserve">
+    <value>DevComponents.Editors.ComboItem, DevComponents.DotNetBar2, Version=10.0.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b</value>
+  </data>
+  <data name="&gt;&gt;LabelX6.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="lblColumns.Size" type="System.Drawing.Size, System.Drawing">
+    <value>168, 19</value>
+  </data>
+  <data name="clbAbsType.HighlightColor" type="DevComponents.DotNetBar.Validator.eHighlightColor, DevComponents.DotNetBar2">
+    <value>None</value>
+  </data>
+  <data name="cboVCalType4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>99, 20</value>
+  </data>
+  <data name="LabelX5.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;cboVCalType5.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="btnExit.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;lvType.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="LabelX5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>78, 19</value>
+  </data>
+  <data name="&gt;&gt;ComboItem8.Type" xml:space="preserve">
+    <value>DevComponents.Editors.ComboItem, DevComponents.DotNetBar2, Version=10.0.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b</value>
+  </data>
+  <data name="txtVCol2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>127, 20</value>
+  </data>
+  <data name="txtVCol1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>127, 20</value>
+  </data>
+  <data name="&gt;&gt;ComboItem10.Name" xml:space="preserve">
+    <value>ComboItem10</value>
+  </data>
+  <data name="cboAbsCalType.Location" type="System.Drawing.Point, System.Drawing">
+    <value>277, 161</value>
+  </data>
+  <data name="&gt;&gt;LabelX6.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=10.0.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b</value>
+  </data>
+  <data name="&gt;&gt;txtVCol2.Name" xml:space="preserve">
+    <value>txtVCol2</value>
+  </data>
+  <data name="&gt;&gt;cboAbsCalType.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.ComboBoxEx, DevComponents.DotNetBar2, Version=10.0.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b</value>
+  </data>
+  <data name="ComboItem6.Text" xml:space="preserve">
+    <value>ชั่วโมง</value>
+  </data>
+  <data name="&gt;&gt;LabelX7.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;LabelX5.Parent" xml:space="preserve">
+    <value>GroupPanel1</value>
+  </data>
+  <data name="cboAbsCalType.HighlightOnFocus" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="cboVCalType2.HighlightOnFocus" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="LabelX1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="clbAbsType.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="ColumnHeader2.Width" type="System.Int32, mscorlib">
+    <value>105</value>
+  </data>
+  <data name="&gt;&gt;btnSave.Name" xml:space="preserve">
+    <value>btnSave</value>
+  </data>
+  <data name="&gt;&gt;ComboItem12.Type" xml:space="preserve">
+    <value>DevComponents.Editors.ComboItem, DevComponents.DotNetBar2, Version=10.0.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b</value>
+  </data>
+  <data name="&gt;&gt;LabelX4.Name" xml:space="preserve">
+    <value>LabelX4</value>
+  </data>
+  <data name="&gt;&gt;cboVCalType4.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.ComboBoxEx, DevComponents.DotNetBar2, Version=10.0.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b</value>
+  </data>
+  <data name="cboVCalType2.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="lblColumnID.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="LabelX6.HighlightColor" type="DevComponents.DotNetBar.Validator.eHighlightColor, DevComponents.DotNetBar2">
+    <value>None</value>
+  </data>
+  <data name="cboVCalType3.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;ComboItem11.Name" xml:space="preserve">
+    <value>ComboItem11</value>
+  </data>
+  <data name="txtVCol3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>135, 84</value>
+  </data>
+  <data name="LabelX2.Text" xml:space="preserve">
+    <value>การนับ : </value>
+  </data>
+  <data name="&gt;&gt;LabelX7.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=10.0.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b</value>
+  </data>
+  <data name="cboVCalType1.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="Label1.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="btnSaveType.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lblColumnID.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="btnSaveType.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 200</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Highlighter1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+</root>

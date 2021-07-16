@@ -1,0 +1,393 @@
+<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+Partial Class frmRptTimeAbsent_Config
+    Inherits System.Windows.Forms.Form
+
+    'Form overrides dispose to clean up the component list.
+    <System.Diagnostics.DebuggerNonUserCode()> _
+    Protected Overrides Sub Dispose(ByVal disposing As Boolean)
+        Try
+            If disposing AndAlso components IsNot Nothing Then
+                components.Dispose()
+            End If
+        Finally
+            MyBase.Dispose(disposing)
+        End Try
+    End Sub
+
+    'Required by the Windows Form Designer
+    Private components As System.ComponentModel.IContainer
+
+    'NOTE: The following procedure is required by the Windows Form Designer
+    'It can be modified using the Windows Form Designer.  
+    'Do not modify it using the code editor.
+    <System.Diagnostics.DebuggerStepThrough()> _
+    Private Sub InitializeComponent()
+        Me.LabelX1 = New DevComponents.DotNetBar.LabelX
+        Me.GroupPanel1 = New DevComponents.DotNetBar.Controls.GroupPanel
+        Me.txtVCol8 = New DevComponents.DotNetBar.Controls.TextBoxX
+        Me.txtVCol7 = New DevComponents.DotNetBar.Controls.TextBoxX
+        Me.txtVCol6 = New DevComponents.DotNetBar.Controls.TextBoxX
+        Me.cboVLink8 = New DevComponents.DotNetBar.Controls.ComboBoxEx
+        Me.cboVLink7 = New DevComponents.DotNetBar.Controls.ComboBoxEx
+        Me.cboVLink6 = New DevComponents.DotNetBar.Controls.ComboBoxEx
+        Me.txtVCol5 = New DevComponents.DotNetBar.Controls.TextBoxX
+        Me.txtVCol4 = New DevComponents.DotNetBar.Controls.TextBoxX
+        Me.txtVCol3 = New DevComponents.DotNetBar.Controls.TextBoxX
+        Me.txtVCol2 = New DevComponents.DotNetBar.Controls.TextBoxX
+        Me.txtVCol1 = New DevComponents.DotNetBar.Controls.TextBoxX
+        Me.cboVLink5 = New DevComponents.DotNetBar.Controls.ComboBoxEx
+        Me.cboVLink4 = New DevComponents.DotNetBar.Controls.ComboBoxEx
+        Me.cboVLink3 = New DevComponents.DotNetBar.Controls.ComboBoxEx
+        Me.cboVLink2 = New DevComponents.DotNetBar.Controls.ComboBoxEx
+        Me.cboVLink1 = New DevComponents.DotNetBar.Controls.ComboBoxEx
+        Me.LabelX13 = New DevComponents.DotNetBar.LabelX
+        Me.btnSave = New DevComponents.DotNetBar.ButtonX
+        Me.btnExit = New DevComponents.DotNetBar.ButtonX
+        Me.GroupPanel1.SuspendLayout()
+        Me.SuspendLayout()
+        '
+        'LabelX1
+        '
+        Me.LabelX1.BackColor = System.Drawing.Color.Transparent
+        '
+        '
+        '
+        Me.LabelX1.BackgroundStyle.Class = ""
+        Me.LabelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.LabelX1.Location = New System.Drawing.Point(3, 12)
+        Me.LabelX1.Name = "LabelX1"
+        Me.LabelX1.Size = New System.Drawing.Size(127, 19)
+        Me.LabelX1.TabIndex = 0
+        Me.LabelX1.Text = "ชื่อ Column"
+        Me.LabelX1.TextAlignment = System.Drawing.StringAlignment.Center
+        '
+        'GroupPanel1
+        '
+        Me.GroupPanel1.CanvasColor = System.Drawing.SystemColors.Control
+        Me.GroupPanel1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007
+        Me.GroupPanel1.Controls.Add(Me.txtVCol8)
+        Me.GroupPanel1.Controls.Add(Me.txtVCol7)
+        Me.GroupPanel1.Controls.Add(Me.txtVCol6)
+        Me.GroupPanel1.Controls.Add(Me.cboVLink8)
+        Me.GroupPanel1.Controls.Add(Me.cboVLink7)
+        Me.GroupPanel1.Controls.Add(Me.cboVLink6)
+        Me.GroupPanel1.Controls.Add(Me.txtVCol5)
+        Me.GroupPanel1.Controls.Add(Me.txtVCol4)
+        Me.GroupPanel1.Controls.Add(Me.txtVCol3)
+        Me.GroupPanel1.Controls.Add(Me.txtVCol2)
+        Me.GroupPanel1.Controls.Add(Me.txtVCol1)
+        Me.GroupPanel1.Controls.Add(Me.cboVLink5)
+        Me.GroupPanel1.Controls.Add(Me.cboVLink4)
+        Me.GroupPanel1.Controls.Add(Me.cboVLink3)
+        Me.GroupPanel1.Controls.Add(Me.cboVLink2)
+        Me.GroupPanel1.Controls.Add(Me.cboVLink1)
+        Me.GroupPanel1.Controls.Add(Me.LabelX13)
+        Me.GroupPanel1.Controls.Add(Me.LabelX1)
+        Me.GroupPanel1.Location = New System.Drawing.Point(4, 3)
+        Me.GroupPanel1.Name = "GroupPanel1"
+        Me.GroupPanel1.Size = New System.Drawing.Size(350, 266)
+        '
+        '
+        '
+        Me.GroupPanel1.Style.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2
+        Me.GroupPanel1.Style.BackColorGradientAngle = 90
+        Me.GroupPanel1.Style.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground
+        Me.GroupPanel1.Style.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid
+        Me.GroupPanel1.Style.BorderBottomWidth = 1
+        Me.GroupPanel1.Style.BorderColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder
+        Me.GroupPanel1.Style.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Solid
+        Me.GroupPanel1.Style.BorderLeftWidth = 1
+        Me.GroupPanel1.Style.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Solid
+        Me.GroupPanel1.Style.BorderRightWidth = 1
+        Me.GroupPanel1.Style.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid
+        Me.GroupPanel1.Style.BorderTopWidth = 1
+        Me.GroupPanel1.Style.Class = ""
+        Me.GroupPanel1.Style.CornerDiameter = 4
+        Me.GroupPanel1.Style.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
+        Me.GroupPanel1.Style.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText
+        '
+        '
+        '
+        Me.GroupPanel1.StyleMouseDown.Class = ""
+        Me.GroupPanel1.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        '
+        '
+        '
+        Me.GroupPanel1.StyleMouseOver.Class = ""
+        Me.GroupPanel1.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.GroupPanel1.TabIndex = 0
+        Me.GroupPanel1.Text = "กำหนด Column การลา"
+        '
+        'txtVCol8
+        '
+        '
+        '
+        '
+        Me.txtVCol8.Border.Class = "TextBoxBorder"
+        Me.txtVCol8.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.txtVCol8.Location = New System.Drawing.Point(5, 219)
+        Me.txtVCol8.Name = "txtVCol8"
+        Me.txtVCol8.Size = New System.Drawing.Size(127, 20)
+        Me.txtVCol8.TabIndex = 21
+        '
+        'txtVCol7
+        '
+        '
+        '
+        '
+        Me.txtVCol7.Border.Class = "TextBoxBorder"
+        Me.txtVCol7.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.txtVCol7.Location = New System.Drawing.Point(5, 193)
+        Me.txtVCol7.Name = "txtVCol7"
+        Me.txtVCol7.Size = New System.Drawing.Size(127, 20)
+        Me.txtVCol7.TabIndex = 18
+        '
+        'txtVCol6
+        '
+        '
+        '
+        '
+        Me.txtVCol6.Border.Class = "TextBoxBorder"
+        Me.txtVCol6.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.txtVCol6.Location = New System.Drawing.Point(5, 167)
+        Me.txtVCol6.Name = "txtVCol6"
+        Me.txtVCol6.Size = New System.Drawing.Size(127, 20)
+        Me.txtVCol6.TabIndex = 15
+        '
+        'cboVLink8
+        '
+        Me.cboVLink8.DisplayMember = "Text"
+        Me.cboVLink8.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.cboVLink8.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboVLink8.FormattingEnabled = True
+        Me.cboVLink8.ItemHeight = 14
+        Me.cboVLink8.Location = New System.Drawing.Point(138, 219)
+        Me.cboVLink8.Name = "cboVLink8"
+        Me.cboVLink8.Size = New System.Drawing.Size(201, 20)
+        Me.cboVLink8.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.cboVLink8.TabIndex = 22
+        '
+        'cboVLink7
+        '
+        Me.cboVLink7.DisplayMember = "Text"
+        Me.cboVLink7.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.cboVLink7.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboVLink7.FormattingEnabled = True
+        Me.cboVLink7.ItemHeight = 14
+        Me.cboVLink7.Location = New System.Drawing.Point(138, 193)
+        Me.cboVLink7.Name = "cboVLink7"
+        Me.cboVLink7.Size = New System.Drawing.Size(201, 20)
+        Me.cboVLink7.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.cboVLink7.TabIndex = 19
+        '
+        'cboVLink6
+        '
+        Me.cboVLink6.DisplayMember = "Text"
+        Me.cboVLink6.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.cboVLink6.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboVLink6.FormattingEnabled = True
+        Me.cboVLink6.ItemHeight = 14
+        Me.cboVLink6.Location = New System.Drawing.Point(138, 167)
+        Me.cboVLink6.Name = "cboVLink6"
+        Me.cboVLink6.Size = New System.Drawing.Size(201, 20)
+        Me.cboVLink6.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.cboVLink6.TabIndex = 16
+        '
+        'txtVCol5
+        '
+        '
+        '
+        '
+        Me.txtVCol5.Border.Class = "TextBoxBorder"
+        Me.txtVCol5.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.txtVCol5.Location = New System.Drawing.Point(5, 141)
+        Me.txtVCol5.Name = "txtVCol5"
+        Me.txtVCol5.Size = New System.Drawing.Size(127, 20)
+        Me.txtVCol5.TabIndex = 12
+        '
+        'txtVCol4
+        '
+        '
+        '
+        '
+        Me.txtVCol4.Border.Class = "TextBoxBorder"
+        Me.txtVCol4.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.txtVCol4.Location = New System.Drawing.Point(5, 115)
+        Me.txtVCol4.Name = "txtVCol4"
+        Me.txtVCol4.Size = New System.Drawing.Size(127, 20)
+        Me.txtVCol4.TabIndex = 9
+        '
+        'txtVCol3
+        '
+        '
+        '
+        '
+        Me.txtVCol3.Border.Class = "TextBoxBorder"
+        Me.txtVCol3.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.txtVCol3.Location = New System.Drawing.Point(5, 89)
+        Me.txtVCol3.Name = "txtVCol3"
+        Me.txtVCol3.Size = New System.Drawing.Size(127, 20)
+        Me.txtVCol3.TabIndex = 6
+        '
+        'txtVCol2
+        '
+        '
+        '
+        '
+        Me.txtVCol2.Border.Class = "TextBoxBorder"
+        Me.txtVCol2.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.txtVCol2.Location = New System.Drawing.Point(5, 63)
+        Me.txtVCol2.Name = "txtVCol2"
+        Me.txtVCol2.Size = New System.Drawing.Size(127, 20)
+        Me.txtVCol2.TabIndex = 3
+        '
+        'txtVCol1
+        '
+        '
+        '
+        '
+        Me.txtVCol1.Border.Class = "TextBoxBorder"
+        Me.txtVCol1.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.txtVCol1.Location = New System.Drawing.Point(5, 37)
+        Me.txtVCol1.Name = "txtVCol1"
+        Me.txtVCol1.Size = New System.Drawing.Size(127, 20)
+        Me.txtVCol1.TabIndex = 0
+        '
+        'cboVLink5
+        '
+        Me.cboVLink5.DisplayMember = "Text"
+        Me.cboVLink5.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.cboVLink5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboVLink5.FormattingEnabled = True
+        Me.cboVLink5.ItemHeight = 14
+        Me.cboVLink5.Location = New System.Drawing.Point(138, 141)
+        Me.cboVLink5.Name = "cboVLink5"
+        Me.cboVLink5.Size = New System.Drawing.Size(201, 20)
+        Me.cboVLink5.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.cboVLink5.TabIndex = 13
+        '
+        'cboVLink4
+        '
+        Me.cboVLink4.DisplayMember = "Text"
+        Me.cboVLink4.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.cboVLink4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboVLink4.FormattingEnabled = True
+        Me.cboVLink4.ItemHeight = 14
+        Me.cboVLink4.Location = New System.Drawing.Point(138, 115)
+        Me.cboVLink4.Name = "cboVLink4"
+        Me.cboVLink4.Size = New System.Drawing.Size(201, 20)
+        Me.cboVLink4.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.cboVLink4.TabIndex = 10
+        '
+        'cboVLink3
+        '
+        Me.cboVLink3.DisplayMember = "Text"
+        Me.cboVLink3.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.cboVLink3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboVLink3.FormattingEnabled = True
+        Me.cboVLink3.ItemHeight = 14
+        Me.cboVLink3.Location = New System.Drawing.Point(138, 89)
+        Me.cboVLink3.Name = "cboVLink3"
+        Me.cboVLink3.Size = New System.Drawing.Size(201, 20)
+        Me.cboVLink3.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.cboVLink3.TabIndex = 7
+        '
+        'cboVLink2
+        '
+        Me.cboVLink2.DisplayMember = "Text"
+        Me.cboVLink2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.cboVLink2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboVLink2.FormattingEnabled = True
+        Me.cboVLink2.ItemHeight = 14
+        Me.cboVLink2.Location = New System.Drawing.Point(138, 63)
+        Me.cboVLink2.Name = "cboVLink2"
+        Me.cboVLink2.Size = New System.Drawing.Size(201, 20)
+        Me.cboVLink2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.cboVLink2.TabIndex = 4
+        '
+        'cboVLink1
+        '
+        Me.cboVLink1.DisplayMember = "Text"
+        Me.cboVLink1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.cboVLink1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboVLink1.FormattingEnabled = True
+        Me.cboVLink1.ItemHeight = 14
+        Me.cboVLink1.Location = New System.Drawing.Point(138, 37)
+        Me.cboVLink1.Name = "cboVLink1"
+        Me.cboVLink1.Size = New System.Drawing.Size(201, 20)
+        Me.cboVLink1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.cboVLink1.TabIndex = 1
+        '
+        'LabelX13
+        '
+        Me.LabelX13.BackColor = System.Drawing.Color.Transparent
+        '
+        '
+        '
+        Me.LabelX13.BackgroundStyle.Class = ""
+        Me.LabelX13.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.LabelX13.Location = New System.Drawing.Point(138, 12)
+        Me.LabelX13.Name = "LabelX13"
+        Me.LabelX13.Size = New System.Drawing.Size(201, 19)
+        Me.LabelX13.TabIndex = 0
+        Me.LabelX13.Text = "Link กับข้อมูลการลา"
+        Me.LabelX13.TextAlignment = System.Drawing.StringAlignment.Center
+        '
+        'btnSave
+        '
+        Me.btnSave.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.btnSave.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.btnSave.Location = New System.Drawing.Point(4, 275)
+        Me.btnSave.Name = "btnSave"
+        Me.btnSave.Size = New System.Drawing.Size(189, 57)
+        Me.btnSave.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.btnSave.TabIndex = 1
+        Me.btnSave.Text = "บันทึก"
+        '
+        'btnExit
+        '
+        Me.btnExit.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.btnExit.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.btnExit.Location = New System.Drawing.Point(199, 275)
+        Me.btnExit.Name = "btnExit"
+        Me.btnExit.Size = New System.Drawing.Size(147, 57)
+        Me.btnExit.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.btnExit.TabIndex = 2
+        Me.btnExit.Text = "ออก"
+        '
+        'frmRptTimeAbsent_Config
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.ClientSize = New System.Drawing.Size(359, 339)
+        Me.Controls.Add(Me.btnExit)
+        Me.Controls.Add(Me.btnSave)
+        Me.Controls.Add(Me.GroupPanel1)
+        Me.Name = "frmRptTimeAbsent_Config"
+        Me.Text = "Config-รายงานของจำนวนพนักงานไม่มาทำงาน"
+        Me.GroupPanel1.ResumeLayout(False)
+        Me.ResumeLayout(False)
+
+    End Sub
+    Friend WithEvents LabelX1 As DevComponents.DotNetBar.LabelX
+    Friend WithEvents GroupPanel1 As DevComponents.DotNetBar.Controls.GroupPanel
+    Friend WithEvents cboVLink5 As DevComponents.DotNetBar.Controls.ComboBoxEx
+    Friend WithEvents cboVLink4 As DevComponents.DotNetBar.Controls.ComboBoxEx
+    Friend WithEvents cboVLink3 As DevComponents.DotNetBar.Controls.ComboBoxEx
+    Friend WithEvents cboVLink2 As DevComponents.DotNetBar.Controls.ComboBoxEx
+    Friend WithEvents cboVLink1 As DevComponents.DotNetBar.Controls.ComboBoxEx
+    Friend WithEvents txtVCol1 As DevComponents.DotNetBar.Controls.TextBoxX
+    Friend WithEvents LabelX13 As DevComponents.DotNetBar.LabelX
+    Friend WithEvents txtVCol5 As DevComponents.DotNetBar.Controls.TextBoxX
+    Friend WithEvents txtVCol4 As DevComponents.DotNetBar.Controls.TextBoxX
+    Friend WithEvents txtVCol3 As DevComponents.DotNetBar.Controls.TextBoxX
+    Friend WithEvents txtVCol2 As DevComponents.DotNetBar.Controls.TextBoxX
+    Friend WithEvents btnSave As DevComponents.DotNetBar.ButtonX
+    Friend WithEvents btnExit As DevComponents.DotNetBar.ButtonX
+    Friend WithEvents txtVCol8 As DevComponents.DotNetBar.Controls.TextBoxX
+    Friend WithEvents txtVCol7 As DevComponents.DotNetBar.Controls.TextBoxX
+    Friend WithEvents txtVCol6 As DevComponents.DotNetBar.Controls.TextBoxX
+    Friend WithEvents cboVLink8 As DevComponents.DotNetBar.Controls.ComboBoxEx
+    Friend WithEvents cboVLink7 As DevComponents.DotNetBar.Controls.ComboBoxEx
+    Friend WithEvents cboVLink6 As DevComponents.DotNetBar.Controls.ComboBoxEx
+End Class

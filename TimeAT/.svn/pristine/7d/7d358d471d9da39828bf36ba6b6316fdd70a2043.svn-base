@@ -1,0 +1,577 @@
+<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+Partial Class frmMainConfig
+    Inherits System.Windows.Forms.Form
+
+    'Form overrides dispose to clean up the component list.
+    <System.Diagnostics.DebuggerNonUserCode()> _
+    Protected Overrides Sub Dispose(ByVal disposing As Boolean)
+        If disposing AndAlso components IsNot Nothing Then
+            components.Dispose()
+        End If
+        MyBase.Dispose(disposing)
+    End Sub
+
+    'Required by the Windows Form Designer
+    Private components As System.ComponentModel.IContainer
+
+    'NOTE: The following procedure is required by the Windows Form Designer
+    'It can be modified using the Windows Form Designer.  
+    'Do not modify it using the code editor.
+    <System.Diagnostics.DebuggerStepThrough()> _
+    Private Sub InitializeComponent()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox
+        Me.cboOtRate = New System.Windows.Forms.ComboBox
+        Me.txtOtFixedBathPerPeriod = New System.Windows.Forms.TextBox
+        Me.txtOtFixedBathPerHour = New System.Windows.Forms.TextBox
+        Me.txtOtDeduc = New System.Windows.Forms.TextBox
+        Me.Label14 = New System.Windows.Forms.Label
+        Me.rdOT_PayCash = New System.Windows.Forms.RadioButton
+        Me.Label12 = New System.Windows.Forms.Label
+        Me.Label13 = New System.Windows.Forms.Label
+        Me.rdOT_PayHour = New System.Windows.Forms.RadioButton
+        Me.Label11 = New System.Windows.Forms.Label
+        Me.Label10 = New System.Windows.Forms.Label
+        Me.Label6 = New System.Windows.Forms.Label
+        Me.Label8 = New System.Windows.Forms.Label
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox
+        Me.rdLate_ByConfig = New System.Windows.Forms.RadioButton
+        Me.rdLate_ByWage = New System.Windows.Forms.RadioButton
+        Me.btnSave = New System.Windows.Forms.Button
+        Me.btnExit = New System.Windows.Forms.Button
+        Me.GroupBox3 = New System.Windows.Forms.GroupBox
+        Me.txtEndDay = New System.Windows.Forms.TextBox
+        Me.txtStartDay = New System.Windows.Forms.TextBox
+        Me.chkEndMonth = New System.Windows.Forms.CheckBox
+        Me.chkNextMonth = New System.Windows.Forms.CheckBox
+        Me.chkPreviousMonth = New System.Windows.Forms.CheckBox
+        Me.Label5 = New System.Windows.Forms.Label
+        Me.Label1 = New System.Windows.Forms.Label
+        Me.Label2 = New System.Windows.Forms.Label
+        Me.GroupBox4 = New System.Windows.Forms.GroupBox
+        Me.txtTextExample = New System.Windows.Forms.TextBox
+        Me.txtDescription = New System.Windows.Forms.TextBox
+        Me.cboGetText = New System.Windows.Forms.ComboBox
+        Me.Label4 = New System.Windows.Forms.Label
+        Me.Label3 = New System.Windows.Forms.Label
+        Me.GroupBox5 = New System.Windows.Forms.GroupBox
+        Me.Label9 = New System.Windows.Forms.Label
+        Me.Label7 = New System.Windows.Forms.Label
+        Me.txtHaftDay_A = New System.Windows.Forms.TextBox
+        Me.txtHaftDay_M = New System.Windows.Forms.TextBox
+        Me.GroupBox6 = New System.Windows.Forms.GroupBox
+        Me.rdAllCompany = New System.Windows.Forms.RadioButton
+        Me.rdOnlyCompany = New System.Windows.Forms.RadioButton
+        Me.GroupBox1.SuspendLayout()
+        Me.GroupBox2.SuspendLayout()
+        Me.GroupBox3.SuspendLayout()
+        Me.GroupBox4.SuspendLayout()
+        Me.GroupBox5.SuspendLayout()
+        Me.GroupBox6.SuspendLayout()
+        Me.SuspendLayout()
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.cboOtRate)
+        Me.GroupBox1.Controls.Add(Me.txtOtFixedBathPerPeriod)
+        Me.GroupBox1.Controls.Add(Me.txtOtFixedBathPerHour)
+        Me.GroupBox1.Controls.Add(Me.txtOtDeduc)
+        Me.GroupBox1.Controls.Add(Me.Label14)
+        Me.GroupBox1.Controls.Add(Me.rdOT_PayCash)
+        Me.GroupBox1.Controls.Add(Me.Label12)
+        Me.GroupBox1.Controls.Add(Me.Label13)
+        Me.GroupBox1.Controls.Add(Me.rdOT_PayHour)
+        Me.GroupBox1.Controls.Add(Me.Label11)
+        Me.GroupBox1.Controls.Add(Me.Label10)
+        Me.GroupBox1.Controls.Add(Me.Label6)
+        Me.GroupBox1.Controls.Add(Me.Label8)
+        Me.GroupBox1.Location = New System.Drawing.Point(3, 183)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(625, 112)
+        Me.GroupBox1.TabIndex = 4
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "คำนวณ OT"
+        '
+        'cboOtRate
+        '
+        Me.cboOtRate.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboOtRate.FormattingEnabled = True
+        Me.cboOtRate.Items.AddRange(New Object() {"1", "1.5", "2", "3"})
+        Me.cboOtRate.Location = New System.Drawing.Point(73, 18)
+        Me.cboOtRate.Name = "cboOtRate"
+        Me.cboOtRate.Size = New System.Drawing.Size(79, 21)
+        Me.cboOtRate.TabIndex = 2
+        '
+        'txtOtFixedBathPerPeriod
+        '
+        Me.txtOtFixedBathPerPeriod.Location = New System.Drawing.Point(80, 71)
+        Me.txtOtFixedBathPerPeriod.MaxLength = 20
+        Me.txtOtFixedBathPerPeriod.Name = "txtOtFixedBathPerPeriod"
+        Me.txtOtFixedBathPerPeriod.Size = New System.Drawing.Size(72, 20)
+        Me.txtOtFixedBathPerPeriod.TabIndex = 1
+        '
+        'txtOtFixedBathPerHour
+        '
+        Me.txtOtFixedBathPerHour.Location = New System.Drawing.Point(80, 45)
+        Me.txtOtFixedBathPerHour.MaxLength = 20
+        Me.txtOtFixedBathPerHour.Name = "txtOtFixedBathPerHour"
+        Me.txtOtFixedBathPerHour.Size = New System.Drawing.Size(72, 20)
+        Me.txtOtFixedBathPerHour.TabIndex = 1
+        '
+        'txtOtDeduc
+        '
+        Me.txtOtDeduc.Location = New System.Drawing.Point(347, 14)
+        Me.txtOtDeduc.MaxLength = 2
+        Me.txtOtDeduc.Name = "txtOtDeduc"
+        Me.txtOtDeduc.Size = New System.Drawing.Size(48, 20)
+        Me.txtOtDeduc.TabIndex = 1
+        Me.txtOtDeduc.Visible = False
+        '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.Location = New System.Drawing.Point(165, 74)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(56, 13)
+        Me.Label14.TabIndex = 1
+        Me.Label14.Text = "บาท / คาบ"
+        '
+        'rdOT_PayCash
+        '
+        Me.rdOT_PayCash.AutoSize = True
+        Me.rdOT_PayCash.Location = New System.Drawing.Point(455, 57)
+        Me.rdOT_PayCash.Name = "rdOT_PayCash"
+        Me.rdOT_PayCash.Size = New System.Drawing.Size(136, 17)
+        Me.rdOT_PayCash.TabIndex = 1
+        Me.rdOT_PayCash.Text = "จ่ายเป็นเงิน ตาม Config"
+        Me.rdOT_PayCash.UseVisualStyleBackColor = True
+        Me.rdOT_PayCash.Visible = False
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Location = New System.Drawing.Point(165, 48)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(54, 13)
+        Me.Label12.TabIndex = 1
+        Me.Label12.Text = "บาท / ชม."
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Location = New System.Drawing.Point(6, 74)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(72, 13)
+        Me.Label13.TabIndex = 1
+        Me.Label13.Text = "คำนวณเงิน  : "
+        '
+        'rdOT_PayHour
+        '
+        Me.rdOT_PayHour.AutoSize = True
+        Me.rdOT_PayHour.Checked = True
+        Me.rdOT_PayHour.Location = New System.Drawing.Point(455, 14)
+        Me.rdOT_PayHour.Name = "rdOT_PayHour"
+        Me.rdOT_PayHour.Size = New System.Drawing.Size(143, 17)
+        Me.rdOT_PayHour.TabIndex = 0
+        Me.rdOT_PayHour.TabStop = True
+        Me.rdOT_PayHour.Text = "คำนวณ OT 1,1.5,2,3 เท่า"
+        Me.rdOT_PayHour.UseVisualStyleBackColor = True
+        Me.rdOT_PayHour.Visible = False
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(6, 48)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(72, 13)
+        Me.Label11.TabIndex = 1
+        Me.Label11.Text = "คำนวณเงิน  : "
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Location = New System.Drawing.Point(158, 21)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(53, 13)
+        Me.Label10.TabIndex = 1
+        Me.Label10.Text = "เท่า ตลอด"
+        Me.Label10.Visible = False
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(6, 21)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(61, 13)
+        Me.Label6.TabIndex = 1
+        Me.Label6.Text = "คำนวณที่  : "
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.ForeColor = System.Drawing.Color.Blue
+        Me.Label8.Location = New System.Drawing.Point(344, 41)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(180, 13)
+        Me.Label8.TabIndex = 1
+        Me.Label8.Text = "หลังจากเลิกงาน __ นาที จะไม่นับ โอที"
+        Me.Label8.Visible = False
+        '
+        'GroupBox2
+        '
+        Me.GroupBox2.Controls.Add(Me.rdLate_ByConfig)
+        Me.GroupBox2.Controls.Add(Me.rdLate_ByWage)
+        Me.GroupBox2.Location = New System.Drawing.Point(3, 302)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(625, 46)
+        Me.GroupBox2.TabIndex = 3
+        Me.GroupBox2.TabStop = False
+        Me.GroupBox2.Text = "คำนวณ สาย"
+        '
+        'rdLate_ByConfig
+        '
+        Me.rdLate_ByConfig.AutoSize = True
+        Me.rdLate_ByConfig.Location = New System.Drawing.Point(104, 19)
+        Me.rdLate_ByConfig.Name = "rdLate_ByConfig"
+        Me.rdLate_ByConfig.Size = New System.Drawing.Size(91, 17)
+        Me.rdLate_ByConfig.TabIndex = 1
+        Me.rdLate_ByConfig.Text = "หักตาม Config"
+        Me.rdLate_ByConfig.UseVisualStyleBackColor = True
+        '
+        'rdLate_ByWage
+        '
+        Me.rdLate_ByWage.AutoSize = True
+        Me.rdLate_ByWage.Checked = True
+        Me.rdLate_ByWage.Location = New System.Drawing.Point(9, 19)
+        Me.rdLate_ByWage.Name = "rdLate_ByWage"
+        Me.rdLate_ByWage.Size = New System.Drawing.Size(89, 17)
+        Me.rdLate_ByWage.TabIndex = 0
+        Me.rdLate_ByWage.TabStop = True
+        Me.rdLate_ByWage.Text = "หักตามค่าแรง"
+        Me.rdLate_ByWage.UseVisualStyleBackColor = True
+        '
+        'btnSave
+        '
+        Me.btnSave.Location = New System.Drawing.Point(3, 411)
+        Me.btnSave.Name = "btnSave"
+        Me.btnSave.Size = New System.Drawing.Size(159, 43)
+        Me.btnSave.TabIndex = 5
+        Me.btnSave.Text = "บันทึก"
+        Me.btnSave.UseVisualStyleBackColor = True
+        '
+        'btnExit
+        '
+        Me.btnExit.Location = New System.Drawing.Point(168, 411)
+        Me.btnExit.Name = "btnExit"
+        Me.btnExit.Size = New System.Drawing.Size(159, 43)
+        Me.btnExit.TabIndex = 0
+        Me.btnExit.Text = "Exit"
+        Me.btnExit.UseVisualStyleBackColor = True
+        '
+        'GroupBox3
+        '
+        Me.GroupBox3.Controls.Add(Me.txtEndDay)
+        Me.GroupBox3.Controls.Add(Me.txtStartDay)
+        Me.GroupBox3.Controls.Add(Me.chkEndMonth)
+        Me.GroupBox3.Controls.Add(Me.chkNextMonth)
+        Me.GroupBox3.Controls.Add(Me.chkPreviousMonth)
+        Me.GroupBox3.Controls.Add(Me.Label5)
+        Me.GroupBox3.Controls.Add(Me.Label1)
+        Me.GroupBox3.Location = New System.Drawing.Point(3, 2)
+        Me.GroupBox3.Name = "GroupBox3"
+        Me.GroupBox3.Size = New System.Drawing.Size(624, 76)
+        Me.GroupBox3.TabIndex = 0
+        Me.GroupBox3.TabStop = False
+        Me.GroupBox3.Text = "กำหนดช่วงเวลาคำนวณ"
+        '
+        'txtEndDay
+        '
+        Me.txtEndDay.Location = New System.Drawing.Point(66, 46)
+        Me.txtEndDay.MaxLength = 2
+        Me.txtEndDay.Name = "txtEndDay"
+        Me.txtEndDay.Size = New System.Drawing.Size(48, 20)
+        Me.txtEndDay.TabIndex = 1
+        '
+        'txtStartDay
+        '
+        Me.txtStartDay.Location = New System.Drawing.Point(66, 20)
+        Me.txtStartDay.MaxLength = 2
+        Me.txtStartDay.Name = "txtStartDay"
+        Me.txtStartDay.Size = New System.Drawing.Size(48, 20)
+        Me.txtStartDay.TabIndex = 0
+        '
+        'chkEndMonth
+        '
+        Me.chkEndMonth.AutoSize = True
+        Me.chkEndMonth.Location = New System.Drawing.Point(216, 49)
+        Me.chkEndMonth.Name = "chkEndMonth"
+        Me.chkEndMonth.Size = New System.Drawing.Size(78, 17)
+        Me.chkEndMonth.TabIndex = 2
+        Me.chkEndMonth.Text = "ถึงสิ้นเดือน"
+        Me.chkEndMonth.UseVisualStyleBackColor = True
+        '
+        'chkNextMonth
+        '
+        Me.chkNextMonth.AutoSize = True
+        Me.chkNextMonth.Location = New System.Drawing.Point(120, 49)
+        Me.chkNextMonth.Name = "chkNextMonth"
+        Me.chkNextMonth.Size = New System.Drawing.Size(79, 17)
+        Me.chkNextMonth.TabIndex = 2
+        Me.chkNextMonth.Text = "เดือนถัดไป"
+        Me.chkNextMonth.UseVisualStyleBackColor = True
+        '
+        'chkPreviousMonth
+        '
+        Me.chkPreviousMonth.AutoSize = True
+        Me.chkPreviousMonth.Location = New System.Drawing.Point(120, 22)
+        Me.chkPreviousMonth.Name = "chkPreviousMonth"
+        Me.chkPreviousMonth.Size = New System.Drawing.Size(73, 17)
+        Me.chkPreviousMonth.TabIndex = 2
+        Me.chkPreviousMonth.Text = "เดือนก่อน"
+        Me.chkPreviousMonth.UseVisualStyleBackColor = True
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(9, 49)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(49, 13)
+        Me.Label5.TabIndex = 1
+        Me.Label5.Text = "ถึงวันที่ : "
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(9, 22)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(55, 13)
+        Me.Label1.TabIndex = 1
+        Me.Label1.Text = "วันที่เริ่ม : "
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(13, 22)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(51, 13)
+        Me.Label2.TabIndex = 1
+        Me.Label2.Text = "รูปแบบ : "
+        '
+        'GroupBox4
+        '
+        Me.GroupBox4.Controls.Add(Me.txtTextExample)
+        Me.GroupBox4.Controls.Add(Me.txtDescription)
+        Me.GroupBox4.Controls.Add(Me.cboGetText)
+        Me.GroupBox4.Controls.Add(Me.Label4)
+        Me.GroupBox4.Controls.Add(Me.Label3)
+        Me.GroupBox4.Controls.Add(Me.Label2)
+        Me.GroupBox4.Location = New System.Drawing.Point(3, 81)
+        Me.GroupBox4.Name = "GroupBox4"
+        Me.GroupBox4.Size = New System.Drawing.Size(623, 96)
+        Me.GroupBox4.TabIndex = 1
+        Me.GroupBox4.TabStop = False
+        Me.GroupBox4.Text = "รูปแบบการ GetText"
+        '
+        'txtTextExample
+        '
+        Me.txtTextExample.Location = New System.Drawing.Point(91, 44)
+        Me.txtTextExample.Name = "txtTextExample"
+        Me.txtTextExample.ReadOnly = True
+        Me.txtTextExample.Size = New System.Drawing.Size(524, 20)
+        Me.txtTextExample.TabIndex = 3
+        Me.txtTextExample.TabStop = False
+        '
+        'txtDescription
+        '
+        Me.txtDescription.Location = New System.Drawing.Point(91, 68)
+        Me.txtDescription.Name = "txtDescription"
+        Me.txtDescription.ReadOnly = True
+        Me.txtDescription.Size = New System.Drawing.Size(525, 20)
+        Me.txtDescription.TabIndex = 2
+        Me.txtDescription.TabStop = False
+        '
+        'cboGetText
+        '
+        Me.cboGetText.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboGetText.FormattingEnabled = True
+        Me.cboGetText.Items.AddRange(New Object() {"แบบที่ 1 ([20364(รหัสพนง. Barcode) ][20100222]วันที่ [1348]เวลา F1001)", "แบบที่ 2 (31[20100830]วันที่[2022]เวลา 0100000000[0013]รหัส Barcode 0000)", "แบบที่ 3 (K01[10]ปี[11]เดือน[04]วัน[0917]เวลา010[100042]รหัสพนง. Barcode)", "แบบที่ 4 ( OUR COMPANY 10014          10014 21/04/2011 07:28:00  C/In     102)", "แบบที่ 5 (00001" & Global.Microsoft.VisualBasic.ChrW(9) & "01" & Global.Microsoft.VisualBasic.ChrW(9) & "    02453469" & Global.Microsoft.VisualBasic.ChrW(9) & "35" & Global.Microsoft.VisualBasic.ChrW(9) & "    0" & Global.Microsoft.VisualBasic.ChrW(9) & "    2011/08/10 11:56:05)", "แบบที่ 6 (01 354074[รหัสพนักงาน]         T1 [08เดือน31วัน11ปี][1147เวลา]900)", "แบบที่ 7 (04156519[รหัสพนักงาน]         วันที่[20110815]เวลา[1039]F2001)", "แบบที่ 8 (117771[รหัสพนักงาน] 120201[วันที่] 1538[เวลา] 01)", "แบบที่ 9 (31 20120104[วันที่] 0739[เวลา] 000200 PSR.0017[รหัสพนักงาน] 0001)", "แบบที่ 10 (01" & Global.Microsoft.VisualBasic.ChrW(9) & "27-03-2012[วันที่]" & Global.Microsoft.VisualBasic.ChrW(9) & "15:44:49[เวลา]" & Global.Microsoft.VisualBasic.ChrW(9) & "'058823[รหัส])", "แบบที่ 11 (        0013448176[รหัสBarcode]                 2012/04/20  10:38[วันท" & _
+                        "ี่เวลา])", "แบบที่ 12 (53-2-131[รหัสพนักงาน]            20121123[วันที่]0711[เวลา]F1001)"})
+        Me.cboGetText.Location = New System.Drawing.Point(66, 19)
+        Me.cboGetText.Name = "cboGetText"
+        Me.cboGetText.Size = New System.Drawing.Size(551, 21)
+        Me.cboGetText.TabIndex = 0
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(26, 71)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(59, 13)
+        Me.Label4.TabIndex = 1
+        Me.Label4.Text = "คำอธิบาย : "
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(9, 47)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(76, 13)
+        Me.Label3.TabIndex = 1
+        Me.Label3.Text = "ตัวอย่าง Text : "
+        '
+        'GroupBox5
+        '
+        Me.GroupBox5.Controls.Add(Me.Label9)
+        Me.GroupBox5.Controls.Add(Me.Label7)
+        Me.GroupBox5.Controls.Add(Me.txtHaftDay_A)
+        Me.GroupBox5.Controls.Add(Me.txtHaftDay_M)
+        Me.GroupBox5.Location = New System.Drawing.Point(3, 357)
+        Me.GroupBox5.Name = "GroupBox5"
+        Me.GroupBox5.Size = New System.Drawing.Size(625, 48)
+        Me.GroupBox5.TabIndex = 6
+        Me.GroupBox5.TabStop = False
+        Me.GroupBox5.Text = "กำหนดจน.ชม. ครึ่งวัน"
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(140, 22)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(67, 13)
+        Me.Label9.TabIndex = 1
+        Me.Label9.Text = "ครึ่งวันบ่าย : "
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(9, 21)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(65, 13)
+        Me.Label7.TabIndex = 1
+        Me.Label7.Text = "ครึ่งวันเช้า : "
+        '
+        'txtHaftDay_A
+        '
+        Me.txtHaftDay_A.Location = New System.Drawing.Point(213, 19)
+        Me.txtHaftDay_A.MaxLength = 10
+        Me.txtHaftDay_A.Name = "txtHaftDay_A"
+        Me.txtHaftDay_A.Size = New System.Drawing.Size(48, 20)
+        Me.txtHaftDay_A.TabIndex = 0
+        Me.txtHaftDay_A.Text = "4"
+        '
+        'txtHaftDay_M
+        '
+        Me.txtHaftDay_M.Location = New System.Drawing.Point(80, 18)
+        Me.txtHaftDay_M.MaxLength = 10
+        Me.txtHaftDay_M.Name = "txtHaftDay_M"
+        Me.txtHaftDay_M.Size = New System.Drawing.Size(48, 20)
+        Me.txtHaftDay_M.TabIndex = 0
+        Me.txtHaftDay_M.Text = "4"
+        '
+        'GroupBox6
+        '
+        Me.GroupBox6.Controls.Add(Me.rdAllCompany)
+        Me.GroupBox6.Controls.Add(Me.rdOnlyCompany)
+        Me.GroupBox6.Location = New System.Drawing.Point(406, 411)
+        Me.GroupBox6.Name = "GroupBox6"
+        Me.GroupBox6.Size = New System.Drawing.Size(220, 50)
+        Me.GroupBox6.TabIndex = 7
+        Me.GroupBox6.TabStop = False
+        Me.GroupBox6.Text = "ดูข้อมูลบริษัท"
+        Me.GroupBox6.Visible = False
+        '
+        'rdAllCompany
+        '
+        Me.rdAllCompany.AutoSize = True
+        Me.rdAllCompany.Checked = True
+        Me.rdAllCompany.Location = New System.Drawing.Point(12, 19)
+        Me.rdAllCompany.Name = "rdAllCompany"
+        Me.rdAllCompany.Size = New System.Drawing.Size(74, 17)
+        Me.rdAllCompany.TabIndex = 1
+        Me.rdAllCompany.TabStop = True
+        Me.rdAllCompany.Text = "ดูทุกบริษัท"
+        Me.rdAllCompany.UseVisualStyleBackColor = True
+        '
+        'rdOnlyCompany
+        '
+        Me.rdOnlyCompany.AutoSize = True
+        Me.rdOnlyCompany.Location = New System.Drawing.Point(97, 19)
+        Me.rdOnlyCompany.Name = "rdOnlyCompany"
+        Me.rdOnlyCompany.Size = New System.Drawing.Size(96, 17)
+        Me.rdOnlyCompany.TabIndex = 1
+        Me.rdOnlyCompany.TabStop = True
+        Me.rdOnlyCompany.Text = "ดูฉะเพาะบริษัท"
+        Me.rdOnlyCompany.UseVisualStyleBackColor = True
+        '
+        'frmMainConfig
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.ClientSize = New System.Drawing.Size(633, 456)
+        Me.Controls.Add(Me.GroupBox6)
+        Me.Controls.Add(Me.GroupBox5)
+        Me.Controls.Add(Me.GroupBox4)
+        Me.Controls.Add(Me.GroupBox3)
+        Me.Controls.Add(Me.btnExit)
+        Me.Controls.Add(Me.btnSave)
+        Me.Controls.Add(Me.GroupBox2)
+        Me.Controls.Add(Me.GroupBox1)
+        Me.Name = "frmMainConfig"
+        Me.Text = "กำหนด Config มาตรฐาน"
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
+        Me.GroupBox2.ResumeLayout(False)
+        Me.GroupBox2.PerformLayout()
+        Me.GroupBox3.ResumeLayout(False)
+        Me.GroupBox3.PerformLayout()
+        Me.GroupBox4.ResumeLayout(False)
+        Me.GroupBox4.PerformLayout()
+        Me.GroupBox5.ResumeLayout(False)
+        Me.GroupBox5.PerformLayout()
+        Me.GroupBox6.ResumeLayout(False)
+        Me.GroupBox6.PerformLayout()
+        Me.ResumeLayout(False)
+
+    End Sub
+    Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
+    Friend WithEvents rdOT_PayCash As System.Windows.Forms.RadioButton
+    Friend WithEvents rdOT_PayHour As System.Windows.Forms.RadioButton
+    Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
+    Friend WithEvents rdLate_ByConfig As System.Windows.Forms.RadioButton
+    Friend WithEvents rdLate_ByWage As System.Windows.Forms.RadioButton
+    Friend WithEvents btnSave As System.Windows.Forms.Button
+    Friend WithEvents btnExit As System.Windows.Forms.Button
+    Friend WithEvents GroupBox3 As System.Windows.Forms.GroupBox
+    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents chkPreviousMonth As System.Windows.Forms.CheckBox
+    Friend WithEvents txtEndDay As System.Windows.Forms.TextBox
+    Friend WithEvents txtStartDay As System.Windows.Forms.TextBox
+    Friend WithEvents chkEndMonth As System.Windows.Forms.CheckBox
+    Friend WithEvents chkNextMonth As System.Windows.Forms.CheckBox
+    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents GroupBox4 As System.Windows.Forms.GroupBox
+    Friend WithEvents cboGetText As System.Windows.Forms.ComboBox
+    Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents txtOtDeduc As System.Windows.Forms.TextBox
+    Friend WithEvents Label6 As System.Windows.Forms.Label
+    Friend WithEvents Label5 As System.Windows.Forms.Label
+    Friend WithEvents Label8 As System.Windows.Forms.Label
+    Friend WithEvents GroupBox5 As System.Windows.Forms.GroupBox
+    Friend WithEvents Label9 As System.Windows.Forms.Label
+    Friend WithEvents Label7 As System.Windows.Forms.Label
+    Friend WithEvents txtHaftDay_A As System.Windows.Forms.TextBox
+    Friend WithEvents txtHaftDay_M As System.Windows.Forms.TextBox
+    Friend WithEvents txtDescription As System.Windows.Forms.TextBox
+    Friend WithEvents txtTextExample As System.Windows.Forms.TextBox
+    Friend WithEvents GroupBox6 As System.Windows.Forms.GroupBox
+    Friend WithEvents rdAllCompany As System.Windows.Forms.RadioButton
+    Friend WithEvents rdOnlyCompany As System.Windows.Forms.RadioButton
+    Friend WithEvents cboOtRate As System.Windows.Forms.ComboBox
+    Friend WithEvents Label12 As System.Windows.Forms.Label
+    Friend WithEvents Label11 As System.Windows.Forms.Label
+    Friend WithEvents Label10 As System.Windows.Forms.Label
+    Friend WithEvents txtOtFixedBathPerHour As System.Windows.Forms.TextBox
+    Friend WithEvents txtOtFixedBathPerPeriod As System.Windows.Forms.TextBox
+    Friend WithEvents Label14 As System.Windows.Forms.Label
+    Friend WithEvents Label13 As System.Windows.Forms.Label
+End Class

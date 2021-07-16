@@ -1,0 +1,2285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="colDeptId.Text" xml:space="preserve">
+    <value>รหัส</value>
+  </data>
+  <data name="colProgram.Text" xml:space="preserve">
+    <value>ชื่อกะ</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="colProgram.Width" type="System.Int32, mscorlib">
+    <value>117</value>
+  </data>
+  <data name="colTimeST.Text" xml:space="preserve">
+    <value>เวลาเข้า</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="colTimeST.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="colRestST.Text" xml:space="preserve">
+    <value>พัก(เริ่ม)</value>
+  </data>
+  <data name="colRestST.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="colRestST_NextD.Text" xml:space="preserve">
+    <value>ขว.</value>
+  </data>
+  <data name="colRestST_NextD.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="colRestST_NextD.Width" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <data name="colRestSP.Text" xml:space="preserve">
+    <value>พัก(ถึง)</value>
+  </data>
+  <data name="colRestSP.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="colRestSP_NextD.Text" xml:space="preserve">
+    <value>ขว.</value>
+  </data>
+  <data name="colRestSP_NextD.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="colRestSP_NextD.Width" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <data name="colTimeSP.Text" xml:space="preserve">
+    <value>เวลาออก</value>
+  </data>
+  <data name="colTimeSP.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="colTimeSP_Next.Text" xml:space="preserve">
+    <value>ขว.</value>
+  </data>
+  <data name="colTimeSP_Next.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="colTimeSP_Next.Width" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <data name="colStartDay.Text" xml:space="preserve">
+    <value>เริ่มต้นวัน</value>
+  </data>
+  <data name="colStartDay.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="colStartDay_PD.Text" xml:space="preserve">
+    <value>กว.</value>
+  </data>
+  <data name="colStartDay_PD.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="colStartDay_PD.Width" type="System.Int32, mscorlib">
+    <value>41</value>
+  </data>
+  <data name="colTimeEndDay.Text" xml:space="preserve">
+    <value>สิ้นสุดวัน</value>
+  </data>
+  <data name="colTimeEndDay.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="colTimeEndDay.Width" type="System.Int32, mscorlib">
+    <value>69</value>
+  </data>
+  <data name="colTimeEndDay_NextD.Text" xml:space="preserve">
+    <value>ขว.</value>
+  </data>
+  <data name="colTimeEndDay_NextD.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="colTimeEndDay_NextD.Width" type="System.Int32, mscorlib">
+    <value>37</value>
+  </data>
+  <data name="colMon.Text" xml:space="preserve">
+    <value>จ.</value>
+  </data>
+  <data name="colMon.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="colMon.Width" type="System.Int32, mscorlib">
+    <value>40</value>
+  </data>
+  <data name="colTue.Text" xml:space="preserve">
+    <value>อ.</value>
+  </data>
+  <data name="colTue.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="colTue.Width" type="System.Int32, mscorlib">
+    <value>40</value>
+  </data>
+  <data name="colWed.Text" xml:space="preserve">
+    <value>พ.</value>
+  </data>
+  <data name="colWed.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="colWed.Width" type="System.Int32, mscorlib">
+    <value>40</value>
+  </data>
+  <data name="colThu.Text" xml:space="preserve">
+    <value>พฤ.</value>
+  </data>
+  <data name="colThu.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="colThu.Width" type="System.Int32, mscorlib">
+    <value>40</value>
+  </data>
+  <data name="colFri.Text" xml:space="preserve">
+    <value>ศ.</value>
+  </data>
+  <data name="colFri.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="colFri.Width" type="System.Int32, mscorlib">
+    <value>40</value>
+  </data>
+  <data name="colSat.Text" xml:space="preserve">
+    <value>ส.</value>
+  </data>
+  <data name="colSat.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="colSat.Width" type="System.Int32, mscorlib">
+    <value>40</value>
+  </data>
+  <data name="colSun.Text" xml:space="preserve">
+    <value>อา.</value>
+  </data>
+  <data name="colSun.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="colSun.Width" type="System.Int32, mscorlib">
+    <value>40</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="lstSubjectGroup.Location" type="System.Drawing.Point, System.Drawing">
+    <value>172, 448</value>
+  </data>
+  <data name="lstSubjectGroup.Size" type="System.Drawing.Size, System.Drawing">
+    <value>242, 84</value>
+  </data>
+  <data name="lstSubjectGroup.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="lstSubjectGroup.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;lstSubjectGroup.Name" xml:space="preserve">
+    <value>lstSubjectGroup</value>
+  </data>
+  <data name="&gt;&gt;lstSubjectGroup.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lstSubjectGroup.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lstSubjectGroup.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="GcSubjectGroup.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="GcSubjectGroup.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt</value>
+  </data>
+  <data name="GcSubjectGroup.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 343</value>
+  </data>
+  <data name="GvSubjectGroup.Appearance.HeaderPanel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt, style=Bold</value>
+  </data>
+  <data name="colrow.Caption" xml:space="preserve">
+    <value>ลำดับ</value>
+  </data>
+  <data name="colrow.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="colrow.VisibleIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="colrow.Width" type="System.Int32, mscorlib">
+    <value>38</value>
+  </data>
+  <data name="GridColumn3.Caption" xml:space="preserve">
+    <value>รหัส</value>
+  </data>
+  <data name="GridColumn3.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="GridColumn3.VisibleIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="colcode_lar.Caption" xml:space="preserve">
+    <value>ชื่อเวลาการทำงาน</value>
+  </data>
+  <data name="colcode_lar.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="colcode_lar.VisibleIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="colcode_lar.Width" type="System.Int32, mscorlib">
+    <value>157</value>
+  </data>
+  <data name="GridColumn16.Caption" xml:space="preserve">
+    <value>เวลาพื้นฐาน</value>
+  </data>
+  <data name="GridColumn16.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="GridColumn16.VisibleIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="GridColumn17.Caption" xml:space="preserve">
+    <value>คำนวณ (ชม.)</value>
+  </data>
+  <data name="GridColumn17.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="GridColumn17.VisibleIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="GridColumn17.Width" type="System.Int32, mscorlib">
+    <value>77</value>
+  </data>
+  <data name="GridColumn18.Caption" xml:space="preserve">
+    <value>Flexible hour (ชม.)</value>
+  </data>
+  <data name="GridColumn18.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="GridColumn18.VisibleIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="GridColumn18.Width" type="System.Int32, mscorlib">
+    <value>111</value>
+  </data>
+  <data name="colDescription_lar.Caption" xml:space="preserve">
+    <value>เวลาเข้า</value>
+  </data>
+  <data name="colDescription_lar.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="colDescription_lar.VisibleIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="colDescription_lar.Width" type="System.Int32, mscorlib">
+    <value>60</value>
+  </data>
+  <data name="GridColumn19.Caption" xml:space="preserve">
+    <value>ถึง(Flexible hour)</value>
+  </data>
+  <data name="GridColumn19.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="GridColumn19.VisibleIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="GridColumn19.Width" type="System.Int32, mscorlib">
+    <value>108</value>
+  </data>
+  <data name="colReduc_lar.Caption" xml:space="preserve">
+    <value>พัก(เริ่ม)</value>
+  </data>
+  <data name="colReduc_lar.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="colReduc_lar.VisibleIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="colReduc_lar.Width" type="System.Int32, mscorlib">
+    <value>71</value>
+  </data>
+  <data name="colNotdeduc.Caption" xml:space="preserve">
+    <value>ขว.</value>
+  </data>
+  <data name="colNotdeduc.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="colNotdeduc.VisibleIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="colNotdeduc.Width" type="System.Int32, mscorlib">
+    <value>48</value>
+  </data>
+  <data name="colremark_lar.Caption" xml:space="preserve">
+    <value>พัก(ถึง)</value>
+  </data>
+  <data name="colremark_lar.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="colremark_lar.VisibleIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="colremark_lar.Width" type="System.Int32, mscorlib">
+    <value>65</value>
+  </data>
+  <data name="GridColumn1.Caption" xml:space="preserve">
+    <value>ขว.</value>
+  </data>
+  <data name="GridColumn1.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="GridColumn1.VisibleIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="GridColumn1.Width" type="System.Int32, mscorlib">
+    <value>50</value>
+  </data>
+  <data name="GridColumn2.Caption" xml:space="preserve">
+    <value>เวลาออก</value>
+  </data>
+  <data name="GridColumn2.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="GridColumn2.VisibleIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="GridColumn2.Width" type="System.Int32, mscorlib">
+    <value>57</value>
+  </data>
+  <data name="GridColumn4.Caption" xml:space="preserve">
+    <value>ขว</value>
+  </data>
+  <data name="GridColumn4.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="GridColumn4.VisibleIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="GridColumn4.Width" type="System.Int32, mscorlib">
+    <value>50</value>
+  </data>
+  <data name="GridColumn5.Caption" xml:space="preserve">
+    <value>เริ่มต้นวัน</value>
+  </data>
+  <data name="GridColumn5.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="GridColumn5.VisibleIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="GridColumn5.Width" type="System.Int32, mscorlib">
+    <value>59</value>
+  </data>
+  <data name="GridColumn6.Caption" xml:space="preserve">
+    <value>กว.</value>
+  </data>
+  <data name="GridColumn6.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="GridColumn6.VisibleIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="GridColumn6.Width" type="System.Int32, mscorlib">
+    <value>46</value>
+  </data>
+  <data name="GridColumn7.Caption" xml:space="preserve">
+    <value>สิ้นสุดวัน</value>
+  </data>
+  <data name="GridColumn7.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="GridColumn7.VisibleIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="GridColumn7.Width" type="System.Int32, mscorlib">
+    <value>65</value>
+  </data>
+  <data name="GridColumn8.Caption" xml:space="preserve">
+    <value>ขว.</value>
+  </data>
+  <data name="GridColumn8.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="GridColumn8.VisibleIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="GridColumn8.Width" type="System.Int32, mscorlib">
+    <value>52</value>
+  </data>
+  <data name="GridColumn9.Caption" xml:space="preserve">
+    <value>จ.</value>
+  </data>
+  <data name="GridColumn9.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="GridColumn9.VisibleIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="GridColumn9.Width" type="System.Int32, mscorlib">
+    <value>44</value>
+  </data>
+  <data name="GridColumn10.Caption" xml:space="preserve">
+    <value>อ.</value>
+  </data>
+  <data name="GridColumn10.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="GridColumn10.VisibleIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="GridColumn10.Width" type="System.Int32, mscorlib">
+    <value>43</value>
+  </data>
+  <data name="GridColumn11.Caption" xml:space="preserve">
+    <value>พ.</value>
+  </data>
+  <data name="GridColumn11.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="GridColumn11.VisibleIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="GridColumn11.Width" type="System.Int32, mscorlib">
+    <value>50</value>
+  </data>
+  <data name="GridColumn12.Caption" xml:space="preserve">
+    <value>พฤ.</value>
+  </data>
+  <data name="GridColumn12.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="GridColumn12.VisibleIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="GridColumn12.Width" type="System.Int32, mscorlib">
+    <value>55</value>
+  </data>
+  <data name="GridColumn13.Caption" xml:space="preserve">
+    <value>ศ</value>
+  </data>
+  <data name="GridColumn13.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="GridColumn13.VisibleIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="GridColumn13.Width" type="System.Int32, mscorlib">
+    <value>53</value>
+  </data>
+  <data name="GridColumn14.Caption" xml:space="preserve">
+    <value>ส</value>
+  </data>
+  <data name="GridColumn14.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="GridColumn14.VisibleIndex" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data name="GridColumn14.Width" type="System.Int32, mscorlib">
+    <value>47</value>
+  </data>
+  <data name="GridColumn15.Caption" xml:space="preserve">
+    <value>อา</value>
+  </data>
+  <data name="GridColumn15.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="GridColumn15.VisibleIndex" type="System.Int32, mscorlib">
+    <value>24</value>
+  </data>
+  <data name="GridColumn15.Width" type="System.Int32, mscorlib">
+    <value>48</value>
+  </data>
+  <data name="BtnDel.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <assembly alias="DevExpress.Utils.v17.1" name="DevExpress.Utils.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <data name="BtnDel.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v17.1">
+    <value>Glyph</value>
+  </data>
+  <data name="cboTransport_detail.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="cboTransport_detail.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v17.1">
+    <value>Combo</value>
+  </data>
+  <data name="cboTransport_detail.Columns" xml:space="preserve">
+    <value>TransName</value>
+  </data>
+  <data name="cboTransport_detail.Columns1" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <data name="cboTransport_detail.Columns2" xml:space="preserve">
+    <value>บริษัทขนส่ง</value>
+  </data>
+  <data name="cboTransport_detail.NullText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cboUnitName.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="cboUnitName.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v17.1">
+    <value>Combo</value>
+  </data>
+  <data name="cboUnitName.Columns" xml:space="preserve">
+    <value>unit</value>
+  </data>
+  <data name="cboUnitName.Columns1" xml:space="preserve">
+    <value>หน่วยนับ</value>
+  </data>
+  <data name="cboUnitName.NullText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GcSubjectGroup.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1260, 311</value>
+  </data>
+  <data name="GcSubjectGroup.TabIndex" type="System.Int32, mscorlib">
+    <value>37</value>
+  </data>
+  <data name="&gt;&gt;GcSubjectGroup.Name" xml:space="preserve">
+    <value>GcSubjectGroup</value>
+  </data>
+  <data name="&gt;&gt;GcSubjectGroup.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.GridControl, DevExpress.XtraGrid.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;GcSubjectGroup.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;GcSubjectGroup.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="txtGroupId.Location" type="System.Drawing.Point, System.Drawing">
+    <value>118, 10</value>
+  </data>
+  <data name="txtGroupId.Size" type="System.Drawing.Size, System.Drawing">
+    <value>98, 20</value>
+  </data>
+  <data name="txtGroupId.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;txtGroupId.Name" xml:space="preserve">
+    <value>txtGroupId</value>
+  </data>
+  <data name="&gt;&gt;txtGroupId.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;txtGroupId.Parent" xml:space="preserve">
+    <value>PanelControl1</value>
+  </data>
+  <data name="&gt;&gt;txtGroupId.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="btnExit.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAB10RVh0VGl0
+        bGUAQ2xvc2U7RXhpdDtCYXJzO1JpYmJvbjtGA7noAAADCklEQVQ4T42TaUhUURiGp0xzK1HTINrc00yz
+        1EnTMtfUGItS8YclRhAJ6o/EJW1cAjOp3CEGJDEpMYkgR81RsqgYncQlTUfTMpd05mraOCP14+1816F/
+        QRceeO8553vOd++5VzBzu0jArs0MA8aW/8BQD63fxBAYfC4Uv/p6qwBfioh8TBWJNyhkFNzEJE8eJvMZ
+        4jx8FudiNDenm9WSUGBIE9oP7Rso9PC5TU8rtL2EFFp5C89oThZYrREJjJQ3sqHtacHS40oMZqdDYu+B
+        jvMX+HtCFhsLiZ0HBjLTwD0qB1dfho8Z10lgTIKtI5kZWHv3nC1IRV1EPGRSBZ5czUHrGRHaRDF8lrX0
+        oi48Hv0ZKVDX3UN/ajoJTEhg3H8tBZruZkj2umFSOQvVkhbKKQ6NqQU8oyzPqzWYGJuFZI8bVLWlkF++
+        QgJTEpi8PnOWtVrBWo1DT8l9aLS/oV7RYewrh7EvHBZ/6LC69oufk7FHm85KRntIJAnMSGAqC43C9/tZ
+        +JaZhI7oaLwvKcfCsg4LrJPvywxOh7fFZXgZGYmptAQoE0Lwwj+YBOYkMJMGhmG2KBUTF0+j9bgf2sV3
+        WMtazKnXMKvSMLRoyyuB1E+IsQtB+HQuEM+OBpBgGwnMn/sGYTrnClp9vNCcno+hcRVmFjXgVnXgVtYx
+        vaDBgHIRT9PEkHp5YDjSB43uQhJsJ8G2Jk8/vrUGexeo59WYUa1haXUdA+VVPBuSn1DNqdFg54KBYE/U
+        Ox8lgQUJtje4+mA8WQRFTCg6E5OwznHoKymFLOAYOhiUaawz8RLkEYHo83dF7b5DJLAkgcVDOy98igvB
+        cLQQvdEn0eRyAF0BvhiJOYFhUSC6/H34MXnYcfSf8oTiiAMe7HIlgRUvkOw+iKEotpPQGYPBh9mLCsbH
+        cF8ohI5QeDtiKNQbI6IAtrMb5J77IXffi2obp78Cs7u2Tm9qdjqjxtYF1bbOqLIhnDawdkSllSMqeBxQ
+        YemAckaxhd1bVssfI/2W9EGQzVrPjn9go4cyO0KBwR+nGRqWKfsCHQAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="btnExit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>416, 3</value>
+  </data>
+  <data name="btnExit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>101, 30</value>
+  </data>
+  <data name="btnExit.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="btnExit.Text" xml:space="preserve">
+    <value>ออก</value>
+  </data>
+  <data name="&gt;&gt;btnExit.Name" xml:space="preserve">
+    <value>btnExit</value>
+  </data>
+  <data name="&gt;&gt;btnExit.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btnExit.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnExit.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="btnRefresh.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAACV0RVh0VGl0
+        bGUAQ2xlYXI7RXJhc2U7UmVtb3ZlO0JhcnM7UmliYm9uO4eAg3MAAAKVSURBVDhPnZJrSJNRGMdPubnZ
+        Gln5wSSKLFuKhJpGWmqgIhtBpaBdrK2QbFqaGeUlrbxSqJRkfsmWbYMKJUzXtBRqRCE48zJT81KKJUaQ
+        Ot/CLP+dMzZTK4j+8ON53/Oc33PgPS/5xyyi2FF4lMVsYV4Mx3aTdwUnyNu8BDKQF0/6c5WkL0dJerOP
+        szaT+cZURXFHxlFjrTJyJ33nmdKOkI5UBesT0iCXEQC/QcNk+6aUmFsz5l6A0pWbwGljpKF0nW/tE1Ka
+        VfQ3WfA8MVr1Y6wbnL6cchMz4z1oz0/iMn0k4bRvzzaSFO3rP8nCxriI298/mcA9LMMkhaspw/RwM97I
+        ZbgfsuVLssdaGds8bwANkx30il0V0yOvYK4qwWTVNUoJvg28QO9hKfoOSdF1IBzXfdzGmECS1aa58pIH
+        +8LuTA01wXy3kFJkqVPdT9ETHYqeqBBKKAxSf1x0dTEwiZxUtbLCZJGiuEHdPjiKCXUBxjUFlvq1tR6d
+        e4KsBMMQ5odL65zbN4sErkxkYXcrOnhZr3k2xCGzdhR193QYV2WDa6pGGz2tTRZAawAag71wfrVTh7vQ
+        3o067CYsJy+Nyq3RPumfsMg2Blva0BLiCyOF1cf+njjn7GiSCHgbrTJziXBvVmV5TdfnebLG+BFBGTrk
+        x6SgOdgbdX7uOOMk7tzA50lsMl1nPhFH5NSb06s/zMrlL0cQmP6IorOQEanEqeWizvU8u010P7t7i2wb
+        IAyMvZq6v9Awc7ZyEDcMw9iepsMOK/6nq+AtL+1eJV7psVC2DWAfUOwddSE+KFHzPiBBi21KNbbGVcA3
+        VjXtGX1Fv2yN1+zJSQ58Mhdb2BAHygqKM8XFCnt2pPz67xfG9gf+HyA/AV6Ksk3Y/ofNAAAAAElFTkSu
+        QmCC
+</value>
+  </data>
+  <data name="btnRefresh.Location" type="System.Drawing.Point, System.Drawing">
+    <value>313, 3</value>
+  </data>
+  <data name="btnRefresh.Size" type="System.Drawing.Size, System.Drawing">
+    <value>101, 30</value>
+  </data>
+  <data name="btnRefresh.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="btnRefresh.Text" xml:space="preserve">
+    <value>เคลียร์</value>
+  </data>
+  <data name="&gt;&gt;btnRefresh.Name" xml:space="preserve">
+    <value>btnRefresh</value>
+  </data>
+  <data name="&gt;&gt;btnRefresh.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btnRefresh.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnRefresh.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="btnDelete.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0VGl0
+        bGUARGVsZXRlO1JlbW92ZTtNaW51c+upj0EAAANRSURBVDhPfZJdTFN3GMYPkPiBF2NeejEXkyVubtXg
+        YnSJMZu6KQazhWHZpnFxc06Z0xWwFqEwJS4NaBEtRKVJh6Ji+agUKaWipoIEQmf5sBUKpS0y+sEOlrbW
+        FZLH93+q8c4mv/R93/P8ntOLciPh/wXok0AkZpcbP86t7lFI1ZY+qcYaPK55xEvVfZacSw9L9xZfW0GZ
+        JJYdJofBjUZigpy6OWvh0cpupaymf76m04M2ewAWXxj/+MMwPpnGla4JyP62zh48YzpA+QXMeeVyCWs+
+        Fy/8TdXdptQPY/C/KKz8C/QEouj0PkcX0Tsdv1m8YZQ22XGowqxf/tH6JcxlBUm/Ks0VZTo7BmdewOgK
+        wTAegtEdhmkiApMnDts7PGE8DsZQTi/6SWEsI3cBlymtXXW4sme+zxuB1jaDxidB6EZmoR8NocX5hmba
+        dY4gGui5xR+FpKo3tv2XsyJud0l7ldo0hrpBHjWPeNQO8KizPYPWHg+/5qYtiBuPnwnPrw/NoMbsgriw
+        Scl9f7LDWm/xobLbj10lBmzKrn0rYspc7PWjoT+ArOK2IS6z6M60pscHxd1JITAw/C+GHFOwO30Ydvkx
+        QjjcAThcAbgneWz54ybK7k9BTSWZ8nae+zrfOKu8N4ES01OhwMdHEHoeQygaQzg6hwgRppnts3TfKtHi
+        r45JlNILv5EZeC5N0jxwSj+KPw0T+O50OzYfrRNCX+bUI02mE+av8hqQdlyHHfm3sO+cGaeMTyG/5cS2
+        I41W7osD11RHLltQbPBAQc3nzFM4/8CLC51Elxcq+mawnd3L7k2iyODG79VWbPzxciknSi9K3SZpiRU2
+        jyOfOKF3ofC2C/JWN4paPRSOI6e5oMWFE4RM58SOvNa5DzbuX83+SIvW7VarMorvooDkY7pxSOnnyahM
+        Rnt+MwkCdGeQnHHyPtZmqSrITWYFiclL30/59AeNMb3gDqSNY1TiRF5TnFxhHkMuzRKtAzvlHSRX3yYv
+        hbmcfw6sJGlxynvvijIqqz77uT4mVnTh8BXbK3EM2Vdt2EW3Dfu1kZXbS3Io/w5zvMz1z+N1SSKRvHxD
+        9voPd5ZfEGWq+0VijZ/wfvJttXVl+tnzy1L3rKHMYiKByd45cC8B0oKaPyRsCA8AAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="btnDelete.Location" type="System.Drawing.Point, System.Drawing">
+    <value>210, 3</value>
+  </data>
+  <data name="btnDelete.Size" type="System.Drawing.Size, System.Drawing">
+    <value>101, 30</value>
+  </data>
+  <data name="btnDelete.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="btnDelete.Text" xml:space="preserve">
+    <value>ลบ</value>
+  </data>
+  <data name="&gt;&gt;btnDelete.Name" xml:space="preserve">
+    <value>btnDelete</value>
+  </data>
+  <data name="&gt;&gt;btnDelete.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btnDelete.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnDelete.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="btnEdit.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAt0RVh0VGl0
+        bGUARWRpdDtlNaxEAAAAoklEQVQ4T5XOMRKCMBAFUOg8EY1nwNJT0FrL0GKnh8mxvADq/5kssy4Lky1e
+        Jsn8v0nTTynqBi9oefYCR1j+FnmIFzryABlATy/k4cv3spchHxhs0KO/LUNmGLi3YUuX7ZBMhy2vnL8N
+        a04XtKoy/R2K6jLZi1CZ9CFcJtmcIVwmLlc4wQihMnF5QwIZUl0mLgvwVRnSwSa4h4v+9oWX9VLzA+bc
+        zQR+JeoKAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="btnEdit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>107, 3</value>
+  </data>
+  <data name="btnEdit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>101, 30</value>
+  </data>
+  <data name="btnEdit.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="btnEdit.Text" xml:space="preserve">
+    <value>แก้ไข</value>
+  </data>
+  <data name="&gt;&gt;btnEdit.Name" xml:space="preserve">
+    <value>btnEdit</value>
+  </data>
+  <data name="&gt;&gt;btnEdit.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btnEdit.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnEdit.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="btnAdd.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAASdEVYdFRpdGxlAFNhdmUgVG87U2F2ZdSrmXIAAACI
+        SURBVDhPvY/NDYAgDEZZkEUcgEU8MAJHEy+enK3ShjalQfAvHp4U+L4XcQDwCvrM07JnACl7mhvoO+yI
+        QEInAj6zd/8JmGsCBgMN+oKbfCzAWYOBDmNBSFEDCurg+ljAjARc8Gqu9iOBLVp8JTCsOdCT4Lk8YTPl
+        kYTKSPXLFg4VWCLlkKI7AOsCiV3t5qKnAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="btnAdd.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 3</value>
+  </data>
+  <data name="btnAdd.Size" type="System.Drawing.Size, System.Drawing">
+    <value>101, 30</value>
+  </data>
+  <data name="btnAdd.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="btnAdd.Text" xml:space="preserve">
+    <value>เพิ่ม</value>
+  </data>
+  <data name="&gt;&gt;btnAdd.Name" xml:space="preserve">
+    <value>btnAdd</value>
+  </data>
+  <data name="&gt;&gt;btnAdd.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btnAdd.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnAdd.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="PanelControl1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="chkKA_flexible.Location" type="System.Drawing.Point, System.Drawing">
+    <value>224, 56</value>
+  </data>
+  <data name="chkKA_flexible.Properties.Caption" xml:space="preserve">
+    <value>Flexible hour</value>
+  </data>
+  <data name="chkKA_flexible.Size" type="System.Drawing.Size, System.Drawing">
+    <value>124, 19</value>
+  </data>
+  <data name="chkKA_flexible.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;chkKA_flexible.Name" xml:space="preserve">
+    <value>chkKA_flexible</value>
+  </data>
+  <data name="&gt;&gt;chkKA_flexible.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.CheckEdit, DevExpress.XtraEditors.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;chkKA_flexible.Parent" xml:space="preserve">
+    <value>PanelControl1</value>
+  </data>
+  <data name="&gt;&gt;chkKA_flexible.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="txtGroupName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>118, 33</value>
+  </data>
+  <data name="txtGroupName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>260, 20</value>
+  </data>
+  <data name="txtGroupName.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;txtGroupName.Name" xml:space="preserve">
+    <value>txtGroupName</value>
+  </data>
+  <data name="&gt;&gt;txtGroupName.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;txtGroupName.Parent" xml:space="preserve">
+    <value>PanelControl1</value>
+  </data>
+  <data name="&gt;&gt;txtGroupName.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="lblGroupName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>23, 35</value>
+  </data>
+  <data name="lblGroupName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>89, 13</value>
+  </data>
+  <data name="lblGroupName.TabIndex" type="System.Int32, mscorlib">
+    <value>58</value>
+  </data>
+  <data name="lblGroupName.Text" xml:space="preserve">
+    <value>ชื่อเวลาการทำงาน :</value>
+  </data>
+  <data name="&gt;&gt;lblGroupName.Name" xml:space="preserve">
+    <value>lblGroupName</value>
+  </data>
+  <data name="&gt;&gt;lblGroupName.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;lblGroupName.Parent" xml:space="preserve">
+    <value>PanelControl1</value>
+  </data>
+  <data name="&gt;&gt;lblGroupName.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="lblGroupId.Location" type="System.Drawing.Point, System.Drawing">
+    <value>86, 13</value>
+  </data>
+  <data name="lblGroupId.Size" type="System.Drawing.Size, System.Drawing">
+    <value>26, 13</value>
+  </data>
+  <data name="lblGroupId.TabIndex" type="System.Int32, mscorlib">
+    <value>58</value>
+  </data>
+  <data name="lblGroupId.Text" xml:space="preserve">
+    <value>รหัส :</value>
+  </data>
+  <data name="&gt;&gt;lblGroupId.Name" xml:space="preserve">
+    <value>lblGroupId</value>
+  </data>
+  <data name="&gt;&gt;lblGroupId.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;lblGroupId.Parent" xml:space="preserve">
+    <value>PanelControl1</value>
+  </data>
+  <data name="&gt;&gt;lblGroupId.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="chkka_default.Location" type="System.Drawing.Point, System.Drawing">
+    <value>118, 56</value>
+  </data>
+  <data name="chkka_default.Properties.Caption" xml:space="preserve">
+    <value>เวลาพื้นฐาน</value>
+  </data>
+  <data name="chkka_default.Size" type="System.Drawing.Size, System.Drawing">
+    <value>88, 19</value>
+  </data>
+  <data name="chkka_default.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;chkka_default.Name" xml:space="preserve">
+    <value>chkka_default</value>
+  </data>
+  <data name="&gt;&gt;chkka_default.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.CheckEdit, DevExpress.XtraEditors.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;chkka_default.Parent" xml:space="preserve">
+    <value>PanelControl1</value>
+  </data>
+  <data name="&gt;&gt;chkka_default.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="PanelControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 37</value>
+  </data>
+  <data name="PanelControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1258, 83</value>
+  </data>
+  <data name="PanelControl1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;PanelControl1.Name" xml:space="preserve">
+    <value>PanelControl1</value>
+  </data>
+  <data name="&gt;&gt;PanelControl1.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.PanelControl, DevExpress.Utils.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;PanelControl1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;PanelControl1.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="txtTimeST.Location" type="System.Drawing.Point, System.Drawing">
+    <value>84, 28</value>
+  </data>
+  <data name="txtTimeST.Properties.Mask.EditMask" xml:space="preserve">
+    <value>00:00</value>
+  </data>
+  <assembly alias="DevExpress.XtraEditors.v17.1" name="DevExpress.XtraEditors.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <data name="txtTimeST.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v17.1">
+    <value>Simple</value>
+  </data>
+  <data name="txtTimeST.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 20</value>
+  </data>
+  <data name="txtTimeST.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;txtTimeST.Name" xml:space="preserve">
+    <value>txtTimeST</value>
+  </data>
+  <data name="&gt;&gt;txtTimeST.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;txtTimeST.Parent" xml:space="preserve">
+    <value>GroupControl1</value>
+  </data>
+  <data name="&gt;&gt;txtTimeST.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="GroupControl1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="txtKa_flexible_hour.EditValue" type="System.Int16, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtKa_flexible_hour.Location" type="System.Drawing.Point, System.Drawing">
+    <value>293, 29</value>
+  </data>
+  <data name="txtKa_flexible_hour.Properties.Mask.EditMask" xml:space="preserve">
+    <value>n1</value>
+  </data>
+  <data name="txtKa_flexible_hour.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v17.1">
+    <value>Numeric</value>
+  </data>
+  <data name="txtKa_flexible_hour.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 20</value>
+  </data>
+  <data name="txtKa_flexible_hour.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;txtKa_flexible_hour.Name" xml:space="preserve">
+    <value>txtKa_flexible_hour</value>
+  </data>
+  <data name="&gt;&gt;txtKa_flexible_hour.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;txtKa_flexible_hour.Parent" xml:space="preserve">
+    <value>GroupControl1</value>
+  </data>
+  <data name="&gt;&gt;txtKa_flexible_hour.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="LabelControl2.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 9.75pt, style=Bold</value>
+  </data>
+  <data name="LabelControl2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>664, 96</value>
+  </data>
+  <data name="LabelControl2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>164, 16</value>
+  </data>
+  <data name="LabelControl2.TabIndex" type="System.Int32, mscorlib">
+    <value>58</value>
+  </data>
+  <data name="LabelControl2.Text" xml:space="preserve">
+    <value>กว. : ก่อนวัน (ก่อนเที่ยงคืน)</value>
+  </data>
+  <data name="&gt;&gt;LabelControl2.Name" xml:space="preserve">
+    <value>LabelControl2</value>
+  </data>
+  <data name="&gt;&gt;LabelControl2.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;LabelControl2.Parent" xml:space="preserve">
+    <value>GroupControl1</value>
+  </data>
+  <data name="&gt;&gt;LabelControl2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="LabelControl1.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 9.75pt, style=Bold</value>
+  </data>
+  <data name="LabelControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>664, 71</value>
+  </data>
+  <data name="LabelControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>162, 16</value>
+  </data>
+  <data name="LabelControl1.TabIndex" type="System.Int32, mscorlib">
+    <value>58</value>
+  </data>
+  <data name="LabelControl1.Text" xml:space="preserve">
+    <value>ขว. : ข้ามวัน (ข้ามเที่ยงคืน)</value>
+  </data>
+  <data name="&gt;&gt;LabelControl1.Name" xml:space="preserve">
+    <value>LabelControl1</value>
+  </data>
+  <data name="&gt;&gt;LabelControl1.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;LabelControl1.Parent" xml:space="preserve">
+    <value>GroupControl1</value>
+  </data>
+  <data name="&gt;&gt;LabelControl1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="LabelControl10.Location" type="System.Drawing.Point, System.Drawing">
+    <value>31, 99</value>
+  </data>
+  <data name="LabelControl10.Size" type="System.Drawing.Size, System.Drawing">
+    <value>49, 13</value>
+  </data>
+  <data name="LabelControl10.TabIndex" type="System.Int32, mscorlib">
+    <value>58</value>
+  </data>
+  <data name="LabelControl10.Text" xml:space="preserve">
+    <value>เวลาออก :</value>
+  </data>
+  <data name="&gt;&gt;LabelControl10.Name" xml:space="preserve">
+    <value>LabelControl10</value>
+  </data>
+  <data name="&gt;&gt;LabelControl10.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;LabelControl10.Parent" xml:space="preserve">
+    <value>GroupControl1</value>
+  </data>
+  <data name="&gt;&gt;LabelControl10.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="LabelControl6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>344, 31</value>
+  </data>
+  <data name="LabelControl6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>18, 13</value>
+  </data>
+  <data name="LabelControl6.TabIndex" type="System.Int32, mscorlib">
+    <value>58</value>
+  </data>
+  <data name="LabelControl6.Text" xml:space="preserve">
+    <value>ชม.</value>
+  </data>
+  <data name="&gt;&gt;LabelControl6.Name" xml:space="preserve">
+    <value>LabelControl6</value>
+  </data>
+  <data name="&gt;&gt;LabelControl6.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;LabelControl6.Parent" xml:space="preserve">
+    <value>GroupControl1</value>
+  </data>
+  <data name="&gt;&gt;LabelControl6.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="LabelControl9.Location" type="System.Drawing.Point, System.Drawing">
+    <value>47, 76</value>
+  </data>
+  <data name="LabelControl9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>32, 13</value>
+  </data>
+  <data name="LabelControl9.TabIndex" type="System.Int32, mscorlib">
+    <value>58</value>
+  </data>
+  <data name="LabelControl9.Text" xml:space="preserve">
+    <value>พักถึง :</value>
+  </data>
+  <data name="&gt;&gt;LabelControl9.Name" xml:space="preserve">
+    <value>LabelControl9</value>
+  </data>
+  <data name="&gt;&gt;LabelControl9.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;LabelControl9.Parent" xml:space="preserve">
+    <value>GroupControl1</value>
+  </data>
+  <data name="&gt;&gt;LabelControl9.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="LabelControl5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>241, 31</value>
+  </data>
+  <data name="LabelControl5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 13</value>
+  </data>
+  <data name="LabelControl5.TabIndex" type="System.Int32, mscorlib">
+    <value>58</value>
+  </data>
+  <data name="LabelControl5.Text" xml:space="preserve">
+    <value>คำนวณที่ :</value>
+  </data>
+  <data name="&gt;&gt;LabelControl5.Name" xml:space="preserve">
+    <value>LabelControl5</value>
+  </data>
+  <data name="&gt;&gt;LabelControl5.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;LabelControl5.Parent" xml:space="preserve">
+    <value>GroupControl1</value>
+  </data>
+  <data name="&gt;&gt;LabelControl5.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="LabelControl8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>43, 54</value>
+  </data>
+  <data name="LabelControl8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>37, 13</value>
+  </data>
+  <data name="LabelControl8.TabIndex" type="System.Int32, mscorlib">
+    <value>58</value>
+  </data>
+  <data name="LabelControl8.Text" xml:space="preserve">
+    <value>เริ่มพัก :</value>
+  </data>
+  <data name="&gt;&gt;LabelControl8.Name" xml:space="preserve">
+    <value>LabelControl8</value>
+  </data>
+  <data name="&gt;&gt;LabelControl8.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;LabelControl8.Parent" xml:space="preserve">
+    <value>GroupControl1</value>
+  </data>
+  <data name="&gt;&gt;LabelControl8.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="chkTimeSP_NextDay.Location" type="System.Drawing.Point, System.Drawing">
+    <value>147, 96</value>
+  </data>
+  <data name="chkTimeSP_NextDay.Properties.Caption" xml:space="preserve">
+    <value>ข้ามวัน</value>
+  </data>
+  <data name="chkTimeSP_NextDay.Size" type="System.Drawing.Size, System.Drawing">
+    <value>59, 19</value>
+  </data>
+  <data name="chkTimeSP_NextDay.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;chkTimeSP_NextDay.Name" xml:space="preserve">
+    <value>chkTimeSP_NextDay</value>
+  </data>
+  <data name="&gt;&gt;chkTimeSP_NextDay.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.CheckEdit, DevExpress.XtraEditors.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;chkTimeSP_NextDay.Parent" xml:space="preserve">
+    <value>GroupControl1</value>
+  </data>
+  <data name="&gt;&gt;chkTimeSP_NextDay.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="LabelControl11.Location" type="System.Drawing.Point, System.Drawing">
+    <value>150, 31</value>
+  </data>
+  <data name="LabelControl11.Size" type="System.Drawing.Size, System.Drawing">
+    <value>11, 13</value>
+  </data>
+  <data name="LabelControl11.TabIndex" type="System.Int32, mscorlib">
+    <value>58</value>
+  </data>
+  <data name="LabelControl11.Text" xml:space="preserve">
+    <value>ถึง</value>
+  </data>
+  <data name="&gt;&gt;LabelControl11.Name" xml:space="preserve">
+    <value>LabelControl11</value>
+  </data>
+  <data name="&gt;&gt;LabelControl11.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;LabelControl11.Parent" xml:space="preserve">
+    <value>GroupControl1</value>
+  </data>
+  <data name="&gt;&gt;LabelControl11.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="LabelControl7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>36, 31</value>
+  </data>
+  <data name="LabelControl7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>44, 13</value>
+  </data>
+  <data name="LabelControl7.TabIndex" type="System.Int32, mscorlib">
+    <value>58</value>
+  </data>
+  <data name="LabelControl7.Text" xml:space="preserve">
+    <value>เวลาเข้า :</value>
+  </data>
+  <data name="&gt;&gt;LabelControl7.Name" xml:space="preserve">
+    <value>LabelControl7</value>
+  </data>
+  <data name="&gt;&gt;LabelControl7.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;LabelControl7.Parent" xml:space="preserve">
+    <value>GroupControl1</value>
+  </data>
+  <data name="&gt;&gt;LabelControl7.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="chkMidDayStop_NextDay.Location" type="System.Drawing.Point, System.Drawing">
+    <value>147, 73</value>
+  </data>
+  <data name="chkMidDayStop_NextDay.Properties.Caption" xml:space="preserve">
+    <value>ข้ามวัน</value>
+  </data>
+  <data name="chkMidDayStop_NextDay.Size" type="System.Drawing.Size, System.Drawing">
+    <value>59, 19</value>
+  </data>
+  <data name="chkMidDayStop_NextDay.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;chkMidDayStop_NextDay.Name" xml:space="preserve">
+    <value>chkMidDayStop_NextDay</value>
+  </data>
+  <data name="&gt;&gt;chkMidDayStop_NextDay.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.CheckEdit, DevExpress.XtraEditors.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;chkMidDayStop_NextDay.Parent" xml:space="preserve">
+    <value>GroupControl1</value>
+  </data>
+  <data name="&gt;&gt;chkMidDayStop_NextDay.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="chkMidDayStart_NextDay.Location" type="System.Drawing.Point, System.Drawing">
+    <value>147, 50</value>
+  </data>
+  <data name="chkMidDayStart_NextDay.Properties.Caption" xml:space="preserve">
+    <value>ข้ามวัน</value>
+  </data>
+  <data name="chkMidDayStart_NextDay.Size" type="System.Drawing.Size, System.Drawing">
+    <value>59, 19</value>
+  </data>
+  <data name="chkMidDayStart_NextDay.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;chkMidDayStart_NextDay.Name" xml:space="preserve">
+    <value>chkMidDayStart_NextDay</value>
+  </data>
+  <data name="&gt;&gt;chkMidDayStart_NextDay.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.CheckEdit, DevExpress.XtraEditors.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;chkMidDayStart_NextDay.Parent" xml:space="preserve">
+    <value>GroupControl1</value>
+  </data>
+  <data name="&gt;&gt;chkMidDayStart_NextDay.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="chkTimeEndDay_NextDay.Location" type="System.Drawing.Point, System.Drawing">
+    <value>137, 57</value>
+  </data>
+  <data name="chkTimeEndDay_NextDay.Properties.Caption" xml:space="preserve">
+    <value>ข้ามวัน</value>
+  </data>
+  <data name="chkTimeEndDay_NextDay.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 19</value>
+  </data>
+  <data name="chkTimeEndDay_NextDay.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;chkTimeEndDay_NextDay.Name" xml:space="preserve">
+    <value>chkTimeEndDay_NextDay</value>
+  </data>
+  <data name="&gt;&gt;chkTimeEndDay_NextDay.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.CheckEdit, DevExpress.XtraEditors.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;chkTimeEndDay_NextDay.Parent" xml:space="preserve">
+    <value>GroupControl2</value>
+  </data>
+  <data name="&gt;&gt;chkTimeEndDay_NextDay.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="txtStartDay.Location" type="System.Drawing.Point, System.Drawing">
+    <value>73, 30</value>
+  </data>
+  <data name="txtStartDay.Properties.Mask.EditMask" xml:space="preserve">
+    <value>00:00</value>
+  </data>
+  <data name="txtStartDay.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v17.1">
+    <value>Simple</value>
+  </data>
+  <data name="txtStartDay.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 20</value>
+  </data>
+  <data name="txtStartDay.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;txtStartDay.Name" xml:space="preserve">
+    <value>txtStartDay</value>
+  </data>
+  <data name="&gt;&gt;txtStartDay.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;txtStartDay.Parent" xml:space="preserve">
+    <value>GroupControl2</value>
+  </data>
+  <data name="&gt;&gt;txtStartDay.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="chkStartDay_PD.Location" type="System.Drawing.Point, System.Drawing">
+    <value>137, 29</value>
+  </data>
+  <data name="chkStartDay_PD.Properties.Caption" xml:space="preserve">
+    <value>ก่อนวัน</value>
+  </data>
+  <data name="chkStartDay_PD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>59, 19</value>
+  </data>
+  <data name="chkStartDay_PD.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;chkStartDay_PD.Name" xml:space="preserve">
+    <value>chkStartDay_PD</value>
+  </data>
+  <data name="&gt;&gt;chkStartDay_PD.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.CheckEdit, DevExpress.XtraEditors.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;chkStartDay_PD.Parent" xml:space="preserve">
+    <value>GroupControl2</value>
+  </data>
+  <data name="&gt;&gt;chkStartDay_PD.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="txtEndDay.Location" type="System.Drawing.Point, System.Drawing">
+    <value>73, 57</value>
+  </data>
+  <data name="txtEndDay.Properties.Mask.EditMask" xml:space="preserve">
+    <value>00:00</value>
+  </data>
+  <data name="txtEndDay.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v17.1">
+    <value>Simple</value>
+  </data>
+  <data name="txtEndDay.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 20</value>
+  </data>
+  <data name="txtEndDay.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;txtEndDay.Name" xml:space="preserve">
+    <value>txtEndDay</value>
+  </data>
+  <data name="&gt;&gt;txtEndDay.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;txtEndDay.Parent" xml:space="preserve">
+    <value>GroupControl2</value>
+  </data>
+  <data name="&gt;&gt;txtEndDay.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="Label14.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label14.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label14.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 33</value>
+  </data>
+  <data name="Label14.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 13</value>
+  </data>
+  <data name="Label14.TabIndex" type="System.Int32, mscorlib">
+    <value>57</value>
+  </data>
+  <data name="Label14.Text" xml:space="preserve">
+    <value>เริ่มต้นวัน :</value>
+  </data>
+  <data name="&gt;&gt;Label14.Name" xml:space="preserve">
+    <value>Label14</value>
+  </data>
+  <data name="&gt;&gt;Label14.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label14.Parent" xml:space="preserve">
+    <value>GroupControl2</value>
+  </data>
+  <data name="&gt;&gt;Label14.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="Label15.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label15.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label15.Location" type="System.Drawing.Point, System.Drawing">
+    <value>17, 60</value>
+  </data>
+  <data name="Label15.Size" type="System.Drawing.Size, System.Drawing">
+    <value>54, 13</value>
+  </data>
+  <data name="Label15.TabIndex" type="System.Int32, mscorlib">
+    <value>57</value>
+  </data>
+  <data name="Label15.Text" xml:space="preserve">
+    <value>สิ้นสุดวัน :</value>
+  </data>
+  <data name="&gt;&gt;Label15.Name" xml:space="preserve">
+    <value>Label15</value>
+  </data>
+  <data name="&gt;&gt;Label15.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label15.Parent" xml:space="preserve">
+    <value>GroupControl2</value>
+  </data>
+  <data name="&gt;&gt;Label15.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="GroupControl2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>389, 23</value>
+  </data>
+  <data name="GroupControl2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>247, 92</value>
+  </data>
+  <data name="GroupControl2.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="GroupControl2.Text" xml:space="preserve">
+    <value>รอบวันที่ใช้ในการคำนวณ</value>
+  </data>
+  <data name="&gt;&gt;GroupControl2.Name" xml:space="preserve">
+    <value>GroupControl2</value>
+  </data>
+  <data name="&gt;&gt;GroupControl2.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.GroupControl, DevExpress.Utils.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;GroupControl2.Parent" xml:space="preserve">
+    <value>GroupControl1</value>
+  </data>
+  <data name="&gt;&gt;GroupControl2.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="txtTimeSP.Location" type="System.Drawing.Point, System.Drawing">
+    <value>84, 96</value>
+  </data>
+  <data name="txtTimeSP.Properties.Mask.EditMask" xml:space="preserve">
+    <value>00:00</value>
+  </data>
+  <data name="txtTimeSP.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v17.1">
+    <value>Simple</value>
+  </data>
+  <data name="txtTimeSP.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 20</value>
+  </data>
+  <data name="txtTimeSP.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;txtTimeSP.Name" xml:space="preserve">
+    <value>txtTimeSP</value>
+  </data>
+  <data name="&gt;&gt;txtTimeSP.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;txtTimeSP.Parent" xml:space="preserve">
+    <value>GroupControl1</value>
+  </data>
+  <data name="&gt;&gt;txtTimeSP.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="txtMidDayStop.Location" type="System.Drawing.Point, System.Drawing">
+    <value>84, 73</value>
+  </data>
+  <data name="txtMidDayStop.Properties.Mask.EditMask" xml:space="preserve">
+    <value>00:00</value>
+  </data>
+  <data name="txtMidDayStop.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v17.1">
+    <value>Simple</value>
+  </data>
+  <data name="txtMidDayStop.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 20</value>
+  </data>
+  <data name="txtMidDayStop.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;txtMidDayStop.Name" xml:space="preserve">
+    <value>txtMidDayStop</value>
+  </data>
+  <data name="&gt;&gt;txtMidDayStop.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;txtMidDayStop.Parent" xml:space="preserve">
+    <value>GroupControl1</value>
+  </data>
+  <data name="&gt;&gt;txtMidDayStop.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="txtMidDayStart.Location" type="System.Drawing.Point, System.Drawing">
+    <value>84, 51</value>
+  </data>
+  <data name="txtMidDayStart.Properties.Mask.EditMask" xml:space="preserve">
+    <value>00:00</value>
+  </data>
+  <data name="txtMidDayStart.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v17.1">
+    <value>Simple</value>
+  </data>
+  <data name="txtMidDayStart.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 20</value>
+  </data>
+  <data name="txtMidDayStart.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;txtMidDayStart.Name" xml:space="preserve">
+    <value>txtMidDayStart</value>
+  </data>
+  <data name="&gt;&gt;txtMidDayStart.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;txtMidDayStart.Parent" xml:space="preserve">
+    <value>GroupControl1</value>
+  </data>
+  <data name="&gt;&gt;txtMidDayStart.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="txtTimeST_To.Location" type="System.Drawing.Point, System.Drawing">
+    <value>168, 28</value>
+  </data>
+  <data name="txtTimeST_To.Properties.Mask.EditMask" xml:space="preserve">
+    <value>00:00</value>
+  </data>
+  <data name="txtTimeST_To.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v17.1">
+    <value>Simple</value>
+  </data>
+  <data name="txtTimeST_To.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 20</value>
+  </data>
+  <data name="txtTimeST_To.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;txtTimeST_To.Name" xml:space="preserve">
+    <value>txtTimeST_To</value>
+  </data>
+  <data name="&gt;&gt;txtTimeST_To.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;txtTimeST_To.Parent" xml:space="preserve">
+    <value>GroupControl1</value>
+  </data>
+  <data name="&gt;&gt;txtTimeST_To.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="GroupControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 125</value>
+  </data>
+  <data name="GroupControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1258, 128</value>
+  </data>
+  <data name="GroupControl1.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="GroupControl1.Text" xml:space="preserve">
+    <value>เวลา เข้า - ออก</value>
+  </data>
+  <data name="&gt;&gt;GroupControl1.Name" xml:space="preserve">
+    <value>GroupControl1</value>
+  </data>
+  <data name="&gt;&gt;GroupControl1.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.GroupControl, DevExpress.Utils.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;GroupControl1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;GroupControl1.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="GroupControl3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="CheckEdit1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>690, 47</value>
+  </data>
+  <data name="CheckEdit1.Properties.Caption" xml:space="preserve">
+    <value>คือ วันหยุด</value>
+  </data>
+  <data name="CheckEdit1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>99, 19</value>
+  </data>
+  <data name="CheckEdit1.TabIndex" type="System.Int32, mscorlib">
+    <value>59</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit1.Name" xml:space="preserve">
+    <value>CheckEdit1</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit1.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.CheckEdit, DevExpress.XtraEditors.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit1.Parent" xml:space="preserve">
+    <value>GroupControl3</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="chkSunday.Location" type="System.Drawing.Point, System.Drawing">
+    <value>431, 37</value>
+  </data>
+  <data name="chkSunday.Properties.Caption" xml:space="preserve">
+    <value>อาทิตย์</value>
+  </data>
+  <data name="chkSunday.Size" type="System.Drawing.Size, System.Drawing">
+    <value>59, 19</value>
+  </data>
+  <data name="chkSunday.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;chkSunday.Name" xml:space="preserve">
+    <value>chkSunday</value>
+  </data>
+  <data name="&gt;&gt;chkSunday.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.CheckEdit, DevExpress.XtraEditors.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;chkSunday.Parent" xml:space="preserve">
+    <value>GroupControl3</value>
+  </data>
+  <data name="&gt;&gt;chkSunday.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="CheckEdit2.EditValue" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="CheckEdit2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>690, 28</value>
+  </data>
+  <data name="CheckEdit2.Properties.Caption" xml:space="preserve">
+    <value>คือ วันทำงาน</value>
+  </data>
+  <data name="CheckEdit2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>124, 19</value>
+  </data>
+  <data name="CheckEdit2.TabIndex" type="System.Int32, mscorlib">
+    <value>60</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit2.Name" xml:space="preserve">
+    <value>CheckEdit2</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit2.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.CheckEdit, DevExpress.XtraEditors.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit2.Parent" xml:space="preserve">
+    <value>GroupControl3</value>
+  </data>
+  <data name="&gt;&gt;CheckEdit2.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="chkSaturday.Location" type="System.Drawing.Point, System.Drawing">
+    <value>364, 37</value>
+  </data>
+  <data name="chkSaturday.Properties.Caption" xml:space="preserve">
+    <value>เสาร์</value>
+  </data>
+  <data name="chkSaturday.Size" type="System.Drawing.Size, System.Drawing">
+    <value>59, 19</value>
+  </data>
+  <data name="chkSaturday.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;chkSaturday.Name" xml:space="preserve">
+    <value>chkSaturday</value>
+  </data>
+  <data name="&gt;&gt;chkSaturday.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.CheckEdit, DevExpress.XtraEditors.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;chkSaturday.Parent" xml:space="preserve">
+    <value>GroupControl3</value>
+  </data>
+  <data name="&gt;&gt;chkSaturday.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="chkFriday.Location" type="System.Drawing.Point, System.Drawing">
+    <value>300, 37</value>
+  </data>
+  <data name="chkFriday.Properties.Caption" xml:space="preserve">
+    <value>ศุกร์</value>
+  </data>
+  <data name="chkFriday.Size" type="System.Drawing.Size, System.Drawing">
+    <value>59, 19</value>
+  </data>
+  <data name="chkFriday.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;chkFriday.Name" xml:space="preserve">
+    <value>chkFriday</value>
+  </data>
+  <data name="&gt;&gt;chkFriday.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.CheckEdit, DevExpress.XtraEditors.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;chkFriday.Parent" xml:space="preserve">
+    <value>GroupControl3</value>
+  </data>
+  <data name="&gt;&gt;chkFriday.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="chkThursday.Location" type="System.Drawing.Point, System.Drawing">
+    <value>224, 37</value>
+  </data>
+  <data name="chkThursday.Properties.Caption" xml:space="preserve">
+    <value>พฤหัสบดี</value>
+  </data>
+  <data name="chkThursday.Size" type="System.Drawing.Size, System.Drawing">
+    <value>63, 19</value>
+  </data>
+  <data name="chkThursday.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;chkThursday.Name" xml:space="preserve">
+    <value>chkThursday</value>
+  </data>
+  <data name="&gt;&gt;chkThursday.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.CheckEdit, DevExpress.XtraEditors.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;chkThursday.Parent" xml:space="preserve">
+    <value>GroupControl3</value>
+  </data>
+  <data name="&gt;&gt;chkThursday.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="Label5.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>630, 30</value>
+  </data>
+  <data name="Label5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 13</value>
+  </data>
+  <data name="Label5.TabIndex" type="System.Int32, mscorlib">
+    <value>63</value>
+  </data>
+  <data name="Label5.Text" xml:space="preserve">
+    <value>หมายเหตุ : </value>
+  </data>
+  <data name="&gt;&gt;Label5.Name" xml:space="preserve">
+    <value>Label5</value>
+  </data>
+  <data name="&gt;&gt;Label5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label5.Parent" xml:space="preserve">
+    <value>GroupControl3</value>
+  </data>
+  <data name="&gt;&gt;Label5.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="chkWednesday.Location" type="System.Drawing.Point, System.Drawing">
+    <value>164, 37</value>
+  </data>
+  <data name="chkWednesday.Properties.Caption" xml:space="preserve">
+    <value>พุธ</value>
+  </data>
+  <data name="chkWednesday.Size" type="System.Drawing.Size, System.Drawing">
+    <value>59, 19</value>
+  </data>
+  <data name="chkWednesday.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;chkWednesday.Name" xml:space="preserve">
+    <value>chkWednesday</value>
+  </data>
+  <data name="&gt;&gt;chkWednesday.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.CheckEdit, DevExpress.XtraEditors.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;chkWednesday.Parent" xml:space="preserve">
+    <value>GroupControl3</value>
+  </data>
+  <data name="&gt;&gt;chkWednesday.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="chkTuesday.Location" type="System.Drawing.Point, System.Drawing">
+    <value>94, 37</value>
+  </data>
+  <data name="chkTuesday.Properties.Caption" xml:space="preserve">
+    <value>อังคาร</value>
+  </data>
+  <data name="chkTuesday.Size" type="System.Drawing.Size, System.Drawing">
+    <value>59, 19</value>
+  </data>
+  <data name="chkTuesday.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;chkTuesday.Name" xml:space="preserve">
+    <value>chkTuesday</value>
+  </data>
+  <data name="&gt;&gt;chkTuesday.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.CheckEdit, DevExpress.XtraEditors.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;chkTuesday.Parent" xml:space="preserve">
+    <value>GroupControl3</value>
+  </data>
+  <data name="&gt;&gt;chkTuesday.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="chkMonDay.Location" type="System.Drawing.Point, System.Drawing">
+    <value>29, 37</value>
+  </data>
+  <data name="chkMonDay.Properties.Caption" xml:space="preserve">
+    <value>จันทร์</value>
+  </data>
+  <data name="chkMonDay.Size" type="System.Drawing.Size, System.Drawing">
+    <value>59, 19</value>
+  </data>
+  <data name="chkMonDay.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;chkMonDay.Name" xml:space="preserve">
+    <value>chkMonDay</value>
+  </data>
+  <data name="&gt;&gt;chkMonDay.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.CheckEdit, DevExpress.XtraEditors.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;chkMonDay.Parent" xml:space="preserve">
+    <value>GroupControl3</value>
+  </data>
+  <data name="&gt;&gt;chkMonDay.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="GroupControl3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 259</value>
+  </data>
+  <data name="GroupControl3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1258, 78</value>
+  </data>
+  <data name="GroupControl3.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="GroupControl3.Text" xml:space="preserve">
+    <value>กำหนดวันมาทำงานภายใน 1 อาทิตย์</value>
+  </data>
+  <data name="&gt;&gt;GroupControl3.Name" xml:space="preserve">
+    <value>GroupControl3</value>
+  </data>
+  <data name="&gt;&gt;GroupControl3.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.GroupControl, DevExpress.Utils.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;GroupControl3.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;GroupControl3.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleBaseSize" type="System.Drawing.Size, System.Drawing">
+    <value>5, 14</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1264, 656</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>กำหนดเวลาทำงาน</value>
+  </data>
+  <data name="&gt;&gt;colDeptId.Name" xml:space="preserve">
+    <value>colDeptId</value>
+  </data>
+  <data name="&gt;&gt;colDeptId.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;colProgram.Name" xml:space="preserve">
+    <value>colProgram</value>
+  </data>
+  <data name="&gt;&gt;colProgram.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;colTimeST.Name" xml:space="preserve">
+    <value>colTimeST</value>
+  </data>
+  <data name="&gt;&gt;colTimeST.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;colRestST.Name" xml:space="preserve">
+    <value>colRestST</value>
+  </data>
+  <data name="&gt;&gt;colRestST.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;colRestST_NextD.Name" xml:space="preserve">
+    <value>colRestST_NextD</value>
+  </data>
+  <data name="&gt;&gt;colRestST_NextD.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;colRestSP.Name" xml:space="preserve">
+    <value>colRestSP</value>
+  </data>
+  <data name="&gt;&gt;colRestSP.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;colRestSP_NextD.Name" xml:space="preserve">
+    <value>colRestSP_NextD</value>
+  </data>
+  <data name="&gt;&gt;colRestSP_NextD.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;colTimeSP.Name" xml:space="preserve">
+    <value>colTimeSP</value>
+  </data>
+  <data name="&gt;&gt;colTimeSP.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;colTimeSP_Next.Name" xml:space="preserve">
+    <value>colTimeSP_Next</value>
+  </data>
+  <data name="&gt;&gt;colTimeSP_Next.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;colStartDay.Name" xml:space="preserve">
+    <value>colStartDay</value>
+  </data>
+  <data name="&gt;&gt;colStartDay.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;colStartDay_PD.Name" xml:space="preserve">
+    <value>colStartDay_PD</value>
+  </data>
+  <data name="&gt;&gt;colStartDay_PD.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;colTimeEndDay.Name" xml:space="preserve">
+    <value>colTimeEndDay</value>
+  </data>
+  <data name="&gt;&gt;colTimeEndDay.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;colTimeEndDay_NextD.Name" xml:space="preserve">
+    <value>colTimeEndDay_NextD</value>
+  </data>
+  <data name="&gt;&gt;colTimeEndDay_NextD.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;colMon.Name" xml:space="preserve">
+    <value>colMon</value>
+  </data>
+  <data name="&gt;&gt;colMon.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;colTue.Name" xml:space="preserve">
+    <value>colTue</value>
+  </data>
+  <data name="&gt;&gt;colTue.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;colWed.Name" xml:space="preserve">
+    <value>colWed</value>
+  </data>
+  <data name="&gt;&gt;colWed.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;colThu.Name" xml:space="preserve">
+    <value>colThu</value>
+  </data>
+  <data name="&gt;&gt;colThu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;colFri.Name" xml:space="preserve">
+    <value>colFri</value>
+  </data>
+  <data name="&gt;&gt;colFri.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;colSat.Name" xml:space="preserve">
+    <value>colSat</value>
+  </data>
+  <data name="&gt;&gt;colSat.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;colSun.Name" xml:space="preserve">
+    <value>colSun</value>
+  </data>
+  <data name="&gt;&gt;colSun.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GvSubjectGroup.Name" xml:space="preserve">
+    <value>GvSubjectGroup</value>
+  </data>
+  <data name="&gt;&gt;GvSubjectGroup.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.Grid.GridView, DevExpress.XtraGrid.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;colrow.Name" xml:space="preserve">
+    <value>colrow</value>
+  </data>
+  <data name="&gt;&gt;colrow.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;GridColumn3.Name" xml:space="preserve">
+    <value>GridColumn3</value>
+  </data>
+  <data name="&gt;&gt;GridColumn3.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;colcode_lar.Name" xml:space="preserve">
+    <value>colcode_lar</value>
+  </data>
+  <data name="&gt;&gt;colcode_lar.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;GridColumn16.Name" xml:space="preserve">
+    <value>GridColumn16</value>
+  </data>
+  <data name="&gt;&gt;GridColumn16.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;GridColumn17.Name" xml:space="preserve">
+    <value>GridColumn17</value>
+  </data>
+  <data name="&gt;&gt;GridColumn17.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;GridColumn18.Name" xml:space="preserve">
+    <value>GridColumn18</value>
+  </data>
+  <data name="&gt;&gt;GridColumn18.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;colDescription_lar.Name" xml:space="preserve">
+    <value>colDescription_lar</value>
+  </data>
+  <data name="&gt;&gt;colDescription_lar.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;GridColumn19.Name" xml:space="preserve">
+    <value>GridColumn19</value>
+  </data>
+  <data name="&gt;&gt;GridColumn19.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;colReduc_lar.Name" xml:space="preserve">
+    <value>colReduc_lar</value>
+  </data>
+  <data name="&gt;&gt;colReduc_lar.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;colNotdeduc.Name" xml:space="preserve">
+    <value>colNotdeduc</value>
+  </data>
+  <data name="&gt;&gt;colNotdeduc.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;colremark_lar.Name" xml:space="preserve">
+    <value>colremark_lar</value>
+  </data>
+  <data name="&gt;&gt;colremark_lar.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;GridColumn1.Name" xml:space="preserve">
+    <value>GridColumn1</value>
+  </data>
+  <data name="&gt;&gt;GridColumn1.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;GridColumn2.Name" xml:space="preserve">
+    <value>GridColumn2</value>
+  </data>
+  <data name="&gt;&gt;GridColumn2.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;GridColumn4.Name" xml:space="preserve">
+    <value>GridColumn4</value>
+  </data>
+  <data name="&gt;&gt;GridColumn4.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;GridColumn5.Name" xml:space="preserve">
+    <value>GridColumn5</value>
+  </data>
+  <data name="&gt;&gt;GridColumn5.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;GridColumn6.Name" xml:space="preserve">
+    <value>GridColumn6</value>
+  </data>
+  <data name="&gt;&gt;GridColumn6.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;GridColumn7.Name" xml:space="preserve">
+    <value>GridColumn7</value>
+  </data>
+  <data name="&gt;&gt;GridColumn7.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;GridColumn8.Name" xml:space="preserve">
+    <value>GridColumn8</value>
+  </data>
+  <data name="&gt;&gt;GridColumn8.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;GridColumn9.Name" xml:space="preserve">
+    <value>GridColumn9</value>
+  </data>
+  <data name="&gt;&gt;GridColumn9.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;GridColumn10.Name" xml:space="preserve">
+    <value>GridColumn10</value>
+  </data>
+  <data name="&gt;&gt;GridColumn10.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;GridColumn11.Name" xml:space="preserve">
+    <value>GridColumn11</value>
+  </data>
+  <data name="&gt;&gt;GridColumn11.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;GridColumn12.Name" xml:space="preserve">
+    <value>GridColumn12</value>
+  </data>
+  <data name="&gt;&gt;GridColumn12.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;GridColumn13.Name" xml:space="preserve">
+    <value>GridColumn13</value>
+  </data>
+  <data name="&gt;&gt;GridColumn13.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;GridColumn14.Name" xml:space="preserve">
+    <value>GridColumn14</value>
+  </data>
+  <data name="&gt;&gt;GridColumn14.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;GridColumn15.Name" xml:space="preserve">
+    <value>GridColumn15</value>
+  </data>
+  <data name="&gt;&gt;GridColumn15.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;BtnDel.Name" xml:space="preserve">
+    <value>BtnDel</value>
+  </data>
+  <data name="&gt;&gt;BtnDel.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit, DevExpress.XtraEditors.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;cboTransport_detail.Name" xml:space="preserve">
+    <value>cboTransport_detail</value>
+  </data>
+  <data name="&gt;&gt;cboTransport_detail.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit, DevExpress.XtraEditors.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;cboUnitName.Name" xml:space="preserve">
+    <value>cboUnitName</value>
+  </data>
+  <data name="&gt;&gt;cboUnitName.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit, DevExpress.XtraEditors.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>frmTimeKa</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.XtraForm, DevExpress.Utils.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+</root>

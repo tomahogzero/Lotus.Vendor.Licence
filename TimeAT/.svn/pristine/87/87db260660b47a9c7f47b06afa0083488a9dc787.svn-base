@@ -1,0 +1,793 @@
+<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+Partial Class frmTimework
+    Inherits System.Windows.Forms.Form
+
+    'Form overrides dispose to clean up the component list.
+    <System.Diagnostics.DebuggerNonUserCode()> _
+    Protected Overrides Sub Dispose(ByVal disposing As Boolean)
+        If disposing AndAlso components IsNot Nothing Then
+            components.Dispose()
+        End If
+        MyBase.Dispose(disposing)
+    End Sub
+
+    'Required by the Windows Form Designer
+    Private components As System.ComponentModel.IContainer
+
+    'NOTE: The following procedure is required by the Windows Form Designer
+    'It can be modified using the Windows Form Designer.  
+    'Do not modify it using the code editor.
+    <System.Diagnostics.DebuggerStepThrough()> _
+    Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container
+        Me.txtDateSt = New System.Windows.Forms.MaskedTextBox
+        Me.Label1 = New System.Windows.Forms.Label
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox
+        Me.cboMonth = New System.Windows.Forms.ComboBox
+        Me.Label2 = New System.Windows.Forms.Label
+        Me.txtDateSp = New System.Windows.Forms.MaskedTextBox
+        Me.Label9 = New System.Windows.Forms.Label
+        Me.txtYear = New System.Windows.Forms.TextBox
+        Me.btnProcess = New System.Windows.Forms.Button
+        Me.ProgressBar1 = New System.Windows.Forms.ProgressBar
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox
+        Me.Label4 = New System.Windows.Forms.Label
+        Me.Label3 = New System.Windows.Forms.Label
+        Me.txtTimeNear = New System.Windows.Forms.TextBox
+        Me.txtTimeMore = New System.Windows.Forms.TextBox
+        Me.btnChkTimeNear = New System.Windows.Forms.Button
+        Me.btnChkErrTimeOver = New System.Windows.Forms.Button
+        Me.btnChkErrTimeOdd = New System.Windows.Forms.Button
+        Me.GroupBox3 = New System.Windows.Forms.GroupBox
+        Me.rdDept = New System.Windows.Forms.RadioButton
+        Me.rdName = New System.Windows.Forms.RadioButton
+        Me.rdCode = New System.Windows.Forms.RadioButton
+        Me.rdDate = New System.Windows.Forms.RadioButton
+        Me.GroupBox4 = New System.Windows.Forms.GroupBox
+        Me.lblDeptId = New System.Windows.Forms.Label
+        Me.cboDepartment = New System.Windows.Forms.ComboBox
+        Me.cboSite = New System.Windows.Forms.ComboBox
+        Me.Label8 = New System.Windows.Forms.Label
+        Me.Label7 = New System.Windows.Forms.Label
+        Me.btnSearch = New System.Windows.Forms.Button
+        Me.Label6 = New System.Windows.Forms.Label
+        Me.Label5 = New System.Windows.Forms.Label
+        Me.txtLname = New System.Windows.Forms.TextBox
+        Me.txtFname = New System.Windows.Forms.TextBox
+        Me.txtCode = New System.Windows.Forms.TextBox
+        Me.btnRefresh = New System.Windows.Forms.Button
+        Me.lstTimework = New System.Windows.Forms.ListView
+        Me.colNo = New System.Windows.Forms.ColumnHeader
+        Me.colDate = New System.Windows.Forms.ColumnHeader
+        Me.colCode = New System.Windows.Forms.ColumnHeader
+        Me.colName = New System.Windows.Forms.ColumnHeader
+        Me.colDepartment = New System.Windows.Forms.ColumnHeader
+        Me.colT1 = New System.Windows.Forms.ColumnHeader
+        Me.colT2 = New System.Windows.Forms.ColumnHeader
+        Me.colT3 = New System.Windows.Forms.ColumnHeader
+        Me.colT4 = New System.Windows.Forms.ColumnHeader
+        Me.colT5 = New System.Windows.Forms.ColumnHeader
+        Me.colT6 = New System.Windows.Forms.ColumnHeader
+        Me.colT7 = New System.Windows.Forms.ColumnHeader
+        Me.colT8 = New System.Windows.Forms.ColumnHeader
+        Me.colT9 = New System.Windows.Forms.ColumnHeader
+        Me.colT10 = New System.Windows.Forms.ColumnHeader
+        Me.colT11 = New System.Windows.Forms.ColumnHeader
+        Me.colTime12 = New System.Windows.Forms.ColumnHeader
+        Me.btnExit = New System.Windows.Forms.Button
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.GroupBox5 = New System.Windows.Forms.GroupBox
+        Me.btnAutoFixInOut = New System.Windows.Forms.Button
+        Me.btnAutoGenTimeByPerson = New System.Windows.Forms.Button
+        Me.chkINOUT = New System.Windows.Forms.CheckBox
+        Me.GroupBox6 = New System.Windows.Forms.GroupBox
+        Me.lblRecord = New System.Windows.Forms.Label
+        Me.lblDateProcess = New System.Windows.Forms.Label
+        Me.Label16 = New System.Windows.Forms.Label
+        Me.ProgressBar2 = New System.Windows.Forms.ProgressBar
+        Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog
+        Me.btnExporttoExcel = New System.Windows.Forms.Button
+        Me.cboCompany = New System.Windows.Forms.ComboBox
+        Me.Label10 = New System.Windows.Forms.Label
+        Me.GroupBox1.SuspendLayout()
+        Me.GroupBox2.SuspendLayout()
+        Me.GroupBox3.SuspendLayout()
+        Me.GroupBox4.SuspendLayout()
+        Me.GroupBox5.SuspendLayout()
+        Me.GroupBox6.SuspendLayout()
+        Me.SuspendLayout()
+        '
+        'txtDateSt
+        '
+        Me.txtDateSt.Location = New System.Drawing.Point(67, 46)
+        Me.txtDateSt.Mask = "00/00/0000"
+        Me.txtDateSt.Name = "txtDateSt"
+        Me.txtDateSt.Size = New System.Drawing.Size(100, 20)
+        Me.txtDateSt.TabIndex = 2
+        Me.txtDateSt.ValidatingType = GetType(Date)
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(6, 49)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(55, 13)
+        Me.Label1.TabIndex = 1
+        Me.Label1.Text = "ตั้งแต่วันที่"
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.cboMonth)
+        Me.GroupBox1.Controls.Add(Me.Label2)
+        Me.GroupBox1.Controls.Add(Me.txtDateSp)
+        Me.GroupBox1.Controls.Add(Me.Label9)
+        Me.GroupBox1.Controls.Add(Me.Label1)
+        Me.GroupBox1.Controls.Add(Me.txtDateSt)
+        Me.GroupBox1.Controls.Add(Me.txtYear)
+        Me.GroupBox1.Location = New System.Drawing.Point(3, 2)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(347, 75)
+        Me.GroupBox1.TabIndex = 0
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "1. กำหนดช่วงเวลา"
+        '
+        'cboMonth
+        '
+        Me.cboMonth.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboMonth.FormattingEnabled = True
+        Me.cboMonth.Location = New System.Drawing.Point(71, 19)
+        Me.cboMonth.Name = "cboMonth"
+        Me.cboMonth.Size = New System.Drawing.Size(168, 21)
+        Me.cboMonth.TabIndex = 0
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(173, 49)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(43, 13)
+        Me.Label2.TabIndex = 1
+        Me.Label2.Text = "ถีงวันที่ "
+        '
+        'txtDateSp
+        '
+        Me.txtDateSp.Location = New System.Drawing.Point(222, 46)
+        Me.txtDateSp.Mask = "00/00/0000"
+        Me.txtDateSp.Name = "txtDateSp"
+        Me.txtDateSp.Size = New System.Drawing.Size(100, 20)
+        Me.txtDateSp.TabIndex = 3
+        Me.txtDateSp.ValidatingType = GetType(Date)
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(3, 22)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(62, 13)
+        Me.Label9.TabIndex = 1
+        Me.Label9.Text = "ประจำเดือน"
+        '
+        'txtYear
+        '
+        Me.txtYear.Location = New System.Drawing.Point(245, 19)
+        Me.txtYear.Name = "txtYear"
+        Me.txtYear.Size = New System.Drawing.Size(77, 20)
+        Me.txtYear.TabIndex = 1
+        '
+        'btnProcess
+        '
+        Me.btnProcess.BackColor = System.Drawing.Color.AntiqueWhite
+        Me.btnProcess.Location = New System.Drawing.Point(356, 25)
+        Me.btnProcess.Name = "btnProcess"
+        Me.btnProcess.Size = New System.Drawing.Size(175, 62)
+        Me.btnProcess.TabIndex = 1
+        Me.btnProcess.Text = "2. Process / จัดเรียงข้อมูล"
+        Me.btnProcess.UseVisualStyleBackColor = False
+        '
+        'ProgressBar1
+        '
+        Me.ProgressBar1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.ProgressBar1.Location = New System.Drawing.Point(165, 15)
+        Me.ProgressBar1.Name = "ProgressBar1"
+        Me.ProgressBar1.Size = New System.Drawing.Size(176, 11)
+        Me.ProgressBar1.TabIndex = 4
+        '
+        'GroupBox2
+        '
+        Me.GroupBox2.Controls.Add(Me.Label4)
+        Me.GroupBox2.Controls.Add(Me.Label3)
+        Me.GroupBox2.Controls.Add(Me.txtTimeNear)
+        Me.GroupBox2.Controls.Add(Me.txtTimeMore)
+        Me.GroupBox2.Controls.Add(Me.btnChkTimeNear)
+        Me.GroupBox2.Controls.Add(Me.btnChkErrTimeOver)
+        Me.GroupBox2.Controls.Add(Me.btnChkErrTimeOdd)
+        Me.GroupBox2.Location = New System.Drawing.Point(547, 2)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(344, 92)
+        Me.GroupBox2.TabIndex = 2
+        Me.GroupBox2.TabStop = False
+        Me.GroupBox2.Text = "3. เช็ค Error"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(290, 67)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(27, 13)
+        Me.Label4.TabIndex = 1
+        Me.Label4.Text = "นาที"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(290, 43)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(25, 13)
+        Me.Label3.TabIndex = 1
+        Me.Label3.Text = "ครั้ง"
+        '
+        'txtTimeNear
+        '
+        Me.txtTimeNear.Location = New System.Drawing.Point(236, 64)
+        Me.txtTimeNear.Name = "txtTimeNear"
+        Me.txtTimeNear.Size = New System.Drawing.Size(48, 20)
+        Me.txtTimeNear.TabIndex = 4
+        Me.txtTimeNear.Text = "15"
+        '
+        'txtTimeMore
+        '
+        Me.txtTimeMore.Location = New System.Drawing.Point(236, 40)
+        Me.txtTimeMore.Name = "txtTimeMore"
+        Me.txtTimeMore.Size = New System.Drawing.Size(48, 20)
+        Me.txtTimeMore.TabIndex = 2
+        Me.txtTimeMore.Text = "4"
+        '
+        'btnChkTimeNear
+        '
+        Me.btnChkTimeNear.BackColor = System.Drawing.Color.AntiqueWhite
+        Me.btnChkTimeNear.Location = New System.Drawing.Point(6, 62)
+        Me.btnChkTimeNear.Name = "btnChkTimeNear"
+        Me.btnChkTimeNear.Size = New System.Drawing.Size(224, 23)
+        Me.btnChkTimeNear.TabIndex = 3
+        Me.btnChkTimeNear.Text = "[F4] เช็คคนที่รูดเวลาใกล้เคียงกัน <= "
+        Me.btnChkTimeNear.UseVisualStyleBackColor = False
+        '
+        'btnChkErrTimeOver
+        '
+        Me.btnChkErrTimeOver.BackColor = System.Drawing.Color.AntiqueWhite
+        Me.btnChkErrTimeOver.Location = New System.Drawing.Point(6, 38)
+        Me.btnChkErrTimeOver.Name = "btnChkErrTimeOver"
+        Me.btnChkErrTimeOver.Size = New System.Drawing.Size(224, 23)
+        Me.btnChkErrTimeOver.TabIndex = 1
+        Me.btnChkErrTimeOver.Text = "[F3] เช็คคนที่รูด >"
+        Me.btnChkErrTimeOver.UseVisualStyleBackColor = False
+        '
+        'btnChkErrTimeOdd
+        '
+        Me.btnChkErrTimeOdd.BackColor = System.Drawing.Color.AntiqueWhite
+        Me.btnChkErrTimeOdd.Location = New System.Drawing.Point(6, 15)
+        Me.btnChkErrTimeOdd.Name = "btnChkErrTimeOdd"
+        Me.btnChkErrTimeOdd.Size = New System.Drawing.Size(309, 23)
+        Me.btnChkErrTimeOdd.TabIndex = 0
+        Me.btnChkErrTimeOdd.Text = "[F2] เช็คคนที่รูดเป็นจำนวนคี่"
+        Me.btnChkErrTimeOdd.UseVisualStyleBackColor = False
+        '
+        'GroupBox3
+        '
+        Me.GroupBox3.Controls.Add(Me.rdDept)
+        Me.GroupBox3.Controls.Add(Me.rdName)
+        Me.GroupBox3.Controls.Add(Me.rdCode)
+        Me.GroupBox3.Controls.Add(Me.rdDate)
+        Me.GroupBox3.Location = New System.Drawing.Point(3, 138)
+        Me.GroupBox3.Name = "GroupBox3"
+        Me.GroupBox3.Size = New System.Drawing.Size(347, 49)
+        Me.GroupBox3.TabIndex = 4
+        Me.GroupBox3.TabStop = False
+        Me.GroupBox3.Text = "เรียงข้อมูล"
+        '
+        'rdDept
+        '
+        Me.rdDept.AutoSize = True
+        Me.rdDept.Location = New System.Drawing.Point(281, 19)
+        Me.rdDept.Name = "rdDept"
+        Me.rdDept.Size = New System.Drawing.Size(55, 17)
+        Me.rdDept.TabIndex = 3
+        Me.rdDept.Text = "แผนก"
+        Me.rdDept.UseVisualStyleBackColor = True
+        '
+        'rdName
+        '
+        Me.rdName.AutoSize = True
+        Me.rdName.Location = New System.Drawing.Point(176, 19)
+        Me.rdName.Name = "rdName"
+        Me.rdName.Size = New System.Drawing.Size(79, 17)
+        Me.rdName.TabIndex = 2
+        Me.rdName.Text = "ชื่อพนักงาน"
+        Me.rdName.UseVisualStyleBackColor = True
+        '
+        'rdCode
+        '
+        Me.rdCode.AutoSize = True
+        Me.rdCode.Location = New System.Drawing.Point(82, 19)
+        Me.rdCode.Name = "rdCode"
+        Me.rdCode.Size = New System.Drawing.Size(85, 17)
+        Me.rdCode.TabIndex = 1
+        Me.rdCode.Text = "รหัสพนักงาน"
+        Me.rdCode.UseVisualStyleBackColor = True
+        '
+        'rdDate
+        '
+        Me.rdDate.AutoSize = True
+        Me.rdDate.Checked = True
+        Me.rdDate.Location = New System.Drawing.Point(6, 19)
+        Me.rdDate.Name = "rdDate"
+        Me.rdDate.Size = New System.Drawing.Size(46, 17)
+        Me.rdDate.TabIndex = 0
+        Me.rdDate.TabStop = True
+        Me.rdDate.Text = "วันที่"
+        Me.rdDate.UseVisualStyleBackColor = True
+        '
+        'GroupBox4
+        '
+        Me.GroupBox4.Controls.Add(Me.lblDeptId)
+        Me.GroupBox4.Controls.Add(Me.cboDepartment)
+        Me.GroupBox4.Controls.Add(Me.cboCompany)
+        Me.GroupBox4.Controls.Add(Me.cboSite)
+        Me.GroupBox4.Controls.Add(Me.Label8)
+        Me.GroupBox4.Controls.Add(Me.Label7)
+        Me.GroupBox4.Controls.Add(Me.btnSearch)
+        Me.GroupBox4.Controls.Add(Me.Label6)
+        Me.GroupBox4.Controls.Add(Me.Label10)
+        Me.GroupBox4.Controls.Add(Me.Label5)
+        Me.GroupBox4.Controls.Add(Me.txtLname)
+        Me.GroupBox4.Controls.Add(Me.txtFname)
+        Me.GroupBox4.Controls.Add(Me.txtCode)
+        Me.GroupBox4.Location = New System.Drawing.Point(3, 190)
+        Me.GroupBox4.Name = "GroupBox4"
+        Me.GroupBox4.Size = New System.Drawing.Size(710, 124)
+        Me.GroupBox4.TabIndex = 5
+        Me.GroupBox4.TabStop = False
+        Me.GroupBox4.Text = "ค้นหา"
+        '
+        'lblDeptId
+        '
+        Me.lblDeptId.AutoSize = True
+        Me.lblDeptId.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblDeptId.Location = New System.Drawing.Point(328, 98)
+        Me.lblDeptId.Name = "lblDeptId"
+        Me.lblDeptId.Size = New System.Drawing.Size(12, 15)
+        Me.lblDeptId.TabIndex = 1
+        Me.lblDeptId.Text = " "
+        Me.lblDeptId.Visible = False
+        '
+        'cboDepartment
+        '
+        Me.cboDepartment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboDepartment.FormattingEnabled = True
+        Me.cboDepartment.Location = New System.Drawing.Point(82, 94)
+        Me.cboDepartment.Name = "cboDepartment"
+        Me.cboDepartment.Size = New System.Drawing.Size(240, 21)
+        Me.cboDepartment.TabIndex = 4
+        '
+        'cboSite
+        '
+        Me.cboSite.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboSite.FormattingEnabled = True
+        Me.cboSite.Location = New System.Drawing.Point(82, 40)
+        Me.cboSite.Name = "cboSite"
+        Me.cboSite.Size = New System.Drawing.Size(240, 21)
+        Me.cboSite.TabIndex = 0
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(10, 97)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(37, 13)
+        Me.Label8.TabIndex = 1
+        Me.Label8.Text = "แผนก"
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(201, 70)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(48, 13)
+        Me.Label7.TabIndex = 1
+        Me.Label7.Text = "ชื่อ - สกุล"
+        '
+        'btnSearch
+        '
+        Me.btnSearch.BackColor = System.Drawing.Color.MistyRose
+        Me.btnSearch.Location = New System.Drawing.Point(587, 16)
+        Me.btnSearch.Name = "btnSearch"
+        Me.btnSearch.Size = New System.Drawing.Size(114, 70)
+        Me.btnSearch.TabIndex = 5
+        Me.btnSearch.Text = "ค้นหา"
+        Me.btnSearch.UseVisualStyleBackColor = False
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(10, 67)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(26, 13)
+        Me.Label6.TabIndex = 1
+        Me.Label6.Text = "รหัส"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(9, 43)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(27, 13)
+        Me.Label5.TabIndex = 1
+        Me.Label5.Text = "ไซด์"
+        '
+        'txtLname
+        '
+        Me.txtLname.Location = New System.Drawing.Point(421, 67)
+        Me.txtLname.Name = "txtLname"
+        Me.txtLname.Size = New System.Drawing.Size(160, 20)
+        Me.txtLname.TabIndex = 3
+        '
+        'txtFname
+        '
+        Me.txtFname.Location = New System.Drawing.Point(255, 67)
+        Me.txtFname.Name = "txtFname"
+        Me.txtFname.Size = New System.Drawing.Size(160, 20)
+        Me.txtFname.TabIndex = 2
+        '
+        'txtCode
+        '
+        Me.txtCode.Location = New System.Drawing.Point(82, 67)
+        Me.txtCode.Name = "txtCode"
+        Me.txtCode.Size = New System.Drawing.Size(113, 20)
+        Me.txtCode.TabIndex = 1
+        '
+        'btnRefresh
+        '
+        Me.btnRefresh.BackColor = System.Drawing.Color.PaleGoldenrod
+        Me.btnRefresh.Location = New System.Drawing.Point(356, 90)
+        Me.btnRefresh.Name = "btnRefresh"
+        Me.btnRefresh.Size = New System.Drawing.Size(175, 43)
+        Me.btnRefresh.TabIndex = 3
+        Me.btnRefresh.Text = "Refresh [F5]"
+        Me.btnRefresh.UseVisualStyleBackColor = False
+        '
+        'lstTimework
+        '
+        Me.lstTimework.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+                    Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lstTimework.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.colNo, Me.colDate, Me.colCode, Me.colName, Me.colDepartment, Me.colT1, Me.colT2, Me.colT3, Me.colT4, Me.colT5, Me.colT6, Me.colT7, Me.colT8, Me.colT9, Me.colT10, Me.colT11, Me.colTime12})
+        Me.lstTimework.FullRowSelect = True
+        Me.lstTimework.GridLines = True
+        Me.lstTimework.Location = New System.Drawing.Point(3, 320)
+        Me.lstTimework.Name = "lstTimework"
+        Me.lstTimework.Size = New System.Drawing.Size(1001, 225)
+        Me.lstTimework.TabIndex = 7
+        Me.lstTimework.UseCompatibleStateImageBehavior = False
+        Me.lstTimework.View = System.Windows.Forms.View.Details
+        '
+        'colNo
+        '
+        Me.colNo.Text = "No."
+        Me.colNo.Width = 42
+        '
+        'colDate
+        '
+        Me.colDate.Text = "วันที่"
+        Me.colDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.colDate.Width = 99
+        '
+        'colCode
+        '
+        Me.colCode.Text = "รหัสพนง."
+        Me.colCode.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.colCode.Width = 72
+        '
+        'colName
+        '
+        Me.colName.Text = "ชื่อ - สกุล"
+        Me.colName.Width = 216
+        '
+        'colDepartment
+        '
+        Me.colDepartment.Text = "รหัสแผนก"
+        Me.colDepartment.Width = 68
+        '
+        'colT1
+        '
+        Me.colT1.Text = "Time1"
+        Me.colT1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'colT2
+        '
+        Me.colT2.Text = "Time2"
+        Me.colT2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'colT3
+        '
+        Me.colT3.Text = "Time3"
+        Me.colT3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'colT4
+        '
+        Me.colT4.Text = "Time4"
+        Me.colT4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'colT5
+        '
+        Me.colT5.Text = "Time5"
+        Me.colT5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'colT6
+        '
+        Me.colT6.Text = "Time6"
+        Me.colT6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'colT7
+        '
+        Me.colT7.Text = "Time7"
+        Me.colT7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'colT8
+        '
+        Me.colT8.Text = "Time8"
+        Me.colT8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'colT9
+        '
+        Me.colT9.Text = "Time9"
+        Me.colT9.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'colT10
+        '
+        Me.colT10.Text = "Time10"
+        Me.colT10.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'colT11
+        '
+        Me.colT11.Text = "Time11"
+        Me.colT11.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'colTime12
+        '
+        Me.colTime12.Text = "Time12"
+        Me.colTime12.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'btnExit
+        '
+        Me.btnExit.BackColor = System.Drawing.Color.Moccasin
+        Me.btnExit.Location = New System.Drawing.Point(719, 192)
+        Me.btnExit.Name = "btnExit"
+        Me.btnExit.Size = New System.Drawing.Size(172, 89)
+        Me.btnExit.TabIndex = 6
+        Me.btnExit.Text = "ออก"
+        Me.btnExit.UseVisualStyleBackColor = False
+        '
+        'GroupBox5
+        '
+        Me.GroupBox5.Controls.Add(Me.btnAutoFixInOut)
+        Me.GroupBox5.Controls.Add(Me.btnAutoGenTimeByPerson)
+        Me.GroupBox5.Location = New System.Drawing.Point(547, 100)
+        Me.GroupBox5.Name = "GroupBox5"
+        Me.GroupBox5.Size = New System.Drawing.Size(344, 49)
+        Me.GroupBox5.TabIndex = 8
+        Me.GroupBox5.TabStop = False
+        Me.GroupBox5.Text = "Auto Fix Error"
+        '
+        'btnAutoFixInOut
+        '
+        Me.btnAutoFixInOut.Location = New System.Drawing.Point(163, 20)
+        Me.btnAutoFixInOut.Name = "btnAutoFixInOut"
+        Me.btnAutoFixInOut.Size = New System.Drawing.Size(175, 23)
+        Me.btnAutoFixInOut.TabIndex = 0
+        Me.btnAutoFixInOut.Text = "เลือกเวลาเข้า/ออก อัตโนมัติ"
+        Me.btnAutoFixInOut.UseVisualStyleBackColor = True
+        Me.btnAutoFixInOut.Visible = False
+        '
+        'btnAutoGenTimeByPerson
+        '
+        Me.btnAutoGenTimeByPerson.Location = New System.Drawing.Point(6, 19)
+        Me.btnAutoGenTimeByPerson.Name = "btnAutoGenTimeByPerson"
+        Me.btnAutoGenTimeByPerson.Size = New System.Drawing.Size(151, 23)
+        Me.btnAutoGenTimeByPerson.TabIndex = 0
+        Me.btnAutoGenTimeByPerson.Text = "ป้อนเวลาทำงานอัตโนมัติ"
+        Me.btnAutoGenTimeByPerson.UseVisualStyleBackColor = True
+        '
+        'chkINOUT
+        '
+        Me.chkINOUT.AutoSize = True
+        Me.chkINOUT.Location = New System.Drawing.Point(358, 7)
+        Me.chkINOUT.Name = "chkINOUT"
+        Me.chkINOUT.Size = New System.Drawing.Size(166, 17)
+        Me.chkINOUT.TabIndex = 9
+        Me.chkINOUT.Text = "เอาเฉพาะเวลาเข้า-ออกเท่านั้น"
+        Me.chkINOUT.UseVisualStyleBackColor = True
+        '
+        'GroupBox6
+        '
+        Me.GroupBox6.Controls.Add(Me.lblRecord)
+        Me.GroupBox6.Controls.Add(Me.lblDateProcess)
+        Me.GroupBox6.Controls.Add(Me.Label16)
+        Me.GroupBox6.Controls.Add(Me.ProgressBar2)
+        Me.GroupBox6.Controls.Add(Me.ProgressBar1)
+        Me.GroupBox6.Location = New System.Drawing.Point(3, 80)
+        Me.GroupBox6.Name = "GroupBox6"
+        Me.GroupBox6.Size = New System.Drawing.Size(347, 53)
+        Me.GroupBox6.TabIndex = 20
+        Me.GroupBox6.TabStop = False
+        Me.GroupBox6.Text = "Process"
+        '
+        'lblRecord
+        '
+        Me.lblRecord.ForeColor = System.Drawing.Color.Blue
+        Me.lblRecord.Location = New System.Drawing.Point(54, 34)
+        Me.lblRecord.Name = "lblRecord"
+        Me.lblRecord.Size = New System.Drawing.Size(110, 13)
+        Me.lblRecord.TabIndex = 15
+        Me.lblRecord.Text = "0/0"
+        '
+        'lblDateProcess
+        '
+        Me.lblDateProcess.AutoSize = True
+        Me.lblDateProcess.ForeColor = System.Drawing.Color.Blue
+        Me.lblDateProcess.Location = New System.Drawing.Point(99, 15)
+        Me.lblDateProcess.Name = "lblDateProcess"
+        Me.lblDateProcess.Size = New System.Drawing.Size(65, 13)
+        Me.lblDateProcess.TabIndex = 15
+        Me.lblDateProcess.Text = "__/__/____"
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Location = New System.Drawing.Point(6, 15)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(87, 13)
+        Me.Label16.TabIndex = 14
+        Me.Label16.Text = "ประมวลผลวันที่ : "
+        '
+        'ProgressBar2
+        '
+        Me.ProgressBar2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.ProgressBar2.Location = New System.Drawing.Point(165, 35)
+        Me.ProgressBar2.Name = "ProgressBar2"
+        Me.ProgressBar2.Size = New System.Drawing.Size(176, 10)
+        Me.ProgressBar2.TabIndex = 13
+        '
+        'btnExporttoExcel
+        '
+        Me.btnExporttoExcel.Location = New System.Drawing.Point(547, 154)
+        Me.btnExporttoExcel.Name = "btnExporttoExcel"
+        Me.btnExporttoExcel.Size = New System.Drawing.Size(344, 32)
+        Me.btnExporttoExcel.TabIndex = 21
+        Me.btnExporttoExcel.Text = "Export to Excel"
+        Me.btnExporttoExcel.UseVisualStyleBackColor = True
+        '
+        'cboCompany
+        '
+        Me.cboCompany.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboCompany.FormattingEnabled = True
+        Me.cboCompany.Location = New System.Drawing.Point(82, 13)
+        Me.cboCompany.Name = "cboCompany"
+        Me.cboCompany.Size = New System.Drawing.Size(240, 21)
+        Me.cboCompany.TabIndex = 0
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Location = New System.Drawing.Point(10, 19)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(35, 13)
+        Me.Label10.TabIndex = 1
+        Me.Label10.Text = "บริษัท"
+        '
+        'frmTimework
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.ClientSize = New System.Drawing.Size(1006, 546)
+        Me.Controls.Add(Me.btnExporttoExcel)
+        Me.Controls.Add(Me.GroupBox6)
+        Me.Controls.Add(Me.chkINOUT)
+        Me.Controls.Add(Me.GroupBox5)
+        Me.Controls.Add(Me.lstTimework)
+        Me.Controls.Add(Me.GroupBox4)
+        Me.Controls.Add(Me.GroupBox3)
+        Me.Controls.Add(Me.GroupBox2)
+        Me.Controls.Add(Me.btnExit)
+        Me.Controls.Add(Me.btnRefresh)
+        Me.Controls.Add(Me.btnProcess)
+        Me.Controls.Add(Me.GroupBox1)
+        Me.KeyPreview = True
+        Me.Name = "frmTimework"
+        Me.Text = "ประมวลผลเวลาทำงาน"
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
+        Me.GroupBox2.ResumeLayout(False)
+        Me.GroupBox2.PerformLayout()
+        Me.GroupBox3.ResumeLayout(False)
+        Me.GroupBox3.PerformLayout()
+        Me.GroupBox4.ResumeLayout(False)
+        Me.GroupBox4.PerformLayout()
+        Me.GroupBox5.ResumeLayout(False)
+        Me.GroupBox6.ResumeLayout(False)
+        Me.GroupBox6.PerformLayout()
+        Me.ResumeLayout(False)
+        Me.PerformLayout()
+
+    End Sub
+    Friend WithEvents txtDateSt As System.Windows.Forms.MaskedTextBox
+    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
+    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents txtDateSp As System.Windows.Forms.MaskedTextBox
+    Friend WithEvents btnProcess As System.Windows.Forms.Button
+    Friend WithEvents ProgressBar1 As System.Windows.Forms.ProgressBar
+    Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
+    Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents txtTimeNear As System.Windows.Forms.TextBox
+    Friend WithEvents txtTimeMore As System.Windows.Forms.TextBox
+    Friend WithEvents btnChkTimeNear As System.Windows.Forms.Button
+    Friend WithEvents btnChkErrTimeOver As System.Windows.Forms.Button
+    Friend WithEvents btnChkErrTimeOdd As System.Windows.Forms.Button
+    Friend WithEvents GroupBox3 As System.Windows.Forms.GroupBox
+    Friend WithEvents rdDate As System.Windows.Forms.RadioButton
+    Friend WithEvents rdDept As System.Windows.Forms.RadioButton
+    Friend WithEvents rdName As System.Windows.Forms.RadioButton
+    Friend WithEvents rdCode As System.Windows.Forms.RadioButton
+    Friend WithEvents GroupBox4 As System.Windows.Forms.GroupBox
+    Friend WithEvents cboDepartment As System.Windows.Forms.ComboBox
+    Friend WithEvents cboSite As System.Windows.Forms.ComboBox
+    Friend WithEvents Label8 As System.Windows.Forms.Label
+    Friend WithEvents Label7 As System.Windows.Forms.Label
+    Friend WithEvents Label6 As System.Windows.Forms.Label
+    Friend WithEvents Label5 As System.Windows.Forms.Label
+    Friend WithEvents txtLname As System.Windows.Forms.TextBox
+    Friend WithEvents txtFname As System.Windows.Forms.TextBox
+    Friend WithEvents txtCode As System.Windows.Forms.TextBox
+    Friend WithEvents btnSearch As System.Windows.Forms.Button
+    Friend WithEvents btnRefresh As System.Windows.Forms.Button
+    Friend WithEvents lstTimework As System.Windows.Forms.ListView
+    Friend WithEvents colNo As System.Windows.Forms.ColumnHeader
+    Friend WithEvents colDate As System.Windows.Forms.ColumnHeader
+    Friend WithEvents colCode As System.Windows.Forms.ColumnHeader
+    Friend WithEvents colName As System.Windows.Forms.ColumnHeader
+    Friend WithEvents colDepartment As System.Windows.Forms.ColumnHeader
+    Friend WithEvents colT1 As System.Windows.Forms.ColumnHeader
+    Friend WithEvents colT2 As System.Windows.Forms.ColumnHeader
+    Friend WithEvents colT3 As System.Windows.Forms.ColumnHeader
+    Friend WithEvents colT4 As System.Windows.Forms.ColumnHeader
+    Friend WithEvents colT5 As System.Windows.Forms.ColumnHeader
+    Friend WithEvents colT6 As System.Windows.Forms.ColumnHeader
+    Friend WithEvents colT7 As System.Windows.Forms.ColumnHeader
+    Friend WithEvents colT8 As System.Windows.Forms.ColumnHeader
+    Friend WithEvents colT9 As System.Windows.Forms.ColumnHeader
+    Friend WithEvents colT10 As System.Windows.Forms.ColumnHeader
+    Friend WithEvents colT11 As System.Windows.Forms.ColumnHeader
+    Friend WithEvents colTime12 As System.Windows.Forms.ColumnHeader
+    Friend WithEvents btnExit As System.Windows.Forms.Button
+    Friend WithEvents cboMonth As System.Windows.Forms.ComboBox
+    Friend WithEvents Label9 As System.Windows.Forms.Label
+    Friend WithEvents txtYear As System.Windows.Forms.TextBox
+    Friend WithEvents lblDeptId As System.Windows.Forms.Label
+    Friend WithEvents ToolTip1 As System.Windows.Forms.ToolTip
+    Friend WithEvents GroupBox5 As System.Windows.Forms.GroupBox
+    Friend WithEvents btnAutoGenTimeByPerson As System.Windows.Forms.Button
+    Friend WithEvents btnAutoFixInOut As System.Windows.Forms.Button
+    Friend WithEvents chkINOUT As System.Windows.Forms.CheckBox
+    Friend WithEvents GroupBox6 As System.Windows.Forms.GroupBox
+    Friend WithEvents lblDateProcess As System.Windows.Forms.Label
+    Friend WithEvents Label16 As System.Windows.Forms.Label
+    Friend WithEvents ProgressBar2 As System.Windows.Forms.ProgressBar
+    Friend WithEvents lblRecord As System.Windows.Forms.Label
+    Friend WithEvents SaveFileDialog1 As System.Windows.Forms.SaveFileDialog
+    Friend WithEvents btnExporttoExcel As System.Windows.Forms.Button
+    Friend WithEvents cboCompany As System.Windows.Forms.ComboBox
+    Friend WithEvents Label10 As System.Windows.Forms.Label
+End Class

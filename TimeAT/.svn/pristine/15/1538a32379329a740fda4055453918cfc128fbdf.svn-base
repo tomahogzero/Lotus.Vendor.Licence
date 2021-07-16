@@ -1,0 +1,412 @@
+﻿Imports System.Data
+Imports System.Data.SqlClient
+
+Public Class frmEmpOTDeducByDay
+
+    Private Sub frmEmpOTDeducByDay_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        txtDate.Value = Now
+        txtTDateST.Value = Now
+        txtTDateSP.Value = Now
+
+        Call SearchData.LoadCompany(cboCompany, True)
+        Call SearchData.LoadDivision(cboDivision, True, "")
+        Call SearchData.LoadDepartment(cboDepartment, True, "")
+        Call SearchData.LoadSection(cboSection, True, "")
+        Call SearchData.LoadPosition(cboPosition, True, "")
+        Call SearchData.LoadEmpGroup(cboEmpGroup, True, "")
+        Call SearchData.LoadBroker(cboBroker, True, "")
+    End Sub
+
+    Private Sub LoadEmp()
+        Dim Da As SqlDataAdapter
+        Dim Ds As New DataSet
+        Dim strSQL As String = ""
+        Dim arrData() As String
+        Dim List As ListViewItem
+
+        strSQL = "select Code,Fname,Lname, " & _
+                        " Department = Isnull(Department.Department,''), " & _
+                        " WorkStatus " & _
+                " From Emp Left Join Department " & _
+                        " On Emp.DeptId = Department.DeptId " & _
+                             " Left Join Company_sub cs" & _
+                        " on Emp.CompanyID = cs.CompanyID " & _
+                " Where 1 = 1 "
+
+        If rdWork.Checked = True Then
+            strSQL &= " and WorkStatus = 'W'"
+        End If
+
+        If rdTerminate.Checked = True Then
+            strSQL &= " and WorkStatus = 'T'"
+        End If
+
+        If rdTermiByDate.Checked = True Then
+            strSQL &= " and WorkStatus = 'T' and " & _
+                    " Convert(nVarchar(10),TermiDate,111) Between " & _
+                                    " '" & Format(txtTDateST.Value, "yyyy/MM/dd") & "' and " & _
+                                    " '" & Format(txtTDateSP.Value, "yyyy/MM/dd") & "' "
+        End If
+
+        If cboCompany.SelectedIndex > 0 Then
+            strSQL &= " and isnull(Emp.CompanyId,'') = '" & GetData.GetCompanyId(cboCompany.Text.Trim) & "'"
+        End If
+
+        If cboDivision.SelectedIndex > 0 Then
+            strSQL &= " and Isnull(Emp.DivId,'') = '" & GetData.GetDivisionId(cboDivision.Text.Trim) & "'"
+        End If
+
+        If cboDepartment.SelectedIndex > 0 Then
+            strSQL &= " and Isnull(Emp.DeptId,'') = '" & GetData.GetDepartmentId(cboDepartment.Text.Trim) & "'"
+        End If
+
+        If cboSection.SelectedIndex > 0 Then
+            strSQL &= " and Isnull(Emp.SecId,'') = '" & GetData.GetSectionID(cboSection.Text.Trim) & "'"
+        End If
+
+        If cboPosition.SelectedIndex > 0 Then
+            strSQL &= " and Isnull(Emp.Position,'') = '" & cboPosition.Text.Trim & "'"
+        End If
+
+        If cboEmpGroup.SelectedIndex > 0 Then
+            strSQL &= " and Isnull(Emp.GroupId,'') = '" & GetData.GetEmpGroupId(cboEmpGroup.Text.Trim) & "'"
+        End If
+
+        If cboBroker.SelectedIndex > 0 Then
+            strSQL &= " and Isnull(Emp.BrokerId,'') = '" & GetData.GetBrokerId(cboBroker.Text.Trim) & "'"
+        End If
+
+        If rdMonth.Checked = True Then
+            strSQL &= " and Emp.WageType = 'M'"
+        End If
+
+        If rdDay.Checked = True Then
+            strSQL &= " and Emp.WageType = 'D' and Contractor = 0"
+        End If
+
+        If rdContractor.Checked = True Then
+            strSQL &= " and Emp.WageType = 'D' and Contractor = 1"
+        End If
+
+        If txtEmpId.Text.Trim <> "" Then
+            strSQL &= " and Emp.Code Like '%" & Replace(txtEmpId.Text.Trim, " ", "") & "%'"
+        End If
+
+        If txtNameSearch.Text.Trim <> "" Then
+            strSQL &= " and (Fname + LName) Like '%" & Replace(txtNameSearch.Text.Trim, " ", "") & "%'"
+        End If
+
+        If rdByCode.Checked = True Then
+            strSQL &= " Order By Emp.Code"
+        End If
+
+        If rdByName.Checked = True Then
+            strSQL &= " Order By Fname,Lname"
+        End If
+
+        If rdByDeptCode.Checked = True Then
+            strSQL &= " Order By Department.Department,Emp.Code"
+        End If
+
+        If rdByDeptName.Checked = True Then
+            strSQL &= " Order By Department.Department,Fname,Lname"
+        End If
+
+        Da = New SqlDataAdapter(strSQL, Conn)
+        Da.Fill(Ds, "data")
+        With Ds.Tables("data")
+            'lstEmp.BeginUpdate()
+            lstEmp.Items.Clear()
+            Dim I As Integer = 0
+
+            ProgressBar1.Value = 0
+            ProgressBar1.Maximum = .Rows.Count
+            For Each dr As DataRow In .Rows
+                I += 1
+                ProgressBar1.Value = I
+
+                arrData = New String() {lstEmp.Items.Count + 1, _
+                                        dr("Code"), _
+                                        dr("Fname"), _
+                                        dr("LName"), _
+                                        dr("Department")}
+                List = New ListViewItem(arrData)
+                lstEmp.Items.Add(List)
+
+                If dr("WorkStatus") = "T" Then
+                    lstEmp.Items(lstEmp.Items.Count - 1).ForeColor = Color.Red
+                End If
+            Next
+            'lstEmp.EndUpdate()
+        End With
+    End Sub
+
+    Private Sub LoadEmpOT_Deduc()
+        Dim Da As SqlDataAdapter
+        Dim Ds As New DataSet
+        Dim strSQL As String = ""
+        Dim arrData() As String
+        Dim List As ListViewItem
+
+        strSQL = "select Code,Fname,Lname, " & _
+                        " Department = Isnull(Department.Department,''), " & _
+                        " OT = Isnull(TDeduc.OT,0), " & _
+                        " WorkStatus " & _
+                " From TimeEmpOT_Deduc_ByDay TDeduc " & _
+                        " Left Join Emp " & _
+                            " On TDeduc.EmpId = Emp.Code " & _
+                        " Left Join Department " & _
+                            " On Emp.DeptId = Department.DeptId " & _
+                        " Left Join Company_sub cs" & _
+                            " On Emp.CompanyID = cs.CompanyID " & _
+                " Where Convert(nVarchar(10),Date,111) = '" & Format(txtDate.Value, "yyyy/MM/dd") & "'"
+
+        If cboCompany.SelectedIndex > 0 Then
+            strSQL &= " and isnull(Emp.CompanyId,'') = '" & GetData.GetCompanyId(cboCompany.Text.Trim) & "'"
+        End If
+
+        If cboDivision.SelectedIndex > 0 Then
+            strSQL &= " and Isnull(Emp.DivId,'') = '" & GetData.GetDivisionId(cboDivision.Text.Trim) & "'"
+        End If
+
+        If cboDepartment.SelectedIndex > 0 Then
+            strSQL &= " and Isnull(Emp.DeptId,'') = '" & GetData.GetDepartmentId(cboDepartment.Text.Trim) & "'"
+        End If
+
+        If cboSection.SelectedIndex > 0 Then
+            strSQL &= " and Isnull(Emp.SecId,'') = '" & GetData.GetSectionID(cboSection.Text.Trim) & "'"
+        End If
+
+        If cboPosition.SelectedIndex > 0 Then
+            strSQL &= " and Isnull(Emp.Position,'') = '" & cboPosition.Text.Trim & "'"
+        End If
+
+        If cboEmpGroup.SelectedIndex > 0 Then
+            strSQL &= " and Isnull(Emp.GroupId,'') = '" & GetData.GetEmpGroupId(cboEmpGroup.Text.Trim) & "'"
+        End If
+
+        If cboBroker.SelectedIndex > 0 Then
+            strSQL &= " and Isnull(Emp.BrokerId,'') = '" & GetData.GetBrokerId(cboBroker.Text.Trim) & "'"
+        End If
+
+        If rdMonth.Checked = True Then
+            strSQL &= " and Emp.WageType = 'M'"
+        End If
+
+        If rdDay.Checked = True Then
+            strSQL &= " and Emp.WageType = 'D' and Contractor = 0"
+        End If
+
+        If rdContractor.Checked = True Then
+            strSQL &= " and Emp.WageType = 'D' and Contractor = 1"
+        End If
+
+        If txtEmpId.Text.Trim <> "" Then
+            strSQL &= " and Emp.Code Like '%" & Replace(txtEmpId.Text.Trim, " ", "") & "%'"
+        End If
+
+        If txtNameSearch.Text.Trim <> "" Then
+            strSQL &= " and (Fname + LName) Like '%" & Replace(txtNameSearch.Text.Trim, " ", "") & "%'"
+        End If
+
+        If rdByCode.Checked = True Then
+            strSQL &= " Order By Emp.Code"
+        End If
+
+        If rdByName.Checked = True Then
+            strSQL &= " Order By Fname,Lname"
+        End If
+
+        If rdByDeptCode.Checked = True Then
+            strSQL &= " Order By Department.Department,Emp.Code"
+        End If
+
+        If rdByDeptName.Checked = True Then
+            strSQL &= " Order By Department.Department,Fname,Lname"
+        End If
+
+        Da = New SqlDataAdapter(strSQL, Conn)
+        Da.Fill(Ds, "data")
+        With Ds.Tables("data")
+            'lstEmp.BeginUpdate()
+
+            lstEmpOT.Items.Clear()
+            Dim I As Integer = 0
+
+            ProgressBar1.Value = 0
+            ProgressBar1.Maximum = .Rows.Count
+            For Each dr As DataRow In .Rows
+                I += 1
+                ProgressBar1.Value = I
+
+                arrData = New String() {lstEmpOT.Items.Count + 1, _
+                                        dr("Code"), _
+                                        dr("Fname"), _
+                                        dr("LName"), _
+                                        dr("Department"), _
+                                        Format(dr("OT"), "0.0")}
+                List = New ListViewItem(arrData)
+                lstEmpOT.Items.Add(List)
+
+                If dr("WorkStatus") = "T" Then
+                    lstEmpOT.Items(lstEmpOT.Items.Count - 1).ForeColor = Color.Red
+                End If
+            Next
+            'lstEmp.EndUpdate()
+        End With
+    End Sub
+
+    Private Sub cboCompany_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cboCompany.SelectedIndexChanged
+        Dim CompanyId As String = GetData.GetCompanyId(cboCompany.Text.Trim)
+
+        Call SearchData.LoadDivision(cboDivision, True, CompanyId.Trim)
+        Call SearchData.LoadDepartment(cboDepartment, True, CompanyId.Trim)
+        Call SearchData.LoadSection(cboSection, True, CompanyId.Trim)
+        Call SearchData.LoadPosition(cboPosition, True, CompanyId.Trim)
+        Call SearchData.LoadEmpGroup(cboEmpGroup, True, CompanyId.Trim)
+        Call SearchData.LoadBroker(cboBroker, True, CompanyId.Trim)
+    End Sub
+
+    Private Sub btnRefresh_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnRefresh.Click
+        Call LoadEmp()
+        Call LoadEmpOT_Deduc()
+    End Sub
+
+    Private Sub btnExit_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnExit.Click
+        Me.Close()
+    End Sub
+
+    Private Sub btnEmpSelectAll_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnEmpSelectAll.Click
+        With lstEmp
+            For i As Integer = 0 To .Items.Count - 1
+                .Items(i).Checked = True
+            Next
+        End With
+    End Sub
+
+    Private Sub btnEmpNoneSelectAll_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnEmpNoneSelectAll.Click
+        With lstEmp
+            For i As Integer = 0 To .Items.Count - 1
+                .Items(i).Checked = False
+            Next
+        End With
+    End Sub
+
+    Private Sub txtDate_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtDate.Click
+        Call LoadEmpOT_Deduc()
+    End Sub
+
+    Private Sub btnOTSelectAll_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnOTSelectAll.Click
+        With lstEmpOT
+            For i As Integer = 0 To .Items.Count - 1
+                .Items(i).Checked = True
+            Next
+        End With
+    End Sub
+
+    Private Sub btnOTNoneSelectAll_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnOTNoneSelectAll.Click
+        With lstEmpOT
+            For i As Integer = 0 To .Items.Count - 1
+                .Items(i).Checked = False
+            Next
+        End With
+    End Sub
+
+    Private Sub btnSave_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSave.Click
+        If IsNumeric(txtOT.Text) = False Then
+            MsgBox("กรุณาป้อนตัวเลขให้ถูกต้องด้วย", MsgBoxStyle.Information, Me.Text)
+            txtOT.Text = ""
+            txtOT.Focus()
+            Exit Sub
+        End If
+
+        btnSave.Enabled = False
+
+        Dim dCmd As New SqlCommand
+        Dim strSQL As String
+
+        Try
+            With lstEmp
+                ProgressBar1.Maximum = .CheckedItems.Count
+
+                For i As Integer = 0 To .CheckedItems.Count - 1
+                    strSQL = "Delete From TimeEmpOT_Deduc_ByDay " & _
+                            " Where EmpId = '" & .CheckedItems(i).SubItems(1).Text.Trim & "' and " & _
+                                    " Convert(nVarchar(10),Date,111) = '" & Format(txtDate.Value, "yyyy/MM/dd") & "' "
+                    dCmd.Connection = Conn
+                    dCmd.CommandText = strSQL
+                    dCmd.ExecuteNonQuery()
+
+                    strSQL = "Insert Into TimeEmpOT_Deduc_ByDay(EmpId,Date,OT) " & _
+                                " Values(" & _
+                                    " '" & .CheckedItems(i).SubItems(1).Text.Trim & "'," & _
+                                    " '" & Format(txtDate.Value, "yyyy/MM/dd") & "'," & _
+                                    " " & txtOT.Text & ")"
+                    dCmd.Connection = Conn
+                    dCmd.CommandText = strSQL
+                    dCmd.ExecuteNonQuery()
+
+                    ProgressBar1.Value = i + 1
+                Next
+            End With
+        Catch ex As Exception
+            btnSave.Enabled = True
+            MsgBox(ex.Message, MsgBoxStyle.Information, Me.Text)
+            Exit Sub
+        End Try
+     
+
+        btnSave.Enabled = True
+
+        Call LoadEmpOT_Deduc()
+
+        MsgBox("บันทึกข้อมูลเรียบร้อยแล้ว", MsgBoxStyle.Information, Me.Text)
+
+    End Sub
+
+    Private Sub txtDate_ValueChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtDate.ValueChanged
+        Call LoadEmpOT_Deduc()
+    End Sub
+
+    Private Sub btnDeleteOT_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnDeleteOT.Click
+        If MsgBox("คุณต้องการลบข้อมูล OT หรือไม่", MsgBoxStyle.Information Or MsgBoxStyle.YesNo, Me.Text) = MsgBoxResult.No Then Exit Sub
+
+        btnDeleteOT.Enabled = False
+
+        Dim dCmd As New SqlCommand
+        Dim strSQL As String
+
+        Try
+            With lstEmpOT
+                ProgressBar1.Maximum = .CheckedItems.Count
+
+                For i As Integer = 0 To .CheckedItems.Count - 1
+                    strSQL = "Delete From TimeEmpOT_Deduc_ByDay " & _
+                            " Where EmpId = '" & .CheckedItems(i).SubItems(1).Text.Trim & "' and " & _
+                                    " Convert(nVarchar(10),Date,111) = '" & Format(txtDate.Value, "yyyy/MM/dd") & "' "
+                    dCmd.Connection = Conn
+                    dCmd.CommandText = strSQL
+                    dCmd.ExecuteNonQuery()
+
+                    ProgressBar1.Value = i + 1
+                Next
+            End With
+        Catch ex As Exception
+            btnDeleteOT.Enabled = True
+            MsgBox(ex.Message, MsgBoxStyle.Information, Me.Text)
+            Exit Sub
+        End Try
+
+
+        btnDeleteOT.Enabled = True
+
+        Call LoadEmpOT_Deduc()
+
+        MsgBox("ลบข้อมูลเรียบร้อยแล้ว", MsgBoxStyle.Information, Me.Text)
+
+    End Sub
+
+    Private Sub btnRefreshOT_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnRefreshOT.Click
+        Call LoadEmpOT_Deduc()
+    End Sub
+End Class

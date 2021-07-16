@@ -1,0 +1,1297 @@
+Imports System.Data
+Imports System.Data.SqlClient
+
+'Imports CrystalDecisions.CrystalReports.Engine
+'Imports CrystalDecisions.Shared
+
+Public Class frmViewReport
+
+    Private Sub frmViewReport_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
+        If ReportPrint = Report.PrintOTSheet Then
+            Dim Cry As New rptTimeSheet
+            Cry.SetDatabaseLogon(cUsername, cPassword)
+            Me.Text = "Time Sheet"
+            CrystalReportViewer1.ReportSource = Cry
+            'CrystalReportViewer1.RefreshReport()
+            Exit Sub
+        End If
+
+        '  Report all employee's work  -------------------------------------------------------------------------------------------------------
+        If ReportPrint = Report.PrintTimeWork Then
+            Dim Cry As New rptEmpTimeWork
+            Dim rptformular As String = ""
+            Cry.SetDatabaseLogon(cUsername, cPassword)
+            Me.Text = "Report all employee's work"
+            Cry.DataDefinition.FormulaFields("DateFrom").Text = "'From Date " & fRptAllEmpWork.txtDateStart.Text.Trim & " to " & fRptAllEmpWork.txtDateStop.Text.Trim & "'"
+
+            Rptformular = 1 = "1"
+
+            If fRptAllEmpWork.txtCode1.Text <> "" Then  ' ค้นหาตามรหัส
+                rptformular &= " And {Emp.Code}='" & fRptAllEmpWork.txtCode1.Text.Trim & "'"
+            ElseIf fRptAllEmpWork.txtNameSearch.Text <> "" Then  ' ค้นหาตามชื่อ
+                rptformular &= " And {Emp.fname} like '*" & fRptAllEmpWork.txtNameSearch.Text.Trim & "*'"
+            Else
+
+                If fRptAllEmpWork.cboCompany.SelectedIndex > 0 Then ' ถ้าไม่เลือกบริษัททั้งหมด
+                    Dim Company_Id As String
+                    Company_Id = GetData.GetCompanyId(fRptAllEmpWork.cboCompany.Text) ' หา รหัส Id ของ Company_Sub
+                    rptformular &= " And {Emp.CompanyID} = '" & Company_Id.Trim & "'"
+                End If
+
+                If fRptAllEmpWork.cboDivision.SelectedIndex > 0 Then ' ถ้าเลือกฝ่ายทั้งหมด
+                    Dim Division_Id As String = ""
+                    Division_Id = GetData.GetDivisionId(fRptAllEmpWork.cboDivision.Text) ' หา รหัส ฝ่าย
+                    rptformular &= " And  {Emp.DivId} = '" & Division_Id.Trim & "'"
+                End If
+
+                If fRptAllEmpWork.cboDepartment.SelectedIndex > 0 Then ' ถ้าเลือกแผนก ทั้งหมด
+                    Dim Department_Id As String = ""
+                    Department_Id = GetData.GetDepartmentId(fRptAllEmpWork.cboDepartment.Text) ' หาแผนก
+                    rptformular &= " And   {Emp.DeptId}='" & Department_Id.Trim & "'"
+                End If
+
+                If fRptAllEmpWork.cboPosition.SelectedIndex > 0 Then ' ถ้าเลือกตำแหน่งทั้งหมด
+                    rptformular &= " And  {Emp.Position}='" & fRptAllEmpWork.cboPosition.Text.Trim & "'"
+                End If
+
+                If fRptAllEmpWork.cboEmpGroup.SelectedIndex > 0 Then ' ถ้าเลือกกลุ่มทั้งหมด
+                    Dim EmpGroup_Id As String = ""
+                    EmpGroup_Id = GetData.GetEmpGroupId(fRptAllEmpWork.cboEmpGroup.Text.Trim)  ' หากลุ่ม
+                    rptformular &= " And  {Emp.GroupId}='" & EmpGroup_Id.Trim & "'"
+                End If
+
+
+                If fRptAllEmpWork.rdMonth.Checked = True Then ' เลือกรายเดือน
+                    rptformular &= " And {Emp.WageType}='M'"
+                End If
+
+                If fRptAllEmpWork.rdDay.Checked = True Then ' เลือกทั้งรายวัน
+                    rptformular &= " And {Emp.WageType}='D'"
+                End If
+
+                If fRptAllEmpWork.rdContractor.Checked = True Then ' เลือกรายเหมา
+                    rptformular &= " And {Emp.WageType}='D' And {Emp.Contractor}=True"
+                End If
+
+            End If
+
+
+
+            Cry.DataDefinition.RecordSelectionFormula = rptformular
+            CrystalReportViewer1.ReportSource = Cry
+            'CrystalReportViewer1.RefreshReport()
+            Exit Sub
+        End If
+
+
+        ' รายงานเวลาการทำงานของพนักงาน(แบบละเอียด) ------------------------------------------------------------------------------------------------------
+        If ReportPrint = Report.PrintTimeWork_Detail Then
+            Dim Cry As New rptEmpTimeWork_Detail
+            Dim rptformular As String = ""
+            Cry.SetDatabaseLogon(cUsername, cPassword)
+
+            'Cry.DataDefinition.FormulaFields("DateFrom").Text = "'From Date " & fRptAllEmpWork.txtDateStart.Text.Trim & " to " & fRptAllEmpWork.txtDateStop.Text.Trim & "'"
+
+            Rptformular = 1 = "1"
+
+            If fRptAllEmpWork_Detail.txtCode1.Text <> "" Then  ' ค้นหาตามรหัส
+                rptformular &= " And {Emp.Code}='" & fRptAllEmpWork_Detail.txtCode1.Text.Trim & "'"
+            ElseIf fRptAllEmpWork_Detail.txtNameSearch.Text <> "" Then  ' ค้นหาตามชื่อ
+                rptformular &= " And {Emp.fname} like '*" & fRptAllEmpWork_Detail.txtNameSearch.Text.Trim & "*'"
+            Else
+
+                If fRptAllEmpWork_Detail.cboCompany.SelectedIndex > 0 Then ' ถ้าไม่เลือกบริษัททั้งหมด
+                    Dim Company_Id As String
+                    Company_Id = GetData.GetCompanyId(fRptAllEmpWork_Detail.cboCompany.Text) ' หา รหัส Id ของ Company_Sub
+                    rptformular &= " And {Emp.CompanyID} = '" & Company_Id.Trim & "'"
+                End If
+
+                If fRptAllEmpWork_Detail.cboDivision.SelectedIndex > 0 Then ' ถ้าเลือกฝ่ายทั้งหมด
+                    Dim Division_Id As String = ""
+                    Division_Id = GetData.GetDivisionId(fRptAllEmpWork_Detail.cboDivision.Text) ' หา รหัส ฝ่าย
+                    rptformular &= " And  {Emp.DivId} = '" & Division_Id.Trim & "'"
+                End If
+
+                If fRptAllEmpWork_Detail.cboDepartment.SelectedIndex > 0 Then ' ถ้าเลือกแผนก ทั้งหมด
+                    Dim Department_Id As String = ""
+                    Department_Id = GetData.GetDepartmentId(fRptAllEmpWork_Detail.cboDepartment.Text) ' หาแผนก
+                    rptformular &= " And   {Emp.DeptId}='" & Department_Id.Trim & "'"
+                End If
+
+                If fRptAllEmpWork_Detail.cboPosition.SelectedIndex > 0 Then ' ถ้าเลือกตำแหน่งทั้งหมด
+                    rptformular &= " And  {Emp.Position}='" & fRptAllEmpWork_Detail.cboPosition.Text.Trim & "'"
+                End If
+
+                If fRptAllEmpWork_Detail.cboEmpGroup.SelectedIndex > 0 Then ' ถ้าเลือกกลุ่มทั้งหมด
+                    Dim EmpGroup_Id As String = ""
+                    EmpGroup_Id = GetData.GetEmpGroupId(fRptAllEmpWork_Detail.cboEmpGroup.Text.Trim)  ' หากลุ่ม
+                    rptformular &= " And  {Emp.GroupId}='" & EmpGroup_Id.Trim & "'"
+                End If
+
+
+                If fRptAllEmpWork_Detail.rdMonth.Checked = True Then ' เลือกรายเดือน
+                    rptformular &= " And {Emp.WageType}='M'"
+                End If
+
+                If fRptAllEmpWork_Detail.rdDay.Checked = True Then ' เลือกทั้งรายวัน
+                    rptformular &= " And {Emp.WageType}='D'"
+                End If
+
+                If fRptAllEmpWork_Detail.rdContractor.Checked = True Then ' เลือกรายเหมา
+                    rptformular &= " And {Emp.WageType}='D' And {Emp.Contractor}=True"
+                End If
+
+            End If
+
+            Cry.DataDefinition.RecordSelectionFormula = rptformular
+            Me.Text = "รายงานการทำงานของพนักงาน (แบบละเอียด)"
+            CrystalReportViewer1.ReportSource = Cry
+            'CrystalReportViewer1.RefreshReport()
+            Exit Sub
+        End If
+
+
+
+        ' บัญชีลงเวลาปฎบัติงาน --------------------------------------------------------------------------------------
+        If ReportPrint = Report.PringCheckComing Then
+            Dim Cry As New rptCheckComing
+            Cry.SetDatabaseLogon(cUsername, cPassword)
+            Dim CheckDate As String
+            Dim Rptformular As String = ""
+            CheckDate = ConvertDate(fRptCheckComing.txtMonthYear.Text.Trim)
+            Cry.SetParameterValue("@Date", CheckDate.Trim)
+            'Dim Code1 As String
+            'Dim Code2 As String
+            'If fRptCheckComing.chkCheckAll.Checked = True Then
+            '    Code1 = "0"
+            '    Code2 = "99999"
+            'Else
+            '    Code1 = fRptCheckComing.txtCode1.Text.Trim
+            '    Code2 = fRptCheckComing.txtCode2.Text.Trim
+            'End If
+
+
+            'Cry.SetParameterValue("@Code1", Code1.Trim)
+            'Cry.SetParameterValue("@Code2", Code2.Trim)
+
+            Rptformular = 1 = "1"
+
+            If fRptCheckComing.txtCode1.Text <> "" Then  ' ค้นหาตามรหัส
+                Rptformular &= " And {spTimeCheckComing;1.Code}='" & fRptCheckComing.txtCode1.Text.Trim & "'"
+            ElseIf fRptCheckComing.txtNameSearch.Text <> "" Then  ' ค้นหาตามชื่อ
+                Rptformular &= " And {spTimeCheckComing;1.fname} like '*" & fRptCheckComing.txtNameSearch.Text.Trim & "*'"
+            Else
+
+                If fRptCheckComing.cboCompany.SelectedIndex > 0 Then ' ถ้าไม่เลือกบริษัททั้งหมด
+                    Dim Company_Id As String
+                    Company_Id = GetData.GetCompanyId(fRptCheckComing.cboCompany.Text) ' หา รหัส Id ของ Company_Sub
+                    Rptformular &= " And {spTimeCheckComing;1.CompanyID} = '" & Company_Id.Trim & "'"
+                End If
+
+                If fRptCheckComing.cboDivision.SelectedIndex > 0 Then ' ถ้าเลือกฝ่ายทั้งหมด
+                    Dim Division_Id As String = ""
+                    Division_Id = GetData.GetDivisionId(fRptCheckComing.cboDivision.Text) ' หา รหัส ฝ่าย
+                    Rptformular &= " And  {spTimeCheckComing;1.DivId} = '" & Division_Id.Trim & "'"
+                End If
+
+                If fRptCheckComing.cboDepartment.SelectedIndex > 0 Then ' ถ้าเลือกแผนก ทั้งหมด
+                    Dim Department_Id As String = ""
+                    Department_Id = GetData.GetDepartmentId(fRptCheckComing.cboDepartment.Text) ' หาแผนก
+                    Rptformular &= " And   {spTimeCheckComing;1.DeptId}='" & Department_Id.Trim & "'"
+                End If
+
+                If fRptCheckComing.cboPosition.SelectedIndex > 0 Then ' ถ้าเลือกตำแหน่งทั้งหมด
+                    Rptformular &= " And  {spTimeCheckComing;1.Position}='" & fRptCheckComing.cboPosition.Text.Trim & "'"
+                End If
+
+                If fRptCheckComing.cboEmpGroup.SelectedIndex > 0 Then ' ถ้าเลือกกลุ่มทั้งหมด
+                    Dim EmpGroup_Id As String = ""
+                    EmpGroup_Id = GetData.GetEmpGroupId(fRptCheckComing.cboEmpGroup.Text.Trim)  ' หากลุ่ม
+                    Rptformular &= " And  {spTimeCheckComing;1.GroupId}='" & EmpGroup_Id.Trim & "'"
+                End If
+
+
+                If fRptCheckComing.rdMonth.Checked = True Then ' เลือกรายเดือน
+                    Rptformular &= " And {spTimeCheckComing;1.WageType}='M'"
+                End If
+
+                If fRptCheckComing.rdDay.Checked = True Then ' เลือกทั้งรายวัน
+                    Rptformular &= " And {spTimeCheckComing;1.WageType}='D'"
+                End If
+
+                If fRptCheckComing.rdContractor.Checked = True Then ' เลือกรายเหมา
+                    Rptformular &= " And {spTimeCheckComing;1.WageType}='D' And {spTimeCheckComing;1.Contractor}=True"
+                End If
+
+            End If
+            Cry.DataDefinition.RecordSelectionFormula = Rptformular
+
+            Me.Text = "บัญชีลงเวลาทำงาน"
+            CrystalReportViewer1.ReportSource = Cry
+            'CrystalReportViewer1.RefreshReport()
+            Exit Sub
+
+        End If
+
+
+
+        ' รายงานแสดงเวลาทำงาน------------------------------------------------------------------------------
+        If ReportPrint = Report.PringCheckComingByPerson Then
+            Dim Cry As New rptEmpTimeINOUT
+            Cry.SetDatabaseLogon(cUsername, cPassword)
+            Dim Header As String
+            Dim Formular As String = ""
+            With fRptCheckComingByPerson
+                Header = "ประจำวันที่ : " & _
+                                .txtDateST.Text.Trim & " ถึง " & _
+                                .txtDateSP.Text.Trim
+
+                Formular = "({vTimework_INOUT.DateIn} >= #" & ConvertDate(.txtDateST.Text.Trim) & " 00:00" & "# and " & _
+                            "{vTimework_INOUT.DateIn} <= #" & ConvertDate(.txtDateSP.Text.Trim) & " 23:59" & "#)"
+
+
+                If fRptCheckComingByPerson.txtCode1.Text <> "" Then  ' ค้นหาตามรหัส
+                    Formular &= " And {Emp.Code}='" & fRptCheckComingByPerson.txtCode1.Text.Trim & "'"
+                ElseIf fRptCheckComingByPerson.txtNameSearch.Text <> "" Then  ' ค้นหาตามชื่อ
+                    Formular &= " And {Emp.fname} like '*" & fRptCheckComingByPerson.txtNameSearch.Text.Trim & "*'"
+                Else
+
+                    If fRptCheckComingByPerson.cboCompany.SelectedIndex > 0 Then ' ถ้าไม่เลือกบริษัททั้งหมด
+                        Dim Company_Id As String
+                        Company_Id = GetData.GetCompanyId(fRptCheckComingByPerson.cboCompany.Text) ' หา รหัส Id ของ Company_Sub
+                        Formular &= " And {Emp.CompanyID} = '" & Company_Id.Trim & "'"
+                    End If
+
+                    If fRptCheckComingByPerson.cboDivision.SelectedIndex > 0 Then ' ถ้าเลือกฝ่ายทั้งหมด
+                        Dim Division_Id As String = ""
+                        Division_Id = GetData.GetDivisionId(fRptCheckComingByPerson.cboDivision.Text) ' หา รหัส ฝ่าย
+                        Formular &= " And  {Emp.DivId} = '" & Division_Id.Trim & "'"
+                    End If
+
+                    If fRptCheckComingByPerson.cboDepartment.SelectedIndex > 0 Then ' ถ้าเลือกแผนก ทั้งหมด
+                        Dim Department_Id As String = ""
+                        Department_Id = GetData.GetDepartmentId(fRptCheckComingByPerson.cboDepartment.Text) ' หาแผนก
+                        Formular &= " And   {Emp.DeptId}='" & Department_Id.Trim & "'"
+                    End If
+
+                    If fRptCheckComingByPerson.cboPosition.SelectedIndex > 0 Then ' ถ้าเลือกตำแหน่งทั้งหมด
+                        Formular &= " And  {Emp.Position}='" & fRptCheckComingByPerson.cboPosition.Text.Trim & "'"
+                    End If
+
+                    If fRptCheckComingByPerson.cboEmpGroup.SelectedIndex > 0 Then ' ถ้าเลือกกลุ่มทั้งหมด
+                        Dim EmpGroup_Id As String = ""
+                        EmpGroup_Id = GetData.GetEmpGroupId(fRptCheckComingByPerson.cboEmpGroup.Text.Trim)  ' หากลุ่ม
+                        Formular &= " And  {Emp.GroupId}='" & EmpGroup_Id.Trim & "'"
+                    End If
+
+
+                    If fRptCheckComingByPerson.rdMonth.Checked = True Then ' เลือกรายเดือน
+                        Formular &= " And {Emp.WageType}='M'"
+                    End If
+
+                    If fRptCheckComingByPerson.rdDay.Checked = True Then ' เลือกทั้งรายวัน
+                        Formular &= " And {Emp.WageType}='D'"
+                    End If
+
+                    If fRptCheckComingByPerson.rdContractor.Checked = True Then ' เลือกรายเหมา
+                        Formular &= " And {Emp.WageType}='D' And {Emp.Contractor}=True"
+                    End If
+                End If
+
+
+            End With
+
+            Cry.DataDefinition.FormulaFields("Header").Text = "'" & Header.Trim & "'"
+            Cry.DataDefinition.RecordSelectionFormula = Formular
+
+
+            Me.Text = "บัญชีลงเวลาทำงาน"
+            CrystalReportViewer1.ReportSource = Cry
+            'CrystalReportViewer1.RefreshReport()
+            Exit Sub
+        End If
+
+
+
+        If ReportPrint = Report.PrintOvertime Then
+            Dim Cry As New rptOtByPersonSuamry
+            Cry.SetDatabaseLogon(cUsername, cPassword)
+            Dim cHead As String
+            cHead = "For Month " & fReportOvertime.txtMonthYear.Text.Trim
+            Cry.DataDefinition.FormulaFields("cMonthly").Text = "'" & cHead.Trim & "'"
+
+            Dim RptFormular As String = ""
+            Dim Start As Boolean = False
+            RptFormular = "{TimeOvertime.Month_Year} = '" & fReportOvertime.txtMonthYear.Text.Trim & "' and " & _
+                            " ({TimeOvertime.OT1} <> 0 Or {TimeOvertime.OT15} <> 0 Or {TimeOvertime.OT3} <> 0)"
+
+            If fReportOvertime.cboSite.Text.Trim <> "" Then
+                RptFormular &= " and {Emp.Workingplace} = '" & fReportOvertime.cboSite.Text.Trim & "'"
+            End If
+
+            If fReportOvertime.txtCode.Text.Trim <> "" Then
+                RptFormular &= " and {Emp.Code} = '" & fReportOvertime.txtCode.Text.Trim & "'"
+            End If
+
+            If fReportOvertime.cboDepartment.Text.Trim <> "" Then
+                RptFormular &= " and {Emp.DeptId} = '" & fReportOvertime.lblDeptId.Text.Trim & "'"
+            End If
+
+            If fReportOvertime.cboPosition.Text.Trim <> "" Then
+                RptFormular &= " and {Emp.Position} = '" & fReportOvertime.cboPosition.Text.Trim & "'"
+            End If
+            Cry.DataDefinition.RecordSelectionFormula = RptFormular
+            Me.Text = "Overtime Report"
+            CrystalReportViewer1.ReportSource = Cry
+            'CrystalReportViewer1.RefreshReport()
+            Exit Sub
+        End If
+
+        If ReportPrint = Report.PrintAllowance Then
+            Dim Cry As New rptAllowance
+            Cry.SetDatabaseLogon(cUsername, cPassword)
+            Dim cHead As String
+            cHead = "Monthly " & fReportAllowance.txtMonthYear.Text.Trim
+            Cry.DataDefinition.FormulaFields("cMonthly").Text = "'" & cHead.Trim & "'"
+
+            Dim RptFormular As String = ""
+            Dim Start As Boolean = False
+            RptFormular = "{TimeAllowance.Month_Year} = '" & fReportAllowance.txtMonthYear.Text.Trim & "'"
+
+            If fReportAllowance.cboSite.Text.Trim <> "" Then
+                RptFormular &= " and {Emp.Workingplace} = '" & fReportAllowance.cboSite.Text.Trim & "'"
+            End If
+
+            If fReportAllowance.txtCode.Text.Trim <> "" Then
+                RptFormular &= " and {Emp.Code} = '" & fReportAllowance.txtCode.Text.Trim & "'"
+            End If
+
+            If fReportAllowance.cboDepartment.Text.Trim <> "" Then
+                RptFormular &= " and {Emp.DeptId} = '" & fReportAllowance.lblDeptId.Text.Trim & "'"
+            End If
+
+            If fReportAllowance.cboPosition.Text.Trim <> "" Then
+                RptFormular &= " and {Emp.Position} = '" & fReportAllowance.cboPosition.Text.Trim & "'"
+            End If
+            Cry.DataDefinition.RecordSelectionFormula = RptFormular
+            Me.Text = "Allowance Report"
+            CrystalReportViewer1.ReportSource = Cry
+            'CrystalReportViewer1.RefreshReport()
+            Exit Sub
+        End If
+
+        If ReportPrint = Report.PrintSumary Then
+            Dim Cry As New rptSumary
+            Cry.SetDatabaseLogon(cUsername, cPassword)
+
+            Cry.SetParameterValue("@Month_Year", fReportSumary.txtMonthYear.Text.Trim)
+
+            Dim cHead As String
+            cHead = "Monthly " & fReportSumary.txtMonthYear.Text.Trim
+            Cry.DataDefinition.FormulaFields("cMonthly").Text = "'" & cHead.Trim & "'"
+
+            Dim RptFormular As String = ""
+            Dim Start As Boolean = False
+            RptFormular = "1 = 1"
+
+            If fReportSumary.cboSite.Text.Trim <> "" Then
+                RptFormular &= " and {spTimeSumary;1.Workingplace} = '" & fReportSumary.cboSite.Text.Trim & "'"
+            End If
+
+            If fReportSumary.txtCode.Text.Trim <> "" Then
+                RptFormular &= " and {spTimeSumary;1.Code} = '" & fReportSumary.txtCode.Text.Trim & "'"
+            End If
+
+            If fReportSumary.cboDepartment.Text.Trim <> "" Then
+                RptFormular &= " and {spTimeSumary;1.DeptId} = '" & fReportSumary.lblDeptId.Text.Trim & "'"
+            End If
+
+            If fReportSumary.cboPosition.Text.Trim <> "" Then
+                RptFormular &= " and {spTimeSumary;1.Position} = '" & fReportSumary.cboPosition.Text.Trim & "'"
+            End If
+            Cry.DataDefinition.RecordSelectionFormula = RptFormular
+            Me.Text = "Sumary Report"
+            CrystalReportViewer1.ReportSource = Cry
+            'CrystalReportViewer1.RefreshReport()
+            Exit Sub
+        End If
+
+        If ReportPrint = Report.PrintMonthlySumary Then
+            Dim Cry As New rptSumaryMonth
+            Cry.SetDatabaseLogon(cUsername, cPassword)
+
+            Cry.SetParameterValue("@MonthYear", fReportMonthlySumary.txtMonthYear.Text.Trim)
+
+            Me.Text = "สรุปยอดประจำเดือน"
+            CrystalReportViewer1.ReportSource = Cry
+            'CrystalReportViewer1.RefreshReport()
+            Exit Sub
+        End If
+
+
+        'รายงานสรุปขาด -  ลา------------------------------------------------------------------------------------
+        If ReportPrint = Report.PrintSumAbsLateByMonth Then
+            Dim Cry As New rptTimeSumAbsLateByMonth
+            Cry.SetDatabaseLogon(cUsername, cPassword)
+
+            '   Dim Head_Dept As String
+            Dim Head_Date As String = ""
+            Dim RptFormular As String = ""
+
+            With fRptTimeSumAbsentLate
+                Cry.SetParameterValue("@DateST", ConvertDate(.txtDateSt.Text.Trim))
+                Cry.SetParameterValue("@DateSP", ConvertDate(.txtDateSp.Text.Trim))
+
+                Head_Date = "ประจำเดือน " & .cboMonth.Text.Trim & " " & .txtYear.Text.Trim & " ( " & .txtDateSt.Text.Trim & " - " & .txtDateSp.Text.Trim & " )"
+                ' spTimeRPT_AbsentLate_Bath()
+                '   Cry.DataDefinition.FormulaFields("Head_Date").Text = "'" & Head_Date & "'"
+                'RptFormular = "({vTimework_INOUT.DateIn} >= #" & ConvertDate(.txtDateSt.Text.Trim) & " 00:00" & "# and " & _
+                '"{vTimework_INOUT.DateIn} <= #" & ConvertDate(.txtDateSp.Text.Trim) & " 23:59" & "#)"
+
+
+
+                '    Cry.DataDefinition.FormulaFields("Head_Dept").Text = "'" & Head_Dept & "'"
+                Cry.DataDefinition.FormulaFields("Head_Date").Text = "'" & Head_Date & "'"
+            End With
+
+            RptFormular = 1 = "1"
+
+            If fRptTimeSumAbsentLate.txtCode1.Text <> "" Then  ' ค้นหาตามรหัส
+
+                RptFormular &= " And {spTimeRPT_AbsentLate_Bath;1.Code}='" & fRptTimeSumAbsentLate.txtCode1.Text.Trim & "'"
+            ElseIf fRptTimeSumAbsentLate.txtNameSearch.Text <> "" Then  ' ค้นหาตามชื่อ
+                RptFormular &= " And {spTimeRPT_AbsentLate_Bath;1.fname} like '*" & fRptTimeSumAbsentLate.txtNameSearch.Text.Trim & "*'"
+            Else
+
+                If fRptTimeSumAbsentLate.cboCompany.SelectedIndex > 0 Then ' ถ้าไม่เลือกบริษัททั้งหมด
+                    Dim Company_Id As String
+                    Company_Id = GetData.GetCompanyId(fRptTimeSumAbsentLate.cboCompany.Text) ' หา รหัส Id ของ Company_Sub
+                    RptFormular &= " And {spTimeRPT_AbsentLate_Bath;1.CompanyID} = '" & Company_Id.Trim & "'"
+                End If
+
+                If fRptTimeSumAbsentLate.cboDivision.SelectedIndex > 0 Then ' ถ้าเลือกฝ่ายทั้งหมด
+                    Dim Division_Id As String = ""
+                    Division_Id = GetData.GetDivisionId(fRptTimeSumAbsentLate.cboDivision.Text) ' หา รหัส ฝ่าย
+                    RptFormular &= " And  {spTimeRPT_AbsentLate_Bath;1.DivId} = '" & Division_Id.Trim & "'"
+                End If
+
+                If fRptTimeSumAbsentLate.cboDepartment.SelectedIndex > 0 Then ' ถ้าเลือกแผนก ทั้งหมด
+                    Dim Department_Id As String = ""
+                    Department_Id = GetData.GetDepartmentId(fRptTimeSumAbsentLate.cboDepartment.Text) ' หาแผนก
+                    RptFormular &= " And   {spTimeRPT_AbsentLate_Bath;1.DeptId}='" & Department_Id.Trim & "'"
+                End If
+
+                If fRptTimeSumAbsentLate.cboPosition.SelectedIndex > 0 Then ' ถ้าเลือกตำแหน่งทั้งหมด
+                    RptFormular &= " And  {spTimeRPT_AbsentLate_Bath;1.Position}='" & fRptTimeSumAbsentLate.cboPosition.Text.Trim & "'"
+                End If
+
+                If fRptTimeSumAbsentLate.cboEmpGroup.SelectedIndex > 0 Then ' ถ้าเลือกกลุ่มทั้งหมด
+                    Dim EmpGroup_Id As String = ""
+                    EmpGroup_Id = GetData.GetEmpGroupId(fRptTimeSumAbsentLate.cboEmpGroup.Text.Trim)  ' หากลุ่ม
+                    RptFormular &= " And  {spTimeRPT_AbsentLate_Bath;1.GroupId}='" & EmpGroup_Id.Trim & "'"
+                End If
+
+
+                If fRptTimeSumAbsentLate.rdMonth.Checked = True Then ' เลือกรายเดือน
+                    RptFormular &= " And {spTimeRPT_AbsentLate_Bath;1.WageType}='M'"
+                End If
+
+                If fRptTimeSumAbsentLate.rdDay.Checked = True Then ' เลือกทั้งรายวัน
+                    RptFormular &= " And {spTimeRPT_AbsentLate_Bath;1.WageType}='D'"
+                End If
+
+                If fRptTimeSumAbsentLate.rdContractor.Checked = True Then ' เลือกรายเหมา
+                    RptFormular &= " And {spTimeRPT_AbsentLate_Bath;1.WageType}='D' And {spTimeRPT_AbsentLate_Bath;1.Contractor}=True"
+                End If
+            End If
+
+            Cry.DataDefinition.RecordSelectionFormula = RptFormular
+
+            Me.Text = "รายงานสรุปยอด สาย - ขาด (บาท) รายเดือน"
+            CrystalReportViewer1.ReportSource = Cry
+            'CrystalReportViewer1.RefreshReport()
+            Exit Sub
+        End If
+
+
+        'รายงานตารางเวลาการทำงาน-------------------------------------------------------------------------------------------------
+        If ReportPrint = Report.PrintTimeTableByMonth Then
+            Dim Cry As New rptTimeTableByMonth
+            Cry.SetDatabaseLogon(cUsername, cPassword)
+
+            Dim Head_Dept As String
+            Dim Head_Date As String
+            Dim RptFormular As String = ""
+
+            With fRptTimeTableByMonth
+
+                'If .rdByDept.Checked = True Then
+                '    Head_Dept = "ตารางการทำงาน (" & .cboSite.Text.Trim & ")"
+                '    RptFormular = "{Emp.WorkingPlace} = '" & .cboSite.Text.Trim & "'"
+                'Else
+                '    Head_Dept = "ตารางการทำงาน"
+                '    RptFormular = ""
+                'End If
+
+                Head_Date = "ประจำเดือน " & .cboMonth.Text.Trim & " ตั้งแต่ " & _
+                                "วันที่ " & CInt(LeftText(.txtDateSt.Text.Trim, 2)) & " " & _
+                                MonthNameThaiLang(CInt(Mid(.txtDateSt.Text.Trim, 4, 2))) & " " & _
+                                RightText(.txtDateSt.Text.Trim, 4) & " - " & _
+                                CInt(LeftText(.txtDateSp.Text.Trim, 2)) & " " & _
+                                MonthNameThaiLang(CInt(Mid(.txtDateSp.Text.Trim, 4, 2))) & " " & _
+                                RightText(.txtDateSp.Text.Trim, 4)
+
+                Cry.DataDefinition.FormulaFields("CompanyName").Text = "'" & GetCompanyName.Trim & "'"
+                Cry.DataDefinition.FormulaFields("Head_Site").Text = "'" & Head_Dept & "'"
+                Cry.DataDefinition.FormulaFields("Head_F_Month").Text = "'" & Head_Date & "'"
+                Cry.DataDefinition.FormulaFields("H_Month").Text = "'" & .cboMonth.Text.Trim & "'"
+            End With
+
+
+            RptFormular = 1 = "1"
+
+            If fRptTimeTableByMonth.txtEmpId.Text <> "" Then  ' ค้นหาตามรหัส
+
+                RptFormular &= " And {RPT_TimeTableByMonthAllEmp.Code}='" & fRptTimeTableByMonth.txtEmpId.Text.Trim & "'"
+            ElseIf fRptTimeTableByMonth.txtNameSearch.Text <> "" Then  ' ค้นหาตามชื่อ
+                RptFormular &= " And {Emp.fname} like '*" & fRptTimeTableByMonth.txtNameSearch.Text.Trim & "*'"
+            Else
+
+                If fRptTimeTableByMonth.cboCompany.SelectedIndex > 0 Then ' ถ้าไม่เลือกบริษัททั้งหมด
+                    Dim Company_Id As String
+                    Company_Id = GetData.GetCompanyId(fRptTimeTableByMonth.cboCompany.Text) ' หา รหัส Id ของ Company_Sub
+                    RptFormular &= " And {Emp.CompanyID} = '" & Company_Id.Trim & "'"
+                End If
+
+                If fRptTimeTableByMonth.cboDivision.SelectedIndex > 0 Then ' ถ้าเลือกฝ่ายทั้งหมด
+                    Dim Division_Id As String = ""
+                    Division_Id = GetData.GetDivisionId(fRptTimeTableByMonth.cboDivision.Text) ' หา รหัส ฝ่าย
+                    RptFormular &= " And  {Emp.DivId} = '" & Division_Id.Trim & "'"
+                End If
+
+                If fRptTimeTableByMonth.cboDepartment.SelectedIndex > 0 Then ' ถ้าเลือกแผนก ทั้งหมด
+                    Dim Department_Id As String = ""
+                    Department_Id = GetData.GetDepartmentId(fRptTimeTableByMonth.cboDepartment.Text) ' หาแผนก
+                    RptFormular &= " And   {Emp.DeptId}='" & Department_Id.Trim & "'"
+                End If
+
+                If fRptTimeTableByMonth.cboSection.SelectedIndex > 0 Then ' ส่วน
+                    Dim Section_Id As String = ""
+                    Section_Id = GetData.GetSectionID(fRptTimeTableByMonth.cboSection.Text) ' หารหัสส่วน
+                    RptFormular &= " And   {Emp.SecId}='" & Section_Id.Trim & "'"
+                End If
+
+                If fRptTimeTableByMonth.cboPosition.SelectedIndex > 0 Then ' ถ้าเลือกตำแหน่งทั้งหมด
+                    RptFormular &= " And  {Emp.Position}='" & fRptTimeTableByMonth.cboPosition.Text.Trim & "'"
+                End If
+
+                If fRptTimeTableByMonth.cboEmpGroup.SelectedIndex > 0 Then ' ถ้าเลือกกลุ่มทั้งหมด
+                    Dim EmpGroup_Id As String = ""
+                    EmpGroup_Id = GetData.GetEmpGroupId(fRptTimeTableByMonth.cboEmpGroup.Text.Trim)  ' หากลุ่ม
+                    RptFormular &= " And  {Emp.GroupId}='" & EmpGroup_Id.Trim & "'"
+                End If
+
+                If fRptTimeTableByMonth.cboBroker.SelectedIndex > 0 Then ' สายรถ
+                    Dim Broker_Id As String = ""
+                    Broker_Id = GetData.GetBrokerId(fRptTimeTableByMonth.cboBroker.Text.Trim)  ' หาสายรถ
+                    RptFormular &= " And  {Emp.Brokerid}='" & Broker_Id.Trim & "'"
+                End If
+
+
+                If fRptTimeTableByMonth.rdMonth.Checked = True Then ' เลือกรายเดือน
+                    RptFormular &= " And {Emp.WageType}='M'"
+                End If
+
+                If fRptTimeTableByMonth.rdDay.Checked = True Then ' เลือกทั้งรายวัน
+                    RptFormular &= " And {Emp.WageType}='D'"
+                End If
+
+                If fRptTimeTableByMonth.rdContractor.Checked = True Then ' เลือกรายเหมา
+                    RptFormular &= " And {Emp.WageType}='D' And {Emp.Contractor}=True"
+                End If
+            End If
+
+
+            Cry.DataDefinition.RecordSelectionFormula = RptFormular
+            Me.Text = "รายงานตารางการทำงาน"
+            CrystalReportViewer1.ReportSource = Cry
+            'CrystalReportViewer1.RefreshReport()
+            Exit Sub
+        End If
+
+
+        'รายงานตารางทำงานของพนักงานแบบสรุป ----------------------------------------------------------------------------
+        If ReportPrint = Report.PrintTimeworkSumary Then
+            Dim Cry As New cryTimeworkSummarize
+            Dim Rptformular As String = ""
+            Cry.SetDatabaseLogon(cUsername, cPassword)
+            'ConvertDate(fRptWageSumary.txtDateStart.Text)
+
+
+
+            Dim Type As String = ""
+            With fRptTimeWorkSumary
+                Cry.DataDefinition.FormulaFields("DateST").Text = "'" & Format(.txtDateStart.Value, "dd/MM/yyyy") & "'"
+                Cry.DataDefinition.FormulaFields("DateSP").Text = "'" & Format(.txtDateStop.Value, "dd/MM/yyyy") & "'"
+                Cry.DataDefinition.FormulaFields("Section").Text = "'" & .cboSection.Text & "'"
+                Cry.DataDefinition.FormulaFields("Department").Text = "'" & .cboDepartment.Text & "'"
+                Cry.DataDefinition.FormulaFields("Division").Text = "'" & .cboDivision.Text & "'"
+                Cry.DataDefinition.FormulaFields("CompanyName").Text = "'" & GetCompanyName.Trim & "'"
+                Cry.Refresh()
+            End With
+
+            RptFormular = 1 = "1"
+
+            If fRptTimeWorkSumary.txtEmpId.Text <> "" Then  ' ค้นหาตามรหัส
+
+                Rptformular &= " And {Rpt_timeworksumarize.Code}='" & fRptTimeWorkSumary.txtEmpId.Text.Trim & "'"
+            ElseIf fRptTimeWorkSumary.txtNameSearch.Text <> "" Then  ' ค้นหาตามชื่อ
+                Rptformular &= " And {Emp.fname} like '*" & fRptTimeWorkSumary.txtNameSearch.Text.Trim & "*'"
+            Else
+
+                If fRptTimeWorkSumary.cboCompany.SelectedIndex > 0 Then ' ถ้าไม่เลือกบริษัททั้งหมด
+                    Dim Company_Id As String
+                    Company_Id = GetData.GetCompanyId(fRptTimeWorkSumary.cboCompany.Text) ' หา รหัส Id ของ Company_Sub
+                    Rptformular &= " And {Emp.CompanyID} = '" & Company_Id.Trim & "'"
+                End If
+
+                If fRptTimeWorkSumary.cboDivision.SelectedIndex > 0 Then ' ถ้าเลือกฝ่ายทั้งหมด
+                    Dim Division_Id As String = ""
+                    Division_Id = GetData.GetDivisionId(fRptTimeWorkSumary.cboDivision.Text) ' หา รหัส ฝ่าย
+                    Rptformular &= " And  {Emp.DivId} = '" & Division_Id.Trim & "'"
+                End If
+
+                If fRptTimeWorkSumary.cboDepartment.SelectedIndex > 0 Then ' ถ้าเลือกแผนก ทั้งหมด
+                    Dim Department_Id As String = ""
+                    Department_Id = GetData.GetDepartmentId(fRptTimeWorkSumary.cboDepartment.Text) ' หาแผนก
+                    Rptformular &= " And   {Emp.DeptId}='" & Department_Id.Trim & "'"
+                End If
+
+                If fRptTimeWorkSumary.cboSection.SelectedIndex > 0 Then ' ส่วน
+                    Dim Section_Id As String = ""
+                    Section_Id = GetData.GetSectionID(fRptTimeWorkSumary.cboSection.Text) ' หารหัสส่วน
+                    Rptformular &= " And   {Emp.SecId}='" & Section_Id.Trim & "'"
+                End If
+
+                If fRptTimeWorkSumary.cboPosition.SelectedIndex > 0 Then ' ถ้าเลือกตำแหน่งทั้งหมด
+                    Rptformular &= " And  {Emp.Position}='" & fRptTimeWorkSumary.cboPosition.Text.Trim & "'"
+                End If
+
+                If fRptTimeWorkSumary.cboEmpGroup.SelectedIndex > 0 Then ' ถ้าเลือกกลุ่มทั้งหมด
+                    Dim EmpGroup_Id As String = ""
+                    EmpGroup_Id = GetData.GetEmpGroupId(fRptTimeWorkSumary.cboEmpGroup.Text.Trim)  ' หากลุ่ม
+                    Rptformular &= " And  {Emp.GroupId}='" & EmpGroup_Id.Trim & "'"
+                End If
+
+                If fRptTimeWorkSumary.cboBroker.SelectedIndex > 0 Then ' สายรถ
+                    Dim Broker_Id As String = ""
+                    Broker_Id = GetData.GetBrokerId(fRptTimeWorkSumary.cboBroker.Text.Trim)  ' หาสายรถ
+                    Rptformular &= " And  {Emp.Brokerid}='" & Broker_Id.Trim & "'"
+                End If
+
+
+                If fRptTimeWorkSumary.rdMonth.Checked = True Then ' เลือกรายเดือน
+                    Rptformular &= " And {Emp.WageType}='M'"
+                End If
+
+                If fRptTimeWorkSumary.rdDay.Checked = True Then ' เลือกทั้งรายวัน
+                    Rptformular &= " And {Emp.WageType}='D'"
+                End If
+
+                If fRptTimeWorkSumary.rdContractor.Checked = True Then ' เลือกรายเหมา
+                    Rptformular &= " And {Emp.WageType}='D' And {Emp.Contractor}=True"
+                End If
+            End If
+
+
+            Cry.DataDefinition.RecordSelectionFormula = RptFormular
+            CrystalReportViewer1.ReportSource = Cry
+            Me.Text = "รายงานการทำงานของพนักงาน(แบบสรุป)"
+            Exit Sub
+        End If
+
+
+        'รายงานพนักงานไม่มาทำงาน------------------------------------------------------------------------------------------
+        If ReportPrint = Report.PrintTimeAbsent Then
+            Dim Cry As New cryTimeAbsent
+            Cry.SetDatabaseLogon(cUsername, cPassword)
+            'ConvertDate(fRptWageSumary.txtDateStart.Text)
+            Dim HType As String = fRPT_TimeAbsent.HType
+
+
+            Dim Type As String = ""
+            With fRPT_TimeAbsent
+                Cry.DataDefinition.FormulaFields("DateST").Text = "'" & Format(.txtDateStart.Value, "dd/MM/yyyy") & "'"
+                Cry.DataDefinition.FormulaFields("DateSP").Text = "'" & Format(.txtDateStop.Value, "dd/MM/yyyy") & "'"
+                Cry.DataDefinition.FormulaFields("DDSName").Text = "'" & HType & "'"
+                Cry.Refresh()
+
+            End With
+
+            CrystalReportViewer1.ReportSource = Cry
+            Me.Text = "จำนวนพนักงานไม่มาทำงาน"
+            Exit Sub
+        End If
+
+
+        ' รายงาน่ขาดลา ของพนักงานแบบสรุป ข--------------------------------------------------------------------
+        If ReportPrint = Report.PrintTimeAbsLate Then
+            Dim Cry As New cryTimeAbsLate
+            Dim RptFormular As String = ""
+            Cry.SetDatabaseLogon(cUsername, cPassword)
+            'ConvertDate(fRptWageSumary.txtDateStart.Text)
+
+
+
+            Dim Type As String = ""
+            With fRPT_TimeAbLate
+                Cry.DataDefinition.FormulaFields("DateST").Text = "'" & Format(.txtDateStart.Value, "dd/MM/yyyy") & "'"
+                Cry.DataDefinition.FormulaFields("DateSP").Text = "'" & Format(.txtDateStop.Value, "dd/MM/yyyy") & "'"
+                Cry.DataDefinition.FormulaFields("Section").Text = "'" & .cboSection.Text & "'"
+                Cry.DataDefinition.FormulaFields("Department").Text = "'" & .cboDepartment.Text & "'"
+                Cry.DataDefinition.FormulaFields("Division").Text = "'" & .cboDivision.Text & "'"
+                Cry.DataDefinition.FormulaFields("CompanyName").Text = "'" & GetCompanyName.Trim & "'"
+                Cry.Refresh()
+            End With
+
+
+            RptFormular = 1 = "1"
+
+            If fRPT_TimeAbLate.txtEmpId.Text <> "" Then  ' ค้นหาตามรหัส
+
+                RptFormular &= " And {rpt_timeabslate.Code}='" & fRPT_TimeAbLate.txtEmpId.Text.Trim & "'"
+            ElseIf fRPT_TimeAbLate.txtNameSearch.Text <> "" Then  ' ค้นหาตามชื่อ
+                RptFormular &= " And {Emp.fname} like '*" & fRPT_TimeAbLate.txtNameSearch.Text.Trim & "*'"
+            Else
+
+                If fRPT_TimeAbLate.cboCompany.SelectedIndex > 0 Then ' ถ้าไม่เลือกบริษัททั้งหมด
+                    Dim Company_Id As String
+                    Company_Id = GetData.GetCompanyId(fRPT_TimeAbLate.cboCompany.Text) ' หา รหัส Id ของ Company_Sub
+                    RptFormular &= " And {Emp.CompanyID} = '" & Company_Id.Trim & "'"
+                End If
+
+                If fRPT_TimeAbLate.cboDivision.SelectedIndex > 0 Then ' ถ้าเลือกฝ่ายทั้งหมด
+                    Dim Division_Id As String = ""
+                    Division_Id = GetData.GetDivisionId(fRPT_TimeAbLate.cboDivision.Text) ' หา รหัส ฝ่าย
+                    RptFormular &= " And  {Emp.DivId} = '" & Division_Id.Trim & "'"
+                End If
+
+                If fRPT_TimeAbLate.cboDepartment.SelectedIndex > 0 Then ' ถ้าเลือกแผนก ทั้งหมด
+                    Dim Department_Id As String = ""
+                    Department_Id = GetData.GetDepartmentId(fRPT_TimeAbLate.cboDepartment.Text) ' หาแผนก
+                    RptFormular &= " And   {Emp.DeptId}='" & Department_Id.Trim & "'"
+                End If
+
+                If fRPT_TimeAbLate.cboSection.SelectedIndex > 0 Then ' ส่วน
+                    Dim Section_Id As String = ""
+                    Section_Id = GetData.GetSectionID(fRPT_TimeAbLate.cboSection.Text) ' หารหัสส่วน
+                    RptFormular &= " And   {Emp.SecId}='" & Section_Id.Trim & "'"
+                End If
+
+                If fRPT_TimeAbLate.cboPosition.SelectedIndex > 0 Then ' ถ้าเลือกตำแหน่งทั้งหมด
+                    RptFormular &= " And  {Emp.Position}='" & fRPT_TimeAbLate.cboPosition.Text.Trim & "'"
+                End If
+
+                If fRPT_TimeAbLate.cboEmpGroup.SelectedIndex > 0 Then ' ถ้าเลือกกลุ่มทั้งหมด
+                    Dim EmpGroup_Id As String = ""
+                    EmpGroup_Id = GetData.GetEmpGroupId(fRPT_TimeAbLate.cboEmpGroup.Text.Trim)  ' หากลุ่ม
+                    RptFormular &= " And  {Emp.GroupId}='" & EmpGroup_Id.Trim & "'"
+                End If
+
+                If fRPT_TimeAbLate.cboBroker.SelectedIndex > 0 Then ' สายรถ
+                    Dim Broker_Id As String = ""
+                    Broker_Id = GetData.GetBrokerId(fRPT_TimeAbLate.cboBroker.Text.Trim)  ' หาสายรถ
+                    RptFormular &= " And  {Emp.Brokerid}='" & Broker_Id.Trim & "'"
+                End If
+
+
+                If fRPT_TimeAbLate.rdMonth.Checked = True Then ' เลือกรายเดือน
+                    RptFormular &= " And {Emp.WageType}='M'"
+                End If
+
+                If fRPT_TimeAbLate.rdDay.Checked = True Then ' เลือกทั้งรายวัน
+                    RptFormular &= " And {Emp.WageType}='D'"
+                End If
+
+                If fRPT_TimeAbLate.rdContractor.Checked = True Then ' เลือกรายเหมา
+                    RptFormular &= " And {Emp.WageType}='D' And {Emp.Contractor}=True"
+                End If
+            End If
+
+
+            Cry.DataDefinition.RecordSelectionFormula = RptFormular
+
+
+            CrystalReportViewer1.ReportSource = Cry
+            Me.Text = "รายงาน มาสาย/ลา/ขาด ของพนักงาน(แบบสรุป)"
+            Exit Sub
+        End If
+
+
+        'รายงาน ชั่วโมง O.T. สูงสุด/วัน/สัปดาห์  ประจำปี -------------------------------------------------------------------------------------
+        If ReportPrint = Report.PrintMaxOT Then
+            Dim Cry As New cryRPT_MaxOT
+            Dim Rptformular As String = ""
+
+            Cry.SetDatabaseLogon(cUsername, cPassword)
+
+            Dim Type As String = ""
+            With fRPTMaxOT
+                Cry.DataDefinition.FormulaFields("Year").Text = "'" & .cboYear.Text.Trim & "'"
+                Cry.SetParameterValue("@Year", .cboYear.Text.Trim)
+
+            End With
+
+            Rptformular = 1 = "1"
+
+            If fRPTMaxOT.cboDivision.SelectedIndex > 0 Then ' ถ้าเลือกฝ่าย
+                Dim Division_Id As String = ""
+                Division_Id = GetData.GetDivisionId(fRPTMaxOT.cboDivision.Text) ' หา รหัส ฝ่าย
+                Rptformular &= " And  {spRPT_MaxOT;1.DivId} = '" & Division_Id.Trim & "'"
+            End If
+
+            If fRPTMaxOT.cboDepartment.SelectedIndex > 0 Then ' ถ้าเลือกแผนก
+                Dim Department_Id As String = ""
+                Department_Id = GetData.GetDepartmentId(fRPTMaxOT.cboDepartment.Text) ' หาแผนก
+                Rptformular &= " And   {spRPT_MaxOT;1.DeptId}='" & Department_Id.Trim & "'"
+            End If
+
+            If fRPTMaxOT.cboSection.SelectedIndex > 0 Then ' ถ้าเลือกส่วน
+                Dim Section_Id As String = ""
+                Section_Id = GetData.GetSectionID(fRPTMaxOT.cboSection.Text) ' หาแผนก
+                Rptformular &= " And   {spRPT_MaxOT;1.Secid}='" & Section_Id.Trim & "'"
+            End If
+
+            Cry.DataDefinition.RecordSelectionFormula = Rptformular
+
+            CrystalReportViewer1.ReportSource = Cry
+            Me.Text = "รายงาน ชั่วโมง O.T. สูงสุด/วัน/สัปดาห์  ประจำปี"
+            Exit Sub
+        End If
+
+
+
+        'รายงานสรุปการหยุดงานประจำปี เดือน 1 - 6  -------------------------------------------------------------------------------------------------------------------------
+        If ReportPrint = Report.PrintSummarizeVacationByYear1 Then
+            Dim Cry As New cryRPT_SummarizeVacationByYear_Config
+            Dim Rptformular As String = ""
+            Cry.SetDatabaseLogon(cUsername, cPassword)
+
+            Dim Type As String = ""
+            With fRPT_SummarizeVacationByYear
+                Dim Da As New SqlDataAdapter
+                Dim Ds As New DataSet
+                Dim StrSql As String
+
+                StrSql = "select vCol1,vCol2,vCol3,vCol4,vCol5," & _
+                                " vCalType1,vCalType2,vCalType3,vCalType4,vCalType5,absCalType " & _
+                            " from RPT_SummarizeVacationByYear_Config"
+                Da = New SqlDataAdapter(StrSql, Conn)
+                Da.Fill(Ds, "data")
+                With Ds.Tables("data")
+                    If .Rows.Count = 0 Then
+                        Return
+                    Else
+                        Dim dr As DataRow = .Rows(0)
+
+                        Cry.DataDefinition.FormulaFields("C1").Text = "'" & dr("vCol1") & "'"
+                        Cry.DataDefinition.FormulaFields("C2").Text = "'" & dr("vCol2") & "'"
+                        Cry.DataDefinition.FormulaFields("C3").Text = "'" & dr("vCol3") & "'"
+                        Cry.DataDefinition.FormulaFields("C4").Text = "'" & dr("vCol4") & "'"
+                        Cry.DataDefinition.FormulaFields("C5").Text = "'" & dr("vCol5") & "'"
+
+                        Cry.DataDefinition.FormulaFields("Type1").Text = "'" & IIf(dr("vCalType1").ToString.Trim = "H", "ชม.", "วัน") & "'"
+                        Cry.DataDefinition.FormulaFields("Type2").Text = "'" & IIf(dr("vCalType2").ToString.Trim = "H", "ชม.", "วัน") & "'"
+                        Cry.DataDefinition.FormulaFields("Type3").Text = "'" & IIf(dr("vCalType3").ToString.Trim = "H", "ชม.", "วัน") & "'"
+                        Cry.DataDefinition.FormulaFields("Type4").Text = "'" & IIf(dr("vCalType4").ToString.Trim = "H", "ชม.", "วัน") & "'"
+                        Cry.DataDefinition.FormulaFields("Type5").Text = "'" & IIf(dr("vCalType5").ToString.Trim = "H", "ชม.", "วัน") & "'"
+                        Cry.DataDefinition.FormulaFields("Type6").Text = "'" & IIf(dr("absCalType").ToString.Trim = "H", "ชม.", "วัน") & "'"
+
+                    End If
+                End With
+                Cry.DataDefinition.FormulaFields("Year").Text = "'" & .cboYear.Text.Trim & "'"
+                Cry.SetParameterValue("@Year", .cboYear.Text.Trim)
+            End With
+
+
+            Rptformular = 1 = "1"
+
+            If fRPT_SummarizeVacationByYear.txtCode1.Text <> "" Then  ' ค้นหาตามรหัส
+                Rptformular &= " And {[spRPT_SummarizeVacationByYear_Config];1.Code}='" & fRPT_SummarizeVacationByYear.txtCode1.Text.Trim & "'"
+            ElseIf fRPT_SummarizeVacationByYear.txtNameSearch.Text <> "" Then  ' ค้นหาตามชื่อ
+                Rptformular &= " And {[spRPT_SummarizeVacationByYear_Config];1.fname} like '*" & fRPT_SummarizeVacationByYear.txtNameSearch.Text.Trim & "*'"
+            Else
+
+                If fRPT_SummarizeVacationByYear.cboCompany.SelectedIndex > 0 Then ' ถ้าไม่เลือกบริษัททั้งหมด
+                    Dim Company_Id As String
+                    Company_Id = GetData.GetCompanyId(fRPT_SummarizeVacationByYear.cboCompany.Text) ' หา รหัส Id ของ Company_Sub
+                    Rptformular &= " And {[spRPT_SummarizeVacationByYear_Config];1.CompanyID} = '" & Company_Id.Trim & "'"
+                End If
+
+                If fRPT_SummarizeVacationByYear.cboDivision.SelectedIndex > 0 Then ' ถ้าเลือกฝ่ายทั้งหมด
+                    Dim Division_Id As String = ""
+                    Division_Id = GetData.GetDivisionId(fRPT_SummarizeVacationByYear.cboDivision.Text) ' หา รหัส ฝ่าย
+                    Rptformular &= " And  {[spRPT_SummarizeVacationByYear_Config];1.DivId} = '" & Division_Id.Trim & "'"
+                End If
+
+                If fRPT_SummarizeVacationByYear.cboDepartment.SelectedIndex > 0 Then ' ถ้าเลือกแผนก ทั้งหมด
+                    Dim Department_Id As String = ""
+                    Department_Id = GetData.GetDepartmentId(fRPT_SummarizeVacationByYear.cboDepartment.Text) ' หาแผนก
+                    Rptformular &= " And   {[spRPT_SummarizeVacationByYear_Config];1.DeptId}='" & Department_Id.Trim & "'"
+                End If
+
+                If fRPT_SummarizeVacationByYear.cboPosition.SelectedIndex > 0 Then ' ถ้าเลือกตำแหน่งทั้งหมด
+                    Rptformular &= " And  {[spRPT_SummarizeVacationByYear_Config];1.Position}='" & fRPT_SummarizeVacationByYear.cboPosition.Text.Trim & "'"
+                End If
+
+                If fRPT_SummarizeVacationByYear.cboEmpGroup.SelectedIndex > 0 Then ' ถ้าเลือกกลุ่มทั้งหมด
+                    Dim EmpGroup_Id As String = ""
+                    EmpGroup_Id = GetData.GetEmpGroupId(fRPTMaxOT.cboEmpGroup.Text.Trim)  ' หากลุ่ม
+                    Rptformular &= " And  {[spRPT_SummarizeVacationByYear_Config];1.GroupId}='" & EmpGroup_Id.Trim & "'"
+                End If
+
+
+                If fRPT_SummarizeVacationByYear.rdMonth.Checked = True Then ' เลือกรายเดือน
+                    Rptformular &= " And {[spRPT_SummarizeVacationByYear_Config];1.WageType}='M'"
+                End If
+
+                If fRPT_SummarizeVacationByYear.rdDay.Checked = True Then ' เลือกทั้งรายวัน
+                    Rptformular &= " And {[spRPT_SummarizeVacationByYear_Config];1.WageType}='D'"
+                End If
+
+                If fRPT_SummarizeVacationByYear.rdContractor.Checked = True Then ' เลือกรายเหมา
+                    Rptformular &= " And {[spRPT_SummarizeVacationByYear_Config];1.WageType}='D' " & _
+                                    " And {[spRPT_SummarizeVacationByYear_Config];1.Contractor}=True"
+                End If
+
+            End If
+            Cry.DataDefinition.RecordSelectionFormula = Rptformular
+
+            CrystalReportViewer1.ReportSource = Cry
+            Me.Text = "รายงานสรุปการหยุดงานประจำปี"
+            Exit Sub
+        End If
+
+
+        ' รายงานสรุปการหยุดงานประจำปี  เดือน 7-12 ------------------------------------------------------------------------------------------------------------
+        If ReportPrint = Report.PrintSummarizeVacationByYear2 Then
+            Dim Cry As New cryRPT_SummarizeVacationByYear_Config2
+            Cry.SetDatabaseLogon(cUsername, cPassword)
+
+            Dim Type As String = ""
+            With fRPT_SummarizeVacationByYear
+                Dim Da As New SqlDataAdapter
+                Dim Ds As New DataSet
+                Dim StrSql As String
+
+                StrSql = "select vCol1,vCol2,vCol3,vCol4,vCol5," & _
+                                " vCalType1,vCalType2,vCalType3,vCalType4,vCalType5,absCalType " & _
+                            " from RPT_SummarizeVacationByYear_Config"
+                Da = New SqlDataAdapter(StrSql, Conn)
+                Da.Fill(Ds, "data")
+                With Ds.Tables("data")
+                    If .Rows.Count = 0 Then
+                        Return
+                    Else
+                        Dim dr As DataRow = .Rows(0)
+
+                        Cry.DataDefinition.FormulaFields("C1").Text = "'" & dr("vCol1") & "'"
+                        Cry.DataDefinition.FormulaFields("C2").Text = "'" & dr("vCol2") & "'"
+                        Cry.DataDefinition.FormulaFields("C3").Text = "'" & dr("vCol3") & "'"
+                        Cry.DataDefinition.FormulaFields("C4").Text = "'" & dr("vCol4") & "'"
+                        Cry.DataDefinition.FormulaFields("C5").Text = "'" & dr("vCol5") & "'"
+
+                        Cry.DataDefinition.FormulaFields("Type1").Text = "'" & IIf(dr("vCalType1").ToString.Trim = "H", "ชม.", "วัน") & "'"
+                        Cry.DataDefinition.FormulaFields("Type2").Text = "'" & IIf(dr("vCalType2").ToString.Trim = "H", "ชม.", "วัน") & "'"
+                        Cry.DataDefinition.FormulaFields("Type3").Text = "'" & IIf(dr("vCalType3").ToString.Trim = "H", "ชม.", "วัน") & "'"
+                        Cry.DataDefinition.FormulaFields("Type4").Text = "'" & IIf(dr("vCalType4").ToString.Trim = "H", "ชม.", "วัน") & "'"
+                        Cry.DataDefinition.FormulaFields("Type5").Text = "'" & IIf(dr("vCalType5").ToString.Trim = "H", "ชม.", "วัน") & "'"
+                        Cry.DataDefinition.FormulaFields("Type6").Text = "'" & IIf(dr("absCalType").ToString.Trim = "H", "ชม.", "วัน") & "'"
+
+
+                    End If
+                End With
+                Cry.DataDefinition.FormulaFields("Year").Text = "'" & .cboYear.Text.Trim & "'"
+                Cry.SetParameterValue("@Year", .cboYear.Text.Trim)
+            End With
+
+            CrystalReportViewer1.ReportSource = Cry
+            Me.Text = "รายงานสรุปการหยุดงานประจำปี"
+            Exit Sub
+        End If
+
+
+        ' รายงานการลาขาดสายของพนักงาน ประจำวันที่ --------------------------------------------------------------
+        If ReportPrint = Report.PrintEmpValAbsLateByDate Then
+            Dim Cry As New cryCountAbsent
+            Dim Rptformular As String = ""
+            Cry.SetDatabaseLogon(cUsername, cPassword)
+
+            With fRPTEmpValAbsLateByDate
+                Cry.DataDefinition.FormulaFields("DateDaily").Text = "'" & Format(.txtDateStart.Value, "dd/MM/yyyy") & "'"
+                Cry.SetParameterValue("@DateIn", Format(.txtDateStart.Value, "yyyy/MM/dd"))
+            End With
+
+            Rptformular = 1 = "1"
+
+            If fRPTEmpValAbsLateByDate.txtCode1.Text <> "" Then  ' ค้นหาตามรหัส
+                Rptformular &= " And {spRPT_TimeAbslateValCountDaily;1.CodeEmp}='" & fRPTEmpValAbsLateByDate.txtCode1.Text.Trim & "'"
+            ElseIf fRPTEmpValAbsLateByDate.txtNameSearch.Text <> "" Then  ' ค้นหาตามชื่อ
+                Rptformular &= " And {spRPT_TimeAbslateValCountDaily;1.fname} like '*" & fRPTEmpValAbsLateByDate.txtNameSearch.Text.Trim & "*'"
+            Else
+
+                If fRPTEmpValAbsLateByDate.cboCompany.SelectedIndex > 0 Then ' ถ้าไม่เลือกบริษัททั้งหมด
+                    Dim Company_Id As String
+                    Company_Id = GetData.GetCompanyId(fRPTEmpValAbsLateByDate.cboCompany.Text) ' หา รหัส Id ของ Company_Sub
+                    Rptformular &= " And {spRPT_TimeAbslateValCountDaily;1.CompanyID} = '" & Company_Id.Trim & "'"
+                End If
+
+                If fRPTEmpValAbsLateByDate.cboDivision.SelectedIndex > 0 Then ' ถ้าเลือกฝ่ายทั้งหมด
+                    Dim Division_Id As String = ""
+                    Division_Id = GetData.GetDivisionId(fRPTEmpValAbsLateByDate.cboDivision.Text) ' หา รหัส ฝ่าย
+                    Rptformular &= " And  {spRPT_TimeAbslateValCountDaily;1.DivId} = '" & Division_Id.Trim & "'"
+                End If
+
+                If fRPTEmpValAbsLateByDate.cboDepartment.SelectedIndex > 0 Then ' ถ้าเลือกแผนก ทั้งหมด
+                    Dim Department_Id As String = ""
+                    Department_Id = GetData.GetDepartmentId(fRPTEmpValAbsLateByDate.cboDepartment.Text) ' หาแผนก
+                    Rptformular &= " And   {spRPT_TimeAbslateValCountDaily;1.DeptId}='" & Department_Id.Trim & "'"
+                End If
+
+                If fRPTEmpValAbsLateByDate.cboPosition.SelectedIndex > 0 Then ' ถ้าเลือกตำแหน่งทั้งหมด
+                    Rptformular &= " And  {spRPT_TimeAbslateValCountDaily;1.Position}='" & fRPTEmpValAbsLateByDate.cboPosition.Text.Trim & "'"
+                End If
+
+                If fRPTEmpValAbsLateByDate.cboEmpGroup.SelectedIndex > 0 Then ' ถ้าเลือกกลุ่มทั้งหมด
+                    Dim EmpGroup_Id As String = ""
+                    EmpGroup_Id = GetData.GetEmpGroupId(fRPTEmpValAbsLateByDate.cboEmpGroup.Text.Trim)  ' หากลุ่ม
+                    Rptformular &= " And  {spRPT_TimeAbslateValCountDaily;1.GroupId}='" & EmpGroup_Id.Trim & "'"
+                End If
+
+
+                If fRPTEmpValAbsLateByDate.rdMonth.Checked = True Then ' เลือกรายเดือน
+                    Rptformular &= " And {spRPT_TimeAbslateValCountDaily;1.WageType}='M'"
+                End If
+
+                If fRPTEmpValAbsLateByDate.rdDay.Checked = True Then ' เลือกทั้งรายวัน
+                    Rptformular &= " And {spRPT_TimeAbslateValCountDaily;1.WageType}='D'"
+                End If
+
+                If fRPTEmpValAbsLateByDate.rdContractor.Checked = True Then ' เลือกรายเหมา
+                    Rptformular &= " And {spRPT_TimeAbslateValCountDaily;1.WageType}='D' And {spRPT_TimeAbslateValCountDaily;1.Contractor}=True"
+                End If
+
+            End If
+
+            Cry.DataDefinition.RecordSelectionFormula = Rptformular
+            CrystalReportViewer1.ReportSource = Cry
+            Me.Text = "รายงานการลาขาดสายของพนักงาน ประจำวันที่ " & Format(fRPTEmpValAbsLateByDate.txtDateStart.Value, "dd/MM/yyyy")
+            Exit Sub
+        End If
+
+        If ReportPrint = Report.PrintAbsentByEmp Then
+            Dim Cry As New cryAbsentByEmp
+            Dim Rptformular As String = ""
+            Cry.SetDatabaseLogon(cUsername, cPassword)
+
+            With fRPTEmpValAbsLateByDate
+                Dim Header As String = "ประจำวันที่ : " & Format(.txtDateStart.Value, "dd/MM/yyyy")
+                Rptformular = "{TimeAbsent.DateIn} = #" & Format(.txtDateStart.Value, "yyyy/MM/dd") & "#"
+
+                Cry.DataDefinition.FormulaFields("Header").Text = "'" & Header & "'"
+            End With
+
+            Cry.DataDefinition.RecordSelectionFormula = Rptformular
+            CrystalReportViewer1.ReportSource = Cry
+            Me.Text = "รายงานพนักงานขาดงาน ประจำวันที่ " & Format(fRPTEmpValAbsLateByDate.txtDateStart.Value, "dd/MM/yyyy")
+            Exit Sub
+        End If
+
+
+        '-------------------------------------------------------------------------------------------------------------
+        If ReportPrint = Report.PrintTimeWork_Detail2 Then
+            Dim Cry As New rptEmpTimeWork_Detail_2
+            Dim Rptformular As String = ""
+            Cry.SetDatabaseLogon(cUsername, cPassword)
+            Me.Text = "รายงานการทำงานของพนักงาน  แบบที่ 2)"
+            'Cry.DataDefinition.FormulaFields("DateFrom").Text = "'From Date " & fRptAllEmpWork.txtDateStart.Text.Trim & " to " & fRptAllEmpWork.txtDateStop.Text.Trim & "'"
+
+            With fRptAllEmpWork_Detail2
+                Rptformular = "({RPT_EmpWork2.DateIn} >= #" & ConvertDate(.txtDateStart.Text.Trim) & " 00:00" & "# and " & _
+                               "{RPT_EmpWork2.DateIn} <= #" & ConvertDate(.txtDateStop.Text.Trim) & " 23:59" & "#)"
+            End With
+
+            '  Rptformular = 1 = "1"
+
+            If fRptAllEmpWork_Detail2.txtCode1.Text <> "" Then  ' ค้นหาตามรหัส
+                Rptformular &= " And {RPT_EmpWork2.code}='" & fRptAllEmpWork_Detail2.txtCode1.Text.Trim & "'"
+            ElseIf fRptAllEmpWork_Detail2.txtNameSearch.Text <> "" Then  ' ค้นหาตามชื่อ
+                Rptformular &= " And {Emp.fname} like '*" & fRptAllEmpWork_Detail2.txtNameSearch.Text.Trim & "*'"
+            Else
+
+                If fRptAllEmpWork_Detail2.cboCompany.SelectedIndex > 0 Then ' ถ้าไม่เลือกบริษัททั้งหมด
+                    Dim Company_Id As String
+                    Company_Id = GetData.GetCompanyId(fRptAllEmpWork_Detail2.cboCompany.Text) ' หา รหัส Id ของ Company_Sub
+                    Rptformular &= " And {Emp.CompanyID} = '" & Company_Id.Trim & "'"
+                End If
+
+                If fRptAllEmpWork_Detail2.cboDivision.SelectedIndex > 0 Then ' ถ้าเลือกฝ่ายทั้งหมด
+                    Dim Division_Id As String = ""
+                    Division_Id = GetData.GetDivisionId(fRptAllEmpWork_Detail2.cboDivision.Text) ' หา รหัส ฝ่าย
+                    Rptformular &= " And  {Emp.DivId} = '" & Division_Id.Trim & "'"
+                End If
+
+                If fRptAllEmpWork_Detail2.cboDepartment.SelectedIndex > 0 Then ' ถ้าเลือกแผนก ทั้งหมด
+                    Dim Department_Id As String = ""
+                    Department_Id = GetData.GetDepartmentId(fRptAllEmpWork_Detail2.cboDepartment.Text) ' หาแผนก
+                    Rptformular &= " And   {Emp.DeptId}='" & Department_Id.Trim & "'"
+                End If
+
+                If fRptAllEmpWork_Detail2.cboPosition.SelectedIndex > 0 Then ' ถ้าเลือกตำแหน่งทั้งหมด
+                    Rptformular &= " And  {Emp.Position}='" & fRptAllEmpWork_Detail2.cboPosition.Text.Trim & "'"
+                End If
+
+                If fRptAllEmpWork_Detail2.cboEmpGroup.SelectedIndex > 0 Then ' ถ้าเลือกกลุ่มทั้งหมด
+                    Dim EmpGroup_Id As String = ""
+                    EmpGroup_Id = GetData.GetEmpGroupId(fRptAllEmpWork_Detail2.cboEmpGroup.Text.Trim)  ' หากลุ่ม
+                    Rptformular &= " And  {Emp.GroupId}='" & EmpGroup_Id.Trim & "'"
+                End If
+
+
+                If fRptAllEmpWork_Detail2.rdMonth.Checked = True Then ' เลือกรายเดือน
+                    Rptformular &= " And {Emp.WageType}='M'"
+                End If
+
+                If fRptAllEmpWork_Detail2.rdDay.Checked = True Then ' เลือกทั้งรายวัน
+                    Rptformular &= " And {Emp.WageType}='D'"
+                End If
+
+                If fRptAllEmpWork_Detail2.rdContractor.Checked = True Then ' เลือกรายเหมา
+                    Rptformular &= " And {Emp.WageType}='D' And {Emp.Contractor}=True"
+                End If
+
+            End If
+
+            Cry.DataDefinition.RecordSelectionFormula = Rptformular
+            CrystalReportViewer1.ReportSource = Cry
+            'CrystalReportViewer1.RefreshReport()
+            Exit Sub
+        End If
+
+
+        ' รายงานค่าล่วงเวลา-------------------------------------------------------------------------------------------------------------
+        If ReportPrint = Report.Print_OTReport Then
+            Dim Cry As New cryRPT_OTreport
+            Dim Rptformular As String = ""
+            Cry.SetDatabaseLogon(cUsername, cPassword)
+            Me.Text = "รายงานค่าล่วงเวลาทำงาน (ตามช่วงเวลา)"
+            Cry.DataDefinition.FormulaFields("Company").Text = "'" & Format(fRpt_OTreport.cboCompany.Text.Trim) & "'"
+
+            'With fRpt_OTreport
+            '    Rptformular = "({Timework.DateIn} >= #" & ConvertDate(.txtDateStart.Text.Trim) & " 00:00" & "# and " & _
+            '                   "{Timework.DateIn} <= #" & ConvertDate(.txtDateStop.Text.Trim) & " 23:59" & "#)"
+            'End With
+
+            Rptformular = 1 = "1"
+            Rptformular &= " And  {Emp.WorkStatus}='W'"
+            If fRpt_OTreport.txtCode1.Text <> "" Then  ' ค้นหาตามรหัส
+                Rptformular &= " And {Emp.code}='" & fRpt_OTreport.txtCode1.Text.Trim & "'"
+            End If
+            If fRpt_OTreport.txtNameSearch.Text <> "" Then  ' ค้นหาตามชื่อ
+                Rptformular &= " And {Emp.fname} like '*" & fRpt_OTreport.txtNameSearch.Text.Trim & "*'"
+            End If
+
+            If fRpt_OTreport.cboCompany.SelectedIndex > 0 Then ' ถ้าไม่เลือกบริษัททั้งหมด
+                Dim Company_Id As String
+                Company_Id = GetData.GetCompanyId(fRpt_OTreport.cboCompany.Text) ' หา รหัส Id ของ Company_Sub
+                Rptformular &= " And {Emp.CompanyID} = '" & Company_Id.Trim & "'"
+            End If
+
+            If fRpt_OTreport.cboDivision.SelectedIndex > 0 Then ' ถ้าเลือกฝ่ายทั้งหมด
+                Dim Division_Id As String = ""
+                Division_Id = GetData.GetDivisionId(fRpt_OTreport.cboDivision.Text) ' หา รหัส ฝ่าย
+                Rptformular &= " And  {Emp.DivId} = '" & Division_Id.Trim & "'"
+            End If
+
+            If fRpt_OTreport.cboDepartment.SelectedIndex > 0 Then ' ถ้าเลือกแผนก ทั้งหมด
+                Dim Department_Id As String = ""
+                Department_Id = GetData.GetDepartmentId(fRpt_OTreport.cboDepartment.Text) ' หาแผนก
+                Rptformular &= " And   {Emp.DeptId}='" & Department_Id.Trim & "'"
+            End If
+
+            If fRpt_OTreport.cboPosition.SelectedIndex > 0 Then ' ถ้าเลือกตำแหน่งทั้งหมด
+                Rptformular &= " And  {Emp.Position}='" & fRpt_OTreport.cboPosition.Text.Trim & "'"
+            End If
+
+            If fRpt_OTreport.cboEmpGroup.SelectedIndex > 0 Then ' ถ้าเลือกกลุ่มทั้งหมด
+                Dim EmpGroup_Id As String = ""
+                EmpGroup_Id = GetData.GetEmpGroupId(fRpt_OTreport.cboEmpGroup.Text.Trim)  ' หากลุ่ม
+                Rptformular &= " And  {Emp.GroupId}='" & EmpGroup_Id.Trim & "'"
+            End If
+
+
+            If fRpt_OTreport.rdMonth.Checked = True Then ' เลือกรายเดือน
+                Rptformular &= " And {Emp.WageType}='M'"
+            End If
+
+            If fRpt_OTreport.rdDay.Checked = True Then ' เลือกทั้งรายวัน
+                Rptformular &= " And {Emp.WageType}='D' And {Emp.Contractor}=False"
+            End If
+
+            If fRpt_OTreport.rdContractor.Checked = True Then ' เลือกรายเหมา
+                Rptformular &= " And {Emp.WageType}='D' And {Emp.Contractor}=True"
+            End If
+
+            If fRpt_OTreport.chkDay.Checked = True Then
+                ' แสดง ที่มีข้อมูล วันทำงาน > 0
+                Rptformular &= " and ({Rpt_OTreport.D1}+{Rpt_OTreport.D2}+{Rpt_OTreport.D3}+" & _
+                                 "{Rpt_OTreport.D4}+{Rpt_OTreport.D5}+{Rpt_OTreport.D6}+" & _
+                                 "{Rpt_OTreport.D7}+{Rpt_OTreport.D8}+{Rpt_OTreport.D9}+" & _
+                                 "{Rpt_OTreport.D10}+{Rpt_OTreport.D11}+{Rpt_OTreport.D12}+" & _
+                                 "{Rpt_OTreport.D13}+{Rpt_OTreport.D14}+{Rpt_OTreport.D15}+" & _
+                                 "{Rpt_OTreport.D16}+{Rpt_OTreport.D17}+{Rpt_OTreport.D18}+" & _
+                                 "{Rpt_OTreport.D19}+{Rpt_OTreport.D20}+{Rpt_OTreport.D21}+" & _
+                                 "{Rpt_OTreport.D22}+{Rpt_OTreport.D23}+{Rpt_OTreport.D24}+" & _
+                                 "{Rpt_OTreport.D25}+{Rpt_OTreport.D26}+{Rpt_OTreport.D27}+" & _
+                                 "{Rpt_OTreport.D28}+{Rpt_OTreport.D29}+{Rpt_OTreport.D30}+" & _
+                                 "{Rpt_OTreport.D31}" & _
+                                " ) > 0 "
+            End If
+
+
+            If fRpt_OTreport.chkOT.Checked = True Then
+
+                ' แสดง ที่มีข้อมูล OT > 0
+                Rptformular &= " and ({Rpt_OTreport.OTH1}+{Rpt_OTreport.OTH2}+{Rpt_OTreport.OTH3}+" & _
+                                 "{Rpt_OTreport.OTH4}+{Rpt_OTreport.OTH5}+{Rpt_OTreport.OTH6}+" & _
+                                 "{Rpt_OTreport.OTH7}+{Rpt_OTreport.OTH8}+{Rpt_OTreport.OTH9}+" & _
+                                 "{Rpt_OTreport.OTH10}+{Rpt_OTreport.OTH11}+{Rpt_OTreport.OTH12}+" & _
+                                 "{Rpt_OTreport.OTH13}+{Rpt_OTreport.OTH14}+{Rpt_OTreport.OTH15}+" & _
+                                 "{Rpt_OTreport.OTH16}+{Rpt_OTreport.OTH17}+{Rpt_OTreport.OTH18}+" & _
+                                 "{Rpt_OTreport.OTH19}+{Rpt_OTreport.OTH20}+{Rpt_OTreport.OTH21}+" & _
+                                 "{Rpt_OTreport.OTH22}+{Rpt_OTreport.OTH23}+{Rpt_OTreport.OTH24}+" & _
+                                 "{Rpt_OTreport.OTH25}+{Rpt_OTreport.OTH26}+{Rpt_OTreport.OTH27}+" & _
+                                 "{Rpt_OTreport.OTH28}+{Rpt_OTreport.OTH29}+{Rpt_OTreport.OTH30}+" & _
+                                 "{Rpt_OTreport.OTH31}" & _
+                                " ) > 0 "
+            End If
+
+
+
+            Cry.DataDefinition.RecordSelectionFormula = Rptformular
+            CrystalReportViewer1.ReportSource = Cry
+            'CrystalReportViewer1.RefreshReport()
+            Exit Sub
+        End If
+
+    End Sub
+
+    Private Sub ReportViewer1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs)
+
+    End Sub
+
+    Private Sub CrystalReportViewer1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CrystalReportViewer1.Load
+
+    End Sub
+End Class

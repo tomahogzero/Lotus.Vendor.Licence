@@ -1,0 +1,377 @@
+Imports System.Data
+Imports System.Data.SqlClient
+
+Public Class frmOTRate_Period
+
+    Private Sub frmOTRate_Disposed(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Disposed
+        fOTRate = Nothing
+    End Sub
+
+    Private Sub frmOTRate_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles Me.KeyPress
+        If Asc(e.KeyChar) = 13 Then
+            'If e.KeyChar = Microsoft.VisualBasic.ChrW(Keys.Enter) Then
+            If TypeOf Me.ActiveControl Is TextBox Then
+                Dim tb As TextBox = DirectCast(Me.ActiveControl, TextBox)
+                If tb.Multiline AndAlso tb.AcceptsReturn Then
+                    e.Handled = False
+                    Exit Sub
+                End If
+            End If
+            e.Handled = True
+            Dim oform As Form = Me.FindForm
+            oform.SelectNextControl(oform.ActiveControl, True, True, True, True)
+            oform.ActiveControl.Focus()
+        End If
+    End Sub
+
+    Private Sub frmOTRate_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        Call ClearData()
+        Call LoadData()
+    End Sub
+
+    Private Sub btnExit_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnExit.Click
+        Me.Close()
+    End Sub
+
+    Private Sub btnClear_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnClear.Click
+        Call ClearData()
+        Call LoadData()
+        Call EnaCmd(True, False, False)
+        txtCode.Focus()
+    End Sub
+
+    Private Sub ClearData()
+        txtCode.Text = ""
+        txtMnStart.Text = ""
+        txtMnStop.Text = ""
+        txtPay.Text = ""
+    End Sub
+
+    Private Sub btnAdd_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAdd.Click
+        If txtCode.Text.Trim = "" Then
+            MsgBox("กรุณาป้อนรหัสด้วย", MsgBoxStyle.Information, Me.Text)
+            txtCode.Focus()
+            Exit Sub
+        End If
+
+        If IsNumeric(txtMnStart.Text.Trim) = False Then
+            MsgBox("กรุณาป้อน OT (นาที) เป็นตัวเลขให้ถูกต้อง", MsgBoxStyle.Information, Me.Text)
+            txtMnStart.Focus()
+            Exit Sub
+        End If
+
+        If IsNumeric(txtMnStop.Text.Trim) = False Then
+            MsgBox("กรุณาป้อน OT (นาที) เป็นตัวเลขให้ถูกต้อง", MsgBoxStyle.Information, Me.Text)
+            txtMnStop.Focus()
+            Exit Sub
+        End If
+
+        If IsNumeric(txtPay.Text.Trim) = False Then
+            MsgBox("กรุณาป้อนตัวเลขให้ถูกต้องด้วย", MsgBoxStyle.Information, Me.Text)
+            txtPay.Focus()
+            txtPay.SelectAll()
+            Exit Sub
+        End If
+
+        If dataIsExist(CInt(txtMnStart.Text), CInt(txtMnStop.Text)) = True Then
+            MsgBox("นาทีนี้ถูกใช้แล้ว กรุณาเปลี่ยนใหม่", MsgBoxStyle.Information, Me.Text)
+            txtMnStart.Focus()
+            Exit Sub
+        End If
+
+        Dim dCmd As New SqlCommand
+        Dim strSQL As String
+        Dim Code As String = txtCode.Text.Trim
+        Dim Tn As SqlTransaction
+        Tn = Conn.BeginTransaction
+        dCmd.Transaction = Tn
+        Try
+
+            strSQL = "Delete From TimeOvertimeRate_Period" & _
+                    " Where Code = '" & Code.Trim & "'"
+            dCmd.Connection = Conn
+            dCmd.CommandText = strSQL
+            dCmd.ExecuteNonQuery()
+
+            strSQL = "Insert Into TimeOvertimeRate_Period(Code,MnSt,MnSp,Pay,LastUpdate) Values(" & _
+                    " '" & Code.Trim & "'," & _
+                    " " & txtMnStart.Text.Trim & "," & _
+                    " " & txtMnStop.Text.Trim & "," & _
+                    " " & txtPay.Text.Trim & "," & _
+                    " Getdate())"
+            dCmd.Connection = Conn
+            dCmd.CommandText = strSQL
+            dCmd.ExecuteNonQuery()
+
+            Tn.Commit()
+        Catch ex As Exception
+            Tn.Rollback()
+            MsgBox(ex.Message, MsgBoxStyle.Critical, Me.Text)
+            Exit Sub
+        End Try
+        Call btnClear_Click(Me, System.EventArgs.Empty)
+    End Sub
+
+    Private Sub btnEdit_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnEdit.Click
+        Dim Code As String = txtCode.Text.Trim
+
+        If txtCode.Text.Trim = "" Then
+            MsgBox("กรุณาป้อนรหัสด้วย", MsgBoxStyle.Information, Me.Text)
+            txtCode.Focus()
+            Exit Sub
+        End If
+
+        If IsNumeric(txtMnStart.Text.Trim) = False Then
+            MsgBox("กรุณาป้อน OT (ชม.) เป็นตัวเลขให้ถูกต้อง", MsgBoxStyle.Information, Me.Text)
+            txtMnStart.Focus()
+            Exit Sub
+        End If
+
+        If IsNumeric(txtMnStop.Text.Trim) = False Then
+            MsgBox("กรุณาป้อน OT (ชม.) เป็นตัวเลขให้ถูกต้อง", MsgBoxStyle.Information, Me.Text)
+            txtMnStop.Focus()
+            Exit Sub
+        End If
+
+        If IsNumeric(txtPay.Text.Trim) = False Then
+            MsgBox("กรุณาป้อนตัวเลขให้ถูกต้องด้วย", MsgBoxStyle.Information, Me.Text)
+            txtPay.Focus()
+            txtPay.SelectAll()
+            Exit Sub
+        End If
+
+        If dataIsExist(CInt(txtMnStart.Text), CInt(txtMnStop.Text), Code.Trim) = True Then
+            MsgBox("นาทีนี้ถูกใช้แล้ว กรุณาเปลี่ยนใหม่", MsgBoxStyle.Information, Me.Text)
+            txtMnStart.Focus()
+            Exit Sub
+        End If
+
+        Dim dCmd As New SqlCommand
+        Dim strSQL As String
+
+        Dim Tn As SqlTransaction
+        Tn = Conn.BeginTransaction
+        dCmd.Transaction = Tn
+        Try
+
+            strSQL = "Delete From TimeOvertimerate_Period" & _
+                    " Where Code = '" & Code.Trim & "'"
+            dCmd.Connection = Conn
+            dCmd.CommandText = strSQL
+            dCmd.ExecuteNonQuery()
+
+            strSQL = "Insert Into TimeOvertimerate_Period(Code,MnSt,MnSp,Pay,LastUpdate) Values(" & _
+                    " '" & Code.Trim & "'," & _
+                    " " & txtMnStart.Text.Trim & "," & _
+                    " " & txtMnStop.Text.Trim & "," & _
+                    " " & txtPay.Text.Trim & "," & _
+                    " Getdate())"
+            dCmd.Connection = Conn
+            dCmd.CommandText = strSQL
+            dCmd.ExecuteNonQuery()
+
+            Tn.Commit()
+        Catch ex As Exception
+            Tn.Rollback()
+            MsgBox(ex.Message, MsgBoxStyle.Critical, Me.Text)
+            Exit Sub
+        End Try
+        Call btnClear_Click(Me, System.EventArgs.Empty)
+    End Sub
+
+    Private Sub btnDelete_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnDelete.Click
+        Dim Code As String = txtCode.Text.Trim
+
+        If txtCode.Text.Trim = "" Then
+            MsgBox("กรุณาป้อนรหัสด้วย", MsgBoxStyle.Information, Me.Text)
+            txtCode.Focus()
+            Exit Sub
+        End If
+
+        Dim dCmd As New SqlCommand
+        Dim strSQL As String
+        Dim Tn As SqlTransaction
+        Tn = Conn.BeginTransaction
+        dCmd.Transaction = Tn
+        Try
+            strSQL = "Delete From TimeOvertimerate_Period" & _
+                    " Where Code = '" & Code.Trim & "'"
+            dCmd.Connection = Conn
+            dCmd.CommandText = strSQL
+            dCmd.ExecuteNonQuery()
+
+            Tn.Commit()
+        Catch ex As Exception
+            Tn.Rollback()
+            MsgBox(ex.Message, MsgBoxStyle.Critical, Me.Text)
+            Exit Sub
+        End Try
+        Call btnClear_Click(Me, System.EventArgs.Empty)
+    End Sub
+
+    Private Sub LoadData()
+        Dim Da As New SqlDataAdapter
+        Dim Ds As New DataSet
+        Dim strSQL As String
+        Dim arrData() As String
+        Dim List As ListViewItem
+        strSQL = "Select Code," & _
+                        " MnSt = Isnull(MnSt,0)," & _
+                        " MnSp = Isnull(MnSp,0)," & _
+                        " Pay = Isnull(Pay,0),LastUpdate" & _
+                " From TimeOvertimerate_Period " & _
+                " Order by MnSt"
+        Da = New SqlDataAdapter(strSQL, Conn)
+        Da.Fill(Ds, "Data")
+        With Ds.Tables("Data")
+            lstOtRate.Items.Clear()
+            Dim I As Integer
+            For I = 0 To .Rows.Count - 1
+                arrData = New String() {I + 1, _
+                                    .Rows(I).Item("Code"), _
+                                    .Rows(I).Item("MnSt"), _
+                                    .Rows(I).Item("MnSp"), _
+                                    .Rows(I).Item("Pay"), _
+                                    Format(.Rows(I).Item("LastUpdate"), "dd/MM/yyyy HH:mm:ss")}
+                List = New ListViewItem(arrData)
+                lstOtRate.Items.Add(List)
+            Next
+            Ds.Clear()
+        End With
+    End Sub
+
+    Private Sub EnaCmd(ByVal Add As Boolean, ByVal Edit As Boolean, ByVal Delete As Boolean)
+        btnAdd.Enabled = Add
+        btnEdit.Enabled = Edit
+        btnDelete.Enabled = Delete
+    End Sub
+
+    Private Sub txtCode_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtCode.LostFocus
+        Dim Da As New SqlDataAdapter
+        Dim Ds As New DataSet
+        Dim strSQL As String
+        Dim Code As String = txtCode.Text.Trim
+        strSQL = "Select Code," & _
+                        " MnSt = Isnull(MnSt,0)," & _
+                        " MnSp = Isnull(MnSp,0)," & _
+                        " Pay = Isnull(Pay,0),LastUpdate" & _
+                " From TimeOvertimerate_Period " & _
+                " Where Code = '" & txtCode.Text.Trim & "' " & _
+                " Order by Code "
+        Da = New SqlDataAdapter(strSQL, Conn)
+        Da.Fill(Ds, "Data")
+        With Ds.Tables("Data")
+            If .Rows.Count = 0 Then
+                Code = txtCode.Text.Trim
+                Call ClearData()
+                txtCode.Text = Code.Trim
+                Call EnaCmd(True, False, False)
+                Ds.Clear()
+                Exit Sub
+            End If
+            txtMnStart.Text = .Rows(0).Item("MnSt")
+            txtMnStop.Text = .Rows(0).Item("MnSp")
+            txtPay.Text = .Rows(0).Item("Pay")
+            Call EnaCmd(False, True, True)
+        End With
+    End Sub
+
+    Private Sub txtCode_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtCode.TextChanged
+
+    End Sub
+
+    Private Sub lstOtRate_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles lstOtRate.SelectedIndexChanged
+        With lstOtRate
+            If .SelectedItems.Count = 0 Then Exit Sub
+            Dim Code As String = .SelectedItems(0).SubItems(1).Text.Trim
+
+            txtCode.Text = Code
+            txtCode_LostFocus(Me, System.EventArgs.Empty)
+        End With
+    End Sub
+
+    Private Sub btnGenScrip_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+        Dim FileName As String
+        'SaveFileDialog1.Filter = "All File|*.*"
+        SaveFileDialog1.Filter = "Text File|*.txt"
+        SaveFileDialog1.ShowDialog()
+        Application.DoEvents()
+        If Trim(SaveFileDialog1.FileName) = "" Then
+            FileName = ""
+            Exit Sub
+        End If
+        'txtFileName.Text = System.IO.Path.GetFileName(OpenFileDialog1.FileName)
+        FileName = SaveFileDialog1.FileName
+
+        Dim Da As New SqlDataAdapter
+        Dim Ds As New DataSet
+        Dim strSQL As String
+        Dim SQLExport As String
+
+        strSQL = "Select * from TimeOvertimerate_Period Order By Code"
+        Da = New SqlDataAdapter(strSQL, Conn)
+        Da.Fill(Ds, "Data")
+        With Ds.Tables("Data")
+            Dim I As Integer
+            For I = 0 To Ds.Tables("Data").Rows.Count - 1
+                Dim file As New System.IO.StreamWriter(FileName, True)
+
+                SQLExport = "Insert Into TimeOvertimerate_Period(Code,TimeSt,TimeSp,Amt,Rate,Remark,LastUpdate) Values(" & _
+                            " '" & .Rows(I).Item("Code") & "'," & _
+                            " '" & .Rows(I).Item("TimeSt") & "'," & _
+                            " '" & .Rows(I).Item("TimeSp") & "'," & _
+                            " " & .Rows(I).Item("Amt") & "," & _
+                            " " & .Rows(I).Item("Rate") & "," & _
+                            " '" & .Rows(I).Item("Remark") & "'," & _
+                            " Getdate())"
+
+                file.WriteLine(SQLExport)
+                file.Close()
+            Next
+            MsgBox("Gen Scrip Complete", MsgBoxStyle.Information, "Gen Scrip")
+        End With
+    End Sub
+
+    Function dataIsExist(ByVal MnSt As Integer, ByVal MnSp As Integer) As Boolean
+        Dim da As New SqlDataAdapter
+        Dim ds As New DataSet
+        Dim strSQL As String
+
+
+        strSQL = "Select MnSt " & _
+                " From TimeOvertimerate_Period " & _
+                " Where ((" & MnSt & " Between MnSt and MnSp) Or " & _
+                    " (" & MnSp & " Between MnSt and MnSp)) "
+        da = New SqlDataAdapter(strSQL, Conn)
+        da.Fill(ds, "data")
+
+        With ds.Tables("data")
+            If .Rows.Count = 0 Then
+                Return False
+            Else
+                Return True
+            End If
+        End With
+    End Function
+
+    Function dataIsExist(ByVal MnSt As Integer, ByVal MnSp As Integer, ByVal Code As String) As Boolean
+        Dim da As New SqlDataAdapter
+        Dim ds As New DataSet
+        Dim strSQL As String
+
+        strSQL = "Select MnSt " & _
+                " From TimeOvertimerate_Period " & _
+                " Where Code <> '" & Code.Trim & "' and ((" & MnSt & " Between MnSt and MnSp) Or " & _
+                    " (" & MnSp & " Between MnSt and MnSp)) "
+        da = New SqlDataAdapter(strSQL, Conn)
+        da.Fill(ds, "data")
+
+        With ds.Tables("data")
+            If .Rows.Count = 0 Then
+                Return False
+            Else
+                Return True
+            End If
+        End With
+    End Function
+End Class

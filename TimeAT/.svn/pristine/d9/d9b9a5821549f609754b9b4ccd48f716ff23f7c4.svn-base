@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="TimeAttendance_Tea">
+</Property><Property Name="Solution File" Value="D:\SourceCode\Program.Net\Payroll_Package\TimeAttendance\TimeAttendance_Tea.sln">
+</Property><Property Name="Date" Value="19 กรกฎาคม 2012">
+</Property><Property Name="Time" Value="11:01">
+</Property></Properties><Event ErrorLevel="0" Project="TimeAttendance" Source="TimeAttendance.vbproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="TimeAttendance" Source="TimeAttendance.vbproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="TimeAttendance_Tea.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="TimeAttendance_Tea.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="TimeAttendance" Source="TimeAttendance.vbproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

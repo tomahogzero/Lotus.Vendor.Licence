@@ -1,0 +1,563 @@
+<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+Partial Class frmRPTEmpValAbsLateByDate
+    Inherits System.Windows.Forms.Form
+
+    'Form overrides dispose to clean up the component list.
+    <System.Diagnostics.DebuggerNonUserCode()> _
+    Protected Overrides Sub Dispose(ByVal disposing As Boolean)
+        Try
+            If disposing AndAlso components IsNot Nothing Then
+                components.Dispose()
+            End If
+        Finally
+            MyBase.Dispose(disposing)
+        End Try
+    End Sub
+
+    'Required by the Windows Form Designer
+    Private components As System.ComponentModel.IContainer
+
+    'NOTE: The following procedure is required by the Windows Form Designer
+    'It can be modified using the Windows Form Designer.  
+    'Do not modify it using the code editor.
+    <System.Diagnostics.DebuggerStepThrough()> _
+    Private Sub InitializeComponent()
+        Me.btnReport = New DevComponents.DotNetBar.ButtonX
+        Me.btnExit = New DevComponents.DotNetBar.ButtonX
+        Me.cboSection = New DevComponents.DotNetBar.Controls.ComboBoxEx
+        Me.LabelX5 = New DevComponents.DotNetBar.LabelX
+        Me.cboDepartment = New DevComponents.DotNetBar.Controls.ComboBoxEx
+        Me.LabelX4 = New DevComponents.DotNetBar.LabelX
+        Me.cboDivision = New DevComponents.DotNetBar.Controls.ComboBoxEx
+        Me.LabelX3 = New DevComponents.DotNetBar.LabelX
+        Me.GroupBox5 = New System.Windows.Forms.GroupBox
+        Me.rdContractor = New System.Windows.Forms.RadioButton
+        Me.rdDay = New System.Windows.Forms.RadioButton
+        Me.rdMonth = New System.Windows.Forms.RadioButton
+        Me.rdAll = New System.Windows.Forms.RadioButton
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox
+        Me.Label3 = New System.Windows.Forms.Label
+        Me.txtNameSearch = New System.Windows.Forms.TextBox
+        Me.Label4 = New System.Windows.Forms.Label
+        Me.txtCode1 = New System.Windows.Forms.TextBox
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox
+        Me.LabelX1 = New DevComponents.DotNetBar.LabelX
+        Me.txtDateStart = New DevComponents.Editors.DateTimeAdv.DateTimeInput
+        Me.GroupBox3 = New System.Windows.Forms.GroupBox
+        Me.cboCompany = New System.Windows.Forms.ComboBox
+        Me.cboEmpGroup = New System.Windows.Forms.ComboBox
+        Me.cboDivision1 = New System.Windows.Forms.ComboBox
+        Me.cboPosition = New System.Windows.Forms.ComboBox
+        Me.cboDepartment1 = New System.Windows.Forms.ComboBox
+        Me.Label1 = New System.Windows.Forms.Label
+        Me.Label6 = New System.Windows.Forms.Label
+        Me.Label7 = New System.Windows.Forms.Label
+        Me.Label8 = New System.Windows.Forms.Label
+        Me.Label2 = New System.Windows.Forms.Label
+        Me.GroupBox4 = New System.Windows.Forms.GroupBox
+        Me.rdSumarize = New System.Windows.Forms.RadioButton
+        Me.rdShowByEmp = New System.Windows.Forms.RadioButton
+        Me.GroupBox5.SuspendLayout()
+        Me.GroupBox2.SuspendLayout()
+        Me.GroupBox1.SuspendLayout()
+        CType(Me.txtDateStart, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox3.SuspendLayout()
+        Me.GroupBox4.SuspendLayout()
+        Me.SuspendLayout()
+        '
+        'btnReport
+        '
+        Me.btnReport.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.btnReport.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.btnReport.Location = New System.Drawing.Point(3, 417)
+        Me.btnReport.Name = "btnReport"
+        Me.btnReport.Size = New System.Drawing.Size(191, 45)
+        Me.btnReport.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.btnReport.TabIndex = 12
+        Me.btnReport.Text = "รายงาน"
+        '
+        'btnExit
+        '
+        Me.btnExit.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.btnExit.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.btnExit.Location = New System.Drawing.Point(200, 417)
+        Me.btnExit.Name = "btnExit"
+        Me.btnExit.Size = New System.Drawing.Size(191, 45)
+        Me.btnExit.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.btnExit.TabIndex = 12
+        Me.btnExit.Text = "ออก"
+        '
+        'cboSection
+        '
+        Me.cboSection.DisplayMember = "Text"
+        Me.cboSection.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.cboSection.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboSection.FormattingEnabled = True
+        Me.cboSection.ItemHeight = 14
+        Me.cboSection.Location = New System.Drawing.Point(119, 55)
+        Me.cboSection.Name = "cboSection"
+        Me.cboSection.Size = New System.Drawing.Size(256, 20)
+        Me.cboSection.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.cboSection.TabIndex = 12
+        '
+        'LabelX5
+        '
+        Me.LabelX5.BackColor = System.Drawing.Color.Transparent
+        '
+        '
+        '
+        Me.LabelX5.BackgroundStyle.Class = ""
+        Me.LabelX5.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.LabelX5.Location = New System.Drawing.Point(3, 3)
+        Me.LabelX5.Name = "LabelX5"
+        Me.LabelX5.Size = New System.Drawing.Size(110, 20)
+        Me.LabelX5.TabIndex = 11
+        Me.LabelX5.Text = "ฝ่าย : "
+        '
+        'cboDepartment
+        '
+        Me.cboDepartment.DisplayMember = "Text"
+        Me.cboDepartment.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.cboDepartment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboDepartment.FormattingEnabled = True
+        Me.cboDepartment.ItemHeight = 14
+        Me.cboDepartment.Location = New System.Drawing.Point(119, 29)
+        Me.cboDepartment.Name = "cboDepartment"
+        Me.cboDepartment.Size = New System.Drawing.Size(256, 20)
+        Me.cboDepartment.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.cboDepartment.TabIndex = 12
+        '
+        'LabelX4
+        '
+        Me.LabelX4.BackColor = System.Drawing.Color.Transparent
+        '
+        '
+        '
+        Me.LabelX4.BackgroundStyle.Class = ""
+        Me.LabelX4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.LabelX4.Location = New System.Drawing.Point(3, 29)
+        Me.LabelX4.Name = "LabelX4"
+        Me.LabelX4.Size = New System.Drawing.Size(110, 20)
+        Me.LabelX4.TabIndex = 11
+        Me.LabelX4.Text = "แผนก : "
+        '
+        'cboDivision
+        '
+        Me.cboDivision.DisplayMember = "Text"
+        Me.cboDivision.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.cboDivision.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboDivision.FormattingEnabled = True
+        Me.cboDivision.ItemHeight = 14
+        Me.cboDivision.Location = New System.Drawing.Point(119, 3)
+        Me.cboDivision.Name = "cboDivision"
+        Me.cboDivision.Size = New System.Drawing.Size(256, 20)
+        Me.cboDivision.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.cboDivision.TabIndex = 12
+        '
+        'LabelX3
+        '
+        Me.LabelX3.BackColor = System.Drawing.Color.Transparent
+        '
+        '
+        '
+        Me.LabelX3.BackgroundStyle.Class = ""
+        Me.LabelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.LabelX3.Location = New System.Drawing.Point(2, 55)
+        Me.LabelX3.Name = "LabelX3"
+        Me.LabelX3.Size = New System.Drawing.Size(110, 20)
+        Me.LabelX3.TabIndex = 11
+        Me.LabelX3.Text = "หน่วยงาน : "
+        '
+        'GroupBox5
+        '
+        Me.GroupBox5.Controls.Add(Me.rdContractor)
+        Me.GroupBox5.Controls.Add(Me.rdDay)
+        Me.GroupBox5.Controls.Add(Me.rdMonth)
+        Me.GroupBox5.Controls.Add(Me.rdAll)
+        Me.GroupBox5.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.GroupBox5.Location = New System.Drawing.Point(2, 282)
+        Me.GroupBox5.Name = "GroupBox5"
+        Me.GroupBox5.Size = New System.Drawing.Size(389, 47)
+        Me.GroupBox5.TabIndex = 32
+        Me.GroupBox5.TabStop = False
+        Me.GroupBox5.Text = "พนักงาน"
+        '
+        'rdContractor
+        '
+        Me.rdContractor.AutoSize = True
+        Me.rdContractor.Location = New System.Drawing.Point(277, 20)
+        Me.rdContractor.Name = "rdContractor"
+        Me.rdContractor.Size = New System.Drawing.Size(64, 17)
+        Me.rdContractor.TabIndex = 0
+        Me.rdContractor.Text = "รายเหมา"
+        Me.rdContractor.UseVisualStyleBackColor = True
+        '
+        'rdDay
+        '
+        Me.rdDay.AutoSize = True
+        Me.rdDay.Location = New System.Drawing.Point(181, 20)
+        Me.rdDay.Name = "rdDay"
+        Me.rdDay.Size = New System.Drawing.Size(53, 17)
+        Me.rdDay.TabIndex = 0
+        Me.rdDay.Text = "รายวัน"
+        Me.rdDay.UseVisualStyleBackColor = True
+        '
+        'rdMonth
+        '
+        Me.rdMonth.AutoSize = True
+        Me.rdMonth.Location = New System.Drawing.Point(92, 20)
+        Me.rdMonth.Name = "rdMonth"
+        Me.rdMonth.Size = New System.Drawing.Size(66, 17)
+        Me.rdMonth.TabIndex = 0
+        Me.rdMonth.Text = "รายเดือน"
+        Me.rdMonth.UseVisualStyleBackColor = True
+        '
+        'rdAll
+        '
+        Me.rdAll.AutoSize = True
+        Me.rdAll.Checked = True
+        Me.rdAll.Location = New System.Drawing.Point(6, 20)
+        Me.rdAll.Name = "rdAll"
+        Me.rdAll.Size = New System.Drawing.Size(59, 17)
+        Me.rdAll.TabIndex = 0
+        Me.rdAll.TabStop = True
+        Me.rdAll.Text = "ทั้งหมด"
+        Me.rdAll.UseVisualStyleBackColor = True
+        '
+        'GroupBox2
+        '
+        Me.GroupBox2.Controls.Add(Me.Label3)
+        Me.GroupBox2.Controls.Add(Me.txtNameSearch)
+        Me.GroupBox2.Controls.Add(Me.Label4)
+        Me.GroupBox2.Controls.Add(Me.txtCode1)
+        Me.GroupBox2.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.GroupBox2.Location = New System.Drawing.Point(2, 335)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(389, 76)
+        Me.GroupBox2.TabIndex = 21
+        Me.GroupBox2.TabStop = False
+        Me.GroupBox2.Text = "ค้นหาตาม :"
+        '
+        'Label3
+        '
+        Me.Label3.Location = New System.Drawing.Point(3, 46)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(62, 16)
+        Me.Label3.TabIndex = 24
+        Me.Label3.Text = "ชื่อ  : "
+        Me.Label3.TextAlign = System.Drawing.ContentAlignment.TopRight
+        '
+        'txtNameSearch
+        '
+        Me.txtNameSearch.Location = New System.Drawing.Point(69, 46)
+        Me.txtNameSearch.Name = "txtNameSearch"
+        Me.txtNameSearch.Size = New System.Drawing.Size(213, 21)
+        Me.txtNameSearch.TabIndex = 23
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(31, 23)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(33, 13)
+        Me.Label4.TabIndex = 20
+        Me.Label4.Text = "รหัส :"
+        '
+        'txtCode1
+        '
+        Me.txtCode1.Location = New System.Drawing.Point(69, 20)
+        Me.txtCode1.Name = "txtCode1"
+        Me.txtCode1.Size = New System.Drawing.Size(113, 21)
+        Me.txtCode1.TabIndex = 0
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.LabelX1)
+        Me.GroupBox1.Controls.Add(Me.txtDateStart)
+        Me.GroupBox1.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.GroupBox1.Location = New System.Drawing.Point(2, 4)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(389, 53)
+        Me.GroupBox1.TabIndex = 33
+        Me.GroupBox1.TabStop = False
+        '
+        'LabelX1
+        '
+        '
+        '
+        '
+        Me.LabelX1.BackgroundStyle.Class = ""
+        Me.LabelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.LabelX1.Location = New System.Drawing.Point(17, 19)
+        Me.LabelX1.Name = "LabelX1"
+        Me.LabelX1.Size = New System.Drawing.Size(38, 20)
+        Me.LabelX1.TabIndex = 13
+        Me.LabelX1.Text = "วันที่ : "
+        '
+        'txtDateStart
+        '
+        '
+        '
+        '
+        Me.txtDateStart.BackgroundStyle.Class = "DateTimeInputBackground"
+        Me.txtDateStart.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.txtDateStart.ButtonDropDown.Shortcut = DevComponents.DotNetBar.eShortcut.AltDown
+        Me.txtDateStart.ButtonDropDown.Visible = True
+        Me.txtDateStart.CustomFormat = "dd/MM/yyyy"
+        Me.txtDateStart.IsPopupCalendarOpen = False
+        Me.txtDateStart.Location = New System.Drawing.Point(61, 19)
+        '
+        '
+        '
+        Me.txtDateStart.MonthCalendar.AnnuallyMarkedDates = New Date(-1) {}
+        '
+        '
+        '
+        Me.txtDateStart.MonthCalendar.BackgroundStyle.BackColor = System.Drawing.SystemColors.Window
+        Me.txtDateStart.MonthCalendar.BackgroundStyle.Class = ""
+        Me.txtDateStart.MonthCalendar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.txtDateStart.MonthCalendar.ClearButtonVisible = True
+        '
+        '
+        '
+        Me.txtDateStart.MonthCalendar.CommandsBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground2
+        Me.txtDateStart.MonthCalendar.CommandsBackgroundStyle.BackColorGradientAngle = 90
+        Me.txtDateStart.MonthCalendar.CommandsBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground
+        Me.txtDateStart.MonthCalendar.CommandsBackgroundStyle.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid
+        Me.txtDateStart.MonthCalendar.CommandsBackgroundStyle.BorderTopColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarDockedBorder
+        Me.txtDateStart.MonthCalendar.CommandsBackgroundStyle.BorderTopWidth = 1
+        Me.txtDateStart.MonthCalendar.CommandsBackgroundStyle.Class = ""
+        Me.txtDateStart.MonthCalendar.CommandsBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.txtDateStart.MonthCalendar.DisplayMonth = New Date(2012, 1, 1, 0, 0, 0, 0)
+        Me.txtDateStart.MonthCalendar.FirstDayOfWeek = System.DayOfWeek.Monday
+        Me.txtDateStart.MonthCalendar.MarkedDates = New Date(-1) {}
+        Me.txtDateStart.MonthCalendar.MonthlyMarkedDates = New Date(-1) {}
+        '
+        '
+        '
+        Me.txtDateStart.MonthCalendar.NavigationBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2
+        Me.txtDateStart.MonthCalendar.NavigationBackgroundStyle.BackColorGradientAngle = 90
+        Me.txtDateStart.MonthCalendar.NavigationBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground
+        Me.txtDateStart.MonthCalendar.NavigationBackgroundStyle.Class = ""
+        Me.txtDateStart.MonthCalendar.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.txtDateStart.MonthCalendar.TodayButtonVisible = True
+        Me.txtDateStart.MonthCalendar.WeeklyMarkedDays = New System.DayOfWeek(-1) {}
+        Me.txtDateStart.Name = "txtDateStart"
+        Me.txtDateStart.Size = New System.Drawing.Size(131, 21)
+        Me.txtDateStart.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.txtDateStart.TabIndex = 12
+        '
+        'GroupBox3
+        '
+        Me.GroupBox3.Controls.Add(Me.cboCompany)
+        Me.GroupBox3.Controls.Add(Me.cboEmpGroup)
+        Me.GroupBox3.Controls.Add(Me.cboDivision1)
+        Me.GroupBox3.Controls.Add(Me.cboPosition)
+        Me.GroupBox3.Controls.Add(Me.cboDepartment1)
+        Me.GroupBox3.Controls.Add(Me.Label1)
+        Me.GroupBox3.Controls.Add(Me.Label6)
+        Me.GroupBox3.Controls.Add(Me.Label7)
+        Me.GroupBox3.Controls.Add(Me.Label8)
+        Me.GroupBox3.Controls.Add(Me.Label2)
+        Me.GroupBox3.Location = New System.Drawing.Point(3, 119)
+        Me.GroupBox3.Name = "GroupBox3"
+        Me.GroupBox3.Size = New System.Drawing.Size(389, 157)
+        Me.GroupBox3.TabIndex = 34
+        Me.GroupBox3.TabStop = False
+        '
+        'cboCompany
+        '
+        Me.cboCompany.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboCompany.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.cboCompany.FormattingEnabled = True
+        Me.cboCompany.Location = New System.Drawing.Point(94, 19)
+        Me.cboCompany.Name = "cboCompany"
+        Me.cboCompany.Size = New System.Drawing.Size(277, 21)
+        Me.cboCompany.TabIndex = 36
+        '
+        'cboEmpGroup
+        '
+        Me.cboEmpGroup.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboEmpGroup.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.cboEmpGroup.FormattingEnabled = True
+        Me.cboEmpGroup.Location = New System.Drawing.Point(93, 128)
+        Me.cboEmpGroup.Name = "cboEmpGroup"
+        Me.cboEmpGroup.Size = New System.Drawing.Size(277, 21)
+        Me.cboEmpGroup.TabIndex = 34
+        '
+        'cboDivision1
+        '
+        Me.cboDivision1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboDivision1.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.cboDivision1.FormattingEnabled = True
+        Me.cboDivision1.Location = New System.Drawing.Point(93, 46)
+        Me.cboDivision1.Name = "cboDivision1"
+        Me.cboDivision1.Size = New System.Drawing.Size(277, 21)
+        Me.cboDivision1.TabIndex = 32
+        '
+        'cboPosition
+        '
+        Me.cboPosition.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboPosition.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.cboPosition.FormattingEnabled = True
+        Me.cboPosition.Location = New System.Drawing.Point(93, 100)
+        Me.cboPosition.Name = "cboPosition"
+        Me.cboPosition.Size = New System.Drawing.Size(277, 21)
+        Me.cboPosition.TabIndex = 33
+        '
+        'cboDepartment1
+        '
+        Me.cboDepartment1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboDepartment1.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.cboDepartment1.FormattingEnabled = True
+        Me.cboDepartment1.Location = New System.Drawing.Point(93, 73)
+        Me.cboDepartment1.Name = "cboDepartment1"
+        Me.cboDepartment1.Size = New System.Drawing.Size(277, 21)
+        Me.cboDepartment1.TabIndex = 35
+        '
+        'Label1
+        '
+        Me.Label1.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.Label1.Location = New System.Drawing.Point(11, 22)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(77, 16)
+        Me.Label1.TabIndex = 41
+        Me.Label1.Text = "บริษัท : "
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.TopRight
+        '
+        'Label6
+        '
+        Me.Label6.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.Label6.Location = New System.Drawing.Point(10, 131)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(77, 16)
+        Me.Label6.TabIndex = 39
+        Me.Label6.Text = "กลุ่ม พนักงาน : "
+        Me.Label6.TextAlign = System.Drawing.ContentAlignment.TopRight
+        '
+        'Label7
+        '
+        Me.Label7.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.Label7.Location = New System.Drawing.Point(10, 49)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(77, 16)
+        Me.Label7.TabIndex = 37
+        Me.Label7.Text = "ฝ่าย : "
+        Me.Label7.TextAlign = System.Drawing.ContentAlignment.TopRight
+        '
+        'Label8
+        '
+        Me.Label8.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.Label8.Location = New System.Drawing.Point(10, 103)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(77, 16)
+        Me.Label8.TabIndex = 38
+        Me.Label8.Text = "ตำแหน่ง : "
+        Me.Label8.TextAlign = System.Drawing.ContentAlignment.TopRight
+        '
+        'Label2
+        '
+        Me.Label2.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.Label2.Location = New System.Drawing.Point(10, 76)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(77, 16)
+        Me.Label2.TabIndex = 40
+        Me.Label2.Text = "แผนก : "
+        Me.Label2.TextAlign = System.Drawing.ContentAlignment.TopRight
+        '
+        'GroupBox4
+        '
+        Me.GroupBox4.Controls.Add(Me.rdSumarize)
+        Me.GroupBox4.Controls.Add(Me.rdShowByEmp)
+        Me.GroupBox4.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.GroupBox4.Location = New System.Drawing.Point(2, 63)
+        Me.GroupBox4.Name = "GroupBox4"
+        Me.GroupBox4.Size = New System.Drawing.Size(389, 50)
+        Me.GroupBox4.TabIndex = 21
+        Me.GroupBox4.TabStop = False
+        Me.GroupBox4.Text = "รูปแบบรายงาน"
+        '
+        'rdSumarize
+        '
+        Me.rdSumarize.AutoSize = True
+        Me.rdSumarize.Checked = True
+        Me.rdSumarize.Location = New System.Drawing.Point(9, 20)
+        Me.rdSumarize.Name = "rdSumarize"
+        Me.rdSumarize.Size = New System.Drawing.Size(65, 17)
+        Me.rdSumarize.TabIndex = 0
+        Me.rdSumarize.TabStop = True
+        Me.rdSumarize.Text = "แบบสรุป"
+        Me.rdSumarize.UseVisualStyleBackColor = True
+        '
+        'rdShowByEmp
+        '
+        Me.rdShowByEmp.AutoSize = True
+        Me.rdShowByEmp.Location = New System.Drawing.Point(95, 20)
+        Me.rdShowByEmp.Name = "rdShowByEmp"
+        Me.rdShowByEmp.Size = New System.Drawing.Size(182, 17)
+        Me.rdShowByEmp.TabIndex = 0
+        Me.rdShowByEmp.Text = "แสดงรายชื่อพนักงานที่ไม่มาทำงาน"
+        Me.rdShowByEmp.UseVisualStyleBackColor = True
+        '
+        'frmRPTEmpValAbsLateByDate
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.ClientSize = New System.Drawing.Size(487, 468)
+        Me.Controls.Add(Me.GroupBox3)
+        Me.Controls.Add(Me.GroupBox1)
+        Me.Controls.Add(Me.GroupBox5)
+        Me.Controls.Add(Me.GroupBox4)
+        Me.Controls.Add(Me.GroupBox2)
+        Me.Controls.Add(Me.btnExit)
+        Me.Controls.Add(Me.btnReport)
+        Me.Name = "frmRPTEmpValAbsLateByDate"
+        Me.Text = "รายงานการลาขาดสายของพนักงาน ประจำวันที่"
+        Me.GroupBox5.ResumeLayout(False)
+        Me.GroupBox5.PerformLayout()
+        Me.GroupBox2.ResumeLayout(False)
+        Me.GroupBox2.PerformLayout()
+        Me.GroupBox1.ResumeLayout(False)
+        CType(Me.txtDateStart, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox3.ResumeLayout(False)
+        Me.GroupBox4.ResumeLayout(False)
+        Me.GroupBox4.PerformLayout()
+        Me.ResumeLayout(False)
+
+    End Sub
+    Friend WithEvents btnReport As DevComponents.DotNetBar.ButtonX
+    Friend WithEvents btnExit As DevComponents.DotNetBar.ButtonX
+    Friend WithEvents cboSection As DevComponents.DotNetBar.Controls.ComboBoxEx
+    Friend WithEvents LabelX5 As DevComponents.DotNetBar.LabelX
+    Friend WithEvents cboDepartment As DevComponents.DotNetBar.Controls.ComboBoxEx
+    Friend WithEvents LabelX4 As DevComponents.DotNetBar.LabelX
+    Friend WithEvents cboDivision As DevComponents.DotNetBar.Controls.ComboBoxEx
+    Friend WithEvents LabelX3 As DevComponents.DotNetBar.LabelX
+    Friend WithEvents GroupBox5 As System.Windows.Forms.GroupBox
+    Friend WithEvents rdContractor As System.Windows.Forms.RadioButton
+    Friend WithEvents rdDay As System.Windows.Forms.RadioButton
+    Friend WithEvents rdMonth As System.Windows.Forms.RadioButton
+    Friend WithEvents rdAll As System.Windows.Forms.RadioButton
+    Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
+    Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents txtNameSearch As System.Windows.Forms.TextBox
+    Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents txtCode1 As System.Windows.Forms.TextBox
+    Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
+    Friend WithEvents LabelX1 As DevComponents.DotNetBar.LabelX
+    Friend WithEvents txtDateStart As DevComponents.Editors.DateTimeAdv.DateTimeInput
+    Friend WithEvents GroupBox3 As System.Windows.Forms.GroupBox
+    Friend WithEvents cboCompany As System.Windows.Forms.ComboBox
+    Friend WithEvents cboEmpGroup As System.Windows.Forms.ComboBox
+    Friend WithEvents cboDivision1 As System.Windows.Forms.ComboBox
+    Friend WithEvents cboPosition As System.Windows.Forms.ComboBox
+    Friend WithEvents cboDepartment1 As System.Windows.Forms.ComboBox
+    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents Label6 As System.Windows.Forms.Label
+    Friend WithEvents Label7 As System.Windows.Forms.Label
+    Friend WithEvents Label8 As System.Windows.Forms.Label
+    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents GroupBox4 As System.Windows.Forms.GroupBox
+    Friend WithEvents rdSumarize As System.Windows.Forms.RadioButton
+    Friend WithEvents rdShowByEmp As System.Windows.Forms.RadioButton
+End Class

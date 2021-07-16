@@ -1,0 +1,1722 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="XrLabel58.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>48.56415, 16.40273</value>
+  </data>
+  <data name="XrLabel59.BorderColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="XrLabel12.Text" xml:space="preserve">
+    <value>กะ :</value>
+  </data>
+  <data name="XrLabel44.BorderColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="XrLabel52.BorderColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="XrLabel2.Text" xml:space="preserve">
+    <value>XrLabel60</value>
+  </data>
+  <data name="XrLabel53.BorderColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="XrLabel42.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 10pt, style=Bold</value>
+  </data>
+  <data name="lblTestLate.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 10pt</value>
+  </data>
+  <assembly alias="DevExpress.Data.v17.1" name="DevExpress.Data.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <data name="XrLabel6.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>167.9452, 0</value>
+  </data>
+  <data name="lbSumLate.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopRight</value>
+  </data>
+  <data name="lbSumTotalLate.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 10pt, style=Bold</value>
+  </data>
+  <data name="XrLabel29.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>60.41699, 21.95829</value>
+  </data>
+  <data name="XrLabel23.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="XrLabel23.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 10pt, style=Bold</value>
+  </data>
+  <data name="XrLabel8.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>Transparent</value>
+  </data>
+  <data name="XrLabel52.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 10pt, style=Bold</value>
+  </data>
+  <data name="XrLabel1.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopCenter</value>
+  </data>
+  <data name="XrLabel51.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>Transparent</value>
+  </data>
+  <data name="XrLabel54.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopCenter</value>
+  </data>
+  <data name="XrLabel45.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 10pt, style=Bold</value>
+  </data>
+  <data name="lbSumLate.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>37.7627, 16.40273</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="GroupHeader3.HeightF" type="System.Single, mscorlib">
+    <value>21.95828</value>
+  </data>
+  <data name="SqlDataSource1.ResultSchemaSerializable" xml:space="preserve">
+    <value>PERhdGFTZXQgTmFtZT0iU3FsRGF0YVNvdXJjZTEiPjxWaWV3IE5hbWU9InZ3X1NPX3F1b3RhdGlvbl9yZXBvcnQiPjxGaWVsZCBOYW1lPSJjb2RlIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkNvbXBhbnlJRCIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJEaXZJZCIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJEZXB0SWQiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iUG9zaXRpb24iIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iR3JvdXBJZCIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJXYWdlVHlwZSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJDb250cmFjdG9yIiBUeXBlPSJCb29sZWFuIiAvPjxGaWVsZCBOYW1lPSJEYXlPZldlZWsiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iRGF0ZUluIiBUeXBlPSJEYXRlVGltZSIgLz48RmllbGQgTmFtZT0iVGltZTEiIFR5cGU9IkRhdGVUaW1lIiAvPjxGaWVsZCBOYW1lPSJUaW1lMiIgVHlwZT0iRGF0ZVRpbWUiIC8+PEZpZWxkIE5hbWU9IlRpbWUzIiBUeXBlPSJEYXRlVGltZSIgLz48RmllbGQgTmFtZT0iVGltZTQiIFR5cGU9IkRhdGVUaW1lIiAvPjxGaWVsZCBOYW1lPSJEYXlEbyIgVHlwZT0iRGVjaW1hbCIgLz48RmllbGQgTmFtZT0iRGF5RG9fc3RyIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9Ik9UMSIgVHlwZT0iRGVjaW1hbCIgLz48RmllbGQgTmFtZT0iT1QxNSIgVHlwZT0iRGVjaW1hbCIgLz48RmllbGQgTmFtZT0iT1QyIiBUeXBlPSJEZWNpbWFsIiAvPjxGaWVsZCBOYW1lPSJPVDMiIFR5cGU9IkRlY2ltYWwiIC8+PEZpZWxkIE5hbWU9IlZhbCIgVHlwZT0iRGVjaW1hbCIgLz48RmllbGQgTmFtZT0iQWJzZW50IiBUeXBlPSJEZWNpbWFsIiAvPjxGaWVsZCBOYW1lPSJBYnNlbnRfc3RyIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkxhdGUiIFR5cGU9IkludDMyIiAvPjxGaWVsZCBOYW1lPSJMYXRlT1QiIFR5cGU9IkRlY2ltYWwiIC8+PEZpZWxkIE5hbWU9IldvcmtUaW1lIiBUeXBlPSJEZWNpbWFsIiAvPjxGaWVsZCBOYW1lPSJDb2RlIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkRpdmlzaW9uIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkRlcGFydG1lbnQiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iVGl0bGUiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iRm5hbWUiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iTG5hbWUiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iS2FDb2RlIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkthTmFtZSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJDYXJkRm9yZ2V0IiBUeXBlPSJEZWNpbWFsIiAvPjxGaWVsZCBOYW1lPSJDYXJkRm9yZ2V0X3N0ciIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJIb2xpZGF5IiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9InZhbENvZGUiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iVmFjYXRpb24iIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iQ29tcGFueU5hbWUiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iVG90YWxMYXRlIiBUeXBlPSJEZWNpbWFsIiAvPjwvVmlldz48L0RhdGFTZXQ+</value>
+  </data>
+  <data name="XrSummary16.FormatString" xml:space="preserve">
+    <value>{0:n1}</value>
+  </data>
+  <data name="XrLabel41.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 12pt, style=Bold</value>
+  </data>
+  <data name="XrLabel22.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="XrLabel14.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>10.99993, 2.000046</value>
+  </data>
+  <data name="XrLine2.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>9.386508, 43.37511</value>
+  </data>
+  <data name="XrLabel44.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="XrSummary6.FormatString" xml:space="preserve">
+    <value>{0}</value>
+  </data>
+  <data name="lbSumLate.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>95.00002, 2.000046</value>
+  </data>
+  <data name="lblTestLate.Text" xml:space="preserve">
+    <value>00:00</value>
+  </data>
+  <data name="XrLabel11.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="XrLabel42.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>351.5685, 2.000046</value>
+  </data>
+  <data name="XrLabel42.BorderColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="XrLabel32.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopRight</value>
+  </data>
+  <data name="XrLine5.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>10.99993, 0</value>
+  </data>
+  <data name="XrLabel6.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopCenter</value>
+  </data>
+  <data name="XrTableCell3.Text" xml:space="preserve">
+    <value>XrTableCell3</value>
+  </data>
+  <data name="XrLabel29.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>Transparent</value>
+  </data>
+  <data name="XrLabel17.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>259.52, 30.49992</value>
+  </data>
+  <data name="XrLabel44.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 10pt, style=Bold</value>
+  </data>
+  <data name="XrLabel41.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>Transparent</value>
+  </data>
+  <data name="XrLine4.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>10.99987, 0</value>
+  </data>
+  <data name="XrLabel6.BorderColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="XrLabel7.BorderColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="XrSummary15.FormatString" xml:space="preserve">
+    <value>{0:n1}</value>
+  </data>
+  <data name="XrSummary9.FormatString" xml:space="preserve">
+    <value>{0}</value>
+  </data>
+  <data name="XrSubreport1.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>778.2214, 63.66323</value>
+  </data>
+  <data name="XrLabel14.BorderColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="XrLabel18.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>Transparent</value>
+  </data>
+  <data name="XrLabel31.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>37.70868, 21.95829</value>
+  </data>
+  <data name="XrLabel25.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 10pt</value>
+  </data>
+  <data name="XrLabel54.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 10pt, style=Bold</value>
+  </data>
+  <data name="XrLabel27.BorderColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="XrLabel26.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 12pt, style=Bold</value>
+  </data>
+  <data name="XrLabel61.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopLeft</value>
+  </data>
+  <data name="XrLabel22.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>166.9453, 18.37502</value>
+  </data>
+  <data name="XrLabel15.Text" xml:space="preserve">
+    <value>วันทำงาน</value>
+  </data>
+  <data name="XrSubreport1.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>11.77858, 4.750061</value>
+  </data>
+  <data name="XrLabel47.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 10pt, style=Bold</value>
+  </data>
+  <data name="XrLabel41.BorderColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="XrSummary2.FormatString" xml:space="preserve">
+    <value>{0}</value>
+  </data>
+  <data name="XrLabel11.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>84.00005, 21.95829</value>
+  </data>
+  <data name="XrLabel7.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="XrTableCell1.Weight" type="System.Double, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="XrLabel54.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>Transparent</value>
+  </data>
+  <data name="XrLabel17.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="XrLabel39.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 10pt, style=Bold</value>
+  </data>
+  <data name="XrLabel25.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopRight</value>
+  </data>
+  <data name="XrLabel15.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="XrSummary10.FormatString" xml:space="preserve">
+    <value>{0:n0}</value>
+  </data>
+  <data name="XrLabel30.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>38, 21.95829</value>
+  </data>
+  <data name="lblTestLate.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopCenter</value>
+  </data>
+  <data name="XrLabel24.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 10pt</value>
+  </data>
+  <data name="CalculatedField1.DisplayName" xml:space="preserve">
+    <value>remark_endbill</value>
+  </data>
+  <data name="XrLabel2.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>10.00001, 26.75002</value>
+  </data>
+  <data name="XrLabel9.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>94.4314, 21.95828</value>
+  </data>
+  <data name="XrLabel14.Text" xml:space="preserve">
+    <value>รวม</value>
+  </data>
+  <data name="TopMarginBand1.HeightF" type="System.Single, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="XrLabel9.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>628.8527, 4.124861</value>
+  </data>
+  <data name="XrSummary14.FormatString" xml:space="preserve">
+    <value>{0:n1}</value>
+  </data>
+  <data name="XrLabel35.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>412.5656, 0</value>
+  </data>
+  <data name="XrTableCell2.Weight" type="System.Double, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="XrLabel28.BorderColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="XrLabel1.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>33, 21.95829</value>
+  </data>
+  <data name="XrLabel10.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>52.7851, 22.00009</value>
+  </data>
+  <data name="Detail.HeightF" type="System.Single, mscorlib">
+    <value>23.95829</value>
+  </data>
+  <data name="XrLabel4.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>130.9452, 0</value>
+  </data>
+  <data name="XrLabel38.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 12pt, style=Bold</value>
+  </data>
+  <data name="XrLabel8.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopCenter</value>
+  </data>
+  <data name="XrLabel19.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 10pt, style=Bold</value>
+  </data>
+  <data name="XrLabel33.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>87.49982, 22.00009</value>
+  </data>
+  <data name="XrLabel28.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>473.4066, 0</value>
+  </data>
+  <data name="XrSummary11.FormatString" xml:space="preserve">
+    <value>{0:n1}</value>
+  </data>
+  <data name="XrLabel30.BorderColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="XrLabel17.Text" xml:space="preserve">
+    <value>แผนก :</value>
+  </data>
+  <data name="XrLabel3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 12pt, style=Bold</value>
+  </data>
+  <data name="XrLabel30.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopCenter</value>
+  </data>
+  <data name="XrLabel13.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>283.5965, 21.95828</value>
+  </data>
+  <data name="XrLabel44.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>663.3511, 18.37502</value>
+  </data>
+  <data name="XrTableRow2.Weight" type="System.Double, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="XrLabel27.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>49.1807, 0</value>
+  </data>
+  <data name="XrLabel11.BorderColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="lbSumTotalLate.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>702.0598, 1.999982</value>
+  </data>
+  <data name="XrLabel3.BorderColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="XrLabel18.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 12pt, style=Bold</value>
+  </data>
+  <data name="lbSumTotalLate.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>Transparent</value>
+  </data>
+  <data name="XrLabel35.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>Transparent</value>
+  </data>
+  <data name="XrLine4.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>779.0001, 4.750061</value>
+  </data>
+  <data name="XrLabel47.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>Transparent</value>
+  </data>
+  <data name="XrLabel9.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 12pt, style=Bold</value>
+  </data>
+  <data name="XrLabel32.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="XrLabel12.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>590.6721, 4.083046</value>
+  </data>
+  <data name="XrLabel28.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>65.44431, 21.95829</value>
+  </data>
+  <data name="XrLabel47.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>738.8224, 4.601479E-05</value>
+  </data>
+  <data name="XrLabel59.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopLeft</value>
+  </data>
+  <data name="XrLabel22.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="XrLabel19.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="XrLabel40.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>65.44434, 41.37507</value>
+  </data>
+  <data name="XrLabel5.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>33.99995, 22.00009</value>
+  </data>
+  <data name="XrLabel1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 10pt</value>
+  </data>
+  <data name="XrSummary19.FormatString" xml:space="preserve">
+    <value>{0}</value>
+  </data>
+  <data name="XrLine2.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>778.0001, 2</value>
+  </data>
+  <data name="lbSumTotalLate.Text" xml:space="preserve">
+    <value>00:00</value>
+  </data>
+  <data name="XrLabel5.Text" xml:space="preserve">
+    <value>รหัส :</value>
+  </data>
+  <data name="XrLabel51.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>59.84103, 16.40273</value>
+  </data>
+  <data name="XrLabel12.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>38.1806, 22.00009</value>
+  </data>
+  <data name="XrLabel35.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>60.4212, 21.95829</value>
+  </data>
+  <data name="XrLabel11.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>Transparent</value>
+  </data>
+  <data name="lbSumTotalLate.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopCenter</value>
+  </data>
+  <data name="XrLabel29.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="XrLabel14.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopRight</value>
+  </data>
+  <data name="XrLabel12.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopLeft</value>
+  </data>
+  <data name="XrLabel9.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="XrLabel43.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>38, 22.00009</value>
+  </data>
+  <data name="XrLabel54.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>537.8511, 2.000109</value>
+  </data>
+  <data name="XrPageInfo3.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>78.3421, 17.16319</value>
+  </data>
+  <data name="XrLabel21.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>129.9453, 18.37502</value>
+  </data>
+  <data name="XrLabel7.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>Transparent</value>
+  </data>
+  <data name="XrLabel15.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>48.0415, 16.40273</value>
+  </data>
+  <data name="XrLabel27.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 12pt, style=Bold</value>
+  </data>
+  <data name="XrLabel4.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>33, 21.95829</value>
+  </data>
+  <data name="XrTableCell4.Text" xml:space="preserve">
+    <value>XrTableCell4</value>
+  </data>
+  <data name="XrLabel58.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>739.8224, 2.000003</value>
+  </data>
+  <data name="lbSumLate.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="XrLabel61.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>Transparent</value>
+  </data>
+  <data name="XrLabel2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 16pt, style=Bold</value>
+  </data>
+  <data name="lblTestLate.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>Transparent</value>
+  </data>
+  <data name="XrLabel34.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>49.1778, 21.95829</value>
+  </data>
+  <data name="XrLabel10.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="XrLabel53.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="XrSummary12.FormatString" xml:space="preserve">
+    <value>{0:n0}</value>
+  </data>
+  <data name="XrLabel55.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="XrSummary5.FormatString" xml:space="preserve">
+    <value>{0}</value>
+  </data>
+  <data name="XrLabel17.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>47.5556, 22.00009</value>
+  </data>
+  <data name="XrLabel38.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>Transparent</value>
+  </data>
+  <data name="XrLabel40.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>472.4067, 2.000046</value>
+  </data>
+  <data name="XrPageInfo3.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopRight</value>
+  </data>
+  <data name="XrLabel14.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>84.00005, 16.40273</value>
+  </data>
+  <data name="XrLabel42.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>60.41693, 41.37507</value>
+  </data>
+  <data name="XrLabel21.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>33.00002, 22.00009</value>
+  </data>
+  <data name="PageFooter.HeightF" type="System.Single, mscorlib">
+    <value>68.41329</value>
+  </data>
+  <data name="XrLabel25.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>Transparent</value>
+  </data>
+  <data name="XrLabel5.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopLeft</value>
+  </data>
+  <data name="XrLabel38.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopLeft</value>
+  </data>
+  <data name="XrLabel53.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>60.41699, 16.40273</value>
+  </data>
+  <data name="XrLabel37.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>86.5, 21.95829</value>
+  </data>
+  <data name="XrLabel20.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="XrTableCell5.Text" xml:space="preserve">
+    <value>XrTableCell5</value>
+  </data>
+  <data name="XrLabel1.BorderColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="XrLabel37.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopCenter</value>
+  </data>
+  <data name="XrLabel15.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 10pt, style=Bold</value>
+  </data>
+  <data name="XrLabel14.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>Transparent</value>
+  </data>
+  <data name="XrLabel37.BorderColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="XrLabel43.BorderColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="XrLabel13.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopLeft</value>
+  </data>
+  <data name="XrLabel45.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>37.76257, 41.37503</value>
+  </data>
+  <data name="XrLabel22.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 10pt, style=Bold</value>
+  </data>
+  <data name="XrLabel7.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 12pt, style=Bold</value>
+  </data>
+  <data name="XrLabel53.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopCenter</value>
+  </data>
+  <data name="XrPageInfo1.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>160.6747, 17.62144</value>
+  </data>
+  <data name="headDate.Description" xml:space="preserve">
+    <value>headDate</value>
+  </data>
+  <data name="XrLabel20.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="XrLabel19.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>11.77858, 18.37502</value>
+  </data>
+  <data name="XrLabel36.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>86.93948, 16.40273</value>
+  </data>
+  <data name="BottomMarginBand1.HeightF" type="System.Single, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="XrLabel52.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>Transparent</value>
+  </data>
+  <data name="XrLabel30.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>538.851, 0</value>
+  </data>
+  <data name="XrLabel26.BorderColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="XrLabel37.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>Transparent</value>
+  </data>
+  <data name="XrLabel6.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 10pt</value>
+  </data>
+  <data name="XrLabel59.Text" xml:space="preserve">
+    <value>ลำดับที่ :</value>
+  </data>
+  <data name="XrLabel52.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>65.44434, 16.40273</value>
+  </data>
+  <data name="XrLabel43.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="SubBand2.HeightF" type="System.Single, mscorlib">
+    <value>45.37511</value>
+  </data>
+  <data name="XrLabel47.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="XrLabel21.Text" xml:space="preserve">
+    <value>ออก</value>
+  </data>
+  <data name="XrLabel16.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>210.3394, 21.95828</value>
+  </data>
+  <data name="XrLabel44.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>37.70868, 22.00009</value>
+  </data>
+  <data name="XrLabel17.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>Transparent</value>
+  </data>
+  <data name="XrLabel6.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="XrLabel34.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>739.8224, 0</value>
+  </data>
+  <data name="XrLabel24.BorderColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="XrLabel38.BorderColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="XrLabel8.BorderColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="XrLabel23.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>33.00002, 22.00009</value>
+  </data>
+  <data name="XrLabel55.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>37.70862, 16.40273</value>
+  </data>
+  <data name="XrLabel16.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="XrLabel16.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>Transparent</value>
+  </data>
+  <data name="XrLabel14.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="XrLabel13.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="XrLabel37.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>576.851, 0</value>
+  </data>
+  <data name="XrLabel31.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 10pt</value>
+  </data>
+  <data name="XrTableCell1.Text" xml:space="preserve">
+    <value>XrTableCell1</value>
+  </data>
+  <data name="XrLabel47.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>49.17773, 41.37507</value>
+  </data>
+  <data name="XrLabel39.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="XrLabel60.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>10.00001, 0</value>
+  </data>
+  <data name="XrLabel61.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>27.36111, 21.95829</value>
+  </data>
+  <data name="lbSumTotalLate.BorderColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="XrLabel13.BorderColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="XrLine8.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>10.00001, 0</value>
+  </data>
+  <data name="XrLabel12.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="XrLabel26.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="XrLabel4.BorderColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="XrLabel22.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>33, 22.00009</value>
+  </data>
+  <data name="XrLabel54.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>38.00006, 16.40273</value>
+  </data>
+  <data name="XrLabel8.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 10pt</value>
+  </data>
+  <data name="XrLine3.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>778.0001, 2</value>
+  </data>
+  <data name="XrLabel55.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopCenter</value>
+  </data>
+  <data name="XrLabel45.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="XrLabel33.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="XrLabel30.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 10pt</value>
+  </data>
+  <data name="XrLabel2.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>777.3866, 26.75002</value>
+  </data>
+  <data name="XrLabel11.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 10pt</value>
+  </data>
+  <data name="XrLabel53.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>Transparent</value>
+  </data>
+  <data name="XrLabel28.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 10pt</value>
+  </data>
+  <data name="XrLabel31.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>Transparent</value>
+  </data>
+  <data name="XrLabel60.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>777.3866, 26.75001</value>
+  </data>
+  <data name="XrLabel45.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="CustomSqlQuery1.Sql" xml:space="preserve">
+    <value>SELECT Emp.code,emp.CompanyID,Department.DivId,emp.DeptId,emp.Position,emp.GroupId,emp.WageType,emp.Contractor,
+		RPT_EmpWork.DayOfWeek, RPT_EmpWork.DateIn, RPT_EmpWork.Time1, RPT_EmpWork.Time2, RPT_EmpWork.Time3, 
+		RPT_EmpWork.Time4, 
+		RPT_EmpWork.DayDo, 
+		DayDo_str = case 
+						when isnull(RPT_EmpWork.DayDo,0) = 1 then '1(0.0)'
+						when isnull(RPT_EmpWork.DayDo,0) = 0.5 then '0(0.4)'
+						else 
+							'0(' + convert(nvarchar(10),convert(numeric(9,1),isnull(RPT_EmpWork.DayDo,0))) + ')'
+						end,
+		RPT_EmpWork.OT1, RPT_EmpWork.OT15, RPT_EmpWork.OT2, 
+		RPT_EmpWork.OT3, RPT_EmpWork.Val, 
+		RPT_EmpWork.Absent, 
+		Absent_str = case 
+						when isnull(RPT_EmpWork.Absent,0) &lt;&gt; 0 then 'ขาด'
+						else '' end,
+		RPT_EmpWork.Late, 
+		RPT_EmpWork.LateOT, RPT_EmpWork.WorkTime, RPT_EmpWork.Code, Division.Division, 
+		Department.Department, Emp.Title, Emp.Fname, Emp.Lname, 
+		RPT_EmpWork.KaCode as KaCode,
+		isnull(TimeKa.KaName,'') as KaName,
+		RPT_EmpWork.CardForget, 
+		CardForget_str = case 
+				when isnull(RPT_EmpWork.CardForget,0) = 0 then ''
+				else 'M' end,
+		RPT_EmpWork.Holiday, 
+		isnull(RPT_EmpWork.valCode,'') as valCode,
+		isnull(RPT_EmpWork.Vacation,'') as Vacation,
+		Company_Sub.CompanyName,
+		TotalLate = isnull(RPT_EmpWork.Late,0) + isnull(RPT_EmpWork.LateOT,0)
+ FROM   (((RPT_EmpWork RPT_EmpWork 
+	LEFT OUTER JOIN Emp Emp ON RPT_EmpWork.Code=Emp.Code) 
+	LEFT OUTER JOIN Department Department ON Emp.DeptId=Department.DeptId) 
+	LEFT OUTER JOIN Division Division ON Department .DivId=Division.DivId) 
+	LEFT OUTER JOIN Company_Sub Company_Sub ON Emp.CompanyID=Company_Sub.CompanyID
+      left outer join TimeKa TimeKa on RPT_EmpWork.Kacode = TimeKa.Ka_code
+ ORDER BY RPT_EmpWork.Code, RPT_EmpWork.DateIn</value>
+  </data>
+  <data name="XrLabel25.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>43.384, 21.95829</value>
+  </data>
+  <data name="XrLabel3.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopLeft</value>
+  </data>
+  <data name="XrLabel11.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopCenter</value>
+  </data>
+  <data name="lbSumTotalLate.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="XrLabel28.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopCenter</value>
+  </data>
+  <data name="XrLabel61.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 12pt, style=Bold</value>
+  </data>
+  <data name="lblTestLate.BorderColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="XrLabel60.Text" xml:space="preserve">
+    <value>XrLabel60</value>
+  </data>
+  <data name="XrLabel10.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>257.6311, 4.083046</value>
+  </data>
+  <data name="lblTestLate.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>36.76251, 22.00008</value>
+  </data>
+  <data name="XrLabel9.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>Transparent</value>
+  </data>
+  <data name="XrLine3.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>224, 224, 224</value>
+  </data>
+  <data name="XrLabel32.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="XrLabel10.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 12pt, style=Bold</value>
+  </data>
+  <data name="XrTableCell6.Text" xml:space="preserve">
+    <value>XrTableCell6</value>
+  </data>
+  <data name="SubBand1.HeightF" type="System.Single, mscorlib">
+    <value>53.50004</value>
+  </data>
+  <data name="XrLabel40.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>Transparent</value>
+  </data>
+  <data name="XrLabel43.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>Transparent</value>
+  </data>
+  <data name="XrLabel25.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>297.2227, 0</value>
+  </data>
+  <data name="XrLabel22.Text" xml:space="preserve">
+    <value>เข้า</value>
+  </data>
+  <data name="XrLabel58.BorderColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="XrLabel24.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>107.9798, 21.95828</value>
+  </data>
+  <data name="SubBand3.HeightF" type="System.Single, mscorlib">
+    <value>40</value>
+  </data>
+  <data name="XrLabel59.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="XrLabel3.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="XrLabel28.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="CalculatedField2.DisplayName" xml:space="preserve">
+    <value>FnameLname</value>
+  </data>
+  <data name="XrLabel42.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>Transparent</value>
+  </data>
+  <data name="XrLabel8.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>33, 21.95829</value>
+  </data>
+  <data name="XrLabel2.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopCenter</value>
+  </data>
+  <data name="XrLabel32.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 10pt</value>
+  </data>
+  <data name="XrLabel13.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 12pt, style=Bold</value>
+  </data>
+  <data name="XrLabel39.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>411.9855, 2.000046</value>
+  </data>
+  <data name="XrLabel55.BorderColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="XrLabel27.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>266.1807, 21.95828</value>
+  </data>
+  <data name="XrLabel8.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>204.9175, 0</value>
+  </data>
+  <data name="XrLabel34.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>Transparent</value>
+  </data>
+  <data name="XrLabel39.Text" xml:space="preserve">
+    <value>OT-วันหยุด
+(ในเวลา)</value>
+  </data>
+  <data name="XrLabel18.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>10.99993, 30.49991</value>
+  </data>
+  <data name="XrLabel26.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>49.1807, 0</value>
+  </data>
+  <data name="XrLabel35.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 10pt</value>
+  </data>
+  <data name="XrLabel13.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>307.0756, 30.49992</value>
+  </data>
+  <data name="XrLabel45.BorderColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="XrPageInfo1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 8pt, style=Bold</value>
+  </data>
+  <data name="XrLabel42.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopCenter</value>
+  </data>
+  <data name="XrLabel58.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopCenter</value>
+  </data>
+  <data name="XrLabel59.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>9.999996, 4.083061</value>
+  </data>
+  <data name="XrLabel21.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>Transparent</value>
+  </data>
+  <data name="XrLabel42.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="XrLabel16.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 12pt, style=Bold</value>
+  </data>
+  <data name="XrLabel36.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>140.0126, 2.000109</value>
+  </data>
+  <data name="XrLabel12.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 12pt, style=Bold</value>
+  </data>
+  <data name="lblTestLate.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="headname.Description" xml:space="preserve">
+    <value>headname</value>
+  </data>
+  <data name="XrLabel15.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>Transparent</value>
+  </data>
+  <data name="XrLabel6.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>33, 21.95829</value>
+  </data>
+  <data name="XrLabel7.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>166.9453, 4.083046</value>
+  </data>
+  <data name="XrLabel35.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="lblTestLate.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>702.0598, 0</value>
+  </data>
+  <data name="XrLabel34.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 10pt</value>
+  </data>
+  <data name="XrLabel16.BorderColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="XrSummary1.FormatString" xml:space="preserve">
+    <value>{0}</value>
+  </data>
+  <data name="XrLabel28.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>Transparent</value>
+  </data>
+  <data name="XrLabel16.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopLeft</value>
+  </data>
+  <data name="XrLine1.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>778.0001, 2</value>
+  </data>
+  <data name="XrLabel59.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>Transparent</value>
+  </data>
+  <data name="XrLabel32.BorderColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="XrLabel23.Text" xml:space="preserve">
+    <value>ออก</value>
+  </data>
+  <data name="XrLabel44.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>Transparent</value>
+  </data>
+  <data name="XrLabel36.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>Transparent</value>
+  </data>
+  <data name="XrLabel10.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>Transparent</value>
+  </data>
+  <data name="XrLabel12.BorderColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="XrLabel34.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopCenter</value>
+  </data>
+  <data name="GroupHeader1.HeightF" type="System.Single, mscorlib">
+    <value>52.50001</value>
+  </data>
+  <data name="XrLabel41.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>158.5339, 21.95828</value>
+  </data>
+  <data name="XrLabel37.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 10pt</value>
+  </data>
+  <data name="XrLabel19.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="XrLabel16.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>49.18066, 30.49992</value>
+  </data>
+  <data name="CalculatedField3.DisplayName" xml:space="preserve">
+    <value>Running</value>
+  </data>
+  <data name="XrLabel52.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopCenter</value>
+  </data>
+  <data name="lbSumTotalLate.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>37.7627, 16.40273</value>
+  </data>
+  <data name="XrLine1.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>10.00001, 0</value>
+  </data>
+  <data name="XrLabel15.BorderColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="XrLabel11.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>10.99993, 0</value>
+  </data>
+  <data name="XrLabel35.BorderColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="XrLabel24.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>Transparent</value>
+  </data>
+  <data name="XrLabel52.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="XrLabel4.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="XrLabel15.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopLeft</value>
+  </data>
+  <data name="pcLogo.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>777.3867, 40.37499</value>
+  </data>
+  <data name="XrLabel40.Text" xml:space="preserve">
+    <value>OT-วันหยุด
+(นอกเวลา)</value>
+  </data>
+  <data name="XrLabel13.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>Transparent</value>
+  </data>
+  <data name="XrLabel36.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 10pt, style=Bold</value>
+  </data>
+  <data name="XrLabel17.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 12pt, style=Bold</value>
+  </data>
+  <data name="XrLabel43.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 10pt, style=Bold</value>
+  </data>
+  <data name="XrLabel38.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="XrLabel4.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopCenter</value>
+  </data>
+  <data name="XrLabel24.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="XrLabel40.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopCenter</value>
+  </data>
+  <data name="XrLabel12.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>Transparent</value>
+  </data>
+  <data name="XrLabel59.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 12pt, style=Bold</value>
+  </data>
+  <data name="XrLabel40.BorderColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="XrLabel52.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>472.4067, 2.000109</value>
+  </data>
+  <data name="XrLabel43.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>537.8511, 18.37502</value>
+  </data>
+  <data name="XrLabel43.Text" xml:space="preserve">
+    <value>ลา</value>
+  </data>
+  <data name="XrLabel27.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopLeft</value>
+  </data>
+  <data name="XrLine8.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>779.0002, 4.750061</value>
+  </data>
+  <data name="XrLabel10.BorderColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="XrLabel4.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>Transparent</value>
+  </data>
+  <data name="XrLabel29.BorderColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="XrLabel19.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>Transparent</value>
+  </data>
+  <data name="XrLabel44.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="XrLabel9.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopLeft</value>
+  </data>
+  <data name="XrPageInfo3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 8pt, style=Bold</value>
+  </data>
+  <data name="XrLabel23.BorderColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="XrLabel51.BorderColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="XrLabel3.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>278.367, 21.95828</value>
+  </data>
+  <data name="GroupHeader2.HeightF" type="System.Single, mscorlib">
+    <value>21.95828</value>
+  </data>
+  <data name="XrLabel29.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 10pt</value>
+  </data>
+  <data name="XrLabel19.Text" xml:space="preserve">
+    <value>วันที่</value>
+  </data>
+  <data name="XrLabel31.BorderColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="XrLabel19.BorderColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="XrLabel24.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>241.9175, 0</value>
+  </data>
+  <data name="XrLabel54.BorderColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="XrSummary18.FormatString" xml:space="preserve">
+    <value>{0}</value>
+  </data>
+  <data name="XrLabel21.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="lbSumLate.BorderColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="GroupHeader3.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="XrLabel38.Text" xml:space="preserve">
+    <value>ชื่อกะ :</value>
+  </data>
+  <data name="lbSumLate.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 10pt, style=Bold</value>
+  </data>
+  <data name="XrLabel5.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 12pt, style=Bold</value>
+  </data>
+  <data name="XrLabel27.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="XrLabel42.Text" xml:space="preserve">
+    <value>OT
+(วันปกติ)</value>
+  </data>
+  <data name="XrLabel5.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>Transparent</value>
+  </data>
+  <data name="XrSummary7.FormatString" xml:space="preserve">
+    <value>{0}</value>
+  </data>
+  <data name="XrSummary8.FormatString" xml:space="preserve">
+    <value>{0}</value>
+  </data>
+  <data name="XrPageInfo1.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopLeft</value>
+  </data>
+  <data name="XrLabel18.Text" xml:space="preserve">
+    <value>ฝ่าย :</value>
+  </data>
+  <data name="XrLabel1.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>Transparent</value>
+  </data>
+  <data name="XrLabel44.Text" xml:space="preserve">
+    <value>ขาด
+</value>
+  </data>
+  <data name="XrLabel41.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="XrLabel43.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="XrLabel51.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="XrLabel33.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="XrPageInfo1.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>10.99987, 4.750061</value>
+  </data>
+  <data name="XrLabel47.BorderColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="XrLabel24.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="XrLabel45.Text" xml:space="preserve">
+    <value>สาย
+ชม.:นาที</value>
+  </data>
+  <data name="XrLabel41.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>628.8527, 30.45811</value>
+  </data>
+  <data name="XrSummary13.FormatString" xml:space="preserve">
+    <value>{0:n0}</value>
+  </data>
+  <data name="$this.Margins" type="System.Drawing.Printing.Margins, System.Drawing">
+    <value>15, 21, 20, 20</value>
+  </data>
+  <data name="Detail.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopLeft</value>
+  </data>
+  <data name="lbSumLate.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="XrLabel25.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="XrLabel32.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>37.7627, 21.95829</value>
+  </data>
+  <data name="XrLabel4.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 10pt</value>
+  </data>
+  <data name="XrLabel26.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopLeft</value>
+  </data>
+  <data name="XrLabel30.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="GroupHeader2.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="XrLabel39.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopCenter</value>
+  </data>
+  <data name="XrLabel58.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 10pt, style=Bold</value>
+  </data>
+  <data name="XrTableCell3.Weight" type="System.Double, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="XrLabel32.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>297.2227, 0</value>
+  </data>
+  <data name="XrLabel7.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopLeft</value>
+  </data>
+  <data name="XrLabel27.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>Transparent</value>
+  </data>
+  <data name="XrLabel55.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>664.3511, 2.000003</value>
+  </data>
+  <data name="$this.PaperKind" type="System.Drawing.Printing.PaperKind, System.Drawing">
+    <value>A4</value>
+  </data>
+  <data name="PageHeader.HeightF" type="System.Single, mscorlib">
+    <value>40.37499</value>
+  </data>
+  <data name="XrLabel30.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>Transparent</value>
+  </data>
+  <data name="XrLabel47.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopCenter</value>
+  </data>
+  <data name="XrLabel34.BorderColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="XrTableRow1.Weight" type="System.Double, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="XrLabel23.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>203.9176, 18.37502</value>
+  </data>
+  <data name="XrLabel31.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopCenter</value>
+  </data>
+  <data name="XrLabel21.BorderColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="XrLabel20.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>94.00005, 18.37502</value>
+  </data>
+  <data name="XrSummary17.FormatString" xml:space="preserve">
+    <value>{0:n1}</value>
+  </data>
+  <data name="XrLabel55.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>Transparent</value>
+  </data>
+  <data name="XrLabel34.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="XrLabel14.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 10pt, style=Bold</value>
+  </data>
+  <data name="XrLabel47.Text" xml:space="preserve">
+    <value>ชม.
+ทำงาน</value>
+  </data>
+  <data name="XrLabel51.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>412.5656, 2.000109</value>
+  </data>
+  <data name="XrLine5.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>778.0001, 2</value>
+  </data>
+  <data name="XrLabel3.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>312.3051, 4.124861</value>
+  </data>
+  <data name="XrLabel23.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="XrLabel17.BorderColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="XrLabel39.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>60.42126, 41.37507</value>
+  </data>
+  <data name="XrLabel26.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>261.2355, 21.95828</value>
+  </data>
+  <data name="XrLabel55.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 10pt, style=Bold</value>
+  </data>
+  <data name="XrLabel6.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>Transparent</value>
+  </data>
+  <data name="$this.PageHeight" type="System.Int32, mscorlib">
+    <value>1169</value>
+  </data>
+  <data name="companyname.Description" xml:space="preserve">
+    <value>companyname</value>
+  </data>
+  <data name="XrLabel15.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>231.3689, 2.000109</value>
+  </data>
+  <data name="XrLabel33.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>Transparent</value>
+  </data>
+  <data name="XrLabel38.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>590.6721, 30.45811</value>
+  </data>
+  <data name="XrLabel10.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopLeft</value>
+  </data>
+  <data name="XrLabel5.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>132.9454, 4.041256</value>
+  </data>
+  <data name="XrLabel51.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopCenter</value>
+  </data>
+  <data name="XrLabel33.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>575.8512, 18.37502</value>
+  </data>
+  <data name="lbSumLate.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>Transparent</value>
+  </data>
+  <data name="XrLabel45.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>Transparent</value>
+  </data>
+  <data name="XrLabel19.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>82.22147, 22.00009</value>
+  </data>
+  <data name="XrLabel1.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="XrLabel18.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="XrLabel32.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>Transparent</value>
+  </data>
+  <data name="XrLabel61.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>67.63887, 4.083061</value>
+  </data>
+  <data name="XrLabel33.Text" xml:space="preserve">
+    <value>ประเภท</value>
+  </data>
+  <data name="XrLabel38.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>38.1806, 22.00009</value>
+  </data>
+  <data name="XrPageInfo3.Format" xml:space="preserve">
+    <value>หน้า {0}/{1}</value>
+  </data>
+  <data name="XrSummary3.FormatString" xml:space="preserve">
+    <value>{0}</value>
+  </data>
+  <data name="GroupFooter1.HeightF" type="System.Single, mscorlib">
+    <value>18.40284</value>
+  </data>
+  <data name="XrPageInfo3.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>709.6579, 4.750061</value>
+  </data>
+  <data name="XrLabel18.BorderColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="XrLabel20.Text" xml:space="preserve">
+    <value>เข้า</value>
+  </data>
+  <data name="XrLabel31.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="XrLabel61.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="XrLabel5.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="XrLabel18.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>38.1806, 22.00009</value>
+  </data>
+  <data name="XrLabel20.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>Transparent</value>
+  </data>
+  <data name="XrLabel60.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 16pt, style=Bold</value>
+  </data>
+  <data name="$this.PageWidth" type="System.Int32, mscorlib">
+    <value>827</value>
+  </data>
+  <data name="XrLabel58.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>Transparent</value>
+  </data>
+  <data name="XrLabel25.BorderColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="XrLabel39.BorderColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="CalculatedField6.DisplayName" xml:space="preserve">
+    <value>DaydoTotal</value>
+  </data>
+  <data name="XrLabel54.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="XrLabel3.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>Transparent</value>
+  </data>
+  <data name="XrLabel60.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopCenter</value>
+  </data>
+  <data name="XrLabel9.BorderColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="XrLabel33.BorderColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="XrTableCell5.Weight" type="System.Double, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="XrLabel20.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>33.00001, 22.00009</value>
+  </data>
+  <data name="XrLabel22.BorderColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="XrLabel29.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopCenter</value>
+  </data>
+  <data name="XrLabel7.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>73.97224, 21.95828</value>
+  </data>
+  <data name="XrLabel37.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="XrLabel36.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopRight</value>
+  </data>
+  <data name="XrLabel51.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 10pt, style=Bold</value>
+  </data>
+  <data name="XrLabel31.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>664.351, 0</value>
+  </data>
+  <data name="XrLabel5.BorderColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="XrLine3.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>10.99994, 21.95829</value>
+  </data>
+  <data name="XrLabel23.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>Transparent</value>
+  </data>
+  <data name="XrTableCell6.Weight" type="System.Double, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="XrPageInfo1.Format" xml:space="preserve">
+    <value>วันที่พิมพ์ : {0:dd/MM/yyyy HH:mm:ss}</value>
+  </data>
+  <data name="XrLabel36.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="XrLabel36.BorderColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="XrLabel40.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 10pt, style=Bold</value>
+  </data>
+  <data name="XrLabel40.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="XrLabel41.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopLeft</value>
+  </data>
+  <data name="XrLabel21.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="XrLabel53.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>351.5685, 2.000109</value>
+  </data>
+  <data name="XrTableCell2.Text" xml:space="preserve">
+    <value>XrTableCell2</value>
+  </data>
+  <data name="XrLabel20.BorderColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="XrLabel22.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>Transparent</value>
+  </data>
+  <data name="XrLabel18.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopLeft</value>
+  </data>
+  <data name="XrLabel33.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 10pt, style=Bold</value>
+  </data>
+  <data name="XrLine4.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="XrTableCell4.Weight" type="System.Double, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="XrLabel21.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 10pt, style=Bold</value>
+  </data>
+  <data name="XrLabel59.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>57.63889, 22.00009</value>
+  </data>
+  <data name="XrLabel61.BorderColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="XrLabel58.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="XrLabel45.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>701.0599, 4.601479E-05</value>
+  </data>
+  <data name="pcLogo.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>10.00001, 0</value>
+  </data>
+  <data name="XrLabel25.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="XrLabel8.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
+  </data>
+  <data name="XrLabel39.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>Transparent</value>
+  </data>
+  <data name="XrLabel35.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopCenter</value>
+  </data>
+  <data name="XrLabel17.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopLeft</value>
+  </data>
+  <data name="XrLabel29.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>351.5685, 0</value>
+  </data>
+  <data name="XrLabel26.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>Transparent</value>
+  </data>
+  <data name="XrLabel1.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>95, 0</value>
+  </data>
+  <data name="XrLabel10.Text" xml:space="preserve">
+    <value>ชื่อ-สกุล :</value>
+  </data>
+  <data name="XrLabel53.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 10pt, style=Bold</value>
+  </data>
+  <data name="XrLabel20.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 10pt, style=Bold</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="SqlDataSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 95</value>
+  </metadata>
+</root>

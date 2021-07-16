@@ -1,0 +1,1655 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="XrLabel9.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="XrLabel9.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cordia New, 14pt</value>
+  </data>
+  <assembly alias="DevExpress.Data.v17.1" name="DevExpress.Data.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <data name="XrLabel9.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>0, 268.1264</value>
+  </data>
+  <data name="XrLabel9.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>1591.99976, 164.041656</value>
+  </data>
+  <data name="XrLabel9.Text" xml:space="preserve">
+    <value>ระหว่าง [vendor_name] ทะเบียนนิติบุคคลเลขที่ [juristic_person_registration_no] ตั้งอยู่ [address1] [address2] ซึ่งมี [calContract_Name] เป็นผู้มีอำนาจกระทำการแทน ซึ่งต่อไปในสัญญานี้จะเรียกว่า “ผู้ซื้อ” ฝ่ายหนึ่ง</value>
+  </data>
+  <data name="XrLabel9.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopJustify</value>
+  </data>
+  <data name="XrLabel8.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="XrLabel8.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cordia New, 14pt</value>
+  </data>
+  <data name="XrLabel8.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>0, 432.16806</value>
+  </data>
+  <data name="XrLabel8.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>1591.99976, 415.396027</value>
+  </data>
+  <data name="XrLabel8.Text" xml:space="preserve">
+    <value>กับ  บริษัท สมาร์ท รีฟอร์ม พลัส จำกัด ทะเบียนนิติบุคคลเลขที่   0105555020197   ซึ่งจดทะเบียนเป็นนิติบุคคล ณ. สำนักงานทะเบียนหุ้นส่วนบริษัท จังหวัด กรุงเทพมหานคร  มีสำนักงานใหญ่ อยู่เลขที่ 90/40-41 อาคารสาธรธานี ชั้นที่ 15 ถนนสาทรเหนือ แขวงสีลม เขตบางรัก กรุงเทพมหานคร โดย นางสาว จิระนันท์ สุธีร์เดชาวัชร์ ผู้มีอำนาจลงนามผูกพันนิติบุคคล ปรากฏตามหนังสือรับรองของสำนักงานทะเบียนหุ้นส่วน บริษัท สมาร์ท รีฟอร์ม พลัส จำกัด ลงวันที่ [ct_date_day] [ct_date_month] พ. ศ. [ct_date_year] แนบท้ายสัญญานี้ ซึ่งต่อไปในสัญญานี้เรียกว่า “ผู้ขายและผู้อนุญาตใช้สิทธิ” อีกฝ่ายหนึ่ง  </value>
+  </data>
+  <data name="XrLabel8.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopJustify</value>
+  </data>
+  <data name="XrLabel7.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="XrLabel7.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cordia New, 14pt</value>
+  </data>
+  <data name="XrLabel7.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>0, 858.1472</value>
+  </data>
+  <data name="XrLabel7.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>1591.99976, 66.1459961</value>
+  </data>
+  <data name="XrLabel7.Text" xml:space="preserve">
+    <value>คู่สัญญาได้ตกลงกันมีข้อความดังต่อไปนี้</value>
+  </data>
+  <data name="XrLabel7.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopJustify</value>
+  </data>
+  <data name="XrLabel5.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="XrLabel5.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cordia New, 14pt, style=Bold</value>
+  </data>
+  <data name="XrLabel5.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>0.000403722137, 937.4444</value>
+  </data>
+  <data name="XrLabel5.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>655.6856, 66.1459961</value>
+  </data>
+  <data name="XrLabel5.Text" xml:space="preserve">
+    <value>ข้อ 1. คำนิยาม</value>
+  </data>
+  <data name="XrLabel5.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopLeft</value>
+  </data>
+  <data name="XrLabel6.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="XrLabel6.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cordia New, 14pt</value>
+  </data>
+  <data name="XrLabel6.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>0.000403722137, 1003.59009</value>
+  </data>
+  <data name="XrLabel6.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>1591.99976, 135.0155</value>
+  </data>
+  <data name="XrLabel6.Text" xml:space="preserve">
+    <value>            “โปรแกรมคอมพิวเตอร์” หมายความว่า คำสั่ง ชุดคำสั่งหรือสิ่งอื่นใด ที่นำไปใช้กับเครื่องคอมพิวเตอร์ เพื่อให้เครื่องคอมพิวเตอร์ทำงาน หรือเพื่อให้ได้รับผลอย่างหนึ่งอย่างใด ทั้งนี้ ไม่ว่าจะเป็น ภาษาโปรแกรมคอมพิวเตอร์ในลักษณะใด</value>
+  </data>
+  <data name="XrLabel6.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopJustify</value>
+  </data>
+  <data name="XrLabel19.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="XrLabel19.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cordia New, 14pt</value>
+  </data>
+  <data name="XrLabel19.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>0.000403722137, 1138.60559</value>
+  </data>
+  <data name="XrLabel19.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>1591.99976, 66.1459961</value>
+  </data>
+  <data name="XrLabel19.Text" xml:space="preserve">
+    <value>          “สื่อ” หมายความว่า วัตถุซึ่งโปรแกรมคอมพิวเตอร์บันทึกและใช้งาน</value>
+  </data>
+  <data name="XrLabel19.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopJustify</value>
+  </data>
+  <data name="XrLabel4.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="XrLabel4.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cordia New, 14pt</value>
+  </data>
+  <data name="XrLabel4.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>0, 168.7108</value>
+  </data>
+  <data name="XrLabel4.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>1591.99976, 66.14583</value>
+  </data>
+  <data name="XrLabel4.Text" xml:space="preserve">
+    <value>            สัญญาฉบับนี้ทำขึ้น ณ [contract_at] เมื่อวันที่ [ct_date_day] เดือน [ct_date_month] พ.ศ. [ct_date_year]</value>
+  </data>
+  <data name="XrLabel4.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopLeft</value>
+  </data>
+  <data name="XrLabel3.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="XrLabel3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cordia New, 14pt</value>
+  </data>
+  <data name="XrLabel3.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>1022.42334, 81.24266</value>
+  </data>
+  <data name="XrLabel3.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>232.833374, 68.79166</value>
+  </data>
+  <data name="XrLabel3.Text" xml:space="preserve">
+    <value>สัญญาเลขที่</value>
+  </data>
+  <data name="XrLabel3.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>MiddleRight</value>
+  </data>
+  <data name="XrLabel1.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="XrLabel1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cordia New, 14pt</value>
+  </data>
+  <data name="XrLabel1.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>1261.482, 81.2426147</value>
+  </data>
+  <data name="XrLabel1.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>330.5177, 68.79167</value>
+  </data>
+  <data name="XrLabel1.Text" xml:space="preserve">
+    <value>สัญญาซื้อขายและอนุญาตให้ใช้สิทธิในโปรแกรมคอมพิวเตอร์</value>
+  </data>
+  <data name="XrLabel1.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopLeft</value>
+  </data>
+  <data name="XrLabel2.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="XrLabel2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cordia New, 15.75pt, style=Bold</value>
+  </data>
+  <data name="XrLabel2.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>0, 0</value>
+  </data>
+  <data name="XrLabel2.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>1591.99988, 68.79167</value>
+  </data>
+  <data name="XrLabel2.Text" xml:space="preserve">
+    <value>สัญญาซื้อขายและอนุญาตให้ใช้สิทธิในโปรแกรมคอมพิวเตอร์</value>
+  </data>
+  <data name="XrLabel2.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopCenter</value>
+  </data>
+  <data name="Detail.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="Detail.HeightF" type="System.Single, mscorlib">
+    <value>1204.75159</value>
+  </data>
+  <data name="XrLabel21.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="XrLabel21.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cordia New, 14pt</value>
+  </data>
+  <data name="XrLabel21.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>0.000379973761, 66.1458359</value>
+  </data>
+  <data name="XrLabel21.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>1591.99976, 135.0155</value>
+  </data>
+  <data name="XrLabel21.Text" xml:space="preserve">
+    <value>          ผู้ซื้อตกลงซื้อ และผู้ขายและผู้อนุญาตใช้สิทธิ ตกลงขายและอนุญาตให้ใช้สิทธิโปรแกรมคอมพิวเตอร์  พร้อมด้วยสื่อและคู่มือการใช้โปรแกรมคอมพิวเตอร์ และอนุญาตให้ใช้สิทธิเป็นไปตาม ผนวก 1 ท้ายสัญญานี้</value>
+  </data>
+  <data name="XrLabel21.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopJustify</value>
+  </data>
+  <data name="XrLabel20.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="XrLabel20.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cordia New, 14pt, style=Bold</value>
+  </data>
+  <data name="XrLabel20.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>0.000379973761, 0</value>
+  </data>
+  <data name="XrLabel20.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>655.6856, 66.1459961</value>
+  </data>
+  <data name="XrLabel20.Text" xml:space="preserve">
+    <value>ข้อ 2. ข้อตกลงอนุญาตให้ใช้สิทธิ</value>
+  </data>
+  <data name="XrLabel20.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopLeft</value>
+  </data>
+  <data name="SubBand9.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="SubBand9.HeightF" type="System.Single, mscorlib">
+    <value>213.61232</value>
+  </data>
+  <data name="XrLabel11.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="XrLabel11.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cordia New, 14pt</value>
+  </data>
+  <data name="XrLabel11.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>0, 66.14632</value>
+  </data>
+  <data name="XrLabel11.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>1591.99976, 202.6465</value>
+  </data>
+  <data name="XrLabel11.Text" xml:space="preserve">
+    <value>          3.1 ผู้ขายและผู้อนุญาตให้ใช้สิทธิ ขอรับรองและยืนยันว่าเป็นเจ้าของลิขสิทธิ์ มีสิทธิแต่เพียงผู้เดียวโดยสมบูรณ์ ปราศจากภาระผูกพันใด ๆ และมีอำนาจในการอนุญาตให้ผู้ซื้อ ใช้สิทธิในโปรแกรมคอมพิวเตอร์ คู่มือการใช้หรือสิ่งอื่นใด ที่เกี่ยวข้องกับโปรแกรมคอมพิวเตอร์ตามสัญญานี้ โดยชอบด้วยกฎหมาย</value>
+  </data>
+  <data name="XrLabel11.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopJustify</value>
+  </data>
+  <data name="XrLabel26.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="XrLabel26.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cordia New, 14pt</value>
+  </data>
+  <data name="XrLabel26.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>0, 674.0858</value>
+  </data>
+  <data name="XrLabel26.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>1591.99976, 132.29126</value>
+  </data>
+  <data name="XrLabel26.Text" xml:space="preserve">
+    <value>          3.4 กำหนดระยะเวลาอนุญาตให้ใช้สิทธิ ในโปรแกรมคอมพิวเตอร์ตามสัญญานี้ เป็นเวลา 1 (หนึ่ง) ปี เริ่มต้นตั้งแต่วันที่ผู้ซื้อได้รับมอบโปรแกรมคอมพิวเตอร์  </value>
+  </data>
+  <data name="XrLabel26.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopJustify</value>
+  </data>
+  <data name="XrLabel25.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="XrLabel25.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cordia New, 14pt</value>
+  </data>
+  <data name="XrLabel25.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>0, 471.438965</value>
+  </data>
+  <data name="XrLabel25.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>1591.99976, 202.646484</value>
+  </data>
+  <data name="XrLabel25.Text" xml:space="preserve">
+    <value>          3.3 ในกรณีที่ผู้ซื้อ ต้องการใช้โปรแกรมคอมพิวเตอร์ มากกว่าจำนวนที่ระบุในข้อ 3.2 ผู้ซื้อสามารถขอซื้อสิทธิในการใช้โปรแกรมคอมพิวเตอร์เพิ่ม เป็นชุด ครั้งละ จำนวน 5 (ห้า) บัญชีผู้ใช้งาน (Volume License) รวมเป็นเงินไม่รวมภาษีมูลค่าเพิ่ม   1,500.00 บาท (หนึ่งพันห้าร้อยบาทถ้วน) </value>
+  </data>
+  <data name="XrLabel25.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopJustify</value>
+  </data>
+  <data name="XrLabel24.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="XrLabel24.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cordia New, 14pt</value>
+  </data>
+  <data name="XrLabel24.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>0, 268.7927</value>
+  </data>
+  <data name="XrLabel24.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>1591.99976, 202.646484</value>
+  </data>
+  <data name="XrLabel24.Text" xml:space="preserve">
+    <value>          3.2 ผู้ขายและผู้อนุญาตให้ใช้สิทธิ ตกลงอนุญาตให้ผู้ซื้อ ใช้สิทธิในโปรแกรมคอมพิวเตอร์ โดย
+ใช้โปรแกรมคอมพิวเตอร์ กับเครื่องคอมพิวเตอร์หลักและเครื่องคอมพิวเตอร์พกพา ในระบบเครือข่าย เพื่อทำให้เครื่องคอมพิวเตอร์ จำนวน 5 (ห้า) เครื่อง  สามารถใช้โปรแกรมคอมพิวเตอร์ได้ในขณะเวลาเดียวกัน (Network License)
+</value>
+  </data>
+  <data name="XrLabel24.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopJustify</value>
+  </data>
+  <data name="XrLabel22.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="XrLabel22.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cordia New, 14pt, style=Bold</value>
+  </data>
+  <data name="XrLabel22.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>0, 0</value>
+  </data>
+  <data name="XrLabel22.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>861.339, 66.145874</value>
+  </data>
+  <data name="XrLabel22.Text" xml:space="preserve">
+    <value>ข้อ 3. การรับรองและการอนุญาตให้ใช้สิทธิ</value>
+  </data>
+  <data name="XrLabel22.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopLeft</value>
+  </data>
+  <data name="SubBand10.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="SubBand10.HeightF" type="System.Single, mscorlib">
+    <value>865.5193</value>
+  </data>
+  <data name="XrLabel34.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="XrLabel34.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cordia New, 14pt</value>
+  </data>
+  <data name="XrLabel34.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>0, 477.211731</value>
+  </data>
+  <data name="XrLabel34.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>1591.99976, 67.34839</value>
+  </data>
+  <data name="XrLabel34.Text" xml:space="preserve">
+    <value>          ข้อความใดในเอกสารแนบท้ายสัญญา ที่ขัดแย้งข้อความในสัญญานี้ ให้ใช้ข้อความในสัญญานี้บังคับ </value>
+  </data>
+  <data name="XrLabel34.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopJustify</value>
+  </data>
+  <data name="XrLabel33.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="XrLabel33.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cordia New, 14pt</value>
+  </data>
+  <data name="XrLabel33.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>0, 409.863281</value>
+  </data>
+  <data name="XrLabel33.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>1591.99976, 67.34839</value>
+  </data>
+  <data name="XrLabel33.Text" xml:space="preserve">
+    <value>          4.4 ผนวก 4 รายละเอียดการให้บริการหลังการขาย จำนวน 1 ชุด </value>
+  </data>
+  <data name="XrLabel33.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopJustify</value>
+  </data>
+  <data name="XrLabel32.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="XrLabel32.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cordia New, 14pt</value>
+  </data>
+  <data name="XrLabel32.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>0, 342.5152</value>
+  </data>
+  <data name="XrLabel32.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>1591.99976, 67.34839</value>
+  </data>
+  <data name="XrLabel32.Text" xml:space="preserve">
+    <value>          4.3 ผนวก 3 รายละเอียดคู่มือการใช้งาน จำนวน 1 ชุด </value>
+  </data>
+  <data name="XrLabel32.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopJustify</value>
+  </data>
+  <data name="XrLabel31.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="XrLabel31.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cordia New, 14pt</value>
+  </data>
+  <data name="XrLabel31.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>0, 275.166382</value>
+  </data>
+  <data name="XrLabel31.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>1591.99976, 67.34839</value>
+  </data>
+  <data name="XrLabel31.Text" xml:space="preserve">
+    <value>          4.2 ผนวก 2 รายการคุณลักษณะเฉพาะ จำนวน 1 ชุด </value>
+  </data>
+  <data name="XrLabel31.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopJustify</value>
+  </data>
+  <data name="XrLabel30.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="XrLabel30.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cordia New, 14pt</value>
+  </data>
+  <data name="XrLabel30.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>0, 207.817917</value>
+  </data>
+  <data name="XrLabel30.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>1591.99976, 67.34839</value>
+  </data>
+  <data name="XrLabel30.Text" xml:space="preserve">
+    <value>                  จำนวน  1 ชุด </value>
+  </data>
+  <data name="XrLabel30.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopJustify</value>
+  </data>
+  <data name="XrLabel29.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="XrLabel29.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cordia New, 14pt</value>
+  </data>
+  <data name="XrLabel29.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>0, 140.469467</value>
+  </data>
+  <data name="XrLabel29.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>1591.99976, 67.34839</value>
+  </data>
+  <data name="XrLabel29.Text" xml:space="preserve">
+    <value>           4.1 ผนวก 1 รายละเอียดและราคาโปรแกรมคอมพิวเตอร์ ที่ซื้อขายและอนุญาตให้ใช้สิทธิพร้อมสื่อและคู่มือ</value>
+  </data>
+  <data name="XrLabel29.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopJustify</value>
+  </data>
+  <data name="XrLabel28.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="XrLabel28.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cordia New, 14pt</value>
+  </data>
+  <data name="XrLabel28.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>0, 76.72924</value>
+  </data>
+  <data name="XrLabel28.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>1591.99976, 63.7402344</value>
+  </data>
+  <data name="XrLabel28.Text" xml:space="preserve">
+    <value>          เอกสารแนบท้ายสัญญาดังต่อไปนี้ ให้ถือเป็นส่วนหนึ่งของสัญญานี้</value>
+  </data>
+  <data name="XrLabel28.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopJustify</value>
+  </data>
+  <data name="XrLabel27.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="XrLabel27.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cordia New, 14pt, style=Bold</value>
+  </data>
+  <data name="XrLabel27.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>0, 0</value>
+  </data>
+  <data name="XrLabel27.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>861.339, 66.145874</value>
+  </data>
+  <data name="XrLabel27.Text" xml:space="preserve">
+    <value>ข้อ 4 เอกสารอันเป็นส่วนหนึ่งของสัญญา</value>
+  </data>
+  <data name="XrLabel27.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopLeft</value>
+  </data>
+  <data name="SubBand11.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="SubBand11.HeightF" type="System.Single, mscorlib">
+    <value>544.5601</value>
+  </data>
+  <data name="XrLabel36.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="XrLabel36.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cordia New, 14pt</value>
+  </data>
+  <data name="XrLabel36.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>0, 66.14659</value>
+  </data>
+  <data name="XrLabel36.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>1591.99963, 275.343079</value>
+  </data>
+  <data name="XrLabel36.Text" xml:space="preserve">
+    <value>          ผู้ขายและผู้อนุญาตให้ใช้สิทธิ จะต้องส่งมอบโปรแกรมคอมพิวเตอร์ที่ซื้อขาย และอนุญาตให้ใช้สิทธิตามสัญญานี้ให้มีคุณสมบัติถูกต้องและครบถ้วนตามที่กำหนดได้ในผนวก 1 และ 2  ในกรณีผู้ขายและผู้อนุญาตให้ใช้สิทธิประสงค์จะนำโปรแกรมคอมพิวเตอร์รายการใดที่ต่างไปจากรายละเอียดที่กำหนดไว้ใน ผนวก 1 มาส่งมอบให้ผู้ซื้อ โปรแกรมคอมพิวเตอร์ดังกล่าวนั้นจะต้องมีคุณสมบัติไม่ต่ำกว่าที่กำหนดไว้ในผนวก 2</value>
+  </data>
+  <data name="XrLabel36.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopJustify</value>
+  </data>
+  <data name="XrLabel35.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="XrLabel35.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cordia New, 14pt, style=Bold</value>
+  </data>
+  <data name="XrLabel35.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>0, 0</value>
+  </data>
+  <data name="XrLabel35.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>861.339, 66.145874</value>
+  </data>
+  <data name="XrLabel35.Text" xml:space="preserve">
+    <value>ข้อ 5. การส่งมอบ</value>
+  </data>
+  <data name="XrLabel35.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopLeft</value>
+  </data>
+  <data name="SubBand12.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="SubBand12.HeightF" type="System.Single, mscorlib">
+    <value>347.715332</value>
+  </data>
+  <data name="XrLabel38.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="XrLabel38.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cordia New, 14pt</value>
+  </data>
+  <data name="XrLabel38.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>0, 66.1458359</value>
+  </data>
+  <data name="XrLabel38.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>1591.99963, 268.65094</value>
+  </data>
+  <data name="XrLabel38.Text" xml:space="preserve">
+    <value>          เมื่อผู้ซื้อ ได้ตรวจรับโปรแกรมคอมพิวเตอร์ถูกต้องครบถ้วนตามรายละเอียด และคุณลักษณะเฉพาะของโปรแกรมคอมพิวเตอร์แนบท้ายสัญญานี้ และเงื่อนไขต่าง ๆ ของสัญญานี้แล้ว ผู้ซื้อจะลงลายมือชื่อในหนังสือแสดงการรับมอบโปรแกรมคอมพิวเตอร์ที่ออกโดยผู้ขาย เพื่อผู้ขายและผู้อนุญาตให้ใช้สิทธิใช้เป็นหลักฐานประกอบการขอรับชำระค่าโปรแกรมคอมพิวเตอร์</value>
+  </data>
+  <data name="XrLabel38.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopJustify</value>
+  </data>
+  <data name="XrLabel37.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="XrLabel37.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cordia New, 14pt, style=Bold</value>
+  </data>
+  <data name="XrLabel37.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>0, 0</value>
+  </data>
+  <data name="XrLabel37.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>861.339, 66.145874</value>
+  </data>
+  <data name="XrLabel37.Text" xml:space="preserve">
+    <value>ข้อ 6. การตรวจรับ</value>
+  </data>
+  <data name="XrLabel37.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopLeft</value>
+  </data>
+  <data name="SubBand13.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="SubBand13.HeightF" type="System.Single, mscorlib">
+    <value>358.5669</value>
+  </data>
+  <data name="XrLabel42.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="XrLabel42.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cordia New, 14pt</value>
+  </data>
+  <data name="XrLabel42.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>0, 341.5531</value>
+  </data>
+  <data name="XrLabel42.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>1599.99963, 195.430908</value>
+  </data>
+  <data name="XrLabel42.Text" xml:space="preserve">
+    <value>          7.2 ผู้ซื้อตกลงชำระค่าลิขสิทธิ์ในโปรแกรมคอมพิวเตอร์แก่ผู้ขายและผู้อนุญาตให้ใช้สิทธิ เป็นรายปี คิดเป็นเงินยังไม่รวมภาษีมูลค่าเพิ่มปีละ 7,650.00 บาท (เจ็ดพันหกร้อยห้าสิบบาทถ้วน) โดยจะชำระให้เมื่อครบกำหนดระยะเวลาอนุญาตให้ใช้สิทธิในโปรแกรมดังกล่าว ทุก 12 (สิบสอง) เดือนนับจากวันส่งมอบตามข้อ 6</value>
+  </data>
+  <data name="XrLabel42.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopJustify</value>
+  </data>
+  <data name="XrLabel40.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="XrLabel40.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cordia New, 14pt</value>
+  </data>
+  <data name="XrLabel40.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>0, 66.1458359</value>
+  </data>
+  <data name="XrLabel40.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>1591.99963, 65.54419</value>
+  </data>
+  <data name="XrLabel40.Text" xml:space="preserve">
+    <value>          ผู้ซื้อตกลงชำระค่าโปรแกรมคอมพิวเตอร์ให้แก่ผู้ขายและผู้อนุญาตให้ใช้สิทธิดังนี้</value>
+  </data>
+  <data name="XrLabel40.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopJustify</value>
+  </data>
+  <data name="XrLabel41.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="XrLabel41.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cordia New, 14pt</value>
+  </data>
+  <data name="XrLabel41.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>0, 131.690552</value>
+  </data>
+  <data name="XrLabel41.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>1599.99963, 209.862549</value>
+  </data>
+  <data name="XrLabel41.Text" xml:space="preserve">
+    <value>          7.1 ผู้ซื้อจะชำระค่าโปรแกรมคอมพิวเตอร์ให้แก่ ผู้ขายและผู้อนุญาตให้ใช้สิทธิ เมื่อผู้ซื้อได้รับมอบโปรแกรมคอมพิวเตอร์ตามข้อ 6 แล้ว รวมเป็นเงินยังไม่รวมภาษีมูลค่าเพิ่ม   14,400.00 บาท (หนึ่งหมื่นสี่พันสี่ร้อยบาทถ้วน) ภายในระยะเวลาไม่เกิน 30 (สามสิบ) วัน นับจากวันที่ส่งมอบตามข้อ 6</value>
+  </data>
+  <data name="XrLabel41.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopJustify</value>
+  </data>
+  <data name="XrLabel39.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="XrLabel39.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cordia New, 14pt, style=Bold</value>
+  </data>
+  <data name="XrLabel39.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>0, 0</value>
+  </data>
+  <data name="XrLabel39.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>861.339, 66.145874</value>
+  </data>
+  <data name="XrLabel39.Text" xml:space="preserve">
+    <value>ข้อ 7. การชำระเงิน</value>
+  </data>
+  <data name="XrLabel39.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopLeft</value>
+  </data>
+  <data name="SubBand14.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="SubBand14.HeightF" type="System.Single, mscorlib">
+    <value>564.5744</value>
+  </data>
+  <data name="XrLabel48.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="XrLabel48.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cordia New, 14pt</value>
+  </data>
+  <data name="XrLabel48.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>0, 682.582947</value>
+  </data>
+  <data name="XrLabel48.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>1599.99963, 277.211365</value>
+  </data>
+  <data name="XrLabel48.Text" xml:space="preserve">
+    <value>          8.5 ผู้ซื้อมีสิทธิโอนโปรแกรมคอมพิวเตอร์ตามสัญญานี้ พร้อมด้วยสัญญาฉบับนี้ สำเนาทุกชุดของโปรแกรมและเอกสารประกอบการใช้ทั้งหมดให้ผู้รับโอน ทั้งหมด ในการโอนสิทธิในโปรแกรมคอมพิวเตอร์ตามสัญญานี้ ผู้ซื้อจะต้องทำหนังสือแจ้งการโอนต่อผู้ขายและผู้อนุญาตให้ใช้สิทธิ และหากผู้รับโอนประสงค์จะเข้ารับเอาสิทธิดังกล่าวจะต้องมีหนังสือแจ้งความประสงค์เข้าผูกพันตามข้อตกลงในสัญญานี้ให้ผู้ขายและผู้โอนสิทธิทราบ</value>
+  </data>
+  <data name="XrLabel48.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopJustify</value>
+  </data>
+  <data name="XrLabel47.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="XrLabel47.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cordia New, 14pt</value>
+  </data>
+  <data name="XrLabel47.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>0, 542.926941</value>
+  </data>
+  <data name="XrLabel47.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>1599.99963, 139.656</value>
+  </data>
+  <data name="XrLabel47.Text" xml:space="preserve">
+    <value>          8.4 ผู้ซื้อรับรองว่า จะไม่ลบ ทำลาย ทำให้เสียหายหรือทำให้ไม่ชัดเจนซึ่งเครื่องหมายหรือสัญลักษณ์แสดงความเป็นเจ้าของลิขสิทธิ์ หรือเครื่องหมายการค้าของผู้ขายและผู้อนุญาตให้ใช้สิทธิ โดยจงใจหรือประมาทเลินเล่ออย่างร้ายแรง</value>
+  </data>
+  <data name="XrLabel47.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopJustify</value>
+  </data>
+  <data name="XrLabel46.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="XrLabel46.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cordia New, 14pt</value>
+  </data>
+  <data name="XrLabel46.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>0.000379973761, 337.308716</value>
+  </data>
+  <data name="XrLabel46.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>1599.99963, 205.61824</value>
+  </data>
+  <data name="XrLabel46.Text" xml:space="preserve">
+    <value>          8.3   การอนุญาตให้ใช้สิทธิตามสัญญานี้ ห้ามผู้ซื้อทำซ้ำ ดัดแปลง ซึ่งโปรแกรมคอมพิวเตอร์ นำโปรแกรมคอมพิวเตอร์ออกเผยแพร่ต่อสาธารณชน หรือกระทำการอื่นใดที่เป็นการละเมิดลิขสิทธิ์ของผู้ขายและผู้อนุญาตให้ใช้สิทธิ เว้นแต่จะได้รับความยินยอมจากผู้ขายและผู้อนุญาตให้ใช้สิทธิเป็นหนังสือ หรือตามที่กฎหมายอนุญาตให้ทำได้</value>
+  </data>
+  <data name="XrLabel46.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopJustify</value>
+  </data>
+  <data name="XrLabel45.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="XrLabel45.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cordia New, 14pt</value>
+  </data>
+  <data name="XrLabel45.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>0, 128.5778</value>
+  </data>
+  <data name="XrLabel45.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>1599.99963, 208.730911</value>
+  </data>
+  <data name="XrLabel45.Text" xml:space="preserve">
+    <value>          8.2   นอกจากกรณีตามข้อ 8.5 ผู้ขายและผู้อนุญาตให้ใช้สิทธิ ไม่อนุญาตให้ผู้ซื้อ ขาย โอน ให้เช่าให้ยืม หรือใช้เป็นหลักประกันหนี้ ไม่ว่าจะทั้งหมดหรือบางส่วนซึ่งโปรแกรมคอมพิวเตอร์ และเอกสารหรือสิทธิใด ๆ ที่ให้ไว้ตามสัญญานี้แก่บุคคลอื่น เว้นแต่จะได้รับความยินยอมจากผู้ขายและผู้อนุญาตให้ใช้สิทธิเป็นหนังสือ</value>
+  </data>
+  <data name="XrLabel45.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopJustify</value>
+  </data>
+  <data name="XrLabel44.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="XrLabel44.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cordia New, 14pt</value>
+  </data>
+  <data name="XrLabel44.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>0, 66.1458359</value>
+  </data>
+  <data name="XrLabel44.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>1599.99963, 62.43197</value>
+  </data>
+  <data name="XrLabel44.Text" xml:space="preserve">
+    <value>          8.1 ผู้ซื้อมีสิทธิที่จะใช้โปรแกรมคอมพิวเตอร์ และคู่มือสำหรับผู้ใช้โปรแกรมคอมพิวเตอร์ตามสัญญานี้</value>
+  </data>
+  <data name="XrLabel44.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopJustify</value>
+  </data>
+  <data name="XrLabel43.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="XrLabel43.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cordia New, 14pt, style=Bold</value>
+  </data>
+  <data name="XrLabel43.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>0, 0</value>
+  </data>
+  <data name="XrLabel43.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>861.339, 66.145874</value>
+  </data>
+  <data name="XrLabel43.Text" xml:space="preserve">
+    <value>ข้อ 8. สิทธิของคู่สัญญา</value>
+  </data>
+  <data name="XrLabel43.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopLeft</value>
+  </data>
+  <data name="SubBand15.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="SubBand15.HeightF" type="System.Single, mscorlib">
+    <value>974.8209</value>
+  </data>
+  <data name="XrLabel50.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="XrLabel50.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cordia New, 14pt</value>
+  </data>
+  <data name="XrLabel50.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>0, 66.14659</value>
+  </data>
+  <data name="XrLabel50.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>1599.99963, 199.392746</value>
+  </data>
+  <data name="XrLabel50.Text" xml:space="preserve">
+    <value>          ภายในระยะเวลาที่ใช้งานโปรแกรมคอมพิวเตอร์ ตามสัญญาข้อ 3.4 ผู้ขายและผู้อนุญาตให้ใช้สิทธิ ขอรับประกันว่า นับแต่วันที่ผู้ซื้อได้รับมอบโปรแกรมคอมพิวเตอร์ โปรแกรมคอมพิวเตอร์จะทำงานได้ตามที่กำหนดไว้ ตามสัญญานี้ทุกประการ</value>
+  </data>
+  <data name="XrLabel50.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopJustify</value>
+  </data>
+  <data name="XrLabel49.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="XrLabel49.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cordia New, 14pt, style=Bold</value>
+  </data>
+  <data name="XrLabel49.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>0, 0</value>
+  </data>
+  <data name="XrLabel49.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>861.339, 66.145874</value>
+  </data>
+  <data name="XrLabel49.Text" xml:space="preserve">
+    <value>ข้อ 9. ข้อจำกัดความรับผิดชอบและการรับประกัน</value>
+  </data>
+  <data name="XrLabel49.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopLeft</value>
+  </data>
+  <data name="SubBand16.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="SubBand16.HeightF" type="System.Single, mscorlib">
+    <value>274.8776</value>
+  </data>
+  <data name="XrLabel52.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="XrLabel52.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cordia New, 14pt</value>
+  </data>
+  <data name="XrLabel52.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>0, 66.14659</value>
+  </data>
+  <data name="XrLabel52.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>1599.99963, 205.61824</value>
+  </data>
+  <data name="XrLabel52.Text" xml:space="preserve">
+    <value>          ผู้ขายและผู้อนุญาตให้ใช้สิทธิ ต้องจัดอบรมการใช้งานโปรแกรมคอมพิวเตอร์ ตามสัญญานี้ให้แก่เจ้าหน้าที่ของผู้ซื้อ โดยจะจัดการอบรมแบบกลุ่มร่วมกัน และไม่คิดค่าใช้จ่ายในการจัดอบรมจากผู้ซื้อ รายละเอียดของการอบรม ให้เป็นไปตามผนวก 4 ท้ายสัญญานี้</value>
+  </data>
+  <data name="XrLabel52.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopJustify</value>
+  </data>
+  <data name="XrLabel51.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="XrLabel51.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cordia New, 14pt, style=Bold</value>
+  </data>
+  <data name="XrLabel51.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>0, 0</value>
+  </data>
+  <data name="XrLabel51.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>861.339, 66.145874</value>
+  </data>
+  <data name="XrLabel51.Text" xml:space="preserve">
+    <value>ข้อ 10. การอบรม</value>
+  </data>
+  <data name="XrLabel51.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopLeft</value>
+  </data>
+  <data name="SubBand3.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="SubBand3.HeightF" type="System.Single, mscorlib">
+    <value>284.21582</value>
+  </data>
+  <data name="XrLabel54.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="XrLabel54.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cordia New, 14pt</value>
+  </data>
+  <data name="XrLabel54.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>0.000379973761, 66.14697</value>
+  </data>
+  <data name="XrLabel54.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>1599.99963, 345.59375</value>
+  </data>
+  <data name="XrLabel54.Text" xml:space="preserve">
+    <value>          ผู้ขายและผู้อนุญาตให้ใช้สิทธิ ต้องจัดหาคู่มือการใช้โปรแกรมคอมพิวเตอร์ ซึ่งเป็นต้นฉบับในรูปแบบของเอกสารดิจิทัล จำนวน 1 (หนึ่ง) ชุด ตามรายละเอียดที่กำหนดไว้ ในผนวก 1 พร้อมทั้งจะต้องปรับปรุงคู่มือดังกล่าว ให้ทันสมัยทุกครั้งที่มีการปรับปรุงโปรแกรมคอมพิวเตอร์ ตลอดระยะเวลารับประกัน ตามสัญญาข้อ 9 และต้องให้คำแนะนำ ในการใช้โปรแกรมคอมพิวเตอร์ เมื่อมีการปรับปรุงโปรแกรมคอมพิวเตอร์ดังกล่าวตลอดระยะเวลารับประกัน โดยไม่คิดค่าใช้จ่ายเพิ่มเติมจากผู้ซื้อ</value>
+  </data>
+  <data name="XrLabel54.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopJustify</value>
+  </data>
+  <data name="XrLabel53.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="XrLabel53.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cordia New, 14pt, style=Bold</value>
+  </data>
+  <data name="XrLabel53.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>0.000379973761, 0</value>
+  </data>
+  <data name="XrLabel53.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>1061.58069, 66.1459961</value>
+  </data>
+  <data name="XrLabel53.Text" xml:space="preserve">
+    <value>ข้อ 11. คู่มือการใช้โปรแกรมคอมพิวเตอร์ และการให้คำแนะนำ</value>
+  </data>
+  <data name="XrLabel53.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopLeft</value>
+  </data>
+  <data name="SubBand4.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="SubBand4.HeightF" type="System.Single, mscorlib">
+    <value>411.740723</value>
+  </data>
+  <data name="XrLabel56.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="XrLabel56.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cordia New, 14pt</value>
+  </data>
+  <data name="XrLabel56.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>0, 66.1458359</value>
+  </data>
+  <data name="XrLabel56.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>1599.99963, 202.407471</value>
+  </data>
+  <data name="XrLabel56.Text" xml:space="preserve">
+    <value>          ผู้ซื้อจะไม่เปิดเผยข้อมูลอันเป็นลักษณะที่จะก่อให้เกิดความเสียหาย แก่ผู้ขายและผู้อนุญาตให้ใช้สิทธิ ให้บุคคลอื่นทราบ รวมถึงข้อมูลหรือเทคนิคเกี่ยวกับโปรแกรมคอมพิวเตอร์ ซึ่งผู้ขายและผู้อนุญาตให้ใช้สิทธิประสงค์ให้เป็นความลับทางการค้าของผู้ขายและผู้อนุญาตให้ใช้สิทธิ </value>
+  </data>
+  <data name="XrLabel56.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopJustify</value>
+  </data>
+  <data name="XrLabel55.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="XrLabel55.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cordia New, 14pt, style=Bold</value>
+  </data>
+  <data name="XrLabel55.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>0, 0</value>
+  </data>
+  <data name="XrLabel55.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>1061.58069, 66.1459961</value>
+  </data>
+  <data name="XrLabel55.Text" xml:space="preserve">
+    <value>ข้อ 12. การรักษาความลับทางการค้า</value>
+  </data>
+  <data name="XrLabel55.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopLeft</value>
+  </data>
+  <data name="SubBand5.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="SubBand5.HeightF" type="System.Single, mscorlib">
+    <value>281.004272</value>
+  </data>
+  <data name="XrLabel58.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="XrLabel58.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cordia New, 14pt</value>
+  </data>
+  <data name="XrLabel58.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>0.000379973761, 66.1473541</value>
+  </data>
+  <data name="XrLabel58.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>1599.99963, 137.137848</value>
+  </data>
+  <data name="XrLabel58.Text" xml:space="preserve">
+    <value>          ในกรณีที่เกิดข้อพิพาทขึ้น ระหว่างคู่สัญญา เกี่ยวกับข้อกำหนดแห่งสัญญานี้ หรือเกี่ยวกับการปฏิบัติตามสัญญานี้ และคู่สัญญาไม่สามารถตกลงกันได้ ให้เสนอข้อพิพาทนั้นต่ออนุญาโตตุลาการ เพื่อพิจารณาชี้ขาด</value>
+  </data>
+  <data name="XrLabel58.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopJustify</value>
+  </data>
+  <data name="XrLabel57.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="XrLabel57.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cordia New, 14pt, style=Bold</value>
+  </data>
+  <data name="XrLabel57.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>0.000379973761, 0</value>
+  </data>
+  <data name="XrLabel57.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>1061.58069, 66.1459961</value>
+  </data>
+  <data name="XrLabel57.Text" xml:space="preserve">
+    <value>ข้อ 13. กรณีพิพาทและอนุญาโตตุลาการ</value>
+  </data>
+  <data name="XrLabel57.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopLeft</value>
+  </data>
+  <data name="SubBand6.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="SubBand6.HeightF" type="System.Single, mscorlib">
+    <value>212.623444</value>
+  </data>
+  <data name="XrLabel60.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="XrLabel60.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cordia New, 14pt</value>
+  </data>
+  <data name="XrLabel60.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>0, 66.1458359</value>
+  </data>
+  <data name="XrLabel60.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>1599.99963, 339.466278</value>
+  </data>
+  <data name="XrLabel60.Text" xml:space="preserve">
+    <value>         เมื่อครบกำหนดส่งมอบโปรแกรมคอมพิวเตอร์ ตามสัญญาข้อ 5 แล้ว ถ้าผู้ขายและผู้อนุญาตให้ใช้สิทธิไม่ส่งมอบโปรแกรมคอมพิวเตอร์บางรายการหรือทั้งหมด ให้แก่ผู้ซื้อภายในกำหนดเวลา 30 (สามสิบ) วัน หรือส่งมอบโปรแกรมคอมพิวเตอร์ไม่ตรงตามรายละเอียด และคุณลักษณะเฉพาะของโปรแกรมคอมพิวเตอร์ แนบท้ายสัญญานี้ และเงื่อนไขต่าง ๆ  ของสัญญานี้ หรือส่งมอบภายในกำหนดแต่ใช้งานไม่ได้ครบถ้วนตามสัญญาข้อ 5 หรือผู้ขายและผู้อนุญาตให้ใช้สิทธิ ผิดสัญญาข้อหนึ่งข้อใด ผู้ซื้อมีสิทธิบอกเลิกสัญญาทั้งหมด หรือบางส่วนได้</value>
+  </data>
+  <data name="XrLabel60.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopJustify</value>
+  </data>
+  <data name="XrLabel59.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="XrLabel59.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cordia New, 14pt, style=Bold</value>
+  </data>
+  <data name="XrLabel59.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>0, 0</value>
+  </data>
+  <data name="XrLabel59.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>1061.58069, 66.1459961</value>
+  </data>
+  <data name="XrLabel59.Text" xml:space="preserve">
+    <value>ข้อ 14. การบอกเลิกสัญญา</value>
+  </data>
+  <data name="XrLabel59.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopLeft</value>
+  </data>
+  <data name="SubBand7.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="SubBand7.HeightF" type="System.Single, mscorlib">
+    <value>414.950348</value>
+  </data>
+  <data name="XrLabel62.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="XrLabel62.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cordia New, 14pt</value>
+  </data>
+  <data name="XrLabel62.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>0.000379973761, 66.1458359</value>
+  </data>
+  <data name="XrLabel62.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>1599.99963, 274.9129</value>
+  </data>
+  <data name="XrLabel62.Text" xml:space="preserve">
+    <value>          เมื่อสัญญาสิ้นสุดลง ไม่ว่าจะในกรณีที่มีการเลิกสัญญา หรือกรณีครบกำหนดระยะเวลาอนุญาตให้ใช้สิทธิ หากผู้ขายและผู้อนุญาตให้ใช้สิทธิ มีหนังสือร้องขอ ภายในกำหนดเวลา 30 (สามสิบ) วัน ผู้ซื้อจะส่งคืนโปรแกรมคอมพิวเตอร์ และสำเนาตามสัญญานี้ คืนให้กับผู้ขายและผู้อนุญาตให้ใช้สิทธิ หากผู้ขายและผู้อนุญาตให้ใช้สิทธิ ไม่ร้องขอภายในกำหนดเวลาดังกล่าว ให้ถือว่าสละสิทธิการรับคืนโปรแกรมคอมพิวเตอร์ตามสัญญานี้</value>
+  </data>
+  <data name="XrLabel62.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopJustify</value>
+  </data>
+  <data name="XrLabel61.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="XrLabel61.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cordia New, 14pt, style=Bold</value>
+  </data>
+  <data name="XrLabel61.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>0.000379973761, 0</value>
+  </data>
+  <data name="XrLabel61.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>1061.58069, 66.1459961</value>
+  </data>
+  <data name="XrLabel61.Text" xml:space="preserve">
+    <value>ข้อ 15. การส่งคืนโปรแกรมคอมพิวเตอร์</value>
+  </data>
+  <data name="XrLabel61.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopLeft</value>
+  </data>
+  <data name="SubBand8.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="SubBand8.HeightF" type="System.Single, mscorlib">
+    <value>344.1715</value>
+  </data>
+  <data name="XrLabel66.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="XrLabel66.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cordia New, 14pt</value>
+  </data>
+  <data name="XrLabel66.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>0.000379973761, 539.0726</value>
+  </data>
+  <data name="XrLabel66.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>1599.99963, 134.0251</value>
+  </data>
+  <data name="XrLabel66.Text" xml:space="preserve">
+    <value>          สัญญานี้ทำขึ้นสองฉบับ มีข้อความถูกต้องตรงกัน คู่สัญญาได้ อ่าน และเข้าใจข้อความ โดยละเอียดตลอดแล้ว จึงได้ลงลายมือชื่อ พร้อมทั้งประทับตรา (ถ้ามี) ไว้เป็นสำคัญต่อหน้าพยาน และคู่สัญญาต่างยึดถือไว้ฝ่ายละฉบับ </value>
+  </data>
+  <data name="XrLabel66.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopJustify</value>
+  </data>
+  <data name="XrLabel65.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="XrLabel65.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cordia New, 14pt</value>
+  </data>
+  <data name="XrLabel65.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>0.000379973761, 442.400421</value>
+  </data>
+  <data name="XrLabel65.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>1599.99963, 65.54471</value>
+  </data>
+  <data name="XrLabel65.Text" xml:space="preserve">
+    <value>          การขยายเวลาทำการตามสัญญา อยู่ในดุลพินิจของผู้ขายและผู้ซื้อที่จะพิจารณาตกลงร่วมกัน</value>
+  </data>
+  <data name="XrLabel65.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopJustify</value>
+  </data>
+  <data name="XrLabel64.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="XrLabel64.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cordia New, 14pt</value>
+  </data>
+  <data name="XrLabel64.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>0, 66.1473541</value>
+  </data>
+  <data name="XrLabel64.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>1599.99963, 347.714355</value>
+  </data>
+  <data name="XrLabel64.Text" xml:space="preserve">
+    <value>          ในกรณีที่มีเหตุสุดวิสัย หรือเหตุการณ์ใด ๆ อันเนื่องจากความผิด หรือความบกพร่องของฝ่ายผู้ซื้อหรือจากพฤติการณ์อันใดอันหนึ่ง ซึ่งผู้ขายและผู้อนุญาตให้ใช้สิทธิ ไม่ต้องรับผิดชอบตามกฎหมาย เป็นเหตุให้ผู้ขายและผู้อนุญาตให้ใช้สิทธิไม่สามารถส่งมอบโปรแกรมคอมพิวเตอร์ ตามเงื่อนไขและกำหนดเวลาแห่งสัญญานี้ได้ ผู้ขายและผู้อนุญาตให้ใช้สิทธิมีสิทธิขอขยายเวลาทำการตามสัญญาได้ โดยจะต้องแจ้งเหตุ หรือพฤติการณ์ดังกล่าว พร้อมหลักฐานเป็นหนังสือ ให้ผู้ซื้อทราบภายใน 60 (หกสิบ) วัน นับแต่วันที่เหตุนั้น สิ้นสุดลง</value>
+  </data>
+  <data name="XrLabel64.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopJustify</value>
+  </data>
+  <data name="XrLabel63.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="XrLabel63.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cordia New, 14pt, style=Bold</value>
+  </data>
+  <data name="XrLabel63.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>0, 0</value>
+  </data>
+  <data name="XrLabel63.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>1061.58069, 66.1459961</value>
+  </data>
+  <data name="XrLabel63.Text" xml:space="preserve">
+    <value>ข้อ 16. การขยายเวลาทำการ ตามสัญญา</value>
+  </data>
+  <data name="XrLabel63.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopLeft</value>
+  </data>
+  <data name="SubBand2.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="SubBand2.HeightF" type="System.Single, mscorlib">
+    <value>779.0295</value>
+  </data>
+  <data name="XrLabel79.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="XrLabel79.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cordia New, 14pt</value>
+  </data>
+  <data name="XrLabel79.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>827.352051, 1081.79639</value>
+  </data>
+  <data name="XrLabel79.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>488.317139, 65.54492</value>
+  </data>
+  <data name="XrLabel79.Text" xml:space="preserve">
+    <value>(.................................................)</value>
+  </data>
+  <data name="XrLabel79.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopCenter</value>
+  </data>
+  <data name="XrLabel80.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="XrLabel80.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cordia New, 14pt</value>
+  </data>
+  <data name="XrLabel80.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>1332.75891, 1009.38477</value>
+  </data>
+  <data name="XrLabel80.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>261.015625, 65.54492</value>
+  </data>
+  <data name="XrLabel80.Text" xml:space="preserve">
+    <value>พยาน</value>
+  </data>
+  <data name="XrLabel80.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopJustify</value>
+  </data>
+  <data name="XrLabel81.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="XrLabel81.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cordia New, 14pt</value>
+  </data>
+  <data name="XrLabel81.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>746.1729, 1009.38477</value>
+  </data>
+  <data name="XrLabel81.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>569.496155, 65.54492</value>
+  </data>
+  <data name="XrLabel81.Text" xml:space="preserve">
+    <value>ลงชื่อ ....................................................</value>
+  </data>
+  <data name="XrLabel81.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopJustify</value>
+  </data>
+  <data name="XrLabel76.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="XrLabel76.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cordia New, 14pt</value>
+  </data>
+  <data name="XrLabel76.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>746.1729, 791.944763</value>
+  </data>
+  <data name="XrLabel76.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>569.496155, 65.54492</value>
+  </data>
+  <data name="XrLabel76.Text" xml:space="preserve">
+    <value>ลงชื่อ ....................................................</value>
+  </data>
+  <data name="XrLabel76.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopJustify</value>
+  </data>
+  <data name="XrLabel77.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="XrLabel77.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cordia New, 14pt</value>
+  </data>
+  <data name="XrLabel77.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>1332.75891, 791.944763</value>
+  </data>
+  <data name="XrLabel77.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>261.015625, 65.54492</value>
+  </data>
+  <data name="XrLabel77.Text" xml:space="preserve">
+    <value>พยาน</value>
+  </data>
+  <data name="XrLabel77.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopJustify</value>
+  </data>
+  <data name="XrLabel78.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="XrLabel78.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cordia New, 14pt</value>
+  </data>
+  <data name="XrLabel78.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>827.352051, 864.3571</value>
+  </data>
+  <data name="XrLabel78.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>488.317139, 65.54492</value>
+  </data>
+  <data name="XrLabel78.Text" xml:space="preserve">
+    <value>(.................................................)</value>
+  </data>
+  <data name="XrLabel78.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopCenter</value>
+  </data>
+  <data name="XrLabel75.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="XrLabel75.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cordia New, 14pt</value>
+  </data>
+  <data name="XrLabel75.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>771.789551, 635.251953</value>
+  </data>
+  <data name="XrLabel75.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>580.9214, 65.54492</value>
+  </data>
+  <data name="XrLabel75.Text" xml:space="preserve">
+    <value>(นางสาวจิระนันท์ สุธีร์เดชาวัชร์)</value>
+  </data>
+  <data name="XrLabel75.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopCenter</value>
+  </data>
+  <data name="XrLabel74.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="XrLabel74.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cordia New, 14pt</value>
+  </data>
+  <data name="XrLabel74.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>1332.75891, 562.8396</value>
+  </data>
+  <data name="XrLabel74.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>261.015625, 65.54492</value>
+  </data>
+  <data name="XrLabel74.Text" xml:space="preserve">
+    <value>ผู้มีอำนาจลงนาม</value>
+  </data>
+  <data name="XrLabel74.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopJustify</value>
+  </data>
+  <data name="XrLabel73.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="XrLabel73.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cordia New, 14pt</value>
+  </data>
+  <data name="XrLabel73.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>746.1729, 562.8396</value>
+  </data>
+  <data name="XrLabel73.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>569.496155, 65.54492</value>
+  </data>
+  <data name="XrLabel73.Text" xml:space="preserve">
+    <value>ลงชื่อ ....................................................</value>
+  </data>
+  <data name="XrLabel73.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopJustify</value>
+  </data>
+  <data name="XrLabel72.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="XrLabel72.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cordia New, 14pt</value>
+  </data>
+  <data name="XrLabel72.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>732.9437, 391.4606</value>
+  </data>
+  <data name="XrLabel72.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>860.8308, 65.54489</value>
+  </data>
+  <data name="XrLabel72.Text" xml:space="preserve">
+    <value>บริษัท  สมาร์ท รีฟอร์ม พลัส จำกัด ผู้ขายและผู้อนุญาตให้ใช้สิทธิ</value>
+  </data>
+  <data name="XrLabel72.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopLeft</value>
+  </data>
+  <data name="XrLabel71.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="XrLabel71.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cordia New, 14pt</value>
+  </data>
+  <data name="XrLabel71.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>515.985352, 269.3918</value>
+  </data>
+  <data name="XrLabel71.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>1076.0144, 65.54495</value>
+  </data>
+  <data name="XrLabel71.Text" xml:space="preserve">
+    <value>( [calContract_Name] )</value>
+  </data>
+  <data name="XrLabel71.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopCenter</value>
+  </data>
+  <data name="XrLabel70.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="XrLabel70.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cordia New, 14pt</value>
+  </data>
+  <data name="XrLabel70.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>746.1729, 193.023254</value>
+  </data>
+  <data name="XrLabel70.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>569.496155, 65.54492</value>
+  </data>
+  <data name="XrLabel70.Text" xml:space="preserve">
+    <value>ลงชื่อ ....................................................</value>
+  </data>
+  <data name="XrLabel70.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopJustify</value>
+  </data>
+  <data name="XrLabel69.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="XrLabel69.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cordia New, 14pt</value>
+  </data>
+  <data name="XrLabel69.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>1332.75916, 193.023254</value>
+  </data>
+  <data name="XrLabel69.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>261.015625, 65.54492</value>
+  </data>
+  <data name="XrLabel69.Text" xml:space="preserve">
+    <value>ผู้มีอำนาจลงนาม</value>
+  </data>
+  <data name="XrLabel69.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopJustify</value>
+  </data>
+  <data name="XrLabel67.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="XrLabel67.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cordia New, 14pt</value>
+  </data>
+  <data name="XrLabel67.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>1332.75891, 0</value>
+  </data>
+  <data name="XrLabel67.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>261.016, 65.54492</value>
+  </data>
+  <data name="XrLabel67.Text" xml:space="preserve">
+    <value>ผู้ซื้อ</value>
+  </data>
+  <data name="XrLabel67.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopJustify</value>
+  </data>
+  <data name="XrLabel68.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="XrLabel68.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cordia New, 14pt</value>
+  </data>
+  <data name="XrLabel68.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v17.1">
+    <value>116.464546, 0</value>
+  </data>
+  <data name="XrLabel68.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>1168.66943, 68.7915039</value>
+  </data>
+  <data name="XrLabel68.Text" xml:space="preserve">
+    <value>สัญญาซื้อขายและอนุญาตให้ใช้สิทธิในโปรแกรมคอมพิวเตอร์</value>
+  </data>
+  <data name="XrLabel68.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopRight</value>
+  </data>
+  <data name="SubBand1.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="SubBand1.HeightF" type="System.Single, mscorlib">
+    <value>1147.34131</value>
+  </data>
+  <data name="Detail.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v17.1">
+    <value>TopLeft</value>
+  </data>
+  <metadata name="SqlDataSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 95</value>
+  </metadata>
+  <data name="CustomSqlQuery1.Sql" xml:space="preserve">
+    <value>select v.*,
+	day(v.contract_date) as ct_date_day,
+	m.monthname_th as ct_date_month,
+	year(v.contract_date) + 543 as ct_date_year,
+	case when v.doc_4_1_set = 0 then '.....' else convert(nvarchar(10),v.doc_4_1_set) end as doc_4_1_set_str,
+	case when v.doc_4_1_page = 0 then '.....' else convert(nvarchar(10),v.doc_4_1_page) end as doc_4_1_page_str,
+	case when v.doc_4_2_set = 0 then '.....' else convert(nvarchar(10),v.doc_4_2_set) end as doc_4_2_set_str,
+	case when v.doc_4_2_page = 0 then '.....' else convert(nvarchar(10),v.doc_4_2_page) end as doc_4_2_page_str,
+	case when v.doc_4_3_set = 0 then '.....' else convert(nvarchar(10),v.doc_4_3_set) end as doc_4_3_set_str,
+	case when v.doc_4_3_page = 0 then '.....' else convert(nvarchar(10),v.doc_4_3_page) end as doc_4_3_page_str,
+	case when v.doc_4_4_set = 0 then '.....' else convert(nvarchar(10),v.doc_4_4_set) end as doc_4_4_set_str,
+	case when v.doc_4_4_page = 0 then '.....' else convert(nvarchar(10),v.doc_4_4_page) end as doc_4_4_page_str
+from vendor_group v
+	left join [month] m
+		on month(v.contract_date) = m.id</value>
+  </data>
+  <data name="SqlDataSource1.ResultSchemaSerializable" xml:space="preserve">
+    <value>PERhdGFTZXQgTmFtZT0iU3FsRGF0YVNvdXJjZTEiPjxWaWV3IE5hbWU9IlF1ZXJ5Ij48RmllbGQgTmFtZT0idmVuZG9yZ3JvdXBpZCIgVHlwZT0iSW50MzIiIC8+PEZpZWxkIE5hbWU9IlZlbmRvcklkIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkFsbFZlbmRvcklkIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9InZlbmRvcl9uYW1lIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9ImFkZHJlc3MxIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9ImFkZHJlc3MyIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9InppcGNvZGUiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iZW1haWwiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0idGVsIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9ImxpY19zdGFydF9kYXRlIiBUeXBlPSJEYXRlVGltZSIgLz48RmllbGQgTmFtZT0ibGljX2V4cGlyZV9kYXRlIiBUeXBlPSJEYXRlVGltZSIgLz48RmllbGQgTmFtZT0iYWNjb3VudCIgVHlwZT0iSW50MzIiIC8+PEZpZWxkIE5hbWU9ImxpY2VuY2VLZXkiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iZGl2aXNpb25pZCIgVHlwZT0iSW50MzIiIC8+PEZpZWxkIE5hbWU9InNlY3Rpb25pZCIgVHlwZT0iSW50MzIiIC8+PEZpZWxkIE5hbWU9ImNyZWF0ZWRhdGUiIFR5cGU9IkRhdGVUaW1lIiAvPjxGaWVsZCBOYW1lPSJ1cGRhdGVkYXRlIiBUeXBlPSJEYXRlVGltZSIgLz48RmllbGQgTmFtZT0iY29udHJhY3Rfbm8iIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iY29udHJhY3RfZGF0ZSIgVHlwZT0iRGF0ZVRpbWUiIC8+PEZpZWxkIE5hbWU9ImNvbnRyYWN0X2F0IiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9Imp1cmlzdGljX3BlcnNvbl9yZWdpc3RyYXRpb25fbm8iIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0ic2lnbl9jb250cmFjdF9uYW1lIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9InNpZ25fY29udHJhY3RfcG9zaXRpb24iIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0ic2lnbl9jb250cmFjdF90ZWwiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0ic2lnbl9jb250cmFjdF9uYW1lMiIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJzaWduX2NvbnRyYWN0X3Bvc2l0aW9uMiIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJzaWduX2NvbnRyYWN0X3RlbDIiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iY29udHJhY3RfbmFtZSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJjb250cmFjdF9wb3NpdGlvbiIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJjb250cmFjdF9lbWFpbCIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJjb250cmFjdF90ZWwiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iZG9jXzRfMV9zZXQiIFR5cGU9IkludDMyIiAvPjxGaWVsZCBOYW1lPSJkb2NfNF8xX3BhZ2UiIFR5cGU9IkludDMyIiAvPjxGaWVsZCBOYW1lPSJkb2NfNF8yX3NldCIgVHlwZT0iSW50MzIiIC8+PEZpZWxkIE5hbWU9ImRvY180XzJfcGFnZSIgVHlwZT0iSW50MzIiIC8+PEZpZWxkIE5hbWU9ImRvY180XzNfc2V0IiBUeXBlPSJJbnQzMiIgLz48RmllbGQgTmFtZT0iZG9jXzRfM19wYWdlIiBUeXBlPSJJbnQzMiIgLz48RmllbGQgTmFtZT0iZG9jXzRfNF9zZXQiIFR5cGU9IkludDMyIiAvPjxGaWVsZCBOYW1lPSJkb2NfNF80X3BhZ2UiIFR5cGU9IkludDMyIiAvPjxGaWVsZCBOYW1lPSJjb250cmFjdF80ZyIgVHlwZT0iQm9vbGVhbiIgLz48RmllbGQgTmFtZT0iY29udHJhY3RfcmVhZGVyIiBUeXBlPSJCb29sZWFuIiAvPjxGaWVsZCBOYW1lPSJwYXlfZXZlcnlfZGF5IiBUeXBlPSJJbnQzMiIgLz48RmllbGQgTmFtZT0icGF5X3N0YXJ0X2RhdGUiIFR5cGU9IkRhdGVUaW1lIiAvPjxGaWVsZCBOYW1lPSJjdF9kYXRlX2RheSIgVHlwZT0iSW50MzIiIC8+PEZpZWxkIE5hbWU9ImN0X2RhdGVfbW9udGgiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iY3RfZGF0ZV95ZWFyIiBUeXBlPSJJbnQzMiIgLz48RmllbGQgTmFtZT0iZG9jXzRfMV9zZXRfc3RyIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9ImRvY180XzFfcGFnZV9zdHIiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iZG9jXzRfMl9zZXRfc3RyIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9ImRvY180XzJfcGFnZV9zdHIiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iZG9jXzRfM19zZXRfc3RyIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9ImRvY180XzNfcGFnZV9zdHIiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iZG9jXzRfNF9zZXRfc3RyIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9ImRvY180XzRfcGFnZV9zdHIiIFR5cGU9IlN0cmluZyIgLz48L1ZpZXc+PC9EYXRhU2V0Pg==</value>
+  </data>
+  <data name="XrTableCell1.Text" xml:space="preserve">
+    <value>XrTableCell1</value>
+  </data>
+  <data name="XrTableCell1.Weight" type="System.Double, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="XrTableCell2.Text" xml:space="preserve">
+    <value>XrTableCell2</value>
+  </data>
+  <data name="XrTableCell2.Weight" type="System.Double, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="XrTableCell3.Text" xml:space="preserve">
+    <value>XrTableCell3</value>
+  </data>
+  <data name="XrTableCell3.Weight" type="System.Double, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="XrTableRow1.Weight" type="System.Double, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="XrTableCell4.Text" xml:space="preserve">
+    <value>XrTableCell4</value>
+  </data>
+  <data name="XrTableCell4.Weight" type="System.Double, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="XrTableCell5.Text" xml:space="preserve">
+    <value>XrTableCell5</value>
+  </data>
+  <data name="XrTableCell5.Weight" type="System.Double, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="XrTableCell6.Text" xml:space="preserve">
+    <value>XrTableCell6</value>
+  </data>
+  <data name="XrTableCell6.Weight" type="System.Double, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="XrTableRow2.Weight" type="System.Double, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="TopMarginBand1.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="TopMarginBand1.HeightF" type="System.Single, mscorlib">
+    <value>250</value>
+  </data>
+  <data name="BottomMarginBand1.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="BottomMarginBand1.HeightF" type="System.Single, mscorlib">
+    <value>250</value>
+  </data>
+  <data name="CalculatedField2.DisplayName" xml:space="preserve">
+    <value>FnameLname</value>
+  </data>
+  <data name="Headname.Description" xml:space="preserve">
+    <value>Headname</value>
+  </data>
+  <data name="cCheckDate.Description" xml:space="preserve">
+    <value>cCheckDate</value>
+  </data>
+  <data name="companyname.Description" xml:space="preserve">
+    <value>Companyname</value>
+  </data>
+  <data name="CalculatedField6.DisplayName" xml:space="preserve">
+    <value>DaydoTotal</value>
+  </data>
+  <data name="CalculatedField3.DisplayName" xml:space="preserve">
+    <value>Running</value>
+  </data>
+  <data name="paradate.Description" xml:space="preserve">
+    <value>Date Time</value>
+  </data>
+  <data name="fullname.Description" xml:space="preserve">
+    <value>fullname</value>
+  </data>
+  <data name="CalculatedField5.DisplayName" xml:space="preserve">
+    <value>fullname</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="$this.Margins" type="System.Drawing.Printing.Margins, System.Drawing">
+    <value>250, 250, 250, 250</value>
+  </data>
+  <data name="$this.PageHeight" type="System.Int32, mscorlib">
+    <value>2970</value>
+  </data>
+  <data name="$this.PageWidth" type="System.Int32, mscorlib">
+    <value>2100</value>
+  </data>
+  <data name="$this.PaperKind" type="System.Drawing.Printing.PaperKind, System.Drawing">
+    <value>A4</value>
+  </data>
+  <assembly alias="DevExpress.XtraReports.v17.1" name="DevExpress.XtraReports.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <data name="$this.ReportUnit" type="DevExpress.XtraReports.UI.ReportUnit, DevExpress.XtraReports.v17.1">
+    <value>TenthsOfAMillimeter</value>
+  </data>
+  <data name="$this.SnapGridSize" type="System.Single, mscorlib">
+    <value>25</value>
+  </data>
+</root>

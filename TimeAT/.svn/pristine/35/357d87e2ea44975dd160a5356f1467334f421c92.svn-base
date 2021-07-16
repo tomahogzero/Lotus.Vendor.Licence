@@ -1,0 +1,278 @@
+<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+Partial Class frmLateRateCash
+    Inherits System.Windows.Forms.Form
+
+    'Form overrides dispose to clean up the component list.
+    <System.Diagnostics.DebuggerNonUserCode()> _
+    Protected Overrides Sub Dispose(ByVal disposing As Boolean)
+        If disposing AndAlso components IsNot Nothing Then
+            components.Dispose()
+        End If
+        MyBase.Dispose(disposing)
+    End Sub
+
+    'Required by the Windows Form Designer
+    Private components As System.ComponentModel.IContainer
+
+    'NOTE: The following procedure is required by the Windows Form Designer
+    'It can be modified using the Windows Form Designer.  
+    'Do not modify it using the code editor.
+    <System.Diagnostics.DebuggerStepThrough()> _
+    Private Sub InitializeComponent()
+        Me.Panel2 = New System.Windows.Forms.Panel
+        Me.Label7 = New System.Windows.Forms.Label
+        Me.Label8 = New System.Windows.Forms.Label
+        Me.txtMnStop = New System.Windows.Forms.TextBox
+        Me.txtMnStart = New System.Windows.Forms.TextBox
+        Me.txtPay = New System.Windows.Forms.TextBox
+        Me.txtCode = New System.Windows.Forms.TextBox
+        Me.Label11 = New System.Windows.Forms.Label
+        Me.Label12 = New System.Windows.Forms.Label
+        Me.lstOtRate = New System.Windows.Forms.ListView
+        Me.colNo = New System.Windows.Forms.ColumnHeader
+        Me.colCode = New System.Windows.Forms.ColumnHeader
+        Me.colTimeFrom = New System.Windows.Forms.ColumnHeader
+        Me.colTimeTo = New System.Windows.Forms.ColumnHeader
+        Me.colTotalHour = New System.Windows.Forms.ColumnHeader
+        Me.colLastUpdate = New System.Windows.Forms.ColumnHeader
+        Me.Panel1 = New System.Windows.Forms.Panel
+        Me.btnEdit = New System.Windows.Forms.Button
+        Me.btnExit = New System.Windows.Forms.Button
+        Me.btnClear = New System.Windows.Forms.Button
+        Me.btnDelete = New System.Windows.Forms.Button
+        Me.btnAdd = New System.Windows.Forms.Button
+        Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog
+        Me.Panel2.SuspendLayout()
+        Me.Panel1.SuspendLayout()
+        Me.SuspendLayout()
+        '
+        'Panel2
+        '
+        Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Panel2.Controls.Add(Me.Label7)
+        Me.Panel2.Controls.Add(Me.Label8)
+        Me.Panel2.Controls.Add(Me.txtMnStop)
+        Me.Panel2.Controls.Add(Me.txtMnStart)
+        Me.Panel2.Controls.Add(Me.txtPay)
+        Me.Panel2.Controls.Add(Me.txtCode)
+        Me.Panel2.Controls.Add(Me.Label11)
+        Me.Panel2.Controls.Add(Me.Label12)
+        Me.Panel2.Location = New System.Drawing.Point(2, 3)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(796, 84)
+        Me.Panel2.TabIndex = 0
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(159, 33)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(19, 13)
+        Me.Label7.TabIndex = 4
+        Me.Label7.Text = "ถึง"
+        '
+        'Label8
+        '
+        Me.Label8.Location = New System.Drawing.Point(3, 35)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(89, 17)
+        Me.Label8.TabIndex = 2
+        Me.Label8.Text = "จำนวน (นาที) : "
+        Me.Label8.TextAlign = System.Drawing.ContentAlignment.TopRight
+        '
+        'txtMnStop
+        '
+        Me.txtMnStop.Location = New System.Drawing.Point(184, 30)
+        Me.txtMnStop.Name = "txtMnStop"
+        Me.txtMnStop.Size = New System.Drawing.Size(54, 20)
+        Me.txtMnStop.TabIndex = 2
+        '
+        'txtMnStart
+        '
+        Me.txtMnStart.Location = New System.Drawing.Point(98, 30)
+        Me.txtMnStart.Name = "txtMnStart"
+        Me.txtMnStart.Size = New System.Drawing.Size(55, 20)
+        Me.txtMnStart.TabIndex = 1
+        '
+        'txtPay
+        '
+        Me.txtPay.Location = New System.Drawing.Point(98, 56)
+        Me.txtPay.Name = "txtPay"
+        Me.txtPay.Size = New System.Drawing.Size(83, 20)
+        Me.txtPay.TabIndex = 3
+        '
+        'txtCode
+        '
+        Me.txtCode.Location = New System.Drawing.Point(98, 4)
+        Me.txtCode.Name = "txtCode"
+        Me.txtCode.Size = New System.Drawing.Size(100, 20)
+        Me.txtCode.TabIndex = 0
+        '
+        'Label11
+        '
+        Me.Label11.Location = New System.Drawing.Point(10, 59)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(81, 20)
+        Me.Label11.TabIndex = 0
+        Me.Label11.Text = "จำนวนเงิน : "
+        Me.Label11.TextAlign = System.Drawing.ContentAlignment.TopRight
+        '
+        'Label12
+        '
+        Me.Label12.Location = New System.Drawing.Point(28, 7)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(64, 17)
+        Me.Label12.TabIndex = 0
+        Me.Label12.Text = "Code : "
+        Me.Label12.TextAlign = System.Drawing.ContentAlignment.TopRight
+        '
+        'lstOtRate
+        '
+        Me.lstOtRate.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+                    Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lstOtRate.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.colNo, Me.colCode, Me.colTimeFrom, Me.colTimeTo, Me.colTotalHour, Me.colLastUpdate})
+        Me.lstOtRate.FullRowSelect = True
+        Me.lstOtRate.GridLines = True
+        Me.lstOtRate.Location = New System.Drawing.Point(2, 125)
+        Me.lstOtRate.Name = "lstOtRate"
+        Me.lstOtRate.Size = New System.Drawing.Size(875, 397)
+        Me.lstOtRate.TabIndex = 2
+        Me.lstOtRate.UseCompatibleStateImageBehavior = False
+        Me.lstOtRate.View = System.Windows.Forms.View.Details
+        '
+        'colNo
+        '
+        Me.colNo.Text = "ที่"
+        Me.colNo.Width = 40
+        '
+        'colCode
+        '
+        Me.colCode.Text = "Code"
+        Me.colCode.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.colCode.Width = 110
+        '
+        'colTimeFrom
+        '
+        Me.colTimeFrom.Text = "จน(นาที)"
+        Me.colTimeFrom.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.colTimeFrom.Width = 73
+        '
+        'colTimeTo
+        '
+        Me.colTimeTo.Text = "ถึง(นาที)"
+        Me.colTimeTo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.colTimeTo.Width = 71
+        '
+        'colTotalHour
+        '
+        Me.colTotalHour.Text = "จำนวนเงิน"
+        Me.colTotalHour.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        Me.colTotalHour.Width = 79
+        '
+        'colLastUpdate
+        '
+        Me.colLastUpdate.Text = "Last Update"
+        Me.colLastUpdate.Width = 136
+        '
+        'Panel1
+        '
+        Me.Panel1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Panel1.Controls.Add(Me.btnEdit)
+        Me.Panel1.Controls.Add(Me.btnExit)
+        Me.Panel1.Controls.Add(Me.btnClear)
+        Me.Panel1.Controls.Add(Me.btnDelete)
+        Me.Panel1.Controls.Add(Me.btnAdd)
+        Me.Panel1.Location = New System.Drawing.Point(2, 90)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(796, 29)
+        Me.Panel1.TabIndex = 1
+        '
+        'btnEdit
+        '
+        Me.btnEdit.Location = New System.Drawing.Point(78, 3)
+        Me.btnEdit.Name = "btnEdit"
+        Me.btnEdit.Size = New System.Drawing.Size(75, 23)
+        Me.btnEdit.TabIndex = 1
+        Me.btnEdit.Text = "แก้ไข"
+        Me.btnEdit.UseVisualStyleBackColor = True
+        '
+        'btnExit
+        '
+        Me.btnExit.Location = New System.Drawing.Point(316, 3)
+        Me.btnExit.Name = "btnExit"
+        Me.btnExit.Size = New System.Drawing.Size(75, 23)
+        Me.btnExit.TabIndex = 4
+        Me.btnExit.Text = "ออก"
+        Me.btnExit.UseVisualStyleBackColor = True
+        '
+        'btnClear
+        '
+        Me.btnClear.Location = New System.Drawing.Point(228, 3)
+        Me.btnClear.Name = "btnClear"
+        Me.btnClear.Size = New System.Drawing.Size(75, 23)
+        Me.btnClear.TabIndex = 3
+        Me.btnClear.Text = "เคลียร์"
+        Me.btnClear.UseVisualStyleBackColor = True
+        '
+        'btnDelete
+        '
+        Me.btnDelete.Location = New System.Drawing.Point(153, 3)
+        Me.btnDelete.Name = "btnDelete"
+        Me.btnDelete.Size = New System.Drawing.Size(75, 23)
+        Me.btnDelete.TabIndex = 2
+        Me.btnDelete.Text = "ลบ"
+        Me.btnDelete.UseVisualStyleBackColor = True
+        '
+        'btnAdd
+        '
+        Me.btnAdd.Location = New System.Drawing.Point(3, 3)
+        Me.btnAdd.Name = "btnAdd"
+        Me.btnAdd.Size = New System.Drawing.Size(75, 23)
+        Me.btnAdd.TabIndex = 0
+        Me.btnAdd.Text = "เพิ่ม"
+        Me.btnAdd.UseVisualStyleBackColor = True
+        '
+        'frmLateRateCash
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.ClientSize = New System.Drawing.Size(879, 525)
+        Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.lstOtRate)
+        Me.Controls.Add(Me.Panel2)
+        Me.KeyPreview = True
+        Me.Name = "frmLateRateCash"
+        Me.Text = "กำหนดเงื่อนไขสาย - กรณีหักยอดเดียว"
+        Me.Panel2.ResumeLayout(False)
+        Me.Panel2.PerformLayout()
+        Me.Panel1.ResumeLayout(False)
+        Me.ResumeLayout(False)
+
+    End Sub
+    Friend WithEvents Panel2 As System.Windows.Forms.Panel
+    Friend WithEvents Label7 As System.Windows.Forms.Label
+    Friend WithEvents Label8 As System.Windows.Forms.Label
+    Friend WithEvents txtPay As System.Windows.Forms.TextBox
+    Friend WithEvents txtCode As System.Windows.Forms.TextBox
+    Friend WithEvents Label11 As System.Windows.Forms.Label
+    Friend WithEvents Label12 As System.Windows.Forms.Label
+    Friend WithEvents lstOtRate As System.Windows.Forms.ListView
+    Friend WithEvents colNo As System.Windows.Forms.ColumnHeader
+    Friend WithEvents colCode As System.Windows.Forms.ColumnHeader
+    Friend WithEvents colTimeFrom As System.Windows.Forms.ColumnHeader
+    Friend WithEvents colTimeTo As System.Windows.Forms.ColumnHeader
+    Friend WithEvents colTotalHour As System.Windows.Forms.ColumnHeader
+    Friend WithEvents colLastUpdate As System.Windows.Forms.ColumnHeader
+    Friend WithEvents Panel1 As System.Windows.Forms.Panel
+    Friend WithEvents btnEdit As System.Windows.Forms.Button
+    Friend WithEvents btnExit As System.Windows.Forms.Button
+    Friend WithEvents btnClear As System.Windows.Forms.Button
+    Friend WithEvents btnDelete As System.Windows.Forms.Button
+    Friend WithEvents btnAdd As System.Windows.Forms.Button
+    Friend WithEvents SaveFileDialog1 As System.Windows.Forms.SaveFileDialog
+    Friend WithEvents txtMnStop As System.Windows.Forms.TextBox
+    Friend WithEvents txtMnStart As System.Windows.Forms.TextBox
+End Class

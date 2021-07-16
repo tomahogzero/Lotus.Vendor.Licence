@@ -1,0 +1,1282 @@
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+Partial Class frmEmpOTDeducByDay
+    Inherits System.Windows.Forms.Form
+
+    'Form overrides dispose to clean up the component list.
+    <System.Diagnostics.DebuggerNonUserCode()> _
+    Protected Overrides Sub Dispose(ByVal disposing As Boolean)
+        Try
+            If disposing AndAlso components IsNot Nothing Then
+                components.Dispose()
+            End If
+        Finally
+            MyBase.Dispose(disposing)
+        End Try
+    End Sub
+
+    'Required by the Windows Form Designer
+    Private components As System.ComponentModel.IContainer
+
+    'NOTE: The following procedure is required by the Windows Form Designer
+    'It can be modified using the Windows Form Designer.  
+    'Do not modify it using the code editor.
+    <System.Diagnostics.DebuggerStepThrough()> _
+    Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container
+        Me.lstEmp = New System.Windows.Forms.ListView
+        Me.colNO = New System.Windows.Forms.ColumnHeader
+        Me.colCode = New System.Windows.Forms.ColumnHeader
+        Me.colName = New System.Windows.Forms.ColumnHeader
+        Me.colSName = New System.Windows.Forms.ColumnHeader
+        Me.colDepartment = New System.Windows.Forms.ColumnHeader
+        Me.ProgressBar1 = New System.Windows.Forms.ProgressBar
+        Me.GroupBox5 = New System.Windows.Forms.GroupBox
+        Me.rdContractor = New System.Windows.Forms.RadioButton
+        Me.rdDay = New System.Windows.Forms.RadioButton
+        Me.rdMonth = New System.Windows.Forms.RadioButton
+        Me.rdAll = New System.Windows.Forms.RadioButton
+        Me.Label6 = New System.Windows.Forms.Label
+        Me.Label7 = New System.Windows.Forms.Label
+        Me.Label8 = New System.Windows.Forms.Label
+        Me.Label4 = New System.Windows.Forms.Label
+        Me.Label9 = New System.Windows.Forms.Label
+        Me.GroupBox6 = New System.Windows.Forms.GroupBox
+        Me.rdByDeptName = New System.Windows.Forms.RadioButton
+        Me.rdByDeptCode = New System.Windows.Forms.RadioButton
+        Me.rdByName = New System.Windows.Forms.RadioButton
+        Me.rdByCode = New System.Windows.Forms.RadioButton
+        Me.Label10 = New System.Windows.Forms.Label
+        Me.ItemPnd_Search = New DevComponents.DotNetBar.ItemPanel
+        Me.PanelEx2 = New DevComponents.DotNetBar.PanelEx
+        Me.btnRefresh = New DevComponents.DotNetBar.ButtonX
+        Me.txtNameSearch = New DevComponents.DotNetBar.Controls.TextBoxX
+        Me.txtEmpId = New DevComponents.DotNetBar.Controls.TextBoxX
+        Me.cboBroker = New DevComponents.DotNetBar.Controls.ComboBoxEx
+        Me.cboEmpGroup = New DevComponents.DotNetBar.Controls.ComboBoxEx
+        Me.cboPosition = New DevComponents.DotNetBar.Controls.ComboBoxEx
+        Me.cboSection = New DevComponents.DotNetBar.Controls.ComboBoxEx
+        Me.cboDepartment = New DevComponents.DotNetBar.Controls.ComboBoxEx
+        Me.cboDivision = New DevComponents.DotNetBar.Controls.ComboBoxEx
+        Me.cboCompany = New DevComponents.DotNetBar.Controls.ComboBoxEx
+        Me.Label2 = New System.Windows.Forms.Label
+        Me.Label3 = New System.Windows.Forms.Label
+        Me.Label1 = New System.Windows.Forms.Label
+        Me.PanelEx1 = New DevComponents.DotNetBar.PanelEx
+        Me.ControlContainerItem1 = New DevComponents.DotNetBar.ControlContainerItem
+        Me.PndData = New DevComponents.DotNetBar.PanelEx
+        Me.TabControl1 = New DevComponents.DotNetBar.TabControl
+        Me.TabControlPanel2 = New DevComponents.DotNetBar.TabControlPanel
+        Me.btnRefreshOT = New DevComponents.DotNetBar.ButtonX
+        Me.btnOTNoneSelectAll = New DevComponents.DotNetBar.ButtonX
+        Me.btnOTSelectAll = New DevComponents.DotNetBar.ButtonX
+        Me.lstEmpOT = New System.Windows.Forms.ListView
+        Me.ColumnHeader1 = New System.Windows.Forms.ColumnHeader
+        Me.ColumnHeader2 = New System.Windows.Forms.ColumnHeader
+        Me.ColumnHeader3 = New System.Windows.Forms.ColumnHeader
+        Me.ColumnHeader4 = New System.Windows.Forms.ColumnHeader
+        Me.ColumnHeader5 = New System.Windows.Forms.ColumnHeader
+        Me.ColumnHeader6 = New System.Windows.Forms.ColumnHeader
+        Me.TabItem2 = New DevComponents.DotNetBar.TabItem(Me.components)
+        Me.TabControlPanel1 = New DevComponents.DotNetBar.TabControlPanel
+        Me.PanelEx5 = New DevComponents.DotNetBar.PanelEx
+        Me.btnSave = New DevComponents.DotNetBar.ButtonX
+        Me.txtOT = New DevComponents.DotNetBar.Controls.TextBoxX
+        Me.LabelX3 = New DevComponents.DotNetBar.LabelX
+        Me.LabelX2 = New DevComponents.DotNetBar.LabelX
+        Me.btnEmpNoneSelectAll = New DevComponents.DotNetBar.ButtonX
+        Me.btnEmpSelectAll = New DevComponents.DotNetBar.ButtonX
+        Me.TabItem1 = New DevComponents.DotNetBar.TabItem(Me.components)
+        Me.txtDate = New DevComponents.Editors.DateTimeAdv.DateTimeInput
+        Me.LabelX1 = New DevComponents.DotNetBar.LabelX
+        Me.PanelEx4 = New DevComponents.DotNetBar.PanelEx
+        Me.ItemPnd_Head = New DevComponents.DotNetBar.ItemPanel
+        Me.btnExit = New DevComponents.DotNetBar.ButtonX
+        Me.ExpandableSplitter1 = New DevComponents.DotNetBar.ExpandableSplitter
+        Me.btnDeleteOT = New DevComponents.DotNetBar.ButtonX
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox
+        Me.rdTerminate = New System.Windows.Forms.RadioButton
+        Me.rdWork = New System.Windows.Forms.RadioButton
+        Me.rdTermiByDate = New System.Windows.Forms.RadioButton
+        Me.txtTDateST = New DevComponents.Editors.DateTimeAdv.DateTimeInput
+        Me.txtTDateSP = New DevComponents.Editors.DateTimeAdv.DateTimeInput
+        Me.LabelX4 = New DevComponents.DotNetBar.LabelX
+        Me.GroupBox5.SuspendLayout()
+        Me.GroupBox6.SuspendLayout()
+        Me.ItemPnd_Search.SuspendLayout()
+        Me.PanelEx2.SuspendLayout()
+        Me.PndData.SuspendLayout()
+        CType(Me.TabControl1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabControl1.SuspendLayout()
+        Me.TabControlPanel2.SuspendLayout()
+        Me.TabControlPanel1.SuspendLayout()
+        Me.PanelEx5.SuspendLayout()
+        CType(Me.txtDate, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.ItemPnd_Head.SuspendLayout()
+        Me.GroupBox1.SuspendLayout()
+        CType(Me.txtTDateST, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtTDateSP, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.SuspendLayout()
+        '
+        'lstEmp
+        '
+        Me.lstEmp.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+                    Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lstEmp.CheckBoxes = True
+        Me.lstEmp.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.colNO, Me.colCode, Me.colName, Me.colSName, Me.colDepartment})
+        Me.lstEmp.FullRowSelect = True
+        Me.lstEmp.GridLines = True
+        Me.lstEmp.Location = New System.Drawing.Point(4, 91)
+        Me.lstEmp.Name = "lstEmp"
+        Me.lstEmp.Size = New System.Drawing.Size(745, 303)
+        Me.lstEmp.TabIndex = 0
+        Me.lstEmp.UseCompatibleStateImageBehavior = False
+        Me.lstEmp.View = System.Windows.Forms.View.Details
+        '
+        'colNO
+        '
+        Me.colNO.Text = "#"
+        Me.colNO.Width = 44
+        '
+        'colCode
+        '
+        Me.colCode.Text = "รหัสพนง."
+        Me.colCode.Width = 77
+        '
+        'colName
+        '
+        Me.colName.Text = "ชื่อ"
+        Me.colName.Width = 108
+        '
+        'colSName
+        '
+        Me.colSName.Text = "สกุล"
+        Me.colSName.Width = 130
+        '
+        'colDepartment
+        '
+        Me.colDepartment.Text = "แผนก"
+        Me.colDepartment.Width = 217
+        '
+        'ProgressBar1
+        '
+        Me.ProgressBar1.Location = New System.Drawing.Point(4, 461)
+        Me.ProgressBar1.Name = "ProgressBar1"
+        Me.ProgressBar1.Size = New System.Drawing.Size(385, 10)
+        Me.ProgressBar1.TabIndex = 20
+        '
+        'GroupBox5
+        '
+        Me.GroupBox5.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.GroupBox5.Controls.Add(Me.rdContractor)
+        Me.GroupBox5.Controls.Add(Me.rdDay)
+        Me.GroupBox5.Controls.Add(Me.rdMonth)
+        Me.GroupBox5.Controls.Add(Me.rdAll)
+        Me.GroupBox5.Location = New System.Drawing.Point(11, 191)
+        Me.GroupBox5.Name = "GroupBox5"
+        Me.GroupBox5.Size = New System.Drawing.Size(381, 47)
+        Me.GroupBox5.TabIndex = 5
+        Me.GroupBox5.TabStop = False
+        Me.GroupBox5.Text = "พนักงาน"
+        '
+        'rdContractor
+        '
+        Me.rdContractor.AutoSize = True
+        Me.rdContractor.Location = New System.Drawing.Point(277, 20)
+        Me.rdContractor.Name = "rdContractor"
+        Me.rdContractor.Size = New System.Drawing.Size(64, 17)
+        Me.rdContractor.TabIndex = 3
+        Me.rdContractor.Text = "รายเหมา"
+        Me.rdContractor.UseVisualStyleBackColor = True
+        '
+        'rdDay
+        '
+        Me.rdDay.AutoSize = True
+        Me.rdDay.Location = New System.Drawing.Point(181, 20)
+        Me.rdDay.Name = "rdDay"
+        Me.rdDay.Size = New System.Drawing.Size(53, 17)
+        Me.rdDay.TabIndex = 2
+        Me.rdDay.Text = "รายวัน"
+        Me.rdDay.UseVisualStyleBackColor = True
+        '
+        'rdMonth
+        '
+        Me.rdMonth.AutoSize = True
+        Me.rdMonth.Location = New System.Drawing.Point(92, 20)
+        Me.rdMonth.Name = "rdMonth"
+        Me.rdMonth.Size = New System.Drawing.Size(66, 17)
+        Me.rdMonth.TabIndex = 1
+        Me.rdMonth.Text = "รายเดือน"
+        Me.rdMonth.UseVisualStyleBackColor = True
+        '
+        'rdAll
+        '
+        Me.rdAll.AutoSize = True
+        Me.rdAll.Checked = True
+        Me.rdAll.Location = New System.Drawing.Point(6, 20)
+        Me.rdAll.Name = "rdAll"
+        Me.rdAll.Size = New System.Drawing.Size(59, 17)
+        Me.rdAll.TabIndex = 0
+        Me.rdAll.TabStop = True
+        Me.rdAll.Text = "ทั้งหมด"
+        Me.rdAll.UseVisualStyleBackColor = True
+        '
+        'Label6
+        '
+        Me.Label6.Location = New System.Drawing.Point(8, 142)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(87, 16)
+        Me.Label6.TabIndex = 18
+        Me.Label6.Text = "กลุ่ม พนักงาน : "
+        Me.Label6.TextAlign = System.Drawing.ContentAlignment.TopRight
+        '
+        'Label7
+        '
+        Me.Label7.Location = New System.Drawing.Point(8, 33)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(87, 16)
+        Me.Label7.TabIndex = 15
+        Me.Label7.Text = "ฝ่าย : "
+        Me.Label7.TextAlign = System.Drawing.ContentAlignment.TopRight
+        '
+        'Label8
+        '
+        Me.Label8.Location = New System.Drawing.Point(8, 114)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(87, 16)
+        Me.Label8.TabIndex = 16
+        Me.Label8.Text = "ตำแหน่ง : "
+        Me.Label8.TextAlign = System.Drawing.ContentAlignment.TopRight
+        '
+        'Label4
+        '
+        Me.Label4.Location = New System.Drawing.Point(8, 6)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(87, 16)
+        Me.Label4.TabIndex = 7
+        Me.Label4.Text = "บริษัท : "
+        Me.Label4.TextAlign = System.Drawing.ContentAlignment.TopRight
+        '
+        'Label9
+        '
+        Me.Label9.Location = New System.Drawing.Point(8, 60)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(87, 16)
+        Me.Label9.TabIndex = 7
+        Me.Label9.Text = "แผนก : "
+        Me.Label9.TextAlign = System.Drawing.ContentAlignment.TopRight
+        '
+        'GroupBox6
+        '
+        Me.GroupBox6.Controls.Add(Me.rdByDeptName)
+        Me.GroupBox6.Controls.Add(Me.rdByDeptCode)
+        Me.GroupBox6.Controls.Add(Me.rdByName)
+        Me.GroupBox6.Controls.Add(Me.rdByCode)
+        Me.GroupBox6.Location = New System.Drawing.Point(4, 408)
+        Me.GroupBox6.Name = "GroupBox6"
+        Me.GroupBox6.Size = New System.Drawing.Size(385, 47)
+        Me.GroupBox6.TabIndex = 8
+        Me.GroupBox6.TabStop = False
+        Me.GroupBox6.Text = "เรียงข้อมูลตาม"
+        '
+        'rdByDeptName
+        '
+        Me.rdByDeptName.AutoSize = True
+        Me.rdByDeptName.Location = New System.Drawing.Point(224, 20)
+        Me.rdByDeptName.Name = "rdByDeptName"
+        Me.rdByDeptName.Size = New System.Drawing.Size(108, 17)
+        Me.rdByDeptName.TabIndex = 3
+        Me.rdByDeptName.Text = "แผนก , ชื่อ - สกุล"
+        Me.rdByDeptName.UseVisualStyleBackColor = True
+        '
+        'rdByDeptCode
+        '
+        Me.rdByDeptCode.AutoSize = True
+        Me.rdByDeptCode.Location = New System.Drawing.Point(128, 20)
+        Me.rdByDeptCode.Name = "rdByDeptCode"
+        Me.rdByDeptCode.Size = New System.Drawing.Size(82, 17)
+        Me.rdByDeptCode.TabIndex = 2
+        Me.rdByDeptCode.Text = "แผนก , รหัส"
+        Me.rdByDeptCode.UseVisualStyleBackColor = True
+        '
+        'rdByName
+        '
+        Me.rdByName.AutoSize = True
+        Me.rdByName.Location = New System.Drawing.Point(56, 20)
+        Me.rdByName.Name = "rdByName"
+        Me.rdByName.Size = New System.Drawing.Size(70, 17)
+        Me.rdByName.TabIndex = 1
+        Me.rdByName.Text = "ชื่อ - กสุล"
+        Me.rdByName.UseVisualStyleBackColor = True
+        '
+        'rdByCode
+        '
+        Me.rdByCode.AutoSize = True
+        Me.rdByCode.Checked = True
+        Me.rdByCode.Location = New System.Drawing.Point(6, 20)
+        Me.rdByCode.Name = "rdByCode"
+        Me.rdByCode.Size = New System.Drawing.Size(44, 17)
+        Me.rdByCode.TabIndex = 0
+        Me.rdByCode.TabStop = True
+        Me.rdByCode.Text = "รหัส"
+        Me.rdByCode.UseVisualStyleBackColor = True
+        '
+        'Label10
+        '
+        Me.Label10.Location = New System.Drawing.Point(8, 272)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(87, 16)
+        Me.Label10.TabIndex = 7
+        Me.Label10.Text = "ชื่อ - สกุล : "
+        Me.Label10.TextAlign = System.Drawing.ContentAlignment.TopRight
+        '
+        'ItemPnd_Search
+        '
+        '
+        '
+        '
+        Me.ItemPnd_Search.BackgroundStyle.Class = "ItemPanel"
+        Me.ItemPnd_Search.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.ItemPnd_Search.ContainerControlProcessDialogKey = True
+        Me.ItemPnd_Search.Controls.Add(Me.PanelEx2)
+        Me.ItemPnd_Search.Controls.Add(Me.PanelEx1)
+        Me.ItemPnd_Search.Dock = System.Windows.Forms.DockStyle.Left
+        Me.ItemPnd_Search.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.ControlContainerItem1})
+        Me.ItemPnd_Search.LayoutOrientation = DevComponents.DotNetBar.eOrientation.Vertical
+        Me.ItemPnd_Search.Location = New System.Drawing.Point(0, 37)
+        Me.ItemPnd_Search.Name = "ItemPnd_Search"
+        Me.ItemPnd_Search.Size = New System.Drawing.Size(404, 515)
+        Me.ItemPnd_Search.Style = DevComponents.DotNetBar.eDotNetBarStyle.Metro
+        Me.ItemPnd_Search.TabIndex = 1
+        Me.ItemPnd_Search.Text = "ItemPanel1"
+        Me.ItemPnd_Search.ThemeAware = True
+        '
+        'PanelEx2
+        '
+        Me.PanelEx2.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+                    Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PanelEx2.CanvasColor = System.Drawing.SystemColors.Control
+        Me.PanelEx2.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.PanelEx2.Controls.Add(Me.btnRefresh)
+        Me.PanelEx2.Controls.Add(Me.txtNameSearch)
+        Me.PanelEx2.Controls.Add(Me.txtEmpId)
+        Me.PanelEx2.Controls.Add(Me.cboBroker)
+        Me.PanelEx2.Controls.Add(Me.cboEmpGroup)
+        Me.PanelEx2.Controls.Add(Me.cboPosition)
+        Me.PanelEx2.Controls.Add(Me.cboSection)
+        Me.PanelEx2.Controls.Add(Me.cboDepartment)
+        Me.PanelEx2.Controls.Add(Me.cboDivision)
+        Me.PanelEx2.Controls.Add(Me.cboCompany)
+        Me.PanelEx2.Controls.Add(Me.ProgressBar1)
+        Me.PanelEx2.Controls.Add(Me.GroupBox6)
+        Me.PanelEx2.Controls.Add(Me.Label2)
+        Me.PanelEx2.Controls.Add(Me.GroupBox1)
+        Me.PanelEx2.Controls.Add(Me.GroupBox5)
+        Me.PanelEx2.Controls.Add(Me.Label3)
+        Me.PanelEx2.Controls.Add(Me.Label10)
+        Me.PanelEx2.Controls.Add(Me.Label9)
+        Me.PanelEx2.Controls.Add(Me.Label4)
+        Me.PanelEx2.Controls.Add(Me.Label1)
+        Me.PanelEx2.Controls.Add(Me.Label8)
+        Me.PanelEx2.Controls.Add(Me.Label6)
+        Me.PanelEx2.Controls.Add(Me.Label7)
+        Me.PanelEx2.Location = New System.Drawing.Point(5, 40)
+        Me.PanelEx2.Name = "PanelEx2"
+        Me.PanelEx2.Size = New System.Drawing.Size(393, 469)
+        Me.PanelEx2.Style.Alignment = System.Drawing.StringAlignment.Center
+        Me.PanelEx2.Style.BackColor1.Color = System.Drawing.Color.WhiteSmoke
+        Me.PanelEx2.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
+        Me.PanelEx2.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText
+        Me.PanelEx2.Style.GradientAngle = 90
+        Me.PanelEx2.TabIndex = 1
+        '
+        'btnRefresh
+        '
+        Me.btnRefresh.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.btnRefresh.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.btnRefresh.Location = New System.Drawing.Point(4, 377)
+        Me.btnRefresh.Name = "btnRefresh"
+        Me.btnRefresh.Size = New System.Drawing.Size(385, 31)
+        Me.btnRefresh.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.btnRefresh.TabIndex = 29
+        Me.btnRefresh.Text = "ค้นหา"
+        '
+        'txtNameSearch
+        '
+        '
+        '
+        '
+        Me.txtNameSearch.Border.Class = "TextBoxBorder"
+        Me.txtNameSearch.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.txtNameSearch.Location = New System.Drawing.Point(101, 272)
+        Me.txtNameSearch.Name = "txtNameSearch"
+        Me.txtNameSearch.Size = New System.Drawing.Size(288, 21)
+        Me.txtNameSearch.TabIndex = 28
+        '
+        'txtEmpId
+        '
+        '
+        '
+        '
+        Me.txtEmpId.Border.Class = "TextBoxBorder"
+        Me.txtEmpId.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.txtEmpId.Location = New System.Drawing.Point(101, 244)
+        Me.txtEmpId.Name = "txtEmpId"
+        Me.txtEmpId.Size = New System.Drawing.Size(288, 21)
+        Me.txtEmpId.TabIndex = 27
+        '
+        'cboBroker
+        '
+        Me.cboBroker.DisplayMember = "Text"
+        Me.cboBroker.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.cboBroker.FormattingEnabled = True
+        Me.cboBroker.ItemHeight = 15
+        Me.cboBroker.Location = New System.Drawing.Point(102, 164)
+        Me.cboBroker.MaxDropDownItems = 15
+        Me.cboBroker.Name = "cboBroker"
+        Me.cboBroker.Size = New System.Drawing.Size(287, 21)
+        Me.cboBroker.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.cboBroker.TabIndex = 26
+        '
+        'cboEmpGroup
+        '
+        Me.cboEmpGroup.DisplayMember = "Text"
+        Me.cboEmpGroup.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.cboEmpGroup.FormattingEnabled = True
+        Me.cboEmpGroup.ItemHeight = 15
+        Me.cboEmpGroup.Location = New System.Drawing.Point(102, 137)
+        Me.cboEmpGroup.MaxDropDownItems = 15
+        Me.cboEmpGroup.Name = "cboEmpGroup"
+        Me.cboEmpGroup.Size = New System.Drawing.Size(287, 21)
+        Me.cboEmpGroup.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.cboEmpGroup.TabIndex = 25
+        '
+        'cboPosition
+        '
+        Me.cboPosition.DisplayMember = "Text"
+        Me.cboPosition.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.cboPosition.FormattingEnabled = True
+        Me.cboPosition.ItemHeight = 15
+        Me.cboPosition.Location = New System.Drawing.Point(102, 111)
+        Me.cboPosition.MaxDropDownItems = 15
+        Me.cboPosition.Name = "cboPosition"
+        Me.cboPosition.Size = New System.Drawing.Size(287, 21)
+        Me.cboPosition.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.cboPosition.TabIndex = 24
+        '
+        'cboSection
+        '
+        Me.cboSection.DisplayMember = "Text"
+        Me.cboSection.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.cboSection.FormattingEnabled = True
+        Me.cboSection.ItemHeight = 15
+        Me.cboSection.Location = New System.Drawing.Point(102, 84)
+        Me.cboSection.MaxDropDownItems = 15
+        Me.cboSection.Name = "cboSection"
+        Me.cboSection.Size = New System.Drawing.Size(287, 21)
+        Me.cboSection.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.cboSection.TabIndex = 23
+        '
+        'cboDepartment
+        '
+        Me.cboDepartment.DisplayMember = "Text"
+        Me.cboDepartment.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.cboDepartment.FormattingEnabled = True
+        Me.cboDepartment.ItemHeight = 15
+        Me.cboDepartment.Location = New System.Drawing.Point(102, 57)
+        Me.cboDepartment.MaxDropDownItems = 15
+        Me.cboDepartment.Name = "cboDepartment"
+        Me.cboDepartment.Size = New System.Drawing.Size(287, 21)
+        Me.cboDepartment.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.cboDepartment.TabIndex = 23
+        '
+        'cboDivision
+        '
+        Me.cboDivision.DisplayMember = "Text"
+        Me.cboDivision.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable
+        Me.cboDivision.FormattingEnabled = True
+        Me.cboDivision.ItemHeight = 15
+        Me.cboDivision.Location = New System.Drawing.Point(102, 30)
+        Me.cboDivision.MaxDropDownItems = 15
+        Me.cboDivision.Name = "cboDivision"
+        Me.cboDivision.Size = New System.Drawing.Size(287, 21)
+        Me.cboDivision.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.cboDivision.TabIndex = 22
+        '
+        'cboCompany
+        '
+        Me.cboCompany.DisplayMember = "Text"
+        Me.cboCompany.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable
+        Me.cboCompany.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboCompany.FormattingEnabled = True
+        Me.cboCompany.ItemHeight = 15
+        Me.cboCompany.Location = New System.Drawing.Point(102, 3)
+        Me.cboCompany.MaxDropDownItems = 15
+        Me.cboCompany.Name = "cboCompany"
+        Me.cboCompany.Size = New System.Drawing.Size(287, 21)
+        Me.cboCompany.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.cboCompany.TabIndex = 21
+        '
+        'Label2
+        '
+        Me.Label2.Location = New System.Drawing.Point(8, 246)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(87, 16)
+        Me.Label2.TabIndex = 7
+        Me.Label2.Text = "รหัสพนักงาน : "
+        Me.Label2.TextAlign = System.Drawing.ContentAlignment.TopRight
+        '
+        'Label3
+        '
+        Me.Label3.Location = New System.Drawing.Point(8, 87)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(87, 16)
+        Me.Label3.TabIndex = 7
+        Me.Label3.Text = "ส่วน : "
+        Me.Label3.TextAlign = System.Drawing.ContentAlignment.TopRight
+        '
+        'Label1
+        '
+        Me.Label1.Location = New System.Drawing.Point(8, 169)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(87, 16)
+        Me.Label1.TabIndex = 18
+        Me.Label1.Text = "สายรถ : "
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.TopRight
+        '
+        'PanelEx1
+        '
+        Me.PanelEx1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PanelEx1.CanvasColor = System.Drawing.SystemColors.Control
+        Me.PanelEx1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.PanelEx1.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.PanelEx1.Location = New System.Drawing.Point(5, 4)
+        Me.PanelEx1.Name = "PanelEx1"
+        Me.PanelEx1.Size = New System.Drawing.Size(393, 30)
+        Me.PanelEx1.Style.Alignment = System.Drawing.StringAlignment.Center
+        Me.PanelEx1.Style.BackColor1.Color = System.Drawing.Color.LightSteelBlue
+        Me.PanelEx1.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
+        Me.PanelEx1.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText
+        Me.PanelEx1.Style.GradientAngle = 90
+        Me.PanelEx1.TabIndex = 0
+        Me.PanelEx1.Text = "ค้นหา พนักงาน"
+        '
+        'ControlContainerItem1
+        '
+        Me.ControlContainerItem1.AllowItemResize = False
+        Me.ControlContainerItem1.MenuVisibility = DevComponents.DotNetBar.eMenuVisibility.VisibleAlways
+        Me.ControlContainerItem1.Name = "ControlContainerItem1"
+        Me.ControlContainerItem1.ThemeAware = True
+        '
+        'PndData
+        '
+        Me.PndData.CanvasColor = System.Drawing.SystemColors.Control
+        Me.PndData.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.PndData.Controls.Add(Me.TabControl1)
+        Me.PndData.Controls.Add(Me.txtDate)
+        Me.PndData.Controls.Add(Me.LabelX1)
+        Me.PndData.Controls.Add(Me.PanelEx4)
+        Me.PndData.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.PndData.Location = New System.Drawing.Point(404, 37)
+        Me.PndData.Name = "PndData"
+        Me.PndData.Size = New System.Drawing.Size(762, 515)
+        Me.PndData.Style.Alignment = System.Drawing.StringAlignment.Center
+        Me.PndData.Style.BackColor1.Color = System.Drawing.Color.White
+        Me.PndData.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
+        Me.PndData.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText
+        Me.PndData.Style.GradientAngle = 90
+        Me.PndData.TabIndex = 3
+        '
+        'TabControl1
+        '
+        Me.TabControl1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+                    Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TabControl1.BackColor = System.Drawing.Color.Transparent
+        Me.TabControl1.CanReorderTabs = True
+        Me.TabControl1.Controls.Add(Me.TabControlPanel2)
+        Me.TabControl1.Controls.Add(Me.TabControlPanel1)
+        Me.TabControl1.Location = New System.Drawing.Point(6, 70)
+        Me.TabControl1.Name = "TabControl1"
+        Me.TabControl1.SelectedTabFont = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
+        Me.TabControl1.SelectedTabIndex = 1
+        Me.TabControl1.Size = New System.Drawing.Size(753, 442)
+        Me.TabControl1.Style = DevComponents.DotNetBar.eTabStripStyle.Office2003
+        Me.TabControl1.TabIndex = 4
+        Me.TabControl1.TabLayoutType = DevComponents.DotNetBar.eTabLayoutType.FixedWithNavigationBox
+        Me.TabControl1.Tabs.Add(Me.TabItem1)
+        Me.TabControl1.Tabs.Add(Me.TabItem2)
+        Me.TabControl1.Text = "TabControl1"
+        '
+        'TabControlPanel2
+        '
+        Me.TabControlPanel2.Controls.Add(Me.btnDeleteOT)
+        Me.TabControlPanel2.Controls.Add(Me.btnRefreshOT)
+        Me.TabControlPanel2.Controls.Add(Me.btnOTNoneSelectAll)
+        Me.TabControlPanel2.Controls.Add(Me.btnOTSelectAll)
+        Me.TabControlPanel2.Controls.Add(Me.lstEmpOT)
+        Me.TabControlPanel2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TabControlPanel2.Location = New System.Drawing.Point(0, 25)
+        Me.TabControlPanel2.Name = "TabControlPanel2"
+        Me.TabControlPanel2.Padding = New System.Windows.Forms.Padding(1)
+        Me.TabControlPanel2.Size = New System.Drawing.Size(753, 417)
+        Me.TabControlPanel2.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(142, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(231, Byte), Integer))
+        Me.TabControlPanel2.Style.BackColor2.Color = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(237, Byte), Integer), CType(CType(254, Byte), Integer))
+        Me.TabControlPanel2.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
+        Me.TabControlPanel2.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.TabControlPanel2.Style.BorderSide = CType(((DevComponents.DotNetBar.eBorderSide.Left Or DevComponents.DotNetBar.eBorderSide.Right) _
+                    Or DevComponents.DotNetBar.eBorderSide.Bottom), DevComponents.DotNetBar.eBorderSide)
+        Me.TabControlPanel2.Style.GradientAngle = 90
+        Me.TabControlPanel2.TabIndex = 2
+        Me.TabControlPanel2.TabItem = Me.TabItem2
+        '
+        'btnRefreshOT
+        '
+        Me.btnRefreshOT.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.btnRefreshOT.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.btnRefreshOT.Location = New System.Drawing.Point(6, 2)
+        Me.btnRefreshOT.Name = "btnRefreshOT"
+        Me.btnRefreshOT.Size = New System.Drawing.Size(247, 26)
+        Me.btnRefreshOT.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.btnRefreshOT.TabIndex = 6
+        Me.btnRefreshOT.Text = "Refresh"
+        '
+        'btnOTNoneSelectAll
+        '
+        Me.btnOTNoneSelectAll.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.btnOTNoneSelectAll.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.btnOTNoneSelectAll.Location = New System.Drawing.Point(121, 34)
+        Me.btnOTNoneSelectAll.Name = "btnOTNoneSelectAll"
+        Me.btnOTNoneSelectAll.Size = New System.Drawing.Size(132, 25)
+        Me.btnOTNoneSelectAll.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.btnOTNoneSelectAll.TabIndex = 5
+        Me.btnOTNoneSelectAll.Text = "ไม่เลือกทั้งหมด"
+        '
+        'btnOTSelectAll
+        '
+        Me.btnOTSelectAll.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.btnOTSelectAll.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.btnOTSelectAll.Location = New System.Drawing.Point(6, 34)
+        Me.btnOTSelectAll.Name = "btnOTSelectAll"
+        Me.btnOTSelectAll.Size = New System.Drawing.Size(109, 25)
+        Me.btnOTSelectAll.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.btnOTSelectAll.TabIndex = 4
+        Me.btnOTSelectAll.Text = "เลือกทั้งหมด"
+        '
+        'lstEmpOT
+        '
+        Me.lstEmpOT.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+                    Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lstEmpOT.CheckBoxes = True
+        Me.lstEmpOT.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader2, Me.ColumnHeader3, Me.ColumnHeader4, Me.ColumnHeader5, Me.ColumnHeader6})
+        Me.lstEmpOT.FullRowSelect = True
+        Me.lstEmpOT.GridLines = True
+        Me.lstEmpOT.Location = New System.Drawing.Point(4, 63)
+        Me.lstEmpOT.Name = "lstEmpOT"
+        Me.lstEmpOT.Size = New System.Drawing.Size(745, 350)
+        Me.lstEmpOT.TabIndex = 1
+        Me.lstEmpOT.UseCompatibleStateImageBehavior = False
+        Me.lstEmpOT.View = System.Windows.Forms.View.Details
+        '
+        'ColumnHeader1
+        '
+        Me.ColumnHeader1.Text = "#"
+        Me.ColumnHeader1.Width = 44
+        '
+        'ColumnHeader2
+        '
+        Me.ColumnHeader2.Text = "รหัสพนง."
+        Me.ColumnHeader2.Width = 77
+        '
+        'ColumnHeader3
+        '
+        Me.ColumnHeader3.Text = "ชื่อ"
+        Me.ColumnHeader3.Width = 108
+        '
+        'ColumnHeader4
+        '
+        Me.ColumnHeader4.Text = "สกุล"
+        Me.ColumnHeader4.Width = 130
+        '
+        'ColumnHeader5
+        '
+        Me.ColumnHeader5.Text = "แผนก"
+        Me.ColumnHeader5.Width = 217
+        '
+        'ColumnHeader6
+        '
+        Me.ColumnHeader6.Text = "หัก OT"
+        Me.ColumnHeader6.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        Me.ColumnHeader6.Width = 76
+        '
+        'TabItem2
+        '
+        Me.TabItem2.AttachedControl = Me.TabControlPanel2
+        Me.TabItem2.Name = "TabItem2"
+        Me.TabItem2.Text = "รายการหัก OT"
+        '
+        'TabControlPanel1
+        '
+        Me.TabControlPanel1.Controls.Add(Me.PanelEx5)
+        Me.TabControlPanel1.Controls.Add(Me.btnEmpNoneSelectAll)
+        Me.TabControlPanel1.Controls.Add(Me.lstEmp)
+        Me.TabControlPanel1.Controls.Add(Me.btnEmpSelectAll)
+        Me.TabControlPanel1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TabControlPanel1.Location = New System.Drawing.Point(0, 25)
+        Me.TabControlPanel1.Name = "TabControlPanel1"
+        Me.TabControlPanel1.Padding = New System.Windows.Forms.Padding(1)
+        Me.TabControlPanel1.Size = New System.Drawing.Size(753, 398)
+        Me.TabControlPanel1.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(142, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(231, Byte), Integer))
+        Me.TabControlPanel1.Style.BackColor2.Color = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(237, Byte), Integer), CType(CType(254, Byte), Integer))
+        Me.TabControlPanel1.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
+        Me.TabControlPanel1.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.TabControlPanel1.Style.BorderSide = CType(((DevComponents.DotNetBar.eBorderSide.Left Or DevComponents.DotNetBar.eBorderSide.Right) _
+                    Or DevComponents.DotNetBar.eBorderSide.Bottom), DevComponents.DotNetBar.eBorderSide)
+        Me.TabControlPanel1.Style.GradientAngle = 90
+        Me.TabControlPanel1.TabIndex = 1
+        Me.TabControlPanel1.TabItem = Me.TabItem1
+        '
+        'PanelEx5
+        '
+        Me.PanelEx5.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PanelEx5.CanvasColor = System.Drawing.Color.LemonChiffon
+        Me.PanelEx5.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.PanelEx5.Controls.Add(Me.btnSave)
+        Me.PanelEx5.Controls.Add(Me.txtOT)
+        Me.PanelEx5.Controls.Add(Me.LabelX3)
+        Me.PanelEx5.Controls.Add(Me.LabelX2)
+        Me.PanelEx5.Font = New System.Drawing.Font("Tahoma", 8.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.PanelEx5.Location = New System.Drawing.Point(4, 4)
+        Me.PanelEx5.Name = "PanelEx5"
+        Me.PanelEx5.Size = New System.Drawing.Size(746, 54)
+        Me.PanelEx5.Style.Alignment = System.Drawing.StringAlignment.Center
+        Me.PanelEx5.Style.BackColor1.Color = System.Drawing.Color.LemonChiffon
+        Me.PanelEx5.Style.Border = DevComponents.DotNetBar.eBorderType.Raised
+        Me.PanelEx5.Style.BorderColor.Alpha = CType(100, Byte)
+        Me.PanelEx5.Style.BorderColor.Color = System.Drawing.Color.Plum
+        Me.PanelEx5.Style.BorderWidth = 2
+        Me.PanelEx5.Style.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
+        Me.PanelEx5.Style.ForeColor.Color = System.Drawing.Color.Purple
+        Me.PanelEx5.Style.GradientAngle = 90
+        Me.PanelEx5.Style.TextTrimming = System.Drawing.StringTrimming.EllipsisWord
+        Me.PanelEx5.TabIndex = 0
+        '
+        'btnSave
+        '
+        Me.btnSave.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.btnSave.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.btnSave.Location = New System.Drawing.Point(291, 10)
+        Me.btnSave.Name = "btnSave"
+        Me.btnSave.Size = New System.Drawing.Size(121, 34)
+        Me.btnSave.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.btnSave.TabIndex = 3
+        Me.btnSave.Text = "บันทึก"
+        '
+        'txtOT
+        '
+        '
+        '
+        '
+        Me.txtOT.Border.Class = "TextBoxBorder"
+        Me.txtOT.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.txtOT.Location = New System.Drawing.Point(91, 19)
+        Me.txtOT.Name = "txtOT"
+        Me.txtOT.Size = New System.Drawing.Size(126, 21)
+        Me.txtOT.TabIndex = 2
+        '
+        'LabelX3
+        '
+        '
+        '
+        '
+        Me.LabelX3.BackgroundStyle.Class = ""
+        Me.LabelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.LabelX3.Location = New System.Drawing.Point(223, 19)
+        Me.LabelX3.Name = "LabelX3"
+        Me.LabelX3.Size = New System.Drawing.Size(77, 21)
+        Me.LabelX3.TabIndex = 0
+        Me.LabelX3.Text = "ชม."
+        '
+        'LabelX2
+        '
+        '
+        '
+        '
+        Me.LabelX2.BackgroundStyle.Class = ""
+        Me.LabelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.LabelX2.Location = New System.Drawing.Point(8, 19)
+        Me.LabelX2.Name = "LabelX2"
+        Me.LabelX2.Size = New System.Drawing.Size(77, 21)
+        Me.LabelX2.TabIndex = 0
+        Me.LabelX2.Text = "หัก OT : "
+        Me.LabelX2.TextAlignment = System.Drawing.StringAlignment.Far
+        '
+        'btnEmpNoneSelectAll
+        '
+        Me.btnEmpNoneSelectAll.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.btnEmpNoneSelectAll.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.btnEmpNoneSelectAll.Location = New System.Drawing.Point(231, 60)
+        Me.btnEmpNoneSelectAll.Name = "btnEmpNoneSelectAll"
+        Me.btnEmpNoneSelectAll.Size = New System.Drawing.Size(221, 25)
+        Me.btnEmpNoneSelectAll.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.btnEmpNoneSelectAll.TabIndex = 3
+        Me.btnEmpNoneSelectAll.Text = "ไม่เลือกทั้งหมด"
+        '
+        'btnEmpSelectAll
+        '
+        Me.btnEmpSelectAll.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.btnEmpSelectAll.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.btnEmpSelectAll.Location = New System.Drawing.Point(4, 60)
+        Me.btnEmpSelectAll.Name = "btnEmpSelectAll"
+        Me.btnEmpSelectAll.Size = New System.Drawing.Size(221, 25)
+        Me.btnEmpSelectAll.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.btnEmpSelectAll.TabIndex = 3
+        Me.btnEmpSelectAll.Text = "เลือกทั้งหมด"
+        '
+        'TabItem1
+        '
+        Me.TabItem1.AttachedControl = Me.TabControlPanel1
+        Me.TabItem1.Name = "TabItem1"
+        Me.TabItem1.Text = "คีย์ หัก OT"
+        '
+        'txtDate
+        '
+        '
+        '
+        '
+        Me.txtDate.BackgroundStyle.Class = "DateTimeInputBackground"
+        Me.txtDate.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.txtDate.ButtonDropDown.Shortcut = DevComponents.DotNetBar.eShortcut.AltDown
+        Me.txtDate.ButtonDropDown.Visible = True
+        Me.txtDate.IsPopupCalendarOpen = False
+        Me.txtDate.Location = New System.Drawing.Point(89, 40)
+        '
+        '
+        '
+        Me.txtDate.MonthCalendar.AnnuallyMarkedDates = New Date(-1) {}
+        '
+        '
+        '
+        Me.txtDate.MonthCalendar.BackgroundStyle.Class = ""
+        Me.txtDate.MonthCalendar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.txtDate.MonthCalendar.ClearButtonVisible = True
+        '
+        '
+        '
+        Me.txtDate.MonthCalendar.CommandsBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground2
+        Me.txtDate.MonthCalendar.CommandsBackgroundStyle.BackColorGradientAngle = 90
+        Me.txtDate.MonthCalendar.CommandsBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground
+        Me.txtDate.MonthCalendar.CommandsBackgroundStyle.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid
+        Me.txtDate.MonthCalendar.CommandsBackgroundStyle.BorderTopColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarDockedBorder
+        Me.txtDate.MonthCalendar.CommandsBackgroundStyle.BorderTopWidth = 1
+        Me.txtDate.MonthCalendar.CommandsBackgroundStyle.Class = ""
+        Me.txtDate.MonthCalendar.CommandsBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.txtDate.MonthCalendar.DisplayMonth = New Date(2012, 9, 1, 0, 0, 0, 0)
+        Me.txtDate.MonthCalendar.FirstDayOfWeek = System.DayOfWeek.Monday
+        Me.txtDate.MonthCalendar.MarkedDates = New Date(-1) {}
+        Me.txtDate.MonthCalendar.MonthlyMarkedDates = New Date(-1) {}
+        '
+        '
+        '
+        Me.txtDate.MonthCalendar.NavigationBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2
+        Me.txtDate.MonthCalendar.NavigationBackgroundStyle.BackColorGradientAngle = 90
+        Me.txtDate.MonthCalendar.NavigationBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground
+        Me.txtDate.MonthCalendar.NavigationBackgroundStyle.Class = ""
+        Me.txtDate.MonthCalendar.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.txtDate.MonthCalendar.TodayButtonVisible = True
+        Me.txtDate.MonthCalendar.WeeklyMarkedDays = New System.DayOfWeek(-1) {}
+        Me.txtDate.Name = "txtDate"
+        Me.txtDate.Size = New System.Drawing.Size(126, 21)
+        Me.txtDate.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.txtDate.TabIndex = 1
+        '
+        'LabelX1
+        '
+        '
+        '
+        '
+        Me.LabelX1.BackgroundStyle.Class = ""
+        Me.LabelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.LabelX1.Location = New System.Drawing.Point(6, 40)
+        Me.LabelX1.Name = "LabelX1"
+        Me.LabelX1.Size = New System.Drawing.Size(77, 21)
+        Me.LabelX1.TabIndex = 0
+        Me.LabelX1.Text = "วันที่ : "
+        Me.LabelX1.TextAlignment = System.Drawing.StringAlignment.Far
+        '
+        'PanelEx4
+        '
+        Me.PanelEx4.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PanelEx4.CanvasColor = System.Drawing.Color.LemonChiffon
+        Me.PanelEx4.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.PanelEx4.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.PanelEx4.Location = New System.Drawing.Point(6, 4)
+        Me.PanelEx4.Name = "PanelEx4"
+        Me.PanelEx4.Size = New System.Drawing.Size(753, 30)
+        Me.PanelEx4.Style.Alignment = System.Drawing.StringAlignment.Center
+        Me.PanelEx4.Style.BackColor1.Color = System.Drawing.Color.OldLace
+        Me.PanelEx4.Style.Border = DevComponents.DotNetBar.eBorderType.Raised
+        Me.PanelEx4.Style.BorderColor.Alpha = CType(100, Byte)
+        Me.PanelEx4.Style.BorderColor.Color = System.Drawing.Color.Plum
+        Me.PanelEx4.Style.BorderWidth = 2
+        Me.PanelEx4.Style.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
+        Me.PanelEx4.Style.ForeColor.Color = System.Drawing.Color.Purple
+        Me.PanelEx4.Style.GradientAngle = 90
+        Me.PanelEx4.Style.TextTrimming = System.Drawing.StringTrimming.EllipsisWord
+        Me.PanelEx4.TabIndex = 0
+        Me.PanelEx4.Text = "คีย์ข้อมูลการหัก โอที ตามวัน"
+        '
+        'ItemPnd_Head
+        '
+        '
+        '
+        '
+        Me.ItemPnd_Head.BackgroundStyle.Class = "ItemPanel"
+        Me.ItemPnd_Head.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.ItemPnd_Head.ContainerControlProcessDialogKey = True
+        Me.ItemPnd_Head.Controls.Add(Me.btnExit)
+        Me.ItemPnd_Head.Dock = System.Windows.Forms.DockStyle.Top
+        Me.ItemPnd_Head.LayoutOrientation = DevComponents.DotNetBar.eOrientation.Vertical
+        Me.ItemPnd_Head.Location = New System.Drawing.Point(0, 0)
+        Me.ItemPnd_Head.Name = "ItemPnd_Head"
+        Me.ItemPnd_Head.Size = New System.Drawing.Size(1166, 37)
+        Me.ItemPnd_Head.TabIndex = 2
+        Me.ItemPnd_Head.ThemeAware = True
+        '
+        'btnExit
+        '
+        Me.btnExit.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.btnExit.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.btnExit.Location = New System.Drawing.Point(6, 4)
+        Me.btnExit.Name = "btnExit"
+        Me.btnExit.Size = New System.Drawing.Size(142, 30)
+        Me.btnExit.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.btnExit.TabIndex = 0
+        Me.btnExit.Text = "Exit"
+        '
+        'ExpandableSplitter1
+        '
+        Me.ExpandableSplitter1.BackColor2 = System.Drawing.Color.Empty
+        Me.ExpandableSplitter1.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder
+        Me.ExpandableSplitter1.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground
+        Me.ExpandableSplitter1.ExpandableControl = Me.ItemPnd_Search
+        Me.ExpandableSplitter1.ExpandFillColor = System.Drawing.Color.Empty
+        Me.ExpandableSplitter1.ExpandFillColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder
+        Me.ExpandableSplitter1.ExpandLineColor = System.Drawing.Color.FromArgb(CType(CType(140, Byte), Integer), CType(CType(140, Byte), Integer), CType(CType(140, Byte), Integer))
+        Me.ExpandableSplitter1.ExpandLineColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.ItemText
+        Me.ExpandableSplitter1.GripDarkColor = System.Drawing.Color.FromArgb(CType(CType(140, Byte), Integer), CType(CType(140, Byte), Integer), CType(CType(140, Byte), Integer))
+        Me.ExpandableSplitter1.GripDarkColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.ItemText
+        Me.ExpandableSplitter1.GripLightColor = System.Drawing.Color.White
+        Me.ExpandableSplitter1.GripLightColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground
+        Me.ExpandableSplitter1.HotBackColor = System.Drawing.Color.FromArgb(CType(CType(127, Byte), Integer), CType(CType(127, Byte), Integer), CType(CType(127, Byte), Integer))
+        Me.ExpandableSplitter1.HotBackColor2 = System.Drawing.Color.Empty
+        Me.ExpandableSplitter1.HotBackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.ItemPressedBackground2
+        Me.ExpandableSplitter1.HotBackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.ItemPressedBackground
+        Me.ExpandableSplitter1.HotExpandFillColor = System.Drawing.Color.Empty
+        Me.ExpandableSplitter1.HotExpandFillColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder
+        Me.ExpandableSplitter1.HotExpandLineColor = System.Drawing.Color.FromArgb(CType(CType(140, Byte), Integer), CType(CType(140, Byte), Integer), CType(CType(140, Byte), Integer))
+        Me.ExpandableSplitter1.HotExpandLineColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.ItemText
+        Me.ExpandableSplitter1.HotGripDarkColor = System.Drawing.Color.Empty
+        Me.ExpandableSplitter1.HotGripDarkColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder
+        Me.ExpandableSplitter1.HotGripLightColor = System.Drawing.Color.White
+        Me.ExpandableSplitter1.HotGripLightColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground
+        Me.ExpandableSplitter1.Location = New System.Drawing.Point(404, 37)
+        Me.ExpandableSplitter1.Name = "ExpandableSplitter1"
+        Me.ExpandableSplitter1.Size = New System.Drawing.Size(6, 515)
+        Me.ExpandableSplitter1.Style = DevComponents.DotNetBar.eSplitterStyle.Office2007
+        Me.ExpandableSplitter1.TabIndex = 4
+        Me.ExpandableSplitter1.TabStop = False
+        '
+        'btnDeleteOT
+        '
+        Me.btnDeleteOT.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.btnDeleteOT.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.btnDeleteOT.Location = New System.Drawing.Point(279, 14)
+        Me.btnDeleteOT.Name = "btnDeleteOT"
+        Me.btnDeleteOT.Size = New System.Drawing.Size(127, 36)
+        Me.btnDeleteOT.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.btnDeleteOT.TabIndex = 7
+        Me.btnDeleteOT.Text = "ลบข้อมูลที่เลือก"
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.GroupBox1.Controls.Add(Me.txtTDateSP)
+        Me.GroupBox1.Controls.Add(Me.txtTDateST)
+        Me.GroupBox1.Controls.Add(Me.LabelX4)
+        Me.GroupBox1.Controls.Add(Me.rdTermiByDate)
+        Me.GroupBox1.Controls.Add(Me.rdTerminate)
+        Me.GroupBox1.Controls.Add(Me.rdWork)
+        Me.GroupBox1.Location = New System.Drawing.Point(3, 299)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(387, 72)
+        Me.GroupBox1.TabIndex = 5
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "สถานะ"
+        '
+        'rdTerminate
+        '
+        Me.rdTerminate.AutoSize = True
+        Me.rdTerminate.Location = New System.Drawing.Point(82, 20)
+        Me.rdTerminate.Name = "rdTerminate"
+        Me.rdTerminate.Size = New System.Drawing.Size(58, 17)
+        Me.rdTerminate.TabIndex = 2
+        Me.rdTerminate.Text = "ลาออก"
+        Me.rdTerminate.UseVisualStyleBackColor = True
+        '
+        'rdWork
+        '
+        Me.rdWork.AutoSize = True
+        Me.rdWork.Checked = True
+        Me.rdWork.Location = New System.Drawing.Point(14, 20)
+        Me.rdWork.Name = "rdWork"
+        Me.rdWork.Size = New System.Drawing.Size(55, 17)
+        Me.rdWork.TabIndex = 1
+        Me.rdWork.TabStop = True
+        Me.rdWork.Text = "ทำงาน"
+        Me.rdWork.UseVisualStyleBackColor = True
+        '
+        'rdTermiByDate
+        '
+        Me.rdTermiByDate.AutoSize = True
+        Me.rdTermiByDate.Location = New System.Drawing.Point(14, 45)
+        Me.rdTermiByDate.Name = "rdTermiByDate"
+        Me.rdTermiByDate.Size = New System.Drawing.Size(109, 17)
+        Me.rdTermiByDate.TabIndex = 2
+        Me.rdTermiByDate.Text = "ลาออก ตามช่วงวัน"
+        Me.rdTermiByDate.UseVisualStyleBackColor = True
+        '
+        'txtTDateST
+        '
+        '
+        '
+        '
+        Me.txtTDateST.BackgroundStyle.Class = "DateTimeInputBackground"
+        Me.txtTDateST.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.txtTDateST.ButtonDropDown.Shortcut = DevComponents.DotNetBar.eShortcut.AltDown
+        Me.txtTDateST.ButtonDropDown.Visible = True
+        Me.txtTDateST.IsPopupCalendarOpen = False
+        Me.txtTDateST.Location = New System.Drawing.Point(133, 43)
+        '
+        '
+        '
+        Me.txtTDateST.MonthCalendar.AnnuallyMarkedDates = New Date(-1) {}
+        '
+        '
+        '
+        Me.txtTDateST.MonthCalendar.BackgroundStyle.Class = ""
+        Me.txtTDateST.MonthCalendar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.txtTDateST.MonthCalendar.ClearButtonVisible = True
+        '
+        '
+        '
+        Me.txtTDateST.MonthCalendar.CommandsBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground2
+        Me.txtTDateST.MonthCalendar.CommandsBackgroundStyle.BackColorGradientAngle = 90
+        Me.txtTDateST.MonthCalendar.CommandsBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground
+        Me.txtTDateST.MonthCalendar.CommandsBackgroundStyle.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid
+        Me.txtTDateST.MonthCalendar.CommandsBackgroundStyle.BorderTopColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarDockedBorder
+        Me.txtTDateST.MonthCalendar.CommandsBackgroundStyle.BorderTopWidth = 1
+        Me.txtTDateST.MonthCalendar.CommandsBackgroundStyle.Class = ""
+        Me.txtTDateST.MonthCalendar.CommandsBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.txtTDateST.MonthCalendar.DisplayMonth = New Date(2012, 9, 1, 0, 0, 0, 0)
+        Me.txtTDateST.MonthCalendar.FirstDayOfWeek = System.DayOfWeek.Monday
+        Me.txtTDateST.MonthCalendar.MarkedDates = New Date(-1) {}
+        Me.txtTDateST.MonthCalendar.MonthlyMarkedDates = New Date(-1) {}
+        '
+        '
+        '
+        Me.txtTDateST.MonthCalendar.NavigationBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2
+        Me.txtTDateST.MonthCalendar.NavigationBackgroundStyle.BackColorGradientAngle = 90
+        Me.txtTDateST.MonthCalendar.NavigationBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground
+        Me.txtTDateST.MonthCalendar.NavigationBackgroundStyle.Class = ""
+        Me.txtTDateST.MonthCalendar.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.txtTDateST.MonthCalendar.TodayButtonVisible = True
+        Me.txtTDateST.MonthCalendar.WeeklyMarkedDays = New System.DayOfWeek(-1) {}
+        Me.txtTDateST.Name = "txtTDateST"
+        Me.txtTDateST.Size = New System.Drawing.Size(100, 21)
+        Me.txtTDateST.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.txtTDateST.TabIndex = 3
+        '
+        'txtTDateSP
+        '
+        '
+        '
+        '
+        Me.txtTDateSP.BackgroundStyle.Class = "DateTimeInputBackground"
+        Me.txtTDateSP.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.txtTDateSP.ButtonDropDown.Shortcut = DevComponents.DotNetBar.eShortcut.AltDown
+        Me.txtTDateSP.ButtonDropDown.Visible = True
+        Me.txtTDateSP.IsPopupCalendarOpen = False
+        Me.txtTDateSP.Location = New System.Drawing.Point(285, 43)
+        '
+        '
+        '
+        Me.txtTDateSP.MonthCalendar.AnnuallyMarkedDates = New Date(-1) {}
+        '
+        '
+        '
+        Me.txtTDateSP.MonthCalendar.BackgroundStyle.Class = ""
+        Me.txtTDateSP.MonthCalendar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.txtTDateSP.MonthCalendar.ClearButtonVisible = True
+        '
+        '
+        '
+        Me.txtTDateSP.MonthCalendar.CommandsBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground2
+        Me.txtTDateSP.MonthCalendar.CommandsBackgroundStyle.BackColorGradientAngle = 90
+        Me.txtTDateSP.MonthCalendar.CommandsBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground
+        Me.txtTDateSP.MonthCalendar.CommandsBackgroundStyle.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid
+        Me.txtTDateSP.MonthCalendar.CommandsBackgroundStyle.BorderTopColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarDockedBorder
+        Me.txtTDateSP.MonthCalendar.CommandsBackgroundStyle.BorderTopWidth = 1
+        Me.txtTDateSP.MonthCalendar.CommandsBackgroundStyle.Class = ""
+        Me.txtTDateSP.MonthCalendar.CommandsBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.txtTDateSP.MonthCalendar.DisplayMonth = New Date(2012, 9, 1, 0, 0, 0, 0)
+        Me.txtTDateSP.MonthCalendar.FirstDayOfWeek = System.DayOfWeek.Monday
+        Me.txtTDateSP.MonthCalendar.MarkedDates = New Date(-1) {}
+        Me.txtTDateSP.MonthCalendar.MonthlyMarkedDates = New Date(-1) {}
+        '
+        '
+        '
+        Me.txtTDateSP.MonthCalendar.NavigationBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2
+        Me.txtTDateSP.MonthCalendar.NavigationBackgroundStyle.BackColorGradientAngle = 90
+        Me.txtTDateSP.MonthCalendar.NavigationBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground
+        Me.txtTDateSP.MonthCalendar.NavigationBackgroundStyle.Class = ""
+        Me.txtTDateSP.MonthCalendar.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.txtTDateSP.MonthCalendar.TodayButtonVisible = True
+        Me.txtTDateSP.MonthCalendar.WeeklyMarkedDays = New System.DayOfWeek(-1) {}
+        Me.txtTDateSP.Name = "txtTDateSP"
+        Me.txtTDateSP.Size = New System.Drawing.Size(96, 21)
+        Me.txtTDateSP.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.txtTDateSP.TabIndex = 3
+        '
+        'LabelX4
+        '
+        '
+        '
+        '
+        Me.LabelX4.BackgroundStyle.Class = ""
+        Me.LabelX4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.LabelX4.Location = New System.Drawing.Point(248, 41)
+        Me.LabelX4.Name = "LabelX4"
+        Me.LabelX4.Size = New System.Drawing.Size(22, 21)
+        Me.LabelX4.TabIndex = 0
+        Me.LabelX4.Text = "ถึง"
+        Me.LabelX4.TextAlignment = System.Drawing.StringAlignment.Center
+        '
+        'frmEmpOTDeducByDay
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.ClientSize = New System.Drawing.Size(1166, 552)
+        Me.Controls.Add(Me.ExpandableSplitter1)
+        Me.Controls.Add(Me.PndData)
+        Me.Controls.Add(Me.ItemPnd_Search)
+        Me.Controls.Add(Me.ItemPnd_Head)
+        Me.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.Name = "frmEmpOTDeducByDay"
+        Me.Text = "คีย์ข้อมูล OT หักพิเศษรายวัน ตามรายบุคคล"
+        Me.GroupBox5.ResumeLayout(False)
+        Me.GroupBox5.PerformLayout()
+        Me.GroupBox6.ResumeLayout(False)
+        Me.GroupBox6.PerformLayout()
+        Me.ItemPnd_Search.ResumeLayout(False)
+        Me.PanelEx2.ResumeLayout(False)
+        Me.PndData.ResumeLayout(False)
+        CType(Me.TabControl1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabControl1.ResumeLayout(False)
+        Me.TabControlPanel2.ResumeLayout(False)
+        Me.TabControlPanel1.ResumeLayout(False)
+        Me.PanelEx5.ResumeLayout(False)
+        CType(Me.txtDate, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ItemPnd_Head.ResumeLayout(False)
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
+        CType(Me.txtTDateST, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtTDateSP, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ResumeLayout(False)
+
+    End Sub
+    Friend WithEvents lstEmp As System.Windows.Forms.ListView
+    Friend WithEvents colNO As System.Windows.Forms.ColumnHeader
+    Friend WithEvents colCode As System.Windows.Forms.ColumnHeader
+    Friend WithEvents colName As System.Windows.Forms.ColumnHeader
+    Friend WithEvents colSName As System.Windows.Forms.ColumnHeader
+    Friend WithEvents colDepartment As System.Windows.Forms.ColumnHeader
+    Friend WithEvents ProgressBar1 As System.Windows.Forms.ProgressBar
+    Friend WithEvents GroupBox5 As System.Windows.Forms.GroupBox
+    Friend WithEvents rdContractor As System.Windows.Forms.RadioButton
+    Friend WithEvents rdDay As System.Windows.Forms.RadioButton
+    Friend WithEvents rdMonth As System.Windows.Forms.RadioButton
+    Friend WithEvents rdAll As System.Windows.Forms.RadioButton
+    Friend WithEvents Label6 As System.Windows.Forms.Label
+    Friend WithEvents Label7 As System.Windows.Forms.Label
+    Friend WithEvents Label8 As System.Windows.Forms.Label
+    Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents Label9 As System.Windows.Forms.Label
+    Friend WithEvents GroupBox6 As System.Windows.Forms.GroupBox
+    Friend WithEvents rdByDeptName As System.Windows.Forms.RadioButton
+    Friend WithEvents rdByDeptCode As System.Windows.Forms.RadioButton
+    Friend WithEvents rdByName As System.Windows.Forms.RadioButton
+    Friend WithEvents rdByCode As System.Windows.Forms.RadioButton
+    Friend WithEvents Label10 As System.Windows.Forms.Label
+    Friend WithEvents ItemPnd_Search As DevComponents.DotNetBar.ItemPanel
+    Friend WithEvents PanelEx1 As DevComponents.DotNetBar.PanelEx
+    Friend WithEvents PanelEx2 As DevComponents.DotNetBar.PanelEx
+    Friend WithEvents ControlContainerItem1 As DevComponents.DotNetBar.ControlContainerItem
+    Friend WithEvents PndData As DevComponents.DotNetBar.PanelEx
+    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents PanelEx4 As DevComponents.DotNetBar.PanelEx
+    Friend WithEvents PanelEx5 As DevComponents.DotNetBar.PanelEx
+    Friend WithEvents txtDate As DevComponents.Editors.DateTimeAdv.DateTimeInput
+    Friend WithEvents LabelX1 As DevComponents.DotNetBar.LabelX
+    Friend WithEvents txtOT As DevComponents.DotNetBar.Controls.TextBoxX
+    Friend WithEvents LabelX3 As DevComponents.DotNetBar.LabelX
+    Friend WithEvents LabelX2 As DevComponents.DotNetBar.LabelX
+    Friend WithEvents btnSave As DevComponents.DotNetBar.ButtonX
+    Friend WithEvents btnEmpNoneSelectAll As DevComponents.DotNetBar.ButtonX
+    Friend WithEvents btnEmpSelectAll As DevComponents.DotNetBar.ButtonX
+    Friend WithEvents TabControl1 As DevComponents.DotNetBar.TabControl
+    Friend WithEvents TabControlPanel2 As DevComponents.DotNetBar.TabControlPanel
+    Friend WithEvents TabItem2 As DevComponents.DotNetBar.TabItem
+    Friend WithEvents TabControlPanel1 As DevComponents.DotNetBar.TabControlPanel
+    Friend WithEvents TabItem1 As DevComponents.DotNetBar.TabItem
+    Friend WithEvents lstEmpOT As System.Windows.Forms.ListView
+    Friend WithEvents ColumnHeader1 As System.Windows.Forms.ColumnHeader
+    Friend WithEvents ColumnHeader2 As System.Windows.Forms.ColumnHeader
+    Friend WithEvents ColumnHeader3 As System.Windows.Forms.ColumnHeader
+    Friend WithEvents ColumnHeader4 As System.Windows.Forms.ColumnHeader
+    Friend WithEvents ColumnHeader5 As System.Windows.Forms.ColumnHeader
+    Friend WithEvents ColumnHeader6 As System.Windows.Forms.ColumnHeader
+    Friend WithEvents btnOTNoneSelectAll As DevComponents.DotNetBar.ButtonX
+    Friend WithEvents btnOTSelectAll As DevComponents.DotNetBar.ButtonX
+    Friend WithEvents cboEmpGroup As DevComponents.DotNetBar.Controls.ComboBoxEx
+    Friend WithEvents cboPosition As DevComponents.DotNetBar.Controls.ComboBoxEx
+    Friend WithEvents cboDepartment As DevComponents.DotNetBar.Controls.ComboBoxEx
+    Friend WithEvents cboDivision As DevComponents.DotNetBar.Controls.ComboBoxEx
+    Friend WithEvents cboCompany As DevComponents.DotNetBar.Controls.ComboBoxEx
+    Friend WithEvents cboBroker As DevComponents.DotNetBar.Controls.ComboBoxEx
+    Friend WithEvents txtEmpId As DevComponents.DotNetBar.Controls.TextBoxX
+    Friend WithEvents btnRefresh As DevComponents.DotNetBar.ButtonX
+    Friend WithEvents txtNameSearch As DevComponents.DotNetBar.Controls.TextBoxX
+    Friend WithEvents cboSection As DevComponents.DotNetBar.Controls.ComboBoxEx
+    Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents ItemPnd_Head As DevComponents.DotNetBar.ItemPanel
+    Friend WithEvents btnExit As DevComponents.DotNetBar.ButtonX
+    Friend WithEvents ExpandableSplitter1 As DevComponents.DotNetBar.ExpandableSplitter
+    Friend WithEvents btnRefreshOT As DevComponents.DotNetBar.ButtonX
+    Friend WithEvents btnDeleteOT As DevComponents.DotNetBar.ButtonX
+    Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
+    Friend WithEvents rdTerminate As System.Windows.Forms.RadioButton
+    Friend WithEvents rdWork As System.Windows.Forms.RadioButton
+    Friend WithEvents txtTDateSP As DevComponents.Editors.DateTimeAdv.DateTimeInput
+    Friend WithEvents txtTDateST As DevComponents.Editors.DateTimeAdv.DateTimeInput
+    Friend WithEvents LabelX4 As DevComponents.DotNetBar.LabelX
+    Friend WithEvents rdTermiByDate As System.Windows.Forms.RadioButton
+End Class

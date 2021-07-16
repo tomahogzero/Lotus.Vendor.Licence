@@ -1,0 +1,2112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="&gt;&gt;txtTimeST_Alert_Befor_Min.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;chkPreviousMonth.Parent" xml:space="preserve">
+    <value>GroupControl1</value>
+  </data>
+  <data name="&gt;&gt;chkEndMonth.Name" xml:space="preserve">
+    <value>chkEndMonth</value>
+  </data>
+  <data name="&gt;&gt;Label28.Name" xml:space="preserve">
+    <value>Label28</value>
+  </data>
+  <data name="txtTimeST_Alert_Befor_Min.Properties.Mask.EditMask" xml:space="preserve">
+    <value>n0</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Label22.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;GroupControl6.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.GroupControl, DevExpress.Utils.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="txtTimeST_Alert_Befor_Min.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 20</value>
+  </data>
+  <data name="&gt;&gt;PanelControl3.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="PanelControl4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>228, 73</value>
+  </data>
+  <data name="Label7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>224, 13</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="txtRestSP_Cal_T3_PlusMin.Properties.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtRestSP_Cal_T3_PlusMin.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="Label23.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 39</value>
+  </data>
+  <data name="&gt;&gt;chkNextMonth.Parent" xml:space="preserve">
+    <value>GroupControl1</value>
+  </data>
+  <data name="txtStartDay.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;Label30.Parent" xml:space="preserve">
+    <value>PanelControl3</value>
+  </data>
+  <data name="txtTimeST_Cal_T1_PlusMin.Properties.Mask.EditMask" xml:space="preserve">
+    <value>n0</value>
+  </data>
+  <data name="txtTimeST_Alert_Befor_Min.Properties.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="chkEndMonth.TabIndex" type="System.Int32, mscorlib">
+    <value>35</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>623, 301</value>
+  </data>
+  <data name="Label34.Location" type="System.Drawing.Point, System.Drawing">
+    <value>29, 35</value>
+  </data>
+  <data name="txtTimeST_Alert_Befor_Min.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;GroupControl5.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.GroupControl, DevExpress.Utils.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;Label36.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Label15.Size" type="System.Drawing.Size, System.Drawing">
+    <value>71, 13</value>
+  </data>
+  <data name="&gt;&gt;txtRestSP_Cal_T3_PlusMin.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="Label23.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label25.Size" type="System.Drawing.Size, System.Drawing">
+    <value>27, 13</value>
+  </data>
+  <data name="txtAdjTimeOut.Location" type="System.Drawing.Point, System.Drawing">
+    <value>158, 32</value>
+  </data>
+  <data name="btnSave.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 9.75pt, style=Bold</value>
+  </data>
+  <data name="&gt;&gt;PanelControl4.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.PanelControl, DevExpress.Utils.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="chkPreviousMonth.Properties.DisplayValueChecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GroupControl5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>676, 119</value>
+  </data>
+  <data name="txtRestST_Cal_T2_MinusMin.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
+    <value>_</value>
+  </data>
+  <data name="txtTimeST_Alert_After_Min.Properties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="GroupControl4.Text" xml:space="preserve">
+    <value>กำหนด จำนวนชั่วโมง  ครึ่งวัน</value>
+  </data>
+  <data name="&gt;&gt;Label31.Parent" xml:space="preserve">
+    <value>PanelControl3</value>
+  </data>
+  <assembly alias="DevExpress.XtraEditors.v17.1" name="DevExpress.XtraEditors.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <data name="txtTimeSP_Alert_After_Min.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v17.1">
+    <value>Default</value>
+  </data>
+  <data name="txtEndDay.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="Label27.Size" type="System.Drawing.Size, System.Drawing">
+    <value>78, 13</value>
+  </data>
+  <data name="txtStartDay.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="txtTimeSP_Alert_Befor_Min.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;txtRestSP_Cal_T3_PlusMin.Parent" xml:space="preserve">
+    <value>PanelControl3</value>
+  </data>
+  <data name="&gt;&gt;txtTimeSP_Alert_After_Min.Name" xml:space="preserve">
+    <value>txtTimeSP_Alert_After_Min</value>
+  </data>
+  <data name="chkNextMonth.Size" type="System.Drawing.Size, System.Drawing">
+    <value>93, 19</value>
+  </data>
+  <data name="txtTimeSP_Cal_T4_MinusMin.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 20</value>
+  </data>
+  <data name="&gt;&gt;Label34.Name" xml:space="preserve">
+    <value>Label34</value>
+  </data>
+  <data name="&gt;&gt;Label23.Parent" xml:space="preserve">
+    <value>PanelControl4</value>
+  </data>
+  <data name="Label28.Size" type="System.Drawing.Size, System.Drawing">
+    <value>27, 13</value>
+  </data>
+  <data name="&gt;&gt;Label22.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="txtTimeSP_Cal_T4_MinusMin.Properties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;txtTimeSP_Cal_T4_MinusMin.Name" xml:space="preserve">
+    <value>txtTimeSP_Cal_T4_MinusMin</value>
+  </data>
+  <data name="txtRestST_Cal_T2_MinusMin.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v17.1">
+    <value>Numeric</value>
+  </data>
+  <data name="&gt;&gt;PanelControl2.Name" xml:space="preserve">
+    <value>PanelControl2</value>
+  </data>
+  <data name="&gt;&gt;Label26.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtRestST_Cal_T2_MinusMin.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="txtEndDay.Size" type="System.Drawing.Size, System.Drawing">
+    <value>70, 20</value>
+  </data>
+  <data name="txtHaftDay_M.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
+    <value>_</value>
+  </data>
+  <data name="GroupControl4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 137</value>
+  </data>
+  <data name="Label3.Text" xml:space="preserve">
+    <value>วันที่เริ่ม :</value>
+  </data>
+  <data name="Label29.Size" type="System.Drawing.Size, System.Drawing">
+    <value>27, 13</value>
+  </data>
+  <data name="Label22.Text" xml:space="preserve">
+    <value>ครึ่งวันบ่าย :</value>
+  </data>
+  <data name="txtTimeST_Alert_Befor_Min.Properties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="txtAdjTimeOut.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
+    <value>_</value>
+  </data>
+  <data name="txtRestSP_Cal_T3_PlusMin.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;Label7.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="Label25.TabIndex" type="System.Int32, mscorlib">
+    <value>57</value>
+  </data>
+  <data name="&gt;&gt;Label35.Name" xml:space="preserve">
+    <value>Label35</value>
+  </data>
+  <data name="&gt;&gt;txtTimeST_Alert_Befor_Min.Parent" xml:space="preserve">
+    <value>PanelControl5</value>
+  </data>
+  <data name="&gt;&gt;Label23.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;Label15.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="chkPreviousMonth.Size" type="System.Drawing.Size, System.Drawing">
+    <value>93, 19</value>
+  </data>
+  <data name="&gt;&gt;chkAdjTimeOUT.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GroupControl7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>615, 90</value>
+  </data>
+  <data name="GroupControl5.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="txtTimeST_Alert_Befor_Min.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="txtHaftDay_M.Properties.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;txtStartDay.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="Label4.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="txtTimeST_Cal_T1_PlusMin.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="Label26.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="txtAdjTimeOut.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;PanelControl4.Parent" xml:space="preserve">
+    <value>GroupControl6</value>
+  </data>
+  <data name="&gt;&gt;GroupControl7.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.GroupControl, DevExpress.Utils.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="Label7.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;txtAdjTimeOut.Parent" xml:space="preserve">
+    <value>GroupControl5</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>กำหนดรูปแบบการคำนวณ</value>
+  </data>
+  <data name="txtTimeST_Alert_After_Min.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;txtHaftDay_A.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="txtTimeST_Alert_After_Min.Properties.Mask.EditMask" xml:space="preserve">
+    <value>n0</value>
+  </data>
+  <data name="Label35.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label26.Location" type="System.Drawing.Point, System.Drawing">
+    <value>22, 12</value>
+  </data>
+  <data name="GroupControl1.Text" xml:space="preserve">
+    <value>กำหนดช่วงเวลาคำนวณ</value>
+  </data>
+  <data name="txtAdjTimeOut.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label36.Text" xml:space="preserve">
+    <value>นาที</value>
+  </data>
+  <data name="GroupControl6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>615, 105</value>
+  </data>
+  <data name="&gt;&gt;Label28.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="txtTimeSP_Cal_T4_MinusMin.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label15.Text" xml:space="preserve">
+    <value>ครึ่งวันเช้า :</value>
+  </data>
+  <data name="txtHaftDay_A.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;txtHaftDay_M.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="txtHaftDay_A.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label25.Text" xml:space="preserve">
+    <value>นาที</value>
+  </data>
+  <data name="txtTimeSP_Alert_Befor_Min.Properties.Mask.EditMask" xml:space="preserve">
+    <value>n0</value>
+  </data>
+  <data name="GroupControl5.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="txtStartDay.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v17.1">
+    <value>Default</value>
+  </data>
+  <data name="btnExit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>153, 35</value>
+  </data>
+  <data name="txtHaftDay_M.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v17.1">
+    <value>None</value>
+  </data>
+  <data name="txtRestST_Cal_T2_MinusMin.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtTimeST_Alert_After_Min.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v17.1">
+    <value>Numeric</value>
+  </data>
+  <data name="txtHaftDay_A.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v17.1">
+    <value>Default</value>
+  </data>
+  <data name="txtTimeST_Alert_Befor_Min.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
+    <value>_</value>
+  </data>
+  <data name="Label4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>29, 54</value>
+  </data>
+  <data name="PanelControl5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>257, 73</value>
+  </data>
+  <data name="txtRestSP_Cal_T3_PlusMin.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;btnExit.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="txtTimeSP_Alert_After_Min.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="txtTimeST_Alert_Befor_Min.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="txtAdjTimeOut.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v17.1">
+    <value>Default</value>
+  </data>
+  <data name="Label35.TabIndex" type="System.Int32, mscorlib">
+    <value>57</value>
+  </data>
+  <data name="chkPreviousMonth.TabIndex" type="System.Int32, mscorlib">
+    <value>35</value>
+  </data>
+  <data name="Label33.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="&gt;&gt;Label29.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;txtEndDay.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="btnExit.Text" xml:space="preserve">
+    <value>ออก</value>
+  </data>
+  <data name="Label34.Text" xml:space="preserve">
+    <value>ออกงาน (- เวลาก่อนออก) :</value>
+  </data>
+  <data name="Label36.TabIndex" type="System.Int32, mscorlib">
+    <value>57</value>
+  </data>
+  <data name="txtRestST_Cal_T2_MinusMin.EditValue" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="Label22.Size" type="System.Drawing.Size, System.Drawing">
+    <value>71, 13</value>
+  </data>
+  <data name="&gt;&gt;chkAdjTimeOUT.Parent" xml:space="preserve">
+    <value>GroupControl5</value>
+  </data>
+  <data name="txtTimeST_Alert_After_Min.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 20</value>
+  </data>
+  <data name="txtTimeSP_Alert_After_Min.Location" type="System.Drawing.Point, System.Drawing">
+    <value>114, 36</value>
+  </data>
+  <data name="&gt;&gt;Label31.Name" xml:space="preserve">
+    <value>Label31</value>
+  </data>
+  <data name="&gt;&gt;Label30.Name" xml:space="preserve">
+    <value>Label30</value>
+  </data>
+  <data name="&gt;&gt;Label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label27.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="txtTimeSP_Alert_After_Min.EditValue" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;PanelControl4.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="txtTimeSP_Cal_T4_MinusMin.Properties.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="chkNextMonth.Properties.DisplayValueGrayed" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GroupControl7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 208</value>
+  </data>
+  <data name="txtTimeSP_Alert_Befor_Min.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="PanelControl3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>315, 23</value>
+  </data>
+  <data name="Label7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>208, 34</value>
+  </data>
+  <data name="&gt;&gt;txtStartDay.Name" xml:space="preserve">
+    <value>txtStartDay</value>
+  </data>
+  <data name="&gt;&gt;GroupControl5.Name" xml:space="preserve">
+    <value>GroupControl5</value>
+  </data>
+  <data name="GroupControl4.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="Label34.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="txtTimeSP_Cal_T4_MinusMin.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="txtEndDay.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label15.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnExit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>159, 3</value>
+  </data>
+  <data name="&gt;&gt;Label29.Name" xml:space="preserve">
+    <value>Label29</value>
+  </data>
+  <data name="&gt;&gt;txtTimeST_Alert_After_Min.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="btnSave.Appearance.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="txtTimeSP_Alert_After_Min.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v17.1">
+    <value>Numeric</value>
+  </data>
+  <data name="txtRestSP_Cal_T3_PlusMin.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="txtHaftDay_A.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;GroupControl5.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="Label15.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;Label1.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="btnSave.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtTimeST_Cal_T1_PlusMin.Location" type="System.Drawing.Point, System.Drawing">
+    <value>165, 6</value>
+  </data>
+  <data name="chkAdjTimeOUT.Size" type="System.Drawing.Size, System.Drawing">
+    <value>122, 19</value>
+  </data>
+  <data name="&gt;&gt;Label33.Parent" xml:space="preserve">
+    <value>PanelControl2</value>
+  </data>
+  <data name="txtRestST_Cal_T2_MinusMin.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v17.1">
+    <value>Default</value>
+  </data>
+  <data name="&gt;&gt;Label3.Name" xml:space="preserve">
+    <value>Label3</value>
+  </data>
+  <data name="GroupControl6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>662, 262</value>
+  </data>
+  <data name="PanelControl5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 23</value>
+  </data>
+  <data name="&gt;&gt;Label4.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.XtraForm, DevExpress.Utils.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="Label27.Text" xml:space="preserve">
+    <value>หลังกะเข้างาน :</value>
+  </data>
+  <data name="&gt;&gt;txtTimeST_Alert_After_Min.Name" xml:space="preserve">
+    <value>txtTimeST_Alert_After_Min</value>
+  </data>
+  <data name="&gt;&gt;chkNextMonth.Name" xml:space="preserve">
+    <value>chkNextMonth</value>
+  </data>
+  <data name="&gt;&gt;Label36.Name" xml:space="preserve">
+    <value>Label36</value>
+  </data>
+  <data name="txtTimeSP_Alert_Befor_Min.Properties.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtRestST_Cal_T2_MinusMin.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="PanelControl3.TabIndex" type="System.Int32, mscorlib">
+    <value>59</value>
+  </data>
+  <data name="Label29.Location" type="System.Drawing.Point, System.Drawing">
+    <value>177, 39</value>
+  </data>
+  <data name="&gt;&gt;Label22.Name" xml:space="preserve">
+    <value>Label22</value>
+  </data>
+  <data name="Label28.Text" xml:space="preserve">
+    <value>นาที</value>
+  </data>
+  <data name="Label16.Text" xml:space="preserve">
+    <value>ก่อนกะออกงาน</value>
+  </data>
+  <data name="&gt;&gt;btnSave.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="Label4.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="GroupControl7.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="Label16.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 13</value>
+  </data>
+  <data name="&gt;&gt;txtAdjTimeOut.Name" xml:space="preserve">
+    <value>txtAdjTimeOut</value>
+  </data>
+  <data name="&gt;&gt;Label3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="chkEndMonth.Properties.DisplayValueChecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label22.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="txtStartDay.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
+    <value>_</value>
+  </data>
+  <data name="Label15.Location" type="System.Drawing.Point, System.Drawing">
+    <value>22, 32</value>
+  </data>
+  <data name="txtRestST_Cal_T2_MinusMin.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="txtRestSP_Cal_T3_PlusMin.Location" type="System.Drawing.Point, System.Drawing">
+    <value>158, 36</value>
+  </data>
+  <data name="Label16.TabIndex" type="System.Int32, mscorlib">
+    <value>57</value>
+  </data>
+  <data name="txtHaftDay_M.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;Label3.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="chkPreviousMonth.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="txtHaftDay_M.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="btnExit.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="txtStartDay.Properties.Mask.EditMask" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GroupControl5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>615, 63</value>
+  </data>
+  <data name="&gt;&gt;GroupControl7.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnSave.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="Label36.Location" type="System.Drawing.Point, System.Drawing">
+    <value>231, 35</value>
+  </data>
+  <data name="&gt;&gt;btnExit.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="txtTimeSP_Alert_After_Min.Properties.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;btnSave.Name" xml:space="preserve">
+    <value>btnSave</value>
+  </data>
+  <data name="&gt;&gt;Label33.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="txtStartDay.Size" type="System.Drawing.Size, System.Drawing">
+    <value>70, 20</value>
+  </data>
+  <data name="txtRestSP_Cal_T3_PlusMin.Properties.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtTimeSP_Alert_After_Min.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
+    <value>_</value>
+  </data>
+  <data name="PanelControl2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>304, 61</value>
+  </data>
+  <data name="btnSave.Appearance.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtTimeSP_Cal_T4_MinusMin.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
+    <value>_</value>
+  </data>
+  <data name="Label24.Size" type="System.Drawing.Size, System.Drawing">
+    <value>27, 13</value>
+  </data>
+  <data name="txtTimeST_Alert_After_Min.Properties.NullValuePrompt" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtRestST_Cal_T2_MinusMin.Properties.Mask.EditMask" xml:space="preserve">
+    <value>n0</value>
+  </data>
+  <data name="Label22.Location" type="System.Drawing.Point, System.Drawing">
+    <value>194, 32</value>
+  </data>
+  <data name="Label3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnSave.Text" xml:space="preserve">
+    <value>บันทึก</value>
+  </data>
+  <data name="btnSave.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="GroupControl4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>616, 65</value>
+  </data>
+  <data name="Label34.Size" type="System.Drawing.Size, System.Drawing">
+    <value>133, 13</value>
+  </data>
+  <data name="&gt;&gt;Label15.Parent" xml:space="preserve">
+    <value>GroupControl4</value>
+  </data>
+  <data name="Label16.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label27.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="chkAdjTimeOUT.Location" type="System.Drawing.Point, System.Drawing">
+    <value>30, 31</value>
+  </data>
+  <data name="Label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>29, 29</value>
+  </data>
+  <data name="&gt;&gt;Label16.Name" xml:space="preserve">
+    <value>Label16</value>
+  </data>
+  <data name="chkEndMonth.Properties.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;txtTimeSP_Alert_After_Min.Parent" xml:space="preserve">
+    <value>PanelControl4</value>
+  </data>
+  <data name="txtHaftDay_A.Size" type="System.Drawing.Size, System.Drawing">
+    <value>43, 20</value>
+  </data>
+  <data name="txtEndDay.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="txtEndDay.Properties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="txtStartDay.Properties.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtTimeST_Cal_T1_PlusMin.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="GroupControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 44</value>
+  </data>
+  <data name="txtTimeST_Alert_After_Min.EditValue" xml:space="preserve">
+    <value>90</value>
+  </data>
+  <data name="&gt;&gt;GroupControl7.Name" xml:space="preserve">
+    <value>GroupControl7</value>
+  </data>
+  <data name="chkAdjTimeOUT.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="txtAdjTimeOut.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;Label24.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="txtTimeST_Alert_Befor_Min.EditValue" xml:space="preserve">
+    <value>90</value>
+  </data>
+  <data name="txtTimeSP_Alert_Befor_Min.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="PanelControl2.TabIndex" type="System.Int32, mscorlib">
+    <value>58</value>
+  </data>
+  <data name="txtTimeSP_Alert_Befor_Min.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 20</value>
+  </data>
+  <data name="Label28.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="chkNextMonth.Properties.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="Label24.Location" type="System.Drawing.Point, System.Drawing">
+    <value>180, 13</value>
+  </data>
+  <data name="&gt;&gt;chkPreviousMonth.Name" xml:space="preserve">
+    <value>chkPreviousMonth</value>
+  </data>
+  <data name="txtTimeSP_Cal_T4_MinusMin.Properties.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="Label24.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="chkEndMonth.Properties.DisplayValueGrayed" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtTimeST_Cal_T1_PlusMin.Properties.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtTimeST_Alert_Befor_Min.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="GroupControl6.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;Label32.Name" xml:space="preserve">
+    <value>Label32</value>
+  </data>
+  <data name="&gt;&gt;Label1.Parent" xml:space="preserve">
+    <value>PanelControl3</value>
+  </data>
+  <data name="&gt;&gt;txtHaftDay_A.Parent" xml:space="preserve">
+    <value>GroupControl4</value>
+  </data>
+  <data name="&gt;&gt;txtTimeSP_Alert_Befor_Min.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="txtHaftDay_A.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v17.1">
+    <value>None</value>
+  </data>
+  <data name="txtTimeSP_Cal_T4_MinusMin.EditValue" xml:space="preserve">
+    <value>120</value>
+  </data>
+  <data name="Label26.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="txtRestST_Cal_T2_MinusMin.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;Label25.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GroupControl4.Name" xml:space="preserve">
+    <value>GroupControl4</value>
+  </data>
+  <data name="GroupControl1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnExit.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
+    <value>Regular</value>
+  </data>
+  <data name="txtTimeST_Alert_After_Min.Properties.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtTimeSP_Alert_Befor_Min.Properties.NullValuePrompt" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label29.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;Label1.Name" xml:space="preserve">
+    <value>Label1</value>
+  </data>
+  <data name="&gt;&gt;txtTimeST_Alert_Befor_Min.Name" xml:space="preserve">
+    <value>txtTimeST_Alert_Befor_Min</value>
+  </data>
+  <data name="txtTimeST_Alert_Befor_Min.Properties.NullValuePrompt" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label27.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="txtHaftDay_M.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;Label34.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="GroupControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>616, 87</value>
+  </data>
+  <data name="Label30.Location" type="System.Drawing.Point, System.Drawing">
+    <value>43, 13</value>
+  </data>
+  <data name="Label16.Size" type="System.Drawing.Size, System.Drawing">
+    <value>78, 13</value>
+  </data>
+  <data name="Label16.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="&gt;&gt;Label16.Parent" xml:space="preserve">
+    <value>PanelControl4</value>
+  </data>
+  <data name="txtRestST_Cal_T2_MinusMin.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;Label24.Parent" xml:space="preserve">
+    <value>PanelControl4</value>
+  </data>
+  <data name="&gt;&gt;chkAdjTimeOUT.Name" xml:space="preserve">
+    <value>chkAdjTimeOUT</value>
+  </data>
+  <data name="txtRestSP_Cal_T3_PlusMin.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
+    <value>_</value>
+  </data>
+  <data name="txtTimeSP_Cal_T4_MinusMin.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v17.1">
+    <value>Default</value>
+  </data>
+  <data name="&gt;&gt;Label27.Name" xml:space="preserve">
+    <value>Label27</value>
+  </data>
+  <data name="&gt;&gt;Label23.Name" xml:space="preserve">
+    <value>Label23</value>
+  </data>
+  <data name="txtHaftDay_M.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 20</value>
+  </data>
+  <data name="txtRestSP_Cal_T3_PlusMin.Properties.NullValuePrompt" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtStartDay.Properties.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="Label35.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="txtTimeST_Cal_T1_PlusMin.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="Label30.Size" type="System.Drawing.Size, System.Drawing">
+    <value>113, 13</value>
+  </data>
+  <data name="txtStartDay.Properties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;txtHaftDay_A.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="Label28.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="txtEndDay.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label35.Location" type="System.Drawing.Point, System.Drawing">
+    <value>231, 9</value>
+  </data>
+  <data name="Label25.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="&gt;&gt;txtTimeST_Alert_After_Min.Parent" xml:space="preserve">
+    <value>PanelControl5</value>
+  </data>
+  <data name="&gt;&gt;txtStartDay.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="Label23.Size" type="System.Drawing.Size, System.Drawing">
+    <value>76, 13</value>
+  </data>
+  <data name="txtAdjTimeOut.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;Label25.Parent" xml:space="preserve">
+    <value>PanelControl4</value>
+  </data>
+  <data name="txtHaftDay_A.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="txtTimeST_Cal_T1_PlusMin.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v17.1">
+    <value>Default</value>
+  </data>
+  <data name="&gt;&gt;Label4.Parent" xml:space="preserve">
+    <value>GroupControl1</value>
+  </data>
+  <data name="Label7.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="&gt;&gt;txtTimeST_Alert_Befor_Min.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="btnSave.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="GroupControl6.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="Label26.Text" xml:space="preserve">
+    <value>ก่อนกะเข้างาน :</value>
+  </data>
+  <data name="&gt;&gt;chkNextMonth.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.CheckEdit, DevExpress.XtraEditors.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="txtTimeSP_Cal_T4_MinusMin.Properties.Mask.EditMask" xml:space="preserve">
+    <value>n0</value>
+  </data>
+  <data name="txtRestST_Cal_T2_MinusMin.Properties.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="chkPreviousMonth.Location" type="System.Drawing.Point, System.Drawing">
+    <value>191, 28</value>
+  </data>
+  <data name="&gt;&gt;chkEndMonth.Parent" xml:space="preserve">
+    <value>GroupControl1</value>
+  </data>
+  <data name="txtRestST_Cal_T2_MinusMin.Properties.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="Label4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="chkAdjTimeOUT.Properties.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;txtRestSP_Cal_T3_PlusMin.Name" xml:space="preserve">
+    <value>txtRestSP_Cal_T3_PlusMin</value>
+  </data>
+  <data name="txtTimeSP_Alert_Befor_Min.Location" type="System.Drawing.Point, System.Drawing">
+    <value>114, 10</value>
+  </data>
+  <data name="chkEndMonth.Properties.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtTimeST_Cal_T1_PlusMin.Properties.NullValuePrompt" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;GroupControl6.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="txtStartDay.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="txtTimeSP_Alert_After_Min.Properties.Mask.EditMask" xml:space="preserve">
+    <value>n0</value>
+  </data>
+  <data name="Label30.TabIndex" type="System.Int32, mscorlib">
+    <value>57</value>
+  </data>
+  <data name="txtHaftDay_A.Location" type="System.Drawing.Point, System.Drawing">
+    <value>273, 29</value>
+  </data>
+  <data name="txtHaftDay_A.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
+    <value>_</value>
+  </data>
+  <data name="&gt;&gt;Label28.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Label33.TabIndex" type="System.Int32, mscorlib">
+    <value>57</value>
+  </data>
+  <data name="Label26.TabIndex" type="System.Int32, mscorlib">
+    <value>57</value>
+  </data>
+  <data name="txtRestST_Cal_T2_MinusMin.Properties.NullValuePrompt" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chkNextMonth.Properties.Caption" xml:space="preserve">
+    <value>เดือนถัดไป</value>
+  </data>
+  <data name="txtHaftDay_M.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;Label35.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;GroupControl4.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="chkEndMonth.Properties.Caption" xml:space="preserve">
+    <value>ถึงสิ้นเดือน</value>
+  </data>
+  <data name="txtAdjTimeOut.Properties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="txtRestSP_Cal_T3_PlusMin.Properties.Mask.EditMask" xml:space="preserve">
+    <value>n0</value>
+  </data>
+  <data name="&gt;&gt;GroupControl6.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;Label31.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="txtHaftDay_M.Properties.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="Label24.Text" xml:space="preserve">
+    <value>นาที</value>
+  </data>
+  <data name="&gt;&gt;GroupControl1.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.GroupControl, DevExpress.Utils.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="txtRestST_Cal_T2_MinusMin.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="txtRestST_Cal_T2_MinusMin.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="Label27.TabIndex" type="System.Int32, mscorlib">
+    <value>57</value>
+  </data>
+  <data name="&gt;&gt;txtTimeSP_Alert_Befor_Min.Parent" xml:space="preserve">
+    <value>PanelControl4</value>
+  </data>
+  <data name="chkEndMonth.Properties.DisplayValueUnchecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;txtAdjTimeOut.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="txtEndDay.Properties.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtStartDay.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label31.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;txtTimeST_Cal_T1_PlusMin.Parent" xml:space="preserve">
+    <value>PanelControl2</value>
+  </data>
+  <data name="&gt;&gt;GroupControl4.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="Label35.Text" xml:space="preserve">
+    <value>นาที</value>
+  </data>
+  <data name="Label4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>71, 13</value>
+  </data>
+  <data name="txtAdjTimeOut.Properties.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtTimeSP_Alert_Befor_Min.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtTimeSP_Alert_After_Min.Properties.NullValuePrompt" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtAdjTimeOut.Properties.Mask.EditMask" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtTimeST_Alert_After_Min.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;Label30.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="txtTimeSP_Alert_After_Min.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 20</value>
+  </data>
+  <data name="txtTimeST_Cal_T1_PlusMin.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v17.1">
+    <value>Numeric</value>
+  </data>
+  <data name="txtRestSP_Cal_T3_PlusMin.Properties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="PanelControl3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>291, 61</value>
+  </data>
+  <data name="Label32.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="txtTimeSP_Alert_After_Min.Properties.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="Label29.Text" xml:space="preserve">
+    <value>นาที</value>
+  </data>
+  <data name="Label33.Location" type="System.Drawing.Point, System.Drawing">
+    <value>37, 9</value>
+  </data>
+  <data name="txtEndDay.Location" type="System.Drawing.Point, System.Drawing">
+    <value>102, 51</value>
+  </data>
+  <data name="&gt;&gt;GroupControl7.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="Label29.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="&gt;&gt;PanelControl3.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.PanelControl, DevExpress.Utils.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;txtTimeSP_Cal_T4_MinusMin.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="txtStartDay.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;Label32.Parent" xml:space="preserve">
+    <value>PanelControl3</value>
+  </data>
+  <data name="chkAdjTimeOUT.Properties.DisplayValueChecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chkPreviousMonth.Properties.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtTimeST_Cal_T1_PlusMin.Properties.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtAdjTimeOut.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;txtAdjTimeOut.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="txtHaftDay_M.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;PanelControl3.Name" xml:space="preserve">
+    <value>PanelControl3</value>
+  </data>
+  <data name="txtStartDay.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="btnSave.Size" type="System.Drawing.Size, System.Drawing">
+    <value>153, 35</value>
+  </data>
+  <data name="txtHaftDay_A.Properties.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;Label31.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="txtTimeST_Alert_After_Min.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
+    <value>_</value>
+  </data>
+  <data name="&gt;&gt;txtTimeSP_Alert_Befor_Min.Name" xml:space="preserve">
+    <value>txtTimeSP_Alert_Befor_Min</value>
+  </data>
+  <data name="txtHaftDay_M.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;txtHaftDay_A.Name" xml:space="preserve">
+    <value>txtHaftDay_A</value>
+  </data>
+  <data name="&gt;&gt;Label27.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtHaftDay_M.Name" xml:space="preserve">
+    <value>txtHaftDay_M</value>
+  </data>
+  <data name="btnSave.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABd0RVh0VGl0
+        bGUAU2F2ZSBBbGw7U2F2ZTtBbGxuFPWhAAAC90lEQVQ4T22TyU9TURSHwYJQCogbE/4JF0YlzHOBQkuh
+        LRT62lKgdKDQQh+dKVBmqSjIYAwmiEaCKJJgom4MkGiMiStFNHEnYVQxEWT5895HgqZ6k2/zcs53zr3n
+        vDAAJyQmJoYTThEiQoj8DzxCeKiA1+yfXLZ2TKK5fQJNvnE0esZgdo/C6LoOg2MYensQmsYeqA2dKyQ+
+        IlQQ2eyfwNTcC/ROLKBn/BG6xx+ie3QegZEHsHnHYCICY+sQVA0dIPFRYeSEE04RIgQCQZTRec0+Or1k
+        bx++x/qCd1nvlRnWM3iHbQvcYvXWPnuDbaDVYBtEZa2HCqKpgKexBZe1LUFIq9tgcVwlVQahb+qF1tQF
+        Vb0P+WIDxConJNXs51pLt11v7YdC66ICPhVEamxDGJl+CnGFDbv7v7D97RCbXw+wsXeAL7s/kS2qg7LO
+        jyJFC9RGf1udpQ/lDEsFMVRwmmkaQHBqCYXljVzi2087eLO+jddrW3j1fhMZQg0qdKSTMgtUem+bztyD
+        UmULFQioIKrK3IeBycfIkxiwQSoeJ27h5btNjpRcFeRaD3IkJih1bofWGECJopkKYqkgutLQjcCNea7V
+        rAId0knFtDwGqSQxObsKSVlK0rIbmSI9KrQOp7qhC8WyRiqIowK+vK4D7cOzMHsmYXJPwOAeB2PqgUzt
+        Qhnj5JBWO5EmrIVcxToZfScKpUYqiKeCGGmND87+Gch1XrIO/57iCiskShbJuRqUVbW4FBoXhOKGE4FA
+        wrhgD9yGlHFwCXs/jo7ZP+KmIpSaUaywk6uokJnPuIplFuQUaVeJgJtCrKjSTlb3Jqlk4wQ0aYfynXJI
+        3qYeInkrLqYrwefzz5HEBIKAwKOCuAKZFSbXGISlZngXP8K5sA52fh22uQ9our9GHlSLnBITLqQoQOLj
+        SY2T9aeHn5KrXknNr+EqSdqfQeR5jjz2CdIti7hcP4ukDDoJBucvSVZJfEyogP4H9C5nCAl/cTYE+o0u
+        Du+PAGG/ARDb9RFcHU5rAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="txtTimeSP_Alert_After_Min.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;chkEndMonth.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="Label32.Size" type="System.Drawing.Size, System.Drawing">
+    <value>27, 13</value>
+  </data>
+  <data name="&gt;&gt;Label4.Name" xml:space="preserve">
+    <value>Label4</value>
+  </data>
+  <data name="&gt;&gt;txtEndDay.Parent" xml:space="preserve">
+    <value>GroupControl1</value>
+  </data>
+  <data name="PanelControl4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>268, 23</value>
+  </data>
+  <data name="txtHaftDay_A.Properties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="txtTimeST_Cal_T1_PlusMin.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;txtTimeST_Cal_T1_PlusMin.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;txtHaftDay_M.Parent" xml:space="preserve">
+    <value>GroupControl4</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>frmMainConfig</value>
+  </data>
+  <data name="txtEndDay.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
+    <value>_</value>
+  </data>
+  <data name="txtTimeSP_Cal_T4_MinusMin.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="txtTimeSP_Alert_After_Min.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label7.Text" xml:space="preserve">
+    <value>ชม. (เฉพาะ เสาร์ อาทิตย์, วันหยุด นักขัตฤกษ์)</value>
+  </data>
+  <data name="Label32.TabIndex" type="System.Int32, mscorlib">
+    <value>57</value>
+  </data>
+  <data name="Label31.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="&gt;&gt;Label36.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="Label32.Location" type="System.Drawing.Point, System.Drawing">
+    <value>224, 39</value>
+  </data>
+  <data name="txtTimeST_Alert_After_Min.Location" type="System.Drawing.Point, System.Drawing">
+    <value>111, 36</value>
+  </data>
+  <data name="txtEndDay.Properties.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;Label3.Parent" xml:space="preserve">
+    <value>GroupControl1</value>
+  </data>
+  <data name="Label7.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;Label36.Parent" xml:space="preserve">
+    <value>PanelControl2</value>
+  </data>
+  <data name="&gt;&gt;btnSave.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;Label26.Parent" xml:space="preserve">
+    <value>PanelControl5</value>
+  </data>
+  <data name="&gt;&gt;txtTimeST_Cal_T1_PlusMin.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;Label7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="txtTimeST_Alert_Befor_Min.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v17.1">
+    <value>Default</value>
+  </data>
+  <data name="chkNextMonth.TabIndex" type="System.Int32, mscorlib">
+    <value>35</value>
+  </data>
+  <data name="txtStartDay.Location" type="System.Drawing.Point, System.Drawing">
+    <value>102, 28</value>
+  </data>
+  <data name="Label35.Size" type="System.Drawing.Size, System.Drawing">
+    <value>27, 13</value>
+  </data>
+  <data name="txtEndDay.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="chkAdjTimeOUT.Properties.Caption" xml:space="preserve">
+    <value>ปรับเวลาออก เร็วขึ้น</value>
+  </data>
+  <data name="&gt;&gt;txtTimeSP_Alert_After_Min.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="chkEndMonth.Size" type="System.Drawing.Size, System.Drawing">
+    <value>93, 19</value>
+  </data>
+  <data name="txtHaftDay_A.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="txtAdjTimeOut.Size" type="System.Drawing.Size, System.Drawing">
+    <value>44, 20</value>
+  </data>
+  <data name="Label1.TabIndex" type="System.Int32, mscorlib">
+    <value>57</value>
+  </data>
+  <data name="Label28.TabIndex" type="System.Int32, mscorlib">
+    <value>57</value>
+  </data>
+  <data name="Label30.Text" xml:space="preserve">
+    <value>เริ่มพัก (- เวลาเริ่มพัก) :</value>
+  </data>
+  <data name="txtHaftDay_M.Location" type="System.Drawing.Point, System.Drawing">
+    <value>101, 29</value>
+  </data>
+  <data name="Label25.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;btnExit.Name" xml:space="preserve">
+    <value>btnExit</value>
+  </data>
+  <data name="Label23.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="txtTimeST_Alert_Befor_Min.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;Label15.Name" xml:space="preserve">
+    <value>Label15</value>
+  </data>
+  <data name="&gt;&gt;Label27.Parent" xml:space="preserve">
+    <value>PanelControl5</value>
+  </data>
+  <data name="txtTimeSP_Cal_T4_MinusMin.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="txtTimeSP_Alert_Befor_Min.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="txtTimeST_Alert_Befor_Min.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="btnExit.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAB10RVh0VGl0
+        bGUAQ2xvc2U7RXhpdDtCYXJzO1JpYmJvbjtGA7noAAADCklEQVQ4T42TaUhUURiGp0xzK1HTINrc00yz
+        1EnTMtfUGItS8YclRhAJ6o/EJW1cAjOp3CEGJDEpMYkgR81RsqgYncQlTUfTMpd05mraOCP14+1816F/
+        QRceeO8553vOd++5VzBzu0jArs0MA8aW/8BQD63fxBAYfC4Uv/p6qwBfioh8TBWJNyhkFNzEJE8eJvMZ
+        4jx8FudiNDenm9WSUGBIE9oP7Rso9PC5TU8rtL2EFFp5C89oThZYrREJjJQ3sqHtacHS40oMZqdDYu+B
+        jvMX+HtCFhsLiZ0HBjLTwD0qB1dfho8Z10lgTIKtI5kZWHv3nC1IRV1EPGRSBZ5czUHrGRHaRDF8lrX0
+        oi48Hv0ZKVDX3UN/ajoJTEhg3H8tBZruZkj2umFSOQvVkhbKKQ6NqQU8oyzPqzWYGJuFZI8bVLWlkF++
+        QgJTEpi8PnOWtVrBWo1DT8l9aLS/oV7RYewrh7EvHBZ/6LC69oufk7FHm85KRntIJAnMSGAqC43C9/tZ
+        +JaZhI7oaLwvKcfCsg4LrJPvywxOh7fFZXgZGYmptAQoE0Lwwj+YBOYkMJMGhmG2KBUTF0+j9bgf2sV3
+        WMtazKnXMKvSMLRoyyuB1E+IsQtB+HQuEM+OBpBgGwnMn/sGYTrnClp9vNCcno+hcRVmFjXgVnXgVtYx
+        vaDBgHIRT9PEkHp5YDjSB43uQhJsJ8G2Jk8/vrUGexeo59WYUa1haXUdA+VVPBuSn1DNqdFg54KBYE/U
+        Ox8lgQUJtje4+mA8WQRFTCg6E5OwznHoKymFLOAYOhiUaawz8RLkEYHo83dF7b5DJLAkgcVDOy98igvB
+        cLQQvdEn0eRyAF0BvhiJOYFhUSC6/H34MXnYcfSf8oTiiAMe7HIlgRUvkOw+iKEotpPQGYPBh9mLCsbH
+        cF8ohI5QeDtiKNQbI6IAtrMb5J77IXffi2obp78Cs7u2Tm9qdjqjxtYF1bbOqLIhnDawdkSllSMqeBxQ
+        YemAckaxhd1bVssfI/2W9EGQzVrPjn9go4cyO0KBwR+nGRqWKfsCHQAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="&gt;&gt;txtRestST_Cal_T2_MinusMin.Parent" xml:space="preserve">
+    <value>PanelControl3</value>
+  </data>
+  <data name="txtTimeST_Cal_T1_PlusMin.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;Label24.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;txtEndDay.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;PanelControl4.Name" xml:space="preserve">
+    <value>PanelControl4</value>
+  </data>
+  <data name="chkAdjTimeOUT.Properties.DisplayValueUnchecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chkPreviousMonth.Properties.DisplayValueGrayed" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label15.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;chkEndMonth.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.CheckEdit, DevExpress.XtraEditors.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="Label29.TabIndex" type="System.Int32, mscorlib">
+    <value>57</value>
+  </data>
+  <data name="Label1.Text" xml:space="preserve">
+    <value>นาที</value>
+  </data>
+  <data name="&gt;&gt;txtEndDay.Name" xml:space="preserve">
+    <value>txtEndDay</value>
+  </data>
+  <data name="chkNextMonth.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="txtHaftDay_M.Properties.NullValuePrompt" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label33.Size" type="System.Drawing.Size, System.Drawing">
+    <value>125, 13</value>
+  </data>
+  <data name="Label26.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 13</value>
+  </data>
+  <data name="txtTimeST_Alert_Befor_Min.Properties.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtTimeSP_Alert_After_Min.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="txtTimeST_Alert_After_Min.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v17.1">
+    <value>Default</value>
+  </data>
+  <data name="&gt;&gt;GroupControl1.Name" xml:space="preserve">
+    <value>GroupControl1</value>
+  </data>
+  <data name="&gt;&gt;txtRestST_Cal_T2_MinusMin.Name" xml:space="preserve">
+    <value>txtRestST_Cal_T2_MinusMin</value>
+  </data>
+  <data name="txtEndDay.Properties.Mask.EditMask" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;Label22.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="chkNextMonth.Properties.DisplayValueUnchecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chkNextMonth.Properties.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtAdjTimeOut.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="txtTimeSP_Cal_T4_MinusMin.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="txtTimeST_Alert_After_Min.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="txtTimeSP_Alert_Befor_Min.EditValue" xml:space="preserve">
+    <value>60</value>
+  </data>
+  <data name="Label4.Text" xml:space="preserve">
+    <value>ถึงวันที่ :</value>
+  </data>
+  <data name="Label34.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;Label7.Name" xml:space="preserve">
+    <value>Label7</value>
+  </data>
+  <data name="&gt;&gt;Label25.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="txtTimeSP_Cal_T4_MinusMin.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v17.1">
+    <value>Numeric</value>
+  </data>
+  <data name="&gt;&gt;txtRestST_Cal_T2_MinusMin.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;Label33.Name" xml:space="preserve">
+    <value>Label33</value>
+  </data>
+  <data name="Label36.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="chkAdjTimeOUT.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Label36.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="txtEndDay.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v17.1">
+    <value>None</value>
+  </data>
+  <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>38, 23</value>
+  </data>
+  <data name="Label3.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="txtHaftDay_M.Properties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="txtTimeSP_Cal_T4_MinusMin.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;Label16.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PanelControl2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;chkPreviousMonth.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.CheckEdit, DevExpress.XtraEditors.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;Label23.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label24.Name" xml:space="preserve">
+    <value>Label24</value>
+  </data>
+  <data name="txtTimeST_Cal_T1_PlusMin.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="txtTimeST_Alert_Befor_Min.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v17.1">
+    <value>Numeric</value>
+  </data>
+  <data name="txtTimeSP_Cal_T4_MinusMin.Location" type="System.Drawing.Point, System.Drawing">
+    <value>165, 32</value>
+  </data>
+  <data name="txtTimeST_Alert_After_Min.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;Label15.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="txtRestSP_Cal_T3_PlusMin.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v17.1">
+    <value>Numeric</value>
+  </data>
+  <data name="txtTimeSP_Alert_Befor_Min.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;txtTimeSP_Alert_Befor_Min.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="Label28.Location" type="System.Drawing.Point, System.Drawing">
+    <value>177, 13</value>
+  </data>
+  <data name="&gt;&gt;PanelControl2.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.PanelControl, DevExpress.Utils.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="txtAdjTimeOut.EditValue" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Label24.TabIndex" type="System.Int32, mscorlib">
+    <value>57</value>
+  </data>
+  <data name="txtAdjTimeOut.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;PanelControl5.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.PanelControl, DevExpress.Utils.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="txtRestST_Cal_T2_MinusMin.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 20</value>
+  </data>
+  <data name="txtHaftDay_M.EditValue" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="txtHaftDay_M.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="txtRestSP_Cal_T3_PlusMin.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="GroupControl7.Text" xml:space="preserve">
+    <value>กำหนดช่วง สำหรับคำนวณ เวลาเข้า - เวลาออก</value>
+  </data>
+  <data name="txtAdjTimeOut.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v17.1">
+    <value>None</value>
+  </data>
+  <data name="txtHaftDay_A.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="txtRestSP_Cal_T3_PlusMin.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 20</value>
+  </data>
+  <data name="Label23.Text" xml:space="preserve">
+    <value>หลังกะออกงาน</value>
+  </data>
+  <data name="Label36.Size" type="System.Drawing.Size, System.Drawing">
+    <value>27, 13</value>
+  </data>
+  <data name="&gt;&gt;Label22.Parent" xml:space="preserve">
+    <value>GroupControl4</value>
+  </data>
+  <data name="&gt;&gt;PanelControl2.Parent" xml:space="preserve">
+    <value>GroupControl7</value>
+  </data>
+  <data name="txtHaftDay_M.Properties.Mask.EditMask" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;Label34.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PanelControl3.Parent" xml:space="preserve">
+    <value>GroupControl7</value>
+  </data>
+  <data name="txtEndDay.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="chkNextMonth.Location" type="System.Drawing.Point, System.Drawing">
+    <value>191, 52</value>
+  </data>
+  <data name="Label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>71, 13</value>
+  </data>
+  <data name="Label33.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="chkPreviousMonth.Properties.Caption" xml:space="preserve">
+    <value>เดือนก่อน</value>
+  </data>
+  <data name="&gt;&gt;txtRestSP_Cal_T3_PlusMin.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="Label23.TabIndex" type="System.Int32, mscorlib">
+    <value>57</value>
+  </data>
+  <data name="txtRestST_Cal_T2_MinusMin.Properties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="txtTimeSP_Alert_Befor_Min.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
+    <value>_</value>
+  </data>
+  <data name="&gt;&gt;Label33.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="Label3.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtTimeSP_Alert_After_Min.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;Label35.Parent" xml:space="preserve">
+    <value>PanelControl2</value>
+  </data>
+  <data name="Label30.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="GroupControl6.Text" xml:space="preserve">
+    <value>กำหนดช่วงเวลา สำหรับ การแจ้งเตือน</value>
+  </data>
+  <data name="&gt;&gt;GroupControl6.Name" xml:space="preserve">
+    <value>GroupControl6</value>
+  </data>
+  <data name="txtHaftDay_A.EditValue" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="txtTimeST_Cal_T1_PlusMin.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
+    <value>_</value>
+  </data>
+  <data name="Label33.Text" xml:space="preserve">
+    <value>เข้างาน (+ เวลาหลังเข้า) :</value>
+  </data>
+  <data name="txtTimeSP_Cal_T4_MinusMin.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;btnExit.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="txtEndDay.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="chkPreviousMonth.Properties.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;Label35.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label7.Parent" xml:space="preserve">
+    <value>GroupControl5</value>
+  </data>
+  <data name="&gt;&gt;chkAdjTimeOUT.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.CheckEdit, DevExpress.XtraEditors.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;Label4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="txtStartDay.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="Label32.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label30.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;chkPreviousMonth.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="txtTimeST_Alert_After_Min.Properties.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtHaftDay_A.Properties.Mask.EditMask" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;txtTimeST_Cal_T1_PlusMin.Name" xml:space="preserve">
+    <value>txtTimeST_Cal_T1_PlusMin</value>
+  </data>
+  <data name="txtTimeST_Alert_Befor_Min.Location" type="System.Drawing.Point, System.Drawing">
+    <value>111, 10</value>
+  </data>
+  <data name="GroupControl5.Text" xml:space="preserve">
+    <value>ปรับเวลาออก ช่วง เสาร์ - อาทิตย์ - วันหยุด - นักขัตฤกษ์</value>
+  </data>
+  <data name="chkAdjTimeOUT.Properties.DisplayValueGrayed" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtTimeST_Cal_T1_PlusMin.EditValue" xml:space="preserve">
+    <value>120</value>
+  </data>
+  <data name="chkAdjTimeOUT.Properties.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="Label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>224, 9</value>
+  </data>
+  <data name="txtTimeST_Alert_After_Min.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;Label26.Name" xml:space="preserve">
+    <value>Label26</value>
+  </data>
+  <data name="txtRestSP_Cal_T3_PlusMin.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="txtStartDay.Properties.NullValuePrompt" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;Label32.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label28.Parent" xml:space="preserve">
+    <value>PanelControl5</value>
+  </data>
+  <data name="&gt;&gt;PanelControl5.Name" xml:space="preserve">
+    <value>PanelControl5</value>
+  </data>
+  <data name="PanelControl4.TabIndex" type="System.Int32, mscorlib">
+    <value>59</value>
+  </data>
+  <data name="Label24.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="txtAdjTimeOut.Properties.NullValuePrompt" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label25.Location" type="System.Drawing.Point, System.Drawing">
+    <value>180, 39</value>
+  </data>
+  <data name="&gt;&gt;Label16.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;GroupControl4.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.GroupControl, DevExpress.Utils.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="txtTimeST_Alert_After_Min.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="PanelControl5.TabIndex" type="System.Int32, mscorlib">
+    <value>58</value>
+  </data>
+  <data name="Label31.Size" type="System.Drawing.Size, System.Drawing">
+    <value>107, 13</value>
+  </data>
+  <data name="&gt;&gt;txtTimeST_Alert_After_Min.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="txtTimeSP_Alert_Befor_Min.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v17.1">
+    <value>Default</value>
+  </data>
+  <data name="txtEndDay.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v17.1">
+    <value>Default</value>
+  </data>
+  <data name="btnExit.Appearance.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
+    <value>Horizontal</value>
+  </data>
+  <data name="txtRestST_Cal_T2_MinusMin.Location" type="System.Drawing.Point, System.Drawing">
+    <value>158, 10</value>
+  </data>
+  <data name="&gt;&gt;Label25.Name" xml:space="preserve">
+    <value>Label25</value>
+  </data>
+  <data name="chkPreviousMonth.Properties.DisplayValueUnchecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnExit.Appearance.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="Label32.Text" xml:space="preserve">
+    <value>นาที</value>
+  </data>
+  <data name="chkEndMonth.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;GroupControl1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="txtTimeST_Alert_After_Min.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="txtHaftDay_A.Properties.NullValuePrompt" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtStartDay.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v17.1">
+    <value>None</value>
+  </data>
+  <data name="btnSave.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="txtTimeSP_Alert_Befor_Min.Properties.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;Label29.Parent" xml:space="preserve">
+    <value>PanelControl5</value>
+  </data>
+  <data name="txtTimeSP_Alert_After_Min.Properties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;txtTimeSP_Alert_After_Min.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="Label27.Location" type="System.Drawing.Point, System.Drawing">
+    <value>22, 38</value>
+  </data>
+  <data name="txtTimeSP_Cal_T4_MinusMin.Properties.NullValuePrompt" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtRestSP_Cal_T3_PlusMin.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="txtHaftDay_M.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v17.1">
+    <value>Default</value>
+  </data>
+  <data name="txtTimeSP_Alert_Befor_Min.Properties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="txtTimeSP_Alert_Befor_Min.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label22.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnExit.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtHaftDay_A.Properties.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtTimeST_Cal_T1_PlusMin.Properties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="btnExit.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 9.75pt, style=Bold</value>
+  </data>
+  <data name="&gt;&gt;txtTimeSP_Cal_T4_MinusMin.Parent" xml:space="preserve">
+    <value>PanelControl2</value>
+  </data>
+  <data name="&gt;&gt;txtHaftDay_M.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="chkEndMonth.Location" type="System.Drawing.Point, System.Drawing">
+    <value>307, 52</value>
+  </data>
+  <data name="&gt;&gt;Label32.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;Label34.Parent" xml:space="preserve">
+    <value>PanelControl2</value>
+  </data>
+  <data name="txtTimeST_Cal_T1_PlusMin.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 20</value>
+  </data>
+  <data name="Label31.Location" type="System.Drawing.Point, System.Drawing">
+    <value>48, 39</value>
+  </data>
+  <data name="PanelControl2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 23</value>
+  </data>
+  <data name="Label31.Text" xml:space="preserve">
+    <value>พักถึง (+ เวลาพักถึง) :</value>
+  </data>
+  <data name="txtTimeSP_Alert_After_Min.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="txtHaftDay_A.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;txtStartDay.Parent" xml:space="preserve">
+    <value>GroupControl1</value>
+  </data>
+  <data name="Label34.TabIndex" type="System.Int32, mscorlib">
+    <value>57</value>
+  </data>
+  <data name="Label31.TabIndex" type="System.Int32, mscorlib">
+    <value>57</value>
+  </data>
+  <data name="txtAdjTimeOut.Properties.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;Label30.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="txtTimeSP_Alert_After_Min.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="chkNextMonth.Properties.DisplayValueChecked" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;txtTimeSP_Cal_T4_MinusMin.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;chkNextMonth.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;GroupControl5.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="txtTimeST_Cal_T1_PlusMin.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtRestSP_Cal_T3_PlusMin.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v17.1">
+    <value>Default</value>
+  </data>
+  <data name="txtTimeST_Alert_Befor_Min.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="txtTimeSP_Alert_Befor_Min.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v17.1">
+    <value>Numeric</value>
+  </data>
+  <data name="&gt;&gt;Label29.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GroupControl1.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;PanelControl5.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;Label26.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;PanelControl5.Parent" xml:space="preserve">
+    <value>GroupControl6</value>
+  </data>
+  <data name="txtRestSP_Cal_T3_PlusMin.EditValue" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="txtEndDay.Properties.NullValuePrompt" xml:space="preserve">
+    <value />
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+</root>

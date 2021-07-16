@@ -1,0 +1,167 @@
+﻿Imports System.Data
+Imports System.Data.SqlClient
+Public Class frmCal_OT_Rate
+
+
+    Private Sub btnSave_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSave.Click
+        Call DeleteData()
+        Call SaveData()
+        Call LoadData()
+    End Sub
+
+    Private Sub SaveData()
+        Dim dCmd As New SqlCommand
+        Dim strSQL As String
+        Dim Tn As SqlTransaction
+        Tn = Conn.BeginTransaction
+        dCmd.Transaction = Tn
+        Try
+
+            strSQL = "INSERT INTO CAL_OT_RATE(N_OT_D, " & _
+                                            " N_OT_M, " & _
+                                            " WKEN_T_D, " & _
+                                            " WKEN_T_M, " & _
+                                            " WKEN_OT_D, " & _
+                                            " WKEN_OT_M, " & _
+                                            " HOL_T_D," & _
+                                            " HOL_T_M," & _
+                                            " HOL_OT_D," & _
+                                            " HOL_OT_M) Values (" & _
+                     " '" & txtOT_Nomal_Day.Text.Trim & "'," & _
+                     " '" & txtOT_Nomal_Month.Text.Trim & "'," & _
+                     " '" & txtTime_Sunday_Day.Text.Trim & "'," & _
+                     " '" & txtTime_Sunday_Month.Text.Trim & "'," & _
+                     " '" & txtOT_Sunday_Day.Text.Trim & "'," & _
+                     " '" & txtOT_Sunday_Month.Text.Trim & "'," & _
+                     " '" & txtTime_Holidays_Day.Text.Trim & "'," & _
+                     " '" & txtTime_Holidays_Month.Text.Trim & "'," & _
+                     " '" & txtOT_Holidays_Day.Text.Trim & "'," & _
+                     " '" & txtOT_Holidays_Month.Text.Trim & "')"
+
+
+            dCmd.Connection = Conn
+            dCmd.CommandText = strSQL
+            dCmd.ExecuteNonQuery()
+
+            Tn.Commit()
+        Catch ex As Exception
+            Tn.Rollback()
+            MsgBox(ex.Message, MsgBoxStyle.Critical, Me.Text)
+            Exit Sub
+        End Try
+        MsgBox("บันทึกข้อมูลเรียบร้อย", MsgBoxStyle.Information + MsgBoxStyle.OkOnly, "บันทึก")
+        Exit Sub
+        Call ClearText()
+    End Sub
+
+    Private Sub DeleteData()
+        Dim dCmd As New SqlCommand
+        Dim strSQL As String
+        Dim Tn As SqlTransaction
+        Tn = Conn.BeginTransaction
+        dCmd.Transaction = Tn
+        Try
+            strSQL = "Delete From CAL_OT_RATE "
+            dCmd.Connection = Conn
+            dCmd.CommandText = strSQL
+            dCmd.ExecuteNonQuery()
+
+            Tn.Commit()
+        Catch ex As Exception
+            Tn.Rollback()
+            MsgBox(ex.Message, MsgBoxStyle.Critical, Me.Text)
+            Exit Sub
+        End Try
+        Call LoadData()
+    End Sub
+
+    Private Sub ClearText()
+        txtTime_Sunday_Day.Text = ""
+        txtTime_Sunday_Month.Text = ""
+        txtTime_Holidays_Day.Text = ""
+        txtTime_Holidays_Month.Text = ""
+        txtOT_Nomal_Day.Text = ""
+        txtOT_Nomal_Month.Text = ""
+        txtOT_Sunday_Day.Text = ""
+        txtOT_Sunday_Month.Text = ""
+        txtOT_Holidays_Day.Text = ""
+        txtOT_Holidays_Month.Text = ""
+
+        txtTime_Sunday_Day.Focus()
+    End Sub
+
+    Private Sub btnDel_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnDel.Click
+        If MsgBox("ต้องการลบข้อมูลหรือไม่", MsgBoxStyle.Exclamation Or MsgBoxStyle.YesNo, "ลบ") = MsgBoxResult.No Then Exit Sub
+
+
+        Dim dCmd As New SqlCommand
+        Dim strSQL As String
+        Dim Tn As SqlTransaction
+        Tn = Conn.BeginTransaction
+        dCmd.Transaction = Tn
+        Try
+            strSQL = "Delete From CAL_OT_RATE "
+            dCmd.Connection = Conn
+            dCmd.CommandText = strSQL
+            dCmd.ExecuteNonQuery()
+
+            Tn.Commit()
+        Catch ex As Exception
+            Tn.Rollback()
+            MsgBox(ex.Message, MsgBoxStyle.Critical, Me.Text)
+            Exit Sub
+        End Try
+        Call LoadData()
+    End Sub
+
+    Private Sub LoadData()
+        Dim Da As New SqlDataAdapter
+        Dim Ds As New DataSet
+        Dim Strsql As String = ""
+        Dim dcmd As New SqlCommand
+
+        Strsql = "Select * from CAL_OT_RATE"
+
+        Try
+            '   OpenConnect(True)
+            Da = New SqlDataAdapter(Strsql, Conn)
+            Da.Fill(Ds, "DATA")
+            '   OpenConnect(False)
+
+            With Ds.Tables("DATA")
+                If .Rows.Count = 0 Then
+                    ' Call ClearText()
+                    ' btnSave.Enabled = True
+                    ' btnDel.Enabled = False
+                Else
+                    ' btnSave.Enabled = False
+                    '  btnDel.Enabled = True
+                    txtOT_Nomal_Day.Text = .Rows(0).Item("N_OT_D")  ' รายวัน OT ปกติ
+                    txtOT_Nomal_Month.Text = .Rows(0).Item("N_OT_M") ' รายเดือน OT ปกติ
+                    txtTime_Sunday_Day.Text = .Rows(0).Item("WKEN_T_D") ' รายวัน วันหยุดสุดสัปดาห์
+                    txtTime_Sunday_Month.Text = .Rows(0).Item("WKEN_T_M") ' รายเดือน วันหยุดสุดสัปดาห์
+                    txtOT_Sunday_Day.Text = .Rows(0).Item("WKEN_OT_D") 'รายวัน OT หยุดสุดสัปดาห์
+                    txtOT_Sunday_Month.Text = .Rows(0).Item("WKEN_OT_M") 'รายเดือน OT หยุดสุดสัปดาห์
+                    txtTime_Holidays_Day.Text = .Rows(0).Item("HOL_T_D")    ' รายวัน หยุดนักขัตฤกษ์
+                    txtTime_Holidays_Month.Text = .Rows(0).Item("HOL_T_M") ' รายเดือน หยุดนักขัตฤกษ์
+                    txtOT_Holidays_Day.Text = .Rows(0).Item("HOL_OT_D") ' รายวัน OT  นักขัตฤกษ์
+                    txtOT_Holidays_Month.Text = .Rows(0).Item("HOL_OT_M") ' รายเดือน OT นักขัตฤกษ์
+                End If
+            End With
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+    End Sub
+
+    Private Sub frmCal_OT_Rate_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        Call LoadData()
+    End Sub
+
+    Private Sub btnExit_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnExit.Click
+        Me.Close()
+    End Sub
+
+    Private Sub txtOT_Holidays_Day_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtOT_Holidays_Day.TextChanged
+
+    End Sub
+End Class

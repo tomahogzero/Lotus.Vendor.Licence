@@ -1,0 +1,378 @@
+<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+Partial Class frmLinkCodeToPayroll
+    Inherits System.Windows.Forms.Form
+
+    'Form overrides dispose to clean up the component list.
+    <System.Diagnostics.DebuggerNonUserCode()> _
+    Protected Overrides Sub Dispose(ByVal disposing As Boolean)
+        If disposing AndAlso components IsNot Nothing Then
+            components.Dispose()
+        End If
+        MyBase.Dispose(disposing)
+    End Sub
+
+    'Required by the Windows Form Designer
+    Private components As System.ComponentModel.IContainer
+
+    'NOTE: The following procedure is required by the Windows Form Designer
+    'It can be modified using the Windows Form Designer.  
+    'Do not modify it using the code editor.
+    <System.Diagnostics.DebuggerStepThrough()> _
+    Private Sub InitializeComponent()
+        Me.Label1 = New System.Windows.Forms.Label
+        Me.Label2 = New System.Windows.Forms.Label
+        Me.cboOT1 = New System.Windows.Forms.ComboBox
+        Me.cboOT15 = New System.Windows.Forms.ComboBox
+        Me.cboOT2 = New System.Windows.Forms.ComboBox
+        Me.Label3 = New System.Windows.Forms.Label
+        Me.cboOT3 = New System.Windows.Forms.ComboBox
+        Me.Label5 = New System.Windows.Forms.Label
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox
+        Me.cboOtBaht = New System.Windows.Forms.ComboBox
+        Me.Label7 = New System.Windows.Forms.Label
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox
+        Me.Label6 = New System.Windows.Forms.Label
+        Me.Label10 = New System.Windows.Forms.Label
+        Me.Label4 = New System.Windows.Forms.Label
+        Me.cboAbs = New System.Windows.Forms.ComboBox
+        Me.cboLateOut = New System.Windows.Forms.ComboBox
+        Me.cboLate = New System.Windows.Forms.ComboBox
+        Me.btnSave = New System.Windows.Forms.Button
+        Me.btnExit = New System.Windows.Forms.Button
+        Me.GroupBox3 = New System.Windows.Forms.GroupBox
+        Me.Label11 = New System.Windows.Forms.Label
+        Me.Label8 = New System.Windows.Forms.Label
+        Me.cboLateRateMin_Deduc = New System.Windows.Forms.ComboBox
+        Me.cboDeduc_LateOut = New System.Windows.Forms.ComboBox
+        Me.Label9 = New System.Windows.Forms.Label
+        Me.cboDeduc_Late = New System.Windows.Forms.ComboBox
+        Me.Label12 = New System.Windows.Forms.Label
+        Me.cboOtH = New System.Windows.Forms.ComboBox
+        Me.GroupBox1.SuspendLayout()
+        Me.GroupBox2.SuspendLayout()
+        Me.GroupBox3.SuspendLayout()
+        Me.SuspendLayout()
+        '
+        'Label1
+        '
+        Me.Label1.Location = New System.Drawing.Point(6, 16)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(76, 21)
+        Me.Label1.TabIndex = 0
+        Me.Label1.Text = "OT 1 เท่า : "
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'Label2
+        '
+        Me.Label2.Location = New System.Drawing.Point(6, 43)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(76, 21)
+        Me.Label2.TabIndex = 0
+        Me.Label2.Text = "OT 1.5 เท่า : "
+        Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'cboOT1
+        '
+        Me.cboOT1.FormattingEnabled = True
+        Me.cboOT1.Location = New System.Drawing.Point(88, 17)
+        Me.cboOT1.Name = "cboOT1"
+        Me.cboOT1.Size = New System.Drawing.Size(230, 21)
+        Me.cboOT1.TabIndex = 0
+        '
+        'cboOT15
+        '
+        Me.cboOT15.FormattingEnabled = True
+        Me.cboOT15.Location = New System.Drawing.Point(88, 44)
+        Me.cboOT15.Name = "cboOT15"
+        Me.cboOT15.Size = New System.Drawing.Size(230, 21)
+        Me.cboOT15.TabIndex = 1
+        '
+        'cboOT2
+        '
+        Me.cboOT2.FormattingEnabled = True
+        Me.cboOT2.Location = New System.Drawing.Point(88, 71)
+        Me.cboOT2.Name = "cboOT2"
+        Me.cboOT2.Size = New System.Drawing.Size(230, 21)
+        Me.cboOT2.TabIndex = 2
+        '
+        'Label3
+        '
+        Me.Label3.Location = New System.Drawing.Point(6, 70)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(76, 21)
+        Me.Label3.TabIndex = 0
+        Me.Label3.Text = "OT 2 เท่า : "
+        Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'cboOT3
+        '
+        Me.cboOT3.FormattingEnabled = True
+        Me.cboOT3.Location = New System.Drawing.Point(88, 98)
+        Me.cboOT3.Name = "cboOT3"
+        Me.cboOT3.Size = New System.Drawing.Size(230, 21)
+        Me.cboOT3.TabIndex = 3
+        '
+        'Label5
+        '
+        Me.Label5.Location = New System.Drawing.Point(6, 97)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(76, 21)
+        Me.Label5.TabIndex = 0
+        Me.Label5.Text = "OT 3 เท่า : "
+        Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.Label1)
+        Me.GroupBox1.Controls.Add(Me.cboOtBaht)
+        Me.GroupBox1.Controls.Add(Me.cboOtH)
+        Me.GroupBox1.Controls.Add(Me.cboOT3)
+        Me.GroupBox1.Controls.Add(Me.Label2)
+        Me.GroupBox1.Controls.Add(Me.cboOT2)
+        Me.GroupBox1.Controls.Add(Me.Label3)
+        Me.GroupBox1.Controls.Add(Me.cboOT15)
+        Me.GroupBox1.Controls.Add(Me.Label7)
+        Me.GroupBox1.Controls.Add(Me.Label12)
+        Me.GroupBox1.Controls.Add(Me.cboOT1)
+        Me.GroupBox1.Controls.Add(Me.Label5)
+        Me.GroupBox1.Location = New System.Drawing.Point(5, 3)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(324, 182)
+        Me.GroupBox1.TabIndex = 0
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "Overtime"
+        '
+        'cboOtBaht
+        '
+        Me.cboOtBaht.FormattingEnabled = True
+        Me.cboOtBaht.Location = New System.Drawing.Point(88, 152)
+        Me.cboOtBaht.Name = "cboOtBaht"
+        Me.cboOtBaht.Size = New System.Drawing.Size(230, 21)
+        Me.cboOtBaht.TabIndex = 3
+        '
+        'Label7
+        '
+        Me.Label7.Location = New System.Drawing.Point(6, 151)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(76, 21)
+        Me.Label7.TabIndex = 0
+        Me.Label7.Text = "OT บาท : "
+        Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'GroupBox2
+        '
+        Me.GroupBox2.Controls.Add(Me.Label6)
+        Me.GroupBox2.Controls.Add(Me.Label10)
+        Me.GroupBox2.Controls.Add(Me.Label4)
+        Me.GroupBox2.Controls.Add(Me.cboAbs)
+        Me.GroupBox2.Controls.Add(Me.cboLateOut)
+        Me.GroupBox2.Controls.Add(Me.cboLate)
+        Me.GroupBox2.Location = New System.Drawing.Point(5, 191)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(324, 101)
+        Me.GroupBox2.TabIndex = 1
+        Me.GroupBox2.TabStop = False
+        Me.GroupBox2.Text = "Attendance"
+        '
+        'Label6
+        '
+        Me.Label6.Location = New System.Drawing.Point(6, 73)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(76, 21)
+        Me.Label6.TabIndex = 0
+        Me.Label6.Text = "นับขาด : "
+        Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'Label10
+        '
+        Me.Label10.Location = New System.Drawing.Point(6, 45)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(76, 21)
+        Me.Label10.TabIndex = 0
+        Me.Label10.Text = "กลับก่อน : "
+        Me.Label10.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'Label4
+        '
+        Me.Label4.Location = New System.Drawing.Point(6, 18)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(76, 21)
+        Me.Label4.TabIndex = 0
+        Me.Label4.Text = "นับสาย : "
+        Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'cboAbs
+        '
+        Me.cboAbs.FormattingEnabled = True
+        Me.cboAbs.Location = New System.Drawing.Point(88, 74)
+        Me.cboAbs.Name = "cboAbs"
+        Me.cboAbs.Size = New System.Drawing.Size(230, 21)
+        Me.cboAbs.TabIndex = 2
+        '
+        'cboLateOut
+        '
+        Me.cboLateOut.FormattingEnabled = True
+        Me.cboLateOut.Location = New System.Drawing.Point(88, 46)
+        Me.cboLateOut.Name = "cboLateOut"
+        Me.cboLateOut.Size = New System.Drawing.Size(230, 21)
+        Me.cboLateOut.TabIndex = 1
+        '
+        'cboLate
+        '
+        Me.cboLate.FormattingEnabled = True
+        Me.cboLate.Location = New System.Drawing.Point(88, 19)
+        Me.cboLate.Name = "cboLate"
+        Me.cboLate.Size = New System.Drawing.Size(230, 21)
+        Me.cboLate.TabIndex = 0
+        '
+        'btnSave
+        '
+        Me.btnSave.Location = New System.Drawing.Point(5, 404)
+        Me.btnSave.Name = "btnSave"
+        Me.btnSave.Size = New System.Drawing.Size(122, 39)
+        Me.btnSave.TabIndex = 2
+        Me.btnSave.Text = "บันทึก"
+        Me.btnSave.UseVisualStyleBackColor = True
+        '
+        'btnExit
+        '
+        Me.btnExit.Location = New System.Drawing.Point(133, 404)
+        Me.btnExit.Name = "btnExit"
+        Me.btnExit.Size = New System.Drawing.Size(90, 39)
+        Me.btnExit.TabIndex = 3
+        Me.btnExit.Text = "ออก"
+        Me.btnExit.UseVisualStyleBackColor = True
+        '
+        'GroupBox3
+        '
+        Me.GroupBox3.Controls.Add(Me.Label11)
+        Me.GroupBox3.Controls.Add(Me.Label8)
+        Me.GroupBox3.Controls.Add(Me.cboLateRateMin_Deduc)
+        Me.GroupBox3.Controls.Add(Me.cboDeduc_LateOut)
+        Me.GroupBox3.Controls.Add(Me.Label9)
+        Me.GroupBox3.Controls.Add(Me.cboDeduc_Late)
+        Me.GroupBox3.Location = New System.Drawing.Point(5, 297)
+        Me.GroupBox3.Name = "GroupBox3"
+        Me.GroupBox3.Size = New System.Drawing.Size(324, 101)
+        Me.GroupBox3.TabIndex = 1
+        Me.GroupBox3.TabStop = False
+        Me.GroupBox3.Text = "Deduction"
+        '
+        'Label11
+        '
+        Me.Label11.Location = New System.Drawing.Point(6, 72)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(115, 21)
+        Me.Label11.TabIndex = 2
+        Me.Label11.Text = "สายหักเงินตาม Rate : "
+        Me.Label11.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'Label8
+        '
+        Me.Label8.Location = New System.Drawing.Point(7, 45)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(85, 21)
+        Me.Label8.TabIndex = 2
+        Me.Label8.Text = "กลับก่อน(Baht) : "
+        Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'cboLateRateMin_Deduc
+        '
+        Me.cboLateRateMin_Deduc.FormattingEnabled = True
+        Me.cboLateRateMin_Deduc.Location = New System.Drawing.Point(128, 73)
+        Me.cboLateRateMin_Deduc.Name = "cboLateRateMin_Deduc"
+        Me.cboLateRateMin_Deduc.Size = New System.Drawing.Size(190, 21)
+        Me.cboLateRateMin_Deduc.TabIndex = 1
+        '
+        'cboDeduc_LateOut
+        '
+        Me.cboDeduc_LateOut.FormattingEnabled = True
+        Me.cboDeduc_LateOut.Location = New System.Drawing.Point(98, 46)
+        Me.cboDeduc_LateOut.Name = "cboDeduc_LateOut"
+        Me.cboDeduc_LateOut.Size = New System.Drawing.Size(220, 21)
+        Me.cboDeduc_LateOut.TabIndex = 1
+        '
+        'Label9
+        '
+        Me.Label9.Location = New System.Drawing.Point(7, 18)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(85, 21)
+        Me.Label9.TabIndex = 0
+        Me.Label9.Text = "หักสาย(Baht) : "
+        Me.Label9.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'cboDeduc_Late
+        '
+        Me.cboDeduc_Late.FormattingEnabled = True
+        Me.cboDeduc_Late.Location = New System.Drawing.Point(98, 19)
+        Me.cboDeduc_Late.Name = "cboDeduc_Late"
+        Me.cboDeduc_Late.Size = New System.Drawing.Size(220, 21)
+        Me.cboDeduc_Late.TabIndex = 0
+        '
+        'Label12
+        '
+        Me.Label12.Location = New System.Drawing.Point(6, 124)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(76, 21)
+        Me.Label12.TabIndex = 0
+        Me.Label12.Text = "OT ชม. : "
+        Me.Label12.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'cboOtH
+        '
+        Me.cboOtH.FormattingEnabled = True
+        Me.cboOtH.Location = New System.Drawing.Point(88, 125)
+        Me.cboOtH.Name = "cboOtH"
+        Me.cboOtH.Size = New System.Drawing.Size(230, 21)
+        Me.cboOtH.TabIndex = 3
+        '
+        'frmLinkCodeToPayroll
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.ClientSize = New System.Drawing.Size(332, 447)
+        Me.Controls.Add(Me.btnExit)
+        Me.Controls.Add(Me.btnSave)
+        Me.Controls.Add(Me.GroupBox3)
+        Me.Controls.Add(Me.GroupBox2)
+        Me.Controls.Add(Me.GroupBox1)
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
+        Me.Name = "frmLinkCodeToPayroll"
+        Me.Text = "กำหนด Link Code กับ Payroll"
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox2.ResumeLayout(False)
+        Me.GroupBox3.ResumeLayout(False)
+        Me.ResumeLayout(False)
+
+    End Sub
+    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents cboOT1 As System.Windows.Forms.ComboBox
+    Friend WithEvents cboOT15 As System.Windows.Forms.ComboBox
+    Friend WithEvents cboOT2 As System.Windows.Forms.ComboBox
+    Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents cboOT3 As System.Windows.Forms.ComboBox
+    Friend WithEvents Label5 As System.Windows.Forms.Label
+    Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
+    Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
+    Friend WithEvents Label6 As System.Windows.Forms.Label
+    Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents cboAbs As System.Windows.Forms.ComboBox
+    Friend WithEvents cboLate As System.Windows.Forms.ComboBox
+    Friend WithEvents btnSave As System.Windows.Forms.Button
+    Friend WithEvents btnExit As System.Windows.Forms.Button
+    Friend WithEvents cboOtBaht As System.Windows.Forms.ComboBox
+    Friend WithEvents Label7 As System.Windows.Forms.Label
+    Friend WithEvents GroupBox3 As System.Windows.Forms.GroupBox
+    Friend WithEvents Label9 As System.Windows.Forms.Label
+    Friend WithEvents cboDeduc_Late As System.Windows.Forms.ComboBox
+    Friend WithEvents Label8 As System.Windows.Forms.Label
+    Friend WithEvents cboDeduc_LateOut As System.Windows.Forms.ComboBox
+    Friend WithEvents Label10 As System.Windows.Forms.Label
+    Friend WithEvents cboLateOut As System.Windows.Forms.ComboBox
+    Friend WithEvents Label11 As System.Windows.Forms.Label
+    Friend WithEvents cboLateRateMin_Deduc As System.Windows.Forms.ComboBox
+    Friend WithEvents cboOtH As System.Windows.Forms.ComboBox
+    Friend WithEvents Label12 As System.Windows.Forms.Label
+End Class
