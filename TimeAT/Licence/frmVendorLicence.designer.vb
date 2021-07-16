@@ -229,15 +229,15 @@ Partial Class frmVendorLicence
         Me.RepositoryItemButtonEdit3 = New DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit()
         Me.RepositoryItemLookUpEdit5 = New DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit()
         Me.RepositoryItemLookUpEdit6 = New DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit()
-        Me.SimpleButton4 = New DevExpress.XtraEditors.SimpleButton()
-        Me.TextEdit2 = New DevExpress.XtraEditors.TextEdit()
+        Me.XtraTabPage5 = New DevExpress.XtraTab.XtraTabPage()
+        Me.LabelControl42 = New DevExpress.XtraEditors.LabelControl()
         Me.TextEdit1 = New DevExpress.XtraEditors.TextEdit()
+        Me.TextEdit2 = New DevExpress.XtraEditors.TextEdit()
+        Me.SimpleButton4 = New DevExpress.XtraEditors.SimpleButton()
         Me.btnExit = New DevExpress.XtraEditors.SimpleButton()
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
         Me.DxValidationProvider1 = New DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider(Me.components)
         Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
-        Me.XtraTabPage5 = New DevExpress.XtraTab.XtraTabPage()
-        Me.LabelControl42 = New DevExpress.XtraEditors.LabelControl()
         CType(Me.GcEmp, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GvEmp, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BtnDel, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -332,10 +332,10 @@ Partial Class frmVendorLicence
         CType(Me.RepositoryItemButtonEdit3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RepositoryItemLookUpEdit5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RepositoryItemLookUpEdit6, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TextEdit2.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TextEdit1.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DxValidationProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.XtraTabPage5.SuspendLayout()
+        CType(Me.TextEdit1.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TextEdit2.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DxValidationProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Highlighter1
@@ -2026,30 +2026,6 @@ Partial Class frmVendorLicence
         Me.RepositoryItemLookUpEdit6.Name = "RepositoryItemLookUpEdit6"
         Me.RepositoryItemLookUpEdit6.ValueMember = "unitid"
         '
-        'SimpleButton4
-        '
-        resources.ApplyResources(Me.SimpleButton4, "SimpleButton4")
-        Me.SimpleButton4.Name = "SimpleButton4"
-        '
-        'TextEdit2
-        '
-        Me.TextEdit2.EnterMoveNextControl = True
-        resources.ApplyResources(Me.TextEdit2, "TextEdit2")
-        Me.TextEdit2.Name = "TextEdit2"
-        '
-        'TextEdit1
-        '
-        resources.ApplyResources(Me.TextEdit1, "TextEdit1")
-        Me.TextEdit1.EnterMoveNextControl = True
-        Me.TextEdit1.Name = "TextEdit1"
-        '
-        'btnExit
-        '
-        Me.btnExit.ImageOptions.Image = CType(resources.GetObject("btnExit.ImageOptions.Image"), System.Drawing.Image)
-        Me.btnExit.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter
-        resources.ApplyResources(Me.btnExit, "btnExit")
-        Me.btnExit.Name = "btnExit"
-        '
         'XtraTabPage5
         '
         Me.XtraTabPage5.Controls.Add(Me.LabelControl42)
@@ -2065,6 +2041,30 @@ Partial Class frmVendorLicence
         Me.LabelControl42.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
         resources.ApplyResources(Me.LabelControl42, "LabelControl42")
         Me.LabelControl42.Name = "LabelControl42"
+        '
+        'TextEdit1
+        '
+        resources.ApplyResources(Me.TextEdit1, "TextEdit1")
+        Me.TextEdit1.EnterMoveNextControl = True
+        Me.TextEdit1.Name = "TextEdit1"
+        '
+        'TextEdit2
+        '
+        Me.TextEdit2.EnterMoveNextControl = True
+        resources.ApplyResources(Me.TextEdit2, "TextEdit2")
+        Me.TextEdit2.Name = "TextEdit2"
+        '
+        'SimpleButton4
+        '
+        resources.ApplyResources(Me.SimpleButton4, "SimpleButton4")
+        Me.SimpleButton4.Name = "SimpleButton4"
+        '
+        'btnExit
+        '
+        Me.btnExit.ImageOptions.Image = CType(resources.GetObject("btnExit.ImageOptions.Image"), System.Drawing.Image)
+        Me.btnExit.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter
+        resources.ApplyResources(Me.btnExit, "btnExit")
+        Me.btnExit.Name = "btnExit"
         '
         'frmVendorLicence
         '
@@ -2171,10 +2171,10 @@ Partial Class frmVendorLicence
         CType(Me.RepositoryItemButtonEdit3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RepositoryItemLookUpEdit5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RepositoryItemLookUpEdit6, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TextEdit2.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TextEdit1.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DxValidationProvider1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.XtraTabPage5.ResumeLayout(False)
+        CType(Me.TextEdit1.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TextEdit2.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DxValidationProvider1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
