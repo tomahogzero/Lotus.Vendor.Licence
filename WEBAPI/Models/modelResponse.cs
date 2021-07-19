@@ -23,7 +23,7 @@ namespace webAPI.Models
 
     public class modelResultError
     {
-        public int message { get; set; }
+        public string message { get; set; }
         public string title { get; set; }
     }
 

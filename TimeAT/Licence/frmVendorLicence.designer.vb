@@ -25,16 +25,58 @@ Partial Class frmVendorLicence
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmVendorLicence))
         Dim ConditionValidationRule1 As DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule = New DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule()
         Dim ConditionValidationRule2 As DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule = New DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule()
         Dim ConditionValidationRule3 As DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule = New DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmVendorLicence))
+        Me.SplitContainerControl1 = New DevExpress.XtraEditors.SplitContainerControl()
+        Me.gcDevice = New DevExpress.XtraGrid.GridControl()
+        Me.gvDevice = New DevExpress.XtraGrid.Views.Grid.GridView()
+        Me.GridColumn52 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.GridColumn72 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.GridColumn69 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.GridColumn54 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.GridColumn55 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.GridColumn56 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.GridColumn57 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.GridColumn59 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.GridColumn60 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.GridColumn61 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.GridColumn62 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.GridColumn63 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.GridColumn64 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.GridColumn65 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.GridColumn66 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.GridColumn67 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.GridColumn68 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.GridColumn70 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.GridColumn71 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.RepositoryItemButtonEdit4 = New DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit()
+        Me.RepositoryItemLookUpEdit7 = New DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit()
+        Me.RepositoryItemLookUpEdit8 = New DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit()
+        Me.btnRefreshDevice = New DevExpress.XtraEditors.SimpleButton()
+        Me.chkNameSpingdel = New DevExpress.XtraEditors.CheckEdit()
+        Me.gcDeviceLicence = New DevExpress.XtraGrid.GridControl()
+        Me.gvDeviceLicence = New DevExpress.XtraGrid.Views.Grid.GridView()
+        Me.GridColumn53 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.GridColumn73 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.GridColumn77 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.GridColumn74 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.RepositoryItemTextEdit1 = New DevExpress.XtraEditors.Repository.RepositoryItemTextEdit()
+        Me.GridColumn75 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.GridColumn76 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.RepositoryItemButtonEdit5 = New DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit()
+        Me.RepositoryItemLookUpEdit9 = New DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit()
+        Me.RepositoryItemLookUpEdit10 = New DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit()
+        Me.btnGenLicenceDevice = New DevExpress.XtraEditors.SimpleButton()
+        Me.btnRefreshDeviceLicence = New DevExpress.XtraEditors.SimpleButton()
         Me.Highlighter1 = New DevComponents.DotNetBar.Validator.Highlighter()
         Me.GcEmp = New DevExpress.XtraGrid.GridControl()
         Me.GvEmp = New DevExpress.XtraGrid.Views.Grid.GridView()
         Me.colrow = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.GridColumn27 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.coldateyear = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.GridColumn79 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.GridColumn31 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.coldaystop = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.GridColumn6 = New DevExpress.XtraGrid.Columns.GridColumn()
@@ -48,6 +90,7 @@ Partial Class frmVendorLicence
         Me.GridColumn12 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.GridColumn1 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.GridColumn3 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.GridColumn78 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.GridColumn5 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.GridColumn7 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.GridColumn13 = New DevExpress.XtraGrid.Columns.GridColumn()
@@ -65,6 +108,7 @@ Partial Class frmVendorLicence
         Me.GridColumn25 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.GridColumn26 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.GridColumn49 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.GridColumn80 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.BtnDel = New DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit()
         Me.cboTransport_detail = New DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit()
         Me.cboUnitName = New DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit()
@@ -90,6 +134,7 @@ Partial Class frmVendorLicence
         Me.SimpleButton3 = New DevExpress.XtraEditors.SimpleButton()
         Me.btnPrintContract = New DevExpress.XtraEditors.SimpleButton()
         Me.btnExportLicence = New DevExpress.XtraEditors.SimpleButton()
+        Me.btnRegisterLicence = New DevExpress.XtraEditors.SimpleButton()
         Me.btnAutoGenLicenceKey = New DevExpress.XtraEditors.SimpleButton()
         Me.cmdRefresh = New DevExpress.XtraEditors.SimpleButton()
         Me.XtraTabPage2 = New DevExpress.XtraTab.XtraTabPage()
@@ -230,6 +275,8 @@ Partial Class frmVendorLicence
         Me.RepositoryItemLookUpEdit5 = New DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit()
         Me.RepositoryItemLookUpEdit6 = New DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit()
         Me.XtraTabPage5 = New DevExpress.XtraTab.XtraTabPage()
+        Me.btnImportDeviceFromCSV = New DevExpress.XtraEditors.SimpleButton()
+        Me.btnSyncData = New DevExpress.XtraEditors.SimpleButton()
         Me.LabelControl42 = New DevExpress.XtraEditors.LabelControl()
         Me.TextEdit1 = New DevExpress.XtraEditors.TextEdit()
         Me.TextEdit2 = New DevExpress.XtraEditors.TextEdit()
@@ -238,6 +285,20 @@ Partial Class frmVendorLicence
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
         Me.DxValidationProvider1 = New DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider(Me.components)
         Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
+        CType(Me.SplitContainerControl1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.SplitContainerControl1.SuspendLayout()
+        CType(Me.gcDevice, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.gvDevice, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RepositoryItemButtonEdit4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RepositoryItemLookUpEdit7, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RepositoryItemLookUpEdit8, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.chkNameSpingdel.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.gcDeviceLicence, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.gvDeviceLicence, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RepositoryItemTextEdit1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RepositoryItemButtonEdit5, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RepositoryItemLookUpEdit9, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RepositoryItemLookUpEdit10, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GcEmp, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GvEmp, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BtnDel, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -338,6 +399,325 @@ Partial Class frmVendorLicence
         CType(Me.DxValidationProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
+        'SplitContainerControl1
+        '
+        resources.ApplyResources(Me.SplitContainerControl1, "SplitContainerControl1")
+        Me.SplitContainerControl1.Name = "SplitContainerControl1"
+        Me.SplitContainerControl1.Panel1.Controls.Add(Me.gcDevice)
+        Me.SplitContainerControl1.Panel1.Controls.Add(Me.btnRefreshDevice)
+        resources.ApplyResources(Me.SplitContainerControl1.Panel1, "SplitContainerControl1.Panel1")
+        Me.SplitContainerControl1.Panel2.CaptionLocation = DevExpress.Utils.Locations.Right
+        Me.SplitContainerControl1.Panel2.Controls.Add(Me.chkNameSpingdel)
+        Me.SplitContainerControl1.Panel2.Controls.Add(Me.gcDeviceLicence)
+        Me.SplitContainerControl1.Panel2.Controls.Add(Me.btnGenLicenceDevice)
+        Me.SplitContainerControl1.Panel2.Controls.Add(Me.btnRefreshDeviceLicence)
+        resources.ApplyResources(Me.SplitContainerControl1.Panel2, "SplitContainerControl1.Panel2")
+        Me.SplitContainerControl1.SplitterPosition = 607
+        '
+        'gcDevice
+        '
+        resources.ApplyResources(Me.gcDevice, "gcDevice")
+        Me.gcDevice.MainView = Me.gvDevice
+        Me.gcDevice.Name = "gcDevice"
+        Me.gcDevice.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemButtonEdit4, Me.RepositoryItemLookUpEdit7, Me.RepositoryItemLookUpEdit8})
+        Me.gcDevice.TabStop = False
+        Me.gcDevice.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.gvDevice})
+        '
+        'gvDevice
+        '
+        Me.gvDevice.Appearance.HeaderPanel.Font = CType(resources.GetObject("gvDevice.Appearance.HeaderPanel.Font"), System.Drawing.Font)
+        Me.gvDevice.Appearance.HeaderPanel.Options.UseFont = True
+        Me.gvDevice.Appearance.Row.Options.UseFont = True
+        Me.gvDevice.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.GridColumn52, Me.GridColumn72, Me.GridColumn69, Me.GridColumn54, Me.GridColumn55, Me.GridColumn56, Me.GridColumn57, Me.GridColumn59, Me.GridColumn60, Me.GridColumn61, Me.GridColumn62, Me.GridColumn63, Me.GridColumn64, Me.GridColumn65, Me.GridColumn66, Me.GridColumn67, Me.GridColumn68, Me.GridColumn70, Me.GridColumn71})
+        Me.gvDevice.GridControl = Me.gcDevice
+        Me.gvDevice.Name = "gvDevice"
+        Me.gvDevice.OptionsSelection.CheckBoxSelectorColumnWidth = 30
+        Me.gvDevice.OptionsSelection.MultiSelect = True
+        Me.gvDevice.OptionsSelection.MultiSelectMode = DevExpress.XtraGrid.Views.Grid.GridMultiSelectMode.CheckBoxRowSelect
+        Me.gvDevice.OptionsView.ColumnAutoWidth = False
+        Me.gvDevice.OptionsView.ShowAutoFilterRow = True
+        Me.gvDevice.OptionsView.ShowFooter = True
+        Me.gvDevice.OptionsView.ShowGroupPanel = False
+        Me.gvDevice.OptionsView.ShowViewCaption = True
+        resources.ApplyResources(Me.gvDevice, "gvDevice")
+        '
+        'GridColumn52
+        '
+        Me.GridColumn52.AppearanceCell.Options.UseTextOptions = True
+        Me.GridColumn52.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
+        Me.GridColumn52.AppearanceHeader.Options.UseTextOptions = True
+        Me.GridColumn52.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
+        resources.ApplyResources(Me.GridColumn52, "GridColumn52")
+        Me.GridColumn52.FieldName = "row"
+        Me.GridColumn52.Name = "GridColumn52"
+        Me.GridColumn52.OptionsColumn.AllowEdit = False
+        Me.GridColumn52.OptionsColumn.ReadOnly = True
+        Me.GridColumn52.OptionsColumn.TabStop = False
+        '
+        'GridColumn72
+        '
+        resources.ApplyResources(Me.GridColumn72, "GridColumn72")
+        Me.GridColumn72.FieldName = "DeviceSerialNo"
+        Me.GridColumn72.Name = "GridColumn72"
+        '
+        'GridColumn69
+        '
+        resources.ApplyResources(Me.GridColumn69, "GridColumn69")
+        Me.GridColumn69.FieldName = "SerialNumber"
+        Me.GridColumn69.Name = "GridColumn69"
+        '
+        'GridColumn54
+        '
+        resources.ApplyResources(Me.GridColumn54, "GridColumn54")
+        Me.GridColumn54.FieldName = "Fleet"
+        Me.GridColumn54.Name = "GridColumn54"
+        '
+        'GridColumn55
+        '
+        resources.ApplyResources(Me.GridColumn55, "GridColumn55")
+        Me.GridColumn55.FieldName = "LastSeen"
+        Me.GridColumn55.Name = "GridColumn55"
+        '
+        'GridColumn56
+        '
+        resources.ApplyResources(Me.GridColumn56, "GridColumn56")
+        Me.GridColumn56.FieldName = "Device"
+        Me.GridColumn56.Name = "GridColumn56"
+        '
+        'GridColumn57
+        '
+        resources.ApplyResources(Me.GridColumn57, "GridColumn57")
+        Me.GridColumn57.FieldName = "AgentVersion"
+        Me.GridColumn57.Name = "GridColumn57"
+        '
+        'GridColumn59
+        '
+        resources.ApplyResources(Me.GridColumn59, "GridColumn59")
+        Me.GridColumn59.FieldName = "Location"
+        Me.GridColumn59.Name = "GridColumn59"
+        '
+        'GridColumn60
+        '
+        resources.ApplyResources(Me.GridColumn60, "GridColumn60")
+        Me.GridColumn60.FieldName = "BatteryLevel"
+        Me.GridColumn60.Name = "GridColumn60"
+        '
+        'GridColumn61
+        '
+        resources.ApplyResources(Me.GridColumn61, "GridColumn61")
+        Me.GridColumn61.FieldName = "LastOnline"
+        Me.GridColumn61.Name = "GridColumn61"
+        '
+        'GridColumn62
+        '
+        resources.ApplyResources(Me.GridColumn62, "GridColumn62")
+        Me.GridColumn62.FieldName = "Manufacturer"
+        Me.GridColumn62.Name = "GridColumn62"
+        '
+        'GridColumn63
+        '
+        resources.ApplyResources(Me.GridColumn63, "GridColumn63")
+        Me.GridColumn63.FieldName = "Model"
+        Me.GridColumn63.Name = "GridColumn63"
+        '
+        'GridColumn64
+        '
+        resources.ApplyResources(Me.GridColumn64, "GridColumn64")
+        Me.GridColumn64.FieldName = "MACAddress"
+        Me.GridColumn64.Name = "GridColumn64"
+        '
+        'GridColumn65
+        '
+        resources.ApplyResources(Me.GridColumn65, "GridColumn65")
+        Me.GridColumn65.FieldName = "EthernetMACAddress"
+        Me.GridColumn65.Name = "GridColumn65"
+        '
+        'GridColumn66
+        '
+        resources.ApplyResources(Me.GridColumn66, "GridColumn66")
+        Me.GridColumn66.FieldName = "IPAddress"
+        Me.GridColumn66.Name = "GridColumn66"
+        '
+        'GridColumn67
+        '
+        resources.ApplyResources(Me.GridColumn67, "GridColumn67")
+        Me.GridColumn67.FieldName = "AvailableMemory"
+        Me.GridColumn67.Name = "GridColumn67"
+        '
+        'GridColumn68
+        '
+        resources.ApplyResources(Me.GridColumn68, "GridColumn68")
+        Me.GridColumn68.FieldName = "AvailableStorage"
+        Me.GridColumn68.Name = "GridColumn68"
+        '
+        'GridColumn70
+        '
+        resources.ApplyResources(Me.GridColumn70, "GridColumn70")
+        Me.GridColumn70.FieldName = "IMEI"
+        Me.GridColumn70.Name = "GridColumn70"
+        '
+        'GridColumn71
+        '
+        resources.ApplyResources(Me.GridColumn71, "GridColumn71")
+        Me.GridColumn71.FieldName = "SSID"
+        Me.GridColumn71.Name = "GridColumn71"
+        '
+        'RepositoryItemButtonEdit4
+        '
+        resources.ApplyResources(Me.RepositoryItemButtonEdit4, "RepositoryItemButtonEdit4")
+        Me.RepositoryItemButtonEdit4.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(CType(resources.GetObject("RepositoryItemButtonEdit4.Buttons"), DevExpress.XtraEditors.Controls.ButtonPredefines))})
+        Me.RepositoryItemButtonEdit4.Name = "RepositoryItemButtonEdit4"
+        Me.RepositoryItemButtonEdit4.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor
+        '
+        'RepositoryItemLookUpEdit7
+        '
+        resources.ApplyResources(Me.RepositoryItemLookUpEdit7, "RepositoryItemLookUpEdit7")
+        Me.RepositoryItemLookUpEdit7.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(CType(resources.GetObject("RepositoryItemLookUpEdit7.Buttons"), DevExpress.XtraEditors.Controls.ButtonPredefines))})
+        Me.RepositoryItemLookUpEdit7.Columns.AddRange(New DevExpress.XtraEditors.Controls.LookUpColumnInfo() {New DevExpress.XtraEditors.Controls.LookUpColumnInfo(resources.GetString("RepositoryItemLookUpEdit7.Columns"), CType(resources.GetObject("RepositoryItemLookUpEdit7.Columns1"), Integer), resources.GetString("RepositoryItemLookUpEdit7.Columns2"))})
+        Me.RepositoryItemLookUpEdit7.DisplayMember = "TransName"
+        Me.RepositoryItemLookUpEdit7.Name = "RepositoryItemLookUpEdit7"
+        Me.RepositoryItemLookUpEdit7.ValueMember = "transcomId"
+        '
+        'RepositoryItemLookUpEdit8
+        '
+        resources.ApplyResources(Me.RepositoryItemLookUpEdit8, "RepositoryItemLookUpEdit8")
+        Me.RepositoryItemLookUpEdit8.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(CType(resources.GetObject("RepositoryItemLookUpEdit8.Buttons"), DevExpress.XtraEditors.Controls.ButtonPredefines))})
+        Me.RepositoryItemLookUpEdit8.Columns.AddRange(New DevExpress.XtraEditors.Controls.LookUpColumnInfo() {New DevExpress.XtraEditors.Controls.LookUpColumnInfo(resources.GetString("RepositoryItemLookUpEdit8.Columns"), resources.GetString("RepositoryItemLookUpEdit8.Columns1"))})
+        Me.RepositoryItemLookUpEdit8.DisplayMember = "unit"
+        Me.RepositoryItemLookUpEdit8.Name = "RepositoryItemLookUpEdit8"
+        Me.RepositoryItemLookUpEdit8.ValueMember = "unitid"
+        '
+        'btnRefreshDevice
+        '
+        Me.btnRefreshDevice.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter
+        resources.ApplyResources(Me.btnRefreshDevice, "btnRefreshDevice")
+        Me.btnRefreshDevice.Name = "btnRefreshDevice"
+        '
+        'chkNameSpingdel
+        '
+        resources.ApplyResources(Me.chkNameSpingdel, "chkNameSpingdel")
+        Me.chkNameSpingdel.Name = "chkNameSpingdel"
+        Me.chkNameSpingdel.Properties.Caption = resources.GetString("chkNameSpingdel.Properties.Caption")
+        '
+        'gcDeviceLicence
+        '
+        resources.ApplyResources(Me.gcDeviceLicence, "gcDeviceLicence")
+        Me.gcDeviceLicence.MainView = Me.gvDeviceLicence
+        Me.gcDeviceLicence.Name = "gcDeviceLicence"
+        Me.gcDeviceLicence.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemButtonEdit5, Me.RepositoryItemLookUpEdit9, Me.RepositoryItemLookUpEdit10, Me.RepositoryItemTextEdit1})
+        Me.gcDeviceLicence.TabStop = False
+        Me.gcDeviceLicence.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.gvDeviceLicence})
+        '
+        'gvDeviceLicence
+        '
+        Me.gvDeviceLicence.Appearance.HeaderPanel.Font = CType(resources.GetObject("gvDeviceLicence.Appearance.HeaderPanel.Font"), System.Drawing.Font)
+        Me.gvDeviceLicence.Appearance.HeaderPanel.Options.UseFont = True
+        Me.gvDeviceLicence.Appearance.Row.Options.UseFont = True
+        Me.gvDeviceLicence.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.GridColumn53, Me.GridColumn73, Me.GridColumn77, Me.GridColumn74, Me.GridColumn75, Me.GridColumn76})
+        Me.gvDeviceLicence.GridControl = Me.gcDeviceLicence
+        Me.gvDeviceLicence.Name = "gvDeviceLicence"
+        Me.gvDeviceLicence.OptionsSelection.CheckBoxSelectorColumnWidth = 30
+        Me.gvDeviceLicence.OptionsSelection.MultiSelect = True
+        Me.gvDeviceLicence.OptionsSelection.MultiSelectMode = DevExpress.XtraGrid.Views.Grid.GridMultiSelectMode.CheckBoxRowSelect
+        Me.gvDeviceLicence.OptionsView.ColumnAutoWidth = False
+        Me.gvDeviceLicence.OptionsView.ShowAutoFilterRow = True
+        Me.gvDeviceLicence.OptionsView.ShowFooter = True
+        Me.gvDeviceLicence.OptionsView.ShowGroupPanel = False
+        Me.gvDeviceLicence.OptionsView.ShowViewCaption = True
+        resources.ApplyResources(Me.gvDeviceLicence, "gvDeviceLicence")
+        '
+        'GridColumn53
+        '
+        Me.GridColumn53.AppearanceCell.Options.UseTextOptions = True
+        Me.GridColumn53.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
+        Me.GridColumn53.AppearanceHeader.Options.UseTextOptions = True
+        Me.GridColumn53.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
+        resources.ApplyResources(Me.GridColumn53, "GridColumn53")
+        Me.GridColumn53.FieldName = "row"
+        Me.GridColumn53.Name = "GridColumn53"
+        Me.GridColumn53.OptionsColumn.AllowEdit = False
+        Me.GridColumn53.OptionsColumn.ReadOnly = True
+        Me.GridColumn53.OptionsColumn.TabStop = False
+        '
+        'GridColumn73
+        '
+        resources.ApplyResources(Me.GridColumn73, "GridColumn73")
+        Me.GridColumn73.FieldName = "Name"
+        Me.GridColumn73.Name = "GridColumn73"
+        '
+        'GridColumn77
+        '
+        resources.ApplyResources(Me.GridColumn77, "GridColumn77")
+        Me.GridColumn77.FieldName = "Device"
+        Me.GridColumn77.Name = "GridColumn77"
+        Me.GridColumn77.OptionsColumn.AllowEdit = False
+        '
+        'GridColumn74
+        '
+        resources.ApplyResources(Me.GridColumn74, "GridColumn74")
+        Me.GridColumn74.ColumnEdit = Me.RepositoryItemTextEdit1
+        Me.GridColumn74.FieldName = "SerialNo"
+        Me.GridColumn74.Name = "GridColumn74"
+        Me.GridColumn74.OptionsColumn.ReadOnly = True
+        '
+        'RepositoryItemTextEdit1
+        '
+        resources.ApplyResources(Me.RepositoryItemTextEdit1, "RepositoryItemTextEdit1")
+        Me.RepositoryItemTextEdit1.Name = "RepositoryItemTextEdit1"
+        '
+        'GridColumn75
+        '
+        resources.ApplyResources(Me.GridColumn75, "GridColumn75")
+        Me.GridColumn75.FieldName = "CompanyGroupName"
+        Me.GridColumn75.Name = "GridColumn75"
+        Me.GridColumn75.OptionsColumn.AllowEdit = False
+        Me.GridColumn75.OptionsColumn.ReadOnly = True
+        '
+        'GridColumn76
+        '
+        resources.ApplyResources(Me.GridColumn76, "GridColumn76")
+        Me.GridColumn76.FieldName = "SerialNoHash"
+        Me.GridColumn76.Name = "GridColumn76"
+        Me.GridColumn76.OptionsColumn.AllowEdit = False
+        Me.GridColumn76.OptionsColumn.ReadOnly = True
+        '
+        'RepositoryItemButtonEdit5
+        '
+        resources.ApplyResources(Me.RepositoryItemButtonEdit5, "RepositoryItemButtonEdit5")
+        Me.RepositoryItemButtonEdit5.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(CType(resources.GetObject("RepositoryItemButtonEdit5.Buttons"), DevExpress.XtraEditors.Controls.ButtonPredefines))})
+        Me.RepositoryItemButtonEdit5.Name = "RepositoryItemButtonEdit5"
+        Me.RepositoryItemButtonEdit5.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor
+        '
+        'RepositoryItemLookUpEdit9
+        '
+        resources.ApplyResources(Me.RepositoryItemLookUpEdit9, "RepositoryItemLookUpEdit9")
+        Me.RepositoryItemLookUpEdit9.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(CType(resources.GetObject("RepositoryItemLookUpEdit9.Buttons"), DevExpress.XtraEditors.Controls.ButtonPredefines))})
+        Me.RepositoryItemLookUpEdit9.Columns.AddRange(New DevExpress.XtraEditors.Controls.LookUpColumnInfo() {New DevExpress.XtraEditors.Controls.LookUpColumnInfo(resources.GetString("RepositoryItemLookUpEdit9.Columns"), CType(resources.GetObject("RepositoryItemLookUpEdit9.Columns1"), Integer), resources.GetString("RepositoryItemLookUpEdit9.Columns2"))})
+        Me.RepositoryItemLookUpEdit9.DisplayMember = "TransName"
+        Me.RepositoryItemLookUpEdit9.Name = "RepositoryItemLookUpEdit9"
+        Me.RepositoryItemLookUpEdit9.ValueMember = "transcomId"
+        '
+        'RepositoryItemLookUpEdit10
+        '
+        resources.ApplyResources(Me.RepositoryItemLookUpEdit10, "RepositoryItemLookUpEdit10")
+        Me.RepositoryItemLookUpEdit10.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(CType(resources.GetObject("RepositoryItemLookUpEdit10.Buttons"), DevExpress.XtraEditors.Controls.ButtonPredefines))})
+        Me.RepositoryItemLookUpEdit10.Columns.AddRange(New DevExpress.XtraEditors.Controls.LookUpColumnInfo() {New DevExpress.XtraEditors.Controls.LookUpColumnInfo(resources.GetString("RepositoryItemLookUpEdit10.Columns"), resources.GetString("RepositoryItemLookUpEdit10.Columns1"))})
+        Me.RepositoryItemLookUpEdit10.DisplayMember = "unit"
+        Me.RepositoryItemLookUpEdit10.Name = "RepositoryItemLookUpEdit10"
+        Me.RepositoryItemLookUpEdit10.ValueMember = "unitid"
+        '
+        'btnGenLicenceDevice
+        '
+        Me.btnGenLicenceDevice.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter
+        resources.ApplyResources(Me.btnGenLicenceDevice, "btnGenLicenceDevice")
+        Me.btnGenLicenceDevice.Name = "btnGenLicenceDevice"
+        '
+        'btnRefreshDeviceLicence
+        '
+        Me.btnRefreshDeviceLicence.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter
+        resources.ApplyResources(Me.btnRefreshDeviceLicence, "btnRefreshDeviceLicence")
+        Me.btnRefreshDeviceLicence.Name = "btnRefreshDeviceLicence"
+        '
         'Highlighter1
         '
         Me.Highlighter1.ContainerControl = Me
@@ -357,7 +737,7 @@ Partial Class frmVendorLicence
         Me.GvEmp.Appearance.HeaderPanel.Font = CType(resources.GetObject("GvEmp.Appearance.HeaderPanel.Font"), System.Drawing.Font)
         Me.GvEmp.Appearance.HeaderPanel.Options.UseFont = True
         Me.GvEmp.Appearance.Row.Options.UseFont = True
-        Me.GvEmp.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.colrow, Me.GridColumn27, Me.coldateyear, Me.GridColumn31, Me.coldaystop, Me.GridColumn6, Me.GridColumn2, Me.GridColumn45, Me.GridColumn10, Me.GridColumn8, Me.GridColumn9, Me.GridColumn4, Me.GridColumn11, Me.GridColumn12, Me.GridColumn1, Me.GridColumn3, Me.GridColumn5, Me.GridColumn7, Me.GridColumn13, Me.GridColumn14, Me.GridColumn15, Me.GridColumn16, Me.GridColumn17, Me.GridColumn18, Me.GridColumn19, Me.GridColumn20, Me.GridColumn21, Me.GridColumn22, Me.GridColumn23, Me.GridColumn24, Me.GridColumn25, Me.GridColumn26, Me.GridColumn49})
+        Me.GvEmp.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.colrow, Me.GridColumn27, Me.coldateyear, Me.GridColumn79, Me.GridColumn31, Me.coldaystop, Me.GridColumn6, Me.GridColumn2, Me.GridColumn45, Me.GridColumn10, Me.GridColumn8, Me.GridColumn9, Me.GridColumn4, Me.GridColumn11, Me.GridColumn12, Me.GridColumn1, Me.GridColumn3, Me.GridColumn78, Me.GridColumn5, Me.GridColumn7, Me.GridColumn13, Me.GridColumn14, Me.GridColumn15, Me.GridColumn16, Me.GridColumn17, Me.GridColumn18, Me.GridColumn19, Me.GridColumn20, Me.GridColumn21, Me.GridColumn22, Me.GridColumn23, Me.GridColumn24, Me.GridColumn25, Me.GridColumn26, Me.GridColumn49, Me.GridColumn80})
         Me.GvEmp.GridControl = Me.GcEmp
         Me.GvEmp.Name = "GvEmp"
         Me.GvEmp.OptionsSelection.CheckBoxSelectorColumnWidth = 30
@@ -399,6 +779,13 @@ Partial Class frmVendorLicence
         Me.coldateyear.Name = "coldateyear"
         Me.coldateyear.OptionsColumn.AllowEdit = False
         Me.coldateyear.OptionsColumn.ReadOnly = True
+        '
+        'GridColumn79
+        '
+        resources.ApplyResources(Me.GridColumn79, "GridColumn79")
+        Me.GridColumn79.FieldName = "SetGroup"
+        Me.GridColumn79.Name = "GridColumn79"
+        Me.GridColumn79.OptionsColumn.AllowEdit = False
         '
         'GridColumn31
         '
@@ -513,6 +900,13 @@ Partial Class frmVendorLicence
         Me.GridColumn3.Name = "GridColumn3"
         Me.GridColumn3.OptionsColumn.AllowEdit = False
         Me.GridColumn3.OptionsColumn.ReadOnly = True
+        '
+        'GridColumn78
+        '
+        resources.ApplyResources(Me.GridColumn78, "GridColumn78")
+        Me.GridColumn78.FieldName = "LicenceToken"
+        Me.GridColumn78.Name = "GridColumn78"
+        Me.GridColumn78.OptionsColumn.AllowEdit = False
         '
         'GridColumn5
         '
@@ -651,6 +1045,12 @@ Partial Class frmVendorLicence
         Me.GridColumn49.Name = "GridColumn49"
         Me.GridColumn49.OptionsColumn.AllowEdit = False
         '
+        'GridColumn80
+        '
+        resources.ApplyResources(Me.GridColumn80, "GridColumn80")
+        Me.GridColumn80.FieldName = "CompanyGroupId"
+        Me.GridColumn80.Name = "GridColumn80"
+        '
         'BtnDel
         '
         resources.ApplyResources(Me.BtnDel, "BtnDel")
@@ -694,6 +1094,7 @@ Partial Class frmVendorLicence
         Me.XtraTabPage1.Controls.Add(Me.SimpleButton3)
         Me.XtraTabPage1.Controls.Add(Me.btnPrintContract)
         Me.XtraTabPage1.Controls.Add(Me.btnExportLicence)
+        Me.XtraTabPage1.Controls.Add(Me.btnRegisterLicence)
         Me.XtraTabPage1.Controls.Add(Me.btnAutoGenLicenceKey)
         Me.XtraTabPage1.Controls.Add(Me.cmdRefresh)
         Me.XtraTabPage1.Name = "XtraTabPage1"
@@ -853,6 +1254,12 @@ Partial Class frmVendorLicence
         Me.btnExportLicence.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter
         resources.ApplyResources(Me.btnExportLicence, "btnExportLicence")
         Me.btnExportLicence.Name = "btnExportLicence"
+        '
+        'btnRegisterLicence
+        '
+        Me.btnRegisterLicence.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter
+        resources.ApplyResources(Me.btnRegisterLicence, "btnRegisterLicence")
+        Me.btnRegisterLicence.Name = "btnRegisterLicence"
         '
         'btnAutoGenLicenceKey
         '
@@ -2028,12 +2435,27 @@ Partial Class frmVendorLicence
         '
         'XtraTabPage5
         '
+        Me.XtraTabPage5.Controls.Add(Me.SplitContainerControl1)
+        Me.XtraTabPage5.Controls.Add(Me.btnImportDeviceFromCSV)
+        Me.XtraTabPage5.Controls.Add(Me.btnSyncData)
         Me.XtraTabPage5.Controls.Add(Me.LabelControl42)
         Me.XtraTabPage5.Controls.Add(Me.TextEdit1)
         Me.XtraTabPage5.Controls.Add(Me.TextEdit2)
         Me.XtraTabPage5.Controls.Add(Me.SimpleButton4)
         Me.XtraTabPage5.Name = "XtraTabPage5"
         resources.ApplyResources(Me.XtraTabPage5, "XtraTabPage5")
+        '
+        'btnImportDeviceFromCSV
+        '
+        Me.btnImportDeviceFromCSV.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter
+        resources.ApplyResources(Me.btnImportDeviceFromCSV, "btnImportDeviceFromCSV")
+        Me.btnImportDeviceFromCSV.Name = "btnImportDeviceFromCSV"
+        '
+        'btnSyncData
+        '
+        Me.btnSyncData.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter
+        resources.ApplyResources(Me.btnSyncData, "btnSyncData")
+        Me.btnSyncData.Name = "btnSyncData"
         '
         'LabelControl42
         '
@@ -2074,6 +2496,20 @@ Partial Class frmVendorLicence
         Me.Controls.Add(Me.XtraTabControl1)
         Me.Name = "frmVendorLicence"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
+        CType(Me.SplitContainerControl1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.SplitContainerControl1.ResumeLayout(False)
+        CType(Me.gcDevice, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.gvDevice, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RepositoryItemButtonEdit4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RepositoryItemLookUpEdit7, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RepositoryItemLookUpEdit8, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.chkNameSpingdel.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.gcDeviceLicence, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.gvDeviceLicence, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RepositoryItemTextEdit1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RepositoryItemButtonEdit5, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RepositoryItemLookUpEdit9, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RepositoryItemLookUpEdit10, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GcEmp, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GvEmp, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BtnDel, System.ComponentModel.ISupportInitialize).EndInit()
@@ -2400,4 +2836,51 @@ Partial Class frmVendorLicence
     Friend WithEvents TextEdit1 As DevExpress.XtraEditors.TextEdit
     Friend WithEvents XtraTabPage5 As DevExpress.XtraTab.XtraTabPage
     Friend WithEvents LabelControl42 As DevExpress.XtraEditors.LabelControl
+    Friend WithEvents btnSyncData As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents btnImportDeviceFromCSV As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents SplitContainerControl1 As DevExpress.XtraEditors.SplitContainerControl
+    Friend WithEvents gcDevice As DevExpress.XtraGrid.GridControl
+    Friend WithEvents gvDevice As DevExpress.XtraGrid.Views.Grid.GridView
+    Friend WithEvents GridColumn52 As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents GridColumn54 As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents GridColumn55 As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents GridColumn56 As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents GridColumn57 As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents GridColumn59 As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents GridColumn60 As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents GridColumn61 As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents GridColumn62 As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents GridColumn63 As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents GridColumn64 As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents GridColumn65 As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents GridColumn66 As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents GridColumn67 As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents GridColumn68 As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents GridColumn69 As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents GridColumn70 As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents GridColumn71 As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents GridColumn72 As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents RepositoryItemButtonEdit4 As DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit
+    Friend WithEvents RepositoryItemLookUpEdit7 As DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit
+    Friend WithEvents RepositoryItemLookUpEdit8 As DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit
+    Friend WithEvents gcDeviceLicence As DevExpress.XtraGrid.GridControl
+    Friend WithEvents gvDeviceLicence As DevExpress.XtraGrid.Views.Grid.GridView
+    Friend WithEvents GridColumn53 As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents GridColumn73 As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents GridColumn74 As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents GridColumn75 As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents GridColumn76 As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents RepositoryItemButtonEdit5 As DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit
+    Friend WithEvents RepositoryItemLookUpEdit9 As DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit
+    Friend WithEvents RepositoryItemLookUpEdit10 As DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit
+    Friend WithEvents btnRefreshDevice As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents btnRefreshDeviceLicence As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents btnGenLicenceDevice As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents chkNameSpingdel As DevExpress.XtraEditors.CheckEdit
+    Friend WithEvents GridColumn77 As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents btnRegisterLicence As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents GridColumn78 As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents GridColumn79 As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents GridColumn80 As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents RepositoryItemTextEdit1 As DevExpress.XtraEditors.Repository.RepositoryItemTextEdit
 End Class

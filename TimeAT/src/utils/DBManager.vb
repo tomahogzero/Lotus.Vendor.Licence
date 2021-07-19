@@ -94,6 +94,18 @@ Namespace utils
             Return System.Configuration.ConfigurationManager.AppSettings.Item("PDF_Path_Invoice").Trim
         End Function
 
+        Public Function APIUrl() As String
+            Return System.Configuration.ConfigurationManager.AppSettings.Item("APIUrl").Trim
+        End Function
+
+        Public Function APIUsername() As String
+            Return System.Configuration.ConfigurationManager.AppSettings.Item("APIUsername").Trim
+        End Function
+
+        Public Function APIPassword() As String
+            Return System.Configuration.ConfigurationManager.AppSettings.Item("APIPassword").Trim
+        End Function
+
         Public Function getDBConnection() As SqlConnection
             Dim strConnString As String = getConnString()
             Return New SqlClient.SqlConnection(strConnString)

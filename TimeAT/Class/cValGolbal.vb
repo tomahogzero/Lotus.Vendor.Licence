@@ -7,4 +7,13 @@ Public Class cValGolbal
     Public Shared Lang As String = "TH"
     Public Shared SkinName As String = "Office 2007 Blue"
     Public Shared urlPassword = "http://103.13.228.135:85"
+    Public Shared companyid As String = ""
+    Public Shared username As String = ""
+    Public Shared url_api_id As String = ""
+    Public Shared url_api_app As String = ""
+    Public Shared token As String = ""
+    Public Shared reader_ip As String = ""
+    Public Shared api_username As String = ""
+    Public Shared api_password As String = ""
+    Public Shared gate As String = ""
 End Class

@@ -31,4 +31,24 @@ Public Class FileIO
 
     End Class
 
+    Public Shared Function ReadToFile(FileName As String, ByRef err As String) As String
+        err = ""
+        Try
+            Using sr As IO.StreamReader = New IO.StreamReader(FileName)
+                Dim line As String
+                line = sr.ReadLine()
+
+                sr.Close()
+
+                If line Is Nothing Then
+                    Return ""
+                Else
+                    Return line
+                End If
+            End Using
+        Catch ex As Exception
+            err = ex.Message
+            Return ""
+        End Try
+    End Function
 End Class

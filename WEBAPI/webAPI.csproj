@@ -46,6 +46,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="api\CompanyGroup.cs" />
+    <Compile Include="api\Company.cs" />
+    <Compile Include="api\Device.cs" />
+    <Compile Include="api\apiSelect.cs" />
+    <Compile Include="ErrorResponse\errorResponse.cs" />
+    <Compile Include="Models\modelCompanyGroup.cs" />
+    <Compile Include="Models\modelCompany.cs" />
+    <Compile Include="Models\modelDevice.cs" />
     <Compile Include="Models\model_dc_receive_save.cs" />
     <Compile Include="webapi.cs" />
     <Compile Include="DictionaryExtensions.cs" />

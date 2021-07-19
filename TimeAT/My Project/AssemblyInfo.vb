@@ -8,7 +8,7 @@ Imports System.Runtime.InteropServices
 
 ' Review the values of the assembly attributes
 
-<Assembly: AssemblyTitle("Tesco Vendor Licence v.1.14")>
+<Assembly: AssemblyTitle("Tesco Vendor Licence v.1.15")>
 <Assembly: AssemblyDescription("")>
 <Assembly: AssemblyCompany("SRP")>
 <Assembly: AssemblyProduct("Tesco Vendor Licence")>
@@ -31,5 +31,5 @@ Imports System.Runtime.InteropServices
 ' by using the '*' as shown below:
 ' <Assembly: AssemblyVersion("1.0.*")> 
 
-<Assembly: AssemblyVersion("1.14.0.0")>
-<Assembly: AssemblyFileVersion("1.14.0.0")>
+<Assembly: AssemblyVersion("1.15.0.0")>
+<Assembly: AssemblyFileVersion("1.15.0.0")>

@@ -30,6 +30,11 @@ Public Class frmVendorLicence
 
         ' Add any initialization after the InitializeComponent() call.
 
+        Dim dbMgr As New DBManager
+        cValGolbal.url_api_app = dbMgr.APIUrl
+        cValGolbal.api_username = dbMgr.APIUsername
+        cValGolbal.api_password = dbMgr.APIPassword
+
     End Sub
 
     Private Sub frmEmp_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
@@ -568,18 +573,7 @@ Public Class frmVendorLicence
     End Function
 
     Private Sub cmdRefresh_Click(sender As System.Object, e As System.EventArgs) Handles cmdRefresh.Click
-        'Dim frm As New frmImportExcel
-        'frm.StartPosition = FormStartPosition.CenterParent
-        'frm.ShowDialog()
-        'PG1.Visible = True
-        'cmdRefresh.Enabled = False
-        'cboCompany.Enabled = False
-        'Call LoadData()
 
-        'cmdRefresh.Enabled = True
-        'cboCompany.Enabled = True
-
-        'PG1.Visible = False
         Call LoadVendor()
 
     End Sub
@@ -866,14 +860,23 @@ Public Class frmVendorLicence
         Dim db As New db
 
         strSQL = "select row_number() over(order by VendorId) as row,g.*,d.division,s.section_name,isnull(p.process,'') as process " &
-                " From vendor_group g " &
-                    " left join division d " &
-                        " On g.divisionid = d.divisionid " &
-                    " left join section s " &
-                        " on g.sectionid = s.sectionid" &
-                    " left join process_status p" &
-                        " on g.processid = p.processid" &
-                " Order by VendorId"
+                            " ,c.CompanyGroupId" &
+                            " ,cg.Id as cgid" &
+                            " ,isnull(cg.Name,'') as CompanyGroupName" &
+                            " ,isnull(cg.LicenseToken,'') as LicenceToken" &
+                            " ,SetGroup = convert(bit,case when c.CompanyGroupId is null  then 0 else 1 end)" &
+                    " From vendor_group g " &
+                        " left join division d " &
+                            " On g.divisionid = d.divisionid " &
+                        " left join section s " &
+                            " on g.sectionid = s.sectionid" &
+                        " left join process_status p" &
+                            " on g.processid = p.processid" &
+                        " left join LotusCompany c" &
+                            " on g.VendorId = c.CompanyId" &
+                        " left join LotusCompanyGroup cg" &
+                            " on c.CompanyGroupId = cg.Id" &
+                    " Order by VendorId"
 
         '   
         Da = New SqlDataAdapter(strSQL, Conn)
@@ -1496,6 +1499,80 @@ Public Class frmVendorLicence
 
     Private Sub SimpleButton4_Click(sender As Object, e As EventArgs) Handles SimpleButton4.Click
         TextEdit2.Text = LicenceKeyGen_b(TextEdit1.Text)
+    End Sub
+
+    Private Sub btnSyncData_Click(sender As Object, e As EventArgs) Handles btnSyncData.Click
+        Dim frm As New frmSyncPopup
+        frm.Show()
+        Dim err As String = ""
+
+        frm.lstStatus.Items.Clear()
+
+        If LotusDevice.Sync(err) = False Then
+            frm.lstStatus.Items.Add("Device - " & err)
+        Else
+            frm.lstStatus.Items.Add("Device - completed")
+        End If
+        Application.DoEvents()
+
+        If LotusCompany.Sync(err) = False Then
+            frm.lstStatus.Items.Add("Company - " & err)
+        Else
+            frm.lstStatus.Items.Add("Compnay - completed")
+        End If
+        Application.DoEvents()
+
+        If LotusCompanyGroup.Sync(err) = False Then
+            frm.lstStatus.Items.Add("CompanyGroup - " & err)
+        Else
+            frm.lstStatus.Items.Add("CompnayGroup - completed")
+        End If
+        Application.DoEvents()
+        Sleep(1000)
+        frm.Close()
+
+        viewdata.LoadDevice(gcDevice)
+        viewdata.LoadDeviceLicence(gcDeviceLicence)
+    End Sub
+
+    Private Sub btnImportDeviceFromCSV_Click(sender As Object, e As EventArgs) Handles btnImportDeviceFromCSV.Click
+        Dim frm As New frmImportDevice
+        frm.StartPosition = FormStartPosition.CenterParent
+        frm.ShowDialog()
+    End Sub
+
+    Private Sub btnRefreshDeviceLicence_Click(sender As Object, e As EventArgs) Handles btnRefreshDeviceLicence.Click
+        viewdata.LoadDeviceLicence(gcDeviceLicence)
+    End Sub
+
+    Private Sub btnRefreshDevice_Click(sender As Object, e As EventArgs) Handles btnRefreshDevice.Click
+        viewdata.LoadDevice(gcDevice)
+    End Sub
+
+    Private Sub btnGenLicenceDevice_Click(sender As Object, e As EventArgs) Handles btnGenLicenceDevice.Click
+        Dim err As String = ""
+        command.GenDeviceLicence(gvDeviceLicence, False)
+        MsgBox("Gen Device Licence Completed")
+    End Sub
+
+    Private Sub btnRegisterLicence_Click(sender As Object, e As EventArgs) Handles btnRegisterLicence.Click
+        Dim err As String = ""
+        command.GenCompanyGroupLicenceToken(GvEmp)
+        MsgBox("Register Completed")
+    End Sub
+
+    Private Sub gvDevice_CellValueChanged(sender As Object, e As DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs) Handles gvDevice.CellValueChanged
+        Try
+            Dim gv As GridView = CType(sender, GridView)
+
+            If IsDBNull(gv.GetRowCellValue(gv.FocusedRowHandle, "SerialNumber")) = True Then Exit Sub
+
+            Dim SerialNumber As String = gv.GetRowCellValue(gv.FocusedRowHandle, "SerialNumber")
+
+            command.DeviceUpdateSerialNo(SerialNumber, e.Value)
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
     End Sub
 End Class
 

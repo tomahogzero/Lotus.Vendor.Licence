@@ -164,7 +164,9 @@
     <Import Include="System.Windows.Forms" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Class\api\api.vb" />
     <Compile Include="Class\cDateTime.vb" />
+    <Compile Include="Class\cDevice.vb" />
     <Compile Include="Class\cEnum.vb" />
     <Compile Include="Class\CExcel.vb" />
     <Compile Include="Class\cExport.vb" />
@@ -172,11 +174,20 @@
     <Compile Include="Class\cLang_Message.vb" />
     <Compile Include="Class\cProcessTime.vb" />
     <Compile Include="Class\cValGolbal.vb" />
+    <Compile Include="Class\datatable\dt_Company.vb" />
+    <Compile Include="Class\datatable\dt_CompanyGroup.vb" />
+    <Compile Include="Class\datatable\dt_Device.vb" />
     <Compile Include="Class\db.vb" />
     <Compile Include="Class\FileIO.vb" />
     <Compile Include="Class\GetData.vb" />
+    <Compile Include="Class\licence\licence.vb" />
     <Compile Include="Class\modStartup.vb" />
     <Compile Include="Class\SearchData.vb" />
+    <Compile Include="Class\sync\LotusCompanyGroup.vb" />
+    <Compile Include="Class\sync\LotusCompany.vb" />
+    <Compile Include="Class\sync\LotusDevice.vb" />
+    <Compile Include="Class\view\command.vb" />
+    <Compile Include="Class\view\viewdata.vb" />
     <Compile Include="Config\frmEmpCalAbs.Designer.vb">
       <DependentUpon>frmEmpCalAbs.vb</DependentUpon>
     </Compile>
@@ -963,10 +974,22 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>res_warning_message_spacial.resx</DependentUpon>
     </Compile>
+    <Compile Include="Licence\frmImportDevice.Designer.vb">
+      <DependentUpon>frmImportDevice.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Licence\frmImportDevice.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Licence\frmImportExcel.Designer.vb">
       <DependentUpon>frmImportExcel.vb</DependentUpon>
     </Compile>
     <Compile Include="Licence\frmImportExcel.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Licence\frmSyncPopup.Designer.vb">
+      <DependentUpon>frmSyncPopup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Licence\frmSyncPopup.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Listconfig\frmListEmp.Designer.vb">
@@ -2438,8 +2461,14 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>res_warning_message_spacial.Designer.vb</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Licence\frmImportDevice.resx">
+      <DependentUpon>frmImportDevice.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Licence\frmImportExcel.resx">
       <DependentUpon>frmImportExcel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Licence\frmSyncPopup.resx">
+      <DependentUpon>frmSyncPopup.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Listconfig\frmListEmp.en-US.resx">
       <DependentUpon>frmListEmp.vb</DependentUpon>
